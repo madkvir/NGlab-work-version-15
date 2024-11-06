@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes moveParticle {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(calc(200px * var(--dir-x)), calc(200px * var(--dir-y)));
+  }
+  50% {
+    transform: translate(calc(100px * var(--dir-x)), calc(-150px * var(--dir-y)));
+  }
+  75% {
+    transform: translate(calc(-100px * var(--dir-x)), calc(100px * var(--dir-y)));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px 5px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px 8px rgba(16, 185, 129, 0.5);
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 24;
+  }
+}
+
+@layer utilities {
+  .animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+  .animate-float-medium {
+    animation: float-medium 5s ease-in-out infinite;
+  }
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+  .hover-gradient {
+    background-size: 200% auto;
+    transition: all 0.3s ease;
+  }
+  .hover-gradient:hover {
+    background-position: right center;
+  }
+  .animate-dash {
+    animation: dash 20s linear infinite;
+  }
+}
+
+.particles-container {
+  @apply fixed inset-0 pointer-events-none z-0 opacity-40;
+}
+
+.particle {
+  @apply absolute rounded-full;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  opacity: var(--opacity);
+  background: linear-gradient(to right, #10b981, #34d399);
+  animation: moveParticle var(--duration) infinite linear;
+  animation-delay: var(--delay);
+  --dir-x: calc(random() * 2 - 1);
+  --dir-y: calc(random() * 2 - 1);
+}
