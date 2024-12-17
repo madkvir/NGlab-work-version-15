@@ -37,7 +37,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="py-5">
+    <section className="py-5 md:py-5 -mt-24 md:mt-0">
       <div className="max-w-7xl mx-auto px-5">
         {/* Section Header */}
         <div className="text-center mb-5">

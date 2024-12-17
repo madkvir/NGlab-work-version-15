@@ -1,15 +1,27 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
-const Logo = () => (
-  <div className="flex items-center">
-    <div className="flex items-center">
-      <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400" />
-      <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent ml-2">
-        NeuroGen Lab
-      </span>
-    </div>
-  </div>
-);
+const Logo = () => {
+  const location = useLocation();
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <Link to="/" onClick={handleClick} className="flex items-center">
+      <div className="flex items-center">
+        <img 
+          src="/NG.svg" 
+          alt="NeuroGen Lab Logo" 
+          className="sm:w-[50px] md:w-[120px] lg:w-[180px]"
+        />
+      </div>
+    </Link>
+  );
+};
 
 export default Logo;

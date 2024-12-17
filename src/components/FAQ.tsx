@@ -82,11 +82,6 @@ const FAQ = () => {
             </div>
           ))}
         </div>
-
-        {/* Bottom Divider */}
-        <div className="mt-5">
-          <Divider />
-        </div>
       </div>
     </section>
   );
