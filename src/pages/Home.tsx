@@ -14,7 +14,7 @@ const Home = () => {
   // SEO мета-теги
   const seoData = {
     title: "NeuroGen Lab - Advanced AI Solutions for Business",
-    description: "Transform your business with NeuroGen Lab's cutting-edge AI solutions. We offer powerful, easy-to-implement artificial intelligence tools for content generation, data analysis, and automation.",
+    description: "Boost your business with NeuroGen Lab's advanced AI tools for content generation, data analysis, and automation. Visit us for a transformation.",
     keywords: "AI solutions, artificial intelligence, machine learning, neural networks, business automation, AI tools, content generation, data analysis",
     ogTitle: "NeuroGen Lab | Leading AI Solutions Provider",
     ogDescription: "Discover how NeuroGen Lab's AI solutions can revolutionize your business operations. Advanced artificial intelligence made simple and accessible.",

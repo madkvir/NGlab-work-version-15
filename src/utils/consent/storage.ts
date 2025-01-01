@@ -1,5 +1,7 @@
 import type { ConsentSettings } from './types';
-import { defaultConsentSettings, STORAGE_KEY } from './config';
+import { defaultConsentSettings } from './config';
+
+const STORAGE_KEY = 'consent_settings';
 
 export const getStoredConsent = (): ConsentSettings => {
   try {
@@ -19,10 +21,6 @@ export const setStoredConsent = (settings: ConsentSettings): void => {
   }
 };
 
-export const clearStoredConsent = (): void => {
-  try {
-    localStorage.removeItem(STORAGE_KEY);
-  } catch (error) {
-    console.warn('Error clearing consent settings:', error);
-  }
+export const hasStoredConsent = (): boolean => {
+  return localStorage.getItem(STORAGE_KEY) !== null;
 };

@@ -35,7 +35,7 @@ const BestSearch = () => {
         "Custom Applications"
       ]}
       metaTitle="Best Search | NeuroGen Lab - Intelligent Search Solution"
-      metaDescription="Transform your data discovery with our AI-powered search solution. Experience accurate and relevant results with advanced natural language processing and semantic search capabilities."
+      metaDescription="Boost data discovery with AI search. Accurate results, semantic search, NLP, and advanced indexing for superior user experience."
       metaKeywords="AI search, semantic search, intelligent search, data discovery"
       ogTitle="Best Search - Smart Data Discovery | NeuroGen Lab"
       ogDescription="Transform data discovery with AI-powered intelligent search"

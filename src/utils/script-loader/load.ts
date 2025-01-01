@@ -1,22 +1,14 @@
-interface ScriptLoadOptions {
-  async?: boolean;
-  defer?: boolean;
-  id?: string;
-  onLoad?: () => void;
-  onError?: (error: Error | Event) => void;
-  retries?: number;
-  retryDelay?: number;
-}
-
-const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+import { ScriptLoadOptions, ScriptLoadResult } from './types';
+import { delay } from '../helpers';
 
 export const loadScript = async (
-  src: string, 
+  src: string,
   options: ScriptLoadOptions = {}
-): Promise<HTMLScriptElement> => {
+): Promise<ScriptLoadResult> => {
   const {
     retries = 3,
     retryDelay = 1000,
+    ignoreErrors = false,
     ...scriptOptions
   } = options;
 
@@ -24,10 +16,9 @@ export const loadScript = async (
 
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      // Check if script already exists
       const existingScript = document.getElementById(scriptOptions.id || '') as HTMLScriptElement;
       if (existingScript) {
-        return existingScript;
+        return { success: true, script: existingScript };
       }
 
       const script = document.createElement('script');
@@ -44,13 +35,16 @@ export const loadScript = async (
           resolve(script);
         };
         script.onerror = (error) => {
-          scriptOptions.onError?.(error);
+          if (!ignoreErrors) {
+            scriptOptions.onError?.(error);
+          }
           reject(new Error(`Failed to load script: ${src}`));
         };
       });
 
       document.body.appendChild(script);
-      return await loadPromise;
+      const loadedScript = await loadPromise;
+      return { success: true, script: loadedScript };
     } catch (error) {
       lastError = error as Error;
       if (attempt < retries) {
@@ -60,12 +54,8 @@ export const loadScript = async (
     }
   }
 
-  throw lastError || new Error(`Failed to load script: ${src}`);
-};
-
-export const removeScript = (id: string): void => {
-  const script = document.getElementById(id);
-  if (script?.parentNode) {
-    script.parentNode.removeChild(script);
-  }
+  return {
+    success: false,
+    error: lastError || new Error(`Failed to load script: ${src}`)
+  };
 };

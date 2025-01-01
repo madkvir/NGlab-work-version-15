@@ -3,7 +3,6 @@ import {
   Send, 
   Phone, 
   Mail, 
-  Facebook, 
   Linkedin, 
   MapPin,
   MessageCircle,
@@ -11,7 +10,6 @@ import {
 } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import NewsletterForm from './form/NewsletterForm';
-// import PreferencesLink from './consent/PreferencesLink';
 
 const Footer: React.FC = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
@@ -144,17 +142,6 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <a 
-                    href="https://facebook.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-                  >
-                    <Facebook className="w-5 h-5 text-emerald-400" />
-                    Facebook
-                  </a>
-                </li>
-                <li>
-                  <a 
                     href="https://www.linkedin.com/company/neurogen-lab/about/" 
                     target="_blank" 
                     rel="noopener noreferrer" 
@@ -167,8 +154,8 @@ const Footer: React.FC = () => {
                 <li className="flex items-center gap-2 text-center md:text-left">
                   <MapPin className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                   <span className="text-gray-400">
-                    Musterstraße 123<br />
-                    10115 Berlin, Germany
+                    Gartenweg 2<br />
+                    16515 Oranienburg, Germany
                   </span>
                 </li>
               </ul>

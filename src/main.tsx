@@ -5,7 +5,8 @@ import App from './App';
 import { BlogProvider } from './context/BlogContext';
 import { initializeTracking } from './utils/tracking';
 import { initFacebookPixel } from './utils/facebook-pixel';
-import { initConsentMode } from './utils/consent';
+import { initConsentMode } from './utils/consent/init';
+import ErrorBoundary from './utils/error-boundary';
 import './index.css';
 
 // Initialize consent management first
@@ -17,10 +18,12 @@ initFacebookPixel('XXXXXXXXXX');
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <BlogProvider>
-        <App />
-      </BlogProvider>
-    </BrowserRouter>
+    <ErrorBoundary>
+      <BrowserRouter>
+        <BlogProvider>
+          <App />
+        </BlogProvider>
+      </BrowserRouter>
+    </ErrorBoundary>
   </React.StrictMode>
 );

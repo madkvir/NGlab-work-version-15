@@ -34,7 +34,7 @@ const FacebookMessenger = () => {
         "Customer Support Tools",
         "Marketing Automation"
       ]}
-      metaTitle="Facebook Messenger Integration | NeuroGen Lab - Social Messaging Solution"
+      metaTitle="Enhance Messaging with Facebook Messenger Integration"
       metaDescription="Enhance your customer communication with our Facebook Messenger integration. Provide instant, intelligent responses and seamless customer support through social messaging."
       metaKeywords="facebook messenger, messenger integration, social messaging, customer support"
       ogTitle="Facebook Messenger Integration - Smart Social Support | NeuroGen Lab"

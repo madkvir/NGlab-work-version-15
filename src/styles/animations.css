@@ -33,19 +33,3 @@
   backdrop-filter: blur(4px);
   transition: opacity 150ms ease-out;
 }
-
-.menu-backdrop-enter {
-  opacity: 0;
-}
-
-.menu-backdrop-enter-active {
-  opacity: 1;
-}
-
-.menu-backdrop-exit {
-  opacity: 1;
-}
-
-.menu-backdrop-exit-active {
-  opacity: 0;
-}

@@ -1,13 +1,8 @@
-import React, { useEffect } from 'react';
-import { initTermly } from '../utils/consent/termly';
+import React from 'react';
+import ConsentDialog from './consent/ConsentDialog';
 
 const CookieConsent: React.FC = () => {
-  useEffect(() => {
-    initTermly();
-  }, []);
-
-  // Termly handles the UI, so we don't need to render anything
-  return null;
+  return <ConsentDialog />;
 };
 
 export default CookieConsent;

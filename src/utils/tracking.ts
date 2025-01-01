@@ -1,5 +1,5 @@
 import ReactGA from 'react-ga4';
-import { getTermlyConsent } from './consent/termly';
+import { getStoredConsent } from './consent/storage';
 
 const generateClientId = (): string => {
   const timestamp = Date.now();
@@ -25,7 +25,7 @@ export const getClientId = async (): Promise<string> => {
 
 export const pushFormDataToDataLayer = async (formName: string, formData: Record<string, any>) => {
   const clientId = await getClientId();
-  const consentSettings = getTermlyConsent();
+  const consentSettings = getStoredConsent();
 
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
@@ -43,7 +43,7 @@ export const pushFormDataToDataLayer = async (formName: string, formData: Record
 };
 
 export const initializeTracking = () => {
-  const consentSettings = getTermlyConsent();
+  const consentSettings = getStoredConsent();
   
   // Only initialize GA4 if analytics consent is granted
   if (consentSettings.analytics_storage === 'granted') {
