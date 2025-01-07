@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowUp, ChevronUp } from 'lucide-react';
+"use client";
+import { useState, useEffect } from "react";
+import { ArrowUp, ChevronUp } from "lucide-react";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,34 +10,35 @@ const ScrollToTop = () => {
     const toggleVisibility = () => {
       // Calculate scroll progress percentage
       const scrolled = document.documentElement.scrollTop;
-      const maxHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const maxHeight =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const progress = (scrolled / maxHeight) * 100;
-      
+
       setScrollProgress(progress);
       setIsVisible(scrolled > 300);
     };
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
   return (
     <div
       className={`fixed right-6 bottom-24 z-50 transition-all duration-500 ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0 pointer-events-none'
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"
       }`}
     >
       <div className="relative group">
         {/* Outer glow effect */}
         <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-        
+
         {/* Main button container */}
         <div className="relative">
           <button
@@ -68,7 +70,7 @@ const ScrollToTop = () => {
                 cy="24"
               />
             </svg>
-            
+
             {/* Icons */}
             <div className="relative flex flex-col items-center transition-transform duration-300 group-hover:-translate-y-1">
               <ChevronUp className="w-4 h-4 absolute -top-1 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:-translate-y-1" />

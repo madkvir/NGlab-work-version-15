@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface GlowingButtonProps {
   to?: string;
@@ -8,8 +8,8 @@ interface GlowingButtonProps {
   children: React.ReactNode;
   className?: string;
   icon?: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'outline';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: "primary" | "secondary" | "outline";
+  size?: "sm" | "md" | "lg";
   fullWidth?: boolean;
   disabled?: boolean;
 }
@@ -18,28 +18,30 @@ const GlowingButton: React.FC<GlowingButtonProps> = ({
   to,
   onClick,
   children,
-  className = '',
-  icon = <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />,
-  variant = 'primary',
-  size = 'md',
+  className = "",
+  icon = (
+    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+  ),
+  variant = "primary",
+  size = "md",
   fullWidth = false,
-  disabled = false
+  disabled = false,
 }) => {
   const baseClasses = `
     relative 
-    ${fullWidth ? 'w-full' : 'w-auto'} 
+    ${fullWidth ? "w-full" : "w-auto"} 
     inline-flex items-center justify-center gap-2
     font-semibold rounded-lg
     transition-all duration-300
-    ${disabled ? 'opacity-50 cursor-not-allowed' : 'hover:scale-[1.02]'}
+    ${disabled ? "opacity-50 cursor-not-allowed" : "hover:scale-[1.02]"}
     group
     ${className}
   `;
 
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
+    sm: "px-4 py-2 text-sm",
+    md: "px-6 py-3 text-base",
+    lg: "px-8 py-4 text-lg",
   };
 
   const variantClasses = {
@@ -47,7 +49,7 @@ const GlowingButton: React.FC<GlowingButtonProps> = ({
       bg-gradient-to-r from-emerald-400 to-green-300 
       text-white
       hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]
-      ${!disabled && 'hover:animate-glow'}
+      ${!disabled && "hover:animate-glow"}
     `,
     secondary: `
       bg-gray-900/50 
@@ -61,7 +63,7 @@ const GlowingButton: React.FC<GlowingButtonProps> = ({
       border border-emerald-400/50
       text-emerald-400
       hover:bg-emerald-400/10
-    `
+    `,
   };
 
   const buttonContent = (
@@ -79,14 +81,14 @@ const GlowingButton: React.FC<GlowingButtonProps> = ({
 
   if (to && !disabled) {
     return (
-      <Link to={to} className={combinedClasses}>
+      <Link href={to} className={combinedClasses}>
         {buttonContent}
       </Link>
     );
   }
 
   return (
-    <button 
+    <button
       onClick={disabled ? undefined : onClick}
       className={combinedClasses}
       disabled={disabled}

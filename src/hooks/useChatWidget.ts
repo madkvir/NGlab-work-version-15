@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
-import { initChatWidget } from '../utils/chat/init';
-import { cleanupWidget } from '../utils/chat/cleanup';
+"use client";
+
+import { useState, useEffect } from "react";
+import { initChatWidget } from "../utils/chat/init";
+import { cleanupWidget } from "../utils/chat/cleanup";
 
 export const useChatWidget = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,7 +19,7 @@ export const useChatWidget = () => {
         }
       } catch (err) {
         if (mounted) {
-          setError('Failed to load chat widget');
+          setError("Failed to load chat widget");
           setIsLoading(false);
         }
       }

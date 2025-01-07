@@ -1,5 +1,5 @@
+'use client'
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
 import FormField from './FormField';
 import FormStatus from './FormStatus';
@@ -7,6 +7,7 @@ import SubmitButton from './SubmitButton';
 import ServiceSelection from './ServiceSelection';
 import PhoneInput from './PhoneInput';
 import { countryCodes } from '../../data/countryCodes';
+import Link from 'next/link';
 
 const ContactForm = () => {
   const [countryCode, setCountryCode] = useState('+49');
@@ -223,7 +224,7 @@ const ContactForm = () => {
         />
         <label htmlFor="consent" className="text-xs sm:text-sm text-gray-400">
           I agree to the processing of my personal data according to the{' '}
-          <Link to="/privacy" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+          <Link href="/privacy" className="text-emerald-400 hover:text-emerald-300 transition-colors">
             Privacy Policy
           </Link>
         </label>

@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { ChevronDown } from 'lucide-react';
+"use client";
+import React, { useState, useEffect, useRef } from "react";
+import { ChevronDown } from "lucide-react";
 
 interface PhoneInputProps {
   value: string;
@@ -14,7 +15,7 @@ const PhoneInput: React.FC<PhoneInputProps> = ({
   onChange,
   countryCode,
   onCountryCodeChange,
-  countryCodes
+  countryCodes,
 }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -26,17 +27,15 @@ const PhoneInput: React.FC<PhoneInputProps> = ({
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const selectedCountry = countryCodes.find(c => c.code === countryCode);
+  const selectedCountry = countryCodes.find((c) => c.code === countryCode);
 
   return (
     <div>
-      <label className="block text-sm font-medium text-gray-400 mb-2">
-        Phone Number
-      </label>
+      <label className="block text-sm font-medium text-gray-400 mb-2">Phone Number</label>
       <div className="relative flex flex-col sm:flex-row gap-2">
         <div className="relative w-full sm:w-auto" ref={dropdownRef}>
           <button
@@ -48,9 +47,11 @@ const PhoneInput: React.FC<PhoneInputProps> = ({
               <span className="text-lg">{selectedCountry?.flag}</span>
               <span>{countryCode}</span>
             </div>
-            <ChevronDown className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+            <ChevronDown
+              className={`w-4 h-4 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`}
+            />
           </button>
-          
+
           {isDropdownOpen && (
             <div className="absolute z-10 mt-1 w-full sm:w-48 bg-gray-900/95 rounded-lg shadow-lg py-1 text-sm max-h-60 overflow-y-auto">
               {countryCodes.map((country) => (
@@ -73,7 +74,7 @@ const PhoneInput: React.FC<PhoneInputProps> = ({
             </div>
           )}
         </div>
-        
+
         <input
           type="tel"
           name="phone"

@@ -1,14 +1,10 @@
-import React from 'react';
-import { Check, Sparkles, Wrench, Boxes } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import Divider from './Divider';
-import GlowingButton from './common/GlowingButton';
+import { Check, Sparkles, Wrench, Boxes } from "lucide-react";
+import GlowingButton from "./common/GlowingButton";
+import { redirect } from "next/navigation";
 
 const Pricing = () => {
-  const navigate = useNavigate();
-
   const handleContactSales = () => {
-    navigate('/contacts');
+    redirect("/contacts");
   };
 
   return (
@@ -21,9 +17,7 @@ const Pricing = () => {
               PRICING
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
-            Choose Your AI Journey
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">Choose Your AI Journey</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Start with 500 free tokens to test our platform capabilities
           </p>
@@ -66,9 +60,7 @@ const Pricing = () => {
                 </li>
               </ul>
 
-              <GlowingButton onClick={handleContactSales}>
-                Contact Sales
-              </GlowingButton>
+              <GlowingButton onClick={handleContactSales}>Contact Sales</GlowingButton>
             </div>
           </div>
 
@@ -107,9 +99,7 @@ const Pricing = () => {
                 </li>
               </ul>
 
-              <GlowingButton to="/signup">
-                Get Started
-              </GlowingButton>
+              <GlowingButton to="/signup">Get Started</GlowingButton>
             </div>
           </div>
         </div>
@@ -124,9 +114,7 @@ const Pricing = () => {
               <p className="text-gray-400 mb-6">
                 Get 500 tokens to test our platform's capabilities with no commitment
               </p>
-              <GlowingButton to="/signup">
-                Try for Free
-              </GlowingButton>
+              <GlowingButton to="/signup">Try for Free</GlowingButton>
             </div>
           </div>
         </div>

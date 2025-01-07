@@ -1,5 +1,4 @@
-import React from 'react';
-import { Loader2 } from 'lucide-react';
+import { Loader2 } from "lucide-react";
 
 const LoadingSpinner = () => (
   <div className="fixed bottom-4 right-4 z-50">

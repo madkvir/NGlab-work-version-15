@@ -1,4 +1,3 @@
-import React from 'react';
 import { useChatWidget } from '../../hooks/useChatWidget';
 import LoadingSpinner from './LoadingSpinner';
 import ErrorMessage from './ErrorMessage';

@@ -1,26 +1,21 @@
-import React, { useState } from 'react'; 
-import { 
-  Send, 
-  Phone, 
-  Mail, 
-  Linkedin, 
-  MapPin,
-  MessageCircle,
-  ChevronDown
-} from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import NewsletterForm from './form/NewsletterForm';
+"use client";
+import React, { useState } from "react";
+import { Phone, Mail, Linkedin, MapPin, MessageCircle, ChevronDown } from "lucide-react";
+import NewsletterForm from "./form/NewsletterForm";
+import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 
 const Footer: React.FC = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const router = useRouter();
+  const location = usePathname();
 
   const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    if (location.pathname !== '/') {
-      navigate('/', { state: { scrollTo: id } });
+    if (location !== "/") {
+      const url = `/?scrollTo=${encodeURIComponent(id)}`;
+      router.push(url);
     } else {
       const element = document.getElementById(id);
       if (element) {
@@ -30,7 +25,7 @@ const Footer: React.FC = () => {
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     }
@@ -42,9 +37,12 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="col-span-1 flex flex-col items-center md:items-start md:pl-12">
-            <Link to="/" className="flex items-center mb-4">
-              <img src="/NG.svg" alt="NeuroGen Lab Logo" 
-                className="sm:w-[50px] md:w-[110px] lg:w-[140px]" />
+            <Link href="/" className="flex items-center mb-4">
+              <img
+                src="/NG.svg"
+                alt="NeuroGen Lab Logo"
+                className="sm:w-[50px] md:w-[110px] lg:w-[140px]"
+              />
             </Link>
             <p className="text-gray-400 text-sm text-center md:text-left">
               Transforming businesses with cutting-edge AI solutions and intelligent automation.
@@ -60,40 +58,51 @@ const Footer: React.FC = () => {
                 className="w-full flex items-center justify-between md:hidden mb-4"
               >
                 <h3 className="text-lg font-semibold">Navigation</h3>
-                <ChevronDown className={`w-5 h-5 text-emerald-400 transition-transform ${isNavigationOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown
+                  className={`w-5 h-5 text-emerald-400 transition-transform ${
+                    isNavigationOpen ? "rotate-180" : ""
+                  }`}
+                />
               </button>
               <h3 className="hidden md:block text-lg font-semibold mb-4">Navigation</h3>
-              <ul className={`space-y-2 flex flex-col items-center md:items-start overflow-hidden transition-all duration-300 md:h-auto ${isNavigationOpen ? 'h-auto opacity-100' : 'h-0 md:h-auto opacity-0 md:opacity-100'}`}>
+              <ul
+                className={`space-y-2 flex flex-col items-center md:items-start overflow-hidden transition-all duration-300 md:h-auto ${
+                  isNavigationOpen ? "h-auto opacity-100" : "h-0 md:h-auto opacity-0 md:opacity-100"
+                }`}
+              >
                 <li>
-                  <a 
-                    href="#pricing" 
-                    onClick={(e) => handleNavigation(e, 'pricing')} 
+                  <a
+                    href="#pricing"
+                    onClick={(e) => handleNavigation(e, "pricing")}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     Pricing
                   </a>
                 </li>
                 <li>
-                  <Link to="/guide" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/guide" className="text-gray-400 hover:text-white transition-colors">
                     Guide
                   </Link>
                 </li>
                 <li>
-                  <a 
-                    href="#faq" 
-                    onClick={(e) => handleNavigation(e, 'faq')} 
+                  <a
+                    href="#faq"
+                    onClick={(e) => handleNavigation(e, "faq")}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     FAQ
                   </a>
                 </li>
                 <li>
-                  <Link to="/about-us" className="text-gray-400 hover:text-white transition-colors">
+                  <Link
+                    href="/about-us"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
                     About US
                   </Link>
                 </li>
                 <li>
-                  <Link to="/blog" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
                     Blog
                   </Link>
                 </li>
@@ -107,13 +116,21 @@ const Footer: React.FC = () => {
                 className="w-full flex items-center justify-between md:hidden mb-4"
               >
                 <h3 className="text-lg font-semibold">Contact Us</h3>
-                <ChevronDown className={`w-5 h-5 text-emerald-400 transition-transform ${isContactOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown
+                  className={`w-5 h-5 text-emerald-400 transition-transform ${
+                    isContactOpen ? "rotate-180" : ""
+                  }`}
+                />
               </button>
               <h3 className="hidden md:block text-lg font-semibold mb-4">Contact Us</h3>
-              <ul className={`space-y-3 flex flex-col items-center md:items-start overflow-hidden transition-all duration-300 md:h-auto ${isContactOpen ? 'h-auto opacity-100' : 'h-0 md:h-auto opacity-0 md:opacity-100'}`}>
+              <ul
+                className={`space-y-3 flex flex-col items-center md:items-start overflow-hidden transition-all duration-300 md:h-auto ${
+                  isContactOpen ? "h-auto opacity-100" : "h-0 md:h-auto opacity-0 md:opacity-100"
+                }`}
+              >
                 <li>
-                  <a 
-                    href="tel:+49 (0) 30 123456789" 
+                  <a
+                    href="tel:+49 (0) 30 123456789"
                     className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                   >
                     <Phone className="w-5 h-5 text-emerald-400" />
@@ -121,8 +138,8 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="mailto:office@neurogenlab.de" 
+                  <a
+                    href="mailto:office@neurogenlab.de"
                     className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                   >
                     <Mail className="w-5 h-5 text-emerald-400" />
@@ -130,10 +147,10 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="https://wa.me/1234567890" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href="https://wa.me/1234567890"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                   >
                     <MessageCircle className="w-5 h-5 text-emerald-400" />
@@ -141,10 +158,10 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a 
-                    href="https://www.linkedin.com/company/neurogen-lab/about/" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href="https://www.linkedin.com/company/neurogen-lab/about/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                   >
                     <Linkedin className="w-5 h-5 text-emerald-400" />
@@ -177,26 +194,38 @@ const Footer: React.FC = () => {
         {/* Copyright and Legal Links */}
         <div className="flex flex-col items-center pt-8 border-t border-gray-900/50">
           <div className="flex flex-wrap justify-center gap-6 mb-4">
-            <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link
+              href="/terms"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Terms of Service
             </Link>
-            <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link
+              href="/privacy"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link to="/cookie-policy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link
+              href="/cookie-policy"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Cookie Policy
             </Link>
-            <Link to="/impressum" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link
+              href="/impressum"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Impressum
             </Link>
             <Link
-              to="/responsible-ai-policy"
+              href="/responsible-ai-policy"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               Responsible AI Policy
             </Link>
             <Link
-              to="/disclaimer"
+              href="/disclaimer"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               Disclaimer
