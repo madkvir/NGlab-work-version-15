@@ -2,16 +2,17 @@ import { ReactNode } from "react";
 import Head from "next/head";
 import Script from "next/script";
 import "../styles/index.css";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "My App",
+  description: "My App is a...",
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <Head>
-        {/* Metadata */}
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Your site description" />
-
         {/* Favicon */}
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
