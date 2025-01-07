@@ -1,47 +1,37 @@
-import { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "NeuroGen Lab - Advanced AI Solutions for Business",
-  description:
-    "Boost your business with NeuroGen Lab's advanced AI tools for content generation, data analysis, and automation. Visit us for a transformation.",
-  keywords: [
-    "AI solutions",
-    "artificial intelligence",
-    "machine learning",
-    "neural networks",
-    "business automation",
-    "AI tools",
-    "content generation",
-    "data analysis",
-  ],
-  openGraph: {
-    title: "NeuroGen Lab | Leading AI Solutions Provider",
-    description:
-      "Discover how NeuroGen Lab's AI solutions can revolutionize your business operations. Advanced artificial intelligence made simple and accessible.",
-    url: "https://neurogenlab.de",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
-  },
-  twitter: {
-    title: "NeuroGen Lab - AI Solutions for Modern Business",
-    description:
-      "Empower your business with state-of-the-art AI solutions. From content generation to data analysis, NeuroGen Lab has you covered.",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de",
-  },
-  icons: {
-    icon: "/favicon.ico", // Replace with your favicon path
-  },
+import { useState } from "react";
+import { Lock } from "lucide-react";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import AdminLogin from "../../components/admin/AdminLogin";
+import AdminDashboard from "../../components/admin/AdminDashboard";
+
+const Admin = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-[#0B0F19] text-white">
+      <Navbar />
+      <main className="pt-24 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Lock className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
+            <h1 className="text-4xl font-bold mb-4">Admin Panel</h1>
+            <p className="text-gray-400 max-w-2xl mx-auto">Manage your blog posts and content</p>
+          </div>
+
+          {isAuthenticated ? (
+            <AdminDashboard />
+          ) : (
+            <AdminLogin onLogin={() => setIsAuthenticated(true)} />
+          )}
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
 };
+
+export default Admin;
