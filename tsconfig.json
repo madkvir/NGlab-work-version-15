@@ -1,5 +1,4 @@
 {
-  "files": [],
   "compilerOptions": {
     "plugins": [
       {
@@ -22,11 +21,6 @@
     "isolatedModules": true,
     "strictNullChecks": true
   },
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    }
-  ],
   "include": ["./dist/types/**/*.ts", "./next-env.d.ts"],
   "exclude": ["node_modules"]
 }
