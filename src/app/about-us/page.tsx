@@ -1,5 +1,4 @@
 import { Users, Award, Globe, Building } from "lucide-react";
-import SEO from "../../components/SEO";
 import Navbar from "../../components/Navbar";
 import BackToHome from "../../components/BackToHome";
 import Divider from "../../components/Divider";
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
   title: "About NeuroGen Lab - Innovating AI Technology",
   description:
     "Learn more about NeuroGen Lab, our mission, and the leadership team driving innovation in AI technology.",
-  keywords: ["NeuroGen Lab, AI technology, about us, leadership team, innovation"],
+  keywords: ["NeuroGen Lab", "AI technology", "about us", "leadership team", "innovation"],
   openGraph: {
     title: "About NeuroGen Lab - Innovating AI Technology",
     description:
@@ -76,38 +75,8 @@ const About = () => {
     },
   ];
 
-  const title = "About NeuroGen Lab - Innovating AI Technology";
-  const description =
-    "Learn more about NeuroGen Lab, our mission, and the leadership team driving innovation in AI technology.";
-  const keywords = "NeuroGen Lab, AI technology, about us, leadership team, innovation";
-  const ogTitle = title;
-  const ogDescription = description;
-  const ogImage = ""; // Замените на реальный URL изображения
-  const ogUrl = "https://neurogenlab.de/about-us";
-  const twitterTitle = title;
-  const twitterDescription = description;
-  const twitterImage = ogImage;
-  const author = "NeuroGen Lab Team";
-  const canonical = "https://neurogenlab.de/about-us"; // Замените на реальный URL страницы
-  const favicon = ""; // Замените на реальный URL иконки
-
   return (
     <div className="min-h-screen bg-[#0B0F19] text-white">
-      {/* <SEO
-        title={title}
-        description={description}
-        keywords={keywords}
-        ogTitle={ogTitle}
-        ogDescription={ogDescription}
-        ogImage={ogImage}
-        ogUrl={ogUrl}
-        twitterTitle={twitterTitle}
-        twitterDescription={twitterDescription}
-        twitterImage={twitterImage}
-        author={author}
-        canonical={canonical}
-        favicon={favicon}
-      /> */}
       <Navbar />
 
       <main className="pt-24 pb-16">
