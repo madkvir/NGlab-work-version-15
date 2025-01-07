@@ -44,7 +44,7 @@ const Hero = () => {
                 variant="secondary"
                 size="lg"
                 icon={<Play className="w-5 h-5" />}
-                onClick={() => {}}
+                // onClick={() => {}}
                 className="w-full sm:w-auto"
               >
                 Watch Demo

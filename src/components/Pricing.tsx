@@ -1,3 +1,4 @@
+"use client";
 import { Check, Sparkles, Wrench, Boxes } from "lucide-react";
 import GlowingButton from "./common/GlowingButton";
 import { redirect } from "next/navigation";
