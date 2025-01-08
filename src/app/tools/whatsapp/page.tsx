@@ -1,15 +1,22 @@
 import React from "react";
 import { Metadata } from "next";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+import { MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Service Solution",
+  title: "WhatsApp Business Integration | NeuroGen Lab - Messaging Solution",
   description:
-    "Transform your customer service with our AI-powered chatbot. Provide 24/7 support, reduce costs, and deliver exceptional customer experiences.",
-  keywords: ["AI chatbot", "customer service", "automated support", "virtual assistant", "chatbot"],
+    "Optimize your business communication with our WhatsApp integration. Enable automated responses, secure messaging, and enhanced customer engagement through WhatsApp Business API.",
+  keywords: [
+    "whatsapp business",
+    "messaging integration",
+    "customer communication",
+    "business api",
+  ],
   openGraph: {
-    title: "AI Chat Bot - Intelligent Customer Support | NeuroGen Lab",
-    description: "Transform your customer service with 24/7 AI-powered support",
-    url: "https://neurogenlab.de/tools/ai-chatbot",
+    title: "WhatsApp Business Integration - Smart Messaging | NeuroGen Lab",
+    description: "Enhance customer communication with WhatsApp automation",
+    url: "https://neurogenlab.de/tools/whatsapp",
     images: [
       {
         url: "", // TODO: add url and alt
@@ -18,8 +25,8 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "AI Chat Bot - Smart Customer Support",
-    description: "Enhance customer service with AI-powered chat support",
+    title: "WhatsApp Business Integration - Messaging Solution",
+    description: "Transform business messaging with WhatsApp integration",
     images: [
       {
         url: "", // TODO: add url and alt
@@ -29,6 +36,46 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
-    canonical: "https://neurogenlab.de/tools/ai-chatbot",
+    canonical: "https://neurogenlab.de/tools/whatsapp",
   },
 };
+
+const WhatsApp = () => {
+  return (
+    <ToolPageTemplate
+      title="WhatsApp Business Integration"
+      description="Leverage the power of WhatsApp Business API with our intelligent integration solution for enhanced customer communication."
+      icon={<MessageCircle className="w-8 h-8 text-emerald-400" />}
+      features={[
+        "Business API Integration",
+        "Automated Messaging",
+        "Template Message Support",
+        "Interactive Buttons",
+        "File and Media Sharing",
+        "Contact Management",
+        "Broadcast Messaging",
+      ]}
+      benefits={[
+        "Global Customer Reach",
+        "Instant Response Capability",
+        "Reduced Support Costs",
+        "Enhanced Customer Experience",
+        "Secure Communication",
+        "Business Process Automation",
+        "Improved Conversion Rates",
+      ]}
+      integrations={[
+        "WhatsApp Business API",
+        "CRM Systems",
+        "Payment Gateways",
+        "E-commerce Platforms",
+        "Customer Support Tools",
+        "Analytics Platforms",
+      ]}
+      metaTitle="WhatsApp Business Integration | NeuroGen Lab - Messaging Solution"
+      metaDescription="Optimize your business communication with our WhatsApp integration. Enable automated responses, secure messaging, and enhanced customer engagement through WhatsApp Business API."
+    />
+  );
+};
+
+export default WhatsApp;
