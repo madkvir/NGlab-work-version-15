@@ -50,9 +50,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://neurogenlab.de",
   },
-  icons: {
-    icon: "/favicon.ico", // Replace with your favicon path
-  },
 };
 
 const Home = () => {
