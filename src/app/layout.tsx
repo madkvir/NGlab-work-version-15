@@ -5,6 +5,7 @@ import "./styles/index.css";
 import type { Metadata } from "next";
 import { BlogProvider } from "../context/BlogContext";
 import LoadingSpinner from "../components/chat/LoadingSpinner";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "My App",
@@ -31,8 +32,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="alternate" hrefLang="en" href="https://neurogenlab.de/en/" />
         <link rel="alternate" hrefLang="de" href="https://neurogenlab.de/" />
       </Head>
+      <GoogleTagManager gtmId="GTM-MZNC2SFX" />
       <body>
-        <Script
+        {/* <Script
           id="google-tag-manager"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -44,15 +46,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               })(window,document,'script','dataLayer','GTM-MZNC2SFX');
             `,
           }}
-        />
-        <noscript>
+        /> */}
+        {/* <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MZNC2SFX"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
-        </noscript>
+        </noscript> */}
 
         <div id="root">
           <BlogProvider>

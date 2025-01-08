@@ -13,6 +13,7 @@
   "dependencies": {
     "@libsql/client": "^0.5.6",
     "@netlify/functions": "^2.6.0",
+    "@next/third-parties": "^15.1.4",
     "@tailwindcss/typography": "^0.5.10",
     "@tinymce/tinymce-react": "^4.3.2",
     "@types/react-helmet": "^6.1.11",
