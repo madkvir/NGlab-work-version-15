@@ -5,7 +5,6 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import GlowingButton from "./common/GlowingButton";
-import SEO from "./SEO";
 import Link from "next/link";
 
 interface ToolPageProps {
@@ -17,17 +16,6 @@ interface ToolPageProps {
   integrations?: string[];
   metaTitle: string;
   metaDescription: string;
-  metaKeywords: string;
-  ogTitle: string;
-  ogDescription: string;
-  ogUrl: string;
-  ogImage: string;
-  twitterTitle: string;
-  twitterDescription: string;
-  twitterImage: string;
-  author: string;
-  canonical: string;
-  favicon: string;
   isComingSoon?: boolean;
   articleContent?: React.ReactNode;
 }
@@ -41,17 +29,6 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
   integrations,
   metaTitle,
   metaDescription,
-  metaKeywords,
-  ogTitle,
-  ogDescription,
-  ogUrl,
-  ogImage,
-  twitterTitle,
-  twitterDescription,
-  twitterImage,
-  author,
-  canonical,
-  favicon,
   isComingSoon = false,
   articleContent,
 }) => {
@@ -65,21 +42,6 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
 
   return (
     <div className="min-h-screen bg-[#0B0F19] text-white">
-      <SEO
-        title={metaTitle}
-        description={metaDescription}
-        keywords={metaKeywords}
-        ogTitle={ogTitle}
-        ogDescription={ogDescription}
-        ogUrl={ogUrl}
-        ogImage={ogImage}
-        twitterTitle={twitterTitle}
-        twitterDescription={twitterDescription}
-        twitterImage={twitterImage}
-        author={author}
-        canonical={canonical}
-        favicon={favicon}
-      />
       <Navbar />
 
       <main className="pt-24 pb-16">
