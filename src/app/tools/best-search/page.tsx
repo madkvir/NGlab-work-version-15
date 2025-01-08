@@ -69,17 +69,6 @@ const BestSearch = () => {
       ]}
       metaTitle="Best Search | NeuroGen Lab - Intelligent Search Solution"
       metaDescription="Boost data discovery with AI search. Accurate results, semantic search, NLP, and advanced indexing for superior user experience."
-      metaKeywords="AI search, semantic search, intelligent search, data discovery"
-      ogTitle="Best Search - Smart Data Discovery | NeuroGen Lab"
-      ogDescription="Transform data discovery with AI-powered intelligent search"
-      ogUrl="https://neurogenlab.de/tools/best-search"
-      ogImage=""
-      twitterTitle="Best Search - Intelligent Search Solution"
-      twitterDescription="Enhance data discovery with AI-powered search"
-      twitterImage=""
-      author="NeuroGen Lab"
-      canonical="https://neurogenlab.de/tools/best-search"
-      favicon=""
     />
   );
 };
