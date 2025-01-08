@@ -1,18 +1,31 @@
 import React from "react";
-import { useParams, Link, Navigate } from "react-router-dom";
 import { Calendar, User, ArrowLeft } from "lucide-react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
-import { useBlog } from "../context/BlogContext";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import ScrollToTop from "../../../components/ScrollToTop";
+import { useBlog } from "../../../context/BlogContext";
+import Link from "next/link";
+import { redirect } from "next/navigation";
 
-const BlogPost = () => {
-  const { slug } = useParams();
+export async function generateStaticParams() {
   const { posts } = useBlog();
-  const post = posts.find((p) => p.slug === slug);
+
+  const paths = posts.map((post) => ({
+    id: post.id,
+  }));
+
+  return paths.map((param) => ({
+    params: param,
+  }));
+}
+
+const BlogPost = ({ params }) => {
+  const { slug } = params;
+  const { posts } = useBlog();
+  const post = posts.find((p) => p.id === slug);
 
   if (!post) {
-    return <Navigate to="/404" replace />;
+    redirect("/404");
   }
 
   // Get related posts (same category, excluding current post)
@@ -28,7 +41,7 @@ const BlogPost = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back Button */}
           <Link
-            to="/blog"
+            href="/blog"
             className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -79,7 +92,7 @@ const BlogPost = () => {
                 {relatedPosts.map((relatedPost) => (
                   <Link
                     key={relatedPost.id}
-                    to={`/blog/${relatedPost.slug}`}
+                    href={`/blog/${relatedPost.id}`}
                     className="group bg-gray-900/50 rounded-xl overflow-hidden hover:bg-gray-900/70 transition-all duration-300"
                   >
                     <div className="aspect-video overflow-hidden">
