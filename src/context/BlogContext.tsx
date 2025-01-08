@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+'use client'
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 export interface BlogPost {
   id: number;
@@ -27,7 +28,7 @@ export const BlogProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Load posts from localStorage on mount
   useEffect(() => {
-    const savedPosts = localStorage.getItem('blogPosts');
+    const savedPosts = localStorage.getItem("blogPosts");
     if (savedPosts) {
       setPosts(JSON.parse(savedPosts));
     }
@@ -35,19 +36,28 @@ export const BlogProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Save posts to localStorage whenever they change
   useEffect(() => {
-    localStorage.setItem('blogPosts', JSON.stringify(posts));
+    localStorage.setItem("blogPosts", JSON.stringify(posts));
   }, [posts]);
 
   const addPost = (post: BlogPost) => {
-    setPosts(prev => [...prev, { ...post, readTime: `${Math.ceil(post.content.length / 1000)} min read` }]);
+    setPosts((prev) => [
+      ...prev,
+      { ...post, readTime: `${Math.ceil(post.content.length / 1000)} min read` },
+    ]);
   };
 
   const updatePost = (post: BlogPost) => {
-    setPosts(prev => prev.map(p => p.id === post.id ? { ...post, readTime: `${Math.ceil(post.content.length / 1000)} min read` } : p));
+    setPosts((prev) =>
+      prev.map((p) =>
+        p.id === post.id
+          ? { ...post, readTime: `${Math.ceil(post.content.length / 1000)} min read` }
+          : p
+      )
+    );
   };
 
   const deletePost = (id: number) => {
-    setPosts(prev => prev.filter(p => p.id !== id));
+    setPosts((prev) => prev.filter((p) => p.id !== id));
   };
 
   return (
@@ -60,7 +70,7 @@ export const BlogProvider: React.FC<{ children: React.ReactNode }> = ({ children
 export const useBlog = () => {
   const context = useContext(BlogContext);
   if (context === undefined) {
-    throw new Error('useBlog must be used within a BlogProvider');
+    throw new Error("useBlog must be used within a BlogProvider");
   }
   return context;
 };

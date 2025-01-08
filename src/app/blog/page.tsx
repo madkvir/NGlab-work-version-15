@@ -1,24 +1,21 @@
 import { Metadata } from "next";
+import React from "react";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
+import BackToHome from "../../components/BackToHome";
+import BlogContent from "../../components/BlogContent";
 
 export const metadata: Metadata = {
-  title: "NeuroGen Lab - Advanced AI Solutions for Business",
+  title: "Blog - Latest Insights on AI Technology",
   description:
-    "Boost your business with NeuroGen Lab's advanced AI tools for content generation, data analysis, and automation. Visit us for a transformation.",
-  keywords: [
-    "AI solutions",
-    "artificial intelligence",
-    "machine learning",
-    "neural networks",
-    "business automation",
-    "AI tools",
-    "content generation",
-    "data analysis",
-  ],
+    "Stay updated with the latest insights about AI technology and implementation. Explore our blog for articles, tips, and trends.",
+  keywords: ["AI", "technology", "blog", "insights", "articles"],
   openGraph: {
-    title: "NeuroGen Lab | Leading AI Solutions Provider",
+    title: "Blog - Latest Insights on AI Technology",
     description:
-      "Discover how NeuroGen Lab's AI solutions can revolutionize your business operations. Advanced artificial intelligence made simple and accessible.",
-    url: "https://neurogenlab.de",
+      "Stay updated with the latest insights about AI technology and implementation. Explore our blog for articles, tips, and trends.",
+    url: "https://neurogenlab.de/blog",
     images: [
       {
         url: "", // TODO: add url and alt
@@ -27,9 +24,9 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "NeuroGen Lab - AI Solutions for Modern Business",
+    title: "Blog - Latest Insights on AI Technology",
     description:
-      "Empower your business with state-of-the-art AI solutions. From content generation to data analysis, NeuroGen Lab has you covered.",
+      "Stay updated with the latest insights about AI technology and implementation. Explore our blog for articles, tips, and trends.",
     images: [
       {
         url: "", // TODO: add url and alt
@@ -39,9 +36,36 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
-    canonical: "https://neurogenlab.de",
-  },
-  icons: {
-    icon: "/favicon.ico", // Replace with your favicon path
+    canonical: "https://neurogenlab.de/blog",
   },
 };
+
+const Blog = () => {
+  return (
+    <div className="min-h-screen bg-[#0B0F19] text-white">
+      <Navbar />
+
+      <main className="pt-24 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mt-8">
+            <BackToHome />
+          </div>
+
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold mb-4">Blog</h1>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Stay updated with the latest insights about AI technology and implementation
+            </p>
+          </div>
+          <BlogContent />
+        </div>
+      </main>
+
+      <ScrollToTop />
+      <Footer />
+    </div>
+  );
+};
+
+export default Blog;

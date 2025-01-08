@@ -20,9 +20,9 @@ export async function generateStaticParams() {
 }
 
 const BlogPost = ({ params }) => {
-  const { slug } = params;
+  const { id } = params;
   const { posts } = useBlog();
-  const post = posts.find((p) => p.id === slug);
+  const post = posts.find((p) => p.id === id);
 
   if (!post) {
     redirect("/404");
