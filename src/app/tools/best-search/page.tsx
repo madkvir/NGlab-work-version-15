@@ -1,34 +1,87 @@
 import React from "react";
 import { Metadata } from "next";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+import { Search } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Service Solution",
+  title: "Best Search | NeuroGen Lab - Intelligent Search Solution",
   description:
-    "Transform your customer service with our AI-powered chatbot. Provide 24/7 support, reduce costs, and deliver exceptional customer experiences.",
-  keywords: ["AI chatbot", "customer service", "automated support", "virtual assistant", "chatbot"],
+    "Boost data discovery with AI search. Accurate results, semantic search, NLP, and advanced indexing for superior user experience.",
+  keywords: ["AI search", "semantic search", "intelligent search", "data discovery"],
   openGraph: {
-    title: "AI Chat Bot - Intelligent Customer Support | NeuroGen Lab",
-    description: "Transform your customer service with 24/7 AI-powered support",
-    url: "https://neurogenlab.de/tools/ai-chatbot",
+    title: "Best Search - Smart Data Discovery | NeuroGen Lab",
+    description: "Transform data discovery with AI-powered intelligent search",
+    url: "https://neurogenlab.de/tools/best-search",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "", // TODO: add URL
+        alt: "", // TODO: add alt text
       },
     ],
   },
   twitter: {
-    title: "AI Chat Bot - Smart Customer Support",
-    description: "Enhance customer service with AI-powered chat support",
+    title: "Best Search - Intelligent Search Solution",
+    description: "Enhance data discovery with AI-powered search",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "", // TODO: add URL
+        alt: "", // TODO: add alt text
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
-    canonical: "https://neurogenlab.de/tools/ai-chatbot",
+    canonical: "https://neurogenlab.de/tools/best-search",
   },
 };
+
+const BestSearch = () => {
+  return (
+    <ToolPageTemplate
+      title="Best Search Solution"
+      description="Enhance your data discovery with our intelligent search solution that delivers accurate and relevant results through advanced AI algorithms."
+      icon={<Search className="w-8 h-8 text-emerald-400" />}
+      features={[
+        "Natural Language Processing",
+        "Semantic Search Capability",
+        "Auto-suggestion System",
+        "Multi-language Support",
+        "Faceted Search Options",
+        "Real-time Indexing",
+        "Advanced Filtering",
+      ]}
+      benefits={[
+        "Improved Search Accuracy",
+        "Faster Information Discovery",
+        "Enhanced User Experience",
+        "Increased Productivity",
+        "Better Decision Making",
+        "Reduced Search Time",
+        "Comprehensive Results",
+      ]}
+      integrations={[
+        "Content Management Systems",
+        "Document Repositories",
+        "Knowledge Bases",
+        "Enterprise Systems",
+        "Analytics Platforms",
+        "Custom Applications",
+      ]}
+      metaTitle="Best Search | NeuroGen Lab - Intelligent Search Solution"
+      metaDescription="Boost data discovery with AI search. Accurate results, semantic search, NLP, and advanced indexing for superior user experience."
+      metaKeywords="AI search, semantic search, intelligent search, data discovery"
+      ogTitle="Best Search - Smart Data Discovery | NeuroGen Lab"
+      ogDescription="Transform data discovery with AI-powered intelligent search"
+      ogUrl="https://neurogenlab.de/tools/best-search"
+      ogImage=""
+      twitterTitle="Best Search - Intelligent Search Solution"
+      twitterDescription="Enhance data discovery with AI-powered search"
+      twitterImage=""
+      author="NeuroGen Lab"
+      canonical="https://neurogenlab.de/tools/best-search"
+      favicon=""
+    />
+  );
+};
+
+export default BestSearch;
