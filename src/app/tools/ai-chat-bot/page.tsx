@@ -2,7 +2,6 @@ import React from "react";
 import { MessageSquare, ChevronDown } from "lucide-react";
 import ToolPageTemplate from "../../../components/ToolPageTemplate";
 import { Metadata } from "next";
-import Top5ReasonsSection from "../../../components/TopReasons";
 import TopReasons from "../../../components/TopReasons";
 
 export const metadata: Metadata = {

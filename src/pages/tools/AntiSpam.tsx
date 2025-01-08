@@ -1,6 +1,6 @@
-import React from 'react';
-import { Shield } from 'lucide-react';
-import ToolPageTemplate from './ToolPageTemplate';
+import React from "react";
+import { Shield } from "lucide-react";
+import ToolPageTemplate from "./ToolPageTemplate";
 
 const AntiSpam = () => {
   return (
@@ -15,7 +15,7 @@ const AntiSpam = () => {
         "Pattern Recognition",
         "Automated Blocking System",
         "Custom Rule Creation",
-        "Multi-channel Protection"
+        "Multi-channel Protection",
       ]}
       benefits={[
         "Enhanced Email Security",
@@ -24,7 +24,7 @@ const AntiSpam = () => {
         "Improved Productivity",
         "Regulatory Compliance",
         "Resource Optimization",
-        "Comprehensive Reporting"
+        "Comprehensive Reporting",
       ]}
       integrations={[
         "Email Servers",
@@ -32,7 +32,7 @@ const AntiSpam = () => {
         "CRM Systems",
         "Cloud Services",
         "Security Tools",
-        "Monitoring Systems"
+        "Monitoring Systems",
       ]}
       metaTitle="Anti-Spam Protection | NeuroGen Lab - Advanced Security Solution"
       metaDescription="Secure your business communications with our AI-powered anti-spam solution. Implement intelligent filtering and real-time threat detection for clean messaging channels."
