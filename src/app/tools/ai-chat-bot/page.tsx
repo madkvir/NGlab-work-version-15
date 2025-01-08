@@ -2,7 +2,8 @@ import React from "react";
 import { MessageSquare, ChevronDown } from "lucide-react";
 import ToolPageTemplate from "../../../components/ToolPageTemplate";
 import { Metadata } from "next";
-import Top5ReasonsSection from "../../../components/Top5ReasonsSection";
+import Top5ReasonsSection from "../../../components/TopReasons";
+import TopReasons from "../../../components/TopReasons";
 
 export const metadata: Metadata = {
   title: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Service Solution",
@@ -37,6 +38,133 @@ export const metadata: Metadata = {
 };
 
 const AIChatBot = () => {
+  const reasonList = [
+    {
+      title: "1. 24/7 Automated Customer Support",
+      content: (
+        <>
+          <p className="text-gray-300 mb-4">
+            An AI Chat Bot works round-the-clock, providing instant responses to customer inquiries.
+            This helps to:
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Increase customer satisfaction with fast response times.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Reduce wait times for answers.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Resolve repetitive and common queries without human intervention.</span>
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      title: "2. Reduce Operational Costs",
+      content: (
+        <>
+          <p className="text-gray-300 mb-4">
+            Implementing an AI Chat Bot significantly lowers expenses related to manual support:
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Automates routine tasks, freeing up your employees' time.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Reduces the workload for call centers and support teams.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Cuts costs on hiring, training, and maintaining support staff.</span>
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      title: "3. Increase Sales and Conversions",
+      content: (
+        <>
+          <p className="text-gray-300 mb-4">
+            AI Chat Bots do more than answer questions — they actively drive sales:
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Recommend products based on customer preferences.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Guide users through the sales funnel to finalize purchases.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Capture leads and gather contact information for your sales team.</span>
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      title: "4. Instant Scalability for High Volumes",
+      content: (
+        <>
+          <p className="text-gray-300 mb-4">
+            An AI Chat Bot can handle thousands of inquiries simultaneously:
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Processes requests quickly, even during peak hours.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>
+                Works effectively for businesses of all sizes, from small to enterprise-level.
+              </span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>
+                Handles large-scale events like sales, promotions, and seasonal spikes seamlessly.
+              </span>
+            </li>
+          </ul>
+        </>
+      ),
+    },
+    {
+      title: "5. Enhanced Customer Experience",
+      content: (
+        <>
+          <p className="text-gray-300 mb-4">
+            Improve overall customer satisfaction with personalized interactions:
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Provides consistent and accurate responses across all channels.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Offers multilingual support for global customer base.</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-emerald-400">✓</span>
+              <span>Maintains conversation context for more natural interactions.</span>
+            </li>
+          </ul>
+        </>
+      ),
+    },
+  ];
   const articleContent = (
     <article className="prose prose-lg prose-emerald mx-auto text-white">
       {/* Intro Section */}
@@ -190,7 +318,10 @@ const AIChatBot = () => {
       </ul>
 
       {/* Top 5 Reasons Section */}
-      <Top5ReasonsSection />
+      <h2 className="text-3xl font-bold text-emerald-400 mt-12 mb-6">
+        5 Top Reasons Why Your Business Needs an AI Chat Bot
+      </h2>
+      <TopReasons reasonList={reasonList} />
 
       <div className="mt-12 pt-8">
         <h3 className="text-2xl font-bold text-white mb-4">Conclusion</h3>
