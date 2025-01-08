@@ -68,17 +68,6 @@ const FacebookMessenger = () => {
       ]}
       metaTitle="Enhance Messaging with Facebook Messenger Integration"
       metaDescription="Enhance your customer communication with our Facebook Messenger integration. Provide instant, intelligent responses and seamless customer support through social messaging."
-      metaKeywords="facebook messenger, messenger integration, social messaging, customer support"
-      ogTitle="Facebook Messenger Integration - Smart Social Support | NeuroGen Lab"
-      ogDescription="Connect with customers through intelligent Messenger automation"
-      ogUrl="https://neurogenlab.de/tools/facebook-messenger"
-      ogImage=""
-      twitterTitle="Facebook Messenger Integration - Smart Communication"
-      twitterDescription="Enhance customer support with Messenger automation"
-      twitterImage=""
-      author="NeuroGen Lab"
-      canonical="https://neurogenlab.de/tools/facebook-messenger"
-      favicon=""
     />
   );
 };

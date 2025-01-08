@@ -1,34 +1,81 @@
 import React from "react";
 import { Metadata } from "next";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+import { MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Service Solution",
+  title: "Intercom Integration | NeuroGen Lab - Customer Messaging Solution",
   description:
-    "Transform your customer service with our AI-powered chatbot. Provide 24/7 support, reduce costs, and deliver exceptional customer experiences.",
-  keywords: ["AI chatbot", "customer service", "automated support", "virtual assistant", "chatbot"],
+    "Optimize your customer messaging with our Intercom integration. Automate support, engage customers intelligently, and improve conversion rates through targeted communication.",
+  keywords: [
+    "intercom integration",
+    "customer messaging",
+    "support automation",
+    "customer engagement",
+  ],
   openGraph: {
-    title: "AI Chat Bot - Intelligent Customer Support | NeuroGen Lab",
-    description: "Transform your customer service with 24/7 AI-powered support",
-    url: "https://neurogenlab.de/tools/ai-chatbot",
+    title: "Intercom Integration - Smart Customer Support | NeuroGen Lab",
+    description: "Enhance customer messaging with intelligent automation",
+    url: "https://neurogenlab.de/tools/intercom",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "", // TODO: add URL
+        alt: "", // TODO: add alt text
       },
     ],
   },
   twitter: {
-    title: "AI Chat Bot - Smart Customer Support",
-    description: "Enhance customer service with AI-powered chat support",
+    title: "Intercom Integration - Customer Messaging",
+    description: "Optimize support with smart Intercom automation",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "", // TODO: add URL
+        alt: "", // TODO: add alt text
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
-    canonical: "https://neurogenlab.de/tools/ai-chatbot",
+    canonical: "https://neurogenlab.de/tools/intercom",
   },
 };
+
+const Intercom = () => {
+  return (
+    <ToolPageTemplate
+      title="Intercom Integration"
+      description="Enhance your customer messaging with our Intercom integration that provides intelligent customer engagement and support automation."
+      icon={<MessageCircle className="w-8 h-8 text-emerald-400" />}
+      features={[
+        "Automated Customer Support",
+        "Targeted Messaging",
+        "Customer Segmentation",
+        "Engagement Analytics",
+        "Custom Bots",
+        "Product Tours",
+        "Help Center Integration",
+      ]}
+      benefits={[
+        "Improved Customer Engagement",
+        "Automated Support Workflows",
+        "Better Customer Understanding",
+        "Increased Conversion Rates",
+        "Streamlined Communication",
+        "Personalized Experiences",
+        "Efficient Support Process",
+      ]}
+      integrations={[
+        "CRM Systems",
+        "Marketing Platforms",
+        "Analytics Tools",
+        "Help Desk Software",
+        "E-commerce Platforms",
+        "Product Analytics",
+      ]}
+      metaTitle="Intercom Integration | NeuroGen Lab - Customer Messaging Solution"
+      metaDescription="Optimize your customer messaging with our Intercom integration. Automate support, engage customers intelligently, and improve conversion rates through targeted communication."
+    />
+  );
+};
+
+export default Intercom;
