@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
   const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     if (location !== "/") {
-      const url = `/?scrollTo=${encodeURIComponent(id)}`;
+      const url = `/#${encodeURIComponent(id)}`;
       router.push(url);
     } else {
       const element = document.getElementById(id);

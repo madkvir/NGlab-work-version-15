@@ -47,7 +47,7 @@ const Navbar = () => {
     setIsMenuOpen(false);
 
     if (location !== "/") {
-      const url = `/?scrollTo=${encodeURIComponent(id)}`;
+      const url = `/#${encodeURIComponent(id)}`;
       router.push(url);
     } else {
       const element = document.getElementById(id);

@@ -11,7 +11,7 @@ import {
   Share2,
   Link,
 } from "lucide-react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const CookiePolicyList = () => {
   const [activeSection, setActiveSection] = useState<number | null>(null);

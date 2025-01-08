@@ -1,4 +1,5 @@
 import { Activity, Cast, Sparkles, FileCheck } from "lucide-react";
+import React from "react";
 
 const advantages = [
   {
