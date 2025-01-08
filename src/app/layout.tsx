@@ -1,8 +1,10 @@
-import { ReactNode } from "react";
+import { ReactNode, Suspense } from "react";
 import Head from "next/head";
 import Script from "next/script";
 import "./styles/index.css";
 import type { Metadata } from "next";
+import { BlogProvider } from "../context/BlogContext";
+import LoadingSpinner from "../components/chat/LoadingSpinner";
 
 export const metadata: Metadata = {
   title: "My App",
@@ -52,7 +54,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           ></iframe>
         </noscript>
 
-        <div id="root">{children}</div>
+        <div id="root">
+          <BlogProvider>
+            <Suspense fallback={<LoadingSpinner />}>{children}</Suspense>
+          </BlogProvider>
+        </div>
       </body>
     </html>
   );
