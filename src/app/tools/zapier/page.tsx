@@ -1,15 +1,17 @@
 import React from "react";
 import { Metadata } from "next";
+import { Puzzle } from "lucide-react";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
 
 export const metadata: Metadata = {
-  title: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Service Solution",
+  title: "Zapier Integration | NeuroGen Lab - Workflow Automation Solution",
   description:
-    "Transform your customer service with our AI-powered chatbot. Provide 24/7 support, reduce costs, and deliver exceptional customer experiences.",
-  keywords: ["AI chatbot", "customer service", "automated support", "virtual assistant", "chatbot"],
+    "Automate your business processes with our Zapier integration. Connect multiple applications and create efficient workflows with intelligent automation.",
+  keywords: ["zapier integration", "workflow automation", "business automation", "app integration"],
   openGraph: {
-    title: "AI Chat Bot - Intelligent Customer Support | NeuroGen Lab",
-    description: "Transform your customer service with 24/7 AI-powered support",
-    url: "https://neurogenlab.de/tools/ai-chatbot",
+    title: "Zapier Integration - Smart Workflow Automation | NeuroGen Lab",
+    description: "Connect and automate your business tools with Zapier",
+    url: "https://neurogenlab.de/tools/zapier",
     images: [
       {
         url: "", // TODO: add url and alt
@@ -18,8 +20,8 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "AI Chat Bot - Smart Customer Support",
-    description: "Enhance customer service with AI-powered chat support",
+    title: "Zapier Integration - Workflow Automation",
+    description: "Transform business processes with smart automation",
     images: [
       {
         url: "", // TODO: add url and alt
@@ -29,6 +31,45 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
-    canonical: "https://neurogenlab.de/tools/ai-chatbot",
+    canonical: "https://neurogenlab.de/tools/zapier",
   },
 };
+const Zapier = () => {
+  return (
+    <ToolPageTemplate
+      title="Zapier Integration"
+      description="Connect and automate your business tools with our powerful Zapier integration platform."
+      icon={<Puzzle className="w-8 h-8 text-emerald-400" />}
+      features={[
+        "Multi-app Workflow Automation",
+        "Custom Trigger Creation",
+        "Data Mapping and Transformation",
+        "Error Handling and Retry Logic",
+        "Conditional Logic Implementation",
+        "Schedule-based Automation",
+        "Real-time Monitoring",
+      ]}
+      benefits={[
+        "Seamless App Integration",
+        "Time-saving Automation",
+        "Reduced Manual Errors",
+        "Improved Workflow Efficiency",
+        "Enhanced Data Accuracy",
+        "Cost-effective Operations",
+        "Scalable Integration Solution",
+      ]}
+      integrations={[
+        "CRM Systems",
+        "Marketing Tools",
+        "Project Management Apps",
+        "Communication Platforms",
+        "E-commerce Solutions",
+        "Analytics Tools",
+      ]}
+      metaTitle="Zapier Integration | NeuroGen Lab - Workflow Automation Solution"
+      metaDescription="Automate your business processes with our Zapier integration. Connect multiple applications and create efficient workflows with intelligent automation."
+    />
+  );
+};
+
+export default Zapier;
