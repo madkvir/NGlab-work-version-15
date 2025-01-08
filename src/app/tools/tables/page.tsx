@@ -1,15 +1,17 @@
 import React from "react";
 import { Metadata } from "next";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+import { Table2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Service Solution",
+  title: "Tables Processing | NeuroGen Lab - Data Management Solution",
   description:
-    "Transform your customer service with our AI-powered chatbot. Provide 24/7 support, reduce costs, and deliver exceptional customer experiences.",
-  keywords: ["AI chatbot", "customer service", "automated support", "virtual assistant", "chatbot"],
+    "Transform your data processing with our advanced table management solution. Handle large datasets efficiently with intelligent processing and analysis tools.",
+  keywords: ["table processing", "data management", "data analysis", "dataset handling"],
   openGraph: {
-    title: "AI Chat Bot - Intelligent Customer Support | NeuroGen Lab",
-    description: "Transform your customer service with 24/7 AI-powered support",
-    url: "https://neurogenlab.de/tools/ai-chatbot",
+    title: "Tables Processing - Smart Data Management | NeuroGen Lab",
+    description: "Process large datasets with intelligent table management",
+    url: "https://neurogenlab.de/tools/tables",
     images: [
       {
         url: "", // TODO: add url and alt
@@ -18,8 +20,8 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "AI Chat Bot - Smart Customer Support",
-    description: "Enhance customer service with AI-powered chat support",
+    title: "Tables Processing - Data Management Solution",
+    description: "Transform data processing with smart table management",
     images: [
       {
         url: "", // TODO: add url and alt
@@ -29,6 +31,45 @@ export const metadata: Metadata = {
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
-    canonical: "https://neurogenlab.de/tools/ai-chatbot",
+    canonical: "https://neurogenlab.de/tools/tables",
   },
 };
+const Tables = () => {
+  return (
+    <ToolPageTemplate
+      title="Tables Processing Solution"
+      description="Process and analyze large datasets efficiently with our advanced table processing and management system."
+      icon={<Table2 className="w-8 h-8 text-emerald-400" />}
+      features={[
+        "Advanced Data Processing",
+        "Intelligent Column Recognition",
+        "Automated Data Validation",
+        "Smart Data Extraction",
+        "Format Conversion Support",
+        "Real-time Data Analysis",
+        "Custom Template Creation",
+      ]}
+      benefits={[
+        "Faster Data Processing",
+        "Improved Data Accuracy",
+        "Reduced Manual Work",
+        "Enhanced Data Quality",
+        "Efficient Data Management",
+        "Scalable Processing",
+        "Cost-effective Solution",
+      ]}
+      integrations={[
+        "Excel and CSV Files",
+        "Database Systems",
+        "Business Intelligence Tools",
+        "Data Visualization Platforms",
+        "Analytics Software",
+        "Cloud Storage Solutions",
+      ]}
+      metaTitle="Tables Processing | NeuroGen Lab - Data Management Solution"
+      metaDescription="Transform your data processing with our advanced table management solution. Handle large datasets efficiently with intelligent processing and analysis tools."
+    />
+  );
+};
+
+export default Tables;
