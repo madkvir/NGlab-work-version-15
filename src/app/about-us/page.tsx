@@ -1,4 +1,5 @@
 import { Users, Award, Globe, Building } from "lucide-react";
+import React from "react";
 import Navbar from "../../components/Navbar";
 import BackToHome from "../../components/BackToHome";
 import Divider from "../../components/Divider";
@@ -37,9 +38,6 @@ export const metadata: Metadata = {
   authors: [{ name: "NeuroGen Lab Team" }],
   alternates: {
     canonical: "https://neurogenlab.de/about-us",
-  },
-  icons: {
-    icon: "/favicon.ico", // TODO: Replace with your favicon path
   },
 };
 

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import React from "react";
 import { Building, Mail, MapPin, Scale, FileText } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -45,9 +46,6 @@ export const metadata: Metadata = {
   authors: [{ name: "NeuroGen Lab Legal Department" }],
   alternates: {
     canonical: "https://neurogenlab.de/impressum",
-  },
-  icons: {
-    icon: "/favicon.ico", // Replace with your favicon path
   },
 };
 
