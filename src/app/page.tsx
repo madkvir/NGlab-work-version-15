@@ -8,6 +8,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import CookieConsent from "../components/CookieConsent";
 import ChatWidget from "../components/ChatWidget";
 import { Metadata } from "next";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "NeuroGen Lab - Advanced AI Solutions for Business",

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Plus, Pencil, Trash2 } from 'lucide-react';
-import BlogPostEditor from './BlogPostEditor';
-import { useBlog } from '../../context/BlogContext';
-import type { BlogPost } from '../../types/blog';
-import { generateSlug } from '../../utils/slug';
+import React, { useState } from "react";
+import { Plus, Pencil, Trash2 } from "lucide-react";
+import BlogPostEditor from "./BlogPostEditor";
+import { useBlog } from "../../context/BlogContext";
+import type { BlogPost } from "../../types/blog";
+import { generateSlug } from "../../utils/slug";
 
 const AdminDashboard: React.FC = () => {
   const { posts, addPost, updatePost, deletePost } = useBlog();
@@ -13,14 +13,14 @@ const AdminDashboard: React.FC = () => {
   const handleNewPost = () => {
     setCurrentPost({
       id: Date.now(),
-      title: '',
-      slug: '',
-      excerpt: '',
-      content: '',
-      image: '',
-      category: '',
-      author: '',
-      date: new Date().toISOString().split('T')[0]
+      title: "",
+      slug: "",
+      excerpt: "",
+      content: "",
+      image: "",
+      category: "",
+      author: "",
+      date: new Date().toISOString().split("T")[0],
     });
     setIsEditing(true);
   };
@@ -31,7 +31,7 @@ const AdminDashboard: React.FC = () => {
   };
 
   const handleDeletePost = (postId: number) => {
-    if (window.confirm('Are you sure you want to delete this post?')) {
+    if (window.confirm("Are you sure you want to delete this post?")) {
       deletePost(postId);
     }
   };
@@ -39,10 +39,10 @@ const AdminDashboard: React.FC = () => {
   const handleSavePost = (post: BlogPost) => {
     const postWithSlug = {
       ...post,
-      slug: generateSlug(post.title)
+      slug: generateSlug(post.title),
     };
 
-    if (posts.find(p => p.id === post.id)) {
+    if (posts.find((p) => p.id === post.id)) {
       updatePost(postWithSlug);
     } else {
       addPost(postWithSlug);
@@ -75,7 +75,7 @@ const AdminDashboard: React.FC = () => {
           </div>
 
           <div className="grid gap-6">
-            {posts.map(post => (
+            {posts.map((post) => (
               <div
                 key={post.id}
                 className="bg-gray-900/50 rounded-xl p-6 flex items-center justify-between"

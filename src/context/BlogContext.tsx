@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 export interface BlogPost {
@@ -11,6 +11,7 @@ export interface BlogPost {
   author: string;
   date: string;
   readTime?: string;
+  slug: string;
 }
 
 interface BlogContextType {

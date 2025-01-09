@@ -1,11 +1,14 @@
 import { ReactNode, Suspense } from "react";
 import Head from "next/head";
-import Script from "next/script";
-import "./styles/index.css";
+import "../styles/index.css";
+import "../styles/animations.css";
 import type { Metadata } from "next";
 import { BlogProvider } from "../context/BlogContext";
 import LoadingSpinner from "../components/chat/LoadingSpinner";
 import { GoogleTagManager } from "@next/third-parties/google";
+import ChatWidget from "../components/ChatWidget";
+import CookieConsent from "../components/CookieConsent";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "My App",
@@ -58,7 +61,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <div id="root">
           <BlogProvider>
-            <Suspense fallback={<LoadingSpinner />}>{children}</Suspense>
+            <Suspense fallback={<LoadingSpinner />}>
+              {children}
+              <CookieConsent />
+              <ChatWidget />
+            </Suspense>
           </BlogProvider>
         </div>
       </body>
