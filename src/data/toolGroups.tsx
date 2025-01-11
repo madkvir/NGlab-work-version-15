@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
 import {
   MessageSquare,
   Instagram,
@@ -22,158 +21,159 @@ import {
   Table2,
   Headphones,
   MessageSquareMore,
-  Search
-} from 'lucide-react';
+  Search,
+} from "lucide-react";
+import Link from "next/link";
 
 export const toolGroups = {
-  'AI Tools for Business': [
+  "AI Tools for Business": [
     {
       icon: <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'AI Chat Bot',
+      name: "AI Chat Bot",
       component: Link,
-      to: '/tools/ai-chat-bot',
-      hot: true
+      to: "/tools/ai-chat-bot",
+      hot: true,
     },
     {
       icon: <Phone className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'AI Voice Bot',
+      name: "AI Voice Bot",
       component: Link,
-      to: '/tools/ai-voice-bot',
-      hot: true
+      to: "/tools/ai-voice-bot",
+      hot: true,
     },
     {
       icon: <Bot className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'AI Avatar',
+      name: "AI Avatar",
       component: Link,
-      to: '/tools/ai-avatar',
-      hot: true
+      to: "/tools/ai-avatar",
+      hot: true,
     },
     {
       icon: <Brain className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'AI Assistant',
+      name: "AI Assistant",
       component: Link,
-      to: '/tools/ai-assistant',
-      hot: true
+      to: "/tools/ai-assistant",
+      hot: true,
     },
     {
       icon: <Code className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Custom Development',
+      name: "Custom Development",
       component: Link,
-      to: '/tools/custom-development'
+      to: "/tools/custom-development",
     },
     {
       icon: <Users className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Counseling',
+      name: "Counseling",
       component: Link,
-      to: '/tools/counseling'
-    }
+      to: "/tools/counseling",
+    },
   ],
-  'Messaging': [
+  Messaging: [
     {
       icon: <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Facebook Messenger',
+      name: "Facebook Messenger",
       component: Link,
-      to: '/tools/facebook-messenger',
-      hot: true
+      to: "/tools/facebook-messenger",
+      hot: true,
     },
     {
       icon: <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Instagram',
+      name: "Instagram",
       component: Link,
-      to: '/tools/instagram',
-      hot: true
+      to: "/tools/instagram",
+      hot: true,
     },
     {
       icon: <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'WhatsApp',
+      name: "WhatsApp",
       component: Link,
-      to: '/tools/whatsapp',
-      hot: true
-    }
+      to: "/tools/whatsapp",
+      hot: true,
+    },
   ],
-  'Integration': [
+  Integration: [
     {
       icon: <Ticket className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Jira',
+      name: "Jira",
       component: Link,
-      to: '/tools/jira'
+      to: "/tools/jira",
     },
     {
       icon: <Puzzle className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Zapier',
+      name: "Zapier",
       component: Link,
-      to: '/tools/zapier'
+      to: "/tools/zapier",
     },
     {
       icon: <Table2 className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Tables',
+      name: "Tables",
       component: Link,
-      to: '/tools/tables'
-    }
+      to: "/tools/tables",
+    },
   ],
-  'Security & Search': [
+  "Security & Search": [
     {
       icon: <Shield className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Anti-Spam',
+      name: "Anti-Spam",
       component: Link,
-      to: '/tools/anti-spam',
-      hot: true
+      to: "/tools/anti-spam",
+      hot: true,
     },
     {
       icon: <Search className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Best Search',
+      name: "Best Search",
       component: Link,
-      to: '/tools/best-search',
-      hot: true
-    }
+      to: "/tools/best-search",
+      hot: true,
+    },
   ],
-  'Communication': [
+  Communication: [
     {
       icon: <Mail className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Email',
+      name: "Email",
       component: Link,
-      to: '/tools/email'
+      to: "/tools/email",
     },
     {
       icon: <MessageSquareMore className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Slack',
+      name: "Slack",
       component: Link,
-      to: '/tools/slack'
+      to: "/tools/slack",
     },
     {
       icon: <Headphones className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'LiveChat',
+      name: "LiveChat",
       component: Link,
-      to: '/tools/livechat'
+      to: "/tools/livechat",
     },
     {
       icon: <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Intercom',
+      name: "Intercom",
       component: Link,
-      to: '/tools/intercom'
-    }
+      to: "/tools/intercom",
+    },
   ],
-  'Coming Soon': [
+  "Coming Soon": [
     {
       icon: <Cloud className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Salesforce',
+      name: "Salesforce",
       component: Link,
-      to: '/tools/salesforce',
-      coming: true
+      to: "/tools/salesforce",
+      coming: true,
     },
     {
       icon: <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'HubSpot',
+      name: "HubSpot",
       component: Link,
-      to: '/tools/hubspot',
-      coming: true
+      to: "/tools/hubspot",
+      coming: true,
     },
     {
       icon: <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />,
-      name: 'Microsoft Teams',
+      name: "Microsoft Teams",
       component: Link,
-      to: '/tools/microsoft-teams',
-      coming: true
-    }
-  ]
+      to: "/tools/microsoft-teams",
+      coming: true,
+    },
+  ],
 };

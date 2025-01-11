@@ -1,5 +1,5 @@
 export interface BlogPost {
-  id: string;
+  id: number;
   title: string;
   excerpt: string;
   content: string;
@@ -7,6 +7,6 @@ export interface BlogPost {
   date: string;
   image: string;
   category: string;
-  readTime: string;
+  readTime?: string;
   slug: string;
 }

@@ -1,9 +1,7 @@
 export interface WindowWithChat extends Window {
-  zapprLoaded: () => void;
-  zappr: {
-    setPosition: (position: string) => void;
-  };
-  widgetConfigs: ChatWidgetConfig[];
+  zapprLoaded?: () => void;
+  zappr?: any;
+  widgetConfigs?: any;
 }
 
 export interface ChatWidgetConfig {

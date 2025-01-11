@@ -1,8 +1,9 @@
-import React, { Suspense } from 'react';
-import { useChatWidget } from '../hooks/useChatWidget';
-import ErrorBoundary from '../utils/error-boundary';
-import LoadingSpinner from './chat/LoadingSpinner';
-import ErrorMessage from './chat/ErrorMessage';
+"use client";
+import React, { Suspense } from "react";
+import { useChatWidget } from "../hooks/useChatWidget";
+import ErrorBoundary from "../utils/error-boundary";
+import LoadingSpinner from "./chat/LoadingSpinner";
+import ErrorMessage from "./chat/ErrorMessage";
 
 const ChatWidget: React.FC = () => {
   const { isLoading, error } = useChatWidget();
@@ -19,9 +20,7 @@ const ChatWidget: React.FC = () => {
 };
 
 const ChatWidgetWithErrorBoundary: React.FC = () => (
-  <ErrorBoundary
-    fallback={<ErrorMessage message="Chat widget failed to load" />}
-  >
+  <ErrorBoundary fallback={<ErrorMessage message="Chat widget failed to load" />}>
     <Suspense fallback={<LoadingSpinner />}>
       <ChatWidget />
     </Suspense>

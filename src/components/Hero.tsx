@@ -1,8 +1,7 @@
-import React from 'react';
-import { ArrowRight, CreditCard, Play } from 'lucide-react';
-import AdvantageCards from './AdvantageCards';
-import Divider from './Divider';
-import GlowingButton from './common/GlowingButton';
+import { ArrowRight, CreditCard, Play } from "lucide-react";
+// import AdvantageCards from './AdvantageCards';
+// import Divider from './Divider';
+import GlowingButton from "./common/GlowingButton";
 
 const Hero = () => {
   return (
@@ -32,7 +31,7 @@ const Hero = () => {
 
           <div className="flex flex-col items-center space-y-4 sm:space-y-6 mt-6 sm:mt-12 px-4">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto">
-              <GlowingButton 
+              <GlowingButton
                 to="/contacts"
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
@@ -41,11 +40,11 @@ const Hero = () => {
                 Get Started Free
               </GlowingButton>
 
-              <GlowingButton 
+              <GlowingButton
                 variant="secondary"
                 size="lg"
                 icon={<Play className="w-5 h-5" />}
-                onClick={() => {}}
+                // onClick={() => {}}
                 className="w-full sm:w-auto"
               >
                 Watch Demo

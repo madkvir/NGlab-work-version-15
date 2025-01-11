@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import ScrollToTop from './ScrollToTop';
-import GlowingButton from './common/GlowingButton';
-import SEO from './SEO';
+"use client";
+import React from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
+import GlowingButton from "./common/GlowingButton";
+import Link from "next/link";
 
 interface ToolPageProps {
   title: string;
@@ -16,17 +16,6 @@ interface ToolPageProps {
   integrations?: string[];
   metaTitle: string;
   metaDescription: string;
-  metaKeywords: string;
-  ogTitle: string;
-  ogDescription: string;
-  ogUrl: string;
-  ogImage: string;
-  twitterTitle: string;
-  twitterDescription: string;
-  twitterImage: string;
-  author: string;
-  canonical: string;
-  favicon: string;
   isComingSoon?: boolean;
   articleContent?: React.ReactNode;
 }
@@ -40,51 +29,25 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
   integrations,
   metaTitle,
   metaDescription,
-  metaKeywords,
-  ogTitle,
-  ogDescription,
-  ogUrl,
-  ogImage,
-  twitterTitle,
-  twitterDescription,
-  twitterImage,
-  author,
-  canonical,
-  favicon,
   isComingSoon = false,
-  articleContent
+  articleContent,
 }) => {
   React.useEffect(() => {
     document.title = metaTitle;
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute('content', metaDescription);
+      metaDesc.setAttribute("content", metaDescription);
     }
   }, [metaTitle, metaDescription]);
 
   return (
     <div className="min-h-screen bg-[#0B0F19] text-white">
-      <SEO 
-        title={metaTitle}
-        description={metaDescription}
-        keywords={metaKeywords}
-        ogTitle={ogTitle}
-        ogDescription={ogDescription}
-        ogUrl={ogUrl}
-        ogImage={ogImage}
-        twitterTitle={twitterTitle}
-        twitterDescription={twitterDescription}
-        twitterImage={twitterImage}
-        author={author}
-        canonical={canonical}
-        favicon={favicon}
-      />
       <Navbar />
-      
+
       <main className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
-            to="/"
+            href="/"
             className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -103,9 +66,7 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
                 </span>
               )}
             </h1>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              {description}
-            </p>
+            <p className="text-gray-400 max-w-2xl mx-auto">{description}</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -150,29 +111,23 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
           )}
 
           <div className="text-center space-y-4">
-            <GlowingButton 
+            <GlowingButton
               to={isComingSoon ? "#" : "/contacts"}
               size="lg"
-              icon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
-              className={isComingSoon ? 'cursor-not-allowed opacity-75' : ''}
+              icon={
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              }
+              className={isComingSoon ? "cursor-not-allowed opacity-75" : ""}
             >
-              {isComingSoon ? 'Coming Soon' : 'Get Started'}
+              {isComingSoon ? "Coming Soon" : "Get Started"}
             </GlowingButton>
 
-            {articleContent && (
-              <div className="text-left py-12">
-                {articleContent}
-              </div>
-            )}
+            {articleContent && <div className="text-left py-12">{articleContent}</div>}
 
             {!isComingSoon && (
               <div className="flex items-center justify-center gap-2 text-gray-400 text-sm">
                 <span>Need more information?</span>
-                <GlowingButton 
-                  to="/contacts" 
-                  variant="secondary"
-                  size="sm"
-                >
+                <GlowingButton to="/contacts" variant="secondary" size="sm">
                   Contact Sales
                 </GlowingButton>
               </div>

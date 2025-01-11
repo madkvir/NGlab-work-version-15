@@ -1,6 +1,5 @@
-import React from 'react';
-import { UserPlus, Database, Settings, Rocket, TrendingUp, ArrowRight, Play } from 'lucide-react';
-import Divider from './Divider';
+import { UserPlus, Database, Settings, Rocket, TrendingUp, ArrowRight, Play } from "lucide-react";
+import Divider from "./Divider";
 
 const HowItWorks = () => {
   return (

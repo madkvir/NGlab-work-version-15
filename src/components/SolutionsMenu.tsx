@@ -1,6 +1,7 @@
+'use client'
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { MessageSquare, Mic, Bot, Brain, Code, Users, Instagram, MessageCircle, Ticket, Puzzle, Table2, Shield, Search, Mail, MessageSquareMore, Headphones, Cloud, Building2 } from 'lucide-react';
+import Link from 'next/link';
 
 interface SolutionsMenuProps {
   isMobile?: boolean;
@@ -153,7 +154,7 @@ const SolutionsMenu: React.FC<SolutionsMenuProps> = ({ isMobile = false }) => {
   const renderTool = (tool: any) => (
     <Link
       key={tool.name}
-      to={tool.to}
+      href={tool.to}
       className="flex flex-col items-center p-3 rounded-lg bg-gray-800/30 hover:bg-gray-800/50 transition-all duration-200 relative group"
     >
       <div className="text-gray-400 group-hover:text-emerald-400 transition-all duration-200 transform group-hover:scale-110">

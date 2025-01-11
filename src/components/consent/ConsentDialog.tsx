@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Shield, X, Check, Info } from 'lucide-react';
-import { getStoredConsent, hasStoredConsent } from '../../utils/consent/storage';
-import { acceptAllConsent, rejectAllConsent, updateCustomConsent } from '../../utils/consent/manager';
-import type { ConsentSettings } from '../../utils/consent/types';
-import GlowingButton from '../common/GlowingButton';
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { Shield, X, Check, Info } from "lucide-react";
+import { getStoredConsent, hasStoredConsent } from "../../utils/consent/storage";
+import {
+  acceptAllConsent,
+  rejectAllConsent,
+  updateCustomConsent,
+} from "../../utils/consent/manager";
+import type { ConsentSettings } from "../../utils/consent/types";
+import GlowingButton from "../common/GlowingButton";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const ConsentDialog: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [settings, setSettings] = useState<ConsentSettings>(() => getStoredConsent());
   const [showDetails, setShowDetails] = useState(false);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     if (!hasStoredConsent()) {
@@ -20,8 +27,8 @@ const ConsentDialog: React.FC = () => {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     e.preventDefault();
-    localStorage.setItem('consent_dialog_open', 'true');
-    navigate(path);
+    localStorage.setItem("consent_dialog_open", "true");
+    router.push(path);
   };
 
   const handleAcceptAll = () => {
@@ -37,7 +44,7 @@ const ConsentDialog: React.FC = () => {
   const handleCustomize = (type: keyof ConsentSettings) => {
     const newSettings = {
       ...settings,
-      [type]: settings[type] === 'granted' ? 'denied' : 'granted'
+      [type]: settings[type] === "granted" ? "denied" : "granted",
     };
     setSettings(newSettings);
   };
@@ -90,18 +97,25 @@ const ConsentDialog: React.FC = () => {
                 >
                   Customize
                 </GlowingButton>
-                <GlowingButton
-                  onClick={handleRejectAll}
-                  variant="outline"
-                  fullWidth
-                  size="sm"
-                >
+                <GlowingButton onClick={handleRejectAll} variant="outline" fullWidth size="sm">
                   Reject All
                 </GlowingButton>
                 <div className="text-xs text-gray-400 text-center pt-2">
-                  <Link to="/privacy" onClick={(e) => handleLinkClick(e, '/privacy')} className="text-emerald-400 hover:underline">Privacy Policy</Link>
-                  {' • '}
-                  <Link to="/cookie-policy" onClick={(e) => handleLinkClick(e, '/cookie-policy')} className="text-emerald-400 hover:underline">Cookie Policy</Link>
+                  <Link
+                    href="/privacy"
+                    onClick={(e) => handleLinkClick(e, "/privacy")}
+                    className="text-emerald-400 hover:underline"
+                  >
+                    Privacy Policy
+                  </Link>
+                  {" • "}
+                  <Link
+                    href="/cookie-policy"
+                    onClick={(e) => handleLinkClick(e, "/cookie-policy")}
+                    className="text-emerald-400 hover:underline"
+                  >
+                    Cookie Policy
+                  </Link>
                 </div>
               </div>
             </>
@@ -113,19 +127,19 @@ const ConsentDialog: React.FC = () => {
                     <button
                       onClick={() => handleCustomize(key as keyof ConsentSettings)}
                       className={`w-8 h-5 rounded-full transition-colors relative ${
-                        value === 'granted' ? 'bg-emerald-500' : 'bg-gray-700'
+                        value === "granted" ? "bg-emerald-500" : "bg-gray-700"
                       }`}
                     >
                       <span
                         className={`absolute top-1 left-1 w-3 h-3 rounded-full bg-white transition-transform ${
-                          value === 'granted' ? 'translate-x-3' : 'translate-x-0'
+                          value === "granted" ? "translate-x-3" : "translate-x-0"
                         }`}
                       />
                     </button>
                     <div className="flex-1">
                       <div className="flex items-center gap-1">
                         <span className="text-sm font-medium text-white">
-                          {key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                          {key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}
                         </span>
                         <Info className="w-3 h-3 text-gray-400" />
                       </div>
@@ -133,11 +147,7 @@ const ConsentDialog: React.FC = () => {
                   </div>
                 ))}
               </div>
-              <GlowingButton
-                onClick={handleSavePreferences}
-                fullWidth
-                size="sm"
-              >
+              <GlowingButton onClick={handleSavePreferences} fullWidth size="sm">
                 Save Preferences
               </GlowingButton>
             </>

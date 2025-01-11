@@ -1,11 +1,9 @@
-import React from 'react';
-
 const Divider = () => {
   return (
     <div className="relative w-full h-20">
       {/* Main line */}
       <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent" />
-      
+
       {/* Curved line overlay */}
       <svg
         className="absolute inset-0 w-full h-full"
@@ -19,7 +17,7 @@ const Divider = () => {
           stroke="url(#divider-gradient)"
           strokeWidth="2"
           strokeLinecap="round"
-          style={{ filter: 'drop-shadow(0 0 10px rgba(16, 185, 129, 0.2))' }}
+          style={{ filter: "drop-shadow(0 0 10px rgba(16, 185, 129, 0.2))" }}
         />
         <defs>
           <linearGradient id="divider-gradient" x1="0" y1="0" x2="1200" y2="0">

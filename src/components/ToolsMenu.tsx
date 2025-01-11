@@ -1,25 +1,26 @@
-import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { toolGroups } from '../data/toolGroups';
+"use client";
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { toolGroups } from "../data/toolGroups";
+import Link from "next/link";
 
 interface ToolsMenuProps {
   isMobile?: boolean;
 }
 
 const ToolsMenu: React.FC<ToolsMenuProps> = ({ isMobile = false }) => {
-  const [openGroup, setOpenGroup] = useState<string | null>('AI Tools for Business');
+  const [openGroup, setOpenGroup] = useState<string | null>("AI Tools for Business");
   const [hoveredGroup, setHoveredGroup] = useState<string | null>(null);
 
   const renderTool = (tool: any, index: number) => {
     const baseProps = {
       className: `flex flex-col items-center p-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all duration-200 relative group menu-item-appear`,
-      style: { animationDelay: `${index * 30}ms` }
+      style: { animationDelay: `${index * 30}ms` },
     };
 
     if (tool.component === Link && tool.to) {
       return (
-        <Link key={`${tool.name}-${index}`} to={tool.to} {...baseProps}>
+        <Link key={`${tool.name}-${index}`} href={tool.to} {...baseProps}>
           {renderToolContent(tool)}
         </Link>
       );
@@ -60,19 +61,19 @@ const ToolsMenu: React.FC<ToolsMenuProps> = ({ isMobile = false }) => {
       onMouseEnter={() => setHoveredGroup(groupName)}
       onMouseLeave={() => setHoveredGroup(null)}
       className={`w-full flex items-center justify-between p-2 text-gray-300 hover:text-white transition-all duration-200 group ${
-        hoveredGroup === groupName ? 'bg-gray-800 rounded-lg' : ''
+        hoveredGroup === groupName ? "bg-gray-800 rounded-lg" : ""
       }`}
     >
-      <span className={`${
-        isMobile ? 'text-base' : 'text-sm'
-      } font-medium menu-text-hover transform group-hover:translate-x-1 transition-transform duration-200`}>
+      <span
+        className={`${
+          isMobile ? "text-base" : "text-sm"
+        } font-medium menu-text-hover transform group-hover:translate-x-1 transition-transform duration-200`}
+      >
         {groupName}
       </span>
-      <ChevronDown 
-        className={`${
-          isMobile ? 'w-5 h-5' : 'w-4 h-4'
-        } transition-all duration-200 transform ${
-          openGroup === groupName ? 'rotate-180' : ''
+      <ChevronDown
+        className={`${isMobile ? "w-5 h-5" : "w-4 h-4"} transition-all duration-200 transform ${
+          openGroup === groupName ? "rotate-180" : ""
         } group-hover:text-emerald-400`}
       />
     </button>
@@ -88,7 +89,7 @@ const ToolsMenu: React.FC<ToolsMenuProps> = ({ isMobile = false }) => {
     return (
       <div className="space-y-3">
         {Object.entries(toolGroups).map(([groupName, tools], index) => (
-          <div 
+          <div
             key={groupName}
             className="border-b border-gray-700 last:border-0 pb-3 menu-item-appear"
             style={{ animationDelay: `${index * 50}ms` }}
@@ -96,9 +97,7 @@ const ToolsMenu: React.FC<ToolsMenuProps> = ({ isMobile = false }) => {
             {renderGroupButton(groupName)}
             <div
               className={`overflow-hidden transition-all duration-200 ease-in-out ${
-                openGroup === groupName 
-                  ? 'max-h-[600px] opacity-100 pt-2' 
-                  : 'max-h-0 opacity-0'
+                openGroup === groupName ? "max-h-[600px] opacity-100 pt-2" : "max-h-0 opacity-0"
               }`}
             >
               {renderToolsGrid(tools)}
@@ -113,7 +112,7 @@ const ToolsMenu: React.FC<ToolsMenuProps> = ({ isMobile = false }) => {
     <div className="absolute top-full right-0 mt-2 w-[420px] bg-[#0B0F19] rounded-lg border border-gray-700 p-4 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
       <div className="space-y-2">
         {Object.entries(toolGroups).map(([groupName, tools], index) => (
-          <div 
+          <div
             key={groupName}
             className="border-b border-gray-700 last:border-0 menu-item-appear"
             style={{ animationDelay: `${index * 30}ms` }}
@@ -121,9 +120,7 @@ const ToolsMenu: React.FC<ToolsMenuProps> = ({ isMobile = false }) => {
             {renderGroupButton(groupName)}
             <div
               className={`overflow-hidden transition-all duration-200 ease-in-out ${
-                openGroup === groupName 
-                  ? 'max-h-[600px] opacity-100 py-2' 
-                  : 'max-h-0 opacity-0'
+                openGroup === groupName ? "max-h-[600px] opacity-100 py-2" : "max-h-0 opacity-0"
               }`}
             >
               {renderToolsGrid(tools)}

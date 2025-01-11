@@ -1,10 +1,9 @@
-// import React from 'react';
-import { Scale, FileText, Book, Shield, CreditCard, Users, Brain, Gavel } from 'lucide-react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Divider from '../components/Divider';
-import ScrollToTop from '../components/ScrollToTop';
-import BackToHome from '../components/BackToHome';
+import { Scale, FileText, Book, Shield, CreditCard, Users, Brain, Gavel } from "lucide-react";
+import BackToHome from "../components/BackToHome";
+import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
+import Divider from "./Divider";
+import Navbar from "./Navbar";
 
 const ResponsibleAIPolicy = () => {
   const sections = [
@@ -17,14 +16,14 @@ const ResponsibleAIPolicy = () => {
 
 "Products" means any software, applications, or other digital products developed or provided by NeuroGen Lab.
 
-"Content" refers to any information, data, text, software, music, sound, photographs, graphics, video, messages, or other materials.`
+"Content" refers to any information, data, text, software, music, sound, photographs, graphics, video, messages, or other materials.`,
     },
     {
       title: "2. Scope of Application",
       icon: <Shield className="w-6 h-6" />,
       content: `These Terms and Conditions govern all business relationships between NeuroGen Lab and its clients regarding the use of our website, services, and products.
 
-Any deviating, conflicting, or supplementary terms and conditions of the client shall only become part of the contract if and to the extent that we have expressly agreed to their validity in writing.`
+Any deviating, conflicting, or supplementary terms and conditions of the client shall only become part of the contract if and to the extent that we have expressly agreed to their validity in writing.`,
     },
     {
       title: "3. Services and Products",
@@ -39,7 +38,7 @@ Development of custom software solutions, including web applications, mobile app
 Professional IT consulting, including technology strategy, architecture design, and digital transformation.
 
 3.4 Support and Maintenance
-Ongoing technical support, maintenance, and updates for implemented solutions.`
+Ongoing technical support, maintenance, and updates for implemented solutions.`,
     },
     {
       title: "4. Payment Terms",
@@ -51,7 +50,7 @@ All payments are processed securely through Stripe. We accept major credit cards
 Invoices are due within 14 days of issuance unless otherwise agreed in writing. Subscription services are billed in advance on a monthly or annual basis.
 
 4.3 Refund Policy
-Refunds for subscription services may be issued on a pro-rata basis within 14 days of purchase. Custom development services are non-refundable once work has commenced.`
+Refunds for subscription services may be issued on a pro-rata basis within 14 days of purchase. Custom development services are non-refundable once work has commenced.`,
     },
     {
       title: "5. Client Obligations",
@@ -62,7 +61,7 @@ Refunds for subscription services may be issued on a pro-rata basis within 14 da
 - Make timely payments according to agreed terms
 - Use services and products in compliance with applicable laws
 - Maintain confidentiality of account credentials
-- Cooperate in the implementation of services`
+- Cooperate in the implementation of services`,
     },
     {
       title: "6-8. Rights, IP, and Liability",
@@ -82,7 +81,7 @@ Clients receive a non-exclusive, non-transferable license to use the products an
 8. Liability and Warranties
 NeuroGen Lab shall be liable without limitation for damages resulting from injury to life, body, or health, in case of intent and gross negligence.
 
-For slight negligence, liability is limited to the breach of essential contractual obligations and to the typical, foreseeable damage.`
+For slight negligence, liability is limited to the breach of essential contractual obligations and to the typical, foreseeable damage.`,
     },
     {
       title: "9-11. Legal Matters",
@@ -105,47 +104,41 @@ Legal Department
 Musterstraße 123
 10115 Berlin, Germany
 Email: office@neurogenlab.de
-Phone: +49 (0) 30 123456789`
-    }
+Phone: +49 (0) 30 123456789`,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-[#0B0F19] text-white">
       <Navbar />
-      
+
       <main className="pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-          <div className="mt-8"> <BackToHome /> <div/>
-          
-          <div className="text-center mb-12">
-            <Scale className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
-            <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
-            <p className="text-gray-400">
-              Last updated: March 15, 2024
-            </p>
-          </div>
-
-          <Divider />
-
-          <div className="mt-12 space-y-8">
-            {sections.map((section, index) => (
-              <div 
-                key={index}
-                className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="text-emerald-400">
-                    {section.icon}
+          <div className="mt-8">
+            {" "}
+            <BackToHome /> <div />
+            <div className="text-center mb-12">
+              <Scale className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
+              <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
+              <p className="text-gray-400">Last updated: March 15, 2024</p>
+            </div>
+            <Divider />
+            <div className="mt-12 space-y-8">
+              {sections.map((section, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="text-emerald-400">{section.icon}</div>
+                    <h2 className="text-xl font-semibold text-emerald-400">{section.title}</h2>
                   </div>
-                  <h2 className="text-xl font-semibold text-emerald-400">
-                    {section.title}
-                  </h2>
+                  <div className="text-gray-300 leading-relaxed whitespace-pre-line">
+                    {section.content}
+                  </div>
                 </div>
-                <div className="text-gray-300 leading-relaxed whitespace-pre-line">
-                  {section.content}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </main>
