@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "The Future of AI in Business Operations",
+      "slug": "the-future-of-ai-in-business-operations",
+      "excerpt": "Discover how artificial intelligence is transforming modern business operations and decision-making processes.",
+      "content": "<p>Artificial Intelligence (AI) is revolutionizing the way businesses operate in the modern world. From automating routine tasks to providing deep insights from complex data, AI is becoming an indispensable tool for organizations of all sizes.</p><h2>The Impact of AI on Business Operations</h2><p>AI technologies are transforming various aspects of business operations:</p><ul><li>Automated customer service through chatbots and virtual assistants</li><li>Predictive analytics for better decision-making</li><li>Process automation for increased efficiency</li><li>Enhanced cybersecurity through AI-powered threat detection</li></ul>",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1200",
+      "category": "Artificial Intelligence",
+      "author": "Sarah Johnson",
+      "date": "2024-03-15",
+      "readTime": "5 min read"
+    }
+  ]
+}

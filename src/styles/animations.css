@@ -1,0 +1,35 @@
+@keyframes menu-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menu-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.menu-enter {
+  animation: menu-fade-in 150ms ease-out forwards;
+}
+
+.menu-exit {
+  animation: menu-fade-out 150ms ease-out forwards;
+}
+
+.menu-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  transition: opacity 150ms ease-out;
+}

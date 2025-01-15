@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/posts"
+  to = "/.netlify/functions/blog"
+  status = 200
+  force = true
+  methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+
+[[redirects]]
+  from = "/api/posts/*"
+  to = "/.netlify/functions/blog/:splat"
+  status = 200
+  force = true
+  methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
