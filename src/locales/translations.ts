@@ -12,6 +12,33 @@ export const translations = {
     contacts: 'Contacts',
     signIn: 'Sign In',
     BookADemo: 'Book a Demo',
+    aiVoiceBot: {
+      title: "AI Voice Bot",
+      description: "Intelligent voice assistant for your business",
+      features: [
+        "Natural Language Processing",
+        "Voice Recognition",
+        "Multi-language Support",
+        "Custom Voice Training"
+      ],
+      benefits: [
+        "24/7 Customer Support",
+        "Reduced Response Time",
+        "Consistent Service Quality",
+        "Cost Efficiency"
+      ],
+      integrations: [
+        "Phone Systems",
+        "CRM Platforms",
+        "Chat Applications",
+        "Analytics Tools"
+      ],
+      sectionTitles: {
+        features: "Features",
+        benefits: "Benefits",
+        integrations: "Integrations"
+      }
+    },
     links: {
       home: 'Home',
       guide: 'Guide',
@@ -46,6 +73,33 @@ export const translations = {
     contacts: 'Kontakt',
     signIn: 'Anmelden',
     BookADemo: 'Eine Demo buchen',
+    aiVoiceBot: {
+      title: "KI-Sprach-Bot",
+      description: "Intelligente Sprachassistent für Ihr Unternehmen",
+      features: [
+        "Verarbeitung natürlicher Sprache",
+        "Spracherkennung",
+        "Mehrsprachige Unterstützung",
+        "Eigenständige Sprachtraining"
+      ],
+      benefits: [
+        "24/7 Kundendienst",
+        "Reduzierte Antwortzeit",
+        "Konsistente Servicequalität",
+        "Kosteneffizienz"
+      ],
+      integrations: [
+        "Telefonsysteme",
+        "CRM-Plattformen",
+        "Chat-Anwendungen",
+        "Analysewerkzeuge"
+      ],
+      sectionTitles: {
+        features: "Hauptfunktionen",
+        benefits: "Vorteile",
+        integrations: "Integrationen"
+      }
+    },
     links: {
       home: 'Startseite',
       guide: 'Anleitung',
@@ -80,6 +134,33 @@ export const translations = {
     contacts: 'Contactos',
     signIn: 'Iniciar sesión',
     BookADemo: 'Reservar una Demo',
+    aiVoiceBot: {
+      title: "Bot de Voz IA",
+      description: "Asistente de voz inteligente para su negocio",
+      features: [
+        "Procesamiento del lenguaje natural",
+        "Reconocimiento de voz",
+        "Soporte multi-idioma",
+        "Entrenamiento de voz personalizado"
+      ],
+      benefits: [
+        "Soporte al cliente 24/7",
+        "Tiempo de respuesta reducido",
+        "Calidad de servicio consistente",
+        "Eficiencia en costes"
+      ],
+      integrations: [
+        "Sistemas de telefonía",
+        "Plataformas CRM",
+        "Aplicaciones de chat",
+        "Herramientas de análisis"
+      ],
+      sectionTitles: {
+        features: "Características principales",
+        benefits: "Beneficios",
+        integrations: "Integraciones"
+      }
+    },
     links: {
       home: 'Inicio',
       guide: 'Guía',
@@ -114,6 +195,33 @@ export const translations = {
     contacts: 'Контакты',
     signIn: 'Войти',
     BookADemo: 'Забронировать Демо',
+    aiVoiceBot: {
+      title: "ИИ Голосовой Агент",
+      description: "Интеллектуальный голосовой помощник для вашего бизнеса",
+      features: [
+        "Обработка естественного языка",
+        "Распознавание речи",
+        "Мультиязычное сопровождение",
+        "Индивидуальное обучение голосу"
+      ],
+      benefits: [
+        "Поддержка клиентов 24/7",
+        "Сокращение времени ответа",
+        "Постоянное качество обслуживания",
+        "Эффективность затрат"
+      ],
+      integrations: [
+        "Телефонные системы",
+        "Платформы CRM",
+        "Чат-приложения",
+        "Инструменты анализа"
+      ],
+      sectionTitles: {
+        features: "Ключевые возможности",
+        benefits: "Преимущества",
+        integrations: "Интеграции"
+      }
+    },
     links: {
       home: 'Главная',
       guide: 'Руководство',
@@ -148,6 +256,33 @@ export const translations = {
     contacts: 'Контакти',
     signIn: 'Увійти',
     BookADemo: 'Забронювати Демо',
+    aiVoiceBot: {
+      title: "AI Голосовий Агент",
+      description: "Інтелектуальний голосовий асистент для вашого бізнесу",
+      features: [
+        "Обробка природної мови",
+        "Розпізнавання мови",
+        "Мультимовний супровід",
+        "Індивідуальне навчання голосу"
+      ],
+      benefits: [
+        "Підтримка клієнтів 24/7",
+        "Скорочення часу відповіді",
+        "Постійна якість обслуговування",
+        "Ефективність витрат"
+      ],
+      integrations: [
+        "Телефонні системи",
+        "Платформи CRM",
+        "Чат-застосунки",
+        "Інструменти аналізу"
+      ],
+      sectionTitles: {
+        features: "Ключові можливості",
+        benefits: "Переваги",
+        integrations: "Інтеграції"
+      }
+    },
     links: {
       home: 'Головна',
       guide: 'Посібник',
@@ -227,7 +362,7 @@ export const toolGroupTranslations = {
     // ... остальные названия инструментов
   },
   ru: {
-    'AI Tools for Business': 'AI инструменты для бизнеса',
+    'AI Tools for Business': 'ИИ инструменты для бизнеса',
     'Messaging': 'Обмен сообщениями',
     'Integration': 'Интеграция',
     'Security & Search': 'Безопасность и поиск',
@@ -235,15 +370,15 @@ export const toolGroupTranslations = {
     'Coming Soon': 'Скоро',
     'Hot': 'Популярное',
     'Coming': 'Скоро',
-    'AI Chat Bot': 'AI чат-бот',
-    'AI Voice Bot': 'AI голосовой бот',
-    'AI Avatar': 'AI аватар',
-    'AI Assistant': 'AI ассистент',
+    'AI Chat Bot': 'ИИ Чат-Агент',
+    'AI Voice Bot': 'ИИ Голосовой Агент',
+    'AI Avatar': 'ИИ Аватар',
+    'AI Assistant': 'ИИ Ассистент',
     'Custom Development': 'Индивидуальная разработка',
     'Counseling': 'Консультации'
   },
   ua: {
-    'AI Tools for Business': 'AI інструменти для бізнесу',
+    'AI Tools for Business': 'ШІ інструменти для бізнесу',
     'Messaging': 'Обмін повідомленнями',
     'Integration': 'Інтеграція',
     'Security & Search': 'Безпека та пошук',
@@ -251,10 +386,10 @@ export const toolGroupTranslations = {
     'Coming Soon': 'Скоро',
     'Hot': 'Популярне',
     'Coming': 'Скоро',
-    'AI Chat Bot': 'AI чат-бот',
-    'AI Voice Bot': 'AI голосовий бот',
-    'AI Avatar': 'AI аватар',
-    'AI Assistant': 'AI асистент',
+    'AI Chat Bot': 'ШІ Чат-Агент',
+    'AI Voice Bot': 'ШІ Голосовий Агент',
+    'AI Avatar': 'ШІ Аватар',
+    'AI Assistant': 'ШІ Ассистент',
     'Custom Development': 'Індивідуальна розробка',
     'Counseling': 'Консультації'
   }
@@ -687,10 +822,13 @@ export const pricingTranslations = {
       startingFrom: "Desde",
       price: "Precio personalizado",
       features: [
-        "Desarrollo de modelos de IA personalizados",
-        "Equipo de desarrollo dedicado",
-        "Implementación de lógica empresarial única",
-        "Integraciones personalizadas y desarrollo de API"
+        "Soluciones a Medida",
+        "Desarrollo Ágil",
+        "Arquitectura Escalable",
+        "Tecnologías Modernas",
+        "Seguridad Primero",
+        "Integración en la Nube",
+        "Desarrollo de API"
       ],
       cta: "Contactar ventas"
     },
@@ -1604,3 +1742,3325 @@ export const contactTranslations = {
     }
   }
 } as const; 
+
+export const aiAssistantTranslations = {
+  en: {
+    title: "AI Assistant",
+    description: "Empower your business with an intelligent AI assistant...",
+    sectionTitles: {
+      features: "Key Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Advanced Task Automation",
+      "Natural Language Processing",
+      "Contextual Understanding",
+      "Predictive Analytics",
+      "Multi-platform Integration",
+      "Personalized Recommendations",
+      "Adaptive Learning Capabilities"
+    ],
+    benefits: [
+      "Increased Productivity",
+      "Streamlined Workflows",
+      "Reduced Manual Tasks",
+      "Improved Decision Making",
+      "Enhanced Team Collaboration",
+      "Time and Cost Savings",
+      "Scalable Business Operations"
+    ],
+    integrations: [
+      "Project Management Tools",
+      "Communication Platforms",
+      "CRM Systems",
+      "Calendar Applications",
+      "Email Clients",
+      "Document Management Systems"
+    ]
+  },
+  de: {
+    title: "KI-Assistent",
+    description: "Stärken Sie Ihr Unternehmen...",
+    sectionTitles: {
+      features: "Hauptfunktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Erweiterte Aufgabenautomatisierung",
+      "Verarbeitung natürlicher Sprache",
+      "Kontextuelles Verständnis",
+      "Prädiktive Analytik",
+      "Multi-Plattform-Integration",
+      "Personalisierte Empfehlungen",
+      "Adaptive Lernfähigkeiten"
+    ],
+    benefits: [
+      "Gesteigerte Produktivität",
+      "Optimierte Arbeitsabläufe",
+      "Reduzierte manuelle Aufgaben",
+      "Verbesserte Entscheidungsfindung",
+      "Verbesserte Teamzusammenarbeit",
+      "Zeit- und Kostenersparnis",
+      "Skalierbare Geschäftsprozesse"
+    ],
+    integrations: [
+      "Projektmanagement-Tools",
+      "Kommunikationsplattformen",
+      "CRM-Systeme",
+      "Kalenderanwendungen",
+      "E-Mail-Clients",
+      "Dokumentenmanagementsysteme"
+    ]
+  },
+  es: {
+    title: "Asistente de IA",
+    description: "Potencie su negocio...",
+    sectionTitles: {
+      features: "Características principales",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Automatización avanzada de tareas",
+      "Procesamiento del lenguaje natural",
+      "Comprensión contextual",
+      "Análisis predictivo",
+      "Integración multiplataforma",
+      "Recomendaciones personalizadas",
+      "Capacidades de aprendizaje adaptativo"
+    ],
+    benefits: [
+      "Mayor productividad",
+      "Flujos de trabajo optimizados",
+      "Reducción de tareas manuales",
+      "Mejor toma de decisiones",
+      "Colaboración mejorada del equipo",
+      "Ahorro de tiempo y costos",
+      "Operaciones comerciales escalables"
+    ],
+    integrations: [
+      "Herramientas de gestión de proyectos",
+      "Plataformas de comunicación",
+      "Sistemas CRM",
+      "Aplicaciones de calendario",
+      "Clientes de correo electrónico",
+      "Sistemas de gestión documental"
+    ]
+  },
+  ru: {
+    title: "ИИ-Ассистент",
+    description: "Усильте свой бизнес...",
+    sectionTitles: {
+      features: "Ключевые возможности",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Продвинутая автоматизация задач",
+      "Обработка естественного языка",
+      "Контекстное понимание",
+      "Предиктивная аналитика",
+      "Мультиплатформенная интеграция",
+      "Персонализированные рекомендации",
+      "Адаптивные возможности обучения"
+    ],
+    benefits: [
+      "Повышенная производительность",
+      "Оптимизированные рабочие процессы",
+      "Сокращение ручных задач",
+      "Улучшенное принятие решений",
+      "Улучшенное командное взаимодействие",
+      "Экономия времени и затрат",
+      "Масштабируемые бизнес-операции"
+    ],
+    integrations: [
+      "Инструменты управления проектами",
+      "Платформы для коммуникации",
+      "CRM-системы",
+      "Календарные приложения",
+      "Почтовые клиенты",
+      "Системы управления документами"
+    ]
+  },
+  ua: {
+    title: "ШІ-Асистент",
+    description: "Посильте свій бізнес...",
+    sectionTitles: {
+      features: "Ключові можливості",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Просунута автоматизація завдань",
+      "Обробка природної мови",
+      "Контекстне розуміння",
+      "Предиктивна аналітика",
+      "Мультиплатформна інтеграція",
+      "Персоналізовані рекомендації",
+      "Адаптивні можливості навчання"
+    ],
+    benefits: [
+      "Підвищена продуктивність",
+      "Оптимізовані робочі процеси",
+      "Скорочення ручних завдань",
+      "Покращене прийняття рішень",
+      "Покращена командна взаємодія",
+      "Економія часу та витрат",
+      "Масштабовані бізнес-операції"
+    ],
+    integrations: [
+      "Інструменти управління проектами",
+      "Платформи для комунікації",
+      "CRM-системи",
+      "Календарні додатки",
+      "Поштові клієнти",
+      "Системи управління документами"
+    ]
+  }
+};
+
+export const aiVoiceBotTranslations = {
+  en: {
+    title: "AI Voice Bot",
+    description: "Intelligent voice assistant for your business",
+    sectionTitles: {
+      features: "Key Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Natural Language Processing",
+      "Voice Recognition",
+      "Multi-language Support",
+      "Custom Voice Training"
+    ],
+    benefits: [
+      "24/7 Customer Support",
+      "Reduced Response Time",
+      "Consistent Service Quality",
+      "Cost Efficiency"
+    ],
+    integrations: [
+      "Phone Systems",
+      "CRM Platforms",
+      "Chat Applications",
+      "Analytics Tools"
+    ]
+  },
+  de: {
+    title: "KI-Sprachbot",
+    description: "Intelligenter Sprachassistent für Ihr Unternehmen",
+    sectionTitles: {
+      features: "Hauptfunktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Verarbeitung natürlicher Sprache",
+      "Spracherkennung",
+      "Mehrsprachige Unterstützung",
+      "Angepasstes Sprachtraining"
+    ],
+    benefits: [
+      "24/7 Kundenbetreuung",
+      "Verkürzte Reaktionszeit",
+      "Konstante Servicequalität",
+      "Kosteneffizienz"
+    ],
+    integrations: [
+      "Telefonsysteme",
+      "CRM-Plattformen",
+      "Chat-Anwendungen",
+      "Analyse-Tools"
+    ]
+  },
+  es: {
+    title: "Bot de Voz IA",
+    description: "Asistente de voz inteligente para su negocio",
+    sectionTitles: {
+      features: "Características principales",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Procesamiento del Lenguaje Natural",
+      "Reconocimiento de Voz",
+      "Soporte Multilingüe",
+      "Entrenamiento de Voz Personalizado"
+    ],
+    benefits: [
+      "Soporte al Cliente 24/7",
+      "Tiempo de Respuesta Reducido",
+      "Calidad de Servicio Consistente",
+      "Eficiencia en Costos"
+    ],
+    integrations: [
+      "Sistemas Telefónicos",
+      "Plataformas CRM",
+      "Aplicaciones de Chat",
+      "Herramientas de Análisis"
+    ]
+  },
+  ru: {
+    title: "ИИ Голосовой Агент",
+    description: "Интеллектуальный голосовой помощник для вашего бизнеса",
+    sectionTitles: {
+      features: "Ключевые возможности",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Обработка естественного языка",
+      "Распознавание речи",
+      "Многоязычная поддержка",
+      "Настраиваемое обучение голоса"
+    ],
+    benefits: [
+      "Поддержка клиентов 24/7",
+      "Сокращенное время отклика",
+      "Стабильное качество обслуживания",
+      "Экономическая эффективность"
+    ],
+    integrations: [
+      "Телефонные системы",
+      "CRM-платформы",
+      "Чат-приложения",
+      "Аналитические инструменты"
+    ]
+  },
+  ua: {
+    title: "ШІ Голосовий Агент",
+    description: "Інтелектуальний голосовий помічник для вашого бізнесу",
+    sectionTitles: {
+      features: "Ключові можливості",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Обробка природної мови",
+      "Розпізнавання мовлення",
+      "Багатомовна підтримка",
+      "Налаштоване навчання голосу"
+    ],
+    benefits: [
+      "Підтримка клієнтів 24/7",
+      "Скорочений час відгуку",
+      "Стабільна якість обслуговування",
+      "Економічна ефективність"
+    ],
+    integrations: [
+      "Телефонні системи",
+      "CRM-платформи",
+      "Чат-додатки",
+      "Аналітичні інструменти"
+    ]
+  }
+};
+
+export const aiAvatarTranslations = {
+  en: {
+    title: "AI Avatar",
+    description: "Empower your business with AI Avatars tailored to your needs. Let us design and implement custom AI Avatars to enhance your brand's identity and customer engagement.",
+    sectionTitles: {
+      features: "Key Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Custom Avatar Design",
+      "Advanced Face Recognition",
+      "Personalized Style Implementation",
+      "Batch Processing Capabilities",
+      "Multiple Output Formats",
+      "Real-time Preview Options",
+      "Expression and Background Control"
+    ],
+    benefits: [
+      "Professional and Custom Solutions",
+      "Increased Customer Engagement",
+      "Unique Brand Identity",
+      "Streamlined Implementation",
+      "Scalable for Multiple Use Cases",
+      "Regular Updates and Support",
+      "Time and Cost Efficiency"
+    ],
+    integrations: [
+      "Social Media Platforms",
+      "E-commerce Platforms",
+      "Marketing Tools",
+      "Video Conferencing Tools",
+      "AR/VR Platforms",
+      "Live Streaming Services"
+    ],
+    metaTitle: "AI Avatar | NeuroGen Lab - Custom AI Solutions for Businesses",
+    metaDescription: "Elevate your brand with custom AI Avatars developed by NeuroGen Lab. Designed to fit your business needs and enhance your digital presence."
+  },
+
+de: {
+    title: "KI Avatar",
+    description: "Stärken Sie Ihr Unternehmen mit maßgeschneiderten AI Avataren. Wir entwerfen und implementieren individuelle AI Avatare, um die Identität Ihrer Marke und die Kundenbindung zu verbessern.",
+    sectionTitles: {
+      features: "Hauptfunktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Individuelles Avatar-Design",
+      "Fortschrittliche Gesichtserkennung",
+      "Personalisierte Stilumsetzung",
+      "Batch-Verarbeitung",
+      "Mehrere Ausgabeformate",
+      "Echtzeit-Vorschau",
+      "Ausdrucks- und Hintergrundsteuerung"
+    ],
+    benefits: [
+      "Professionelle und individuelle Lösungen",
+      "Erhöhte Kundenbindung",
+      "Einzigartige Markenidentität",
+      "Effiziente Implementierung",
+      "Skalierbar für verschiedene Anwendungsfälle",
+      "Regelmäßige Updates und Support",
+      "Zeit- und Kosteneffizienz"
+    ],
+    integrations: [
+      "Social-Media-Plattformen",
+      "E-Commerce-Plattformen",
+      "Marketing-Tools",
+      "Videokonferenz-Lösungen",
+      "AR/VR-Plattformen",
+      "Live-Streaming-Dienste"
+    ],
+    metaTitle: "KI Avatar | NeuroGen Lab - Maßgeschneiderte AI-Lösungen für Unternehmen",
+    metaDescription: "Stärken Sie Ihre Marke mit individuellen AI Avataren von NeuroGen Lab. Entwickelt, um Ihren geschäftlichen Anforderungen zu entsprechen und Ihre digitale Präsenz zu verbessern."
+},
+es: {
+  title: "IA Avatar",
+  description: "Potencie su negocio con Avatares de IA adaptados a sus necesidades. Permítanos diseñar e implementar Avatares de IA personalizados para mejorar la identidad de su marca y la participación del cliente.",
+  sectionTitles: {
+    features: "Características Principales",
+    benefits: "Beneficios",
+    integrations: "Integraciones"
+  },
+  features: [
+    "Diseño de Avatar Personalizado",
+    "Reconocimiento Facial Avanzado",
+    "Implementación de Estilo Personalizado",
+    "Capacidades de Procesamiento por Lotes",
+    "Múltiples Formatos de Salida",
+    "Opciones de Vista Previa en Tiempo Real",
+    "Control de Expresión y Fondo"
+  ],
+  benefits: [
+    "Soluciones Profesionales y Personalizadas",
+    "Mayor Participación del Cliente",
+    "Identidad de Marca Única",
+    "Implementación Simplificada",
+    "Escalable para Múltiples Usos",
+    "Actualizaciones y Soporte Regulares",
+    "Eficiencia en Tiempo y Costos"
+  ],
+  integrations: [
+    "Plataformas de Redes Sociales",
+    "Plataformas de Comercio Electrónico",
+    "Herramientas de Marketing",
+    "Herramientas de Videoconferencia",
+    "Plataformas de AR/VR",
+    "Servicios de Transmisión en Vivo"
+  ],
+  metaTitle: "Avatar de IA | NeuroGen Lab - Soluciones de IA Personalizadas para Empresas",
+  metaDescription: "Impulse su marca con Avatares de IA personalizados desarrollados por NeuroGen Lab. Diseñados para satisfacer las necesidades de su negocio y mejorar su presencia digital."
+},
+
+ru: {
+  title: "ИИ Аватар",
+  description: "Раскройте потенциал вашего бизнеса с помощью ИИ-Аватаров, адаптированных к вашим потребностям. Мы разработаем и внедрим индивидуальные AI-аватары, чтобы усилить идентичность вашего бренда и повысить вовлеченность клиентов.",
+  sectionTitles: {
+    features: "Ключевые особенности",
+    benefits: "Преимущества",
+    integrations: "Интеграции"
+  },
+  features: [
+    "Индивидуальный дизайн аватаров",
+    "Продвинутое распознавание лиц",
+    "Персонализированная реализация стиля",
+    "Возможности пакетной обработки",
+    "Несколько форматов вывода",
+    "Предпросмотр в реальном времени",
+    "Управление выражением лица и фоном"
+  ],
+  benefits: [
+    "Профессиональные и индивидуальные решения",
+    "Повышение вовлеченности клиентов",
+    "Уникальная идентичность бренда",
+    "Упрощенная реализация",
+    "Масштабируемость для разных сценариев",
+    "Регулярные обновления и поддержка",
+    "Экономия времени и ресурсов"
+  ],
+  integrations: [
+    "Социальные платформы",
+    "Платформы электронной коммерции",
+    "Маркетинговые инструменты",
+    "Инструменты видеоконференций",
+    "Платформы AR/VR",
+    "Сервисы прямых трансляций"
+  ],
+  metaTitle: "AI Avatar | NeuroGen Lab - Индивидуальные AI-решения для бизнеса",
+  metaDescription: "Усилите ваш бренд с помощью индивидуальных AI-аватаров, разработанных NeuroGen Lab. Созданы с учетом потребностей вашего бизнеса для улучшения вашей цифровой присутствия."
+},
+
+ua: {
+  title: "ШІ Аватар",
+  description: "Розкрийте потенціал вашого бізнесу за допомогою ШІ-Аватарів, адаптованих до ваших потреб. Ми розробимо та впровадимо індивідуальні AI-аватари, щоб посилити ідентичність вашого бренду та залучення клієнтів.",
+  sectionTitles: {
+    features: "Ключові особливості",
+    benefits: "Переваги",
+    integrations: "Інтеграції"
+  },
+  features: [
+    "Індивідуальний дизайн аватарів",
+    "Передове розпізнавання облич",
+    "Персоналізоване впровадження стилю",
+    "Можливості пакетної обробки",
+    "Кілька форматів виводу",
+    "Попередній перегляд у реальному часі",
+    "Керування виразами та фоном"
+  ],
+  benefits: [
+    "Професійні та індивідуальні рішення",
+    "Підвищена залученість клієнтів",
+    "Унікальна ідентичність бренду",
+    "Спрощена реалізація",
+    "Масштабованість для різних сценаріїв",
+    "Регулярні оновлення та підтримка",
+    "Заощадження часу та коштів"
+  ],
+  integrations: [
+    "Платформи соціальних мереж",
+    "Платформи електронної комерції",
+    "Маркетингові інструменти",
+    "Інструменти для відеоконференцій",
+    "Платформи AR/VR",
+    "Сервіси прямих трансляцій"
+  ],
+  metaTitle: "AI Avatar | NeuroGen Lab - Індивідуальні AI-рішення для бізнесу",
+  metaDescription: "Посильте свій бренд за допомогою індивідуальних AI-аватарів, розроблених NeuroGen Lab. Створені з урахуванням потреб вашого бізнесу для покращення вашої цифрової присутності."
+},
+
+};
+const aiChatBotTranslations = {
+  en: {
+    title: "AI Chat Bot",
+    description: "Enhance your customer service with our intelligent chatbot solution that provides 24/7 support and seamless customer interactions.",
+    sectionTitles: {
+      features: "Key Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Natural Language Processing",
+      "Multi-language Support",
+      "Custom Knowledge Base",
+      "Real-time Analytics",
+      "Human Handoff",
+      "Automated Responses",
+      "Contextual Understanding"
+    ],
+    benefits: [
+      "24/7 Customer Support",
+      "Reduced Support Costs",
+      "Faster Response Times",
+      "Consistent Experience",
+      "Scalable Solution",
+      "Valuable Insights",
+      "Improved Satisfaction"
+    ],
+    integrations: [
+      "Website Widget",
+      "Facebook Messenger",
+      "WhatsApp",
+      "Slack",
+      "Microsoft Teams",
+      "Custom API"
+    ],
+    articleContent: {
+      mainTitle: "AI Chat Bot for Business – Automate and Innovate with NeuroGen Lab",
+      subtitle: "Unlock the Power of Artificial Intelligence",
+      introText: "At NeuroGen Lab, we bring you an advanced AI Chat Bot designed to:",
+      introList: [
+        "Automate communication",
+        "Enhance customer interactions",
+        "Streamline operations"
+      ],
+      howItWorksTitle: "How Does Our AI Chat Bot Work?",
+      howItWorksText: "Our chat bot leverages GPT-4 and cutting-edge conversational AI technology to:",
+      howItWorksList: [
+        "Understand context",
+        "Process requests in real-time",
+        "Generate accurate, human-like responses"
+      ],
+      keyFeaturesTitle: "Key Features of Our AI Chat Bot",
+      features: {
+        realTime: {
+          title: "Real-Time Communication",
+          description: "Engage users instantly and resolve inquiries without delay."
+        },
+        multiLanguage: {
+          title: "Multi-Language Support",
+          description: "Communicate with a global audience seamlessly."
+        },
+        scalability: {
+          title: "Scalability",
+          description: "Handle thousands of simultaneous queries with unmatched precision."
+        },
+        analytics: {
+          title: "Performance Analytics",
+          description: "Gain actionable insights to optimize your customer engagement strategy."
+        }
+      },
+      industriesTitle: "Industries We Serve",
+      industriesText: "Our versatile AI Chat Bot adapts to any industry, empowering businesses to automate and grow:",
+      industries: [
+        {
+          icon: "🏪",
+          name: "Retail",
+          description: "Automate sales inquiries and enhance customer service."
+        },
+        {
+          icon: "🏥",
+          name: "Healthcare",
+          description: "Provide 24/7 virtual assistance for patients and medical staff."
+        },
+        {
+          icon: "🎓",
+          name: "Education",
+          description: "Support students with course information and academic guidance."
+        },
+        {
+          icon: "🛒",
+          name: "E-commerce",
+          description: "Boost conversions with instant, real-time support."
+        },
+        {
+          icon: "💼",
+          name: "Finance",
+          description: "Streamline FAQs and client interactions with intelligent automation."
+        }
+      ],
+      conclusionTitle: "Start Transforming Your Business Today 🚀",
+      conclusionText: "Experience the future of communication with NeuroGen Lab's AI Chat Bot.",
+      conclusionList: [
+        "Optimize your workflows",
+        "Improve customer satisfaction",
+        "Reduce costs"
+      ],
+      topReasonsTitle: "5 Top Reasons Why Your Business Needs an AI Chat Bot",
+      reasonList: [
+        {
+          title: "1. 24/7 Automated Customer Support",
+          content: {
+            text: "An AI Chat Bot works round-the-clock, providing instant responses to customer inquiries. This helps to:",
+            list: [
+              "Increase customer satisfaction with fast response times",
+              "Reduce wait times for answers",
+              "Resolve repetitive and common queries without human intervention"
+            ]
+          }
+        },
+        {
+          title: "2. Reduce Operational Costs",
+          content: {
+            text: "Implementing an AI Chat Bot significantly lowers expenses related to manual support:",
+            list: [
+              "Automates routine tasks, freeing up your employees' time",
+              "Reduces the workload for call centers and support teams",
+              "Cuts costs on hiring, training, and maintaining support staff"
+            ]
+          }
+        },
+        {
+          title: "3. Increase Sales and Conversions",
+          content: {
+            text: "AI Chat Bots do more than answer questions — they actively drive sales:",
+            list: [
+              "Recommend products based on customer preferences",
+              "Guide users through the sales funnel to finalize purchases",
+              "Capture leads and gather contact information for your sales team"
+            ]
+          }
+        },
+        {
+          title: "4. Instant Scalability for High Volumes",
+          content: {
+            text: "An AI Chat Bot can handle thousands of inquiries simultaneously:",
+            list: [
+              "Processes requests quickly, even during peak hours",
+              "Works effectively for businesses of all sizes",
+              "Handles large-scale events seamlessly"
+            ]
+          }
+        },
+        {
+          title: "5. Enhanced Customer Experience",
+          content: {
+            text: "Improve overall customer satisfaction with personalized interactions:",
+            list: [
+              "Provides consistent and accurate responses across all channels",
+              "Offers multilingual support for global customer base",
+              "Maintains conversation context for more natural interactions"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Conclusion",
+        text: "By using NeuroGen Lab's AI Chat Bot, businesses can unlock efficiency, provide exceptional customer experiences, and stay ahead of the competition. Get started today and transform your business with the power of AI-driven automation."
+      }
+    },
+    metaTitle: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Service Solution",
+    metaDescription: "Transform your customer service with our AI-powered chatbot. Provide 24/7 support, reduce costs, and deliver exceptional customer experiences."
+  },
+
+  de: {
+    title: "KI-Chatbot",
+    description: "Verbessern Sie Ihren Kundenservice mit unserer intelligenten Chatbot-Lösung, die rund um die Uhr Support und nahtlose Kundeninteraktionen bietet.",
+    sectionTitles: {
+      features: "Hauptfunktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Verarbeitung natürlicher Sprache",
+      "Mehrsprachige Unterstützung",
+      "Anpassbare Wissensbasis",
+      "Echtzeit-Analytik",
+      "Menschliche Übergabe",
+      "Automatisierte Antworten",
+      "Kontextuelles Verständnis"
+    ],
+    benefits: [
+      "24/7 Kundenbetreuung",
+      "Reduzierte Supportkosten",
+      "Schnellere Reaktionszeiten",
+      "Konsistente Erfahrung",
+      "Skalierbare Lösung",
+      "Wertvolle Einblicke",
+      "Verbesserte Zufriedenheit"
+    ],
+    integrations: [
+      "Website-Widget",
+      "Facebook Messenger",
+      "WhatsApp",
+      "Slack",
+      "Microsoft Teams",
+      "Benutzerdefinierte API"
+    ],
+    articleContent: {
+      mainTitle: "KI-Chatbot für Unternehmen – Automatisieren und Innovieren mit NeuroGen Lab",
+      subtitle: "Nutzen Sie die Kraft der Künstlichen Intelligenz",
+      introText: "Bei NeuroGen Lab bieten wir Ihnen einen fortschrittlichen KI-Chatbot, der entwickelt wurde, um:",
+      introList: [
+        "Kommunikation zu automatisieren",
+        "Kundeninteraktionen zu verbessern",
+        "Abläufe zu optimieren"
+      ],
+      howItWorksTitle: "Wie funktioniert unser KI-Chatbot?",
+      howItWorksText: "Unser Chatbot nutzt GPT-4 und modernste Konversations-KI-Technologie, um:",
+      howItWorksList: [
+        "Kontext zu verstehen",
+        "Anfragen in Echtzeit zu verarbeiten",
+        "Präzise, menschenähnliche Antworten zu generieren"
+      ],
+      keyFeaturesTitle: "Hauptfunktionen unseres KI-Chatbots",
+      features: {
+        realTime: {
+          title: "Echtzeit-Kommunikation",
+          description: "Erreichen Sie Benutzer sofort und lösen Sie Anfragen ohne Verzögerung."
+        },
+        multiLanguage: {
+          title: "Mehrsprachige Unterstützung",
+          description: "Kommunizieren Sie nahtlos mit einem globalen Publikum."
+        },
+        scalability: {
+          title: "Skalierbarkeit",
+          description: "Bewältigen Sie tausende gleichzeitiger Anfragen mit unübertroffener Präzision."
+        },
+        analytics: {
+          title: "Leistungsanalyse",
+          description: "Gewinnen Sie umsetzbare Erkenntnisse zur Optimierung Ihrer Kundenengagement-Strategie."
+        }
+      },
+      industriesTitle: "Branchen, die wir bedienen",
+      industriesText: "Unser vielseitiger KI-Chatbot passt sich jeder Branche an und ermöglicht Unternehmen Automatisierung und Wachstum:",
+      industries: [
+        {
+          icon: "🏪",
+          name: "Einzelhandel",
+          description: "Automatisieren Sie Verkaufsanfragen und verbessern Sie den Kundenservice."
+        },
+        {
+          icon: "🏥",
+          name: "Gesundheitswesen",
+          description: "Bieten Sie 24/7 virtuelle Unterstützung für Patienten und medizinisches Personal."
+        },
+        {
+          icon: "🎓",
+          name: "Bildung",
+          description: "Unterstützen Sie Studenten mit Kursinformationen und akademischer Beratung."
+        },
+        {
+          icon: "🛒",
+          name: "E-Commerce",
+          description: "Steigern Sie Konversionen durch sofortige Echtzeitunterstützung."
+        },
+        {
+          icon: "💼",
+          name: "Finanzen",
+          description: "Optimieren Sie FAQ und Kundeninteraktionen durch intelligente Automatisierung."
+        }
+      ],
+      conclusionTitle: "Beginnen Sie heute mit der Transformation Ihres Unternehmens 🚀",
+      conclusionText: "Erleben Sie die Zukunft der Kommunikation mit dem KI-Chatbot von NeuroGen Lab.",
+      conclusionList: [
+        "Optimieren Sie Ihre Arbeitsabläufe",
+        "Verbessern Sie die Kundenzufriedenheit",
+        "Reduzieren Sie Kosten"
+      ],
+      topReasonsTitle: "5 wichtige Gründe, warum Ihr Unternehmen einen KI-Chatbot benötigt",
+      reasonList: [
+        {
+          title: "1. 24/7 Automatisierter Kundenservice",
+          content: {
+            text: "Ein KI-Chatbot arbeitet rund um die Uhr und bietet sofortige Antworten auf Kundenanfragen. Dies hilft:",
+            list: [
+              "Die Kundenzufriedenheit durch schnelle Reaktionszeiten zu erhöhen",
+              "Wartezeiten für Antworten zu reduzieren",
+              "Wiederkehrende und häufige Anfragen ohne menschliches Eingreifen zu lösen"
+            ]
+          }
+        },
+        {
+          title: "2. Betriebskosten senken",
+          content: {
+            text: "Die Implementierung eines KI-Chatbots reduziert deutlich die Kosten für manuellen Support:",
+            list: [
+              "Automatisiert Routineaufgaben und entlastet Ihre Mitarbeiter",
+              "Reduziert die Arbeitsbelastung für Call-Center und Support-Teams",
+              "Senkt Kosten für Einstellung, Schulung und Wartung von Support-Personal"
+            ]
+          }
+        },
+        {
+          title: "3. Umsatz und Konversionen steigern",
+          content: {
+            text: "KI-Chatbots tun mehr als nur Fragen zu beantworten — sie treiben aktiv den Verkauf an:",
+            list: [
+              "Empfehlen Produkte basierend auf Kundenpräferenzen",
+              "Führen Benutzer durch den Verkaufstrichter zum Abschluss",
+              "Erfassen Leads und sammeln Kontaktinformationen für Ihr Vertriebsteam"
+            ]
+          }
+        },
+        {
+          title: "4. Sofortige Skalierbarkeit für hohe Volumen",
+          content: {
+            text: "Ein KI-Chatbot kann tausende von Anfragen gleichzeitig bearbeiten:",
+            list: [
+              "Verarbeitet Anfragen schnell, auch zu Stoßzeiten",
+              "Arbeitet effektiv für Unternehmen jeder Größe",
+              "Bewältigt Großveranstaltungen problemlos"
+            ]
+          }
+        },
+        {
+          title: "5. Verbesserte Kundenerfahrung",
+          content: {
+            text: "Verbessern Sie die allgemeine Kundenzufriedenheit durch personalisierte Interaktionen:",
+            list: [
+              "Bietet konsistente und präzise Antworten über alle Kanäle",
+              "Ermöglicht mehrsprachigen Support für globale Kundenbasis",
+              "Behält Gesprächskontext für natürlichere Interaktionen bei"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Fazit",
+        text: "Mit dem KI-Chatbot von NeuroGen Lab können Unternehmen Effizienz freisetzen, außergewöhnliche Kundenerlebnisse bieten und der Konkurrenz voraus sein. Starten Sie noch heute und transformieren Sie Ihr Unternehmen mit der Kraft KI-gesteuerter Automatisierung."
+      }
+    },
+    metaTitle: "KI-Chatbot | NeuroGen Lab - Intelligente Kundenservice-Lösung",
+    metaDescription: "Transformieren Sie Ihren Kundenservice mit unserem KI-gestützten Chatbot. Bieten Sie 24/7 Support und außergewöhnliche Kundenerlebnisse."
+  },
+
+  es: {
+    title: "Bot de Chat IA",
+    description: "Mejore su servicio al cliente con nuestra solución de chatbot inteligente que proporciona soporte 24/7 e interacciones fluidas con los clientes.",
+    sectionTitles: {
+      features: "Características Principales",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Procesamiento del Lenguaje Natural",
+      "Soporte Multilingüe",
+      "Base de Conocimientos Personalizada",
+      "Análisis en Tiempo Real",
+      "Transferencia a Humanos",
+      "Respuestas Automatizadas",
+      "Comprensión Contextual"
+    ],
+    benefits: [
+      "Soporte al Cliente 24/7",
+      "Costos de Soporte Reducidos",
+      "Tiempos de Respuesta Más Rápidos",
+      "Experiencia Consistente",
+      "Solución Escalable",
+      "Información Valiosa",
+      "Satisfacción Mejorada"
+    ],
+    integrations: [
+      "Widget para Sitio Web",
+      "Facebook Messenger",
+      "WhatsApp",
+      "Slack",
+      "Microsoft Teams",
+      "API Personalizada"
+    ],
+    articleContent: {
+      mainTitle: "Bot de Chat IA para Empresas – Automatice e Innove con NeuroGen Lab",
+      subtitle: "Desbloquee el Poder de la Inteligencia Artificial",
+      introText: "En NeuroGen Lab, le ofrecemos un Bot de Chat IA avanzado diseñado para:",
+      introList: [
+        "Automatizar la comunicación",
+        "Mejorar las interacciones con clientes",
+        "Optimizar operaciones"
+      ],
+      howItWorksTitle: "¿Cómo Funciona Nuestro Bot de Chat IA?",
+      howItWorksText: "Nuestro chatbot utiliza GPT-4 y tecnología de IA conversacional de vanguardia para:",
+      howItWorksList: [
+        "Comprender el contexto",
+        "Procesar solicitudes en tiempo real",
+        "Generar respuestas precisas y naturales"
+      ],
+      keyFeaturesTitle: "Características Principales de Nuestro Bot de Chat IA",
+      features: {
+        realTime: {
+          title: "Comunicación en Tiempo Real",
+          description: "Interactúe con usuarios al instante y resuelva consultas sin demora."
+        },
+        multiLanguage: {
+          title: "Soporte Multilingüe",
+          description: "Comuníquese con una audiencia global sin problemas."
+        },
+        scalability: {
+          title: "Escalabilidad",
+          description: "Maneje miles de consultas simultáneas con precisión incomparable."
+        },
+        analytics: {
+          title: "Análisis de Rendimiento",
+          description: "Obtenga información procesable para optimizar su estrategia de participación del cliente."
+        }
+      },
+      industriesTitle: "Industrias que Servimos",
+      industriesText: "Nuestro versátil Bot de Chat IA se adapta a cualquier industria, permitiendo a las empresas automatizar y crecer:",
+      industries: [
+        {
+          icon: "🏪",
+          name: "Comercio Minorista",
+          description: "Automatice consultas de ventas y mejore el servicio al cliente."
+        },
+        {
+          icon: "🏥",
+          name: "Salud",
+          description: "Proporcione asistencia virtual 24/7 para pacientes y personal médico."
+        },
+        {
+          icon: "🎓",
+          name: "Educación",
+          description: "Apoye a los estudiantes con información de cursos y orientación académica."
+        },
+        {
+          icon: "🛒",
+          name: "Comercio Electrónico",
+          description: "Aumente las conversiones con soporte instantáneo en tiempo real."
+        },
+        {
+          icon: "💼",
+          name: "Finanzas",
+          description: "Optimice las FAQ e interacciones con clientes mediante automatización inteligente."
+        }
+      ],
+      conclusionTitle: "Comience a Transformar su Negocio Hoy 🚀",
+      conclusionText: "Experimente el futuro de la comunicación con el Bot de Chat IA de NeuroGen Lab.",
+      conclusionList: [
+        "Optimice sus flujos de trabajo",
+        "Mejore la satisfacción del cliente",
+        "Reduzca costos"
+      ],
+      topReasonsTitle: "5 Razones Principales por las que su Negocio Necesita un Bot de Chat IA",
+      reasonList: [
+        {
+          title: "1. Soporte al Cliente Automatizado 24/7",
+          content: {
+            text: "Un Bot de Chat IA trabaja las 24 horas, proporcionando respuestas instantáneas a las consultas de los clientes. Esto ayuda a:",
+            list: [
+              "Aumentar la satisfacción del cliente con tiempos de respuesta rápidos",
+              "Reducir los tiempos de espera para obtener respuestas",
+              "Resolver consultas repetitivas y comunes sin intervención humana"
+            ]
+          }
+        },
+        {
+          title: "2. Reducir Costos Operativos",
+          content: {
+            text: "La implementación de un Bot de Chat IA reduce significativamente los gastos relacionados con el soporte manual:",
+            list: [
+              "Automatiza tareas rutinarias, liberando el tiempo de sus empleados",
+              "Reduce la carga de trabajo para centros de llamadas y equipos de soporte",
+              "Reduce costos en contratación, capacitación y mantenimiento de personal de soporte"
+            ]
+          }
+        },
+        {
+          title: "3. Aumentar Ventas y Conversiones",
+          content: {
+            text: "Los Bots de Chat IA hacen más que responder preguntas — impulsan activamente las ventas:",
+            list: [
+              "Recomiendan productos basados en las preferencias del cliente",
+              "Guían a los usuarios a través del embudo de ventas hasta finalizar las compras",
+              "Capturan leads y recopilan información de contacto para su equipo de ventas"
+            ]
+          }
+        },
+        {
+          title: "4. Escalabilidad Instantánea para Altos Volúmenes",
+          content: {
+            text: "Un Bot de Chat IA puede manejar miles de consultas simultáneamente:",
+            list: [
+              "Procesa solicitudes rápidamente, incluso en horas pico",
+              "Funciona eficazmente para empresas de todos los tamaños",
+              "Maneja eventos a gran escala sin problemas"
+            ]
+          }
+        },
+        {
+          title: "5. Experiencia del Cliente Mejorada",
+          content: {
+            text: "Mejore la satisfacción general del cliente con interacciones personalizadas:",
+            list: [
+              "Proporciona respuestas consistentes y precisas en todos los canales",
+              "Ofrece soporte multilingüe para base de clientes global",
+              "Mantiene el contexto de la conversación para interacciones más naturales"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Conclusión",
+        text: "Al utilizar el Bot de Chat IA de NeuroGen Lab, las empresas pueden desbloquear la eficiencia, proporcionar experiencias excepcionales al cliente y mantenerse adelante de la competencia. Comience hoy y transforme su negocio con el poder de la automatización impulsada por IA."
+      }
+    },
+    metaTitle: "Bot de Chat IA | NeuroGen Lab - Solución Inteligente de Servicio al Cliente",
+    metaDescription: "Transforme su servicio al cliente con nuestro chatbot impulsado por IA. Proporcione soporte 24/7 y brinde experiencias excepcionales al cliente."
+  },
+  // ... предыдущие переводы (en, de, es) остаются без изменений ...
+
+  ru: {
+    title: "ИИ Чат-бот",
+    description: "Улучшите ваш клиентский сервис с помощью нашего интеллектуального чат-бота, обеспечивающего круглосуточную поддержку и безупречное взаимодействие с клиентами.",
+    sectionTitles: {
+      features: "Ключевые возможности",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Обработка естественного языка",
+      "Многоязычная поддержка",
+      "Настраиваемая база знаний",
+      "Аналитика в реальном времени",
+      "Передача живому оператору",
+      "Автоматические ответы",
+      "Контекстное понимание"
+    ],
+    benefits: [
+      "Круглосуточная поддержка",
+      "Снижение затрат на поддержку",
+      "Быстрое время отклика",
+      "Стабильное качество обслуживания",
+      "Масштабируемое решение",
+      "Ценные аналитические данные",
+      "Повышение удовлетворенности"
+    ],
+    integrations: [
+      "Виджет для сайта",
+      "Facebook Messenger",
+      "WhatsApp",
+      "Slack",
+      "Microsoft Teams",
+      "Пользовательский API"
+    ],
+    articleContent: {
+      mainTitle: "ИИ Чат-бот для бизнеса – Автоматизация и инновации с NeuroGen Lab",
+      subtitle: "Раскройте потенциал искусственного интеллекта",
+      introText: "В NeuroGen Lab мы предлагаем вам продвинутый ИИ чат-бот, разработанный для:",
+      introList: [
+        "Автоматизации коммуникации",
+        "Улучшения взаимодействия с клиентами",
+        "Оптимизации операций"
+      ],
+      howItWorksTitle: "Как работает наш ИИ чат-бот?",
+      howItWorksText: "Наш чат-бот использует GPT-4 и передовые технологии разговорного ИИ для:",
+      howItWorksList: [
+        "Понимания контекста",
+        "Обработки запросов в реальном времени",
+        "Генерации точных, человекоподобных ответов"
+      ],
+      keyFeaturesTitle: "Ключевые функции нашего ИИ чат-бота",
+      features: {
+        realTime: {
+          title: "Общение в реальном времени",
+          description: "Мгновенное взаимодействие с пользователями и решение запросов без задержек."
+        },
+        multiLanguage: {
+          title: "Многоязычная поддержка",
+          description: "Беспрепятственное общение с глобальной аудиторией."
+        },
+        scalability: {
+          title: "Масштабируемость",
+          description: "Обработка тысяч одновременных запросов с непревзойденной точностью."
+        },
+        analytics: {
+          title: "Анализ производительности",
+          description: "Получение действенных инсайтов для оптимизации стратегии взаимодействия с клиентами."
+        }
+      },
+      industriesTitle: "Отрасли, которые мы обслуживаем",
+      industriesText: "Наш универсальный ИИ чат-бот адаптируется к любой отрасли, позволяя бизнесу автоматизировать процессы и расти:",
+      industries: [
+        {
+          icon: "🏪",
+          name: "Розничная торговля",
+          description: "Автоматизация запросов по продажам и улучшение обслуживания клиентов."
+        },
+        {
+          icon: "🏥",
+          name: "Здравоохранение",
+          description: "Круглосуточная виртуальная поддержка пациентов и медицинского персонала."
+        },
+        {
+          icon: "🎓",
+          name: "Образование",
+          description: "Поддержка студентов информацией о курсах и академическое руководство."
+        },
+        {
+          icon: "🛒",
+          name: "Электронная коммерция",
+          description: "Увеличение конверсий с помощью мгновенной поддержки в реальном времени."
+        },
+        {
+          icon: "💼",
+          name: "Финансы",
+          description: "Оптимизация FAQ и взаимодействия с клиентами через интеллектуальную автоматизацию."
+        }
+      ],
+      conclusionTitle: "Начните трансформацию вашего бизнеса сегодня 🚀",
+      conclusionText: "Испытайте будущее коммуникации с ИИ чат-ботом от NeuroGen Lab.",
+      conclusionList: [
+        "Оптимизируйте рабочие процессы",
+        "Повысьте удовлетворенность клиентов",
+        "Сократите расходы"
+      ],
+      topReasonsTitle: "5 главных причин, почему вашему бизнесу нужен ИИ чат-бот",
+      reasonList: [
+        {
+          title: "1. Автоматизированная поддержка клиентов 24/7",
+          content: {
+            text: "ИИ чат-бот работает круглосуточно, предоставляя мгновенные ответы на запросы клиентов. Это помогает:",
+            list: [
+              "Повысить удовлетворенность клиентов быстрыми ответами",
+              "Сократить время ожидания ответов",
+              "Решать повторяющиеся и общие запросы без участия человека"
+            ]
+          }
+        },
+        {
+          title: "2. Снижение операционных расходов",
+          content: {
+            text: "Внедрение ИИ чат-бота значительно снижает расходы на ручную поддержку:",
+            list: [
+              "Автоматизирует рутинные задачи, освобождая время сотрудников",
+              "Снижает нагрузку на колл-центры и команды поддержки",
+              "Сокращает затраты на найм, обучение и содержание персонала поддержки"
+            ]
+          }
+        },
+        {
+          title: "3. Увеличение продаж и конверсий",
+          content: {
+            text: "ИИ чат-боты делают больше, чем просто отвечают на вопросы — они активно способствуют продажам:",
+            list: [
+              "Рекомендуют продукты на основе предпочтений клиентов",
+              "Проводят пользователей через воронку продаж до завершения покупки",
+              "Собирают лиды и контактную информацию для вашей команды продаж"
+            ]
+          }
+        },
+        {
+          title: "4. Мгновенная масштабируемость для больших объемов",
+          content: {
+            text: "ИИ чат-бот может обрабатывать тысячи запросов одновременно:",
+            list: [
+              "Быстро обрабатывает запросы даже в часы пик",
+              "Эффективно работает для бизнеса любого размера",
+              "Легко справляется с масштабными мероприятиями"
+            ]
+          }
+        },
+        {
+          title: "5. Улучшенный клиентский опыт",
+          content: {
+            text: "Повысьте общую удовлетворенность клиентов с помощью персонализированного взаимодействия:",
+            list: [
+              "Обеспечивает последовательные и точные ответы по всем каналам",
+              "Предлагает многоязычную поддержку для глобальной клиентской базы",
+              "Сохраняет контекст разговора для более естественного общения"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Заключение",
+        text: "Используя ИИ чат-бот от NeuroGen Lab, бизнес может раскрыть эффективность, обеспечить исключительный клиентский опыт и оставаться впереди конкурентов. Начните сегодня и трансформируйте ваш бизнес с помощью автоматизации на базе ИИ."
+      }
+    },
+    metaTitle: "ИИ Чат-бот | NeuroGen Lab - Интеллектуальное решение для клиентского сервиса",
+    metaDescription: "Трансформируйте ваш клиентский сервис с помощью нашего чат-бота на базе ИИ. Обеспечьте круглосуточную поддержку и исключительный клиентский опыт."
+  },
+  // ... предыдущие переводы (en, de, es, ru) остаются без изменений ...
+
+  ua: {
+    title: "ШІ Чат-бот",
+    description: "Покращіть ваш клієнтський сервіс за допомогою нашого інтелектуального чат-бота, що забезпечує цілодобову підтримку та бездоганну взаємодію з клієнтами.",
+    sectionTitles: {
+      features: "Ключові можливості",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Обробка природної мови",
+      "Багатомовна підтримка",
+      "Налаштовувана база знань",
+      "Аналітика в реальному часі",
+      "Передача живому оператору",
+      "Автоматичні відповіді",
+      "Контекстне розуміння"
+    ],
+    benefits: [
+      "Цілодобова підтримка",
+      "Зниження витрат на підтримку",
+      "Швидкий час відгуку",
+      "Стабільна якість обслуговування",
+      "Масштабоване рішення",
+      "Цінні аналітичні дані",
+      "Підвищення задоволеності"
+    ],
+    integrations: [
+      "Віджет для сайту",
+      "Facebook Messenger",
+      "WhatsApp",
+      "Slack",
+      "Microsoft Teams",
+      "Користувацький API"
+    ],
+    articleContent: {
+      mainTitle: "ШІ Чат-бот для бізнесу – Автоматизація та інновації з NeuroGen Lab",
+      subtitle: "Розкрийте потенціал штучного інтелекту",
+      introText: "У NeuroGen Lab ми пропонуємо вам передовий ШІ чат-бот, розроблений для:",
+      introList: [
+        "Автоматизації комунікації",
+        "Покращення взаємодії з клієнтами",
+        "Оптимізації операцій"
+      ],
+      howItWorksTitle: "Як працює наш ШІ чат-бот?",
+      howItWorksText: "Наш чат-бот використовує GPT-4 та передові технології розмовного ШІ для:",
+      howItWorksList: [
+        "Розуміння контексту",
+        "Обробки запитів у реальному часі",
+        "Генерації точних, людиноподібних відповідей"
+      ],
+      keyFeaturesTitle: "Ключові функції нашого ШІ чат-бота",
+      features: {
+        realTime: {
+          title: "Спілкування в реальному часі",
+          description: "Миттєва взаємодія з користувачами та вирішення запитів без затримок."
+        },
+        multiLanguage: {
+          title: "Багатомовна підтримка",
+          description: "Безперешкодне спілкування з глобальною аудиторією."
+        },
+        scalability: {
+          title: "Масштабованість",
+          description: "Обробка тисяч одночасних запитів з неперевершеною точністю."
+        },
+        analytics: {
+          title: "Аналіз продуктивності",
+          description: "Отримання дієвих інсайтів для оптимізації стратегії взаємодії з клієнтами."
+        }
+      },
+      industriesTitle: "Галузі, які ми обслуговуємо",
+      industriesText: "Наш універсальний ШІ чат-бот адаптується до будь-якої галузі, дозволяючи бізнесу автоматизувати процеси та зростати:",
+      industries: [
+        {
+          icon: "🏪",
+          name: "Роздрібна торгівля",
+          description: "Автоматизація запитів з продажу та покращення обслуговування клієнтів."
+        },
+        {
+          icon: "🏥",
+          name: "Охорона здоров'я",
+          description: "Цілодобова віртуальна підтримка пацієнтів та медичного персоналу."
+        },
+        {
+          icon: "🎓",
+          name: "Освіта",
+          description: "Підтримка студентів інформацією про курси та академічне керівництво."
+        },
+        {
+          icon: "🛒",
+          name: "Електронна комерція",
+          description: "Збільшення конверсій за допомогою миттєвої підтримки в реальному часі."
+        },
+        {
+          icon: "💼",
+          name: "Фінанси",
+          description: "Оптимізація FAQ та взаємодії з клієнтами через інтелектуальну автоматизацію."
+        }
+      ],
+      conclusionTitle: "Почніть трансформувати свій бізнес сьогодні 🚀",
+      conclusionText: "Відчуйте майбутнє комунікації з ШІ чат-ботом від NeuroGen Lab.",
+      conclusionList: [
+        "Оптимізуйте робочі процеси",
+        "Покращіть задоволеність клієнтів",
+        "Зменшіть витрати"
+      ],
+      topReasonsTitle: "5 головних причин, чому вашому бізнесу потрібен ШІ чат-бот",
+      reasonList: [
+        {
+          title: "1. Автоматизована підтримка клієнтів 24/7",
+          content: {
+            text: "ШІ чат-бот працює цілодобово, надаючи миттєві відповіді на запити клієнтів. Це допомагає:",
+            list: [
+              "Підвищити задоволеність клієнтів швидкими відповідями",
+              "Зменшити час очікування відповідей",
+              "Вирішувати повторювані та поширені запити без втручання людини"
+            ]
+          }
+        },
+        {
+          title: "2. Зниження операційних витрат",
+          content: {
+            text: "Впровадження ШІ чат-бота значно знижує витрати на ручну підтримку:",
+            list: [
+              "Автоматизує рутинні завдання, звільняючи час співробітників",
+              "Знижує навантаження на колл-центри та команди підтримки",
+              "Скорочує витрати на найм, навчання та утримання персоналу підтримки"
+            ]
+          }
+        },
+        {
+          title: "3. Збільшення продажів та конверсій",
+          content: {
+            text: "ШІ чат-боти роблять більше, ніж просто відповідають на питання — вони активно сприяють продажам:",
+            list: [
+              "Рекомендують продукти на основі вподобань клієнтів",
+              "Проводять користувачів через воронку продажів до завершення покупки",
+              "Збирають ліди та контактну інформацію для вашої команди продажів"
+            ]
+          }
+        },
+        {
+          title: "4. Миттєва масштабованість для великих обсягів",
+          content: {
+            text: "ШІ чат-бот може обробляти тисячі запитів одночасно:",
+            list: [
+              "Швидко обробляє запити навіть у години пік",
+              "Ефективно працює для бізнесу будь-якого розміру",
+              "Легко справляється з масштабними заходами"
+            ]
+          }
+        },
+        {
+          title: "5. Покращений клієнтський досвід",
+          content: {
+            text: "Підвищіть загальну задоволеність клієнтів за допомогою персоналізованої взаємодії:",
+            list: [
+              "Забезпечує послідовні та точні відповіді по всіх каналах",
+              "Пропонує багатомовну підтримку для глобальної клієнтської бази",
+              "Зберігає контекст розмови для більш природного спілкування"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Висновок",
+        text: "Використовуючи ШІ чат-бот від NeuroGen Lab, бізнес може розкрити ефективність, забезпечити винятковий клієнтський досвід та залишатися попереду конкурентів. Почніть сьогодні та трансформуйте ваш бізнес за допомогою автоматизації на базі ШІ."
+      }
+    },
+    metaTitle: "ШІ Чат-бот | NeuroGen Lab - Інтелектуальне рішення для клієнтського сервісу",
+    metaDescription: "Трансформуйте ваш клієнтський сервіс за допомогою нашого чат-бота на базі ШІ. Забезпечте цілодобову підтримку та винятковий клієнтський досвід."
+  }
+} as const;
+
+export { aiChatBotTranslations };
+
+const customDevelopmentTranslations = {
+  en: {
+    title: "Custom Development",
+    description: "Transform your ideas into reality with our custom software development services. We create tailored solutions that perfectly match your business needs.",
+    sectionTitles: {
+      features: "Key Features",
+      benefits: "Benefits",
+      integrations: "Technologies"
+    },
+    features: [
+      "Tailored Solutions",
+      "Agile Development",
+      "Scalable Architecture",
+      "Modern Technologies",
+      "Security First",
+      "Cloud Integration",
+      "API Development"
+    ],
+    benefits: [
+      "Competitive Advantage",
+      "Increased Efficiency",
+      "Cost Optimization",
+      "Future-Proof Solutions",
+      "Technical Excellence",
+      "Ongoing Support",
+      "Fast Time-to-Market"
+    ],
+    integrations: [
+      "Web Development",
+      "Mobile Apps",
+      "Cloud Solutions",
+      "AI Integration",
+      "DevOps",
+      "Microservices"
+    ],
+    articleContent: {
+      mainTitle: "Custom Software Development Services",
+      subtitle: "Building Your Digital Future",
+      introText: "Our custom development services help businesses:",
+      introList: [
+        "Create unique software solutions",
+        "Optimize business processes",
+        "Stay ahead of competition"
+      ],
+      howItWorksTitle: "Our Development Process",
+      howItWorksText: "We follow a proven development methodology:",
+      howItWorksList: [
+        "Requirements Analysis",
+        "Design & Architecture",
+        "Development & Testing",
+        "Deployment & Support"
+      ],
+      keyFeaturesTitle: "Core Capabilities",
+      features: {
+        realTime: {
+          title: "Modern Technologies",
+          description: "Using latest tech stack for optimal performance"
+        },
+        multiLanguage: {
+          title: "Global Solutions",
+          description: "Supporting multiple languages and regions"
+        },
+        scalability: {
+          title: "Scalable Architecture",
+          description: "Building for growth and high loads"
+        },
+        analytics: {
+          title: "Data-Driven",
+          description: "Incorporating analytics and insights"
+        }
+      },
+      industriesTitle: "Industries We Serve",
+      industriesText: "Our expertise spans across various sectors:",
+      industries: [
+        {
+          icon: "🏢",
+          name: "Enterprise",
+          description: "Large-scale business solutions"
+        },
+        {
+          icon: "🏪",
+          name: "Retail",
+          description: "E-commerce and POS systems"
+        },
+        {
+          icon: "🏥",
+          name: "Healthcare",
+          description: "Medical software solutions"
+        }
+      ],
+      conclusionTitle: "Why Choose Us",
+      conclusionText: "Partner with us for:",
+      conclusionList: [
+        "Expert development team",
+        "Proven track record",
+        "Innovative solutions"
+      ],
+      topReasonsTitle: "Benefits of Custom Development",
+      reasonList: [
+        {
+          title: "Tailored Solutions",
+          content: {
+            text: "Get software that perfectly matches your needs:",
+            list: [
+              "Customized functionality",
+              "Unique business logic",
+              "Specific integrations"
+            ]
+          }
+        },
+        {
+          title: "Future-Proof Technology",
+          content: {
+            text: "Build with scalability in mind:",
+            list: [
+              "Modern architecture",
+              "Scalable solutions",
+              "Easy maintenance"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Start Your Project",
+        text: "Transform your business with custom software solutions tailored to your needs."
+      }
+    },
+    metaTitle: "Custom Development | NeuroGen Lab - Tailored Software Solutions",
+    metaDescription: "Transform your business with custom software development. Get tailored solutions that perfectly match your needs and drive growth."
+  },
+  de: {
+    title: "Individuelle Entwicklung",
+    description: "Verwandeln Sie Ihre Ideen in Realität mit unseren maßgeschneiderten Softwareentwicklungsdiensten. Wir erstellen passgenaue Lösungen für Ihre Geschäftsanforderungen.",
+    sectionTitles: {
+      features: "Hauptmerkmale",
+      benefits: "Vorteile",
+      integrations: "Technologien"
+    },
+    features: [
+      "Maßgeschneiderte Lösungen",
+      "Agile Entwicklung",
+      "Skalierbare Architektur",
+      "Moderne Technologien",
+      "Sicherheit an erster Stelle",
+      "Cloud-Integration",
+      "API-Entwicklung"
+    ],
+    benefits: [
+      "Wettbewerbsvorteil",
+      "Gesteigerte Effizienz",
+      "Kostenoptimierung",
+      "Zukunftssichere Lösungen",
+      "Technische Exzellenz",
+      "Kontinuierliche Unterstützung",
+      "Schnelle Markteinführung"
+    ],
+    integrations: [
+      "Webentwicklung",
+      "Mobile Apps",
+      "Cloud-Lösungen",
+      "KI-Integration",
+      "DevOps",
+      "Microservices"
+    ],
+    articleContent: {
+      mainTitle: "Individuelle Softwareentwicklung",
+      subtitle: "Gestalten Sie Ihre digitale Zukunft",
+      introText: "Unsere individuellen Entwicklungsservices helfen Unternehmen bei:",
+      introList: [
+        "Erstellung einzigartiger Softwarelösungen",
+        "Optimierung von Geschäftsprozessen",
+        "Vorsprung vor der Konkurrenz"
+      ],
+      howItWorksTitle: "Unser Entwicklungsprozess",
+      howItWorksText: "Wir folgen einer bewährten Entwicklungsmethodik:",
+      howItWorksList: [
+        "Anforderungsanalyse",
+        "Design & Architektur",
+        "Entwicklung & Tests",
+        "Bereitstellung & Support"
+      ],
+      keyFeaturesTitle: "Kernkompetenzen",
+      features: {
+        realTime: {
+          title: "Moderne Technologien",
+          description: "Einsatz modernster Technologien für optimale Leistung"
+        },
+        multiLanguage: {
+          title: "Globale Lösungen",
+          description: "Unterstützung mehrerer Sprachen und Regionen"
+        },
+        scalability: {
+          title: "Skalierbare Architektur",
+          description: "Entwicklung für Wachstum und hohe Lasten"
+        },
+        analytics: {
+          title: "Datengesteuert",
+          description: "Integration von Analysen und Erkenntnissen"
+        }
+      },
+      industriesTitle: "Branchen, die wir bedienen",
+      industriesText: "Unsere Expertise erstreckt sich über verschiedene Sektoren:",
+      industries: [
+        {
+          icon: "🏢",
+          name: "Unternehmen",
+          description: "Großflächige Geschäftslösungen"
+        },
+        {
+          icon: "🏪",
+          name: "Einzelhandel",
+          description: "E-Commerce und Kassensysteme"
+        },
+        {
+          icon: "🏥",
+          name: "Gesundheitswesen",
+          description: "Medizinische Softwarelösungen"
+        }
+      ],
+      conclusionTitle: "Warum uns wählen",
+      conclusionText: "Partnerschaft mit uns für:",
+      conclusionList: [
+        "Erfahrenes Entwicklungsteam",
+        "Bewährte Erfolgsbilanz",
+        "Innovative Lösungen"
+      ],
+      topReasonsTitle: "Vorteile individueller Entwicklung",
+      reasonList: [
+        {
+          title: "Maßgeschneiderte Lösungen",
+          content: {
+            text: "Erhalten Sie Software, die perfekt zu Ihren Anforderungen passt:",
+            list: [
+              "Angepasste Funktionalität",
+              "Einzigartige Geschäftslogik",
+              "Spezifische Integrationen"
+            ]
+          }
+        },
+        {
+          title: "Zukunftssichere Technologie",
+          content: {
+            text: "Entwicklung mit Skalierbarkeit im Fokus:",
+            list: [
+              "Moderne Architektur",
+              "Skalierbare Lösungen",
+              "Einfache Wartung"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Starten Sie Ihr Projekt",
+        text: "Transformieren Sie Ihr Unternehmen mit maßgeschneiderten Softwarelösungen."
+      }
+    },
+    metaTitle: "Individuelle Entwicklung | NeuroGen Lab - Maßgeschneiderte Softwarelösungen",
+    metaDescription: "Transformieren Sie Ihr Unternehmen mit individueller Softwareentwicklung. Erhalten Sie maßgeschneiderte Lösungen, die perfekt zu Ihren Anforderungen passen und Wachstum fördern."
+  },
+  es: {
+    title: "Desarrollo Personalizado",
+    description: "Transforme sus ideas en realidad con nuestros servicios de desarrollo de software personalizado. Creamos soluciones a medida que se ajustan perfectamente a las necesidades de su negocio.",
+    sectionTitles: {
+      features: "Características Principales",
+      benefits: "Beneficios",
+      integrations: "Tecnologías"
+    },
+    features: [
+      "Soluciones a Medida",
+      "Desarrollo Ágil",
+      "Arquitectura Escalable",
+      "Tecnologías Modernas",
+      "Seguridad Primero",
+      "Integración en la Nube",
+      "Desarrollo de API"
+    ],
+    benefits: [
+      "Ventaja Competitiva",
+      "Mayor Eficiencia",
+      "Optimización de Costos",
+      "Soluciones Preparadas para el Futuro",
+      "Excelencia Técnica",
+      "Soporte Continuo",
+      "Rápido Tiempo de Comercialización"
+    ],
+    integrations: [
+      "Desarrollo Web",
+      "Aplicaciones Móviles",
+      "Soluciones en la Nube",
+      "Integración de IA",
+      "DevOps",
+      "Microservicios"
+    ],
+    articleContent: {
+      mainTitle: "Servicios de Desarrollo de Software Personalizado",
+      subtitle: "Construyendo Su Futuro Digital",
+      introText: "Nuestros servicios de desarrollo personalizado ayudan a las empresas a:",
+      introList: [
+        "Crear soluciones de software únicas",
+        "Optimizar procesos empresariales",
+        "Mantenerse adelante de la competencia"
+      ],
+      howItWorksTitle: "Nuestro Proceso de Desarrollo",
+      howItWorksText: "Seguimos una metodología de desarrollo probada:",
+      howItWorksList: [
+        "Análisis de Requisitos",
+        "Diseño y Arquitectura",
+        "Desarrollo y Pruebas",
+        "Implementación y Soporte"
+      ],
+      keyFeaturesTitle: "Capacidades Principales",
+      features: {
+        realTime: {
+          title: "Tecnologías Modernas",
+          description: "Uso de las últimas tecnologías para un rendimiento óptimo"
+        },
+        multiLanguage: {
+          title: "Soluciones Globales",
+          description: "Soporte para múltiples idiomas y regiones"
+        },
+        scalability: {
+          title: "Arquitectura Escalable",
+          description: "Construcción para el crecimiento y altas cargas"
+        },
+        analytics: {
+          title: "Basado en Datos",
+          description: "Incorporación de análisis e insights"
+        }
+      },
+      industriesTitle: "Industrias que Servimos",
+      industriesText: "Nuestra experiencia abarca varios sectores:",
+      industries: [
+        {
+          icon: "🏢",
+          name: "Empresas",
+          description: "Soluciones empresariales a gran escala"
+        },
+        {
+          icon: "🏪",
+          name: "Comercio",
+          description: "Sistemas de comercio electrónico y punto de venta"
+        },
+        {
+          icon: "🏥",
+          name: "Salud",
+          description: "Soluciones de software médico"
+        }
+      ],
+      conclusionTitle: "Por Qué Elegirnos",
+      conclusionText: "Asóciese con nosotros para:",
+      conclusionList: [
+        "Equipo de desarrollo experto",
+        "Trayectoria probada",
+        "Soluciones innovadoras"
+      ],
+      topReasonsTitle: "Beneficios del Desarrollo Personalizado",
+      reasonList: [
+        {
+          title: "Soluciones a Medida",
+          content: {
+            text: "Obtenga software que se ajuste perfectamente a sus necesidades:",
+            list: [
+              "Funcionalidad personalizada",
+              "Lógica empresarial única",
+              "Integraciones específicas"
+            ]
+          }
+        },
+        {
+          title: "Tecnología Preparada para el Futuro",
+          content: {
+            text: "Construcción pensando en la escalabilidad:",
+            list: [
+              "Arquitectura moderna",
+              "Soluciones escalables",
+              "Mantenimiento sencillo"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Inicie Su Proyecto",
+        text: "Transforme su negocio con soluciones de software personalizadas adaptadas a sus necesidades."
+      }
+    },
+    metaTitle: "Desarrollo Personalizado | NeuroGen Lab - Soluciones de Software a Medida",
+    metaDescription: "Transforme su negocio con desarrollo de software personalizado. Obtenga soluciones a medida que se ajustan perfectamente a sus necesidades e impulsan el crecimiento."
+  },
+  ru: {
+    title: "Индивидуальная Разработка",
+    description: "Воплотите ваши идеи в реальность с нашими услугами индивидуальной разработки программного обеспечения. Мы создаем решения, идеально соответствующие потребностям вашего бизнеса.",
+    sectionTitles: {
+      features: "Ключевые Возможности",
+      benefits: "Преимущества",
+      integrations: "Технологии"
+    },
+    features: [
+      "Индивидуальные Решения",
+      "Гибкая Разработка",
+      "Масштабируемая Архитектура",
+      "Современные Технологии",
+      "Безопасность Прежде Всего",
+      "Облачная Интеграция",
+      "Разработка API"
+    ],
+    benefits: [
+      "Конкурентное Преимущество",
+      "Повышенная Эффективность",
+      "Оптимизация Затрат",
+      "Решения на Будущее",
+      "Техническое Совершенство",
+      "Постоянная Поддержка",
+      "Быстрый Выход на Рынок"
+    ],
+    integrations: [
+      "Веб-разработка",
+      "Мобильные Приложения",
+      "Облачные Решения",
+      "Интеграция ИИ",
+      "DevOps",
+      "Микросервисы"
+    ],
+    articleContent: {
+      mainTitle: "Услуги Индивидуальной Разработки ПО",
+      subtitle: "Создаем Ваше Цифровое Будущее",
+      introText: "Наши услуги индивидуальной разработки помогают бизнесу:",
+      introList: [
+        "Создавать уникальные программные решения",
+        "Оптимизировать бизнес-процессы",
+        "Опережать конкурентов"
+      ],
+      howItWorksTitle: "Наш Процесс Разработки",
+      howItWorksText: "Мы следуем проверенной методологии разработки:",
+      howItWorksList: [
+        "Анализ Требований",
+        "Проектирование и Архитектура",
+        "Разработка и Тестирование",
+        "Внедрение и Поддержка"
+      ],
+      keyFeaturesTitle: "Основные Возможности",
+      features: {
+        realTime: {
+          title: "Современные Технологии",
+          description: "Использование новейших технологий для оптимальной производительности"
+        },
+        multiLanguage: {
+          title: "Глобальные Решения",
+          description: "Поддержка множества языков и регионов"
+        },
+        scalability: {
+          title: "Масштабируемая Архитектура",
+          description: "Разработка с учетом роста и высоких нагрузок"
+        },
+        analytics: {
+          title: "Основано на Данных",
+          description: "Встроенная аналитика и инсайты"
+        }
+      },
+      industriesTitle: "Отрасли, с Которыми Мы Работаем",
+      industriesText: "Наш опыт охватывает различные сектора:",
+      industries: [
+        {
+          icon: "🏢",
+          name: "Предприятия",
+          description: "Масштабные бизнес-решения"
+        },
+        {
+          icon: "🏪",
+          name: "Розничная Торговля",
+          description: "Системы электронной коммерции и POS"
+        },
+        {
+          icon: "🏥",
+          name: "Здравоохранение",
+          description: "Медицинские программные решения"
+        }
+      ],
+      conclusionTitle: "Почему Выбирают Нас",
+      conclusionText: "Сотрудничество с нами это:",
+      conclusionList: [
+        "Команда опытных разработчиков",
+        "Проверенный опыт работы",
+        "Инновационные решения"
+      ],
+      topReasonsTitle: "Преимущества Индивидуальной Разработки",
+      reasonList: [
+        {
+          title: "Индивидуальные Решения",
+          content: {
+            text: "Получите ПО, идеально соответствующее вашим потребностям:",
+            list: [
+              "Настраиваемая функциональность",
+              "Уникальная бизнес-логика",
+              "Специфические интеграции"
+            ]
+          }
+        },
+        {
+          title: "Технологии Будущего",
+          content: {
+            text: "Разработка с учетом масштабируемости:",
+            list: [
+              "Современная архитектура",
+              "Масштабируемые решения",
+              "Простое обслуживание"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Начните Свой Проект",
+        text: "Трансформируйте свой бизнес с помощью индивидуальных программных решений."
+      }
+    },
+    metaTitle: "Индивидуальная Разработка | NeuroGen Lab - ИИ Решения на Заказ",
+    metaDescription: "Трансформируйте свой бизнес с помощью индивидуальной разработки ПО. Получите решения, идеально соответствующие вашим потребностям и способствующие росту."
+  },
+  ua: {
+    title: "Індивідуальна Розробка",
+    description: "Втілюйте ваші ідеї в реальність з нашими послугами індивідуальної розробки програмного забезпечення. Ми створюємо рішення, що ідеально відповідають потребам вашого бізнесу.",
+    sectionTitles: {
+      features: "Ключові Можливості",
+      benefits: "Переваги",
+      integrations: "Технології"
+    },
+    features: [
+      "Індивідуальні Рішення",
+      "Гнучка Розробка",
+      "Масштабована Архітектура",
+      "Сучасні Технології",
+      "Безпека Передусім",
+      "Хмарна Інтеграція",
+      "Розробка API"
+    ],
+    benefits: [
+      "Конкурентна Перевага",
+      "Підвищена Ефективність",
+      "Оптимізація Витрат",
+      "Рішення на Майбутнє",
+      "Технічна Досконалість",
+      "Постійна Підтримка",
+      "Швидкий Вихід на Ринок"
+    ],
+    integrations: [
+      "Веб-розробка",
+      "Мобільні Додатки",
+      "Хмарні Рішення",
+      "Інтеграція ШІ",
+      "DevOps",
+      "Мікросервіси"
+    ],
+    articleContent: {
+      mainTitle: "Послуги Індивідуальної Розробки ПЗ",
+      subtitle: "Створюємо Ваше Цифрове Майбутнє",
+      introText: "Наші послуги індивідуальної розробки допомагають бізнесу:",
+      introList: [
+        "Створювати унікальні програмні рішення",
+        "Оптимізувати бізнес-процеси",
+        "Випереджати конкурентів"
+      ],
+      howItWorksTitle: "Наш Процес Розробки",
+      howItWorksText: "Ми дотримуємося перевіреної методології розробки:",
+      howItWorksList: [
+        "Аналіз Вимог",
+        "Проектування та Архітектура",
+        "Розробка та Тестування",
+        "Впровадження та Підтримка"
+      ],
+      keyFeaturesTitle: "Основні Можливості",
+      features: {
+        realTime: {
+          title: "Сучасні Технології",
+          description: "Використання новітніх технологій для оптимальної продуктивності"
+        },
+        multiLanguage: {
+          title: "Глобальні Рішення",
+          description: "Підтримка багатьох мов та регіонів"
+        },
+        scalability: {
+          title: "Масштабована Архітектура",
+          description: "Розробка з урахуванням зростання та високих навантажень"
+        },
+        analytics: {
+          title: "На Основі Даних",
+          description: "Вбудована аналітика та інсайти"
+        }
+      },
+      industriesTitle: "Галузі, з Якими Ми Працюємо",
+      industriesText: "Наш досвід охоплює різні сектори:",
+      industries: [
+        {
+          icon: "🏢",
+          name: "Підприємства",
+          description: "Масштабні бізнес-рішення"
+        },
+        {
+          icon: "🏪",
+          name: "Роздрібна Торгівля",
+          description: "Системи електронної комерції та POS"
+        },
+        {
+          icon: "🏥",
+          name: "Охорона Здоров'я",
+          description: "Медичні програмні рішення"
+        }
+      ],
+      conclusionTitle: "Чому Обирають Нас",
+      conclusionText: "Співпраця з нами це:",
+      conclusionList: [
+        "Команда досвідчених розробників",
+        "Перевірений досвід роботи",
+        "Інноваційні рішення"
+      ],
+      topReasonsTitle: "Переваги Індивідуальної Розробки",
+      reasonList: [
+        {
+          title: "Індивідуальні Рішення",
+          content: {
+            text: "Отримайте ПЗ, що ідеально відповідає вашим потребам:",
+            list: [
+              "Налаштовувана функціональність",
+              "Унікальна бізнес-логіка",
+              "Специфічні інтеграції"
+            ]
+          }
+        },
+        {
+          title: "Технології Майбутнього",
+          content: {
+            text: "Розробка з урахуванням масштабованості:",
+            list: [
+              "Сучасна архітектура",
+              "Масштабовані рішення",
+              "Просте обслуговування"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Розпочніть Свій Проект",
+        text: "Трансформуйте свій бізнес за допомогою індивідуальних програмних рішень."
+      }
+    },
+    metaTitle: "Індивідуальна Розробка | NeuroGen Lab - Програмні Рішення на Замовлення",
+    metaDescription: "Трансформуйте свій бізнес за допомогою індивідуальної розробки ПЗ. Отримайте рішення, що ідеально відповідають вашим потребам та сприяють зростанню."
+  }
+};
+
+export { customDevelopmentTranslations };
+
+const discordTranslations = {
+  en: {
+    title: "Discord Integration",
+    description: "Enhance your Discord server with our powerful integration tools. Automate tasks, manage communities, and create engaging experiences for your users.",
+    sectionTitles: {
+      features: "Key Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Custom Bot Development",
+      "Automated Moderation",
+      "Role Management",
+      "Event Scheduling",
+      "User Analytics",
+      "Custom Commands",
+      "Server Statistics"
+    ],
+    benefits: [
+      "Enhanced Community Engagement",
+      "Automated Workflows",
+      "Improved Server Management",
+      "Real-time Analytics",
+      "Customizable Solutions",
+      "24/7 Bot Operation",
+      "Seamless Integration"
+    ],
+    integrations: [
+      "Discord API",
+      "Webhooks",
+      "Database Systems",
+      "Cloud Services",
+      "Analytics Tools",
+      "Custom APIs"
+    ],
+    articleContent: {
+      mainTitle: "Discord Integration Solutions",
+      subtitle: "Power Up Your Discord Community",
+      introText: "Our Discord integration services help you:",
+      introList: [
+        "Build engaging community experiences",
+        "Automate routine tasks",
+        "Manage server effectively"
+      ],
+      howItWorksTitle: "How It Works",
+      howItWorksText: "Our integration process includes:",
+      howItWorksList: [
+        "Custom Bot Development",
+        "Server Setup & Configuration",
+        "Feature Implementation",
+        "Testing & Deployment"
+      ],
+      keyFeaturesTitle: "Core Features",
+      features: {
+        realTime: {
+          title: "Real-time Monitoring",
+          description: "Track server activity and user engagement in real-time"
+        },
+        multiLanguage: {
+          title: "Multi-language Support",
+          description: "Bot commands and responses in multiple languages"
+        },
+        scalability: {
+          title: "Scalable Solutions",
+          description: "Handle growing communities with ease"
+        },
+        analytics: {
+          title: "Advanced Analytics",
+          description: "Detailed insights into server activity and user behavior"
+        }
+      },
+      industriesTitle: "Use Cases",
+      industriesText: "Perfect for various community types:",
+      industries: [
+        {
+          icon: "🎮",
+          name: "Gaming Communities",
+          description: "Enhance gaming server experience"
+        },
+        {
+          icon: "👥",
+          name: "Business Communities",
+          description: "Professional networking and support"
+        },
+        {
+          icon: "🎓",
+          name: "Educational Groups",
+          description: "Learning and collaboration tools"
+        }
+      ],
+      conclusionTitle: "Why Choose Our Integration",
+      conclusionText: "Get the best for your server with:",
+      conclusionList: [
+        "Custom development approach",
+        "Reliable performance",
+        "Ongoing support"
+      ],
+      topReasonsTitle: "Key Benefits",
+      reasonList: [
+        {
+          title: "Enhanced Automation",
+          content: {
+            text: "Automate routine tasks and moderation:",
+            list: [
+              "User management",
+              "Content moderation",
+              "Event scheduling"
+            ]
+          }
+        },
+        {
+          title: "Community Growth",
+          content: {
+            text: "Tools for community engagement:",
+            list: [
+              "Interactive features",
+              "User retention",
+              "Analytics insights"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Get Started",
+        text: "Transform your Discord server with our powerful integration solutions."
+      }
+    },
+    metaTitle: "Discord Integration | NeuroGen Lab - Custom Bot Development",
+    metaDescription: "Enhance your Discord server with custom bots and automation tools. Build engaging communities and streamline server management."
+  },
+  de: {
+    title: "Discord Integration",
+    description: "Verbessern Sie Ihren Discord-Server mit unseren leistungsstarken Integrationswerkzeugen. Automatisieren Sie Aufgaben, verwalten Sie Communities und schaffen Sie ansprechende Erlebnisse für Ihre Nutzer.",
+    sectionTitles: {
+      features: "Hauptfunktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Individuelle Bot-Entwicklung",
+      "Automatisierte Moderation",
+      "Rollenverwaltung",
+      "Ereignisplanung",
+      "Nutzeranalyse",
+      "Benutzerdefinierte Befehle",
+      "Server-Statistiken"
+    ],
+    benefits: [
+      "Verstärktes Community-Engagement",
+      "Automatisierte Arbeitsabläufe",
+      "Verbesserte Serververwaltung",
+      "Echtzeit-Analysen",
+      "Anpassbare Lösungen",
+      "24/7 Bot-Betrieb",
+      "Nahtlose Integration"
+    ],
+    integrations: [
+      "Discord API",
+      "Webhooks",
+      "Datenbanksysteme",
+      "Cloud-Dienste",
+      "Analyse-Tools",
+      "Individuelle APIs"
+    ],
+    articleContent: {
+      mainTitle: "Discord-Integrationslösungen",
+      subtitle: "Stärken Sie Ihre Discord-Community",
+      introText: "Unsere Discord-Integrationsdienste helfen Ihnen bei:",
+      introList: [
+        "Aufbau engagierter Community-Erlebnisse",
+        "Automatisierung von Routineaufgaben",
+        "Effektiver Serververwaltung"
+      ],
+      howItWorksTitle: "Funktionsweise",
+      howItWorksText: "Unser Integrationsprozess umfasst:",
+      howItWorksList: [
+        "Individuelle Bot-Entwicklung",
+        "Server-Einrichtung & Konfiguration",
+        "Funktionsimplementierung",
+        "Tests & Bereitstellung"
+      ],
+      keyFeaturesTitle: "Kernfunktionen",
+      features: {
+        realTime: {
+          title: "Echtzeit-Überwachung",
+          description: "Verfolgen Sie Serveraktivitäten und Nutzerengagement in Echtzeit"
+        },
+        multiLanguage: {
+          title: "Mehrsprachenunterstützung",
+          description: "Bot-Befehle und Antworten in mehreren Sprachen"
+        },
+        scalability: {
+          title: "Skalierbare Lösungen",
+          description: "Bewältigen Sie wachsende Communities mit Leichtigkeit"
+        },
+        analytics: {
+          title: "Erweiterte Analysen",
+          description: "Detaillierte Einblicke in Serveraktivitäten und Nutzerverhalten"
+        }
+      },
+      industriesTitle: "Anwendungsfälle",
+      industriesText: "Perfekt für verschiedene Community-Typen:",
+      industries: [
+        {
+          icon: "🎮",
+          name: "Gaming-Communities",
+          description: "Verbessern Sie das Gaming-Server-Erlebnis"
+        },
+        {
+          icon: "👥",
+          name: "Business-Communities",
+          description: "Professionelles Networking und Support"
+        },
+        {
+          icon: "🎓",
+          name: "Bildungsgruppen",
+          description: "Lern- und Kollaborationswerkzeuge"
+        }
+      ],
+      conclusionTitle: "Warum unsere Integration wählen",
+      conclusionText: "Holen Sie das Beste für Ihren Server mit:",
+      conclusionList: [
+        "Individueller Entwicklungsansatz",
+        "Zuverlässige Leistung",
+        "Fortlaufende Unterstützung"
+      ],
+      topReasonsTitle: "Hauptvorteile",
+      reasonList: [
+        {
+          title: "Verbesserte Automatisierung",
+          content: {
+            text: "Automatisieren Sie Routineaufgaben und Moderation:",
+            list: [
+              "Benutzerverwaltung",
+              "Inhaltsmoderation",
+              "Ereignisplanung"
+            ]
+          }
+        },
+        {
+          title: "Community-Wachstum",
+          content: {
+            text: "Tools für Community-Engagement:",
+            list: [
+              "Interaktive Funktionen",
+              "Nutzerbindung",
+              "Analyse-Einblicke"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Jetzt Starten",
+        text: "Transformieren Sie Ihren Discord-Server mit unseren leistungsstarken Integrationslösungen."
+      }
+    },
+    metaTitle: "Discord Integration | NeuroGen Lab - Individuelle Bot-Entwicklung",
+    metaDescription: "Verbessern Sie Ihren Discord-Server mit individuellen Bots und Automatisierungswerkzeugen. Bauen Sie engagierte Communities auf und optimieren Sie die Serververwaltung."
+  },
+  es: {
+    title: "Integración de Discord",
+    description: "Mejore su servidor de Discord con nuestras potentes herramientas de integración. Automatice tareas, gestione comunidades y cree experiencias atractivas para sus usuarios.",
+    sectionTitles: {
+      features: "Características Principales",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Desarrollo de Bots Personalizados",
+      "Moderación Automatizada",
+      "Gestión de Roles",
+      "Programación de Eventos",
+      "Análisis de Usuarios",
+      "Comandos Personalizados",
+      "Estadísticas del Servidor"
+    ],
+    benefits: [
+      "Mayor Participación de la Comunidad",
+      "Flujos de Trabajo Automatizados",
+      "Mejor Gestión del Servidor",
+      "Análisis en Tiempo Real",
+      "Soluciones Personalizables",
+      "Operación de Bot 24/7",
+      "Integración Perfecta"
+    ],
+    integrations: [
+      "API de Discord",
+      "Webhooks",
+      "Sistemas de Base de Datos",
+      "Servicios en la Nube",
+      "Herramientas de Análisis",
+      "APIs Personalizadas"
+    ],
+    articleContent: {
+      mainTitle: "Soluciones de Integración de Discord",
+      subtitle: "Potencie su Comunidad de Discord",
+      introText: "Nuestros servicios de integración de Discord le ayudan a:",
+      introList: [
+        "Construir experiencias comunitarias atractivas",
+        "Automatizar tareas rutinarias",
+        "Gestionar el servidor de manera efectiva"
+      ],
+      howItWorksTitle: "Cómo Funciona",
+      howItWorksText: "Nuestro proceso de integración incluye:",
+      howItWorksList: [
+        "Desarrollo de Bots Personalizados",
+        "Configuración del Servidor",
+        "Implementación de Funciones",
+        "Pruebas y Despliegue"
+      ],
+      keyFeaturesTitle: "Características Principales",
+      features: {
+        realTime: {
+          title: "Monitoreo en Tiempo Real",
+          description: "Seguimiento de la actividad del servidor y participación de usuarios en tiempo real"
+        },
+        multiLanguage: {
+          title: "Soporte Multilingüe",
+          description: "Comandos y respuestas del bot en múltiples idiomas"
+        },
+        scalability: {
+          title: "Soluciones Escalables",
+          description: "Gestione comunidades en crecimiento con facilidad"
+        },
+        analytics: {
+          title: "Análisis Avanzado",
+          description: "Información detallada sobre la actividad del servidor y comportamiento del usuario"
+        }
+      },
+      industriesTitle: "Casos de Uso",
+      industriesText: "Perfecto para varios tipos de comunidades:",
+      industries: [
+        {
+          icon: "🎮",
+          name: "Comunidades de Gaming",
+          description: "Mejore la experiencia del servidor de juegos"
+        },
+        {
+          icon: "👥",
+          name: "Comunidades Empresariales",
+          description: "Networking profesional y soporte"
+        },
+        {
+          icon: "🎓",
+          name: "Grupos Educativos",
+          description: "Herramientas de aprendizaje y colaboración"
+        }
+      ],
+      conclusionTitle: "Por Qué Elegir Nuestra Integración",
+      conclusionText: "Obtenga lo mejor para su servidor con:",
+      conclusionList: [
+        "Enfoque de desarrollo personalizado",
+        "Rendimiento confiable",
+        "Soporte continuo"
+      ],
+      topReasonsTitle: "Beneficios Clave",
+      reasonList: [
+        {
+          title: "Automatización Mejorada",
+          content: {
+            text: "Automatice tareas rutinarias y moderación:",
+            list: [
+              "Gestión de usuarios",
+              "Moderación de contenido",
+              "Programación de eventos"
+            ]
+          }
+        },
+        {
+          title: "Crecimiento de la Comunidad",
+          content: {
+            text: "Herramientas para la participación comunitaria:",
+            list: [
+              "Funciones interactivas",
+              "Retención de usuarios",
+              "Información analítica"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Comience Ahora",
+        text: "Transforme su servidor de Discord con nuestras potentes soluciones de integración."
+      }
+    },
+    metaTitle: "Integración de Discord | NeuroGen Lab - Desarrollo de Bots Personalizados",
+    metaDescription: "Mejore su servidor de Discord con bots personalizados y herramientas de automatización. Construya comunidades atractivas y optimice la gestión del servidor."
+  },
+  ru: {
+    title: "Интеграция Discord",
+    description: "Улучшите ваш Discord-сервер с помощью наших мощных инструментов интеграции. Автоматизируйте задачи, управляйте сообществами и создавайте увлекательный опыт для ваших пользователей.",
+    sectionTitles: {
+      features: "Ключевые Возможности",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Разработка Пользовательских Ботов",
+      "Автоматизированная Модерация",
+      "Управление Ролями",
+      "Планирование Событий",
+      "Аналитика Пользователей",
+      "Пользовательские Команды",
+      "Статистика Сервера"
+    ],
+    benefits: [
+      "Повышенная Вовлеченность Сообщества",
+      "Автоматизированные Рабочие Процессы",
+      "Улучшенное Управление Сервером",
+      "Аналитика в Реальном Времени",
+      "Настраиваемые Решения",
+      "Круглосуточная Работа Бота",
+      "Безупречная Интеграция"
+    ],
+    integrations: [
+      "Discord API",
+      "Вебхуки",
+      "Системы Баз Данных",
+      "Облачные Сервисы",
+      "Инструменты Аналитики",
+      "Пользовательские API"
+    ],
+    articleContent: {
+      mainTitle: "Решения для Интеграции Discord",
+      subtitle: "Усильте Ваше Discord Сообщество",
+      introText: "Наши услуги интеграции Discord помогают вам:",
+      introList: [
+        "Создавать увлекательный опыт для сообщества",
+        "Автоматизировать рутинные задачи",
+        "Эффективно управлять сервером"
+      ],
+      howItWorksTitle: "Как Это Работает",
+      howItWorksText: "Наш процесс интеграции включает:",
+      howItWorksList: [
+        "Разработку Пользовательских Ботов",
+        "Настройку и Конфигурацию Сервера",
+        "Внедрение Функций",
+        "Тестирование и Развертывание"
+      ],
+      keyFeaturesTitle: "Основные Функции",
+      features: {
+        realTime: {
+          title: "Мониторинг в Реальном Времени",
+          description: "Отслеживание активности сервера и вовлеченности пользователей в реальном времени"
+        },
+        multiLanguage: {
+          title: "Многоязычная Поддержка",
+          description: "Команды и ответы бота на нескольких языках"
+        },
+        scalability: {
+          title: "Масштабируемые Решения",
+          description: "Легкое управление растущими сообществами"
+        },
+        analytics: {
+          title: "Продвинутая Аналитика",
+          description: "Детальная информация о активности сервера и поведении пользователей"
+        }
+      },
+      industriesTitle: "Варианты Использования",
+      industriesText: "Идеально подходит для различных типов сообществ:",
+      industries: [
+        {
+          icon: "🎮",
+          name: "Игровые Сообщества",
+          description: "Улучшение опыта игровых серверов"
+        },
+        {
+          icon: "👥",
+          name: "Бизнес-Сообщества",
+          description: "Профессиональный нетворкинг и поддержка"
+        },
+        {
+          icon: "🎓",
+          name: "Образовательные Группы",
+          description: "Инструменты для обучения и совместной работы"
+        }
+      ],
+      conclusionTitle: "Почему Стоит Выбрать Нашу Интеграцию",
+      conclusionText: "Получите лучшее для вашего сервера с:",
+      conclusionList: [
+        "Индивидуальный подход к разработке",
+        "Надежная производительность",
+        "Постоянная поддержка"
+      ],
+      topReasonsTitle: "Ключевые Преимущества",
+      reasonList: [
+        {
+          title: "Улучшенная Автоматизация",
+          content: {
+            text: "Автоматизация рутинных задач и модерации:",
+            list: [
+              "Управление пользователями",
+              "Модерация контента",
+              "Планирование событий"
+            ]
+          }
+        },
+        {
+          title: "Рост Сообщества",
+          content: {
+            text: "Инструменты для вовлечения сообщества:",
+            list: [
+              "Интерактивные функции",
+              "Удержание пользователей",
+              "Аналитические инсайты"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Начните Сейчас",
+        text: "Трансформируйте ваш Discord-сервер с помощью наших мощных интеграционных решений."
+      }
+    },
+    metaTitle: "Интеграция Discord | NeuroGen Lab - Разработка Пользовательских Ботов",
+    metaDescription: "Улучшите ваш Discord-сервер с помощью пользовательских ботов и инструментов автоматизации. Создавайте увлекательные сообщества и оптимизируйте управление сервером."
+  },
+  ua: {
+    title: "Інтеграція Discord",
+    description: "Покращіть ваш Discord-сервер за допомогою наших потужних інструментів інтеграції. Автоматизуйте завдання, керуйте спільнотами та створюйте захоплюючий досвід для ваших користувачів.",
+    sectionTitles: {
+      features: "Ключові Можливості",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Розробка Користувацьких Ботів",
+      "Автоматизована Модерація",
+      "Керування Ролями",
+      "Планування Подій",
+      "Аналітика Користувачів",
+      "Користувацькі Команди",
+      "Статистика Сервера"
+    ],
+    benefits: [
+      "Підвищена Залученість Спільноти",
+      "Автоматизовані Робочі Процеси",
+      "Покращене Керування Сервером",
+      "Аналітика в Реальному Часі",
+      "Налаштовувані Рішення",
+      "Цілодобова Робота Бота",
+      "Бездоганна Інтеграція"
+    ],
+    integrations: [
+      "Discord API",
+      "Вебхуки",
+      "Системи Баз Даних",
+      "Хмарні Сервіси",
+      "Інструменти Аналітики",
+      "Користувацькі API"
+    ],
+    articleContent: {
+      mainTitle: "Рішення для Інтеграції Discord",
+      subtitle: "Посильте Вашу Discord Спільноту",
+      introText: "Наші послуги інтеграції Discord допомагають вам:",
+      introList: [
+        "Створювати захоплюючий досвід для спільноти",
+        "Автоматизувати рутинні завдання",
+        "Ефективно керувати сервером"
+      ],
+      howItWorksTitle: "Як Це Працює",
+      howItWorksText: "Наш процес інтеграції включає:",
+      howItWorksList: [
+        "Розробку Користувацьких Ботів",
+        "Налаштування та Конфігурацію Сервера",
+        "Впровадження Функцій",
+        "Тестування та Розгортання"
+      ],
+      keyFeaturesTitle: "Основні Функції",
+      features: {
+        realTime: {
+          title: "Моніторинг в Реальному Часі",
+          description: "Відстеження активності сервера та залученості користувачів в реальному часі"
+        },
+        multiLanguage: {
+          title: "Багатомовна Підтримка",
+          description: "Команди та відповіді бота на декількох мовах"
+        },
+        scalability: {
+          title: "Масштабовані Рішення",
+          description: "Легке керування зростаючими спільнотами"
+        },
+        analytics: {
+          title: "Розширена Аналітика",
+          description: "Детальна інформація про активність сервера та поведінку користувачів"
+        }
+      },
+      industriesTitle: "Варіанти Використання",
+      industriesText: "Ідеально підходить для різних типів спільнот:",
+      industries: [
+        {
+          icon: "🎮",
+          name: "Ігрові Спільноти",
+          description: "Покращення досвіду ігрових серверів"
+        },
+        {
+          icon: "👥",
+          name: "Бізнес-Спільноти",
+          description: "Професійний нетворкінг та підтримка"
+        },
+        {
+          icon: "🎓",
+          name: "Освітні Групи",
+          description: "Інструменти для навчання та спільної роботи"
+        }
+      ],
+      conclusionTitle: "Чому Варто Обрати Нашу Інтеграцію",
+      conclusionText: "Отримайте найкраще для вашого сервера з:",
+      conclusionList: [
+        "Індивідуальний підхід до розробки",
+        "Надійна продуктивність",
+        "Постійна підтримка"
+      ],
+      topReasonsTitle: "Ключові Переваги",
+      reasonList: [
+        {
+          title: "Покращена Автоматизація",
+          content: {
+            text: "Автоматизація рутинних завдань та модерації:",
+            list: [
+              "Керування користувачами",
+              "Модерація контенту",
+              "Планування подій"
+            ]
+          }
+        },
+        {
+          title: "Зростання Спільноти",
+          content: {
+            text: "Інструменти для залучення спільноти:",
+            list: [
+              "Інтерактивні функції",
+              "Утримання користувачів",
+              "Аналітичні інсайти"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Почніть Зараз",
+        text: "Трансформуйте ваш Discord-сервер за допомогою наших потужних інтеграційних рішень."
+      }
+    },
+    metaTitle: "Інтеграція Discord | NeuroGen Lab - Розробка Користувацьких Ботів",
+    metaDescription: "Покращіть ваш Discord-сервер за допомогою користувацьких ботів та інструментів автоматизації. Створюйте захоплюючі спільноти та оптимізуйте керування сервером."
+  }
+};
+
+export { discordTranslations };
+
+const antiSpamTranslations = {
+  en: {
+    title: "Anti-Spam Protection",
+    description: "Protect your digital space with our advanced anti-spam solutions. Implement intelligent filters and automated protection against unwanted content.",
+    sectionTitles: {
+      features: "Key Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "AI-Powered Detection",
+      "Real-time Protection",
+      "Content Filtering",
+      "IP Blocking",
+      "Pattern Recognition",
+      "Custom Rules",
+      "Automated Moderation"
+    ],
+    benefits: [
+      "Clean Communication",
+      "Reduced Manual Moderation",
+      "Enhanced Security",
+      "Time Savings",
+      "Improved User Experience",
+      "Customizable Protection",
+      "24/7 Monitoring"
+    ],
+    integrations: [
+      "Email Systems",
+      "Web Forms",
+      "Comment Systems",
+      "Chat Applications",
+      "Social Platforms",
+      "API Integration"
+    ],
+    articleContent: {
+      mainTitle: "Advanced Anti-Spam Solutions",
+      subtitle: "Intelligent Protection for Your Digital Space",
+      introText: "Our anti-spam protection helps you:",
+      introList: [
+        "Maintain clean communication channels",
+        "Protect users from unwanted content",
+        "Reduce moderation workload"
+      ],
+      howItWorksTitle: "How It Works",
+      howItWorksText: "Our protection system includes:",
+      howItWorksList: [
+        "AI-Based Analysis",
+        "Pattern Detection",
+        "Automated Filtering",
+        "Real-time Protection"
+      ],
+      keyFeaturesTitle: "Core Capabilities",
+      features: {
+        realTime: {
+          title: "Real-time Protection",
+          description: "Instant analysis and blocking of spam content"
+        },
+        multiLanguage: {
+          title: "Multi-language Support",
+          description: "Spam detection across multiple languages"
+        },
+        scalability: {
+          title: "Scalable Protection",
+          description: "Handles increasing volumes of traffic"
+        },
+        analytics: {
+          title: "Advanced Analytics",
+          description: "Detailed insights into spam patterns"
+        }
+      },
+      industriesTitle: "Protection Areas",
+      industriesText: "Comprehensive protection for:",
+      industries: [
+        {
+          icon: "📧",
+          name: "Email Systems",
+          description: "Advanced email filtering"
+        },
+        {
+          icon: "💬",
+          name: "Chat Systems",
+          description: "Real-time chat protection"
+        },
+        {
+          icon: "🌐",
+          name: "Web Platforms",
+          description: "Website and form protection"
+        }
+      ],
+      conclusionTitle: "Why Choose Our Protection",
+      conclusionText: "Get comprehensive protection with:",
+      conclusionList: [
+        "Advanced AI technology",
+        "Proven effectiveness",
+        "Continuous updates"
+      ],
+      topReasonsTitle: "Key Advantages",
+      reasonList: [
+        {
+          title: "Smart Protection",
+          content: {
+            text: "Advanced spam detection and prevention:",
+            list: [
+              "AI-powered analysis",
+              "Pattern recognition",
+              "Automated blocking"
+            ]
+          }
+        },
+        {
+          title: "Easy Management",
+          content: {
+            text: "Simplified protection management:",
+            list: [
+              "User-friendly interface",
+              "Custom rules",
+              "Detailed reporting"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Start Protection",
+        text: "Secure your digital space with our advanced anti-spam solutions."
+      }
+    },
+    metaTitle: "Anti-Spam Protection | NeuroGen Lab - Advanced Security Solutions",
+    metaDescription: "Protect your digital space with advanced anti-spam solutions. Implement intelligent filters and automated protection against unwanted content."
+  },
+  de: {
+    title: "Anti-Spam-Schutz",
+    description: "Schützen Sie Ihren digitalen Raum mit unseren fortschrittlichen Anti-Spam-Lösungen. Implementieren Sie intelligente Filter und automatisierten Schutz gegen unerwünschte Inhalte.",
+    sectionTitles: {
+      features: "Hauptfunktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "KI-gestützte Erkennung",
+      "Echtzeit-Schutz",
+      "Inhaltsfilterung",
+      "IP-Blocking",
+      "Mustererkennung",
+      "Benutzerdefinierte Regeln",
+      "Automatisierte Moderation"
+    ],
+    benefits: [
+      "Saubere Kommunikation",
+      "Reduzierte manuelle Moderation",
+      "Verbesserte Sicherheit",
+      "Zeitersparnis",
+      "Verbesserte Benutzererfahrung",
+      "Anpassbarer Schutz",
+      "24/7 Überwachung"
+    ],
+    integrations: [
+      "E-Mail-Systeme",
+      "Webformulare",
+      "Kommentarsysteme",
+      "Chat-Anwendungen",
+      "Soziale Plattformen",
+      "API-Integration"
+    ],
+    articleContent: {
+      mainTitle: "Fortschrittliche Anti-Spam-Lösungen",
+      subtitle: "Intelligenter Schutz für Ihren digitalen Raum",
+      introText: "Unser Anti-Spam-Schutz hilft Ihnen bei:",
+      introList: [
+        "Aufrechterhaltung sauberer Kommunikationskanäle",
+        "Schutz der Nutzer vor unerwünschten Inhalten",
+        "Reduzierung des Moderationsaufwands"
+      ],
+      howItWorksTitle: "Funktionsweise",
+      howItWorksText: "Unser Schutzsystem umfasst:",
+      howItWorksList: [
+        "KI-basierte Analyse",
+        "Mustererkennung",
+        "Automatische Filterung",
+        "Echtzeit-Schutz"
+      ],
+      keyFeaturesTitle: "Kernfunktionen",
+      features: {
+        realTime: {
+          title: "Echtzeit-Schutz",
+          description: "Sofortige Analyse und Blockierung von Spam-Inhalten"
+        },
+        multiLanguage: {
+          title: "Mehrsprachenunterstützung",
+          description: "Spam-Erkennung in mehreren Sprachen"
+        },
+        scalability: {
+          title: "Skalierbarer Schutz",
+          description: "Bewältigt steigende Verkehrsmengen"
+        },
+        analytics: {
+          title: "Erweiterte Analytik",
+          description: "Detaillierte Einblicke in Spam-Muster"
+        }
+      },
+      industriesTitle: "Schutzbereiche",
+      industriesText: "Umfassender Schutz für:",
+      industries: [
+        {
+          icon: "📧",
+          name: "E-Mail-Systeme",
+          description: "Fortschrittliche E-Mail-Filterung"
+        },
+        {
+          icon: "💬",
+          name: "Chat-Systeme",
+          description: "Echtzeit-Chat-Schutz"
+        },
+        {
+          icon: "🌐",
+          name: "Web-Plattformen",
+          description: "Website- und Formularschutz"
+        }
+      ],
+      conclusionTitle: "Warum unseren Schutz wählen",
+      conclusionText: "Erhalten Sie umfassenden Schutz mit:",
+      conclusionList: [
+        "Fortschrittliche KI-Technologie",
+        "Bewährte Wirksamkeit",
+        "Kontinuierliche Updates"
+      ],
+      topReasonsTitle: "Hauptvorteile",
+      reasonList: [
+        {
+          title: "Intelligenter Schutz",
+          content: {
+            text: "Fortschrittliche Spam-Erkennung und -Prävention:",
+            list: [
+              "KI-gestützte Analyse",
+              "Mustererkennung",
+              "Automatische Blockierung"
+            ]
+          }
+        },
+        {
+          title: "Einfache Verwaltung",
+          content: {
+            text: "Vereinfachtes Schutzmanagement:",
+            list: [
+              "Benutzerfreundliche Oberfläche",
+              "Benutzerdefinierte Regeln",
+              "Detaillierte Berichterstattung"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Schutz Starten",
+        text: "Sichern Sie Ihren digitalen Raum mit unseren fortschrittlichen Anti-Spam-Lösungen."
+      }
+    },
+    metaTitle: "Anti-Spam-Schutz | NeuroGen Lab - Fortschrittliche Sicherheitslösungen",
+    metaDescription: "Schützen Sie Ihren digitalen Raum mit fortschrittlichen Anti-Spam-Lösungen. Implementieren Sie intelligente Filter und automatisierten Schutz gegen unerwünschte Inhalte."
+  },
+  es: {
+    title: "Protección Anti-Spam",
+    description: "Proteja su espacio digital con nuestras soluciones anti-spam avanzadas. Implemente filtros inteligentes y protección automatizada contra contenido no deseado.",
+    sectionTitles: {
+      features: "Características Principales",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Detección Basada en IA",
+      "Protección en Tiempo Real",
+      "Filtrado de Contenido",
+      "Bloqueo de IP",
+      "Reconocimiento de Patrones",
+      "Reglas Personalizadas",
+      "Moderación Automatizada"
+    ],
+    benefits: [
+      "Comunicación Limpia",
+      "Moderación Manual Reducida",
+      "Seguridad Mejorada",
+      "Ahorro de Tiempo",
+      "Mejor Experiencia de Usuario",
+      "Protección Personalizable",
+      "Monitoreo 24/7"
+    ],
+    integrations: [
+      "Sistemas de Correo",
+      "Formularios Web",
+      "Sistemas de Comentarios",
+      "Aplicaciones de Chat",
+      "Plataformas Sociales",
+      "Integración API"
+    ],
+    articleContent: {
+      mainTitle: "Soluciones Anti-Spam Avanzadas",
+      subtitle: "Protección Inteligente para su Espacio Digital",
+      introText: "Nuestra protección anti-spam le ayuda a:",
+      introList: [
+        "Mantener canales de comunicación limpios",
+        "Proteger usuarios de contenido no deseado",
+        "Reducir la carga de moderación"
+      ],
+      howItWorksTitle: "Cómo Funciona",
+      howItWorksText: "Nuestro sistema de protección incluye:",
+      howItWorksList: [
+        "Análisis Basado en IA",
+        "Detección de Patrones",
+        "Filtrado Automático",
+        "Protección en Tiempo Real"
+      ],
+      keyFeaturesTitle: "Capacidades Principales",
+      features: {
+        realTime: {
+          title: "Protección en Tiempo Real",
+          description: "Análisis y bloqueo instantáneo de contenido spam"
+        },
+        multiLanguage: {
+          title: "Soporte Multilingüe",
+          description: "Detección de spam en múltiples idiomas"
+        },
+        scalability: {
+          title: "Protección Escalable",
+          description: "Maneja volúmenes crecientes de tráfico"
+        },
+        analytics: {
+          title: "Análisis Avanzado",
+          description: "Información detallada sobre patrones de spam"
+        }
+      },
+      industriesTitle: "Áreas de Protección",
+      industriesText: "Protección integral para:",
+      industries: [
+        {
+          icon: "📧",
+          name: "Sistemas de Correo",
+          description: "Filtrado avanzado de correo"
+        },
+        {
+          icon: "💬",
+          name: "Sistemas de Chat",
+          description: "Protección de chat en tiempo real"
+        },
+        {
+          icon: "🌐",
+          name: "Plataformas Web",
+          description: "Protección de sitios web y formularios"
+        }
+      ],
+      conclusionTitle: "Por Qué Elegir Nuestra Protección",
+      conclusionText: "Obtenga protección integral con:",
+      conclusionList: [
+        "Tecnología avanzada de IA",
+        "Eficacia comprobada",
+        "Actualizaciones continuas"
+      ],
+      topReasonsTitle: "Ventajas Principales",
+      reasonList: [
+        {
+          title: "Protección Inteligente",
+          content: {
+            text: "Detección y prevención avanzada de spam:",
+            list: [
+              "Análisis basado en IA",
+              "Reconocimiento de patrones",
+              "Bloqueo automático"
+            ]
+          }
+        },
+        {
+          title: "Gestión Sencilla",
+          content: {
+            text: "Gestión simplificada de la protección:",
+            list: [
+              "Interfaz amigable",
+              "Reglas personalizadas",
+              "Informes detallados"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Comience la Protección",
+        text: "Asegure su espacio digital con nuestras soluciones anti-spam avanzadas."
+      }
+    },
+    metaTitle: "Protección Anti-Spam | NeuroGen Lab - Soluciones de Seguridad Avanzadas",
+    metaDescription: "Proteja su espacio digital con soluciones anti-spam avanzadas. Implemente filtros inteligentes y protección automatizada contra contenido no deseado."
+  },
+  ru: {
+    title: "Защита от Спама",
+    description: "Защитите ваше цифровое пространство с помощью наших передовых решений для борьбы со спамом. Внедрите интеллектуальные фильтры и автоматизированную защиту от нежелательного контента.",
+    sectionTitles: {
+      features: "Ключевые Возможности",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "ИИ-Обнаружение",
+      "Защита в Реальном Времени",
+      "Фильтрация Контента",
+      "Блокировка IP",
+      "Распознавание Паттернов",
+      "Настраиваемые Правила",
+      "Автоматическая Модерация"
+    ],
+    benefits: [
+      "Чистая Коммуникация",
+      "Снижение Ручной Модерации",
+      "Повышенная Безопасность",
+      "Экономия Времени",
+      "Улучшенный Пользовательский Опыт",
+      "Настраиваемая Защита",
+      "Круглосуточный Мониторинг"
+    ],
+    integrations: [
+      "Почтовые Системы",
+      "Веб-Формы",
+      "Системы Комментариев",
+      "Чат-Приложения",
+      "Социальные Платформы",
+      "API Интеграция"
+    ],
+    articleContent: {
+      mainTitle: "Продвинутые Решения Защиты от Спама",
+      subtitle: "Интеллектуальная Защита Вашего Цифрового Пространства",
+      introText: "Наша защита от спама помогает вам:",
+      introList: [
+        "Поддерживать чистые каналы коммуникации",
+        "Защищать пользователей от нежелательного контента",
+        "Снижать нагрузку на модерацию"
+      ],
+      howItWorksTitle: "Как Это Работает",
+      howItWorksText: "Наша система защиты включает:",
+      howItWorksList: [
+        "ИИ-Анализ",
+        "Обнаружение Паттернов",
+        "Автоматическую Фильтрацию",
+        "Защиту в Реальном Времени"
+      ],
+      keyFeaturesTitle: "Основные Возможности",
+      features: {
+        realTime: {
+          title: "Защита в Реальном Времени",
+          description: "Мгновенный анализ и блокировка спам-контента"
+        },
+        multiLanguage: {
+          title: "Многоязычная Поддержка",
+          description: "Обнаружение спама на разных языках"
+        },
+        scalability: {
+          title: "Масштабируемая Защита",
+          description: "Обработка растущих объемов трафика"
+        },
+        analytics: {
+          title: "Продвинутая Аналитика",
+          description: "Детальное понимание паттернов спама"
+        }
+      },
+      industriesTitle: "Области Защиты",
+      industriesText: "Комплексная защита для:",
+      industries: [
+        {
+          icon: "📧",
+          name: "Почтовые Системы",
+          description: "Продвинутая фильтрация почты"
+        },
+        {
+          icon: "💬",
+          name: "Чат-Системы",
+          description: "Защита чатов в реальном времени"
+        },
+        {
+          icon: "🌐",
+          name: "Веб-Платформы",
+          description: "Защита сайтов и форм"
+        }
+      ],
+      conclusionTitle: "Почему Выбирают Нашу Защиту",
+      conclusionText: "Получите комплексную защиту с:",
+      conclusionList: [
+        "Передовые ИИ-технологии",
+        "Доказанная эффективность",
+        "Постоянные обновления"
+      ],
+      topReasonsTitle: "Ключевые Преимущества",
+      reasonList: [
+        {
+          title: "Умная Защита",
+          content: {
+            text: "Продвинутое обнаружение и предотвращение спама:",
+            list: [
+              "ИИ-анализ",
+              "Распознавание паттернов",
+              "Автоматическая блокировка"
+            ]
+          }
+        },
+        {
+          title: "Простое Управление",
+          content: {
+            text: "Упрощенное управление защитой:",
+            list: [
+              "Удобный интерфейс",
+              "Настраиваемые правила",
+              "Детальная отчетность"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Начните Защиту",
+        text: "Защитите ваше цифровое пространство с помощью наших продвинутых решений против спама."
+      }
+    },
+    metaTitle: "Защита от Спама | NeuroGen Lab - Передовые Решения Безопасности",
+    metaDescription: "Защитите ваше цифровое пространство с помощью продвинутых решений против спама. Внедрите интеллектуальные фильтры и автоматизированную защиту от нежелательного контента."
+  },
+  ua: {
+    title: "Захист від Спаму",
+    description: "Захистіть ваш цифровий простір за допомогою наших передових рішень для боротьби зі спамом. Впровадьте інтелектуальні фільтри та автоматизований захист від небажаного контенту.",
+    sectionTitles: {
+      features: "Ключові Можливості",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "ШІ-Виявлення",
+      "Захист в Реальному Часі",
+      "Фільтрація Контенту",
+      "Блокування IP",
+      "Розпізнавання Патернів",
+      "Налаштовувані Правила",
+      "Автоматична Модерація"
+    ],
+    benefits: [
+      "Чиста Комунікація",
+      "Зменшення Ручної Модерації",
+      "Підвищена Безпека",
+      "Економія Часу",
+      "Покращений Користувацький Досвід",
+      "Налаштовуваний Захист",
+      "Цілодобовий Моніторинг"
+    ],
+    integrations: [
+      "Поштові Системи",
+      "Веб-Форми",
+      "Системи Коментарів",
+      "Чат-Додатки",
+      "Соціальні Платформи",
+      "API Інтеграція"
+    ],
+    articleContent: {
+      mainTitle: "Передові Рішення Захисту від Спаму",
+      subtitle: "Інтелектуальний Захист Вашого Цифрового Простору",
+      introText: "Наш захист від спаму допомагає вам:",
+      introList: [
+        "Підтримувати чисті канали комунікації",
+        "Захищати користувачів від небажаного контенту",
+        "Знижувати навантаження на модерацію"
+      ],
+      howItWorksTitle: "Як Це Працює",
+      howItWorksText: "Наша система захисту включає:",
+      howItWorksList: [
+        "ШІ-Аналіз",
+        "Виявлення Патернів",
+        "Автоматичну Фільтрацію",
+        "Захист в Реальному Часі"
+      ],
+      keyFeaturesTitle: "Основні Можливості",
+      features: {
+        realTime: {
+          title: "Захист в Реальному Часі",
+          description: "Миттєвий аналіз та блокування спам-контенту"
+        },
+        multiLanguage: {
+          title: "Багатомовна Підтримка",
+          description: "Виявлення спаму різними мовами"
+        },
+        scalability: {
+          title: "Масштабований Захист",
+          description: "Обробка зростаючих обсягів трафіку"
+        },
+        analytics: {
+          title: "Розширена Аналітика",
+          description: "Детальне розуміння патернів спаму"
+        }
+      },
+      industriesTitle: "Області Захисту",
+      industriesText: "Комплексний захист для:",
+      industries: [
+        {
+          icon: "📧",
+          name: "Поштові Системи",
+          description: "Передова фільтрація пошти"
+        },
+        {
+          icon: "💬",
+          name: "Чат-Системи",
+          description: "Захист чатів в реальному часі"
+        },
+        {
+          icon: "🌐",
+          name: "Веб-Платформи",
+          description: "Захист сайтів та форм"
+        }
+      ],
+      conclusionTitle: "Чому Обирають Наш Захист",
+      conclusionText: "Отримайте комплексний захист з:",
+      conclusionList: [
+        "Передові ШІ-технології",
+        "Доведена ефективність",
+        "Постійні оновлення"
+      ],
+      topReasonsTitle: "Ключові Переваги",
+      reasonList: [
+        {
+          title: "Розумний Захист",
+          content: {
+            text: "Передове виявлення та запобігання спаму:",
+            list: [
+              "ШІ-аналіз",
+              "Розпізнавання патернів",
+              "Автоматичне блокування"
+            ]
+          }
+        },
+        {
+          title: "Просте Керування",
+          content: {
+            text: "Спрощене керування захистом:",
+            list: [
+              "Зручний інтерфейс",
+              "Налаштовувані правила",
+              "Детальна звітність"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Розпочніть Захист",
+        text: "Захистіть ваш цифровий простір за допомогою наших передових рішень проти спаму."
+      }
+    },
+    metaTitle: "Захист від Спаму | NeuroGen Lab - Передові Рішення Безпеки",
+    metaDescription: "Захистіть ваш цифровий простір за допомогою передових рішень проти спаму. Впровадьте інтелектуальні фільтри та автоматизований захист від небажаного контенту."
+  }
+};
+export { antiSpamTranslations };

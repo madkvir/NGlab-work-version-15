@@ -1,51 +1,16 @@
+'use client';
+
 import React from "react";
-import { Metadata } from "next";
+import type { FC } from 'react';
+import { MessagesSquare } from "lucide-react";
 import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { MessageCircle } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Intercom Integration | NeuroGen Lab - Customer Messaging Solution",
-  description:
-    "Optimize your customer messaging with our Intercom integration. Automate support, engage customers intelligently, and improve conversion rates through targeted communication.",
-  keywords: [
-    "intercom integration",
-    "customer messaging",
-    "support automation",
-    "customer engagement",
-  ],
-  openGraph: {
-    title: "Intercom Integration - Smart Customer Support | NeuroGen Lab",
-    description: "Enhance customer messaging with intelligent automation",
-    url: "https://neurogenlab.de/tools/intercom",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "Intercom Integration - Customer Messaging",
-    description: "Optimize support with smart Intercom automation",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/intercom",
-  },
-};
-
-const Intercom = () => {
+const Intercom: FC = () => {
   return (
     <ToolPageTemplate
       title="Intercom Integration"
       description="Enhance your customer messaging with our Intercom integration that provides intelligent customer engagement and support automation."
-      icon={<MessageCircle className="w-8 h-8 text-emerald-400" />}
+      icon={<MessagesSquare className="w-8 h-8 text-emerald-400" />}
       features={[
         "Automated Customer Support",
         "Targeted Messaging",
@@ -72,6 +37,11 @@ const Intercom = () => {
         "E-commerce Platforms",
         "Product Analytics",
       ]}
+      sectionTitles={{
+        features: "Features",
+        benefits: "Benefits",
+        integrations: "Integrations"
+      }}
       metaTitle="Intercom Integration | NeuroGen Lab - Customer Messaging Solution"
       metaDescription="Optimize your customer messaging with our Intercom integration. Automate support, engage customers intelligently, and improve conversion rates through targeted communication."
     />

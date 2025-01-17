@@ -1,51 +1,16 @@
+'use client';
+
 import React from "react";
-import { Metadata } from "next";
+import type { FC } from 'react';
+import { MessagesSquare } from "lucide-react";
 import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { MessageCircle } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "WhatsApp Business Integration | NeuroGen Lab - Messaging Solution",
-  description:
-    "Optimize your business communication with our WhatsApp integration. Enable automated responses, secure messaging, and enhanced customer engagement through WhatsApp Business API.",
-  keywords: [
-    "whatsapp business",
-    "messaging integration",
-    "customer communication",
-    "business api",
-  ],
-  openGraph: {
-    title: "WhatsApp Business Integration - Smart Messaging | NeuroGen Lab",
-    description: "Enhance customer communication with WhatsApp automation",
-    url: "https://neurogenlab.de/tools/whatsapp",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
-  },
-  twitter: {
-    title: "WhatsApp Business Integration - Messaging Solution",
-    description: "Transform business messaging with WhatsApp integration",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/whatsapp",
-  },
-};
-
-const WhatsApp = () => {
+const WhatsApp: FC = () => {
   return (
     <ToolPageTemplate
       title="WhatsApp Business Integration"
       description="Leverage the power of WhatsApp Business API with our intelligent integration solution for enhanced customer communication."
-      icon={<MessageCircle className="w-8 h-8 text-emerald-400" />}
+      icon={<MessagesSquare className="w-8 h-8 text-emerald-400" />}
       features={[
         "Business API Integration",
         "Automated Messaging",
@@ -72,6 +37,11 @@ const WhatsApp = () => {
         "Customer Support Tools",
         "Analytics Platforms",
       ]}
+      sectionTitles={{
+        features: "Features",
+        benefits: "Benefits",
+        integrations: "Integrations"
+      }}
       metaTitle="WhatsApp Business Integration | NeuroGen Lab - Messaging Solution"
       metaDescription="Optimize your business communication with our WhatsApp integration. Enable automated responses, secure messaging, and enhanced customer engagement through WhatsApp Business API."
     />

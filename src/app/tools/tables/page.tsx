@@ -1,45 +1,16 @@
-import React from "react";
-import { Metadata } from "next";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { Table2 } from "lucide-react";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Tables Processing | NeuroGen Lab - Data Management Solution",
-  description:
-    "Transform your data processing with our advanced table management solution. Handle large datasets efficiently with intelligent processing and analysis tools.",
-  keywords: ["table processing", "data management", "data analysis", "dataset handling"],
-  openGraph: {
-    title: "Tables Processing - Smart Data Management | NeuroGen Lab",
-    description: "Process large datasets with intelligent table management",
-    url: "https://neurogenlab.de/tools/tables",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
-  },
-  twitter: {
-    title: "Tables Processing - Data Management Solution",
-    description: "Transform data processing with smart table management",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/tables",
-  },
-};
-const Tables = () => {
+import React from "react";
+import type { FC } from 'react';
+import { Table } from "lucide-react";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+
+const Tables: FC = () => {
   return (
     <ToolPageTemplate
       title="Tables Processing Solution"
       description="Process and analyze large datasets efficiently with our advanced table processing and management system."
-      icon={<Table2 className="w-8 h-8 text-emerald-400" />}
+      icon={<Table className="w-8 h-8 text-emerald-400" />}
       features={[
         "Advanced Data Processing",
         "Intelligent Column Recognition",
@@ -66,6 +37,11 @@ const Tables = () => {
         "Analytics Software",
         "Cloud Storage Solutions",
       ]}
+      sectionTitles={{
+        features: "Features",
+        benefits: "Benefits",
+        integrations: "Integrations"
+      }}
       metaTitle="Tables Processing | NeuroGen Lab - Data Management Solution"
       metaDescription="Transform your data processing with our advanced table management solution. Handle large datasets efficiently with intelligent processing and analysis tools."
     />

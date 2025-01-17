@@ -1,46 +1,16 @@
+'use client';
+
 import React from "react";
-import { Metadata } from "next";
+import type { FC } from 'react';
+import { HeadphonesIcon } from "lucide-react";
 import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { Headphones } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "LiveChat Integration | NeuroGen Lab - Customer Support Solution",
-  description:
-    "Transform your customer support with our LiveChat integration. Combine human interaction with AI assistance for exceptional customer service and improved engagement.",
-  keywords: ["livechat integration", "customer support", "live chat", "customer service"],
-  openGraph: {
-    title: "LiveChat Integration - Smart Customer Support | NeuroGen Lab",
-    description: "Enhance customer support with AI-powered live chat",
-    url: "https://neurogenlab.de/tools/livechat",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "LiveChat Integration - Customer Support Solution",
-    description: "Transform support with intelligent live chat",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/livechat",
-  },
-};
-
-const LiveChat = () => {
+const LiveChat: FC = () => {
   return (
     <ToolPageTemplate
       title="LiveChat Integration"
       description="Provide exceptional customer support with our LiveChat integration that combines human interaction with AI-powered assistance."
-      icon={<Headphones className="w-8 h-8 text-emerald-400" />}
+      icon={<HeadphonesIcon className="w-8 h-8 text-emerald-400" />}
       features={[
         "Real-time Chat Support",
         "AI-powered Assistance",
@@ -67,6 +37,11 @@ const LiveChat = () => {
         "Social Media",
         "Email Marketing",
       ]}
+      sectionTitles={{
+        features: "Features",
+        benefits: "Benefits",
+        integrations: "Integrations"
+      }}
       metaTitle="LiveChat Integration | NeuroGen Lab - Customer Support Solution"
       metaDescription="Transform your customer support with our LiveChat integration. Combine human interaction with AI assistance for exceptional customer service and improved engagement."
     />

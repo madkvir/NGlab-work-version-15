@@ -1,50 +1,16 @@
-import React from "react";
-import { Metadata } from "next";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { Cloud } from "lucide-react";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Salesforce Integration | NeuroGen Lab - CRM Enhancement Solution",
-  description:
-    "Enhance your Salesforce CRM with our intelligent integration solution. Automate workflows, improve data management, and gain valuable insights through AI-powered analytics.",
-  keywords: [
-    "salesforce integration",
-    "CRM automation",
-    "sales automation",
-    "business intelligence",
-  ],
-  openGraph: {
-    title: "Salesforce Integration - Smart CRM Enhancement | NeuroGen Lab",
-    description: "Transform your CRM with intelligent Salesforce automation",
-    url: "https://neurogenlab.de/tools/salesforce",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "Salesforce Integration - CRM Enhancement",
-    description: "Enhance CRM with smart Salesforce integration",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/salesforce",
-  },
-};
-const Salesforce = () => {
+import React from "react";
+import type { FC } from 'react';
+import { CloudIcon } from "lucide-react";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+
+const Salesforce: FC = () => {
   return (
     <ToolPageTemplate
       title="Salesforce Integration"
       description="Transform your CRM experience with our powerful Salesforce integration that seamlessly connects your business processes with AI-driven automation."
-      icon={<Cloud className="w-8 h-8 text-emerald-400" />}
+      icon={<CloudIcon className="w-8 h-8 text-emerald-400" />}
       features={[
         "Automated Data Synchronization",
         "Custom Workflow Automation",
@@ -71,6 +37,11 @@ const Salesforce = () => {
         "Communication Tools",
         "Custom Applications",
       ]}
+      sectionTitles={{
+        features: "Features",
+        benefits: "Benefits",
+        integrations: "Integrations"
+      }}
       metaTitle="Salesforce Integration | NeuroGen Lab - CRM Enhancement Solution"
       metaDescription="Enhance your Salesforce CRM with our intelligent integration solution. Automate workflows, improve data management, and gain valuable insights through AI-powered analytics."
     />

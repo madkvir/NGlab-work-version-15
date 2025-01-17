@@ -1,7 +1,9 @@
 import { ReactNode, Suspense } from "react";
 import Head from "next/head";
+import "./globals.css";
 import "../styles/index.css";
 import "../styles/animations.css";
+import "../styles/calendar.css";
 import type { Metadata } from "next";
 import { BlogProvider } from "../context/BlogContext";
 import LoadingSpinner from "../components/chat/LoadingSpinner";
@@ -9,20 +11,20 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import ChatWidget from "../components/ChatWidget";
 import CookieConsent from "../components/CookieConsent";
 import React from "react";
-import { LanguageProvider } from '../context/LanguageContext';
-import { cookies } from 'next/headers';
+import { LanguageProvider } from "../context/LanguageContext";
+import { cookies } from "next/headers";
 
 export const metadata: Metadata = {
-  title: 'Neurogen Lab',
-  description: 'Neurogen Lab is a...',
+  title: "Neurogen Lab",
+  description: "Neurogen Lab is a...",
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
 };
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   const cookieStore = await cookies();
-  const initialLanguage = cookieStore.get('NEXT_LOCALE')?.value || 'en';
+  const initialLanguage = cookieStore.get("NEXT_LOCALE")?.value || "en";
 
   return (
     <html lang={initialLanguage}>

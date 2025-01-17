@@ -1,45 +1,16 @@
-import React from "react";
-import { Metadata } from "next";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { Building2 } from "lucide-react";
+'use client';
 
-export const metadata: Metadata = {
-  title: "HubSpot Integration | NeuroGen Lab - Marketing Automation Solution",
-  description:
-    "Transform your marketing and sales with our HubSpot integration. Implement intelligent automation, enhance customer engagement, and improve ROI through AI-powered tools.",
-  keywords: ["hubspot integration", "marketing automation", "sales automation", "CRM"],
-  openGraph: {
-    title: "HubSpot Integration - Smart Marketing | NeuroGen Lab",
-    description: "Transform your marketing with intelligent HubSpot automation",
-    url: "https://neurogenlab.de/tools/hubspot",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "HubSpot Integration - Marketing Automation",
-    description: "Enhance marketing with smart HubSpot integration",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/hubspot",
-  },
-};
-const HubSpot = () => {
+import React from "react";
+import type { FC } from 'react';
+import { Building } from "lucide-react";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+
+const HubSpot: FC = () => {
   return (
     <ToolPageTemplate
       title="HubSpot Integration"
       description="Elevate your marketing and sales operations with our comprehensive HubSpot integration featuring AI-powered automation and analytics."
-      icon={<Building2 className="w-8 h-8 text-emerald-400" />}
+      icon={<Building className="w-8 h-8 text-emerald-400" />}
       features={[
         "Marketing Automation",
         "Sales Pipeline Management",
@@ -66,6 +37,11 @@ const HubSpot = () => {
         "CMS Hub",
         "Operations Hub",
       ]}
+      sectionTitles={{
+        features: "Features",
+        benefits: "Benefits",
+        integrations: "Integrations"
+      }}
       metaTitle="HubSpot Integration | NeuroGen Lab - Marketing Automation Solution"
       metaDescription="Transform your marketing and sales with our HubSpot integration. Implement intelligent automation, enhance customer engagement, and improve ROI through AI-powered tools."
     />

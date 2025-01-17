@@ -1,50 +1,16 @@
-import React from "react";
-import { Metadata } from "next";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { Ticket } from "lucide-react";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Intercom Integration | NeuroGen Lab - Customer Messaging Solution",
-  description:
-    "Optimize your customer messaging with our Intercom integration. Automate support, engage customers intelligently, and improve conversion rates through targeted communication.",
-  keywords: [
-    "intercom integration",
-    "customer messaging",
-    "support automation",
-    "customer engagement",
-  ],
-  openGraph: {
-    title: "Intercom Integration - Smart Customer Support | NeuroGen Lab",
-    description: "Enhance customer messaging with intelligent automation",
-    url: "https://neurogenlab.de/tools/intercom",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "Intercom Integration - Customer Messaging",
-    description: "Optimize support with smart Intercom automation",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/intercom",
-  },
-};
-const Jira = () => {
+import React from "react";
+import type { FC } from 'react';
+import { TicketCheck } from "lucide-react";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+
+const Jira: FC = () => {
   return (
     <ToolPageTemplate
       title="Jira Integration"
       description="Streamline your project management and issue tracking with our intelligent Jira integration solution."
-      icon={<Ticket className="w-8 h-8 text-emerald-400" />}
+      icon={<TicketCheck className="w-8 h-8 text-emerald-400" />}
       features={[
         "Automated Issue Creation and Updates",
         "Smart Task Assignment",
@@ -71,6 +37,11 @@ const Jira = () => {
         "Communication Platforms",
         "Documentation Tools",
       ]}
+      sectionTitles={{
+        features: "Features",
+        benefits: "Benefits",
+        integrations: "Integrations"
+      }}
       metaTitle="Jira Integration | NeuroGen Lab - Project Management Solution"
       metaDescription="Optimize your project management with our Jira integration. Automate workflows, enhance collaboration, and improve productivity with intelligent issue tracking."
     />

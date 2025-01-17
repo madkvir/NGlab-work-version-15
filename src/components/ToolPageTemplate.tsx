@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import GlowingButton from "./common/GlowingButton";
 import Link from "next/link";
+import { ArticleContent } from "./ArticleContent";
 
 interface ToolPageProps {
   title: string;
@@ -17,7 +18,36 @@ interface ToolPageProps {
   metaTitle: string;
   metaDescription: string;
   isComingSoon?: boolean;
-  articleContent?: React.ReactNode;
+  articleContent?: {
+    mainTitle: string;
+    subtitle: string;
+    introText: string;
+    introList: string[];
+    howItWorksTitle: string;
+    howItWorksText: string;
+    howItWorksList: string[];
+    keyFeaturesTitle: string;
+    features: {
+      realTime: { title: string; description: string };
+      multiLanguage: { title: string; description: string };
+      scalability: { title: string; description: string };
+      analytics: { title: string; description: string };
+    };
+    industriesTitle: string;
+    industriesText: string;
+    industries: any[];
+    conclusionTitle: string;
+    conclusionText: string;
+    conclusionList: string[];
+    topReasonsTitle: string;
+    reasonList: any[];
+    finalConclusion: { title: string; text: string };
+  } | React.ReactNode;
+  sectionTitles: {
+    features: string;
+    benefits: string;
+    integrations: string;
+  };
 }
 
 const ToolPageTemplate: React.FC<ToolPageProps> = ({
@@ -31,6 +61,7 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
   metaDescription,
   isComingSoon = false,
   articleContent,
+  sectionTitles
 }) => {
   React.useEffect(() => {
     document.title = metaTitle;
@@ -72,7 +103,7 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Features */}
             <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
-              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">Key Features</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">{sectionTitles.features}</h2>
               <ul className="space-y-4">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -85,7 +116,7 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
 
             {/* Benefits */}
             <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
-              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">Benefits</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">{sectionTitles.benefits}</h2>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -99,7 +130,7 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
 
           {integrations && (
             <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300 mb-12">
-              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">Integrations</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">{sectionTitles.integrations}</h2>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {integrations.map((integration, index) => (
                   <div key={index} className="bg-gray-800/50 rounded-lg p-4 text-center">
@@ -122,7 +153,11 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
               {isComingSoon ? "Coming Soon" : "Get Started"}
             </GlowingButton>
 
-            {articleContent && <div className="text-left py-12">{articleContent}</div>}
+            {articleContent && typeof articleContent === 'object' && 'mainTitle' in articleContent ? (
+              <ArticleContent content={articleContent} />
+            ) : (
+              articleContent
+            )}
 
             {!isComingSoon && (
               <div className="flex items-center justify-center gap-2 text-gray-400 text-sm">

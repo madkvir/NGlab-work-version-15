@@ -1,46 +1,16 @@
+'use client';
+
 import React from "react";
-import { Metadata } from "next";
+import type { FC } from 'react';
+import { MailCheck } from "lucide-react";
 import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { Mail } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Email Integration | NeuroGen Lab - Intelligent Email Solution",
-  description:
-    "Optimize your email communications with our intelligent integration solution. Automate responses, manage templates, and gain valuable insights from your email interactions.",
-  keywords: ["email integration", "email automation", "smart email", "communication tools"],
-  openGraph: {
-    title: "Email Integration - Smart Communication | NeuroGen Lab",
-    description: "Streamline your email communications with AI automation",
-    url: "https://neurogenlab.de/tools/email",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "Email Integration - Intelligent Communication",
-    description: "Enhance email efficiency with smart automation",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/email",
-  },
-};
-
-const Email = () => {
+const Email: FC = () => {
   return (
     <ToolPageTemplate
       title="Email Integration"
       description="Enhance your email communications with our intelligent email integration solution that streamlines messaging and automates responses."
-      icon={<Mail className="w-8 h-8 text-emerald-400" />}
+      icon={<MailCheck className="w-8 h-8 text-emerald-400" />}
       features={[
         "Smart Email Routing",
         "Automated Response System",
@@ -67,6 +37,11 @@ const Email = () => {
         "Help Desk Software",
         "Analytics Tools",
       ]}
+      sectionTitles={{
+        features: "Features",
+        benefits: "Benefits",
+        integrations: "Integrations"
+      }}
       metaTitle="Email Integration | NeuroGen Lab - Intelligent Email Solution"
       metaDescription="Optimize your email communications with our intelligent integration solution. Automate responses, manage templates, and gain valuable insights from your email interactions."
     />
