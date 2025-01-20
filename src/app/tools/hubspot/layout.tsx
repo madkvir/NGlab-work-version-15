@@ -2,34 +2,47 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "HubSpot Integration | NeuroGen Lab - Marketing Automation Solution",
-  description:
-    "Transform your marketing and sales with our HubSpot integration. Implement intelligent automation, enhance customer engagement, and improve ROI through AI-powered tools.",
-  keywords: ["hubspot integration", "marketing automation", "sales automation", "CRM"],
+  title: "HubSpot Integration | NeuroGen Lab - Intelligent CRM Enhancement",
+  description: "Enhance your HubSpot experience with AI technology. Smart automation, analytics, and advanced features for better customer relationship management.",
+  keywords: [
+    "hubspot integration",
+    "crm enhancement",
+    "ai automation",
+    "customer management",
+    "lead scoring",
+    "data analytics",
+    "business automation"
+  ],
   openGraph: {
-    title: "HubSpot Integration - Smart Marketing | NeuroGen Lab",
-    description: "Transform your marketing with intelligent HubSpot automation",
+    title: "HubSpot Integration - Intelligent CRM Enhancement | NeuroGen Lab",
+    description: "Enhance your HubSpot experience with AI technology",
     url: "https://neurogenlab.de/tools/hubspot",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/hubspot.jpg",
+        alt: "HubSpot Integration by NeuroGen Lab",
       },
     ],
   },
   twitter: {
-    title: "HubSpot Integration - Marketing Automation",
-    description: "Enhance marketing with smart HubSpot integration",
+    title: "HubSpot Integration - Smart CRM Enhancement",
+    description: "Enhance HubSpot with AI technology",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/hubspot.jpg",
+        alt: "HubSpot Integration by NeuroGen Lab",
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
     canonical: "https://neurogenlab.de/tools/hubspot",
+    languages: {
+      'en': '/tools/hubspot',
+      'de': '/de/tools/hubspot',
+      'es': '/es/tools/hubspot',
+      'ru': '/ru/tools/hubspot'
+    }
   },
 };
 

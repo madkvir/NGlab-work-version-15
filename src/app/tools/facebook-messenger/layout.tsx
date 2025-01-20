@@ -2,34 +2,47 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Enhance Messaging with Facebook Messenger Integration",
-  description:
-    "Enhance your customer communication with our Facebook Messenger integration. Provide instant, intelligent responses and seamless customer support through social messaging.",
-  keywords: ["facebook messenger", "messenger integration", "social messaging", "customer support"],
+  title: "Facebook Messenger Solution | NeuroGen Lab - Intelligent Messaging",
+  description: "Enhance Messenger communication with AI technology. Automated responses, analytics, and advanced features for better message management.",
+  keywords: [
+    "facebook messenger",
+    "messenger automation",
+    "ai messaging",
+    "chat management",
+    "message analytics",
+    "automated responses",
+    "business messaging"
+  ],
   openGraph: {
-    title: "Facebook Messenger Integration - Smart Social Support | NeuroGen Lab",
-    description: "Connect with customers through intelligent Messenger automation",
+    title: "Facebook Messenger Solution - Intelligent Messaging | NeuroGen Lab",
+    description: "Enhance your Messenger communication with AI technology",
     url: "https://neurogenlab.de/tools/facebook-messenger",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/facebook-messenger.jpg",
+        alt: "Facebook Messenger Solution by NeuroGen Lab",
       },
     ],
   },
   twitter: {
-    title: "Facebook Messenger Integration - Smart Communication",
-    description: "Enhance customer support with Messenger automation",
+    title: "Facebook Messenger Solution - Smart Communication",
+    description: "Enhance Messenger communication with AI",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/facebook-messenger.jpg",
+        alt: "Facebook Messenger Solution by NeuroGen Lab",
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
     canonical: "https://neurogenlab.de/tools/facebook-messenger",
+    languages: {
+      'en': '/tools/facebook-messenger',
+      'de': '/de/tools/facebook-messenger',
+      'es': '/es/tools/facebook-messenger',
+      'ru': '/ru/tools/facebook-messenger'
+    }
   },
 };
 

@@ -5454,8 +5454,8 @@ const counselingTranslations = {
     metaDescription: "Experimente asesoramiento personalizado impulsado por IA. Obtenga orientación y apoyo profesional con nuestra avanzada tecnología de inteligencia artificial."
   },
   ru: {
-    title: "ИИ-Консультирование",
-    description: "Получите персонализированные консультационные решения с поддержкой ИИ. Профессиональное руководство и поддержка с помощью нашей передовой технологии искусственного интеллекта.",
+    title: "ИИ Консультация Бизнеса",
+    description: "Получите персонализированное консультирование вашего бизнеса по использованию ИИ. Профессиональное руководство и поддержка с помощью нашей передовой технологии искусственного интеллекта.",
     sectionTitles: {
       features: "Ключевые Возможности",
       benefits: "Преимущества",
@@ -5579,12 +5579,12 @@ const counselingTranslations = {
         text: "Начните путь к благополучию с нашими консультационными решениями на базе ИИ."
       }
     },
-    metaTitle: "ИИ-Консультирование | NeuroGen Lab - Профессиональные Решения Поддержки",
-    metaDescription: "Получите персонализированное консультирование с поддержкой ИИ. Профессиональное руководство и поддержка с помощью нашей передовой технологии искусственного интеллекта."
+    metaTitle: "ИИ-Консультации Бизнеса | NeuroGen Lab - Профессиональные Решения Поддержки",
+    metaDescription: "Получите персонализированную консультацию по интеграции ИИ в ваш бизнес. Профессиональное руководство и поддержка с помощью нашей передовой технологии искусственного интеллекта."
   },
   ua: {
-    title: "ШІ-Консультування",
-    description: "Отримайте персоналізовані консультаційні рішення з підтримкою ШІ. Професійне керівництво та підтримка за допомогою нашої передової технології штучного інтелекту.",
+    title: "ШІ Бізнес Консультація",
+    description: "Отримайте персоналізовану консультацію щодо шнтеграції ШІ в ваш бізнес. Професійне керівництво та підтримка за допомогою нашої передової технології штучного інтелекту.",
     sectionTitles: {
       features: "Ключові Можливості",
       benefits: "Переваги",
@@ -5617,9 +5617,9 @@ const counselingTranslations = {
       "Аналітичні Інструменти"
     ],
     articleContent: {
-      mainTitle: "Консультаційні Рішення з ШІ",
+      mainTitle: "Консультації з ШІ",
       subtitle: "Професійна Підтримка з Посиленням ШІ",
-      introText: "Наш сервіс ШІ-консультування надає:",
+      introText: "Наш сервіс Консультація Бізнесу надає:",
       introList: [
         "Професійне керівництво та підтримку",
         "Персоналізований досвід консультування",
@@ -5708,7 +5708,7 @@ const counselingTranslations = {
         text: "Розпочніть шлях до оптимізації вашого бізнесу з нашими рішеннями на базі ШІ."
       }
     },
-    metaTitle: "ШІ-Консультування | NeuroGen Lab - Професійні Рішення для Бізнесу",
+    metaTitle: "Консультація Бізнесу | NeuroGen Lab - Професійні Рішення для Бізнесу",
     metaDescription: "Отримайте персоналізоване консультування з підтримкою ШІ. Професійне управління проектом та підтримка за допомогою нашої передової технології штучного інтелекту."
   },
 };
@@ -6094,3 +6094,574 @@ const emailTranslations = {
 };
 
 export { emailTranslations };
+
+const messengerTranslations = {
+  en: {
+    title: "Facebook Messenger Solution",
+    description: "Enhance your Facebook Messenger communication with our intelligent solution that provides advanced features and automation through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Automated Responses",
+      "Message Analytics",
+      "Chat Management",
+      "Multi-Account Support",
+      "Message Scheduling",
+      "Custom Templates",
+      "Smart Filtering"
+    ],
+    benefits: [
+      "Faster Response Times",
+      "Better Customer Service",
+      "Increased Engagement",
+      "Time Savings",
+      "Improved Communication",
+      "Consistent Messaging",
+      "Enhanced Analytics"
+    ],
+    integrations: [
+      "Facebook Business",
+      "CRM Systems",
+      "Analytics Tools",
+      "Marketing Platforms",
+      "Customer Support Tools",
+      "Automation Systems"
+    ],
+    metaTitle: "Facebook Messenger Solution | NeuroGen Lab - Intelligent Messaging",
+    metaDescription: "Enhance Messenger communication with AI technology. Automated responses, analytics, and advanced features for better message management."
+  },
+  de: {
+    title: "Facebook Messenger-Lösung",
+    description: "Verbessern Sie Ihre Facebook Messenger-Kommunikation mit unserer intelligenten Lösung, die durch KI-Technologie erweiterte Funktionen und Automatisierung bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Automatisierte Antworten",
+      "Nachrichten-Analytik",
+      "Chat-Verwaltung",
+      "Multi-Account-Unterstützung",
+      "Nachrichtenplanung",
+      "Benutzerdefinierte Vorlagen",
+      "Intelligente Filterung"
+    ],
+    benefits: [
+      "Schnellere Antwortzeiten",
+      "Besserer Kundenservice",
+      "Erhöhtes Engagement",
+      "Zeitersparnis",
+      "Verbesserte Kommunikation",
+      "Konsistente Nachrichten",
+      "Erweiterte Analytik"
+    ],
+    integrations: [
+      "Facebook Business",
+      "CRM-Systeme",
+      "Analyse-Tools",
+      "Marketing-Plattformen",
+      "Kundenservice-Tools",
+      "Automatisierungssysteme"
+    ],
+    metaTitle: "Facebook Messenger-Lösung | NeuroGen Lab - Intelligentes Messaging",
+    metaDescription: "Verbessern Sie Messenger-Kommunikation mit KI-Technologie. Automatisierte Antworten, Analytik und erweiterte Funktionen für besseres Nachrichtenmanagement."
+  },
+  es: {
+    title: "Solución para Facebook Messenger",
+    description: "Mejore su comunicación en Facebook Messenger con nuestra solución inteligente que proporciona características avanzadas y automatización a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Respuestas Automatizadas",
+      "Análisis de Mensajes",
+      "Gestión de Chat",
+      "Soporte Multi-Cuenta",
+      "Programación de Mensajes",
+      "Plantillas Personalizadas",
+      "Filtrado Inteligente"
+    ],
+    benefits: [
+      "Tiempos de Respuesta más Rápidos",
+      "Mejor Servicio al Cliente",
+      "Mayor Participación",
+      "Ahorro de Tiempo",
+      "Comunicación Mejorada",
+      "Mensajes Consistentes",
+      "Análisis Mejorado"
+    ],
+    integrations: [
+      "Facebook Business",
+      "Sistemas CRM",
+      "Herramientas de Análisis",
+      "Plataformas de Marketing",
+      "Herramientas de Atención al Cliente",
+      "Sistemas de Automatización"
+    ],
+    metaTitle: "Solución para Facebook Messenger | NeuroGen Lab - Mensajería Inteligente",
+    metaDescription: "Mejore la comunicación en Messenger con tecnología IA. Respuestas automatizadas, análisis y características avanzadas para una mejor gestión de mensajes."
+  },
+  ru: {
+    title: "Решение для Facebook Messenger",
+    description: "Улучшите вашу коммуникацию в Facebook Messenger с помощью нашего интеллектуального решения, которое обеспечивает расширенные функции и автоматизацию через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Автоматические Ответы",
+      "Аналитика Сообщений",
+      "Управление Чатом",
+      "Поддержка Нескольких Аккаунтов",
+      "Планирование Сообщений",
+      "Пользовательские Шаблоны",
+      "Умная Фильтрация"
+    ],
+    benefits: [
+      "Более Быстрые Ответы",
+      "Улучшенное Обслуживание Клиентов",
+      "Повышенная Вовлеченность",
+      "Экономия Времени",
+      "Улучшенная Коммуникация",
+      "Последовательные Сообщения",
+      "Расширенная Аналитика"
+    ],
+    integrations: [
+      "Facebook Business",
+      "CRM Системы",
+      "Инструменты Аналитики",
+      "Маркетинговые Платформы",
+      "Инструменты Поддержки Клиентов",
+      "Системы Автоматизации"
+    ],
+    metaTitle: "Решение для Facebook Messenger | NeuroGen Lab - Интеллектуальный Обмен Сообщениями",
+    metaDescription: "Улучшите коммуникацию в Messenger с помощью технологии ИИ. Автоматические ответы, аналитика и расширенные функции для лучшего управления сообщениями."
+  },
+  ua: {
+    title: "Рішення для Facebook Messenger",
+    description: "Покращіть вашу комунікацію у Facebook Messenger за допомогою нашого інтелектуального рішення, яке забезпечує розширені функції та автоматизацію через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Автоматичні Відповіді",
+      "Аналітика Повідомлень",
+      "Управління Чатом",
+      "Підтримка Кількох Акаунтів",
+      "Планування Повідомлень",
+      "Користувацькі Шаблони",
+      "Розумна Фільтрація"
+    ],
+    benefits: [
+      "Швидші Відповіді",
+      "Покращене Обслуговування Клієнтів",
+      "Підвищена Залученість",
+      "Економія Часу",
+      "Покращена Комунікація",
+      "Послідовні Повідомлення",
+      "Розширена Аналітика"
+    ],
+    integrations: [
+      "Facebook Business",
+      "CRM Системи",
+      "Інструменти Аналітики",
+      "Маркетингові Платформи",
+      "Інструменти Підтримки Клієнтів",
+      "Системи Автоматизації"
+    ],
+    metaTitle: "Рішення для Facebook Messenger | NeuroGen Lab - Інтелектуальний Обмін Повідомленнями",
+    metaDescription: "Покращіть комунікацію в Messenger за допомогою технології ШІ. Автоматичні відповіді, аналітика та розширені функції для кращого управління повідомленнями."
+  }
+};
+
+export { messengerTranslations };
+
+const hubspotTranslations = {
+  en: {
+    title: "HubSpot Integration",
+    description: "Enhance your HubSpot experience with our intelligent integration solution that provides advanced automation and insights through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Smart Contact Management",
+      "Automated Lead Scoring",
+      "AI-Powered Analytics",
+      "Custom Workflows",
+      "Data Synchronization",
+      "Intelligent Reporting",
+      "Advanced Segmentation"
+    ],
+    benefits: [
+      "Improved Lead Management",
+      "Enhanced Customer Insights",
+      "Increased Productivity",
+      "Better Decision Making",
+      "Streamlined Operations",
+      "Accurate Forecasting",
+      "Personalized Marketing"
+    ],
+    integrations: [
+      "CRM Systems",
+      "Marketing Tools",
+      "Sales Platforms",
+      "Analytics Solutions",
+      "Email Services",
+      "Communication Tools"
+    ],
+    metaTitle: "HubSpot Integration | NeuroGen Lab - Intelligent CRM Enhancement",
+    metaDescription: "Enhance your HubSpot experience with AI technology. Smart automation, analytics, and advanced features for better customer relationship management."
+  },
+  de: {
+    title: "HubSpot-Integration",
+    description: "Verbessern Sie Ihre HubSpot-Erfahrung mit unserer intelligenten Integrationslösung, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Intelligente Kontaktverwaltung",
+      "Automatisierte Lead-Bewertung",
+      "KI-gestützte Analytik",
+      "Benutzerdefinierte Workflows",
+      "Datensynchronisation",
+      "Intelligentes Reporting",
+      "Erweiterte Segmentierung"
+    ],
+    benefits: [
+      "Verbessertes Lead-Management",
+      "Erweiterte Kundeneinblicke",
+      "Gesteigerte Produktivität",
+      "Bessere Entscheidungsfindung",
+      "Optimierte Abläufe",
+      "Genaue Prognosen",
+      "Personalisiertes Marketing"
+    ],
+    integrations: [
+      "CRM-Systeme",
+      "Marketing-Tools",
+      "Vertriebsplattformen",
+      "Analyse-Lösungen",
+      "E-Mail-Dienste",
+      "Kommunikationstools"
+    ],
+    metaTitle: "HubSpot-Integration | NeuroGen Lab - Intelligente CRM-Verbesserung",
+    metaDescription: "Verbessern Sie Ihre HubSpot-Erfahrung mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Kundenbeziehungsmanagement."
+  },
+  es: {
+    title: "Integración de HubSpot",
+    description: "Mejore su experiencia con HubSpot mediante nuestra solución de integración inteligente que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Gestión Inteligente de Contactos",
+      "Puntuación Automatizada de Leads",
+      "Análisis Impulsado por IA",
+      "Flujos de Trabajo Personalizados",
+      "Sincronización de Datos",
+      "Informes Inteligentes",
+      "Segmentación Avanzada"
+    ],
+    benefits: [
+      "Mejor Gestión de Leads",
+      "Perspectivas Mejoradas del Cliente",
+      "Mayor Productividad",
+      "Mejor Toma de Decisiones",
+      "Operaciones Optimizadas",
+      "Pronósticos Precisos",
+      "Marketing Personalizado"
+    ],
+    integrations: [
+      "Sistemas CRM",
+      "Herramientas de Marketing",
+      "Plataformas de Ventas",
+      "Soluciones Analíticas",
+      "Servicios de Correo",
+      "Herramientas de Comunicación"
+    ],
+    metaTitle: "Integración de HubSpot | NeuroGen Lab - Mejora Inteligente de CRM",
+    metaDescription: "Mejore su experiencia con HubSpot mediante tecnología IA. Automatización inteligente, análisis y características avanzadas para una mejor gestión de relaciones con clientes."
+  },
+  ru: {
+    title: "Интеграция с HubSpot",
+    description: "Улучшите ваш опыт работы с HubSpot с помощью нашего интеллектуального решения для интеграции, которое обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Умное Управление Контактами",
+      "Автоматическая Оценка Лидов",
+      "ИИ-Аналитика",
+      "Настраиваемые Рабочие Процессы",
+      "Синхронизация Данных",
+      "Интеллектуальная Отчетность",
+      "Расширенная Сегментация"
+    ],
+    benefits: [
+      "Улучшенное Управление Лидами",
+      "Расширенное Понимание Клиентов",
+      "Повышенная Продуктивность",
+      "Лучшее Принятие Решений",
+      "Оптимизированные Операции",
+      "Точное Прогнозирование",
+      "Персонализированный Маркетинг"
+    ],
+    integrations: [
+      "CRM Системы",
+      "Маркетинговые Инструменты",
+      "Платформы Продаж",
+      "Аналитические Решения",
+      "Почтовые Сервисы",
+      "Инструменты Коммуникации"
+    ],
+    metaTitle: "Интеграция с HubSpot | NeuroGen Lab - Интеллектуальное Улучшение CRM",
+    metaDescription: "Улучшите ваш опыт работы с HubSpot с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего управления отношениями с клиентами."
+  },
+  ua: {
+    title: "Інтеграція з HubSpot",
+    description: "Покращіть ваш досвід роботи з HubSpot за допомогою нашого інтелектуального рішення для інтеграції, яке забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Розумне Управління Контактами",
+      "Автоматична Оцінка Лідів",
+      "ШІ-Аналітика",
+      "Налаштовувані Робочі Процеси",
+      "Синхронізація Даних",
+      "Інтелектуальна Звітність",
+      "Розширена Сегментація"
+    ],
+    benefits: [
+      "Покращене Управління Лідами",
+      "Розширене Розуміння Клієнтів",
+      "Підвищена Продуктивність",
+      "Краще Прийняття Рішень",
+      "Оптимізовані Операції",
+      "Точне Прогнозування",
+      "Персоналізований Маркетинг"
+    ],
+    integrations: [
+      "CRM Системи",
+      "Маркетингові Інструменти",
+      "Платформи Продажів",
+      "Аналітичні Рішення",
+      "Поштові Сервіси",
+      "Інструменти Комунікації"
+    ],
+    metaTitle: "Інтеграція з HubSpot | NeuroGen Lab - Інтелектуальне Покращення CRM",
+    metaDescription: "Покращіть ваш досвід роботи з HubSpot за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого управління відносинами з клієнтами."
+  }
+};
+
+export { hubspotTranslations };
+
+const instagramTranslations = {
+  en: {
+    title: "Instagram Integration",
+    description: "Enhance your Instagram presence with our intelligent integration solution that provides advanced automation and analytics through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Content Scheduling",
+      "Analytics Dashboard",
+      "Engagement Tracking",
+      "Automated Responses",
+      "Hashtag Management",
+      "Visual Content Planning",
+      "Performance Insights"
+    ],
+    benefits: [
+      "Increased Engagement",
+      "Time Savings",
+      "Better Content Strategy",
+      "Improved Reach",
+      "Consistent Posting",
+      "Data-Driven Decisions",
+      "Enhanced Brand Presence"
+    ],
+    integrations: [
+      "Social Media Tools",
+      "Content Management",
+      "Analytics Platforms",
+      "Marketing Tools",
+      "CRM Systems",
+      "Media Libraries"
+    ],
+    metaTitle: "Instagram Integration | NeuroGen Lab - Smart Social Media Management",
+    metaDescription: "Enhance your Instagram presence with AI technology. Smart scheduling, analytics, and advanced features for better social media management."
+  },
+  de: {
+    title: "Instagram-Integration",
+    description: "Verbessern Sie Ihre Instagram-Präsenz mit unserer intelligenten Integrationslösung, die durch KI-Technologie erweiterte Automatisierung und Analytik bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Content-Planung",
+      "Analyse-Dashboard",
+      "Engagement-Tracking",
+      "Automatisierte Antworten",
+      "Hashtag-Verwaltung",
+      "Visuelle Contentplanung",
+      "Performance-Einblicke"
+    ],
+    benefits: [
+      "Erhöhtes Engagement",
+      "Zeitersparnis",
+      "Bessere Content-Strategie",
+      "Verbesserte Reichweite",
+      "Konsistentes Posting",
+      "Datenbasierte Entscheidungen",
+      "Verstärkte Markenpräsenz"
+    ],
+    integrations: [
+      "Social-Media-Tools",
+      "Content-Management",
+      "Analyse-Plattformen",
+      "Marketing-Tools",
+      "CRM-Systeme",
+      "Medienbibliotheken"
+    ],
+    metaTitle: "Instagram-Integration | NeuroGen Lab - Intelligentes Social Media Management",
+    metaDescription: "Verbessern Sie Ihre Instagram-Präsenz mit KI-Technologie. Intelligente Planung, Analytik und erweiterte Funktionen für besseres Social Media Management."
+  },
+  es: {
+    title: "Integración de Instagram",
+    description: "Mejore su presencia en Instagram con nuestra solución de integración inteligente que proporciona automatización avanzada y análisis a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Programación de Contenido",
+      "Panel de Análisis",
+      "Seguimiento de Interacción",
+      "Respuestas Automatizadas",
+      "Gestión de Hashtags",
+      "Planificación de Contenido Visual",
+      "Perspectivas de Rendimiento"
+    ],
+    benefits: [
+      "Mayor Interacción",
+      "Ahorro de Tiempo",
+      "Mejor Estrategia de Contenido",
+      "Alcance Mejorado",
+      "Publicación Consistente",
+      "Decisiones Basadas en Datos",
+      "Presencia de Marca Mejorada"
+    ],
+    integrations: [
+      "Herramientas de Redes Sociales",
+      "Gestión de Contenido",
+      "Plataformas de Análisis",
+      "Herramientas de Marketing",
+      "Sistemas CRM",
+      "Bibliotecas Multimedia"
+    ],
+    metaTitle: "Integración de Instagram | NeuroGen Lab - Gestión Inteligente de Redes Sociales",
+    metaDescription: "Mejore su presencia en Instagram con tecnología IA. Programación inteligente, análisis y características avanzadas para una mejor gestión de redes sociales."
+  },
+  ru: {
+    title: "Интеграция с Instagram",
+    description: "Улучшите ваше присутствие в Instagram с помощью нашего интеллектуального решения для интеграции, которое обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Планирование Контента",
+      "Аналитическая Панель",
+      "Отслеживание Вовлеченности",
+      "Автоматические Ответы",
+      "Управление Хэштегами",
+      "Планирование Визуального Контента",
+      "Анализ Эффективности"
+    ],
+    benefits: [
+      "Повышенная Вовлеченность",
+      "Экономия Времени",
+      "Улучшенная Стратегия Контента",
+      "Увеличенный Охват",
+      "Регулярные Публикации",
+      "Решения на Основе Данных",
+      "Усиленное Присутствие Бренда"
+    ],
+    integrations: [
+      "Инструменты Социальных Сетей",
+      "Управление Контентом",
+      "Аналитические Платформы",
+      "Маркетинговые Инструменты",
+      "CRM Системы",
+      "Медиа-библиотеки"
+    ],
+    metaTitle: "Интеграция с Instagram | NeuroGen Lab - Умное Управление Социальными Сетями",
+    metaDescription: "Улучшите ваше присутствие в Instagram с помощью технологии ИИ. Умное планирование, аналитика и расширенные функции для лучшего управления социальными сетями."
+  },
+  ua: {
+    title: "Інтеграція з Instagram",
+    description: "Покращіть вашу присутність в Instagram за допомогою нашого інтелектуального рішення для інтеграції, яке забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Планування Контенту",
+      "Аналітична Панель",
+      "Відстеження Залученості",
+      "Автоматичні Відповіді",
+      "Управління Хештегами",
+      "Планування Візуального Контенту",
+      "Аналіз Ефективності"
+    ],
+    benefits: [
+      "Підвищена Залученість",
+      "Економія Часу",
+      "Покращена Стратегія Контенту",
+      "Збільшене Охоплення",
+      "Регулярні Публікації",
+      "Рішення на Основі Даних",
+      "Посилена Присутність Бренду"
+    ],
+    integrations: [
+      "Інструменти Соціальних Мереж",
+      "Управління Контентом",
+      "Аналітичні Платформи",
+      "Маркетингові Інструменти",
+      "CRM Системи",
+      "Медіа-бібліотеки"
+    ],
+    metaTitle: "Інтеграція з Instagram | NeuroGen Lab - Розумне Управління Соціальними Мережами",
+    metaDescription: "Покращіть вашу присутність в Instagram за допомогою технології ШІ. Розумне планування, аналітика та розширені функції для кращого управління соціальними мережами."
+  }
+};
+
+export { instagramTranslations };
+
