@@ -2,34 +2,47 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Microsoft Teams Integration | NeuroGen Lab - Collaboration Solution",
-  description:
-    "Optimize your team collaboration with our Microsoft Teams integration. Enable intelligent communication, automate workflows, and enhance productivity through AI-powered tools.",
-  keywords: ["microsoft teams integration", "team collaboration", "workflow automation"],
+  title: "Microsoft Teams Integration | NeuroGen Lab - Smart Team Collaboration",
+  description: "Enhance your team collaboration with AI technology. Smart automation, analytics, and advanced features for better team communication and productivity.",
+  keywords: [
+    "microsoft teams integration",
+    "team collaboration",
+    "meeting management",
+    "document collaboration",
+    "team analytics",
+    "workflow automation",
+    "channel management"
+  ],
   openGraph: {
-    title: "Microsoft Teams Integration - Smart Collaboration | NeuroGen Lab",
-    description: "Enhance team collaboration with AI-powered automation",
+    title: "Microsoft Teams Integration - Smart Team Collaboration | NeuroGen Lab",
+    description: "Enhance your team collaboration with AI technology",
     url: "https://neurogenlab.de/tools/microsoft-teams",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/microsoft-teams.jpg",
+        alt: "Microsoft Teams Integration by NeuroGen Lab",
       },
     ],
   },
   twitter: {
-    title: "Microsoft Teams Integration - Collaboration Solution",
-    description: "Transform teamwork with intelligent Teams integration",
+    title: "Microsoft Teams Integration - Smart Team Collaboration",
+    description: "Enhance team collaboration with AI",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/microsoft-teams.jpg",
+        alt: "Microsoft Teams Integration by NeuroGen Lab",
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
     canonical: "https://neurogenlab.de/tools/microsoft-teams",
+    languages: {
+      'en': '/tools/microsoft-teams',
+      'de': '/de/tools/microsoft-teams',
+      'es': '/es/tools/microsoft-teams',
+      'ru': '/ru/tools/microsoft-teams'
+    }
   },
 };
 

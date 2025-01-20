@@ -2,39 +2,47 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Intercom Integration | NeuroGen Lab - Customer Messaging Solution",
-  description:
-    "Optimize your customer messaging with our Intercom integration. Automate support, engage customers intelligently, and improve conversion rates through targeted communication.",
+  title: "Intercom Integration | NeuroGen Lab - Smart Customer Communication",
+  description: "Enhance your customer communication with AI technology. Smart routing, automated responses, and advanced analytics for better customer support.",
   keywords: [
     "intercom integration",
-    "customer messaging",
-    "support automation",
-    "customer engagement",
+    "customer communication",
+    "chat automation",
+    "customer support",
+    "team collaboration",
+    "conversation management",
+    "support analytics"
   ],
   openGraph: {
-    title: "Intercom Integration - Smart Customer Support | NeuroGen Lab",
-    description: "Enhance customer messaging with intelligent automation",
+    title: "Intercom Integration - Smart Customer Communication | NeuroGen Lab",
+    description: "Enhance your customer communication with AI technology",
     url: "https://neurogenlab.de/tools/intercom",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/intercom.jpg",
+        alt: "Intercom Integration by NeuroGen Lab",
       },
     ],
   },
   twitter: {
-    title: "Intercom Integration - Customer Messaging",
-    description: "Optimize support with smart Intercom automation",
+    title: "Intercom Integration - Smart Customer Support",
+    description: "Enhance customer communication with AI",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/intercom.jpg",
+        alt: "Intercom Integration by NeuroGen Lab",
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
     canonical: "https://neurogenlab.de/tools/intercom",
+    languages: {
+      'en': '/tools/intercom',
+      'de': '/de/tools/intercom',
+      'es': '/es/tools/intercom',
+      'ru': '/ru/tools/intercom'
+    }
   },
 };
 

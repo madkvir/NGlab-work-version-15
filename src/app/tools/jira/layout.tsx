@@ -2,39 +2,47 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Jira Integration | NeuroGen Lab - Project Management Solution",
-  description:
-    "Optimize your project management with our Jira integration. Automate workflows, enhance collaboration, and improve productivity with intelligent issue tracking.",
+  title: "Jira Integration | NeuroGen Lab - Smart Project Management",
+  description: "Enhance your project management with AI technology. Smart automation, analytics, and advanced features for better project tracking and team collaboration.",
   keywords: [
     "jira integration",
     "project management",
+    "task automation",
+    "team collaboration",
     "issue tracking",
-    "workflow automation",
+    "sprint planning",
+    "agile development"
   ],
   openGraph: {
     title: "Jira Integration - Smart Project Management | NeuroGen Lab",
-    description: "Enhance project management with intelligent Jira automation",
+    description: "Enhance your project management with AI technology",
     url: "https://neurogenlab.de/tools/jira",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/jira.jpg",
+        alt: "Jira Integration by NeuroGen Lab",
       },
     ],
   },
   twitter: {
-    title: "Jira Integration - Project Management",
-    description: "Optimize workflows with smart Jira integration",
+    title: "Jira Integration - Smart Project Management",
+    description: "Enhance project management with AI",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/jira.jpg",
+        alt: "Jira Integration by NeuroGen Lab",
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
     canonical: "https://neurogenlab.de/tools/jira",
+    languages: {
+      'en': '/tools/jira',
+      'de': '/de/tools/jira',
+      'es': '/es/tools/jira',
+      'ru': '/ru/tools/jira'
+    }
   },
 };
 

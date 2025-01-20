@@ -6665,3 +6665,763 @@ const instagramTranslations = {
 
 export { instagramTranslations };
 
+const intercomTranslations = {
+  en: {
+    title: "Intercom Integration",
+    description: "Enhance your customer communication with our intelligent Intercom integration that provides advanced automation and insights through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Smart Chat Routing",
+      "Automated Responses",
+      "Customer Analytics",
+      "Conversation Management",
+      "Team Collaboration",
+      "Custom Workflows",
+      "Performance Tracking"
+    ],
+    benefits: [
+      "Faster Response Times",
+      "Improved Customer Support",
+      "Better Team Efficiency",
+      "Data-Driven Insights",
+      "Streamlined Communication",
+      "Enhanced Customer Experience",
+      "Increased Productivity"
+    ],
+    integrations: [
+      "CRM Systems",
+      "Help Desk Tools",
+      "Analytics Platforms",
+      "Marketing Tools",
+      "Team Collaboration",
+      "Customer Support"
+    ],
+    metaTitle: "Intercom Integration | NeuroGen Lab - Smart Customer Communication",
+    metaDescription: "Enhance your customer communication with AI technology. Smart routing, automated responses, and advanced analytics for better customer support."
+  },
+  de: {
+    title: "Intercom-Integration",
+    description: "Verbessern Sie Ihre Kundenkommunikation mit unserer intelligenten Intercom-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Intelligentes Chat-Routing",
+      "Automatisierte Antworten",
+      "Kundenanalyse",
+      "Gesprächsverwaltung",
+      "Team-Zusammenarbeit",
+      "Benutzerdefinierte Workflows",
+      "Leistungsverfolgung"
+    ],
+    benefits: [
+      "Schnellere Antwortzeiten",
+      "Verbesserter Kundensupport",
+      "Bessere Team-Effizienz",
+      "Datenbasierte Einblicke",
+      "Optimierte Kommunikation",
+      "Verbesserte Kundenerfahrung",
+      "Gesteigerte Produktivität"
+    ],
+    integrations: [
+      "CRM-Systeme",
+      "Helpdesk-Tools",
+      "Analyse-Plattformen",
+      "Marketing-Tools",
+      "Team-Kollaboration",
+      "Kundensupport"
+    ],
+    metaTitle: "Intercom-Integration | NeuroGen Lab - Intelligente Kundenkommunikation",
+    metaDescription: "Verbessern Sie Ihre Kundenkommunikation mit KI-Technologie. Intelligentes Routing, automatisierte Antworten und erweiterte Analytik für besseren Kundensupport."
+  },
+  es: {
+    title: "Integración de Intercom",
+    description: "Mejore su comunicación con clientes mediante nuestra integración inteligente de Intercom que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Enrutamiento Inteligente de Chat",
+      "Respuestas Automatizadas",
+      "Análisis de Clientes",
+      "Gestión de Conversaciones",
+      "Colaboración en Equipo",
+      "Flujos de Trabajo Personalizados",
+      "Seguimiento de Rendimiento"
+    ],
+    benefits: [
+      "Tiempos de Respuesta más Rápidos",
+      "Mejor Soporte al Cliente",
+      "Mayor Eficiencia del Equipo",
+      "Perspectivas Basadas en Datos",
+      "Comunicación Optimizada",
+      "Experiencia del Cliente Mejorada",
+      "Productividad Aumentada"
+    ],
+    integrations: [
+      "Sistemas CRM",
+      "Herramientas de Mesa de Ayuda",
+      "Plataformas de Análisis",
+      "Herramientas de Marketing",
+      "Colaboración en Equipo",
+      "Soporte al Cliente"
+    ],
+    metaTitle: "Integración de Intercom | NeuroGen Lab - Comunicación Inteligente con Clientes",
+    metaDescription: "Mejore su comunicación con clientes mediante tecnología IA. Enrutamiento inteligente, respuestas automatizadas y análisis avanzado para mejor soporte al cliente."
+  },
+  ru: {
+    title: "Интеграция с Intercom",
+    description: "Улучшите вашу коммуникацию с клиентами с помощью нашей интеллектуальной интеграции Intercom, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Умная Маршрутизация Чатов",
+      "Автоматические Ответы",
+      "Аналитика Клиентов",
+      "Управление Разговорами",
+      "Командное Взаимодействие",
+      "Настраиваемые Рабочие Процессы",
+      "Отслеживание Эффективности"
+    ],
+    benefits: [
+      "Более Быстрые Ответы",
+      "Улучшенная Поддержка Клиентов",
+      "Повышенная Эффективность Команды",
+      "Аналитика на Основе Данных",
+      "Оптимизированная Коммуникация",
+      "Улучшенный Опыт Клиентов",
+      "Повышенная Продуктивность"
+    ],
+    integrations: [
+      "CRM Системы",
+      "Инструменты Поддержки",
+      "Аналитические Платформы",
+      "Маркетинговые Инструменты",
+      "Командное Взаимодействие",
+      "Поддержка Клиентов"
+    ],
+    metaTitle: "Интеграция с Intercom | NeuroGen Lab - Умная Коммуникация с Клиентами",
+    metaDescription: "Улучшите вашу коммуникацию с клиентами с помощью технологии ИИ. Умная маршрутизация, автоматические ответы и расширенная аналитика для лучшей поддержки клиентов."
+  },
+  ua: {
+    title: "Інтеграція з Intercom",
+    description: "Покращіть вашу комунікацію з клієнтами за допомогою нашої інтелектуальної інтеграції Intercom, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Розумна Маршрутизація Чатів",
+      "Автоматичні Відповіді",
+      "Аналітика Клієнтів",
+      "Управління Розмовами",
+      "Командна Взаємодія",
+      "Налаштовувані Робочі Процеси",
+      "Відстеження Ефективності"
+    ],
+    benefits: [
+      "Швидші Відповіді",
+      "Покращена Підтримка Клієнтів",
+      "Підвищена Ефективність Команди",
+      "Аналітика на Основі Даних",
+      "Оптимізована Комунікація",
+      "Покращений Досвід Клієнтів",
+      "Підвищена Продуктивність"
+    ],
+    integrations: [
+      "CRM Системи",
+      "Інструменти Підтримки",
+      "Аналітичні Платформи",
+      "Маркетингові Інструменти",
+      "Командна Взаємодія",
+      "Підтримка Клієнтів"
+    ],
+    metaTitle: "Інтеграція з Intercom | NeuroGen Lab - Розумна Комунікація з Клієнтами",
+    metaDescription: "Покращіть вашу комунікацію з клієнтами за допомогою технології ШІ. Розумна маршрутизація, автоматичні відповіді та розширена аналітика для кращої підтримки клієнтів."
+  }
+};
+
+export { intercomTranslations };
+
+const jiraTranslations = {
+  en: {
+    title: "Jira Integration",
+    description: "Enhance your project management with our intelligent Jira integration that provides advanced automation and insights through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Smart Task Management",
+      "Automated Workflows",
+      "Project Analytics",
+      "Team Collaboration",
+      "Issue Tracking",
+      "Sprint Planning",
+      "Performance Metrics"
+    ],
+    benefits: [
+      "Increased Productivity",
+      "Better Project Visibility",
+      "Streamlined Processes",
+      "Data-Driven Decisions",
+      "Enhanced Team Efficiency",
+      "Improved Planning",
+      "Better Resource Management"
+    ],
+    integrations: [
+      "Development Tools",
+      "Version Control",
+      "CI/CD Platforms",
+      "Documentation Tools",
+      "Team Communication",
+      "Time Tracking"
+    ],
+    metaTitle: "Jira Integration | NeuroGen Lab - Smart Project Management",
+    metaDescription: "Enhance your project management with AI technology. Smart automation, analytics, and advanced features for better project tracking and team collaboration."
+  },
+  de: {
+    title: "Jira-Integration",
+    description: "Verbessern Sie Ihr Projektmanagement mit unserer intelligenten Jira-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Intelligente Aufgabenverwaltung",
+      "Automatisierte Workflows",
+      "Projekt-Analytik",
+      "Team-Zusammenarbeit",
+      "Problem-Tracking",
+      "Sprint-Planung",
+      "Leistungskennzahlen"
+    ],
+    benefits: [
+      "Gesteigerte Produktivität",
+      "Bessere Projektübersicht",
+      "Optimierte Prozesse",
+      "Datenbasierte Entscheidungen",
+      "Verbesserte Team-Effizienz",
+      "Verbesserte Planung",
+      "Besseres Ressourcenmanagement"
+    ],
+    integrations: [
+      "Entwicklungstools",
+      "Versionskontrolle",
+      "CI/CD-Plattformen",
+      "Dokumentationstools",
+      "Team-Kommunikation",
+      "Zeiterfassung"
+    ],
+    metaTitle: "Jira-Integration | NeuroGen Lab - Intelligentes Projektmanagement",
+    metaDescription: "Verbessern Sie Ihr Projektmanagement mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Projekt-Tracking und Team-Zusammenarbeit."
+  },
+  es: {
+    title: "Integración de Jira",
+    description: "Mejore su gestión de proyectos con nuestra integración inteligente de Jira que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Gestión Inteligente de Tareas",
+      "Flujos de Trabajo Automatizados",
+      "Análisis de Proyectos",
+      "Colaboración en Equipo",
+      "Seguimiento de Problemas",
+      "Planificación de Sprints",
+      "Métricas de Rendimiento"
+    ],
+    benefits: [
+      "Mayor Productividad",
+      "Mejor Visibilidad del Proyecto",
+      "Procesos Optimizados",
+      "Decisiones Basadas en Datos",
+      "Eficiencia Mejorada del Equipo",
+      "Mejor Planificación",
+      "Mejor Gestión de Recursos"
+    ],
+    integrations: [
+      "Herramientas de Desarrollo",
+      "Control de Versiones",
+      "Plataformas CI/CD",
+      "Herramientas de Documentación",
+      "Comunicación en Equipo",
+      "Control de Tiempo"
+    ],
+    metaTitle: "Integración de Jira | NeuroGen Lab - Gestión Inteligente de Proyectos",
+    metaDescription: "Mejore su gestión de proyectos con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor seguimiento de proyectos y colaboración en equipo."
+  },
+  ru: {
+    title: "Интеграция с Jira",
+    description: "Улучшите ваше управление проектами с помощью нашей интеллектуальной интеграции Jira, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Умное Управление Задачами",
+      "Автоматизированные Рабочие Процессы",
+      "Аналитика Проектов",
+      "Командное Взаимодействие",
+      "Отслеживание Проблем",
+      "Планирование Спринтов",
+      "Метрики Производительности"
+    ],
+    benefits: [
+      "Повышенная Продуктивность",
+      "Лучшая Видимость Проекта",
+      "Оптимизированные Процессы",
+      "Решения на Основе Данных",
+      "Улучшенная Эффективность Команды",
+      "Улучшенное Планирование",
+      "Лучшее Управление Ресурсами"
+    ],
+    integrations: [
+      "Инструменты Разработки",
+      "Контроль Версий",
+      "CI/CD Платформы",
+      "Инструменты Документации",
+      "Командная Коммуникация",
+      "Учет Времени"
+    ],
+    metaTitle: "Интеграция с Jira | NeuroGen Lab - Умное Управление Проектами",
+    metaDescription: "Улучшите ваше управление проектами с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего отслеживания проектов и командного взаимодействия."
+  },
+  ua: {
+    title: "Інтеграція з Jira",
+    description: "Покращіть ваше управління проектами за допомогою нашої інтелектуальної інтеграції Jira, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Розумне Управління Завданнями",
+      "Автоматизовані Робочі Процеси",
+      "Аналітика Проектів",
+      "Командна Взаємодія",
+      "Відстеження Проблем",
+      "Планування Спринтів",
+      "Метрики Продуктивності"
+    ],
+    benefits: [
+      "Підвищена Продуктивність",
+      "Краща Видимість Проекту",
+      "Оптимізовані Процеси",
+      "Рішення на Основі Даних",
+      "Покращена Ефективність Команди",
+      "Покращене Планування",
+      "Краще Управління Ресурсами"
+    ],
+    integrations: [
+      "Інструменти Розробки",
+      "Контроль Версій",
+      "CI/CD Платформи",
+      "Інструменти Документації",
+      "Командна Комунікація",
+      "Облік Часу"
+    ],
+    metaTitle: "Інтеграція з Jira | NeuroGen Lab - Розумне Управління Проектами",
+    metaDescription: "Покращіть ваше управління проектами за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого відстеження проектів та командної взаємодії."
+  }
+};
+
+export { jiraTranslations };
+
+const livechatTranslations = {
+  en: {
+    title: "LiveChat Integration",
+    description: "Enhance your customer support with our intelligent LiveChat integration that provides advanced automation and insights through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Real-time Chat Support",
+      "Automated Responses",
+      "Visitor Analytics",
+      "Chat History Management",
+      "Team Collaboration",
+      "Custom Chat Widgets",
+      "Performance Monitoring"
+    ],
+    benefits: [
+      "Faster Response Times",
+      "Improved Customer Satisfaction",
+      "Better Team Efficiency",
+      "Data-Driven Insights",
+      "Enhanced Communication",
+      "Increased Conversions",
+      "24/7 Support Capability"
+    ],
+    integrations: [
+      "CRM Systems",
+      "Help Desk Tools",
+      "Analytics Platforms",
+      "Marketing Tools",
+      "Social Media",
+      "E-commerce Platforms"
+    ],
+    metaTitle: "LiveChat Integration | NeuroGen Lab - Smart Customer Support",
+    metaDescription: "Enhance your customer support with AI technology. Real-time chat, automated responses, and advanced analytics for better customer communication."
+  },
+  de: {
+    title: "LiveChat-Integration",
+    description: "Verbessern Sie Ihren Kundensupport mit unserer intelligenten LiveChat-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Echtzeit-Chat-Support",
+      "Automatisierte Antworten",
+      "Besucher-Analytik",
+      "Chat-Verlaufsverwaltung",
+      "Team-Zusammenarbeit",
+      "Anpassbare Chat-Widgets",
+      "Leistungsüberwachung"
+    ],
+    benefits: [
+      "Schnellere Antwortzeiten",
+      "Verbesserte Kundenzufriedenheit",
+      "Bessere Team-Effizienz",
+      "Datenbasierte Einblicke",
+      "Verbesserte Kommunikation",
+      "Gesteigerte Konversionen",
+      "24/7 Support-Möglichkeit"
+    ],
+    integrations: [
+      "CRM-Systeme",
+      "Helpdesk-Tools",
+      "Analyse-Plattformen",
+      "Marketing-Tools",
+      "Soziale Medien",
+      "E-Commerce-Plattformen"
+    ],
+    metaTitle: "LiveChat-Integration | NeuroGen Lab - Intelligenter Kundensupport",
+    metaDescription: "Verbessern Sie Ihren Kundensupport mit KI-Technologie. Echtzeit-Chat, automatisierte Antworten und erweiterte Analytik für bessere Kundenkommunikation."
+  },
+  es: {
+    title: "Integración de LiveChat",
+    description: "Mejore su soporte al cliente con nuestra integración inteligente de LiveChat que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Soporte de Chat en Tiempo Real",
+      "Respuestas Automatizadas",
+      "Análisis de Visitantes",
+      "Gestión del Historial de Chat",
+      "Colaboración en Equipo",
+      "Widgets de Chat Personalizables",
+      "Monitoreo de Rendimiento"
+    ],
+    benefits: [
+      "Tiempos de Respuesta más Rápidos",
+      "Mayor Satisfacción del Cliente",
+      "Mejor Eficiencia del Equipo",
+      "Perspectivas Basadas en Datos",
+      "Comunicación Mejorada",
+      "Aumento de Conversiones",
+      "Capacidad de Soporte 24/7"
+    ],
+    integrations: [
+      "Sistemas CRM",
+      "Herramientas de Mesa de Ayuda",
+      "Plataformas de Análisis",
+      "Herramientas de Marketing",
+      "Redes Sociales",
+      "Plataformas de Comercio Electrónico"
+    ],
+    metaTitle: "Integración de LiveChat | NeuroGen Lab - Soporte Inteligente al Cliente",
+    metaDescription: "Mejore su soporte al cliente con tecnología IA. Chat en tiempo real, respuestas automatizadas y análisis avanzado para una mejor comunicación con el cliente."
+  },
+  ru: {
+    title: "Интеграция с LiveChat",
+    description: "Улучшите вашу поддержку клиентов с помощью нашей интеллектуальной интеграции LiveChat, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Поддержка в Реальном Времени",
+      "Автоматические Ответы",
+      "Аналитика Посетителей",
+      "Управление Историей Чатов",
+      "Командное Взаимодействие",
+      "Настраиваемые Чат-Виджеты",
+      "Мониторинг Производительности"
+    ],
+    benefits: [
+      "Более Быстрые Ответы",
+      "Повышенная Удовлетворенность Клиентов",
+      "Улучшенная Эффективность Команды",
+      "Аналитика на Основе Данных",
+      "Улучшенная Коммуникация",
+      "Увеличенная Конверсия",
+      "Поддержка 24/7"
+    ],
+    integrations: [
+      "CRM Системы",
+      "Инструменты Поддержки",
+      "Аналитические Платформы",
+      "Маркетинговые Инструменты",
+      "Социальные Сети",
+      "Платформы Электронной Коммерции"
+    ],
+    metaTitle: "Интеграция с LiveChat | NeuroGen Lab - Умная Поддержка Клиентов",
+    metaDescription: "Улучшите вашу поддержку клиентов с помощью технологии ИИ. Чат в реальном времени, автоматические ответы и расширенная аналитика для лучшей коммуникации с клиентами."
+  },
+  ua: {
+    title: "Інтеграція з LiveChat",
+    description: "Покращіть вашу підтримку клієнтів за допомогою нашої інтелектуальної інтеграції LiveChat, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Підтримка в Реальному Часі",
+      "Автоматичні Відповіді",
+      "Аналітика Відвідувачів",
+      "Управління Історією Чатів",
+      "Командна Взаємодія",
+      "Налаштовувані Чат-Віджети",
+      "Моніторинг Продуктивності"
+    ],
+    benefits: [
+      "Швидші Відповіді",
+      "Підвищена Задоволеність Клієнтів",
+      "Покращена Ефективність Команди",
+      "Аналітика на Основі Даних",
+      "Покращена Комунікація",
+      "Збільшена Конверсія",
+      "Підтримка 24/7"
+    ],
+    integrations: [
+      "CRM Системи",
+      "Інструменти Підтримки",
+      "Аналітичні Платформи",
+      "Маркетингові Інструменти",
+      "Соціальні Мережі",
+      "Платформи Електронної Комерції"
+    ],
+    metaTitle: "Інтеграція з LiveChat | NeuroGen Lab - Розумна Підтримка Клієнтів",
+    metaDescription: "Покращіть вашу підтримку клієнтів за допомогою технології ШІ. Чат в реальному часі, автоматичні відповіді та розширена аналітика для кращої комунікації з клієнтами."
+  }
+};
+
+export { livechatTranslations };  
+
+const teamsTranslations = {
+  en: {
+    title: "Microsoft Teams Integration",
+    description: "Enhance your team collaboration with our intelligent Microsoft Teams integration that provides advanced automation and insights through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Smart Meeting Management",
+      "Automated Workflows",
+      "Team Analytics",
+      "Document Collaboration",
+      "Channel Management",
+      "Custom Bot Integration",
+      "Activity Tracking"
+    ],
+    benefits: [
+      "Enhanced Collaboration",
+      "Improved Productivity",
+      "Better Communication",
+      "Data-Driven Insights",
+      "Streamlined Processes",
+      "Efficient Meetings",
+      "Team Coordination"
+    ],
+    integrations: [
+      "Office 365 Suite",
+      "SharePoint",
+      "OneDrive",
+      "Power Automate",
+      "Azure Services",
+      "Third-party Apps"
+    ],
+    metaTitle: "Microsoft Teams Integration | NeuroGen Lab - Smart Team Collaboration",
+    metaDescription: "Enhance your team collaboration with AI technology. Smart automation, analytics, and advanced features for better team communication and productivity."
+  },
+  de: {
+    title: "Microsoft Teams-Integration",
+    description: "Verbessern Sie Ihre Teamzusammenarbeit mit unserer intelligenten Microsoft Teams-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Intelligente Meeting-Verwaltung",
+      "Automatisierte Workflows",
+      "Team-Analytik",
+      "Dokumenten-Zusammenarbeit",
+      "Kanal-Management",
+      "Individuelle Bot-Integration",
+      "Aktivitätsverfolgung"
+    ],
+    benefits: [
+      "Verbesserte Zusammenarbeit",
+      "Gesteigerte Produktivität",
+      "Bessere Kommunikation",
+      "Datenbasierte Einblicke",
+      "Optimierte Prozesse",
+      "Effiziente Meetings",
+      "Team-Koordination"
+    ],
+    integrations: [
+      "Office 365-Suite",
+      "SharePoint",
+      "OneDrive",
+      "Power Automate",
+      "Azure-Dienste",
+      "Drittanbieter-Apps"
+    ],
+    metaTitle: "Microsoft Teams-Integration | NeuroGen Lab - Intelligente Teamzusammenarbeit",
+    metaDescription: "Verbessern Sie Ihre Teamzusammenarbeit mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für bessere Teamkommunikation und Produktivität."
+  },
+  es: {
+    title: "Integración de Microsoft Teams",
+    description: "Mejore la colaboración de su equipo con nuestra integración inteligente de Microsoft Teams que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Gestión Inteligente de Reuniones",
+      "Flujos de Trabajo Automatizados",
+      "Análisis de Equipo",
+      "Colaboración en Documentos",
+      "Gestión de Canales",
+      "Integración de Bot Personalizado",
+      "Seguimiento de Actividades"
+    ],
+    benefits: [
+      "Colaboración Mejorada",
+      "Productividad Mejorada",
+      "Mejor Comunicación",
+      "Perspectivas Basadas en Datos",
+      "Procesos Optimizados",
+      "Reuniones Eficientes",
+      "Coordinación de Equipo"
+    ],
+    integrations: [
+      "Suite Office 365",
+      "SharePoint",
+      "OneDrive",
+      "Power Automate",
+      "Servicios Azure",
+      "Aplicaciones de Terceros"
+    ],
+    metaTitle: "Integración de Microsoft Teams | NeuroGen Lab - Colaboración Inteligente en Equipo",
+    metaDescription: "Mejore la colaboración de su equipo con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor comunicación y productividad del equipo."
+  },
+  ru: {
+    title: "Интеграция с Microsoft Teams",
+    description: "Улучшите командное взаимодействие с помощью нашей интеллектуальной интеграции Microsoft Teams, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Умное Управление Встречами",
+      "Автоматизированные Рабочие Процессы",
+      "Аналитика Команды",
+      "Совместная Работа с Документами",
+      "Управление Каналами",
+      "Интеграция Пользовательских Ботов",
+      "Отслеживание Активности"
+    ],
+    benefits: [
+      "Улучшенное Взаимодействие",
+      "Повышенная Продуктивность",
+      "Улучшенная Коммуникация",
+      "Аналитика на Основе Данных",
+      "Оптимизированные Процессы",
+      "Эффективные Встречи",
+      "Координация Команды"
+    ],
+    integrations: [
+      "Пакет Office 365",
+      "SharePoint",
+      "OneDrive",
+      "Power Automate",
+      "Сервисы Azure",
+      "Сторонние Приложения"
+    ],
+    metaTitle: "Интеграция с Microsoft Teams | NeuroGen Lab - Умное Командное Взаимодействие",
+    metaDescription: "Улучшите командное взаимодействие с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшей коммуникации и продуктивности команды."
+  },
+  ua: {
+    title: "Інтеграція з Microsoft Teams",
+    description: "Покращіть командну взаємодію за допомогою нашої інтелектуальної інтеграції Microsoft Teams, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Розумне Управління Зустрічами",
+      "Автоматизовані Робочі Процеси",
+      "Аналітика Команди",
+      "Спільна Робота з Документами",
+      "Управління Каналами",
+      "Інтеграція Користувацьких Ботів",
+      "Відстеження Активності"
+    ],
+    benefits: [
+      "Покращена Взаємодія",
+      "Підвищена Продуктивність",
+      "Покращена Комунікація",
+      "Аналітика на Основі Даних",
+      "Оптимізовані Процеси",
+      "Ефективні Зустрічі",
+      "Координація Команди"
+    ],
+    integrations: [
+      "Пакет Office 365",
+      "SharePoint",
+      "OneDrive",
+      "Power Automate",
+      "Сервіси Azure",
+      "Сторонні Додатки"
+    ],
+    metaTitle: "Інтеграція з Microsoft Teams | NeuroGen Lab - Розумна Командна Взаємодія",
+    metaDescription: "Покращіть командну взаємодію за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращої комунікації та продуктивності команди."
+  }
+};
+
+export { teamsTranslations };
+

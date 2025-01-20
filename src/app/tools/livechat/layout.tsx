@@ -2,34 +2,47 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "LiveChat Integration | NeuroGen Lab - Customer Support Solution",
-  description:
-    "Transform your customer support with our LiveChat integration. Combine human interaction with AI assistance for exceptional customer service and improved engagement.",
-  keywords: ["livechat integration", "customer support", "live chat", "customer service"],
+  title: "LiveChat Integration | NeuroGen Lab - Smart Customer Support",
+  description: "Enhance your customer support with AI technology. Real-time chat, automated responses, and advanced analytics for better customer communication.",
+  keywords: [
+    "livechat integration",
+    "customer support",
+    "real-time chat",
+    "chat automation",
+    "visitor analytics",
+    "customer communication",
+    "support automation"
+  ],
   openGraph: {
     title: "LiveChat Integration - Smart Customer Support | NeuroGen Lab",
-    description: "Enhance customer support with AI-powered live chat",
+    description: "Enhance your customer support with AI technology",
     url: "https://neurogenlab.de/tools/livechat",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/livechat.jpg",
+        alt: "LiveChat Integration by NeuroGen Lab",
       },
     ],
   },
   twitter: {
-    title: "LiveChat Integration - Customer Support Solution",
-    description: "Transform support with intelligent live chat",
+    title: "LiveChat Integration - Smart Customer Support",
+    description: "Enhance customer support with AI",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/livechat.jpg",
+        alt: "LiveChat Integration by NeuroGen Lab",
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
     canonical: "https://neurogenlab.de/tools/livechat",
+    languages: {
+      'en': '/tools/livechat',
+      'de': '/de/tools/livechat',
+      'es': '/es/tools/livechat',
+      'ru': '/ru/tools/livechat'
+    }
   },
 };
 
