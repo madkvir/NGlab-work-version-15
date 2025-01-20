@@ -2,34 +2,47 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Email Integration | NeuroGen Lab - Intelligent Email Solution",
-  description:
-    "Optimize your email communications with our intelligent integration solution. Automate responses, manage templates, and gain valuable insights from your email interactions.",
-  keywords: ["email integration", "email automation", "smart email", "communication tools"],
+  title: "Email Solution | NeuroGen Lab - Intelligent Email Management",
+  description: "Enhance email communication with AI technology. Smart filtering, automated responses, and advanced security for better email management.",
+  keywords: [
+    "email solution",
+    "ai email",
+    "smart email",
+    "email management",
+    "email security",
+    "automated responses",
+    "email analytics"
+  ],
   openGraph: {
-    title: "Email Integration - Smart Communication | NeuroGen Lab",
-    description: "Streamline your email communications with AI automation",
+    title: "Email Solution - Intelligent Email Management | NeuroGen Lab",
+    description: "Enhance your email communication with AI technology",
     url: "https://neurogenlab.de/tools/email",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/email.jpg",
+        alt: "Email Solution by NeuroGen Lab",
       },
     ],
   },
   twitter: {
-    title: "Email Integration - Intelligent Communication",
-    description: "Enhance email efficiency with smart automation",
+    title: "Email Solution - Smart Management",
+    description: "Enhance email communication with AI",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/email.jpg",
+        alt: "Email Solution by NeuroGen Lab",
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
     canonical: "https://neurogenlab.de/tools/email",
+    languages: {
+      'en': '/tools/email',
+      'de': '/de/tools/email',
+      'es': '/es/tools/email',
+      'ru': '/ru/tools/email'
+    }
   },
 };
 

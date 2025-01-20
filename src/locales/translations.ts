@@ -183,7 +183,7 @@ export const translations = {
     },
   },
   ru: {
-    forDealership: 'Для дилеров',
+    forDealership: 'Для Автодилеров',
     coming: 'Скоро',
     solutions: 'Решения',
     pages: 'Страницы',
@@ -244,7 +244,7 @@ export const translations = {
     },
   },
   ua: {
-    forDealership: 'Для дилерів',
+    forDealership: 'Для Автодилерів',
     coming: 'Скоро',
     solutions: 'Рішення',
     pages: 'Сторінки',
@@ -4345,68 +4345,68 @@ const discordTranslations = {
           description: "Команди та відповіді бота на декількох мовах"
         },
         scalability: {
-          title: "Масштабовані Рішення",
-          description: "Легке керування зростаючими спільнотами"
+          title: "Масштабований Захист",
+          description: "Обробка зростаючих обсягів трафіку"
         },
         analytics: {
           title: "Розширена Аналітика",
-          description: "Детальна інформація про активність сервера та поведінку користувачів"
+          description: "Детальне розуміння патернів спаму"
         }
       },
-      industriesTitle: "Варіанти Використання",
-      industriesText: "Ідеально підходить для різних типів спільнот:",
+      industriesTitle: "Області Захисту",
+      industriesText: "Комплексний захист для:",
       industries: [
         {
-          icon: "🎮",
-          name: "Ігрові Спільноти",
-          description: "Покращення досвіду ігрових серверів"
+          icon: "📧",
+          name: "Поштові Системи",
+          description: "Передова фільтрація пошти"
         },
         {
-          icon: "👥",
-          name: "Бізнес-Спільноти",
-          description: "Професійний нетворкінг та підтримка"
+          icon: "💬",
+          name: "Чат-Системи",
+          description: "Захист чатів в реальному часі"
         },
         {
-          icon: "🎓",
-          name: "Освітні Групи",
-          description: "Інструменти для навчання та спільної роботи"
+          icon: "🌐",
+          name: "Веб-Платформи",
+          description: "Захист сайтів та форм"
         }
       ],
-      conclusionTitle: "Чому Варто Обрати Нашу Інтеграцію",
-      conclusionText: "Отримайте найкраще для вашого сервера з:",
+      conclusionTitle: "Чому Обирають Наш Захист",
+      conclusionText: "Отримайте комплексний захист з:",
       conclusionList: [
-        "Індивідуальний підхід до розробки",
-        "Надійна продуктивність",
-        "Постійна підтримка"
+        "Передові ШІ-технології",
+        "Доведена ефективність",
+        "Постійні оновлення"
       ],
       topReasonsTitle: "Ключові Переваги",
       reasonList: [
         {
-          title: "Покращена Автоматизація",
+          title: "Розумний Захист",
           content: {
-            text: "Автоматизація рутинних завдань та модерації:",
+            text: "Передове виявлення та запобігання спаму:",
             list: [
-              "Керування користувачами",
-              "Модерація контенту",
-              "Планування подій"
+              "ШІ-аналіз",
+              "Розпізнавання патернів",
+              "Автоматичне блокування"
             ]
           }
         },
         {
-          title: "Зростання Спільноти",
+          title: "Просте Керування",
           content: {
-            text: "Інструменти для залучення спільноти:",
+            text: "Спрощене керування захистом:",
             list: [
-              "Інтерактивні функції",
-              "Утримання користувачів",
-              "Аналітичні інсайти"
+              "Зручний інтерфейс",
+              "Налаштовувані правила",
+              "Детальна звітність"
             ]
           }
         }
       ],
       finalConclusion: {
-        title: "Почніть Зараз",
-        text: "Трансформуйте ваш Discord-сервер за допомогою наших потужних інтеграційних рішень."
+        title: "Розпочніть Захист",
+        text: "Захистіть ваш цифровий простір за допомогою наших передових рішень проти спаму."
       }
     },
     metaTitle: "Інтеграція Discord | NeuroGen Lab - Розробка Користувацьких Ботів",
@@ -5032,30 +5032,30 @@ const antiSpamTranslations = {
       topReasonsTitle: "Ключові Переваги",
       reasonList: [
         {
-          title: "Розумний Захист",
+          title: "Покращена Автоматизація",
           content: {
-            text: "Передове виявлення та запобігання спаму:",
+            text: "Автоматизація рутинних завдань та модерації:",
             list: [
-              "ШІ-аналіз",
-              "Розпізнавання патернів",
-              "Автоматичне блокування"
+              "Керування користувачами",
+              "Модерація контенту",
+              "Планування подій"
             ]
           }
         },
         {
-          title: "Просте Керування",
+          title: "Зростання Спільноти",
           content: {
-            text: "Спрощене керування захистом:",
+            text: "Інструменти для залучення спільноти:",
             list: [
-              "Зручний інтерфейс",
-              "Налаштовувані правила",
-              "Детальна звітність"
+              "Інтерактивні функції",
+              "Утримання користувачів",
+              "Аналітичні інсайти"
             ]
           }
         }
       ],
       finalConclusion: {
-        title: "Розпочніть Захист",
+        title: "Почніть Захист",
         text: "Захистіть ваш цифровий простір за допомогою наших передових рішень проти спаму."
       }
     },
@@ -5064,3 +5064,1033 @@ const antiSpamTranslations = {
   }
 };
 export { antiSpamTranslations };
+
+const counselingTranslations = {
+  en: {
+    title: "AI Counseling",
+    description: "Experience personalized AI-powered counseling solutions. Get professional guidance and support with our advanced artificial intelligence technology.",
+    sectionTitles: {
+      features: "Key Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Personalized Support",
+      "24/7 Availability",
+      "Secure Communication",
+      "AI-Powered Analysis",
+      "Progress Tracking",
+      "Resource Library",
+      "Crisis Management"
+    ],
+    benefits: [
+      "Immediate Support",
+      "Complete Privacy",
+      "Personalized Approach",
+      "Cost-Effective",
+      "Accessible Anywhere",
+      "Continuous Learning",
+      "Data-Driven Insights"
+    ],
+    integrations: [
+      "Chat Platforms",
+      "Mobile Apps",
+      "Healthcare Systems",
+      "Wellness Platforms",
+      "Support Networks",
+      "Analytics Tools"
+    ],
+    articleContent: {
+      mainTitle: "AI-Powered Counseling Solutions",
+      subtitle: "Professional Support Enhanced by AI",
+      introText: "Our AI counseling service provides:",
+      introList: [
+        "Professional guidance and support",
+        "Personalized counseling experience",
+        "24/7 availability and accessibility"
+      ],
+      howItWorksTitle: "How It Works",
+      howItWorksText: "Our counseling process includes:",
+      howItWorksList: [
+        "Initial Assessment",
+        "Personalized Plan Creation",
+        "Regular Sessions",
+        "Progress Monitoring"
+      ],
+      keyFeaturesTitle: "Core Capabilities",
+      features: {
+        realTime: {
+          title: "Real-time Support",
+          description: "Immediate assistance when you need it most"
+        },
+        multiLanguage: {
+          title: "Multi-language Support",
+          description: "Counseling services in multiple languages"
+        },
+        scalability: {
+          title: "Personalized Approach",
+          description: "Tailored support for individual needs"
+        },
+        analytics: {
+          title: "Progress Tracking",
+          description: "Detailed insights into your journey"
+        }
+      },
+      industriesTitle: "Support Areas",
+      industriesText: "Comprehensive support for:",
+      industries: [
+        {
+          icon: "🧠",
+          name: "Mental Wellness",
+          description: "Emotional and psychological support"
+        },
+        {
+          icon: "💪",
+          name: "Personal Growth",
+          description: "Development and self-improvement"
+        },
+        {
+          icon: "🤝",
+          name: "Relationship Support",
+          description: "Guidance for better relationships"
+        }
+      ],
+      conclusionTitle: "Why Choose AI Counseling",
+      conclusionText: "Get comprehensive support with:",
+      conclusionList: [
+        "Advanced AI technology",
+        "Professional expertise",
+        "Continuous availability"
+      ],
+      topReasonsTitle: "Key Advantages",
+      reasonList: [
+        {
+          title: "Personalized Support",
+          content: {
+            text: "Tailored guidance for your needs:",
+            list: [
+              "Individual approach",
+              "Adaptive support",
+              "Progress tracking"
+            ]
+          }
+        },
+        {
+          title: "Accessible Care",
+          content: {
+            text: "Support when you need it:",
+            list: [
+              "24/7 availability",
+              "Multiple platforms",
+              "Instant access"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Start Your Journey",
+        text: "Begin your path to well-being with our AI-powered counseling solutions."
+      }
+    },
+    metaTitle: "AI Counseling | NeuroGen Lab - Professional Support Solutions",
+    metaDescription: "Experience personalized AI-powered counseling. Get professional guidance and support with our advanced artificial intelligence technology."
+  },
+  de: {
+    title: "KI-Beratung",
+    description: "Erleben Sie personalisierte KI-gestützte Beratungslösungen. Erhalten Sie professionelle Anleitung und Unterstützung mit unserer fortschrittlichen künstlichen Intelligenz.",
+    sectionTitles: {
+      features: "Hauptfunktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Personalisierte Unterstützung",
+      "24/7 Verfügbarkeit",
+      "Sichere Kommunikation",
+      "KI-gestützte Analyse",
+      "Fortschrittsverfolgung",
+      "Ressourcenbibliothek",
+      "Krisenmanagement"
+    ],
+    benefits: [
+      "Sofortige Unterstützung",
+      "Vollständige Privatsphäre",
+      "Personalisierter Ansatz",
+      "Kosteneffektiv",
+      "Überall zugänglich",
+      "Kontinuierliches Lernen",
+      "Datengestützte Einblicke"
+    ],
+    integrations: [
+      "Chat-Plattformen",
+      "Mobile Apps",
+      "Gesundheitssysteme",
+      "Wellness-Plattformen",
+      "Unterstützungsnetzwerke",
+      "Analyse-Tools"
+    ],
+    articleContent: {
+      mainTitle: "KI-gestützte Beratungslösungen",
+      subtitle: "Professionelle Unterstützung durch KI verstärkt",
+      introText: "Unser KI-Beratungsservice bietet:",
+      introList: [
+        "Professionelle Anleitung und Unterstützung",
+        "Personalisierte Beratungserfahrung",
+        "24/7 Verfügbarkeit und Zugänglichkeit"
+      ],
+      howItWorksTitle: "Funktionsweise",
+      howItWorksText: "Unser Beratungsprozess umfasst:",
+      howItWorksList: [
+        "Ersteinschätzung",
+        "Erstellung personalisierter Pläne",
+        "Regelmäßige Sitzungen",
+        "Fortschrittsüberwachung"
+      ],
+      keyFeaturesTitle: "Kernfunktionen",
+      features: {
+        realTime: {
+          title: "Echtzeit-Unterstützung",
+          description: "Sofortige Hilfe, wenn Sie sie am meisten brauchen"
+        },
+        multiLanguage: {
+          title: "Mehrsprachenunterstützung",
+          description: "Beratungsdienste in mehreren Sprachen"
+        },
+        scalability: {
+          title: "Personalisierter Ansatz",
+          description: "Maßgeschneiderte Unterstützung für individuelle Bedürfnisse"
+        },
+        analytics: {
+          title: "Fortschrittsverfolgung",
+          description: "Detaillierte Einblicke in Ihre Entwicklung"
+        }
+      },
+      industriesTitle: "Unterstützungsbereiche",
+      industriesText: "Umfassende Unterstützung für:",
+      industries: [
+        {
+          icon: "🧠",
+          name: "Mentales Wohlbefinden",
+          description: "Emotionale und psychologische Unterstützung"
+        },
+        {
+          icon: "💪",
+          name: "Persönliche Entwicklung",
+          description: "Entwicklung und Selbstverbesserung"
+        },
+        {
+          icon: "🤝",
+          name: "Beziehungsunterstützung",
+          description: "Begleitung für bessere Beziehungen"
+        }
+      ],
+      conclusionTitle: "Warum KI-Beratung wählen",
+      conclusionText: "Erhalten Sie umfassende Unterstützung mit:",
+      conclusionList: [
+        "Fortschrittliche KI-Technologie",
+        "Professionelle Expertise",
+        "Kontinuierliche Verfügbarkeit"
+      ],
+      topReasonsTitle: "Hauptvorteile",
+      reasonList: [
+        {
+          title: "Personalisierte Unterstützung",
+          content: {
+            text: "Maßgeschneiderte Begleitung für Ihre Bedürfnisse:",
+            list: [
+              "Individueller Ansatz",
+              "Adaptive Unterstützung",
+              "Fortschrittsverfolgung"
+            ]
+          }
+        },
+        {
+          title: "Zugängliche Betreuung",
+          content: {
+            text: "Unterstützung, wenn Sie sie brauchen:",
+            list: [
+              "24/7 Verfügbarkeit",
+              "Mehrere Plattformen",
+              "Sofortiger Zugang"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Starten Sie Ihre Reise",
+        text: "Beginnen Sie Ihren Weg zum Wohlbefinden mit unseren KI-gestützten Beratungslösungen."
+      }
+    },
+    metaTitle: "KI-Beratung | NeuroGen Lab - Professionelle Unterstützungslösungen",
+    metaDescription: "Erleben Sie personalisierte KI-gestützte Beratung. Erhalten Sie professionelle Anleitung und Unterstützung mit unserer fortschrittlichen künstlichen Intelligenz."
+  },
+  es: {
+    title: "Asesoramiento con IA",
+    description: "Experimente soluciones de asesoramiento personalizadas impulsadas por IA. Obtenga orientación y apoyo profesional con nuestra avanzada tecnología de inteligencia artificial.",
+    sectionTitles: {
+      features: "Características Principales",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Apoyo Personalizado",
+      "Disponibilidad 24/7",
+      "Comunicación Segura",
+      "Análisis Impulsado por IA",
+      "Seguimiento del Progreso",
+      "Biblioteca de Recursos",
+      "Gestión de Crisis"
+    ],
+    benefits: [
+      "Apoyo Inmediato",
+      "Privacidad Completa",
+      "Enfoque Personalizado",
+      "Rentable",
+      "Accesible en Cualquier Lugar",
+      "Aprendizaje Continuo",
+      "Información Basada en Datos"
+    ],
+    integrations: [
+      "Plataformas de Chat",
+      "Aplicaciones Móviles",
+      "Sistemas de Salud",
+      "Plataformas de Bienestar",
+      "Redes de Apoyo",
+      "Herramientas de Análisis"
+    ],
+    articleContent: {
+      mainTitle: "Soluciones de Asesoramiento con IA",
+      subtitle: "Apoyo Profesional Mejorado por IA",
+      introText: "Nuestro servicio de asesoramiento con IA proporciona:",
+      introList: [
+        "Orientación y apoyo profesional",
+        "Experiencia de asesoramiento personalizada",
+        "Disponibilidad y accesibilidad 24/7"
+      ],
+      howItWorksTitle: "Cómo Funciona",
+      howItWorksText: "Nuestro proceso de asesoramiento incluye:",
+      howItWorksList: [
+        "Evaluación Inicial",
+        "Creación de Plan Personalizado",
+        "Sesiones Regulares",
+        "Monitoreo del Progreso"
+      ],
+      keyFeaturesTitle: "Capacidades Principales",
+      features: {
+        realTime: {
+          title: "Apoyo en Tiempo Real",
+          description: "Asistencia inmediata cuando más la necesita"
+        },
+        multiLanguage: {
+          title: "Soporte Multilingüe",
+          description: "Servicios de asesoramiento en varios idiomas"
+        },
+        scalability: {
+          title: "Enfoque Personalizado",
+          description: "Apoyo adaptado a necesidades individuales"
+        },
+        analytics: {
+          title: "Seguimiento del Progreso",
+          description: "Información detallada sobre su viaje"
+        }
+      },
+      industriesTitle: "Áreas de Apoyo",
+      industriesText: "Apoyo integral para:",
+      industries: [
+        {
+          icon: "🧠",
+          name: "Bienestar Mental",
+          description: "Apoyo emocional y psicológico"
+        },
+        {
+          icon: "💪",
+          name: "Crecimiento Personal",
+          description: "Desarrollo y superación personal"
+        },
+        {
+          icon: "🤝",
+          name: "Apoyo en Relaciones",
+          description: "Orientación para mejores relaciones"
+        }
+      ],
+      conclusionTitle: "Por Qué Elegir Asesoramiento con IA",
+      conclusionText: "Obtenga apoyo integral con:",
+      conclusionList: [
+        "Tecnología avanzada de IA",
+        "Experiencia profesional",
+        "Disponibilidad continua"
+      ],
+      topReasonsTitle: "Ventajas Principales",
+      reasonList: [
+        {
+          title: "Apoyo Personalizado",
+          content: {
+            text: "Orientación adaptada a sus necesidades:",
+            list: [
+              "Enfoque individual",
+              "Apoyo adaptativo",
+              "Seguimiento del progreso"
+            ]
+          }
+        },
+        {
+          title: "Atención Accesible",
+          content: {
+            text: "Apoyo cuando lo necesite:",
+            list: [
+              "Disponibilidad 24/7",
+              "Múltiples plataformas",
+              "Acceso instantáneo"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Comience Su Viaje",
+        text: "Inicie su camino hacia el bienestar con nuestras soluciones de asesoramiento impulsadas por IA."
+      }
+    },
+    metaTitle: "Asesoramiento con IA | NeuroGen Lab - Soluciones de Apoyo Profesional",
+    metaDescription: "Experimente asesoramiento personalizado impulsado por IA. Obtenga orientación y apoyo profesional con nuestra avanzada tecnología de inteligencia artificial."
+  },
+  ru: {
+    title: "ИИ-Консультирование",
+    description: "Получите персонализированные консультационные решения с поддержкой ИИ. Профессиональное руководство и поддержка с помощью нашей передовой технологии искусственного интеллекта.",
+    sectionTitles: {
+      features: "Ключевые Возможности",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Персонализированная Поддержка",
+      "Доступность 24/7",
+      "Безопасное Общение",
+      "ИИ-Анализ",
+      "Отслеживание Прогресса",
+      "Библиотека Ресурсов",
+      "Управление Кризисными Ситуациями"
+    ],
+    benefits: [
+      "Мгновенная Поддержка",
+      "Полная Конфиденциальность",
+      "Индивидуальный Подход",
+      "Экономическая Эффективность",
+      "Доступность Везде",
+      "Непрерывное Обучение",
+      "Аналитические Инсайты"
+    ],
+    integrations: [
+      "Чат-Платформы",
+      "Мобильные Приложения",
+      "Системы Здравоохранения",
+      "Платформы Благополучия",
+      "Сети Поддержки",
+      "Аналитические Инструменты"
+    ],
+    articleContent: {
+      mainTitle: "Консультационные Решения с ИИ",
+      subtitle: "Профессиональная Поддержка с Усилением ИИ",
+      introText: "Наш сервис ИИ-консультирования предоставляет:",
+      introList: [
+        "Профессиональное руководство и поддержку",
+        "Персонализированный опыт консультирования",
+        "Круглосуточную доступность"
+      ],
+      howItWorksTitle: "Как Это Работает",
+      howItWorksText: "Наш процесс консультирования включает:",
+      howItWorksList: [
+        "Начальную Оценку",
+        "Создание Персонального Плана",
+        "Регулярные Сессии",
+        "Мониторинг Прогресса"
+      ],
+      keyFeaturesTitle: "Основные Возможности",
+      features: {
+        realTime: {
+          title: "Поддержка в Реальном Времени",
+          description: "Мгновенная помощь, когда она больше всего нужна"
+        },
+        multiLanguage: {
+          title: "Многоязычная Поддержка",
+          description: "Консультационные услуги на разных языках"
+        },
+        scalability: {
+          title: "Индивидуальный Подход",
+          description: "Адаптированная поддержка под личные потребности"
+        },
+        analytics: {
+          title: "Отслеживание Прогресса",
+          description: "Детальное понимание вашего пути"
+        }
+      },
+      industriesTitle: "Области Поддержки",
+      industriesText: "Комплексная поддержка для:",
+      industries: [
+        {
+          icon: "🧠",
+          name: "Ментальное Благополучие",
+          description: "Эмоциональная и психологическая поддержка"
+        },
+        {
+          icon: "💪",
+          name: "Личностный Рост",
+          description: "Развитие и самосовершенствование"
+        },
+        {
+          icon: "🤝",
+          name: "Поддержка в Отношениях",
+          description: "Руководство для улучшения отношений"
+        }
+      ],
+      conclusionTitle: "Почему Выбирают ИИ-Консультирование",
+      conclusionText: "Получите комплексную поддержку с:",
+      conclusionList: [
+        "Передовые ИИ-технологии",
+        "Профессиональная экспертиза",
+        "Постоянная доступность"
+      ],
+      topReasonsTitle: "Ключевые Преимущества",
+      reasonList: [
+        {
+          title: "Персонализированная Поддержка",
+          content: {
+            text: "Индивидуальное руководство для ваших потребностей:",
+            list: [
+              "Индивидуальный подход",
+              "Адаптивная поддержка",
+              "Отслеживание прогресса"
+            ]
+          }
+        },
+        {
+          title: "Доступная Помощь",
+          content: {
+            text: "Поддержка, когда она нужна:",
+            list: [
+              "Доступность 24/7",
+              "Множество платформ",
+              "Мгновенный доступ"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Начните Свой Путь",
+        text: "Начните путь к благополучию с нашими консультационными решениями на базе ИИ."
+      }
+    },
+    metaTitle: "ИИ-Консультирование | NeuroGen Lab - Профессиональные Решения Поддержки",
+    metaDescription: "Получите персонализированное консультирование с поддержкой ИИ. Профессиональное руководство и поддержка с помощью нашей передовой технологии искусственного интеллекта."
+  },
+  ua: {
+    title: "ШІ-Консультування",
+    description: "Отримайте персоналізовані консультаційні рішення з підтримкою ШІ. Професійне керівництво та підтримка за допомогою нашої передової технології штучного інтелекту.",
+    sectionTitles: {
+      features: "Ключові Можливості",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Персоналізована Підтримка",
+      "Доступність 24/7",
+      "Безпечне Спілкування",
+      "ШІ-Аналіз",
+      "Відстеження Прогресу",
+      "Бібліотека Ресурсів",
+      "Управління Кризовими Ситуаціями"
+    ],
+    benefits: [
+      "Миттєва Підтримка",
+      "Повна Конфіденційність",
+      "Індивідуальний Підхід",
+      "Економічна Ефективність",
+      "Доступність Всюди",
+      "Безперервне Навчання",
+      "Аналітичні Інсайти"
+    ],
+    integrations: [
+      "Чат-Платформи",
+      "Мобільні Додатки",
+      "Системи Охорони Здоров'я",
+      "Платформи Благополуччя",
+      "Мережі Підтримки",
+      "Аналітичні Інструменти"
+    ],
+    articleContent: {
+      mainTitle: "Консультаційні Рішення з ШІ",
+      subtitle: "Професійна Підтримка з Посиленням ШІ",
+      introText: "Наш сервіс ШІ-консультування надає:",
+      introList: [
+        "Професійне керівництво та підтримку",
+        "Персоналізований досвід консультування",
+        "Цілодобову доступність"
+      ],
+      howItWorksTitle: "Як Це Працює",
+      howItWorksText: "Наш процес консультування включає:",
+      howItWorksList: [
+        "Початкову Оцінку",
+        "Створення Персонального Плану",
+        "Регулярні Сесії",
+        "Моніторинг Прогресу"
+      ],
+      keyFeaturesTitle: "Основні Можливості",
+      features: {
+        realTime: {
+          title: "Підтримка в Реальному Часі",
+          description: "Миттєва допомога, коли вона найбільше потрібна"
+        },
+        multiLanguage: {
+          title: "Багатомовна Підтримка",
+          description: "Консультаційні послуги різними мовами"
+        },
+        scalability: {
+          title: "Індивідуальний Підхід",
+          description: "Адаптована підтримка під особисті потреби"
+        },
+        analytics: {
+          title: "Відстеження Прогресу",
+          description: "Детальне розуміння вашого шляху"
+        }
+      },
+      industriesTitle: "Області Підтримки",
+      industriesText: "Комплексна підтримка для:",
+      industries: [
+        {
+          icon: "🧠",
+          name: "Ментальне Благополуччя",
+          description: "Емоційна та психологічна підтримка"
+        },
+        {
+          icon: "💪",
+          name: "Особистісне Зростання",
+          description: "Розвиток та самовдосконалення"
+        },
+        {
+          icon: "🤝",
+          name: "Підтримка у Стосунках",
+          description: "Керівництво для покращення стосунків"
+        }
+      ],
+      conclusionTitle: "Чому Обирають NeuroGen Lab",
+      conclusionText: "Отримайте комплексну підтримку з:",
+      conclusionList: [
+        "Передові ШІ-технології",
+        "Професійна експертиза",
+        "Постійна доступність"
+      ],
+      topReasonsTitle: "Ключові Переваги",
+      reasonList: [
+        {
+          title: "Персоналізована Підтримка",
+          content: {
+            text: "Індивідуальне керівництво для ваших потреб:",
+            list: [
+              "Індивідуальний підхід",
+              "Адаптивна підтримка",
+              "Відстеження прогресу"
+            ]
+          }
+        },
+        {
+          title: "Доступна Допомога",
+          content: {
+            text: "Підтримка, коли вона потрібна:",
+            list: [
+              "Доступність 24/7",
+              "Безліч платформ",
+              "Миттєвий доступ"
+            ]
+          }
+        }
+      ],
+      finalConclusion: {
+        title: "Почніть Свій Шлях",
+        text: "Розпочніть шлях до оптимізації вашого бізнесу з нашими рішеннями на базі ШІ."
+      }
+    },
+    metaTitle: "ШІ-Консультування | NeuroGen Lab - Професійні Рішення для Бізнесу",
+    metaDescription: "Отримайте персоналізоване консультування з підтримкою ШІ. Професійне управління проектом та підтримка за допомогою нашої передової технології штучного інтелекту."
+  },
+};
+
+export { counselingTranslations };
+
+const bestSearchTranslations = {
+  en: {
+    title: "Best Search Solution",
+    description: "Enhance your data discovery with our intelligent search solution that delivers accurate and relevant results through advanced AI algorithms.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Natural Language Processing",
+      "Semantic Search Capability",
+      "Auto-suggestion System",
+      "Multi-language Support",
+      "Faceted Search Options",
+      "Real-time Indexing",
+      "Advanced Filtering"
+    ],
+    benefits: [
+      "Improved Search Accuracy",
+      "Faster Information Discovery",
+      "Enhanced User Experience",
+      "Increased Productivity",
+      "Better Decision Making",
+      "Reduced Search Time",
+      "Comprehensive Results"
+    ],
+    integrations: [
+      "Content Management Systems",
+      "Document Repositories",
+      "Knowledge Bases",
+      "Enterprise Systems",
+      "Analytics Platforms",
+      "Custom Applications"
+    ],
+    metaTitle: "Best Search | NeuroGen Lab - Intelligent Search Solution",
+    metaDescription: "Boost data discovery with AI search. Accurate results, semantic search, NLP, and advanced indexing for superior user experience."
+  },
+  de: {
+    title: "Beste Suchlösung",
+    description: "Verbessern Sie Ihre Datensuche mit unserer intelligenten Suchlösung, die durch fortschrittliche KI-Algorithmen genaue und relevante Ergebnisse liefert.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Verarbeitung natürlicher Sprache",
+      "Semantische Suchfunktion",
+      "Automatisches Vorschlagssystem",
+      "Mehrsprachige Unterstützung",
+      "Facettierte Suchoptionen",
+      "Echtzeit-Indexierung",
+      "Erweiterte Filterung"
+    ],
+    benefits: [
+      "Verbesserte Suchgenauigkeit",
+      "Schnellere Informationsfindung",
+      "Verbesserte Benutzererfahrung",
+      "Gesteigerte Produktivität",
+      "Bessere Entscheidungsfindung",
+      "Reduzierte Suchzeit",
+      "Umfassende Ergebnisse"
+    ],
+    integrations: [
+      "Content-Management-Systeme",
+      "Dokumenten-Repositories",
+      "Wissensdatenbanken",
+      "Unternehmenssysteme",
+      "Analyse-Plattformen",
+      "Kundenspezifische Anwendungen"
+    ],
+    metaTitle: "Beste Suche | NeuroGen Lab - Intelligente Suchlösung",
+    metaDescription: "Steigern Sie die Datensuche mit KI-Suche. Genaue Ergebnisse, semantische Suche, NLP und erweiterte Indexierung für überlegene Benutzererfahrung."
+  },
+  es: {
+    title: "Mejor Solución de Búsqueda",
+    description: "Mejore su descubrimiento de datos con nuestra solución de búsqueda inteligente que ofrece resultados precisos y relevantes a través de algoritmos avanzados de IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Procesamiento de Lenguaje Natural",
+      "Capacidad de Búsqueda Semántica",
+      "Sistema de Autosugerencias",
+      "Soporte Multilingüe",
+      "Opciones de Búsqueda Facetada",
+      "Indexación en Tiempo Real",
+      "Filtrado Avanzado"
+    ],
+    benefits: [
+      "Mayor Precisión de Búsqueda",
+      "Descubrimiento más Rápido de Información",
+      "Experiencia de Usuario Mejorada",
+      "Mayor Productividad",
+      "Mejor Toma de Decisiones",
+      "Tiempo de Búsqueda Reducido",
+      "Resultados Completos"
+    ],
+    integrations: [
+      "Sistemas de Gestión de Contenido",
+      "Repositorios de Documentos",
+      "Bases de Conocimiento",
+      "Sistemas Empresariales",
+      "Plataformas de Análisis",
+      "Aplicaciones Personalizadas"
+    ],
+    metaTitle: "Mejor Búsqueda | NeuroGen Lab - Solución de Búsqueda Inteligente",
+    metaDescription: "Potencie el descubrimiento de datos con búsqueda IA. Resultados precisos, búsqueda semántica, PLN e indexación avanzada para una experiencia de usuario superior."
+  },
+  ru: {
+    title: "Лучшее Поисковое Решение",
+    description: "Улучшите поиск данных с помощью нашего интеллектуального поискового решения, которое предоставляет точные и релевантные результаты благодаря продвинутым алгоритмам ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Обработка Естественного Языка",
+      "Семантический Поиск",
+      "Система Автоподсказок",
+      "Многоязычная Поддержка",
+      "Фасетный Поиск",
+      "Индексация в Реальном Времени",
+      "Расширенная Фильтрация"
+    ],
+    benefits: [
+      "Повышенная Точность Поиска",
+      "Быстрое Нахождение Информации",
+      "Улучшенный Пользовательский Опыт",
+      "Повышенная Продуктивность",
+      "Лучшее Принятие Решений",
+      "Сокращение Времени Поиска",
+      "Комплексные Результаты"
+    ],
+    integrations: [
+      "Системы Управления Контентом",
+      "Хранилища Документов",
+      "Базы Знаний",
+      "Корпоративные Системы",
+      "Аналитические Платформы",
+      "Пользовательские Приложения"
+    ],
+    metaTitle: "Лучший Поиск | NeuroGen Lab - Интеллектуальное Поисковое Решение",
+    metaDescription: "Улучшите поиск данных с помощью ИИ. Точные результаты, семантический поиск, обработка естественного языка и продвинутая индексация для превосходного пользовательского опыта."
+  },
+  ua: {
+    title: "Найкраще Пошукове Рішення",
+    description: "Покращіть пошук даних за допомогою нашого інтелектуального пошукового рішення, яке надає точні та релевантні результати завдяки передовим алгоритмам ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Обробка Природної Мови",
+      "Семантичний Пошук",
+      "Система Автопідказок",
+      "Багатомовна Підтримка",
+      "Фасетний Пошук",
+      "Індексація в Реальному Часі",
+      "Розширена Фільтрація"
+    ],
+    benefits: [
+      "Підвищена Точність Пошуку",
+      "Швидке Знаходження Інформації",
+      "Покращений Користувацький Досвід",
+      "Підвищена Продуктивність",
+      "Краще Прийняття Рішень",
+      "Скорочення Часу Пошуку",
+      "Комплексні Результати"
+    ],
+    integrations: [
+      "Системи Керування Контентом",
+      "Сховища Документів",
+      "Бази Знань",
+      "Корпоративні Системи",
+      "Аналітичні Платформи",
+      "Користувацькі Додатки"
+    ],
+    metaTitle: "Найкращий Пошук | NeuroGen Lab - Інтелектуальне Пошукове Рішення",
+    metaDescription: "Покращіть пошук даних за допомогою ШІ. Точні результати, семантичний пошук, обробка природної мови та передова індексація для неперевершеного користувацького досвіду."
+  },
+};
+
+export { bestSearchTranslations };
+
+const emailTranslations = {
+  en: {
+    title: "Email Solution",
+    description: "Enhance your email communication with our intelligent email solution that delivers advanced features and security through AI-powered technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Smart Email Filtering",
+      "Automated Responses",
+      "Security Protection",
+      "Priority Inbox",
+      "Email Analytics",
+      "Template Management",
+      "Advanced Search"
+    ],
+    benefits: [
+      "Increased Productivity",
+      "Better Organization",
+      "Enhanced Security",
+      "Time Savings",
+      "Improved Communication",
+      "Reduced Errors",
+      "Better Overview"
+    ],
+    integrations: [
+      "Email Clients",
+      "CRM Systems",
+      "Calendar Apps",
+      "Cloud Storage",
+      "Project Management",
+      "Communication Tools"
+    ],
+    metaTitle: "Email Solution | NeuroGen Lab - Intelligent Email Management",
+    metaDescription: "Enhance email communication with AI technology. Smart filtering, automated responses, and advanced security for better email management."
+  },
+  de: {
+    title: "E-Mail-Lösung",
+    description: "Verbessern Sie Ihre E-Mail-Kommunikation mit unserer intelligenten E-Mail-Lösung, die durch KI-gestützte Technologie erweiterte Funktionen und Sicherheit bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Intelligente E-Mail-Filterung",
+      "Automatisierte Antworten",
+      "Sicherheitsschutz",
+      "Prioritäts-Posteingang",
+      "E-Mail-Analytik",
+      "Vorlagenverwaltung",
+      "Erweiterte Suche"
+    ],
+    benefits: [
+      "Gesteigerte Produktivität",
+      "Bessere Organisation",
+      "Verbesserte Sicherheit",
+      "Zeitersparnis",
+      "Verbesserte Kommunikation",
+      "Reduzierte Fehler",
+      "Besserer Überblick"
+    ],
+    integrations: [
+      "E-Mail-Clients",
+      "CRM-Systeme",
+      "Kalender-Apps",
+      "Cloud-Speicher",
+      "Projektmanagement",
+      "Kommunikationstools"
+    ],
+    metaTitle: "E-Mail-Lösung | NeuroGen Lab - Intelligentes E-Mail-Management",
+    metaDescription: "Verbessern Sie die E-Mail-Kommunikation mit KI-Technologie. Intelligente Filterung, automatisierte Antworten und erweiterte Sicherheit für besseres E-Mail-Management."
+  },
+  es: {
+    title: "Solución de Correo Electrónico",
+    description: "Mejore su comunicación por correo electrónico con nuestra solución inteligente que ofrece características avanzadas y seguridad a través de tecnología impulsada por IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Filtrado Inteligente de Correos",
+      "Respuestas Automatizadas",
+      "Protección de Seguridad",
+      "Bandeja de Entrada Prioritaria",
+      "Análisis de Correos",
+      "Gestión de Plantillas",
+      "Búsqueda Avanzada"
+    ],
+    benefits: [
+      "Mayor Productividad",
+      "Mejor Organización",
+      "Seguridad Mejorada",
+      "Ahorro de Tiempo",
+      "Comunicación Mejorada",
+      "Reducción de Errores",
+      "Mejor Visión General"
+    ],
+    integrations: [
+      "Clientes de Correo",
+      "Sistemas CRM",
+      "Aplicaciones de Calendario",
+      "Almacenamiento en la Nube",
+      "Gestión de Proyectos",
+      "Herramientas de Comunicación"
+    ],
+    metaTitle: "Solución de Correo | NeuroGen Lab - Gestión Inteligente de Correo",
+    metaDescription: "Mejore la comunicación por correo con tecnología IA. Filtrado inteligente, respuestas automatizadas y seguridad avanzada para una mejor gestión del correo."
+  },
+  ru: {
+    title: "Почтовое Решение",
+    description: "Улучшите вашу электронную переписку с помощью нашего интеллектуального почтового решения, которое обеспечивает расширенные функции и безопасность благодаря технологии ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Умная Фильтрация Писем",
+      "Автоматические Ответы",
+      "Защита Безопасности",
+      "Приоритетный Входящие",
+      "Почтовая Аналитика",
+      "Управление Шаблонами",
+      "Расширенный Поиск"
+    ],
+    benefits: [
+      "Повышенная Продуктивность",
+      "Лучшая Организация",
+      "Усиленная Безопасность",
+      "Экономия Времени",
+      "Улучшенная Коммуникация",
+      "Снижение Ошибок",
+      "Лучший Обзор"
+    ],
+    integrations: [
+      "Почтовые Клиенты",
+      "CRM Системы",
+      "Календарные Приложения",
+      "Облачное Хранилище",
+      "Управление Проектами",
+      "Инструменты Коммуникации"
+    ],
+    metaTitle: "Почтовое Решение | NeuroGen Lab - Интеллектуальное Управление Почтой",
+    metaDescription: "Улучшите электронную переписку с помощью технологии ИИ. Умная фильтрация, автоматические ответы и расширенная безопасность для лучшего управления почтой."
+  },
+  ua: {
+    title: "Поштове Рішення",
+    description: "Покращіть ваше електронне листування за допомогою нашого інтелектуального поштового рішення, яке забезпечує розширені функції та безпеку завдяки технології ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Розумна Фільтрація Листів",
+      "Автоматичні Відповіді",
+      "Захист Безпеки",
+      "Пріоритетні Вхідні",
+      "Поштова Аналітика",
+      "Управління Шаблонами",
+      "Розширений Пошук"
+    ],
+    benefits: [
+      "Підвищена Продуктивність",
+      "Краща Організація",
+      "Посилена Безпека",
+      "Економія Часу",
+      "Покращена Комунікація",
+      "Зменшення Помилок",
+      "Кращий Огляд"
+    ],
+    integrations: [
+      "Поштові Клієнти",
+      "CRM Системи",
+      "Календарні Додатки",
+      "Хмарне Сховище",
+      "Управління Проектами",
+      "Інструменти Комунікації"
+    ],
+    metaTitle: "Поштове Рішення | NeuroGen Lab - Інтелектуальне Управління Поштою",
+    metaDescription: "Покращіть електронне листування за допомогою технології ШІ. Розумна фільтрація, автоматичні відповіді та розширена безпека для кращого управління поштою."
+  }
+};
+
+export { emailTranslations };

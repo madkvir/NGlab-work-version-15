@@ -2,39 +2,47 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AI Implementation Counseling | NeuroGen Lab - Expert Guidance",
-  description:
-    "Get expert guidance for your AI implementation journey. Our counseling services ensure successful integration of artificial intelligence into your business operations.",
+  title: "AI Counseling | NeuroGen Lab - Professional Support Solutions",
+  description: "Experience personalized AI-powered counseling. Get professional guidance and support with our advanced artificial intelligence technology.",
   keywords: [
-    "AI counseling",
-    "implementation guidance",
-    "AI consulting",
-    "business transformation",
+    "ai counseling",
+    "mental health support",
+    "digital therapy",
+    "ai support",
+    "counseling solutions",
+    "personal growth",
+    "emotional support"
   ],
   openGraph: {
-    title: "AI Implementation Counseling - Expert Guidance | NeuroGen Lab",
-    description: "Expert guidance for successful AI implementation in business",
+    title: "AI Counseling - Professional Support Solutions | NeuroGen Lab",
+    description: "Experience personalized AI-powered counseling support",
     url: "https://neurogenlab.de/tools/counseling",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/counseling.jpg",
+        alt: "AI Counseling by NeuroGen Lab",
       },
     ],
   },
   twitter: {
-    title: "AI Implementation Counseling - Expert Support",
-    description: "Professional guidance for AI business integration",
+    title: "AI Counseling - Professional Support",
+    description: "Experience personalized AI-powered support",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/counseling.jpg",
+        alt: "AI Counseling by NeuroGen Lab",
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
     canonical: "https://neurogenlab.de/tools/counseling",
+    languages: {
+      'en': '/tools/counseling',
+      'de': '/de/tools/counseling',
+      'es': '/es/tools/counseling',
+      'ru': '/ru/tools/counseling'
+    }
   },
 };
 

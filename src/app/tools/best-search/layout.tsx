@@ -5,31 +5,45 @@ export const metadata: Metadata = {
   title: "Best Search | NeuroGen Lab - Intelligent Search Solution",
   description:
     "Boost data discovery with AI search. Accurate results, semantic search, NLP, and advanced indexing for superior user experience.",
-  keywords: ["AI search", "semantic search", "intelligent search", "data discovery"],
+  keywords: [
+    "ai search",
+    "semantic search",
+    "intelligent search",
+    "data discovery",
+    "nlp search",
+    "enterprise search",
+    "advanced search solution"
+  ],
   openGraph: {
-    title: "Best Search - Smart Data Discovery | NeuroGen Lab",
-    description: "Transform data discovery with AI-powered intelligent search",
+    title: "Best Search - Intelligent Search Solution | NeuroGen Lab",
+    description: "Enhance your data discovery with intelligent search",
     url: "https://neurogenlab.de/tools/best-search",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/best-search.jpg",
+        alt: "Best Search by NeuroGen Lab",
       },
     ],
   },
   twitter: {
-    title: "Best Search - Intelligent Search Solution",
-    description: "Enhance data discovery with AI-powered search",
+    title: "Best Search - Intelligent Solution",
+    description: "Enhance data discovery with AI search",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/best-search.jpg",
+        alt: "Best Search by NeuroGen Lab",
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
     canonical: "https://neurogenlab.de/tools/best-search",
+    languages: {
+      'en': '/tools/best-search',
+      'de': '/de/tools/best-search',
+      'es': '/es/tools/best-search',
+      'ru': '/ru/tools/best-search'
+    }
   },
 };
 

@@ -57,12 +57,12 @@ const dealershipButtonTranslations = {
     length: "medium",
   },
   ru: {
-    text: "Для дилеров",
+    text: "Для Автодилеров",
     tag: "Скоро",
     length: "short",
   },
   ua: {
-    text: "Для дилерів",
+    text: "Для Автодилерів",
     tag: "Скоро",
     length: "short",
   },
