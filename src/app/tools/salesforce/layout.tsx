@@ -2,39 +2,47 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Salesforce Integration | NeuroGen Lab - CRM Enhancement Solution",
-  description:
-    "Enhance your Salesforce CRM with our intelligent integration solution. Automate workflows, improve data management, and gain valuable insights through AI-powered analytics.",
+  title: "Salesforce Integration | NeuroGen Lab - Smart CRM Management",
+  description: "Enhance your CRM with AI technology. Smart automation, analytics, and advanced features for better customer relationship management.",
   keywords: [
     "salesforce integration",
-    "CRM automation",
+    "crm management",
     "sales automation",
-    "business intelligence",
+    "customer analytics",
+    "lead management",
+    "pipeline management",
+    "sales forecasting"
   ],
   openGraph: {
-    title: "Salesforce Integration - Smart CRM Enhancement | NeuroGen Lab",
-    description: "Transform your CRM with intelligent Salesforce automation",
+    title: "Salesforce Integration - Smart CRM Management | NeuroGen Lab",
+    description: "Enhance your CRM with AI technology",
     url: "https://neurogenlab.de/tools/salesforce",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/salesforce.jpg",
+        alt: "Salesforce Integration by NeuroGen Lab",
       },
     ],
   },
   twitter: {
-    title: "Salesforce Integration - CRM Enhancement",
-    description: "Enhance CRM with smart Salesforce integration",
+    title: "Salesforce Integration - Smart CRM Management",
+    description: "Enhance your CRM with AI",
     images: [
       {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
+        url: "/images/tools/salesforce.jpg",
+        alt: "Salesforce Integration by NeuroGen Lab",
       },
     ],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
     canonical: "https://neurogenlab.de/tools/salesforce",
+    languages: {
+      'en': '/tools/salesforce',
+      'de': '/de/tools/salesforce',
+      'es': '/es/tools/salesforce',
+      'ru': '/ru/tools/salesforce'
+    }
   },
 };
 

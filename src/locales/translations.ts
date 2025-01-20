@@ -7425,3 +7425,952 @@ const teamsTranslations = {
 
 export { teamsTranslations };
 
+const salesforceTranslations = {
+  en: {
+    title: "Salesforce Integration",
+    description: "Enhance your customer relationship management with our intelligent Salesforce integration that provides advanced automation and insights through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Smart Lead Management",
+      "Automated Sales Processes",
+      "Customer Analytics",
+      "Pipeline Management",
+      "Contact Management",
+      "Custom Workflows",
+      "Performance Tracking"
+    ],
+    benefits: [
+      "Increased Sales Efficiency",
+      "Better Customer Insights",
+      "Improved Lead Conversion",
+      "Data-Driven Decisions",
+      "Enhanced Team Collaboration",
+      "Streamlined Operations",
+      "Accurate Forecasting"
+    ],
+    integrations: [
+      "Sales Cloud",
+      "Service Cloud",
+      "Marketing Cloud",
+      "Analytics Tools",
+      "Communication Apps",
+      "Third-party Systems"
+    ],
+    metaTitle: "Salesforce Integration | NeuroGen Lab - Smart CRM Management",
+    metaDescription: "Enhance your CRM with AI technology. Smart automation, analytics, and advanced features for better customer relationship management."
+  },
+  de: {
+    title: "Salesforce-Integration",
+    description: "Verbessern Sie Ihr Kundenbeziehungsmanagement mit unserer intelligenten Salesforce-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Intelligentes Lead-Management",
+      "Automatisierte Verkaufsprozesse",
+      "Kundenanalyse",
+      "Pipeline-Management",
+      "Kontaktverwaltung",
+      "Individuelle Workflows",
+      "Leistungsverfolgung"
+    ],
+    benefits: [
+      "Gesteigerte Vertriebseffizienz",
+      "Bessere Kundeneinblicke",
+      "Verbesserte Lead-Konvertierung",
+      "Datenbasierte Entscheidungen",
+      "Verbesserte Team-Zusammenarbeit",
+      "Optimierte Abläufe",
+      "Genaue Prognosen"
+    ],
+    integrations: [
+      "Sales Cloud",
+      "Service Cloud",
+      "Marketing Cloud",
+      "Analyse-Tools",
+      "Kommunikations-Apps",
+      "Drittsysteme"
+    ],
+    metaTitle: "Salesforce-Integration | NeuroGen Lab - Intelligentes CRM-Management",
+    metaDescription: "Verbessern Sie Ihr CRM mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Kundenbeziehungsmanagement."
+  },
+  es: {
+    title: "Integración de Salesforce",
+    description: "Mejore su gestión de relaciones con clientes con nuestra integración inteligente de Salesforce que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Gestión Inteligente de Leads",
+      "Procesos de Ventas Automatizados",
+      "Análisis de Clientes",
+      "Gestión de Pipeline",
+      "Gestión de Contactos",
+      "Flujos de Trabajo Personalizados",
+      "Seguimiento de Rendimiento"
+    ],
+    benefits: [
+      "Mayor Eficiencia en Ventas",
+      "Mejores Perspectivas del Cliente",
+      "Mejor Conversión de Leads",
+      "Decisiones Basadas en Datos",
+      "Colaboración Mejorada del Equipo",
+      "Operaciones Optimizadas",
+      "Pronósticos Precisos"
+    ],
+    integrations: [
+      "Sales Cloud",
+      "Service Cloud",
+      "Marketing Cloud",
+      "Herramientas de Análisis",
+      "Aplicaciones de Comunicación",
+      "Sistemas de Terceros"
+    ],
+    metaTitle: "Integración de Salesforce | NeuroGen Lab - Gestión Inteligente de CRM",
+    metaDescription: "Mejore su CRM con tecnología IA. Automatización inteligente, análisis y características avanzadas para una mejor gestión de relaciones con clientes."
+  },
+  ru: {
+    title: "Интеграция с Salesforce",
+    description: "Улучшите управление взаимоотношениями с клиентами с помощью нашей интеллектуальной интеграции Salesforce, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Умное Управление Лидами",
+      "Автоматизированные Процессы Продаж",
+      "Аналитика Клиентов",
+      "Управление Воронкой Продаж",
+      "Управление Контактами",
+      "Настраиваемые Рабочие Процессы",
+      "Отслеживание Эффективности"
+    ],
+    benefits: [
+      "Повышенная Эффективность Продаж",
+      "Лучшее Понимание Клиентов",
+      "Улучшенная Конверсия Лидов",
+      "Решения на Основе Данных",
+      "Улучшенное Командное Взаимодействие",
+      "Оптимизированные Операции",
+      "Точное Прогнозирование"
+    ],
+    integrations: [
+      "Sales Cloud",
+      "Service Cloud",
+      "Marketing Cloud",
+      "Аналитические Инструменты",
+      "Приложения для Коммуникации",
+      "Сторонние Системы"
+    ],
+    metaTitle: "Интеграция с Salesforce | NeuroGen Lab - Умное Управление CRM",
+    metaDescription: "Улучшите вашу CRM с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего управления взаимоотношениями с клиентами."
+  },
+  ua: {
+    title: "Інтеграція з Salesforce",
+    description: "Покращіть управління взаємовідносинами з клієнтами за допомогою нашої інтелектуальної інтеграції Salesforce, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Розумне Управління Лідами",
+      "Автоматизовані Процеси Продажів",
+      "Аналітика Клієнтів",
+      "Управління Воронкою Продажів",
+      "Управління Контактами",
+      "Налаштовувані Робочі Процеси",
+      "Відстеження Ефективності"
+    ],
+    benefits: [
+      "Підвищена Ефективність Продажів",
+      "Краще Розуміння Клієнтів",
+      "Покращена Конверсія Лідів",
+      "Рішення на Основі Даних",
+      "Покращена Командна Взаємодія",
+      "Оптимізовані Операції",
+      "Точне Прогнозування"
+    ],
+    integrations: [
+      "Sales Cloud",
+      "Service Cloud",
+      "Marketing Cloud",
+      "Аналітичні Інструменти",
+      "Додатки для Комунікації",
+      "Сторонні Системи"
+    ],
+    metaTitle: "Інтеграція з Salesforce | NeuroGen Lab - Розумне Управління CRM",
+    metaDescription: "Покращіть вашу CRM за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого управління взаємовідносинами з клієнтами."
+  }
+};
+
+export { salesforceTranslations };
+
+const slackTranslations = {
+  en: {
+    title: "Slack Integration",
+    description: "Enhance your team communication with our intelligent Slack integration that provides advanced automation and insights through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Smart Message Management",
+      "Automated Workflows",
+      "Channel Analytics",
+      "Team Collaboration",
+      "Message Organization",
+      "Custom Bot Integration",
+      "Activity Monitoring"
+    ],
+    benefits: [
+      "Enhanced Communication",
+      "Improved Productivity",
+      "Better Team Coordination",
+      "Data-Driven Insights",
+      "Streamlined Workflows",
+      "Efficient Information Sharing",
+      "Team Engagement"
+    ],
+    integrations: [
+      "Project Management Tools",
+      "Development Tools",
+      "Cloud Storage",
+      "Calendar Apps",
+      "Communication Tools",
+      "Third-party Services"
+    ],
+    metaTitle: "Slack Integration | NeuroGen Lab - Smart Team Communication",
+    metaDescription: "Enhance your team communication with AI technology. Smart automation, analytics, and advanced features for better team collaboration."
+  },
+  de: {
+    title: "Slack-Integration",
+    description: "Verbessern Sie Ihre Teamkommunikation mit unserer intelligenten Slack-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Intelligente Nachrichtenverwaltung",
+      "Automatisierte Workflows",
+      "Kanal-Analytik",
+      "Team-Zusammenarbeit",
+      "Nachrichtenorganisation",
+      "Individuelle Bot-Integration",
+      "Aktivitätsüberwachung"
+    ],
+    benefits: [
+      "Verbesserte Kommunikation",
+      "Gesteigerte Produktivität",
+      "Bessere Team-Koordination",
+      "Datenbasierte Einblicke",
+      "Optimierte Arbeitsabläufe",
+      "Effiziente Informationsfreigabe",
+      "Team-Engagement"
+    ],
+    integrations: [
+      "Projektmanagement-Tools",
+      "Entwicklungstools",
+      "Cloud-Speicher",
+      "Kalender-Apps",
+      "Kommunikationstools",
+      "Drittanbieterdienste"
+    ],
+    metaTitle: "Slack-Integration | NeuroGen Lab - Intelligente Teamkommunikation",
+    metaDescription: "Verbessern Sie Ihre Teamkommunikation mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für bessere Teamzusammenarbeit."
+  },
+  es: {
+    title: "Integración de Slack",
+    description: "Mejore la comunicación de su equipo con nuestra integración inteligente de Slack que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Gestión Inteligente de Mensajes",
+      "Flujos de Trabajo Automatizados",
+      "Análisis de Canales",
+      "Colaboración en Equipo",
+      "Organización de Mensajes",
+      "Integración de Bot Personalizado",
+      "Monitoreo de Actividad"
+    ],
+    benefits: [
+      "Comunicación Mejorada",
+      "Productividad Mejorada",
+      "Mejor Coordinación del Equipo",
+      "Perspectivas Basadas en Datos",
+      "Flujos de Trabajo Optimizados",
+      "Compartición Eficiente de Información",
+      "Participación del Equipo"
+    ],
+    integrations: [
+      "Herramientas de Gestión de Proyectos",
+      "Herramientas de Desarrollo",
+      "Almacenamiento en la Nube",
+      "Aplicaciones de Calendario",
+      "Herramientas de Comunicación",
+      "Servicios de Terceros"
+    ],
+    metaTitle: "Integración de Slack | NeuroGen Lab - Comunicación Inteligente en Equipo",
+    metaDescription: "Mejore la comunicación de su equipo con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor colaboración en equipo."
+  },
+  ru: {
+    title: "Интеграция с Slack",
+    description: "Улучшите командную коммуникацию с помощью нашей интеллектуальной интеграции Slack, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Умное Управление Сообщениями",
+      "Автоматизированные Рабочие Процессы",
+      "Аналитика Каналов",
+      "Командное Взаимодействие",
+      "Организация Сообщений",
+      "Интеграция Пользовательских Ботов",
+      "Мониторинг Активности"
+    ],
+    benefits: [
+      "Улучшенная Коммуникация",
+      "Повышенная Продуктивность",
+      "Лучшая Координация Команды",
+      "Аналитика на Основе Данных",
+      "Оптимизированные Рабочие Процессы",
+      "Эффективный Обмен Информацией",
+      "Вовлеченность Команды"
+    ],
+    integrations: [
+      "Инструменты Управления Проектами",
+      "Инструменты Разработки",
+      "Облачное Хранилище",
+      "Календарные Приложения",
+      "Инструменты Коммуникации",
+      "Сторонние Сервисы"
+    ],
+    metaTitle: "Интеграция с Slack | NeuroGen Lab - Умная Командная Коммуникация",
+    metaDescription: "Улучшите командную коммуникацию с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего командного взаимодействия."
+  },
+  ua: {
+    title: "Інтеграція з Slack",
+    description: "Покращіть командну комунікацію за допомогою нашої інтелектуальної інтеграції Slack, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Розумне Управління Повідомленнями",
+      "Автоматизовані Робочі Процеси",
+      "Аналітика Каналів",
+      "Командна Взаємодія",
+      "Організація Повідомлень",
+      "Інтеграція Користувацьких Ботів",
+      "Моніторинг Активності"
+    ],
+    benefits: [
+      "Покращена Комунікація",
+      "Підвищена Продуктивність",
+      "Краща Координація Команди",
+      "Аналітика на Основі Даних",
+      "Оптимізовані Робочі Процеси",
+      "Ефективний Обмін Інформацією",
+      "Залученість Команди"
+    ],
+    integrations: [
+      "Інструменти Управління Проектами",
+      "Інструменти Розробки",
+      "Хмарне Сховище",
+      "Календарні Додатки",
+      "Інструменти Комунікації",
+      "Сторонні Сервіси"
+    ],
+    metaTitle: "Інтеграція з Slack | NeuroGen Lab - Розумна Командна Комунікація",
+    metaDescription: "Покращіть командну комунікацію за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращої командної взаємодії."
+  }
+};
+
+export { slackTranslations };
+
+const whatsappTranslations = {
+  en: {
+    title: "WhatsApp Integration",
+    description: "Enhance your customer messaging with our intelligent WhatsApp integration that provides advanced automation and insights through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Smart Message Management",
+      "Automated Responses",
+      "Chat Analytics",
+      "Customer Engagement",
+      "Message Templates",
+      "Custom Bot Integration",
+      "Activity Monitoring"
+    ],
+    benefits: [
+      "Improved Customer Communication",
+      "Faster Response Times",
+      "Better Customer Service",
+      "Data-Driven Insights",
+      "Enhanced Engagement",
+      "Efficient Message Handling",
+      "24/7 Availability"
+    ],
+    integrations: [
+      "CRM Systems",
+      "Customer Support Tools",
+      "Analytics Platforms",
+      "Marketing Tools",
+      "Cloud Storage",
+      "Third-party Services"
+    ],
+    metaTitle: "WhatsApp Integration | NeuroGen Lab - Smart Customer Messaging",
+    metaDescription: "Enhance your customer messaging with AI technology. Smart automation, analytics, and advanced features for better customer communication."
+  },
+  de: {
+    title: "WhatsApp-Integration",
+    description: "Verbessern Sie Ihre Kundenkommunikation mit unserer intelligenten WhatsApp-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Intelligente Nachrichtenverwaltung",
+      "Automatisierte Antworten",
+      "Chat-Analytik",
+      "Kundenengagement",
+      "Nachrichtenvorlagen",
+      "Individuelle Bot-Integration",
+      "Aktivitätsüberwachung"
+    ],
+    benefits: [
+      "Verbesserte Kundenkommunikation",
+      "Schnellere Antwortzeiten",
+      "Besserer Kundenservice",
+      "Datenbasierte Einblicke",
+      "Gesteigertes Engagement",
+      "Effiziente Nachrichtenverarbeitung",
+      "24/7 Verfügbarkeit"
+    ],
+    integrations: [
+      "CRM-Systeme",
+      "Kundenservice-Tools",
+      "Analyse-Plattformen",
+      "Marketing-Tools",
+      "Cloud-Speicher",
+      "Drittanbieterdienste"
+    ],
+    metaTitle: "WhatsApp-Integration | NeuroGen Lab - Intelligente Kundenkommunikation",
+    metaDescription: "Verbessern Sie Ihre Kundenkommunikation mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für bessere Kundenkommunikation."
+  },
+  es: {
+    title: "Integración de WhatsApp",
+    description: "Mejore su mensajería con clientes con nuestra integración inteligente de WhatsApp que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Gestión Inteligente de Mensajes",
+      "Respuestas Automatizadas",
+      "Análisis de Chat",
+      "Participación del Cliente",
+      "Plantillas de Mensajes",
+      "Integración de Bot Personalizado",
+      "Monitoreo de Actividad"
+    ],
+    benefits: [
+      "Mejor Comunicación con Clientes",
+      "Tiempos de Respuesta más Rápidos",
+      "Mejor Servicio al Cliente",
+      "Perspectivas Basadas en Datos",
+      "Participación Mejorada",
+      "Gestión Eficiente de Mensajes",
+      "Disponibilidad 24/7"
+    ],
+    integrations: [
+      "Sistemas CRM",
+      "Herramientas de Soporte al Cliente",
+      "Plataformas de Análisis",
+      "Herramientas de Marketing",
+      "Almacenamiento en la Nube",
+      "Servicios de Terceros"
+    ],
+    metaTitle: "Integración de WhatsApp | NeuroGen Lab - Mensajería Inteligente con Clientes",
+    metaDescription: "Mejore su mensajería con clientes con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor comunicación con clientes."
+  },
+  ru: {
+    title: "Интеграция с WhatsApp",
+    description: "Улучшите обмен сообщениями с клиентами с помощью нашей интеллектуальной интеграции WhatsApp, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Умное Управление Сообщениями",
+      "Автоматические Ответы",
+      "Аналитика Чатов",
+      "Вовлечение Клиентов",
+      "Шаблоны Сообщений",
+      "Интеграция Пользовательских Ботов",
+      "Мониторинг Активности"
+    ],
+    benefits: [
+      "Улучшенная Коммуникация с Клиентами",
+      "Более Быстрые Ответы",
+      "Улучшенное Обслуживание Клиентов",
+      "Аналитика на Основе Данных",
+      "Повышенное Вовлечение",
+      "Эффективная Обработка Сообщений",
+      "Доступность 24/7"
+    ],
+    integrations: [
+      "CRM Системы",
+      "Инструменты Поддержки Клиентов",
+      "Аналитические Платформы",
+      "Маркетинговые Инструменты",
+      "Облачное Хранилище",
+      "Сторонние Сервисы"
+    ],
+    metaTitle: "Интеграция с WhatsApp | NeuroGen Lab - Умный Обмен Сообщениями с Клиентами",
+    metaDescription: "Улучшите обмен сообщениями с клиентами с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшей коммуникации с клиентами."
+  },
+  ua: {
+    title: "Інтеграція з WhatsApp",
+    description: "Покращіть обмін повідомленнями з клієнтами за допомогою нашої інтелектуальної інтеграції WhatsApp, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Розумне Управління Повідомленнями",
+      "Автоматичні Відповіді",
+      "Аналітика Чатів",
+      "Залучення Клієнтів",
+      "Шаблони Повідомлень",
+      "Інтеграція Користувацьких Ботів",
+      "Моніторинг Активності"
+    ],
+    benefits: [
+      "Покращена Комунікація з Клієнтами",
+      "Швидші Відповіді",
+      "Покращене Обслуговування Клієнтів",
+      "Аналітика на Основі Даних",
+      "Підвищене Залучення",
+      "Ефективна Обробка Повідомлень",
+      "Доступність 24/7"
+    ],
+    integrations: [
+      "CRM Системи",
+      "Інструменти Підтримки Клієнтів",
+      "Аналітичні Платформи",
+      "Маркетингові Інструменти",
+      "Хмарне Сховище",
+      "Сторонні Сервіси"
+    ],
+    metaTitle: "Інтеграція з WhatsApp | NeuroGen Lab - Розумний Обмін Повідомленнями з Клієнтами",
+    metaDescription: "Покращіть обмін повідомленнями з клієнтами за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращої комунікації з клієнтами."
+  }
+};
+
+export { whatsappTranslations };
+
+const zapierTranslations = {
+  en: {
+    title: "Zapier Integration",
+    description: "Enhance your workflow automation with our intelligent Zapier integration that provides advanced automation and insights through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Smart Workflow Automation",
+      "Custom Zap Creation",
+      "Process Analytics",
+      "Task Management",
+      "Data Synchronization",
+      "Trigger Management",
+      "Activity Monitoring"
+    ],
+    benefits: [
+      "Improved Productivity",
+      "Time Savings",
+      "Process Optimization",
+      "Data-Driven Insights",
+      "Enhanced Efficiency",
+      "Seamless Integration",
+      "Automated Workflows"
+    ],
+    integrations: [
+      "CRM Systems",
+      "Marketing Tools",
+      "Communication Apps",
+      "Project Management",
+      "Cloud Storage",
+      "Third-party Services"
+    ],
+    metaTitle: "Zapier Integration | NeuroGen Lab - Smart Workflow Automation",
+    metaDescription: "Enhance your workflow automation with AI technology. Smart automation, analytics, and advanced features for better process management."
+  },
+  de: {
+    title: "Zapier-Integration",
+    description: "Verbessern Sie Ihre Workflow-Automatisierung mit unserer intelligenten Zapier-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Intelligente Workflow-Automatisierung",
+      "Individuelle Zap-Erstellung",
+      "Prozessanalyse",
+      "Aufgabenverwaltung",
+      "Datensynchronisation",
+      "Trigger-Management",
+      "Aktivitätsüberwachung"
+    ],
+    benefits: [
+      "Verbesserte Produktivität",
+      "Zeitersparnis",
+      "Prozessoptimierung",
+      "Datenbasierte Einblicke",
+      "Gesteigerte Effizienz",
+      "Nahtlose Integration",
+      "Automatisierte Workflows"
+    ],
+    integrations: [
+      "CRM-Systeme",
+      "Marketing-Tools",
+      "Kommunikations-Apps",
+      "Projektmanagement",
+      "Cloud-Speicher",
+      "Drittanbieterdienste"
+    ],
+    metaTitle: "Zapier-Integration | NeuroGen Lab - Intelligente Workflow-Automatisierung",
+    metaDescription: "Verbessern Sie Ihre Workflow-Automatisierung mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Prozessmanagement."
+  },
+  es: {
+    title: "Integración de Zapier",
+    description: "Mejore su automatización de flujos de trabajo con nuestra integración inteligente de Zapier que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Automatización Inteligente de Flujos de Trabajo",
+      "Creación de Zaps Personalizados",
+      "Análisis de Procesos",
+      "Gestión de Tareas",
+      "Sincronización de Datos",
+      "Gestión de Disparadores",
+      "Monitoreo de Actividad"
+    ],
+    benefits: [
+      "Productividad Mejorada",
+      "Ahorro de Tiempo",
+      "Optimización de Procesos",
+      "Perspectivas Basadas en Datos",
+      "Eficiencia Mejorada",
+      "Integración Perfecta",
+      "Flujos de Trabajo Automatizados"
+    ],
+    integrations: [
+      "Sistemas CRM",
+      "Herramientas de Marketing",
+      "Aplicaciones de Comunicación",
+      "Gestión de Proyectos",
+      "Almacenamiento en la Nube",
+      "Servicios de Terceros"
+    ],
+    metaTitle: "Integración de Zapier | NeuroGen Lab - Automatización Inteligente de Flujos de Trabajo",
+    metaDescription: "Mejore su automatización de flujos de trabajo con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor gestión de procesos."
+  },
+  ru: {
+    title: "Интеграция с Zapier",
+    description: "Улучшите автоматизацию рабочих процессов с помощью нашей интеллектуальной интеграции Zapier, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Умная Автоматизация Рабочих Процессов",
+      "Создание Пользовательских Zap",
+      "Аналитика Процессов",
+      "Управление Задачами",
+      "Синхронизация Данных",
+      "Управление Триггерами",
+      "Мониторинг Активности"
+    ],
+    benefits: [
+      "Повышенная Продуктивность",
+      "Экономия Времени",
+      "Оптимизация Процессов",
+      "Аналитика на Основе Данных",
+      "Повышенная Эффективность",
+      "Безшовная Интеграция",
+      "Автоматизированные Рабочие Процессы"
+    ],
+    integrations: [
+      "CRM Системы",
+      "Маркетинговые Инструменты",
+      "Приложения для Коммуникации",
+      "Управление Проектами",
+      "Облачное Хранилище",
+      "Сторонние Сервисы"
+    ],
+    metaTitle: "Интеграция с Zapier | NeuroGen Lab - Умная Автоматизация Рабочих Процессов",
+    metaDescription: "Улучшите автоматизацию рабочих процессов с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего управления процессами."
+  },
+  ua: {
+    title: "Інтеграція з Zapier",
+    description: "Покращіть автоматизацію робочих процесів за допомогою нашої інтелектуальної інтеграції Zapier, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Розумна Автоматизація Робочих Процесів",
+      "Створення Користувацьких Zap",
+      "Аналітика Процесів",
+      "Управління Завданнями",
+      "Синхронізація Даних",
+      "Управління Тригерами",
+      "Моніторинг Активності"
+    ],
+    benefits: [
+      "Підвищена Продуктивність",
+      "Економія Часу",
+      "Оптимізація Процесів",
+      "Аналітика на Основі Даних",
+      "Підвищена Ефективність",
+      "Безшовна Інтеграція",
+      "Автоматизовані Робочі Процеси"
+    ],
+    integrations: [
+      "CRM Системи",
+      "Маркетингові Інструменти",
+      "Додатки для Комунікації",
+      "Управління Проектами",
+      "Хмарне Сховище",
+      "Сторонні Сервіси"
+    ],
+    metaTitle: "Інтеграція з Zapier | NeuroGen Lab - Розумна Автоматизація Робочих Процесів",
+    metaDescription: "Покращіть автоматизацію робочих процесів за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого управління процесами."
+  }
+};
+
+export { zapierTranslations };
+
+const tablesTranslations = {
+  en: {
+    title: "Smart Tables",
+    description: "Transform your data management with our intelligent table system that provides advanced analytics and insights through AI technology.",
+    sectionTitles: {
+      features: "Features",
+      benefits: "Benefits",
+      integrations: "Integrations"
+    },
+    features: [
+      "Smart Data Organization",
+      "Automated Analysis",
+      "Data Visualization",
+      "Column Management",
+      "Data Filtering",
+      "Custom Views",
+      "Real-time Updates"
+    ],
+    benefits: [
+      "Improved Data Management",
+      "Better Data Insights",
+      "Enhanced Organization",
+      "Data-Driven Decisions",
+      "Increased Efficiency",
+      "Seamless Collaboration",
+      "Time Savings"
+    ],
+    integrations: [
+      "Spreadsheet Tools",
+      "Data Analytics",
+      "Visualization Tools",
+      "Project Management",
+      "Cloud Storage",
+      "Third-party Services"
+    ],
+    metaTitle: "Smart Tables | NeuroGen Lab - Intelligent Data Management",
+    metaDescription: "Transform your data management with AI technology. Smart organization, analytics, and advanced features for better data handling."
+  },
+  de: {
+    title: "Intelligente Tabellen",
+    description: "Transformieren Sie Ihr Datenmanagement mit unserem intelligenten Tabellensystem, das durch KI-Technologie erweiterte Analysen und Einblicke bietet.",
+    sectionTitles: {
+      features: "Funktionen",
+      benefits: "Vorteile",
+      integrations: "Integrationen"
+    },
+    features: [
+      "Intelligente Datenorganisation",
+      "Automatisierte Analyse",
+      "Datenvisualisierung",
+      "Spaltenverwaltung",
+      "Datenfilterung",
+      "Individuelle Ansichten",
+      "Echtzeit-Updates"
+    ],
+    benefits: [
+      "Verbessertes Datenmanagement",
+      "Bessere Dateneinblicke",
+      "Verbesserte Organisation",
+      "Datenbasierte Entscheidungen",
+      "Gesteigerte Effizienz",
+      "Nahtlose Zusammenarbeit",
+      "Zeitersparnis"
+    ],
+    integrations: [
+      "Tabellenkalkulationstools",
+      "Datenanalyse",
+      "Visualisierungstools",
+      "Projektmanagement",
+      "Cloud-Speicher",
+      "Drittanbieterdienste"
+    ],
+    metaTitle: "Intelligente Tabellen | NeuroGen Lab - Intelligentes Datenmanagement",
+    metaDescription: "Transformieren Sie Ihr Datenmanagement mit KI-Technologie. Intelligente Organisation, Analytik und erweiterte Funktionen für bessere Datenverarbeitung."
+  },
+  es: {
+    title: "Tablas Inteligentes",
+    description: "Transforme su gestión de datos con nuestro sistema de tablas inteligentes que proporciona análisis avanzados y perspectivas a través de tecnología IA.",
+    sectionTitles: {
+      features: "Características",
+      benefits: "Beneficios",
+      integrations: "Integraciones"
+    },
+    features: [
+      "Organización Inteligente de Datos",
+      "Análisis Automatizado",
+      "Visualización de Datos",
+      "Gestión de Columnas",
+      "Filtrado de Datos",
+      "Vistas Personalizadas",
+      "Actualizaciones en Tiempo Real"
+    ],
+    benefits: [
+      "Mejor Gestión de Datos",
+      "Mejores Perspectivas de Datos",
+      "Organización Mejorada",
+      "Decisiones Basadas en Datos",
+      "Mayor Eficiencia",
+      "Colaboración Perfecta",
+      "Ahorro de Tiempo"
+    ],
+    integrations: [
+      "Herramientas de Hojas de Cálculo",
+      "Análisis de Datos",
+      "Herramientas de Visualización",
+      "Gestión de Proyectos",
+      "Almacenamiento en la Nube",
+      "Servicios de Terceros"
+    ],
+    metaTitle: "Tablas Inteligentes | NeuroGen Lab - Gestión Inteligente de Datos",
+    metaDescription: "Transforme su gestión de datos con tecnología IA. Organización inteligente, análisis y características avanzadas para mejor manejo de datos."
+  },
+  ru: {
+    title: "Умные Таблицы",
+    description: "Трансформируйте управление данными с помощью нашей интеллектуальной системы таблиц, которая обеспечивает расширенную аналитику и понимание через технологию ИИ.",
+    sectionTitles: {
+      features: "Функции",
+      benefits: "Преимущества",
+      integrations: "Интеграции"
+    },
+    features: [
+      "Умная Организация Данных",
+      "Автоматизированный Анализ",
+      "Визуализация Данных",
+      "Управление Столбцами",
+      "Фильтрация Данных",
+      "Пользовательские Представления",
+      "Обновления в Реальном Времени"
+    ],
+    benefits: [
+      "Улучшенное Управление Данными",
+      "Лучшее Понимание Данных",
+      "Улучшенная Организация",
+      "Решения на Основе Данных",
+      "Повышенная Эффективность",
+      "Безшовное Сотрудничество",
+      "Экономия Времени"
+    ],
+    integrations: [
+      "Инструменты Электронных Таблиц",
+      "Анализ Данных",
+      "Инструменты Визуализации",
+      "Управление Проектами",
+      "Облачное Хранилище",
+      "Сторонние Сервисы"
+    ],
+    metaTitle: "Умные Таблицы | NeuroGen Lab - Интеллектуальное Управление Данными",
+    metaDescription: "Трансформируйте управление данными с помощью технологии ИИ. Умная организация, аналитика и расширенные функции для лучшей работы с данными."
+  },
+  ua: {
+    title: "Розумні Таблиці",
+    description: "Трансформуйте управління даними за допомогою нашої інтелектуальної системи таблиць, яка забезпечує розширену аналітику та розуміння через технологію ШІ.",
+    sectionTitles: {
+      features: "Функції",
+      benefits: "Переваги",
+      integrations: "Інтеграції"
+    },
+    features: [
+      "Розумна Організація Даних",
+      "Автоматизований Аналіз",
+      "Візуалізація Даних",
+      "Управління Стовпцями",
+      "Фільтрація Даних",
+      "Користувацькі Представлення",
+      "Оновлення в Реальному Часі"
+    ],
+    benefits: [
+      "Покращене Управління Даними",
+      "Краще Розуміння Даних",
+      "Покращена Організація",
+      "Рішення на Основі Даних",
+      "Підвищена Ефективність",
+      "Безшовна Співпраця",
+      "Економія Часу"
+    ],
+    integrations: [
+      "Інструменти Електронних Таблиць",
+      "Аналіз Даних",
+      "Інструменти Візуалізації",
+      "Управління Проектами",
+      "Хмарне Сховище",
+      "Сторонні Сервіси"
+    ],
+    metaTitle: "Розумні Таблиці | NeuroGen Lab - Інтелектуальне Управління Даними",
+    metaDescription: "Трансформуйте управління даними за допомогою технології ШІ. Розумна організація, аналітика та розширені функції для кращої роботи з даними."
+  }
+};
+
+export { tablesTranslations };
