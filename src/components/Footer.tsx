@@ -11,12 +11,16 @@ import {
 import NewsletterForm from './form/NewsletterForm';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
+import { useLanguage } from '../context/LanguageContext';
+import { footerTranslations } from '../locales/footerTranslations';
 
 const Footer: React.FC = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const router = useRouter();
   const location = usePathname();
+  const { language } = useLanguage();
+  const t = footerTranslations[language];
 
   const handleNavigation = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -55,8 +59,7 @@ const Footer: React.FC = () => {
               />
             </Link>
             <p className='text-gray-400 text-sm text-center md:text-left'>
-              Transforming businesses with cutting-edge AI solutions and
-              intelligent automation.
+              {t.companyInfo}
             </p>
           </div>
 
@@ -68,7 +71,7 @@ const Footer: React.FC = () => {
                 onClick={() => setIsNavigationOpen(!isNavigationOpen)}
                 className='w-full flex items-center justify-between md:hidden mb-4'
               >
-                <h3 className='text-lg font-semibold'>Navigation</h3>
+                <h3 className='text-lg font-semibold'>{t.navigation}</h3>
                 <ChevronDown
                   className={`w-5 h-5 text-emerald-400 transition-transform ${
                     isNavigationOpen ? 'rotate-180' : ''
@@ -76,7 +79,7 @@ const Footer: React.FC = () => {
                 />
               </button>
               <h3 className='hidden md:block text-lg font-semibold mb-4'>
-                Navigation
+                {t.navigation}
               </h3>
               <ul
                 className={`space-y-2 flex flex-col items-center md:items-start overflow-hidden transition-all duration-300 md:h-auto ${
@@ -91,7 +94,7 @@ const Footer: React.FC = () => {
                     onClick={(e) => handleNavigation(e, 'pricing')}
                     className='text-gray-400 hover:text-white transition-colors'
                   >
-                    Pricing
+                    {t.pricing}
                   </a>
                 </li>
                 <li>
@@ -99,7 +102,7 @@ const Footer: React.FC = () => {
                     href='/guide'
                     className='text-gray-400 hover:text-white transition-colors'
                   >
-                    Guide
+                    {t.guide}
                   </Link>
                 </li>
                 <li>
@@ -108,7 +111,7 @@ const Footer: React.FC = () => {
                     onClick={(e) => handleNavigation(e, 'faq')}
                     className='text-gray-400 hover:text-white transition-colors'
                   >
-                    FAQ
+                    {t.faq}
                   </a>
                 </li>
                 <li>
@@ -116,7 +119,7 @@ const Footer: React.FC = () => {
                     href='/about-us'
                     className='text-gray-400 hover:text-white transition-colors'
                   >
-                    About US
+                    {t.aboutUs}
                   </Link>
                 </li>
                 <li>
@@ -124,7 +127,7 @@ const Footer: React.FC = () => {
                     href='/blog'
                     className='text-gray-400 hover:text-white transition-colors'
                   >
-                    Blog
+                    {t.blog}
                   </Link>
                 </li>
               </ul>
@@ -136,7 +139,7 @@ const Footer: React.FC = () => {
                 onClick={() => setIsContactOpen(!isContactOpen)}
                 className='w-full flex items-center justify-between md:hidden mb-4'
               >
-                <h3 className='text-lg font-semibold'>Contact Us</h3>
+                <h3 className='text-lg font-semibold'>{t.contactUs}</h3>
                 <ChevronDown
                   className={`w-5 h-5 text-emerald-400 transition-transform ${
                     isContactOpen ? 'rotate-180' : ''
@@ -144,7 +147,7 @@ const Footer: React.FC = () => {
                 />
               </button>
               <h3 className='hidden md:block text-lg font-semibold mb-4'>
-                Contact Us
+                {t.contactUs}
               </h3>
               <ul
                 className={`space-y-3 flex flex-col items-center md:items-start overflow-hidden transition-all duration-300 md:h-auto ${
@@ -207,10 +210,10 @@ const Footer: React.FC = () => {
           {/* Newsletter */}
           <div className='col-span-1'>
             <h3 className='text-lg font-semibold mb-4 text-center md:text-left'>
-              Newsletter
+              {t.newsletter.title}
             </h3>
             <p className='text-gray-400 text-sm mb-4 text-center md:text-left'>
-              Subscribe to our newsletter to get the latest updates and news.
+              {t.newsletter.description}
             </p>
             <div className='relative'>
               <NewsletterForm />
@@ -225,13 +228,13 @@ const Footer: React.FC = () => {
               href='/terms'
               className='text-gray-400 hover:text-white text-sm transition-colors'
             >
-              Terms of Service
+              {t.legal.termsOfService}
             </Link>
             <Link
               href='/privacy'
               className='text-gray-400 hover:text-white text-sm transition-colors'
             >
-              Privacy Policy
+              {t.legal.privacyPolicy}
             </Link>
             <Link
               href='/cookie-policy'
@@ -259,7 +262,7 @@ const Footer: React.FC = () => {
             </Link>
           </div>
           <p className='text-gray-400 text-sm'>
-            © {new Date().getFullYear()} NeuroGen Lab. All rights reserved.
+            © {new Date().getFullYear()} NeuroGen Lab. {t.legal.copyright}
           </p>
         </div>
       </div>

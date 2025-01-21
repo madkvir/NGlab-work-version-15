@@ -15,10 +15,40 @@ import { LanguageProvider } from "../context/LanguageContext";
 import { cookies } from "next/headers";
 
 export const metadata: Metadata = {
-  title: "Neurogen Lab",
-  description: "Neurogen Lab is a...",
+  title: {
+    template: '%s | NeuroGen Lab',
+    default: 'NeuroGen Lab - AI Solutions & Intelligent Automation',
+  },
+  description: 'Transforming businesses with cutting-edge AI solutions and intelligent automation.',
+  keywords: ['AI', 'Artificial Intelligence', 'Automation', 'Business Solutions', 'NeuroGen Lab'],
+  authors: [{ name: 'NeuroGen Lab' }],
+  creator: 'NeuroGen Lab',
+  publisher: 'NeuroGen Lab',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
-    icon: "/favicon.ico",
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
