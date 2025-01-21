@@ -228,41 +228,41 @@ const Footer: React.FC = () => {
               href='/terms'
               className='text-gray-400 hover:text-white text-sm transition-colors'
             >
-              {t.legal.termsOfService}
+              {t.legal.termsOfService || "Terms of Service"}
             </Link>
             <Link
               href='/privacy'
               className='text-gray-400 hover:text-white text-sm transition-colors'
             >
-              {t.legal.privacyPolicy}
+              {t.legal.privacyPolicy || "Privacy Policy"}
             </Link>
             <Link
               href='/cookie-policy'
               className='text-gray-400 hover:text-white text-sm transition-colors'
             >
-              Cookie Policy
+              {t.legal.cookiePolicy || "Cookie Policy"}
             </Link>
             <Link
               href='/impressum'
               className='text-gray-400 hover:text-white text-sm transition-colors'
             >
-              Impressum
+              {t.legal.impressum || "Impressum"}
             </Link>
             <Link
               href='/responsible-ai-policy'
               className='text-gray-400 hover:text-white text-sm transition-colors'
             >
-              Responsible AI Policy
+              {t.legal.responsibleAiPolicy || "Responsible AI Policy"}
             </Link>
             <Link
               href='/disclaimer'
               className='text-gray-400 hover:text-white text-sm transition-colors'
             >
-              Disclaimer
+              {t.legal.disclaimer || "Disclaimer"}
             </Link>
           </div>
           <p className='text-gray-400 text-sm'>
-            © {new Date().getFullYear()} NeuroGen Lab. {t.legal.copyright}
+            © {new Date().getFullYear()} NeuroGen Lab. {t.legal.copyright || "All rights reserved."}
           </p>
         </div>
       </div>
