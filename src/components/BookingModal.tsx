@@ -85,9 +85,19 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
       }, 100);
     }
   }, [isOpen]);
-
   const timezonesWithOffset = useMemo(() => {
-    return Intl.supportedValuesOf("timeZone").map((tz) => ({
+    return [
+      'UTC',
+      'Europe/London',
+      'Europe/Paris',
+      'Europe/Berlin',
+      'Europe/Kiev',
+      'Europe/Moscow',
+      'America/New_York',
+      'America/Los_Angeles',
+      'Asia/Tokyo',
+      'Australia/Sydney'
+    ].map((tz) => ({
       value: tz,
       label: `${tz} (${format(new Date(), "xxx", { timeZone: tz })})`,
     }));
