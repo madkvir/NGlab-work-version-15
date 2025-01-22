@@ -24,6 +24,14 @@ import { CALENDAR_CONFIG } from "../config/calendar";
 import { LANGUAGES, SUBJECTS, POSITIONS } from "../config/constants";
 import { LanguageSelect } from "./LanguageSelect";
 import { SuccessModal } from "./SuccessModal";
+import { modalTranslations } from '../locales/modalTranslations';
+import { useLanguage } from '../context/LanguageContext';
+
+declare global {
+  interface Intl {
+    supportedValuesOf(input: string): string[];
+  }
+}
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -61,6 +69,8 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     setValue,
   } = useForm<BookingFormData>();
   const defaultTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const { language } = useLanguage();
+  const t = modalTranslations[language];
 
   const selectedTimezone = watch("timezone", defaultTimezone);
   const selectedLanguage = watch("language", LANGUAGES[0]);
@@ -150,7 +160,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             leaveTo="opacity-0"
             className="fixed inset-0"
           >
-            <div className="fixed inset-0 bg-black/30" />
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
@@ -164,12 +174,12 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                 leaveTo="opacity-0 translate-y-4"
                 className="w-full max-w-4xl"
               >
-                <Dialog.Panel className="relative transform overflow-visible rounded-lg bg-[#0A1A1F] p-4 shadow-xl">
+                <Dialog.Panel className="relative transform overflow-visible rounded-lg bg-[#152328] p-4 shadow-2xl ring-1 ring-[#3DFEA3]/20 backdrop-blur-sm">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-4">
                       <img src="/logo.png" alt="NGlab" className="h-16 w-auto" />
                       <Dialog.Title className="text-xl leading-6 font-bold text-white">
-                        Book a Demo
+                        {t.bookDemo}
                       </Dialog.Title>
                     </div>
                     <button
@@ -195,19 +205,18 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       <div className="order-1 lg:order-1 space-y-4">
                         <div className="bg-[#152328] rounded-lg p-4 border border-[#3DFEA3]/20">
                           <h2 className="text-base leading-6 font-semibold text-white mb-1.5">
-                            🚀 Book a consultation with NeuroGen Lab!
+                            {t.consultation}
                           </h2>
                           <p className="text-sm leading-5 text-gray-300 mb-2">
-                            Discover how AI Agents can automate your business, improve service, and
-                            increase sales.
+                            {t.discover}
                           </p>
                           <p className="text-sm leading-5 text-gray-300 font-medium">
-                            💡 Choose a convenient time – let's discuss how AI can help you!
+                            {t.chooseTime}
                           </p>
                         </div>
 
                         <div className="grid grid-cols-2 gap-3">
-                          <FormField label="Name" icon={User} required>
+                          <FormField label={t.name} icon={User} required>
                             <input
                               type="text"
                               {...register("name", { required: "Name is required" })}
@@ -222,7 +231,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                             )}
                           </FormField>
 
-                          <FormField label="Language" icon={Languages}>
+                          <FormField label={t.language} icon={Languages}>
                             <LanguageSelect
                               value={selectedLanguage}
                               onChange={(value) => setValue("language", value)}
@@ -232,7 +241,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                         </div>
 
                         <div className="grid grid-cols-2 gap-3">
-                          <FormField label="Email" icon={Mail} required>
+                          <FormField label={t.email} icon={Mail} required>
                             <input
                               type="email"
                               {...register("email", {
@@ -253,7 +262,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                             )}
                           </FormField>
 
-                          <FormField label="Website" icon={Globe2} required>
+                          <FormField label={t.website} icon={Globe2} required>
                             <input
                               type="text"
                               {...register("website", {
@@ -277,7 +286,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                         </div>
 
                         <div className="grid grid-cols-2 gap-3">
-                          <FormField label="Subject" icon={Calendar}>
+                          <FormField label={t.subject} icon={Calendar}>
                             <select
                               {...register("subject", { required: true })}
                               className="w-full rounded-md border-[#3DFEA3]/20 bg-[#152328] text-white shadow-sm focus:border-[#3DFEA3] focus:ring focus:ring-[#3DFEA3]/20 text-sm leading-5"
@@ -290,7 +299,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                             </select>
                           </FormField>
 
-                          <FormField label="Timezone" icon={Globe}>
+                          <FormField label={t.timezone} icon={Globe}>
                             <select
                               {...register("timezone")}
                               defaultValue={defaultTimezone}
@@ -305,7 +314,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                           </FormField>
                         </div>
 
-                        <FormField label="Position" icon={Briefcase}>
+                        <FormField label={t.position} icon={Briefcase}>
                           <select
                             {...register("position", { required: true })}
                             className="w-full rounded-md border-[#3DFEA3]/20 bg-[#152328] text-white shadow-sm focus:border-[#3DFEA3] focus:ring focus:ring-[#3DFEA3]/20 text-sm leading-5"
@@ -318,7 +327,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                           </select>
                         </FormField>
 
-                        <FormField label="Comments" icon={MessageSquare}>
+                        <FormField label={t.comments} icon={MessageSquare}>
                           <textarea
                             {...register("comments")}
                             rows={1}
@@ -354,7 +363,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                         disabled={isSubmitting}
                         className="rounded-md bg-[#3DFEA3] px-6 py-2 text-sm leading-5 font-semibold text-[#0A1A1F] shadow-sm hover:bg-[#3DFEA3]/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3DFEA3] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {isSubmitting ? "Booking..." : "Book Demo"}
+                        {isSubmitting ? t.bookingProcess : t.bookingButton}
                       </button>
                     </div>
                   </form>

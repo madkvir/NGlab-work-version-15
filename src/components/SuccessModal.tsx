@@ -1,6 +1,8 @@
 import React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { CheckCircle2, X } from 'lucide-react';
+import { modalTranslations } from '../locales/modalTranslations';
+import { useLanguage } from '../context/LanguageContext';
 
 interface SuccessModalProps {
   isOpen: boolean;
@@ -9,6 +11,9 @@ interface SuccessModalProps {
 }
 
 export function SuccessModal({ isOpen, onClose, email }: SuccessModalProps) {
+  const { language } = useLanguage();
+  const t = modalTranslations[language];
+
   return (
     <Transition show={isOpen} as={React.Fragment}>
       <Dialog onClose={onClose} className="relative z-50">
@@ -50,18 +55,16 @@ export function SuccessModal({ isOpen, onClose, email }: SuccessModalProps) {
                   </div>
                   
                   <Dialog.Title className="text-xl font-semibold text-white mb-2">
-                    Booking Confirmed!
+                    {t.bookingConfirmed}
                   </Dialog.Title>
                   
                   <div className="text-gray-300 space-y-2">
+                    <p>{t.thankYou}</p>
                     <p>
-                      Thank you for scheduling a demo with us. We've received your booking request.
-                    </p>
-                    <p>
-                      A confirmation email will be sent to <span className="text-[#3DFEA3] font-medium">{email}</span> with all the details.
+                      {t.emailConfirmation} <span className="text-[#3DFEA3] font-medium">{email}</span>
                     </p>
                     <p className="text-sm">
-                      Please check your inbox (and spam folder) for further instructions.
+                      {t.checkInbox}
                     </p>
                   </div>
 
@@ -69,7 +72,7 @@ export function SuccessModal({ isOpen, onClose, email }: SuccessModalProps) {
                     onClick={onClose}
                     className="mt-6 rounded-md bg-[#3DFEA3] px-6 py-2 text-sm font-semibold text-[#0A1A1F] shadow-sm hover:bg-[#3DFEA3]/90 focus:outline-none focus:ring-2 focus:ring-[#3DFEA3]/50 transform hover:scale-105 transition-all duration-300"
                   >
-                    Got it, thanks!
+                    {t.gotIt}
                   </button>
                 </div>
               </Dialog.Panel>
