@@ -49,26 +49,43 @@ const About = () => {
     { icon: <Building className="w-6 h-6" />, value: "500+", label: "Enterprise Clients" },
   ];
 
+  const history = [
+    {
+      year: "2020",
+      title: "Основание",
+      description: "NeuroGen Lab была основана с целью демократизации ИИ технологий"
+    },
+    {
+      year: "2021",
+      title: "Первый продукт",
+      description: "Запуск нашего флагманского AI-ассистента"
+    },
+    {
+      year: "2022",
+      title: "Международная экспансия",
+      description: "Выход на европейский рынок и открытие офиса в Берлине"
+    },
+    {
+      year: "2023",
+      title: "Масштабирование",
+      description: "Достижение отметки в 1000+ активных пользователей"
+    }
+  ];
+
   const team = [
     {
       name: "Sarah Johnson",
       role: "CEO & Founder",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400",
       bio: "15+ years experience in AI and Machine Learning",
     },
     {
       name: "Michael Chen",
       role: "CTO",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
       bio: "Former Tech Lead at major AI companies",
     },
     {
       name: "Emily Rodriguez",
       role: "Head of AI Research",
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
       bio: "PhD in Computer Science, AI specialist",
     },
   ];
@@ -105,6 +122,24 @@ const About = () => {
             ))}
           </div>
 
+          {/* История компании */}
+          <div className="mt-16">
+            <h2 className="text-2xl font-bold text-center mb-8">Our History</h2>
+            <div className="max-w-4xl mx-auto">
+              {history.map((item, index) => (
+                <div key={index} className="relative flex items-start mb-8 group">
+                  <div className="absolute left-0 w-px h-full bg-emerald-400/30 group-last:h-0" />
+                  <div className="absolute left-[-8px] w-4 h-4 rounded-full bg-emerald-400" />
+                  <div className="ml-8">
+                    <div className="text-emerald-400 font-bold mb-1">{item.year}</div>
+                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                    <p className="text-gray-400">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Mission Statement */}
           <div className="mt-16 text-center">
             <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
@@ -126,12 +161,8 @@ const About = () => {
                   key={index}
                   className="relative group bg-gray-900/50 rounded-xl overflow-hidden hover:bg-gray-900/70 transition-all duration-300"
                 >
-                  <div className="aspect-square overflow-hidden">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                    />
+                  <div className="aspect-square overflow-hidden bg-gray-800 flex items-center justify-center text-gray-400 p-4 text-center">
+                    [Фотография {member.name} - {member.role}]
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
