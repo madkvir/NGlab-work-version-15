@@ -148,8 +148,8 @@ const TestimonialsSection = () => {
           </button>
           <div className="overflow-hidden">
             <div 
-              className="flex transition-transform duration-1500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * getSlideWidth()}%)` }}
+              className="flex flex-row-reverse transition-transform duration-1500 ease-in-out"
+              style={{ transform: `translateX(${currentIndex * getSlideWidth()}%)` }}
             >
               {testimonials.map((item, index) => (
                 <div 
@@ -211,10 +211,10 @@ const TestimonialsSection = () => {
 
 const About = () => {
   const stats = [
-    { icon: <Users className="w-6 h-6" />, value: "10K+", label: "Active Users" },
+    { icon: <Users className="w-6 h-6" />, value: "56+", label: "Active Clients" },
     { icon: <Award className="w-6 h-6" />, value: "99.9%", label: "Uptime" },
-    { icon: <Globe className="w-6 h-6" />, value: "50+", label: "Countries" },
-    { icon: <Building className="w-6 h-6" />, value: "500+", label: "Enterprise Clients" },
+    { icon: <Globe className="w-6 h-6" />, value: "5+", label: "Countries" },
+    { icon: <Building className="w-6 h-6" />, value: "630+", label: "Enterprise Solutions Delivered" },
   ];
 
   const history = [
