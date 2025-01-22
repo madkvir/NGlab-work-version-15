@@ -1,44 +1,164 @@
-import { Users, Award, Globe, Building } from "lucide-react";
-import React from "react";
+"use client";
+
+import { Users, Award, Globe, Building, ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import BackToHome from "../../components/BackToHome";
 import Divider from "../../components/Divider";
 import ScrollToTop from "../../components/ScrollToTop";
 import Footer from "../../components/Footer";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "About NeuroGen Lab - Innovating AI Technology",
-  description:
-    "Learn more about NeuroGen Lab, our mission, and the leadership team driving innovation in AI technology.",
-  keywords: ["NeuroGen Lab", "AI technology", "about us", "leadership team", "innovation"],
-  openGraph: {
-    title: "About NeuroGen Lab - Innovating AI Technology",
-    description:
-      "Learn more about NeuroGen Lab, our mission, and the leadership team driving innovation in AI technology.",
-    url: "https://neurogenlab.de/about-us",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
+const testimonials = [
+  {
+    quote: "Сокращение затрат на логистику на 200K € в год",
+    problem: "Теряли 15% бюджета на логистику из-за неэффективного планирования маршрутов",
+    solution: "Внедрение AI-системы оптимизации маршрутов",
+    result: "Интеграция заняла 2 недели, ROI достигнут за 4 месяца",
+    author: "Мария Иванова",
+    position: "Директор по логистике",
+    company: "ТрансГрупп",
+    industry: "Транспорт и логистика",
+    logo: "/assets/companies/transgroup.svg"
   },
-  twitter: {
-    title: "About NeuroGen Lab - Innovating AI Technology",
-    description:
-      "Learn more about NeuroGen Lab, our mission, and the leadership team driving innovation in AI technology.",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
+  {
+    quote: "Автоматизация поддержки снизила нагрузку на 40%",
+    problem: "Служба поддержки не справлялась с растущим потоком обращений",
+    solution: "Внедрение AI-чатбота первой линии поддержки",
+    result: "За 3 месяца автоматизировано 65% типовых запросов",
+    author: "Александр Петров",
+    position: "Head of Customer Service",
+    company: "TechSupport Pro",
+    industry: "IT Services",
+    logo: "/assets/companies/techsupport.svg"
   },
-  authors: [{ name: "NeuroGen Lab Team" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/about-us",
+  {
+    quote: "Повышение эффективности производства на 35%",
+    problem: "Высокий процент брака и простои оборудования",
+    solution: "Предиктивная аналитика на базе AI",
+    result: "Снижение брака на 80% за первые 6 месяцев",
+    author: "Дмитрий Сидоров",
+    position: "Технический директор",
+    company: "ПромТех",
+    industry: "Производство",
+    logo: "/assets/companies/promtech.svg"
   },
+  {
+    quote: "Рост конверсии продаж на 25%",
+    problem: "Низкая эффективность работы отдела продаж",
+    solution: "AI-система анализа клиентских данных",
+    result: "Увеличение среднего чека на 30% за 4 месяца",
+    author: "Елена Смирнова",
+    position: "Коммерческий директор",
+    company: "SalesPro",
+    industry: "Retail",
+    logo: "/assets/companies/salespro.svg"
+  },
+  {
+    quote: "Экономия 150K € на энергопотреблении",
+    problem: "Высокие затраты на электроэнергию в офисных помещениях",
+    solution: "AI-система управления энергопотреблением",
+    result: "ROI достигнут за 8 месяцев использования",
+    author: "Игорь Васильев",
+    position: "Facility Manager",
+    company: "EcoSmart Buildings",
+    industry: "Управление недвижимостью",
+    logo: "/assets/companies/ecosmart.svg"
+  },
+  {
+    quote: "Оптимизация HR-процессов на 45%",
+    problem: "Длительный процесс подбора персонала",
+    solution: "AI-платформа для рекрутинга",
+    result: "Сокращение времени закрытия вакансий на 60%",
+    author: "Анна Козлова",
+    position: "HR Director",
+    company: "StaffMaster",
+    industry: "HR Tech",
+    logo: "/assets/companies/staffmaster.svg"
+  }
+];
+
+const TestimonialsSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => 
+        prevIndex === testimonials.length - 3 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? testimonials.length - 3 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === testimonials.length - 3 ? 0 : prevIndex + 1
+    );
+  };
+
+  return (
+    <div className="mt-16">
+      <h2 className="text-2xl font-bold text-center mb-8">What Our Clients Say</h2>
+      <div className="relative">
+        <button 
+          onClick={handlePrev}
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-gray-900/50 p-2 rounded-full hover:bg-gray-900/70 transition-all z-10"
+        >
+          <ChevronLeft className="w-6 h-6 text-emerald-400" />
+        </button>
+        <div className="overflow-hidden">
+          <div 
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 33.333}%)` }}
+          >
+            {testimonials.map((item, index) => (
+              <div key={index} className="min-w-[33.333%] px-4">
+                <div className="bg-gray-900/50 rounded-xl p-6 h-full hover:bg-gray-900/70 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mr-4">
+                      [Logo]
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-emerald-400">{item.company}</h3>
+                      <p className="text-sm text-gray-400">{item.industry}</p>
+                    </div>
+                  </div>
+                  <blockquote className="mb-4">
+                    <p className="text-xl font-semibold mb-3">{item.quote}</p>
+                    <p className="text-gray-400 text-sm mb-2">
+                      <span className="font-semibold">Проблема:</span> {item.problem}
+                    </p>
+                    <p className="text-gray-400 text-sm mb-2">
+                      <span className="font-semibold">Решение:</span> {item.solution}
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      <span className="font-semibold">Результат:</span> {item.result}
+                    </p>
+                  </blockquote>
+                  <footer className="mt-4 pt-4 border-t border-gray-800">
+                    <p className="font-semibold">{item.author}</p>
+                    <p className="text-sm text-gray-400">{item.position}</p>
+                  </footer>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <button 
+          onClick={handleNext}
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-gray-900/50 p-2 rounded-full hover:bg-gray-900/70 transition-all z-10"
+        >
+          <ChevronRight className="w-6 h-6 text-emerald-400" />
+        </button>
+      </div>
+    </div>
+  );
 };
 
 const About = () => {
@@ -121,6 +241,9 @@ const About = () => {
               </div>
             ))}
           </div>
+
+          {/* Testimonials */}
+          <TestimonialsSection />
 
           {/* История компании */}
           <div className="mt-16">
