@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "https://neurogenlab.de/about-us",
     images: [
       {
-        url: "/public/assets/images/about-us-banner.jpg",
+        url: "https://neurogenlab.de/assets/images/about-us-banner.jpg",
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab Team Working on AI Innovation",
