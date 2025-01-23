@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     title: "About NeuroGen Lab - Innovating AI Technology",
     description:
       "Learn more about NeuroGen Lab, our mission, and the leadership team driving innovation in AI technology.",
-    url: "https://neurogenlab.de/about-us",
+    url: "/about-us",
     images: [
       {
-        url: "https://neurogenlab.de/assets/images/about-us-banner.jpg",
+        url: "/assets/images/about-us-banner.jpg",
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab Team Working on AI Innovation",
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
     title: "About NeuroGen Lab - Innovating AI Technology",
     description:
       "Learn more about NeuroGen Lab, our mission, and the leadership team driving innovation in AI technology.",
-    images: ["https://neurogenlab.de/assets/images/about-us-banner.jpg"],
+    images: ["/assets/images/about-us-banner.jpg"],
   },
   authors: [{ name: "NeuroGen Lab Team" }],
   alternates: {
-    canonical: "https://neurogenlab.de/about-us",
+    canonical: "/about-us",
   },
 };
 
