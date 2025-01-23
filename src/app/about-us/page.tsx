@@ -1,6 +1,6 @@
 "use client";
 
-import { Users, Award, Globe, Building, ChevronLeft, ChevronRight } from "lucide-react";
+import { Users, Award, Globe, Building, ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import BackToHome from "../../components/BackToHome";
@@ -11,14 +11,14 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    quote: "Сокращение затрат на логистику на 200K € в год",
-    problem: "Теряли 15% бюджета на логистику из-за неэффективного планирования маршрутов",
-    solution: "Внедрение AI-системы оптимизации маршрутов",
-    result: "Интеграция заняла 2 недели, ROI достигнут за 4 месяца",
-    author: "Мария Иванова",
-    position: "Директор по логистике",
-    company: "ТрансГрупп",
-    industry: "Транспорт и логистика",
+    quote: "Reduced query processing time by 80%",
+    problem: "Long response times and operator overload were slowing down customer support and reducing client satisfaction",
+    solution: "Implementation of an AI Agent to automate routine tasks and provide 24/7 customer support",
+    result: "Integration took 3 weeks, query processing time decreased by 80%, and customer satisfaction increased by 35%",
+    // author: "Мария Иванова",
+    position: "Head of Customer Service",
+    company: "Edugames Rozumniki",
+    industry: "Interactive education",
     logo: "/assets/companies/rozumniki.svg"
   },
   {
@@ -41,7 +41,7 @@ const testimonials = [
     position: "Технический директор",
     company: "ПромТех",
     industry: "Производство",
-    logo: "/assets/companies/promtech.svg"
+    logo: "/assets/companies/epil.svg"
   },
   {
     quote: "Рост конверсии продаж на 25%",
@@ -52,7 +52,7 @@ const testimonials = [
     position: "Коммерческий директор",
     company: "SalesPro",
     industry: "Retail",
-    logo: "/assets/companies/salespro.svg"
+    logo: "/assets/companies/lexus.svg"
   },
   {
     quote: "Экономия 150K € на энергопотреблении",
@@ -63,7 +63,7 @@ const testimonials = [
     position: "Facility Manager",
     company: "EcoSmart Buildings",
     industry: "Управление недвижимостью",
-    logo: "/assets/companies/ecosmart.svg"
+    logo: "/assets/companies/auto_group.svg"
   },
   {
     quote: "Оптимизация HR-процессов на 45%",
@@ -74,7 +74,7 @@ const testimonials = [
     position: "HR Director",
     company: "StaffMaster",
     industry: "HR Tech",
-    logo: "/assets/companies/staffmaster.svg"
+    logo: "/assets/companies/toyota.svg"
   }
 ];
 
@@ -158,35 +158,35 @@ const TestimonialsSection = () => {
                 >
                   <div className="bg-gray-900/50 rounded-xl p-4 h-full hover:bg-gray-900/70 transition-all duration-300">
                     <div className="flex items-center mb-4">
-                      <div className="w-10 md:w-12 h-10 md:h-12 bg-gray-800 rounded-full flex items-center justify-center mr-3 md:mr-4 overflow-hidden">
+                      <div className="w-14 md:w-16 lg:w-20 h-14 md:h-16 lg:h-20 bg-white rounded-full flex items-center justify-center mr-3 md:mr-4 overflow-hidden">
                         {item.logo ? (
                           <Image
                             src={item.logo}
                             alt={`${item.company} logo`}
-                            width={48}
-                            height={48}
-                            className="object-contain"
+                            width={64}
+                            height={64}
+                            className="object-contain p-20.5 w-12 md:w-14 lg:w-16 h-12 md:h-14 lg:h-16"
                           />
                         ) : (
-                          <div className="text-gray-400 text-sm">[Logo]</div>
+                          <div className="text-gray-400 text-base">[Logo]</div>
                         )}
                       </div>
                       <div>
-                        <h3 className="font-semibold text-emerald-400 text-sm md:text-base">{item.company}</h3>
+                        <h3 className="font-semibold text-emerald-400 text-sm md:text-base lg:text-lg">{item.company}</h3>
                         <p className="text-xs md:text-sm text-gray-400">{item.industry}</p>
                       </div>
                     </div>
                     <blockquote className="mb-4">
-                      <p className="text-lg md:text-xl font-semibold mb-2 md:mb-3">{item.quote}</p>
-                      <p className="text-gray-400 text-xs md:text-sm mb-2">
-                        <span className="font-semibold">Проблема:</span> {item.problem}
-                      </p>
-                      <p className="text-gray-400 text-xs md:text-sm mb-2">
-                        <span className="font-semibold">Решение:</span> {item.solution}
-                      </p>
-                      <p className="text-gray-400 text-xs md:text-sm">
-                        <span className="font-semibold">Результат:</span> {item.result}
-                      </p>
+                    <p className="text-lg md:text-xl font-semibold mb-2 md:mb-3">{item.quote}</p>
+<p className="text-gray-400 text-xs md:text-sm mb-2">
+  <span className="font-semibold text-red-500">Problem:</span> {item.problem}
+</p>
+<p className="text-gray-400 text-xs md:text-sm mb-2">
+  <span className="font-semibold text-white">Solution:</span> {item.solution}
+</p>
+<p className="text-gray-400 text-xs md:text-sm">
+  <span className="font-semibold text-green-500">Result:</span> {item.result}
+</p>
                     </blockquote>
                     <footer className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-800">
                       <p className="font-semibold text-sm md:text-base">{item.author}</p>
@@ -219,42 +219,49 @@ const About = () => {
 
   const history = [
     {
-      year: "2020",
-      title: "Основание",
-      description: "NeuroGen Lab была основана с целью демократизации ИИ технологий"
-    },
-    {
-      year: "2021",
-      title: "Первый продукт",
-      description: "Запуск нашего флагманского AI-ассистента"
-    },
-    {
       year: "2022",
-      title: "Международная экспансия",
-      description: "Выход на европейский рынок и открытие офиса в Берлине"
+      title: "The Beginning",
+      description: "NeuroGen Lab started its journey, focusing on the development of AI solutions."
     },
     {
       year: "2023",
-      title: "Масштабирование",
-      description: "Достижение отметки в 1000+ активных пользователей"
+      title: "First Success",
+      description: "We launched our AI Agents for small and medium-sized businesses, earning the trust of clients in Ukraine, Germany, and Canada."
+    },
+    {
+      year: "2024",
+      title: "Growth and Recognition",
+      description: "The company successfully expanded its services, adding IT consulting, solutions for car dealerships, and business process automation."
+    },
+    {
+      year: "2025",
+      title: "Official Establishment",
+      description: "NeuroGen Lab was officially registered in Germany, embarking on a new phase of growth with a focus on scaling in the European market."
     }
   ];
 
+
   const team = [
     {
-      name: "Sarah Johnson",
+      name: "Maksym Bezverkhyi",
       role: "CEO & Founder",
-      bio: "15+ years experience in AI and Machine Learning",
+      bio: "AI Project Manager",
+      image: "/assets/team/maksym.png",
+      linkedin: "https://www.linkedin.com/in/maxim-bezverkhiy/"
     },
     {
-      name: "Michael Chen",
+      name: "Oleksandr Kulykov",
       role: "CTO",
-      bio: "Former Tech Lead at major AI companies",
+      bio: "Fullstack Developer",
+      image: "/assets/team/oleksandr.jpg",
+      linkedin: "https://www.linkedin.com/in/oleksandr-kulykov/"
     },
     {
-      name: "Emily Rodriguez",
-      role: "Head of AI Research",
-      bio: "PhD in Computer Science, AI specialist",
+      name: "Liudmyla (Elle) Podolska",
+      role: "AI Creator",
+      bio: "Innovative 3D Designer",
+      image: "/assets/team/liudmyla.jpg",
+      linkedin: "https://www.linkedin.com/in/liudmyla-elle-podolska-644051220/"
     },
   ];
 
@@ -270,7 +277,7 @@ const About = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">About NeuroGen Lab</h1>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Pioneering the future of AI technology to transform businesses worldwide
+              Pioneering the future of AI Technology to Transform Businesses Worldwide
             </p>
           </div>
 
@@ -317,7 +324,7 @@ const About = () => {
             <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed">
               At NeuroGen Lab, we're committed to making advanced AI technology accessible to
               businesses of all sizes. Our mission is to democratize artificial intelligence and
-              empower organizations to achieve their full potential through innovative AI solutions.
+              empower organizations to achieve their full potential through innovative AI Solutions.
             </p>
           </div>
 
@@ -332,11 +339,36 @@ const About = () => {
                   key={index}
                   className="relative group bg-gray-900/50 rounded-xl overflow-hidden hover:bg-gray-900/70 transition-all duration-300"
                 >
-                  <div className="aspect-square overflow-hidden bg-gray-800 flex items-center justify-center text-gray-400 p-4 text-center">
-                    [Фотография {member.name} - {member.role}]
+                  <div className="aspect-square overflow-hidden bg-gray-800">
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={`${member.name} - ${member.role}`}
+                        width={400}
+                        height={400}
+                        className="object-cover w-full h-full"
+                      />
+                    ) : (
+                      <div className="flex items-center justify-center text-gray-400 p-4 text-center h-full">
+                        [Фотография {member.name} - {member.role}]
+                      </div>
+                    )}
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                    <div className="flex justify-between items-start mb-1">
+                      <h3 className="text-xl font-semibold">{member.name}</h3>
+                      {member.linkedin && (
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-emerald-400 hover:text-emerald-300 transition-colors"
+                          aria-label={`LinkedIn profile of ${member.name}`}
+                        >
+                          <Linkedin className="w-5 h-5" />
+                        </a>
+                      )}
+                    </div>
                     <p className="text-emerald-400 text-sm mb-3">{member.role}</p>
                     <p className="text-gray-400">{member.bio}</p>
                   </div>
