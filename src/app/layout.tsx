@@ -4,7 +4,7 @@ import "./globals.css";
 import "../styles/index.css";
 import "../styles/animations.css";
 import "../styles/calendar.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { BlogProvider } from "../context/BlogContext";
 import LoadingSpinner from "../components/chat/LoadingSpinner";
 import { GoogleTagManager } from "@next/third-parties/google";
@@ -14,10 +14,16 @@ import React from "react";
 import { LanguageProvider } from "../context/LanguageContext";
 import { cookies } from "next/headers";
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
     template: '%s | NeuroGen Lab',
-    default: 'NeuroGen Lab - AI Solutions & Intelligent Automation',
+    default: 'NeuroGen Lab - AI Solutions & Intelligent Automation'
   },
   description: 'Transforming businesses with cutting-edge AI solutions and intelligent automation.',
   keywords: ['AI', 'Artificial Intelligence', 'Automation', 'Business Solutions', 'NeuroGen Lab'],
@@ -30,9 +36,18 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '23x23', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '38x38', type: 'image/png' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png' }
+    ],
+    other: [
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' }
+    ]
   },
   viewport: {
     width: 'device-width',
@@ -69,7 +84,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         <link rel="alternate" hrefLang="x-default" href="https://neurogenlab.de/" />
-        <link rel="alternate" hrefLang="en" href="https://neurogenlab.de/en/" />
+        {/* <link rel="alternate" hrefLang="en" href="https://neurogenlab.de/en/" /> */}
         <link rel="alternate" hrefLang="de" href="https://neurogenlab.de/" />
       </head>
       <GoogleTagManager gtmId="GTM-MZNC2SFX" />
