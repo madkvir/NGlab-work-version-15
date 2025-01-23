@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "/about-us",
     images: [
       {
-        url: "/assets/images/about-us-banner.jpg",
+        url: "/assets/images/about-us-banner.png",
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab Team Working on AI Innovation",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: "About NeuroGen Lab - Innovating AI Technology",
     description:
       "Learn more about NeuroGen Lab, our mission, and the leadership team driving innovation in AI technology.",
-    images: ["/assets/images/about-us-banner.jpg"],
+    images: ["/assets/images/about-us-banner.png"],
   },
   authors: [{ name: "NeuroGen Lab Team" }],
   alternates: {
@@ -101,7 +101,7 @@ const articleLd = {
     name: "NeuroGen Lab",
     logo: {
       "@type": "ImageObject",
-      url: "https://neurogenlab.de/assets/logo.png",
+      url: "https://neurogenlab.de/logo.png",
     },
   },
   datePublished: "2024-01-01",
