@@ -23,7 +23,7 @@ const testimonials = [
   },
   {
     quote: "Product search acceleration by 50% and a 45% reduction in support workload",
-    problem: "Customers struggled to navigate the website’s product range, and the support team couldn’t handle the increasing volume of inquiries",
+    problem: "Customers struggled to navigate the website's product range, and the support team couldn't handle the increasing volume of inquiries",
     solution: "Implementation of an AI-powered chatbot with smart catalog search and automated consultations",
     result: "Within 2 months, 80% of inquiries were handled by the AI agent, and customer product search time was reduced threefold",
     // author: "Александр Петров",
@@ -347,6 +347,10 @@ const About = () => {
                         width={400}
                         height={400}
                         className="object-cover w-full h-full"
+                        onError={(e) => {
+                          console.error(`Error loading image for ${member.name}`);
+                          e.currentTarget.src = '/assets/team/default-avatar.webp';
+                        }}
                       />
                     ) : (
                       <div className="flex items-center justify-center text-gray-400 p-4 text-center h-full">

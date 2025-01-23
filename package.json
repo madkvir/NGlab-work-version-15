@@ -23,6 +23,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@tinymce/tinymce-react": "^4.3.2",
     "@types/react-helmet": "^6.1.11",
+    "amqplib": "^0.10.3",
     "axios": "^1.6.7",
     "clsx": "^2.0.0",
     "cors": "^2.8.5",
