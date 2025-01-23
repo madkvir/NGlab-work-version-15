@@ -22,14 +22,14 @@ const testimonials = [
     logo: "/assets/companies/rozumniki.svg"
   },
   {
-    quote: "Автоматизация поддержки снизила нагрузку на 40%",
-    problem: "Служба поддержки не справлялась с растущим потоком обращений",
-    solution: "Внедрение AI-чатбота первой линии поддержки",
-    result: "За 3 месяца автоматизировано 65% типовых запросов",
-    author: "Александр Петров",
-    position: "Head of Customer Service",
-    company: "TechSupport Pro",
-    industry: "IT Services",
+    quote: "Product search acceleration by 50% and a 45% reduction in support workload",
+    problem: "Customers struggled to navigate the website’s product range, and the support team couldn’t handle the increasing volume of inquiries",
+    solution: "Implementation of an AI-powered chatbot with smart catalog search and automated consultations",
+    result: "Within 2 months, 80% of inquiries were handled by the AI agent, and customer product search time was reduced threefold",
+    // author: "Александр Петров",
+    position: "Head of Sales",
+    company: "Logistic Forklift",
+    industry: "Sale and rental of special equipment",
     logo: "/assets/companies/pogruzchik.svg"
   },
   {
