@@ -49,11 +49,6 @@ export const metadata: Metadata = {
       { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' }
     ]
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
   robots: {
     index: true,
     follow: true,
