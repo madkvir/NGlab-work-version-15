@@ -36,11 +36,11 @@ const jsonLd = {
   name: "NeuroGen Lab",
   description: "Pioneering the future of AI technology to transform businesses worldwide",
   url: "https://neurogenlab.de",
-  foundingDate: "2020",
+  foundingDate: "2024",
   employees: [
     {
       "@type": "Person",
-      name: "Sarah Johnson",
+      name: "Maksym Bezverkhyi",
       jobTitle: "CEO & Founder",
     }
   ]
