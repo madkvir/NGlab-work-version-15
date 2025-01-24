@@ -61,7 +61,7 @@ const testimonials = [
     result: "Overall request processing time decreased by 70%, and customer satisfaction increased by 40%. The solution reduced staff workload and improved their efficiency",
     // author: "Игорь Васильев",
     position: "Sales Manager",
-    company: " Gorrud’s Auto Group.",
+    company: " Gorrud's Auto Group.",
     industry: "Automotive Sales",
     logo: "/assets/companies/auto_group.svg"
   },
@@ -211,10 +211,38 @@ const TestimonialsSection = () => {
 
 const About = () => {
   const stats = [
-    { icon: <Users className="w-6 h-6" />, value: "56+", label: "Active Clients" },
-    { icon: <Award className="w-6 h-6" />, value: "99.9%", label: "Uptime" },
-    { icon: <Globe className="w-6 h-6" />, value: "5+", label: "Countries" },
-    { icon: <Building className="w-6 h-6" />, value: "630+", label: "Enterprise Solutions Delivered" },
+    { 
+      icon: <Users className="w-6 h-6" />, 
+      endValue: 56, 
+      suffix: "+", 
+      label: "Active Clients",
+      duration: 3000,
+      easing: 'easeOutElastic'
+    },
+    { 
+      icon: <Award className="w-6 h-6" />, 
+      endValue: 99.9, 
+      suffix: "%", 
+      label: "Uptime",
+      duration: 3500,
+      easing: 'easeOutQuart'
+    },
+    { 
+      icon: <Globe className="w-6 h-6" />, 
+      endValue: 5, 
+      suffix: "+", 
+      label: "Countries",
+      duration: 5000,
+      easing: 'easeOutBounce'
+    },
+    { 
+      icon: <Building className="w-6 h-6" />, 
+      endValue: 630, 
+      suffix: "+", 
+      label: "Enterprise Solutions Delivered",
+      duration: 4000,
+      easing: 'easeOutExpo'
+    },
   ];
 
   const history = [
@@ -265,6 +293,93 @@ const About = () => {
     },
   ];
 
+  const [isVisible, setIsVisible] = useState(false);
+  const [counters, setCounters] = useState(stats.map(() => 0));
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [animationCompleted, setAnimationCompleted] = useState(false);
+
+  const easingFunctions = {
+    easeOutElastic: (t: number) => {
+      const p = 0.3;
+      return Math.pow(2, -10 * t) * Math.sin((t - p / 4) * (2 * Math.PI) / p) + 1;
+    },
+    easeOutQuart: (t: number) => 1 - Math.pow(1 - t, 4),
+    easeOutBounce: (t: number) => {
+      const n1 = 7.5625;
+      const d1 = 2.75;
+      if (t < 1 / d1) return n1 * t * t;
+      if (t < 2 / d1) return n1 * (t -= 1.5 / d1) * t + 0.75;
+      if (t < 2.5 / d1) return n1 * (t -= 2.25 / d1) * t + 0.9375;
+      return n1 * (t -= 2.625 / d1) * t + 0.984375;
+    },
+    easeOutExpo: (t: number) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t),
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          if (!hasAnimated) {
+            setHasAnimated(true);
+          }
+        }
+      },
+      { 
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
+    );
+
+    const statsSection = document.getElementById('stats-section');
+    if (statsSection) {
+      observer.observe(statsSection);
+    }
+
+    return () => {
+      if (statsSection) {
+        observer.unobserve(statsSection);
+      }
+    };
+  }, [hasAnimated]);
+
+  useEffect(() => {
+    if (!isVisible || animationCompleted) return;
+
+    let completedCounters = 0;
+    
+    stats.forEach((stat, index) => {
+      const steps = 60;
+      const stepDuration = stat.duration / steps;
+      let currentStep = 0;
+
+      const timer = setInterval(() => {
+        if (currentStep === steps) {
+          clearInterval(timer);
+          completedCounters++;
+          if (completedCounters === stats.length) {
+            setAnimationCompleted(true);
+          }
+          return;
+        }
+
+        const progress = currentStep / steps;
+        const easedProgress = easingFunctions[stat.easing as keyof typeof easingFunctions](progress);
+        
+        setCounters(prev => {
+          const newCounters = [...prev];
+          const newValue = stat.endValue * easedProgress;
+          newCounters[index] = Number(newValue.toFixed(1));
+          return newCounters;
+        });
+
+        currentStep++;
+      }, stepDuration);
+
+      return () => clearInterval(timer);
+    });
+  }, [isVisible, animationCompleted]);
+
   return (
     <div className="min-h-screen bg-[#0B0F19] text-white">
       <Navbar />
@@ -284,14 +399,16 @@ const About = () => {
           <Divider />
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+          <div id="stats-section" className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
             {stats.map((stat, index) => (
               <div
                 key={index}
                 className="relative group bg-gray-900/50 rounded-xl p-6 text-center hover:bg-gray-900/70 transition-all duration-300"
               >
                 <div className="text-emerald-400 mb-3 flex justify-center">{stat.icon}</div>
-                <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-2xl font-bold text-white mb-1">
+                  {Math.round(counters[index]).toLocaleString()}{stat.suffix}
+                </div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
               </div>
             ))}
