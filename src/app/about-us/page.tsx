@@ -84,6 +84,38 @@ const TestimonialsSection = () => {
   const { language } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  // Минимальное расстояние для свайпа
+  const minSwipeDistance = 50;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      handleNext();
+    }
+    if (isRightSwipe) {
+      handlePrev();
+    }
+
+    // Сброс значений
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   useEffect(() => {
     // Устанавливаем начальную ширину окна
@@ -153,13 +185,16 @@ const TestimonialsSection = () => {
           </button>
           <div className="overflow-hidden">
             <div 
-              className="flex flex-row-reverse transition-transform duration-1500 ease-in-out"
+              className="flex flex-row-reverse transition-transform duration-500 ease-in-out touch-pan-y"
               style={{ transform: `translateX(${currentIndex * getSlideWidth()}%)` }}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
               {aboutTranslations[language].testimonials.items.map((item, index) => (
                 <div 
                   key={index} 
-                  className="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-2 md:px-1 lg:px-4"
+                  className="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-2 md:px-1 lg:px-4 select-none"
                 >
                   <div className="bg-gray-900/50 rounded-xl p-4 h-full hover:bg-gray-900/70 transition-all duration-300">
                     <div className="flex items-center mb-4">
