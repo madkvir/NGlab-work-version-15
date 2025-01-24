@@ -747,8 +747,8 @@ export const pricingTranslations = {
     customDev: {
       title: "Custom Development",
       subtitle: "Tailored AI Solutions",
-      startingFrom: "Starting from",
-      price: "Custom Quote",
+      // startingFrom: "Starting from",
+      // price: "Custom Quote",
       features: [
         "Custom AI model development",
         "Dedicated development team",
@@ -783,8 +783,8 @@ export const pricingTranslations = {
     customDev: {
       title: "Individuelle Entwicklung",
       subtitle: "Maßgeschneiderte KI-Lösungen",
-      startingFrom: "Ab",
-      price: "Individueller Preis",
+      // startingFrom: "Ab",
+      // price: "Individueller Preis",
       features: [
         "Entwicklung individueller KI-Modelle",
         "Dediziertes Entwicklerteam",
@@ -819,8 +819,8 @@ export const pricingTranslations = {
     customDev: {
       title: "Desarrollo Personalizado",
       subtitle: "Soluciones de IA a medida",
-      startingFrom: "Desde",
-      price: "Precio personalizado",
+      // startingFrom: "Desde",
+      // price: "Precio personalizado",
       features: [
         "Soluciones a Medida",
         "Desarrollo Ágil",
@@ -858,8 +858,8 @@ export const pricingTranslations = {
     customDev: {
       title: "Индивидуальная разработка",
       subtitle: "Индивидуальные ИИ-решения",
-      startingFrom: "От",
-      price: "Индивидуальная цена",
+      // startingFrom: "От",
+      // price: "Индивидуальная цена",
       features: [
         "Разработка индивидуальных ИИ-моделей",
         "Выделенная команда разработчиков",
@@ -894,8 +894,8 @@ export const pricingTranslations = {
     customDev: {
       title: "Індивідуальна розробка",
       subtitle: "Індивідуальні ШІ-рішення",
-      startingFrom: "Від",
-      price: "Індивідуальна ціна",
+      // startingFrom: "Від",
+      // price: "Індивідуальна ціна",
       features: [
         "Розробка індивідуальних ШІ-моделей",
         "Виділена команда розробників",
