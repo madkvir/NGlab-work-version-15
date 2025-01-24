@@ -21,7 +21,8 @@ export const aboutTranslations = {
           result: "The work of managers has been optimized by delegating typical inquiries to the knowledge base, freeing up their time for handling complex requests.",
           position: "Head of Customer Service",
           company: "Edugames Rozumniki",
-          industry: "Interactive Education"
+          industry: "Interactive Education",
+          logo: "/assets/companies/rozumniki.svg"
         },
         {
           quote: "Product search acceleration by 50% and a 45% reduction in support workload",
@@ -30,7 +31,8 @@ export const aboutTranslations = {
           result: "Within 2 months, 80% of inquiries were handled by the AI agent, and customer product search time was reduced threefold",
           position: "Head of Sales",
           company: "Logistic Forklift",
-          industry: "Sale and rental of special equipment"
+          industry: "Sale and rental of special equipment",
+          logo: "/assets/companies/pogruzchik.svg"
         },
         {
           quote: "Increase in the average ticket by 30% and improvement in customer loyalty",
@@ -39,7 +41,8 @@ export const aboutTranslations = {
           result: "A 50% increase in repeat visits and a 70% reduction in booking processing time within the first four months",
           position: "Founder",
           company: "Epil Care",
-          industry: "Beauty and Health"
+          industry: "Beauty and Health",
+          logo: "/assets/companies/epil.svg"
         },
         {
           quote: "Doubling Lead-to-Sale conversion rates through automation",
@@ -48,7 +51,8 @@ export const aboutTranslations = {
           result: "Conversion rates increased from 7% to 14-21% within the first 6 months, reduced staff workload, and improved customer satisfaction",
           position: "Sales Manager",
           company: "Ken Shaw Lexus",
-          industry: "Automotive Sales"
+          industry: "Automotive Sales",
+          logo: "/assets/companies/lexus.svg"
         },
         {
           quote: "Reducing request processing time by 70% through automation",
@@ -57,7 +61,8 @@ export const aboutTranslations = {
           result: "Overall request processing time decreased by 70%, and customer satisfaction increased by 40%. The solution reduced staff workload and improved their efficiency",
           position: "Sales Manager",
           company: "Gorrud's Auto Group",
-          industry: "Automotive Sales"
+          industry: "Automotive Sales",
+          logo: "/assets/companies/auto_group.svg"
         },
         {
           quote: "Enhancing customer engagement efficiency by 50% with an all-in-one solution",
@@ -66,7 +71,8 @@ export const aboutTranslations = {
           result: "Lead-to-sale conversion rates increased by 30%, missed inquiries dropped to zero, and team efficiency improved thanks to the automation of routine tasks",
           position: "CEO",
           company: "Walkerton Toyota",
-          industry: "Automotive Sales"
+          industry: "Automotive Sales",
+          logo: "/assets/companies/toyota.svg"
         }
       ]
     },
@@ -125,7 +131,8 @@ export const aboutTranslations = {
           result: "Die Arbeit der Manager wurde durch die Delegation typischer Anfragen an die Wissensdatenbank optimiert, wodurch Zeit für die Bearbeitung komplexer Anfragen frei wurde.",
           position: "Leiter Kundenservice",
           company: "Edugames Rozumniki",
-          industry: "Interaktive Bildung"
+          industry: "Interaktive Bildung",
+          logo: "/assets/companies/rozumniki.svg"
         },
         {
           quote: "50% schnellere Produktsuche und 45% weniger Support-Arbeitsaufwand",
@@ -134,7 +141,8 @@ export const aboutTranslations = {
           result: "Innerhalb von 2 Monaten wurden 80% der Anfragen vom KI-Agenten bearbeitet und die Produktsuchzeit der Kunden wurde um das Dreifache reduziert",
           position: "Vertriebsleiter",
           company: "Logistic Forklift",
-          industry: "Verkauf und Vermietung von Spezialausrüstung"
+          industry: "Verkauf von Spezialausrüstung",
+          logo: "/assets/companies/pogruzchik.svg"
         },
         {
           quote: "30% Steigerung des durchschnittlichen Tickets und Verbesserung der Kundenbindung",
@@ -143,7 +151,8 @@ export const aboutTranslations = {
           result: "50% mehr Wiederholungsbesuche und 70% weniger Buchungsbearbeitungszeit in den ersten vier Monaten",
           position: "Gründer",
           company: "Epil Care",
-          industry: "Schönheit und Gesundheit"
+          industry: "Schönheit und Gesundheit",
+          logo: "/assets/companies/epil.svg"
         },
         {
           quote: "Verdopplung der Lead-to-Sale Konversionsraten durch Automatisierung",
@@ -152,7 +161,8 @@ export const aboutTranslations = {
           result: "Die Konversionsraten stiegen in den ersten 6 Monaten von 7% auf 14-21%, die Arbeitsbelastung des Personals wurde reduziert und die Kundenzufriedenheit verbessert",
           position: "Verkaufsleiter",
           company: "Ken Shaw Lexus",
-          industry: "Automobilverkauf"
+          industry: "Automobilverkauf",
+          logo: "/assets/companies/lexus.svg"
         },
         {
           quote: "70% Reduzierung der Bearbeitungszeit durch Automatisierung",
@@ -161,7 +171,8 @@ export const aboutTranslations = {
           result: "Die gesamte Bearbeitungszeit sank um 70%, und die Kundenzufriedenheit stieg um 40%. Die Lösung reduzierte die Arbeitsbelastung des Personals und verbesserte ihre Effizienz",
           position: "Verkaufsleiter",
           company: "Gorrud's Auto Group",
-          industry: "Automobilverkauf"
+          industry: "Automobilverkauf",
+          logo: "/assets/companies/auto_group.svg"
         },
         {
           quote: "50% Steigerung der Kundeninteraktionseffizienz mit einer All-in-One-Lösung",
@@ -170,7 +181,8 @@ export const aboutTranslations = {
           result: "Lead-to-Sale Konversionsraten stiegen um 30%, verpasste Anfragen sanken auf null und die Teameffizienz verbesserte sich dank der Automatisierung von Routineaufgaben",
           position: "Geschäftsführer",
           company: "Walkerton Toyota",
-          industry: "Automobilverkauf"
+          industry: "Automobilverkauf",
+          logo: "/assets/companies/toyota.svg"
         }
       ]
     },
@@ -229,7 +241,8 @@ export const aboutTranslations = {
           result: "El trabajo de los gerentes se ha optimizado delegando consultas típicas a la base de conocimientos, liberando su tiempo para manejar solicitudes complejas.",
           position: "Jefe de Servicio al Cliente",
           company: "Edugames Rozumniki",
-          industry: "Educación Interactiva"
+          industry: "Educación Interactiva",
+          logo: "/assets/companies/rozumniki.svg"
         },
         {
           quote: "Aceleración de búsqueda de productos en un 50% y reducción del 45% en carga de soporte",
@@ -238,7 +251,8 @@ export const aboutTranslations = {
           result: "En 2 meses, el 80% de las consultas fueron manejadas por el agente de IA y el tiempo de búsqueda de productos se redujo a un tercio",
           position: "Jefe de Ventas",
           company: "Logistic Forklift",
-          industry: "Venta y alquiler de equipos especiales"
+          industry: "Venta y alquiler de equipos especiales",
+          logo: "/assets/companies/pogruzchik.svg"
         },
         {
           quote: "Aumento del 30% en el ticket promedio y mejora en la lealtad del cliente",
@@ -247,7 +261,8 @@ export const aboutTranslations = {
           result: "Un aumento del 50% en visitas repetidas y una reducción del 70% en el tiempo de procesamiento de reservas en los primeros cuatro meses",
           position: "Fundador",
           company: "Epil Care",
-          industry: "Belleza y Salud"
+          industry: "Belleza y Salud",
+          logo: "/assets/companies/epil.svg"
         },
         {
           quote: "Duplicación de las tasas de conversión de Leads a Ventas mediante automatización",
@@ -256,7 +271,8 @@ export const aboutTranslations = {
           result: "Las tasas de conversión aumentaron del 7% al 14-21% en los primeros 6 meses, se redujo la carga de trabajo del personal y mejoró la satisfacción del cliente",
           position: "Gerente de Ventas",
           company: "Ken Shaw Lexus",
-          industry: "Venta de Automóviles"
+          industry: "Venta de Automóviles",
+          logo: "/assets/companies/lexus.svg"
         },
         {
           quote: "Reducción del tiempo de procesamiento de solicitudes en un 70% mediante automatización",
@@ -265,7 +281,8 @@ export const aboutTranslations = {
           result: "El tiempo general de procesamiento de solicitudes disminuyó en un 70% y la satisfacción del cliente aumentó en un 40%. La solución redujo la carga de trabajo del personal y mejoró su eficiencia",
           position: "Gerente de Ventas",
           company: "Gorrud's Auto Group",
-          industry: "Venta de Automóviles"
+          industry: "Venta de Automóviles",
+          logo: "/assets/companies/auto_group.svg"
         },
         {
           quote: "Mejora de la eficiencia de participación del cliente en un 50% con una solución todo en uno",
@@ -274,7 +291,8 @@ export const aboutTranslations = {
           result: "Las tasas de conversión de leads a ventas aumentaron un 30%, las consultas perdidas se redujeron a cero y la eficiencia del equipo mejoró gracias a la automatisación de tareas rutinarias",
           position: "Director Ejecutivo",
           company: "Walkerton Toyota",
-          industry: "Venta de Automóviles"
+          industry: "Venta de Automóviles",
+          logo: "/assets/companies/toyota.svg"
         }
       ]
     },
@@ -333,7 +351,8 @@ export const aboutTranslations = {
           result: "Работа менеджеров оптимизирована путем делегирования типовых запросов базе знаний, освободив их время для обработки сложных обращений.",
           position: "Руководитель службы поддержки",
           company: "Edugames Rozumniki",
-          industry: "Интерактивное образование"
+          industry: "Интерактивное образование",
+          logo: "/assets/companies/rozumniki.svg"
         },
         {
           quote: "Ускорение поиска товаров на 50% и снижение нагрузки на поддержку на 45%",
@@ -342,7 +361,8 @@ export const aboutTranslations = {
           result: "За 2 месяца 80% запросов обрабатывались ИИ-агентом, а время поиска товаров клиентами сократилось втрое",
           position: "Руководитель отдела продаж",
           company: "Logistic Forklift",
-          industry: "Продажа и аренда спецтехники"
+          industry: "Продажа и аренда спецтехники",
+          logo: "/assets/companies/pogruzchik.svg"
         },
         {
           quote: "Увеличение среднего чека на 30% и повышение лояльности клиентов",
@@ -351,7 +371,8 @@ export const aboutTranslations = {
           result: "Увеличение повторных визитов на 50% и сокращение времени обработки бронирований на 70% в течение первых четырех месяцев",
           position: "Основатель",
           company: "Epil Care",
-          industry: "Красота и Здоровье"
+          industry: "Красота и Здоровье",
+          logo: "/assets/companies/epil.svg"
         },
         {
           quote: "Удвоение конверсии от лида до продажи через автоматизацию",
@@ -360,7 +381,8 @@ export const aboutTranslations = {
           result: "Конверсия выросла с 7% до 14-21% в течение первых 6 месяцев, снизилась нагрузка на персонал и повысилась удовлетворенность клиентов",
           position: "Менеджер по продажам",
           company: "Ken Shaw Lexus",
-          industry: "Продажа автомобилей"
+          industry: "Продажа автомобилей",
+          logo: "/assets/companies/lexus.svg"
         },
         {
           quote: "Сокращение времени обработки запросов на 70% через автоматизацию",
@@ -369,7 +391,8 @@ export const aboutTranslations = {
           result: "Общее время обработки запросов сократилось на 70%, а удовлетворенность клиентов выросла на 40%. Решение снизило нагрузку на персонал и повысило их эффективность",
           position: "Менеджер по продажам",
           company: "Gorrud's Auto Group",
-          industry: "Продажа автомобилей"
+          industry: "Продажа автомобилей",
+          logo: "/assets/companies/auto_group.svg"
         },
         {
           quote: "Повышение эффективности взаимодействия с клиентами на 50% с помощью комплексного решения",
@@ -378,7 +401,8 @@ export const aboutTranslations = {
           result: "Конверсия лидов в продажи выросла на 30%, количество пропущенных обращений снизилось до нуля, а эффективность команды повысилась благодаря автоматизации рутинных задач",
           position: "Генеральный директор",
           company: "Walkerton Toyota",
-          industry: "Продажа автомобилей"
+          industry: "Продажа автомобилей",
+          logo: "/assets/companies/toyota.svg"
         }
       ]
     },
@@ -437,7 +461,8 @@ export const aboutTranslations = {
           result: "Роботу менеджерів оптимізовано шляхом делегування типових запитів базі знань, звільнивши їх час для обробки складних звернень.",
           position: "Керівник служби підтримки",
           company: "Edugames Rozumniki",
-          industry: "Інтерактивна освіта"
+          industry: "Інтерактивна освіта",
+          logo: "/assets/companies/rozumniki.svg"
         },
         {
           quote: "Прискорення пошуку товарів на 50% та зниження навантаження на підтримку на 45%",
@@ -446,7 +471,8 @@ export const aboutTranslations = {
           result: "За 2 місяці 80% запитів оброблялися ШІ-агентом, а час пошуку товарів клієнтами скоротився втричі",
           position: "Керівник відділу продажів",
           company: "Logistic Forklift",
-          industry: "Продаж та оренда спецтехніки"
+          industry: "Продаж та оренда спецтехніки",
+          logo: "/assets/companies/pogruzchik.svg"
         },
         {
           quote: "Збільшення середнього чеку на 30% та підвищення лояльності клієнтів",
@@ -455,7 +481,8 @@ export const aboutTranslations = {
           result: "Збільшення повторних візитів на 50% та скорочення часу обробки бронювань на 70% протягом перших чотирьох місяців",
           position: "Засновник",
           company: "Epil Care",
-          industry: "Краса та Здоров'я"
+          industry: "Краса та Здоров'я",
+          logo: "/assets/companies/epil.svg"
         },
         {
           quote: "Подвоєння конверсії від ліда до продажу через автоматизацію",
@@ -464,7 +491,8 @@ export const aboutTranslations = {
           result: "Конверсія зросла з 7% до 14-21% протягом перших 6 місяців, кількість пропущених звернень знизилася до нуля, а ефективність команди підвищилася завдяки автоматизації рутинних завдань",
           position: "Генеральний директор",
           company: "Walkerton Toyota",
-          industry: "Продаж автомобілів"
+          industry: "Продаж автомобілів",
+          logo: "/assets/companies/toyota.svg"
         },
         {
           quote: "Скорочення часу обробки запитів на 70% через автоматизацію",
@@ -473,7 +501,8 @@ export const aboutTranslations = {
           result: "Загальний час обробки запитів скоротився на 70%, а задоволеність клієнтів зросла на 40%. Рішення знизило навантаження на персонал та підвищило їх ефективність",
           position: "Менеджер з продажу",
           company: "Gorrud's Auto Group",
-          industry: "Продаж автомобілів"
+          industry: "Продаж автомобілів",
+          logo: "/assets/companies/auto_group.svg"
         },
         {
           quote: "Підвищення ефективності взаємодії з клієнтами на 50% за допомогою комплексного рішення",
@@ -482,7 +511,8 @@ export const aboutTranslations = {
           result: "Конверсія лідів у продажі зросла на 30%, кількість пропущених звернень знизилася до нуля, а ефективність команди підвищилася завдяки автоматизації рутинних завдань",
           position: "Генеральний директор",
           company: "Walkerton Toyota",
-          industry: "Продаж автомобілів"
+          industry: "Продаж автомобілів",
+          logo: "/assets/companies/toyota.svg"
         }
       ]
     },
