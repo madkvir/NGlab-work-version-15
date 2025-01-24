@@ -14,11 +14,11 @@ const testimonials = [
     quote: "Reduced query processing time by 80%",
     problem: "Long response times and operator overload were slowing down customer support and reducing client satisfaction",
     solution: "Implementation of an AI Agent to automate routine tasks and provide 24/7 customer support",
-    result: "Integration took 3 weeks, query processing time decreased by 80%, and customer satisfaction increased by 35%",
+    result: "The work of managers has been optimized by delegating typical inquiries to the knowledge base, freeing up their time for handling complex requests.",
     // author: "Мария Иванова",
     position: "Head of Customer Service",
     company: "Edugames Rozumniki",
-    industry: "Interactive education",
+    industry: "Interactive Education",
     logo: "/assets/companies/rozumniki.svg"
   },
   {
@@ -33,47 +33,47 @@ const testimonials = [
     logo: "/assets/companies/pogruzchik.svg"
   },
   {
-    quote: "Повышение эффективности производства на 35%",
-    problem: "Высокий процент брака и простои оборудования",
-    solution: "Предиктивная аналитика на базе AI",
-    result: "Снижение брака на 80% за первые 6 месяцев",
-    author: "Дмитрий Сидоров",
-    position: "Технический директор",
-    company: "ПромТех",
-    industry: "Производство",
+    quote: "Increase in the average ticket by 30% and improvement in customer loyalty",
+    problem: "Difficulties in accurately matching services to customer needs and a high workload on administrators",
+    solution: "Implementation of an AI-powered chatbot that analyzes customer preferences, recommends services, announces prices and discounts, and automatically manages appointments",
+    result: "A 50% increase in repeat visits and a 70% reduction in booking processing time within the first four months",
+    // author: "Дмитрий Сидоров",
+    position: "Founder",
+    company: "Epil Care",
+    industry: "Beauty and Health",
     logo: "/assets/companies/epil.svg"
   },
   {
-    quote: "Рост конверсии продаж на 25%",
-    problem: "Низкая эффективность работы отдела продаж",
-    solution: "AI-система анализа клиентских данных",
-    result: "Увеличение среднего чека на 30% за 4 месяца",
-    author: "Елена Смирнова",
-    position: "Коммерческий директор",
-    company: "SalesPro",
-    industry: "Retail",
+    quote: "Doubling Lead-to-Sale conversion rates through automation",
+    problem: "Low website visitor conversion rates and significant workload on managers due to handling routine inquiries",
+    solution: "The Inbound Sales Agent chatbot operates 24/7, engages with website visitors, answers questions about available vehicles, financial and legal options, and schedules test drives. Integration with the CRM enabled automated lead transfer to the sales team",
+    result: "Conversion rates increased from 7% to 14-21% within the first 6 months, reduced staff workload, and improved customer satisfaction",
+    // author: "Елена Смирнова",
+    position: "Sales Manager",
+    company: "Ken Shaw Lexus",
+    industry: "Automotive Sales",
     logo: "/assets/companies/lexus.svg"
   },
   {
-    quote: "Экономия 150K € на энергопотреблении",
-    problem: "Высокие затраты на электроэнергию в офисных помещениях",
-    solution: "AI-система управления энергопотреблением",
-    result: "ROI достигнут за 8 месяцев использования",
-    author: "Игорь Васильев",
-    position: "Facility Manager",
-    company: "EcoSmart Buildings",
-    industry: "Управление недвижимостью",
+    quote: "Reducing request processing time by 70% through automation",
+    problem: "Long response times for customer inquiries about service and parts, high costs of manual request handling, and lack of 24/7 support",
+    solution: "Deployment of the Inbound Service & Parts Agent — an AI chatbot that handles service bookings, provides parts information, and calculates costs, all while integrating seamlessly with the CRM",
+    result: "Overall request processing time decreased by 70%, and customer satisfaction increased by 40%. The solution reduced staff workload and improved their efficiency",
+    // author: "Игорь Васильев",
+    position: "Sales Manager",
+    company: " Gorrud’s Auto Group.",
+    industry: "Automotive Sales",
     logo: "/assets/companies/auto_group.svg"
   },
   {
-    quote: "Оптимизация HR-процессов на 45%",
-    problem: "Длительный процесс подбора персонала",
-    solution: "AI-платформа для рекрутинга",
-    result: "Сокращение времени закрытия вакансий на 60%",
-    author: "Анна Козлова",
-    position: "HR Director",
-    company: "StaffMaster",
-    industry: "HR Tech",
+    quote: "Enhancing customer engagement efficiency by 50% with an all-in-one solution",
+    problem: "Low lead conversion rates, missed opportunities due to the lack of a unified customer management tool, and high workload for sales and service staff",
+    solution: "The comprehensive Auto Bundle solution, including lead management, automated customer communication via chatbots, multi-channel outreach (WhatsApp, SMS, email), CRM integration, and personalized recommendations based on data analysis",
+    result: "Lead-to-sale conversion rates increased by 30%, missed inquiries dropped to zero, and team efficiency improved thanks to the automation of routine tasks",
+    // author: "Анна Козлова",
+    position: "CEO",
+    company: "Walkerton Toyota",
+    industry: "Automotive Sales",
     logo: "/assets/companies/toyota.svg"
   }
 ];
@@ -189,7 +189,7 @@ const TestimonialsSection = () => {
 </p>
                     </blockquote>
                     <footer className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-800">
-                      <p className="font-semibold text-sm md:text-base">{item.author}</p>
+                      {/* <p className="font-semibold text-sm md:text-base">{item.author}</p> */}
                       <p className="text-xs md:text-sm text-gray-400">{item.position}</p>
                     </footer>
                   </div>

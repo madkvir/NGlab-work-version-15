@@ -84,7 +84,7 @@ const jsonLd = {
   ],
   sameAs: [
     "https://www.linkedin.com/company/neurogen-lab",
-    "https://twitter.com/neurogenlab",
+    "https://x.com/neurogenlab",
   ],
 };
 
