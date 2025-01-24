@@ -8,6 +8,8 @@ import Divider from "../../components/Divider";
 import ScrollToTop from "../../components/ScrollToTop";
 import Footer from "../../components/Footer";
 import Image from "next/image";
+import { aboutTranslations } from "../../locales/aboutTranslations";
+import { useLanguage } from "../../context/LanguageContext";
 
 const testimonials = [
   {
@@ -79,6 +81,7 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
+  const { language } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
 
@@ -137,7 +140,9 @@ const TestimonialsSection = () => {
 
   return (
     <div className="mt-16">
-      <h2 className="text-2xl font-bold text-center mb-8">What Our Clients Say</h2>
+      <h2 className="text-2xl font-bold text-center mb-8">
+        {aboutTranslations[language].testimonials.title}
+      </h2>
       <div className="relative md:container md:mx-auto">
         <div className="md:max-w-[90%] md:mx-auto w-full relative">
           <button 
@@ -151,7 +156,7 @@ const TestimonialsSection = () => {
               className="flex flex-row-reverse transition-transform duration-1500 ease-in-out"
               style={{ transform: `translateX(${currentIndex * getSlideWidth()}%)` }}
             >
-              {testimonials.map((item, index) => (
+              {aboutTranslations[language].testimonials.items.map((item, index) => (
                 <div 
                   key={index} 
                   className="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-2 md:px-1 lg:px-4"
@@ -177,20 +182,32 @@ const TestimonialsSection = () => {
                       </div>
                     </div>
                     <blockquote className="mb-4">
-                    <p className="text-lg md:text-xl font-semibold mb-2 md:mb-3">{item.quote}</p>
-<p className="text-gray-400 text-xs md:text-sm mb-2">
-  <span className="font-semibold text-red-500">Problem:</span> {item.problem}
-</p>
-<p className="text-gray-400 text-xs md:text-sm mb-2">
-  <span className="font-semibold text-white">Solution:</span> {item.solution}
-</p>
-<p className="text-gray-400 text-xs md:text-sm">
-  <span className="font-semibold text-green-500">Result:</span> {item.result}
-</p>
+                      <p className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+                        {item.quote}
+                      </p>
+                      <p className="text-gray-400 text-xs md:text-sm mb-2">
+                        <span className="font-semibold text-red-500">
+                          {aboutTranslations[language].testimonials.problem}:
+                        </span>{" "}
+                        {item.problem}
+                      </p>
+                      <p className="text-gray-400 text-xs md:text-sm mb-2">
+                        <span className="font-semibold text-white">
+                          {aboutTranslations[language].testimonials.solution}:
+                        </span>{" "}
+                        {item.solution}
+                      </p>
+                      <p className="text-gray-400 text-xs md:text-sm">
+                        <span className="font-semibold text-green-500">
+                          {aboutTranslations[language].testimonials.result}:
+                        </span>{" "}
+                        {item.result}
+                      </p>
                     </blockquote>
                     <footer className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-800">
-                      {/* <p className="font-semibold text-sm md:text-base">{item.author}</p> */}
-                      <p className="text-xs md:text-sm text-gray-400">{item.position}</p>
+                      <p className="text-xs md:text-sm text-gray-400">
+                        {item.position}
+                      </p>
                     </footer>
                   </div>
                 </div>
@@ -210,12 +227,15 @@ const TestimonialsSection = () => {
 };
 
 const About = () => {
+  const { language } = useLanguage();
+  const translations = aboutTranslations[language];
+
   const stats = [
     { 
       icon: <Users className="w-6 h-6" />, 
       endValue: 56, 
       suffix: "+", 
-      label: "Active Clients",
+      label: translations.stats.clients,
       duration: 3000,
       easing: 'easeOutElastic'
     },
@@ -223,7 +243,7 @@ const About = () => {
       icon: <Award className="w-6 h-6" />, 
       endValue: 99.9, 
       suffix: "%", 
-      label: "Uptime",
+      label: translations.stats.uptime,
       duration: 3500,
       easing: 'easeOutQuart'
     },
@@ -231,7 +251,7 @@ const About = () => {
       icon: <Globe className="w-6 h-6" />, 
       endValue: 5, 
       suffix: "+", 
-      label: "Countries",
+      label: translations.stats.countries,
       duration: 5000,
       easing: 'easeOutBounce'
     },
@@ -239,7 +259,7 @@ const About = () => {
       icon: <Building className="w-6 h-6" />, 
       endValue: 630, 
       suffix: "+", 
-      label: "Enterprise Solutions Delivered",
+      label: translations.stats.solutions,
       duration: 4000,
       easing: 'easeOutExpo'
     },
@@ -390,9 +410,9 @@ const About = () => {
 
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">About NeuroGen Lab</h1>
+            <h1 className="text-4xl font-bold mb-4">{translations.title}</h1>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Pioneering the future of AI Technology to Transform Businesses Worldwide
+              {translations.subtitle}
             </p>
           </div>
 
@@ -419,9 +439,11 @@ const About = () => {
 
           {/* История компании */}
           <div className="mt-16">
-            <h2 className="text-2xl font-bold text-center mb-8">Our History</h2>
+            <h2 className="text-2xl font-bold text-center mb-8">
+              {translations.history.title}
+            </h2>
             <div className="max-w-4xl mx-auto">
-              {history.map((item, index) => (
+              {translations.history.items.map((item, index) => (
                 <div key={index} className="relative flex items-start mb-8 group">
                   <div className="absolute left-0 w-px h-full bg-emerald-400/30 group-last:h-0" />
                   <div className="absolute left-[-8px] w-4 h-4 rounded-full bg-emerald-400" />
@@ -437,11 +459,9 @@ const About = () => {
 
           {/* Mission Statement */}
           <div className="mt-16 text-center">
-            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+            <h2 className="text-2xl font-bold mb-4">{translations.mission.title}</h2>
             <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              At NeuroGen Lab, we're committed to making advanced AI technology accessible to
-              businesses of all sizes. Our mission is to democratize artificial intelligence and
-              empower organizations to achieve their full potential through innovative AI Solutions.
+              {translations.mission.description}
             </p>
           </div>
 
@@ -449,7 +469,9 @@ const About = () => {
 
           {/* Team Section */}
           <div className="mt-16">
-            <h2 className="text-2xl font-bold text-center mb-8">Leadership Team</h2>
+            <h2 className="text-2xl font-bold text-center mb-8">
+              {translations.team.title}
+            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {team.map((member, index) => (
                 <div
