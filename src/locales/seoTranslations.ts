@@ -56,6 +56,15 @@ export const seoTranslations = {
         title: "AI Avatar Generator - Professional Profile Images | NeuroGen Lab",
         description: "Transform your digital presence with AI-generated professional avatars"
       }
+    },
+    aiAssistant: {
+      title: "AI Assistant | NeuroGen Lab - Smart Business Automation",
+      description: "Enhance your business operations with our intelligent AI assistant. Automate tasks, improve productivity, and make data-driven decisions.",
+      keywords: "AI assistant, business automation, intelligent automation, AI productivity tool",
+      openGraph: {
+        title: "AI Assistant - Smart Business Automation | NeuroGen Lab",
+        description: "Transform your business operations with an intelligent AI assistant"
+      }
     }
   },
   de: {
@@ -75,6 +84,15 @@ export const seoTranslations = {
       openGraph: {
         title: "KI-Avatar-Generator - Professionelle Profilbilder | NeuroGen Lab",
         description: "Transformieren Sie Ihre digitale Präsenz mit KI-generierten professionellen Avataren"
+      }
+    },
+    aiAssistant: {
+      title: "KI-Assistent | NeuroGen Lab - Intelligente Geschäftsautomatisierung",
+      description: "Verbessern Sie Ihre Geschäftsprozesse mit unserem intelligenten KI-Assistenten. Automatisieren Sie Aufgaben und steigern Sie die Produktivität.",
+      keywords: "KI-Assistent, Geschäftsautomatisierung, intelligente Automatisierung, KI-Produktivitätstool",
+      openGraph: {
+        title: "KI-Assistent - Intelligente Geschäftsautomatisierung | NeuroGen Lab",
+        description: "Transformieren Sie Ihre Geschäftsprozesse mit einem intelligenten KI-Assistenten"
       }
     }
   },
@@ -118,6 +136,15 @@ export const seoTranslations = {
         description: "Преобразите ваше цифровое присутствие с помощью профессиональных аватаров, созданных ИИ"
       }
     },
+    aiAssistant: {
+      title: "ИИ-ассистент | NeuroGen Lab - Умная автоматизация бизнеса",
+      description: "Улучшите ваши бизнес-операции с помощью нашего интеллектуального ИИ-ассистента. Автоматизируйте задачи и повысьте продуктивность.",
+      keywords: "ИИ-ассистент, автоматизация бизнеса, интеллектуальная автоматизация, инструмент продуктивности",
+      openGraph: {
+        title: "ИИ-ассистент - Умная автоматизация бизнеса | NeuroGen Lab",
+        description: "Трансформируйте ваши бизнес-операции с помощью интеллектуального ИИ-ассистента"
+      }
+    },
     // ... остальные страницы для русского языка ...
   },
   uk: {
@@ -137,6 +164,15 @@ export const seoTranslations = {
       openGraph: {
         title: "ШІ-генератор аватарів - Професійні зображення профілю | NeuroGen Lab",
         description: "Перетворіть вашу цифрову присутність за допомогою професійних аватарів, створених ШІ"
+      }
+    },
+    aiAssistant: {
+      title: "ШІ-асистент | NeuroGen Lab - Розумна автоматизація бізнесу",
+      description: "Покращіть ваші бізнес-операції за допомогою нашого інтелектуального ШІ-асистента. Автоматизуйте завдання та підвищіть продуктивність.",
+      keywords: "ШІ-асистент, автоматизація бізнесу, інтелектуальна автоматизація, інструмент продуктивності",
+      openGraph: {
+        title: "ШІ-асистент - Розумна автоматизація бізнесу | NeuroGen Lab",
+        description: "Трансформуйте ваші бізнес-операції за допомогою інтелектуального ШІ-асистента"
       }
     }
   }
