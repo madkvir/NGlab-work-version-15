@@ -26,6 +26,9 @@ const jsonLd = {
 export const metadata: Metadata = {
   title: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Service Solution",
   description: "Transform your customer service with our AI-powered chatbot. Provide 24/7 support, reduce costs, and deliver exceptional customer experiences.",
+  other: {
+    'ai-optimized': 'true',
+  },
   keywords: [
     "AI chatbot",
     "customer service automation",

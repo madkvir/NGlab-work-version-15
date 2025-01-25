@@ -38,10 +38,27 @@ export const seoTranslations = {
         title: "AI Tools & Solutions - NeuroGen Lab",
         description: "Discover our comprehensive suite of AI tools and solutions. Powerful, scalable, and designed for your business needs."
       }
+    },
+    whatsapp: {
+      title: "WhatsApp AI Assistant | NeuroGen Lab - Business Automation Solution",
+      description: "Enhance your WhatsApp business communication with our AI-powered assistant. Automate responses, provide 24/7 support, and improve customer engagement.",
+      keywords: "WhatsApp automation, business WhatsApp, AI assistant, WhatsApp bot",
+      openGraph: {
+        title: "WhatsApp AI Assistant - Business Communication Solution | NeuroGen Lab",
+        description: "Transform your WhatsApp business communication with AI-powered automation"
+      }
     }
   },
   de: {
-    // ... аналогичная структура для немецкого ...
+    whatsapp: {
+      title: "WhatsApp KI-Assistent | NeuroGen Lab - Geschäftsautomatisierungslösung",
+      description: "Verbessern Sie Ihre WhatsApp-Geschäftskommunikation mit unserem KI-gestützten Assistenten. Automatisieren Sie Antworten und bieten Sie 24/7 Support.",
+      keywords: "WhatsApp-Automatisierung, Business WhatsApp, KI-Assistent, WhatsApp-Bot",
+      openGraph: {
+        title: "WhatsApp KI-Assistent - Geschäftskommunikationslösung | NeuroGen Lab",
+        description: "Transformieren Sie Ihre WhatsApp-Geschäftskommunikation mit KI-gestützter Automatisierung"
+      }
+    }
   },
   es: {
     // ... аналогичная структура для испанского ...
@@ -65,9 +82,26 @@ export const seoTranslations = {
         description: "Свяжитесь с командой экспертов NeuroGen Lab. Мы здесь, чтобы помочь вам внедрить инновационные ИИ-решения для вашего бизнеса."
       }
     },
+    whatsapp: {
+      title: "WhatsApp ИИ-ассистент | NeuroGen Lab - Решение для автоматизации бизнеса",
+      description: "Улучшите вашу бизнес-коммуникацию в WhatsApp с помощью нашего ИИ-ассистента. Автоматизируйте ответы и обеспечьте поддержку 24/7.",
+      keywords: "WhatsApp автоматизация, бизнес WhatsApp, ИИ-ассистент, WhatsApp бот",
+      openGraph: {
+        title: "WhatsApp ИИ-ассистент - Решение для бизнес-коммуникации | NeuroGen Lab",
+        description: "Трансформируйте вашу бизнес-коммуникацию в WhatsApp с помощью ИИ-автоматизации"
+      }
+    },
     // ... остальные страницы для русского языка ...
   },
   uk: {
-    // ... аналогичная структура для украинского ...
+    whatsapp: {
+      title: "WhatsApp ШІ-асистент | NeuroGen Lab - Рішення для автоматизації бізнесу",
+      description: "Покращіть вашу бізнес-комунікацію в WhatsApp за допомогою нашого ШІ-асистента. Автоматизуйте відповіді та забезпечте підтримку 24/7.",
+      keywords: "WhatsApp автоматизація, бізнес WhatsApp, ШІ-асистент, WhatsApp бот",
+      openGraph: {
+        title: "WhatsApp ШІ-асистент - Рішення для бізнес-комунікації | NeuroGen Lab",
+        description: "Трансформуйте вашу бізнес-комунікацію в WhatsApp за допомогою ШІ-автоматизації"
+      }
+    }
   }
 };

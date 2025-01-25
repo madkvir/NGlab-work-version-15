@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "About NeuroGen Lab - Innovating AI Technology",
   description:
     "Learn more about NeuroGen Lab, our mission, and the leadership team driving innovation in AI technology.",
+  other: {
+    'ai-optimized': 'true',
+  },
   keywords: [
     "NeuroGen Lab", 
     "AI technology", 
