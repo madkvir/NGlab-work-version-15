@@ -26,11 +26,11 @@ export const metadata: Metadata = {
     siteName: "NeuroGen Lab",
     images: [
       {
-        url: `${baseUrl}/assets/images/ai-chatbot-preview.png`,
+        url: `${baseUrl}/assets/images/og-ai-chat-bot.jpg`,
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab AI Chatbot Solution",
-        type: 'image/png',
+        type: 'image/jpg',
       },
     ],
     locale: 'en',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "AI Chat Bot - Smart Customer Support",
     description: "Enhance customer service with AI-powered chat support. Available 24/7, multilingual, and fully customizable.",
-    images: [`${baseUrl}/assets/images/og-ai-chatbot.png`],
+    images: [`${baseUrl}/assets/images/og-ai-chat-bot.jpg`],
   },
   authors: [{ name: "NeuroGen Lab" }],
   alternates: {
