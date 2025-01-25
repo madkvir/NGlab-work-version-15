@@ -1,6 +1,8 @@
 import React from "react";
 import { Metadata } from "next";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.com';
+
 export const metadata: Metadata = {
   title: "About NeuroGen Lab - Innovating AI Technology",
   description:
@@ -16,29 +18,43 @@ export const metadata: Metadata = {
     "cutting-edge AI technology"
   ],
   openGraph: {
+    type: 'website',
     title: "About NeuroGen Lab - Innovating AI Technology",
     description:
       "Learn more about NeuroGen Lab, our mission, and the leadership team driving innovation in AI technology.",
-    url: "/about-us",
+    url: `${baseUrl}/about-us`,
+    siteName: "NeuroGen Lab",
     images: [
       {
-        url: "/assets/images/about-us-banner.png",
+        url: `${baseUrl}/assets/images/about-us-banner.png`,
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab Team Working on AI Innovation",
+        type: 'image/png',
       },
     ],
+    locale: 'en',
+    alternateLocale: ['de', 'es', 'ru', 'uk'],
   },
   twitter: {
     card: "summary_large_image",
     title: "About NeuroGen Lab - Innovating AI Technology",
     description:
       "Learn more about NeuroGen Lab, our mission, and the leadership team driving innovation in AI technology.",
-    images: ["/assets/images/about-us-banner.png"],
+    images: ["https://neurogenlab.com/assets/images/about-us-banner.png"],
+    creator: "@neurogenlab",
+    site: "@neurogenlab",
   },
   authors: [{ name: "NeuroGen Lab Team" }],
   alternates: {
-    canonical: "/about-us",
+    canonical: "https://neurogenlab.com/about-us",
+    languages: {
+      'en': 'https://neurogenlab.com/about-us',
+      'de': 'https://neurogenlab.com/de/about-us',
+      'es': 'https://neurogenlab.com/es/about-us',
+      'ru': 'https://neurogenlab.com/ru/about-us',
+      'uk': 'https://neurogenlab.com/uk/about-us'
+    },
   },
 };
 
