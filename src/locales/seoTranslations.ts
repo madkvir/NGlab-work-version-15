@@ -47,6 +47,15 @@ export const seoTranslations = {
         title: "WhatsApp AI Assistant - Business Communication Solution | NeuroGen Lab",
         description: "Transform your WhatsApp business communication with AI-powered automation"
       }
+    },
+    aiAvatar: {
+      title: "AI Avatar Generator | NeuroGen Lab - Professional Profile Images",
+      description: "Create professional AI-generated avatars for your business profiles. Transform your brand identity with our advanced AI avatar generation technology.",
+      keywords: "AI avatar generator, professional profile picture, business avatar, AI profile image",
+      openGraph: {
+        title: "AI Avatar Generator - Professional Profile Images | NeuroGen Lab",
+        description: "Transform your digital presence with AI-generated professional avatars"
+      }
     }
   },
   de: {
@@ -57,6 +66,15 @@ export const seoTranslations = {
       openGraph: {
         title: "WhatsApp KI-Assistent - Geschäftskommunikationslösung | NeuroGen Lab",
         description: "Transformieren Sie Ihre WhatsApp-Geschäftskommunikation mit KI-gestützter Automatisierung"
+      }
+    },
+    aiAvatar: {
+      title: "KI-Avatar-Generator | NeuroGen Lab - Professionelle Profilbilder",
+      description: "Erstellen Sie professionelle KI-generierte Avatare für Ihre Geschäftsprofile. Transformieren Sie Ihre Markenidentität mit unserer fortschrittlichen KI-Avatar-Technologie.",
+      keywords: "KI-Avatar-Generator, professionelles Profilbild, Business-Avatar, KI-Profilbild",
+      openGraph: {
+        title: "KI-Avatar-Generator - Professionelle Profilbilder | NeuroGen Lab",
+        description: "Transformieren Sie Ihre digitale Präsenz mit KI-generierten professionellen Avataren"
       }
     }
   },
@@ -91,6 +109,15 @@ export const seoTranslations = {
         description: "Трансформируйте вашу бизнес-коммуникацию в WhatsApp с помощью ИИ-автоматизации"
       }
     },
+    aiAvatar: {
+      title: "ИИ-генератор аватаров | NeuroGen Lab - Профессиональные изображения профиля",
+      description: "Создавайте профессиональные аватары с помощью ИИ для ваших бизнес-профилей. Преобразите идентичность вашего бренда с помощью передовой технологии генерации аватаров.",
+      keywords: "ИИ-генератор аватаров, профессиональное фото профиля, бизнес-аватар, ИИ-изображение профиля",
+      openGraph: {
+        title: "ИИ-генератор аватаров - Профессиональные изображения профиля | NeuroGen Lab",
+        description: "Преобразите ваше цифровое присутствие с помощью профессиональных аватаров, созданных ИИ"
+      }
+    },
     // ... остальные страницы для русского языка ...
   },
   uk: {
@@ -101,6 +128,15 @@ export const seoTranslations = {
       openGraph: {
         title: "WhatsApp ШІ-асистент - Рішення для бізнес-комунікації | NeuroGen Lab",
         description: "Трансформуйте вашу бізнес-комунікацію в WhatsApp за допомогою ШІ-автоматизації"
+      }
+    },
+    aiAvatar: {
+      title: "ШІ-генератор аватарів | NeuroGen Lab - Професійні зображення профілю",
+      description: "Створюйте професійні аватари за допомогою ШІ для ваших бізнес-профілів. Перетворіть ідентичність вашого бренду за допомогою передової технології генерації аватарів.",
+      keywords: "ШІ-генератор аватарів, професійне фото профілю, бізнес-аватар, ШІ-зображення профілю",
+      openGraph: {
+        title: "ШІ-генератор аватарів - Професійні зображення профілю | NeuroGen Lab",
+        description: "Перетворіть вашу цифрову присутність за допомогою професійних аватарів, створених ШІ"
       }
     }
   }
