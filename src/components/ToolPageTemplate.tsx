@@ -7,6 +7,7 @@ import ScrollToTop from "./ScrollToTop";
 import GlowingButton from "./common/GlowingButton";
 import Link from "next/link";
 import { ArticleContent } from "./ArticleContent";
+import BackToHome from "./BackToHome";
 
 interface ToolPageProps {
   title: string;
@@ -79,13 +80,9 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
 
       <main className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
-            href="/"
-            className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Link>
+          <div className="mt-8">
+          <BackToHome />
+        </div>
 
           <div className="text-center mb-12">
             <div className="inline-flex justify-center items-center w-16 h-16 rounded-full bg-emerald-500/10 mb-6">
