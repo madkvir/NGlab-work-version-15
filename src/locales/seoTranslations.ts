@@ -164,6 +164,15 @@ export const seoTranslations = {
         title: "NeuroGen Lab - Leading AI Solutions Platform",
         description: "Discover our comprehensive suite of AI-powered tools and solutions"
       }
+    },
+    table: {
+      title: "Smart Table | NeuroGen Lab - Intelligent Data Organization",
+      description: "Transform your data management with AI-powered table solutions. Advanced sorting, filtering, and analytics for efficient data organization.",
+      keywords: "smart table, data organization, data management, table analytics",
+      openGraph: {
+        title: "Smart Table - Intelligent Data Organization | NeuroGen Lab",
+        description: "Transform your data management with AI-powered table solutions"
+      }
     }
   },
   de: {
@@ -291,6 +300,15 @@ export const seoTranslations = {
       openGraph: {
         title: "NeuroGen Lab - Führende KI-Lösungsplattform",
         description: "Entdecken Sie unsere umfassende Suite von KI-gestützten Tools und Lösungen"
+      }
+    },
+    table: {
+      title: "Smart Table | NeuroGen Lab - Intelligente Datenorganisation",
+      description: "Transformieren Sie Ihr Datenmanagement mit KI-gestützten Tabellenlösungen. Fortschrittliche Sortierung und Filterung.",
+      keywords: "Smart Table, Datenorganisation, Datenmanagement, Tabellenanalyse",
+      openGraph: {
+        title: "Smart Table - Intelligente Datenorganisation | NeuroGen Lab",
+        description: "Transformieren Sie Ihr Datenmanagement mit KI-gestützten Tabellenlösungen"
       }
     }
   },
@@ -438,6 +456,15 @@ export const seoTranslations = {
         title: "NeuroGen Lab - Plataforma Líder de Soluciones IA",
         description: "Descubra nuestra suite integral de herramientas y soluciones impulsadas por IA"
       }
+    },
+    table: {
+      title: "Smart Table | NeuroGen Lab - Organización Inteligente de Datos",
+      description: "Transforme su gestión de datos con soluciones de tabla impulsadas por IA. Clasificación y filtrado avanzados.",
+      keywords: "tabla inteligente, organización de datos, gestión de datos, análisis de tablas",
+      openGraph: {
+        title: "Smart Table - Organización Inteligente de Datos | NeuroGen Lab",
+        description: "Transforme su gestión de datos con soluciones de tabla impulsadas por IA"
+      }
     }
   },
   ru: {
@@ -584,6 +611,15 @@ export const seoTranslations = {
         title: "NeuroGen Lab - Ведущая платформа ИИ-решений",
         description: "Откройте для себя наш комплексный набор инструментов и решений на базе ИИ"
       }
+    },
+    table: {
+      title: "Smart Table | NeuroGen Lab - Интеллектуальная организация данных",
+      description: "Трансформируйте управление данными с помощью таблиц на базе ИИ. Продвинутая сортировка и фильтрация.",
+      keywords: "умная таблица, организация данных, управление данными, анализ таблиц",
+      openGraph: {
+        title: "Smart Table - Интеллектуальная организация данных | NeuroGen Lab",
+        description: "Трансформируйте управление данными с помощью таблиц на базе ИИ"
+      }
     }
   },
   uk: {
@@ -711,6 +747,15 @@ export const seoTranslations = {
       openGraph: {
         title: "NeuroGen Lab - Провідна платформа ШІ-рішень",
         description: "Відкрийте для себе наш комплексний набір інструментів та рішень на базі ШІ"
+      }
+    },
+    table: {
+      title: "Smart Table | NeuroGen Lab - Інтелектуальна організація даних",
+      description: "Трансформуйте управління даними за допомогою таблиць на базі ШІ. Просунуте сортування та фільтрація.",
+      keywords: "розумна таблиця, організація даних, управління даними, аналіз таблиць",
+      openGraph: {
+        title: "Smart Table - Інтелектуальна організація даних | NeuroGen Lab",
+        description: "Трансформуйте управління даними за допомогою таблиць на базі ШІ"
       }
     }
   }
