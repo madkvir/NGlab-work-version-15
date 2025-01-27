@@ -110,6 +110,15 @@ export const seoTranslations = {
         title: "Best Search - Intelligent Search Solution | NeuroGen Lab",
         description: "Revolutionize your data discovery with AI-powered search technology"
       }
+    },
+    discord: {
+      title: "Discord Integration | NeuroGen Lab - Smart Community Management",
+      description: "Enhance your Discord server with AI-powered automation. Advanced moderation tools, community engagement features, and intelligent bot interactions.",
+      keywords: "Discord integration, community management, Discord bot, server automation",
+      openGraph: {
+        title: "Discord Integration - Smart Community Management | NeuroGen Lab",
+        description: "Transform your Discord server with AI-powered automation"
+      }
     }
   },
   de: {
@@ -183,6 +192,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Best Search - Intelligente Suchlösung | NeuroGen Lab",
         description: "Revolutionieren Sie Ihre Datensuche mit KI-gestützter Suchtechnologie"
+      }
+    },
+    discord: {
+      title: "Discord-Integration | NeuroGen Lab - Intelligentes Community-Management",
+      description: "Verbessern Sie Ihren Discord-Server mit KI-gestützter Automatisierung. Fortschrittliche Moderationstools und Community-Engagement.",
+      keywords: "Discord-Integration, Community-Management, Discord-Bot, Server-Automatisierung",
+      openGraph: {
+        title: "Discord-Integration - Intelligentes Community-Management | NeuroGen Lab",
+        description: "Transformieren Sie Ihren Discord-Server mit KI-gestützter Automatisierung"
       }
     }
   },
@@ -276,6 +294,15 @@ export const seoTranslations = {
         title: "Best Search - Solución de Búsqueda Inteligente | NeuroGen Lab",
         description: "Revolucione su descubrimiento de datos con tecnología de búsqueda impulsada por IA"
       }
+    },
+    discord: {
+      title: "Integración de Discord | NeuroGen Lab - Gestión Inteligente de Comunidades",
+      description: "Mejore su servidor de Discord con automatización impulsada por IA. Herramientas avanzadas de moderación y funciones de participación comunitaria.",
+      keywords: "integración Discord, gestión de comunidad, bot de Discord, automatización de servidor",
+      openGraph: {
+        title: "Integración de Discord - Gestión Inteligente de Comunidades | NeuroGen Lab",
+        description: "Transforme su servidor de Discord con automatización impulsada por IA"
+      }
     }
   },
   ru: {
@@ -368,6 +395,15 @@ export const seoTranslations = {
         title: "Best Search - Интеллектуальное решение для поиска | NeuroGen Lab",
         description: "Революционизируйте поиск данных с помощью технологии на базе ИИ"
       }
+    },
+    discord: {
+      title: "Интеграция Discord | NeuroGen Lab - Умное управление сообществом",
+      description: "Улучшите ваш Discord-сервер с помощью ИИ-автоматизации. Продвинутые инструменты модерации и вовлечения сообщества.",
+      keywords: "интеграция Discord, управление сообществом, Discord-бот, автоматизация сервера",
+      openGraph: {
+        title: "Интеграция Discord - Умное управление сообществом | NeuroGen Lab",
+        description: "Трансформируйте ваш Discord-сервер с помощью ИИ-автоматизации"
+      }
     }
   },
   uk: {
@@ -441,6 +477,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Best Search - Інтелектуальне рішення для пошуку | NeuroGen Lab",
         description: "Революціонізуйте пошук даних за допомогою технології на базі ШІ"
+      }
+    },
+    discord: {
+      title: "Інтеграція Discord | NeuroGen Lab - Розумне управління спільнотою",
+      description: "Покращіть ваш Discord-сервер за допомогою ШІ-автоматизації. Просунуті інструменти модерації та залучення спільноти.",
+      keywords: "інтеграція Discord, управління спільнотою, Discord-бот, автоматизація сервера",
+      openGraph: {
+        title: "Інтеграція Discord - Розумне управління спільнотою | NeuroGen Lab",
+        description: "Трансформуйте ваш Discord-сервер за допомогою ШІ-автоматизації"
       }
     }
   }
