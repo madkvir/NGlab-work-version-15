@@ -128,6 +128,15 @@ export const seoTranslations = {
         title: "Email Solution - Intelligent Email Management | NeuroGen Lab",
         description: "Revolutionize your email workflow with AI-powered management"
       }
+    },
+    facebookMessenger: {
+      title: "Facebook Messenger Solution | NeuroGen Lab - Intelligent Messaging",
+      description: "Enhance Messenger communication with AI technology. Automated responses, analytics, and advanced features for better message management.",
+      keywords: "facebook messenger, messenger automation, ai messaging, chat management",
+      openGraph: {
+        title: "Facebook Messenger Solution - Intelligent Messaging | NeuroGen Lab",
+        description: "Transform your Messenger communication with AI-powered automation"
+      }
     }
   },
   de: {
@@ -219,6 +228,15 @@ export const seoTranslations = {
       openGraph: {
         title: "E-Mail-Lösung - Intelligentes E-Mail-Management | NeuroGen Lab",
         description: "Revolutionieren Sie Ihren E-Mail-Workflow mit KI-gestütztem Management"
+      }
+    },
+    facebookMessenger: {
+      title: "Facebook Messenger-Lösung | NeuroGen Lab - Intelligentes Messaging",
+      description: "Verbessern Sie Ihre Messenger-Kommunikation mit KI-Technologie. Automatisierte Antworten und erweiterte Funktionen.",
+      keywords: "Facebook Messenger, Messenger-Automatisierung, KI-Messaging, Chat-Management",
+      openGraph: {
+        title: "Facebook Messenger-Lösung - Intelligentes Messaging | NeuroGen Lab",
+        description: "Transformieren Sie Ihre Messenger-Kommunikation mit KI-gestützter Automatisierung"
       }
     }
   },
@@ -330,6 +348,15 @@ export const seoTranslations = {
         title: "Solución de Email - Gestión Inteligente de Correo | NeuroGen Lab",
         description: "Revolucione su flujo de trabajo de correo con gestión impulsada por IA"
       }
+    },
+    facebookMessenger: {
+      title: "Solución de Facebook Messenger | NeuroGen Lab - Mensajería Inteligente",
+      description: "Mejore su comunicación en Messenger con tecnología de IA. Respuestas automatizadas y funciones avanzadas.",
+      keywords: "Facebook Messenger, automatización de Messenger, mensajería IA, gestión de chat",
+      openGraph: {
+        title: "Solución de Facebook Messenger - Mensajería Inteligente | NeuroGen Lab",
+        description: "Transforme su comunicación en Messenger con automatización impulsada por IA"
+      }
     }
   },
   ru: {
@@ -440,6 +467,15 @@ export const seoTranslations = {
         title: "Email-решение - Интеллектуальное управление почтой | NeuroGen Lab",
         description: "Революционизируйте ваш рабочий процесс с email с помощью ИИ-управления"
       }
+    },
+    facebookMessenger: {
+      title: "Решение для Facebook Messenger | NeuroGen Lab - Интеллектуальный обмен сообщениями",
+      description: "Улучшите вашу коммуникацию в Messenger с помощью ИИ-технологии. Автоматические ответы и продвинутые функции.",
+      keywords: "Facebook Messenger, автоматизация Messenger, ИИ-мессенджер, управление чатом",
+      openGraph: {
+        title: "Решение для Facebook Messenger - Интеллектуальный обмен сообщениями | NeuroGen Lab",
+        description: "Трансформируйте вашу коммуникацию в Messenger с помощью ИИ-автоматизации"
+      }
     }
   },
   uk: {
@@ -531,6 +567,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Email-рішення - Інтелектуальне управління поштою | NeuroGen Lab",
         description: "Революціонізуйте ваш робочий процес з email за допомогою ШІ-управління"
+      }
+    },
+    facebookMessenger: {
+      title: "Рішення для Facebook Messenger | NeuroGen Lab - Інтелектуальний обмін повідомленнями",
+      description: "Покращіть вашу комунікацію в Messenger за допомогою ШІ-технології. Автоматичні відповіді та просунуті функції.",
+      keywords: "Facebook Messenger, автоматизація Messenger, ШІ-месенджер, управління чатом",
+      openGraph: {
+        title: "Рішення для Facebook Messenger - Інтелектуальний обмін повідомленнями | NeuroGen Lab",
+        description: "Трансформуйте вашу комунікацію в Messenger за допомогою ШІ-автоматизації"
       }
     }
   }
