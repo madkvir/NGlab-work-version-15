@@ -83,6 +83,15 @@ export const seoTranslations = {
         title: "Anti-Spam Protection - Advanced Security Solution | NeuroGen Lab",
         description: "Secure your business communications with AI-powered anti-spam technology"
       }
+    },
+    instagram: {
+      title: "Instagram Integration | NeuroGen Lab - AI Social Media Management",
+      description: "Optimize your Instagram presence with AI-powered automation. Smart content management, engagement analytics, and automated responses.",
+      keywords: "Instagram automation, social media management, AI Instagram tool, business Instagram",
+      openGraph: {
+        title: "Instagram Integration - AI Social Media Management | NeuroGen Lab",
+        description: "Transform your Instagram business presence with AI automation"
+      }
     }
   },
   de: {
@@ -129,6 +138,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Anti-Spam-Schutz - Fortschrittliche Sicherheitslösung | NeuroGen Lab",
         description: "Sichern Sie Ihre Geschäftskommunikation mit KI-gestützter Anti-Spam-Technologie"
+      }
+    },
+    instagram: {
+      title: "Instagram-Integration | NeuroGen Lab - KI-Social-Media-Management",
+      description: "Optimieren Sie Ihre Instagram-Präsenz mit KI-gestützter Automatisierung. Intelligentes Content-Management und Engagement-Analyse.",
+      keywords: "Instagram-Automatisierung, Social-Media-Management, KI-Instagram-Tool, Business-Instagram",
+      openGraph: {
+        title: "Instagram-Integration - KI-Social-Media-Management | NeuroGen Lab",
+        description: "Transformieren Sie Ihre Instagram-Geschäftspräsenz mit KI-Automatisierung"
       }
     }
   },
@@ -199,6 +217,15 @@ export const seoTranslations = {
         description: "Обеспечьте безопасность вашей бизнес-коммуникации с помощью антиспам-технологии на базе ИИ"
       }
     },
+    instagram: {
+      title: "Интеграция с Instagram | NeuroGen Lab - Управление соцсетями с ИИ",
+      description: "Оптимизируйте ваше присутствие в Instagram с помощью ИИ-автоматизации. Умное управление контентом и аналитика вовлеченности.",
+      keywords: "автоматизация Instagram, управление соцсетями, ИИ-инструмент для Instagram, бизнес в Instagram",
+      openGraph: {
+        title: "Интеграция с Instagram - Управление соцсетями с ИИ | NeuroGen Lab",
+        description: "Трансформируйте ваше бизнес-присутствие в Instagram с помощью ИИ-автоматизации"
+      }
+    },
     // ... остальные страницы для русского языка ...
   },
   uk: {
@@ -245,6 +272,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Захист від спаму - Передове рішення безпеки | NeuroGen Lab",
         description: "Забезпечте безпеку вашої бізнес-комунікації за допомогою антиспам-технології на базі ШІ"
+      }
+    },
+    instagram: {
+      title: "Інтеграція з Instagram | NeuroGen Lab - Управління соцмережами з ШІ",
+      description: "Оптимізуйте вашу присутність в Instagram за допомогою ШІ-автоматизації. Розумне управління контентом та аналітика залученості.",
+      keywords: "автоматизація Instagram, управління соцмережами, ШІ-інструмент для Instagram, бізнес в Instagram",
+      openGraph: {
+        title: "Інтеграція з Instagram - Управління соцмережами з ШІ | NeuroGen Lab",
+        description: "Трансформуйте вашу бізнес-присутність в Instagram за допомогою ШІ-автоматизації"
       }
     }
   }
