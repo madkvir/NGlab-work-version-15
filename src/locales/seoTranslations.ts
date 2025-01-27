@@ -119,6 +119,15 @@ export const seoTranslations = {
         title: "Discord Integration - Smart Community Management | NeuroGen Lab",
         description: "Transform your Discord server with AI-powered automation"
       }
+    },
+    email: {
+      title: "Email Solution | NeuroGen Lab - Intelligent Email Management",
+      description: "Transform your email communication with AI-powered automation. Smart filtering, automated responses, priority inbox, and advanced email analytics.",
+      keywords: "email solution, email management, AI email, smart inbox",
+      openGraph: {
+        title: "Email Solution - Intelligent Email Management | NeuroGen Lab",
+        description: "Revolutionize your email workflow with AI-powered management"
+      }
     }
   },
   de: {
@@ -201,6 +210,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Discord-Integration - Intelligentes Community-Management | NeuroGen Lab",
         description: "Transformieren Sie Ihren Discord-Server mit KI-gestützter Automatisierung"
+      }
+    },
+    email: {
+      title: "E-Mail-Lösung | NeuroGen Lab - Intelligentes E-Mail-Management",
+      description: "Transformieren Sie Ihre E-Mail-Kommunikation mit KI-gestützter Automatisierung. Intelligente Filterung und automatisierte Antworten.",
+      keywords: "E-Mail-Lösung, E-Mail-Management, KI-E-Mail, intelligenter Posteingang",
+      openGraph: {
+        title: "E-Mail-Lösung - Intelligentes E-Mail-Management | NeuroGen Lab",
+        description: "Revolutionieren Sie Ihren E-Mail-Workflow mit KI-gestütztem Management"
       }
     }
   },
@@ -303,6 +321,15 @@ export const seoTranslations = {
         title: "Integración de Discord - Gestión Inteligente de Comunidades | NeuroGen Lab",
         description: "Transforme su servidor de Discord con automatización impulsada por IA"
       }
+    },
+    email: {
+      title: "Solución de Email | NeuroGen Lab - Gestión Inteligente de Correo",
+      description: "Transforme su comunicación por correo electrónico con automatización impulsada por IA. Filtrado inteligente y respuestas automatizadas.",
+      keywords: "solución de email, gestión de correo, email IA, bandeja de entrada inteligente",
+      openGraph: {
+        title: "Solución de Email - Gestión Inteligente de Correo | NeuroGen Lab",
+        description: "Revolucione su flujo de trabajo de correo con gestión impulsada por IA"
+      }
     }
   },
   ru: {
@@ -404,6 +431,15 @@ export const seoTranslations = {
         title: "Интеграция Discord - Умное управление сообществом | NeuroGen Lab",
         description: "Трансформируйте ваш Discord-сервер с помощью ИИ-автоматизации"
       }
+    },
+    email: {
+      title: "Email-решение | NeuroGen Lab - Интеллектуальное управление почтой",
+      description: "Трансформируйте вашу email-коммуникацию с помощью ИИ-автоматизации. Умная фильтрация и автоматические ответы.",
+      keywords: "email-решение, управление почтой, ИИ-почта, умный почтовый ящик",
+      openGraph: {
+        title: "Email-решение - Интеллектуальное управление почтой | NeuroGen Lab",
+        description: "Революционизируйте ваш рабочий процесс с email с помощью ИИ-управления"
+      }
     }
   },
   uk: {
@@ -486,6 +522,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Інтеграція Discord - Розумне управління спільнотою | NeuroGen Lab",
         description: "Трансформуйте ваш Discord-сервер за допомогою ШІ-автоматизації"
+      }
+    },
+    email: {
+      title: "Email-рішення | NeuroGen Lab - Інтелектуальне управління поштою",
+      description: "Трансформуйте вашу email-комунікацію за допомогою ШІ-автоматизації. Розумна фільтрація та автоматичні відповіді.",
+      keywords: "email-рішення, управління поштою, ШІ-пошта, розумна поштова скринька",
+      openGraph: {
+        title: "Email-рішення - Інтелектуальне управління поштою | NeuroGen Lab",
+        description: "Революціонізуйте ваш робочий процес з email за допомогою ШІ-управління"
       }
     }
   }
