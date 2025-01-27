@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     description: 'Discover our comprehensive suite of AI-powered tools and solutions for business growth and automation.',
     images: [
       {
-        url: '/assets/images/og-home.jpg',
+        url: '/assets/images/og-hero.jpg',
         width: 1200,
         height: 630,
         alt: 'NeuroGen Lab Platform',
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NeuroGen Lab - AI Solutions Platform',
     description: 'Transform your business with our comprehensive suite of AI tools and solutions.',
-    images: ['/assets/images/og-home.jpg'],
+    images: ['/assets/images/og-hero.jpg'],
     creator: '@neurogenlab',
     site: '@neurogenlab',
   },
