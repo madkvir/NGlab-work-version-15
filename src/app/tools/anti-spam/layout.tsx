@@ -34,6 +34,7 @@ export const metadata: Metadata = {
   description: "Protect your business communication with AI-powered anti-spam technology. Advanced filtering, real-time protection, and intelligent threat detection.",
   other: {
     'ai-optimized': 'true',
+    'og:image': '/assets/images/og-anti-spam.jpg',
   },
   keywords: [
     "anti-spam protection",
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "NeuroGen Lab",
     images: [
       {
-        url: `${baseUrl}/assets/images/og-anti-spam.jpg`,
+        url: '/assets/images/og-anti-spam.jpg',
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab Anti-Spam Protection",
@@ -69,7 +70,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Anti-Spam Protection - Smart Security Solution",
     description: "Advanced AI-powered spam protection for your business. Intelligent, reliable, and always-on security.",
-    images: [`${baseUrl}/assets/images/og-anti-spam.jpg`],
+    images: ['/assets/images/og-anti-spam.jpg'],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
