@@ -65,6 +65,15 @@ export const seoTranslations = {
         title: "AI Assistant - Smart Business Automation | NeuroGen Lab",
         description: "Transform your business operations with an intelligent AI assistant"
       }
+    },
+    aiVoiceBot: {
+      title: "AI Voice Bot | NeuroGen Lab - Intelligent Voice Assistant",
+      description: "Transform customer interactions with our AI Voice Bot. Natural language processing, multilingual support, and seamless voice automation.",
+      keywords: "AI voice bot, voice assistant, speech recognition, voice automation",
+      openGraph: {
+        title: "AI Voice Bot - Intelligent Voice Assistant | NeuroGen Lab",
+        description: "Enhance customer experience with AI-powered voice interactions"
+      }
     }
   },
   de: {
@@ -93,6 +102,15 @@ export const seoTranslations = {
       openGraph: {
         title: "KI-Assistent - Intelligente Geschäftsautomatisierung | NeuroGen Lab",
         description: "Transformieren Sie Ihre Geschäftsprozesse mit einem intelligenten KI-Assistenten"
+      }
+    },
+    aiVoiceBot: {
+      title: "KI-Sprachbot | NeuroGen Lab - Intelligenter Sprachassistent",
+      description: "Transformieren Sie Kundeninteraktionen mit unserem KI-Sprachbot. Natürliche Sprachverarbeitung und mehrsprachige Unterstützung.",
+      keywords: "KI-Sprachbot, Sprachassistent, Spracherkennung, Sprachautomatisierung",
+      openGraph: {
+        title: "KI-Sprachbot - Intelligenter Sprachassistent | NeuroGen Lab",
+        description: "Verbessern Sie das Kundenerlebnis mit KI-gestützten Sprachinteraktionen"
       }
     }
   },
@@ -145,6 +163,15 @@ export const seoTranslations = {
         description: "Трансформируйте ваши бизнес-операции с помощью интеллектуального ИИ-ассистента"
       }
     },
+    aiVoiceBot: {
+      title: "ИИ-голосовой бот | NeuroGen Lab - Интеллектуальный голосовой помощник",
+      description: "Трансформируйте взаимодействие с клиентами с помощью нашего ИИ-голосового бота. Обработка естественного языка и многоязычная поддержка.",
+      keywords: "ИИ-голосовой бот, голосовой помощник, распознавание речи, голосовая автоматизация",
+      openGraph: {
+        title: "ИИ-голосовой бот - Интеллектуальный голосовой помощник | NeuroGen Lab",
+        description: "Улучшите клиентский опыт с помощью голосового взаимодействия на базе ИИ"
+      }
+    },
     // ... остальные страницы для русского языка ...
   },
   uk: {
@@ -173,6 +200,15 @@ export const seoTranslations = {
       openGraph: {
         title: "ШІ-асистент - Розумна автоматизація бізнесу | NeuroGen Lab",
         description: "Трансформуйте ваші бізнес-операції за допомогою інтелектуального ШІ-асистента"
+      }
+    },
+    aiVoiceBot: {
+      title: "ШІ-голосовий бот | NeuroGen Lab - Інтелектуальний голосовий помічник",
+      description: "Трансформуйте взаємодію з клієнтами за допомогою нашого ШІ-голосового бота. Обробка природної мови та багатомовна підтримка.",
+      keywords: "ШІ-голосовий бот, голосовий помічник, розпізнавання мови, голосова автоматизація",
+      openGraph: {
+        title: "ШІ-голосовий бот - Інтелектуальний голосовий помічник | NeuroGen Lab",
+        description: "Покращіть клієнтський досвід за допомогою голосової взаємодії на базі ШІ"
       }
     }
   }
