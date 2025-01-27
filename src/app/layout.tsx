@@ -14,21 +14,67 @@ import React from "react";
 import { LanguageProvider } from "../context/LanguageContext";
 import { cookies } from "next/headers";
 
-export const viewport: Viewport = {
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "NeuroGen Lab",
+  "description": "AI-powered solutions for business automation and growth",
+  "url": baseUrl,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${baseUrl}/search?q={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeuroGen Lab",
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${baseUrl}/assets/images/logo.png`
+    }
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "numberOfItems": "10",
+    "lowPrice": "0",
+    "highPrice": "999",
+    "priceCurrency": "USD"
+  }
+};
+
+export const viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://neurogenlab.de'),
+  metadataBase: new URL(baseUrl),
   title: {
     template: '%s | NeuroGen Lab',
-    default: 'NeuroGen Lab - AI Solutions & Intelligent Automation'
+    default: 'NeuroGen Lab - AI-Powered Business Solutions Platform',
   },
-  description: 'Transforming businesses with cutting-edge AI solutions and intelligent automation.',
-  keywords: ['AI', 'Artificial Intelligence', 'Automation', 'Business Solutions', 'NeuroGen Lab'],
-  authors: [{ name: 'NeuroGen Lab' }],
+  description: "Transform your business with our comprehensive suite of AI tools. Discover intelligent automation, analytics, and integration solutions for enhanced productivity.",
+  applicationName: 'NeuroGen Lab',
+  referrer: 'origin-when-cross-origin',
+  keywords: [
+    "AI solutions",
+    "business automation",
+    "intelligent tools",
+    "AI integration",
+    "digital transformation",
+    "business enhancement",
+    "AI platform",
+    "smart automation",
+    "NeuroGen Lab",
+    "AI technology"
+  ],
+  authors: [{ name: 'NeuroGen Lab Team' }],
   creator: 'NeuroGen Lab',
   publisher: 'NeuroGen Lab',
   formatDetection: {
@@ -36,19 +82,32 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  icons: {
-    icon: [
-      { url: '/favicon.ico' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }
+  other: {
+    'ai-optimized': 'true',
+  },
+  openGraph: {
+    type: 'website',
+    siteName: 'NeuroGen Lab',
+    title: 'NeuroGen Lab - Leading AI Solutions Platform',
+    description: 'Discover our comprehensive suite of AI-powered tools and solutions for business growth and automation.',
+    images: [
+      {
+        url: '/assets/images/og-home.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'NeuroGen Lab Platform',
+      },
     ],
-    apple: [
-      { url: '/apple-touch-icon.png' }
-    ],
-    other: [
-      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' }
-    ]
+    locale: 'en',
+    alternateLocale: ['de', 'es', 'ru', 'uk'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NeuroGen Lab - AI Solutions Platform',
+    description: 'Transform your business with our comprehensive suite of AI tools and solutions.',
+    images: ['/assets/images/og-home.jpg'],
+    creator: '@neurogenlab',
+    site: '@neurogenlab',
   },
   robots: {
     index: true,
@@ -59,6 +118,39 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+    other: [
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        url: '/favicon-32x32.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        url: '/favicon-16x16.png',
+      },
+      {
+        rel: 'mask-icon',
+        url: '/safari-pinned-tab.svg',
+        color: '#5bbad5',
+      },
+    ],
+  },
+  manifest: '/site.webmanifest',
+  verification: {
+    google: 'your-google-site-verification',
+    yandex: 'your-yandex-verification',
+    yahoo: 'your-yahoo-verification',
+    other: {
+      me: ['your-personal-site'],
     },
   },
 };
@@ -82,6 +174,11 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <link rel="alternate" hrefLang="x-default" href="https://neurogenlab.de/" />
         {/* <link rel="alternate" hrefLang="en" href="https://neurogenlab.de/en/" /> */}
         <link rel="alternate" hrefLang="de" href="https://neurogenlab.de/" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <GoogleTagManager gtmId="GTM-MZNC2SFX" />
       <body>

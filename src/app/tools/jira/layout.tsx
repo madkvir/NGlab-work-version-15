@@ -29,6 +29,12 @@ const jsonLd = {
   }
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "Jira Integration | NeuroGen Lab - Smart Project Management",
   description: "Transform your project management with AI-powered Jira integration. Automated workflows, intelligent task prioritization, and advanced analytics for team productivity.",

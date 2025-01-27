@@ -4,12 +4,12 @@ export const seoTranslations = {
       // ... существующие переводы about ...
     },
     home: {
-      title: "NeuroGen Lab | AI Solutions for Business Growth",
-      description: "Transform your business with NeuroGen Lab's innovative AI solutions. We provide cutting-edge artificial intelligence tools and consulting services.",
-      keywords: "AI solutions, business automation, artificial intelligence, machine learning, NeuroGen Lab",
+      title: "NeuroGen Lab - AI-Powered Business Solutions Platform",
+      description: "Transform your business with our comprehensive suite of AI tools. Discover intelligent automation, analytics, and integration solutions.",
+      keywords: "AI solutions, business automation, intelligent tools, AI integration",
       openGraph: {
-        title: "NeuroGen Lab - Leading AI Solutions Provider",
-        description: "Innovative AI solutions for business growth and digital transformation. Discover how NeuroGen Lab can help your business thrive."
+        title: "NeuroGen Lab - Leading AI Solutions Platform",
+        description: "Transform your business with our comprehensive suite of AI tools"
       }
     },
     contacts: {
@@ -294,12 +294,12 @@ export const seoTranslations = {
       }
     },
     hero: {
-      title: "NeuroGen Lab - KI-gestützte Geschäftslösungen",
+      title: "NeuroGen Lab - KI-gestützte Business-Lösungsplattform",
       description: "Transformieren Sie Ihr Unternehmen mit unserer umfassenden Suite von KI-Tools. Entdecken Sie intelligente Automatisierung und Analysen.",
       keywords: "KI-Lösungen, Geschäftsautomatisierung, intelligente Tools, KI-Integration",
       openGraph: {
         title: "NeuroGen Lab - Führende KI-Lösungsplattform",
-        description: "Entdecken Sie unsere umfassende Suite von KI-gestützten Tools und Lösungen"
+        description: "Transformieren Sie Ihr Unternehmen mit unserer KI-Tool-Suite"
       }
     },
     table: {
@@ -377,12 +377,12 @@ export const seoTranslations = {
       }
     },
     home: {
-      title: "NeuroGen Lab | Soluciones de IA para el Crecimiento Empresarial",
-      description: "Transforme su negocio con las soluciones innovadoras de IA de NeuroGen Lab. Proporcionamos herramientas de inteligencia artificial y servicios de consultoría.",
-      keywords: "soluciones IA, automatización empresarial, inteligencia artificial, aprendizaje automático, NeuroGen Lab",
+      title: "NeuroGen Lab - Plataforma de Soluciones Empresariales con IA",
+      description: "Transforme su empresa con nuestra suite integral de herramientas de IA. Descubra automatización inteligente y análisis.",
+      keywords: "soluciones IA, automatización empresarial, herramientas inteligentes, integración IA",
       openGraph: {
-        title: "NeuroGen Lab - Proveedor Líder de Soluciones IA",
-        description: "Soluciones innovadoras de IA para el crecimiento empresarial y la transformación digital. Descubra cómo NeuroGen Lab puede ayudar a su negocio."
+        title: "NeuroGen Lab - Plataforma Líder de Soluciones IA",
+        description: "Transforme su empresa con nuestra suite de herramientas de IA"
       }
     },
     contacts: {
@@ -469,12 +469,12 @@ export const seoTranslations = {
   },
   ru: {
     home: {
-      title: "NeuroGen Lab | ИИ-решения для роста бизнеса",
-      description: "Трансформируйте ваш бизнес с инновационными ИИ-решениями NeuroGen Lab. Мы предоставляем передовые инструменты искусственного интеллекта и консалтинговые услуги.",
-      keywords: "ИИ-решения, автоматизация бизнеса, искусственный интеллект, машинное обучение, NeuroGen Lab",
+      title: "NeuroGen Lab - Платформа бизнес-решений на базе ИИ",
+      description: "Трансформируйте ваш бизнес с помощью нашего комплексного набора ИИ-инструментов. Откройте для себя интеллектуальную автоматизацию и аналитику.",
+      keywords: "ИИ-решения, бизнес-автоматизация, интеллектуальные инструменты, ИИ-интеграция",
       openGraph: {
-        title: "NeuroGen Lab - Ведущий поставщик ИИ-решений",
-        description: "Инновационные ИИ-решения для роста бизнеса и цифровой трансформации. Узнайте, как NeuroGen Lab может помочь вашему бизнесу."
+        title: "NeuroGen Lab - Ведущая платформа ИИ-решений",
+        description: "Трансформируйте ваш бизнес с помощью нашего набора ИИ-инструментов"
       }
     },
     contacts: {
@@ -595,12 +595,12 @@ export const seoTranslations = {
       }
     },
     jira: {
-      title: "Интеграция Jira | NeuroGen Lab - Умное управление проектами",
-      description: "Трансформируйте управление проектами с помощью ИИ-интеграции Jira. Автоматизированные рабочие процессы и интеллектуальная приоритизация задач.",
-      keywords: "интеграция Jira, управление проектами, agile-процессы, командное взаимодействие",
+      title: "Интеграция Jira | NeuroGen Lab - Розумне управління проектами",
+      description: "Трансформуйте управління проектами за допомогою ШІ-інтеграції Jira. Автоматизовані робочі процеси та інтелектуальна пріоритизація завдань.",
+      keywords: "інтеграція Jira, управління проектами, agile-процеси, командна взаємодія",
       openGraph: {
-        title: "Интеграция Jira - Умное управление проектами | NeuroGen Lab",
-        description: "Трансформируйте управление проектами с помощью ИИ-интеграции Jira"
+        title: "Інтеграція Jira - Розумне управління проектами | NeuroGen Lab",
+        description: "Трансформуйте управління проектами за допомогою ШІ-інтеграції Jira"
       }
     },
     hero: {
@@ -741,12 +741,12 @@ export const seoTranslations = {
       }
     },
     hero: {
-      title: "NeuroGen Lab - Бізнес-рішення на базі ШІ",
+      title: "NeuroGen Lab - Платформа бізнес-рішень на базі ШІ",
       description: "Трансформуйте ваш бізнес за допомогою нашого комплексного набору ШІ-інструментів. Відкрийте для себе інтелектуальну автоматизацію та аналітику.",
       keywords: "ШІ-рішення, бізнес-автоматизація, інтелектуальні інструменти, ШІ-інтеграція",
       openGraph: {
         title: "NeuroGen Lab - Провідна платформа ШІ-рішень",
-        description: "Відкрийте для себе наш комплексний набір інструментів та рішень на базі ШІ"
+        description: "Трансформуйте ваш бізнес за допомогою нашого набору ШІ-інструментів"
       }
     },
     table: {
