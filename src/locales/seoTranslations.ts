@@ -137,6 +137,15 @@ export const seoTranslations = {
         title: "Facebook Messenger Solution - Intelligent Messaging | NeuroGen Lab",
         description: "Transform your Messenger communication with AI-powered automation"
       }
+    },
+    hubspot: {
+      title: "HubSpot Integration | NeuroGen Lab - Intelligent CRM Enhancement",
+      description: "Enhance your HubSpot experience with AI technology. Smart automation, analytics, and advanced features for better customer relationship management.",
+      keywords: "hubspot integration, crm enhancement, ai automation, customer management",
+      openGraph: {
+        title: "HubSpot Integration - Intelligent CRM Enhancement | NeuroGen Lab",
+        description: "Transform your HubSpot experience with AI-powered automation"
+      }
     }
   },
   de: {
@@ -237,6 +246,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Facebook Messenger-Lösung - Intelligentes Messaging | NeuroGen Lab",
         description: "Transformieren Sie Ihre Messenger-Kommunikation mit KI-gestützter Automatisierung"
+      }
+    },
+    hubspot: {
+      title: "HubSpot-Integration | NeuroGen Lab - Intelligente CRM-Verbesserung",
+      description: "Verbessern Sie Ihre HubSpot-Erfahrung mit KI-Technologie. Intelligente Automatisierung und erweiterte Funktionen für besseres Kundenbeziehungsmanagement.",
+      keywords: "HubSpot-Integration, CRM-Verbesserung, KI-Automatisierung, Kundenmanagement",
+      openGraph: {
+        title: "HubSpot-Integration - Intelligente CRM-Verbesserung | NeuroGen Lab",
+        description: "Transformieren Sie Ihre HubSpot-Erfahrung mit KI-gestützter Automatisierung"
       }
     }
   },
@@ -357,6 +375,15 @@ export const seoTranslations = {
         title: "Solución de Facebook Messenger - Mensajería Inteligente | NeuroGen Lab",
         description: "Transforme su comunicación en Messenger con automatización impulsada por IA"
       }
+    },
+    hubspot: {
+      title: "Integración de HubSpot | NeuroGen Lab - Mejora Inteligente de CRM",
+      description: "Mejore su experiencia con HubSpot mediante tecnología de IA. Automatización inteligente y funciones avanzadas para una mejor gestión de relaciones con clientes.",
+      keywords: "integración HubSpot, mejora CRM, automatización IA, gestión de clientes",
+      openGraph: {
+        title: "Integración de HubSpot - Mejora Inteligente de CRM | NeuroGen Lab",
+        description: "Transforme su experiencia con HubSpot mediante automatización impulsada por IA"
+      }
     }
   },
   ru: {
@@ -476,6 +503,15 @@ export const seoTranslations = {
         title: "Решение для Facebook Messenger - Интеллектуальный обмен сообщениями | NeuroGen Lab",
         description: "Трансформируйте вашу коммуникацию в Messenger с помощью ИИ-автоматизации"
       }
+    },
+    hubspot: {
+      title: "Интеграция HubSpot | NeuroGen Lab - Интеллектуальное улучшение CRM",
+      description: "Улучшите ваш опыт работы с HubSpot с помощью ИИ-технологии. Умная автоматизация и продвинутые функции для улучшенного управления отношениями с клиентами.",
+      keywords: "интеграция HubSpot, улучшение CRM, ИИ-автоматизация, управление клиентами",
+      openGraph: {
+        title: "Интеграция HubSpot - Интеллектуальное улучшение CRM | NeuroGen Lab",
+        description: "Трансформируйте ваш опыт работы с HubSpot с помощью ИИ-автоматизации"
+      }
     }
   },
   uk: {
@@ -576,6 +612,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Рішення для Facebook Messenger - Інтелектуальний обмін повідомленнями | NeuroGen Lab",
         description: "Трансформуйте вашу комунікацію в Messenger за допомогою ШІ-автоматизації"
+      }
+    },
+    hubspot: {
+      title: "Інтеграція HubSpot | NeuroGen Lab - Інтелектуальне покращення CRM",
+      description: "Покращіть ваш досвід роботи з HubSpot за допомогою ШІ-технології. Розумна автоматизація та просунуті функції для покращеного управління відносинами з клієнтами.",
+      keywords: "інтеграція HubSpot, покращення CRM, ШІ-автоматизація, управління клієнтами",
+      openGraph: {
+        title: "Інтеграція HubSpot - Інтелектуальне покращення CRM | NeuroGen Lab",
+        description: "Трансформуйте ваш досвід роботи з HubSpot за допомогою ШІ-автоматизації"
       }
     }
   }
