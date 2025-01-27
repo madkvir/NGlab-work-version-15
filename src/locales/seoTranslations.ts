@@ -146,6 +146,24 @@ export const seoTranslations = {
         title: "HubSpot Integration - Intelligent CRM Enhancement | NeuroGen Lab",
         description: "Transform your HubSpot experience with AI-powered automation"
       }
+    },
+    jira: {
+      title: "Jira Integration | NeuroGen Lab - Smart Project Management",
+      description: "Transform your project management with AI-powered Jira integration. Automated workflows, intelligent task prioritization, and advanced analytics.",
+      keywords: "jira integration, project management, agile workflow, team collaboration",
+      openGraph: {
+        title: "Jira Integration - Smart Project Management | NeuroGen Lab",
+        description: "Transform your project management with AI-powered Jira integration"
+      }
+    },
+    hero: {
+      title: "NeuroGen Lab - AI-Powered Business Solutions",
+      description: "Transform your business with our comprehensive suite of AI tools. Discover intelligent automation, analytics, and integration solutions.",
+      keywords: "AI solutions, business automation, intelligent tools, AI integration",
+      openGraph: {
+        title: "NeuroGen Lab - Leading AI Solutions Platform",
+        description: "Discover our comprehensive suite of AI-powered tools and solutions"
+      }
     }
   },
   de: {
@@ -255,6 +273,24 @@ export const seoTranslations = {
       openGraph: {
         title: "HubSpot-Integration - Intelligente CRM-Verbesserung | NeuroGen Lab",
         description: "Transformieren Sie Ihre HubSpot-Erfahrung mit KI-gestützter Automatisierung"
+      }
+    },
+    jira: {
+      title: "Jira-Integration | NeuroGen Lab - Intelligentes Projektmanagement",
+      description: "Transformieren Sie Ihr Projektmanagement mit KI-gestützter Jira-Integration. Automatisierte Workflows und intelligente Aufgabenpriorisierung.",
+      keywords: "Jira-Integration, Projektmanagement, Agile Workflows, Teamzusammenarbeit",
+      openGraph: {
+        title: "Jira-Integration - Intelligentes Projektmanagement | NeuroGen Lab",
+        description: "Transformieren Sie Ihr Projektmanagement mit KI-gestützter Jira-Integration"
+      }
+    },
+    hero: {
+      title: "NeuroGen Lab - KI-gestützte Geschäftslösungen",
+      description: "Transformieren Sie Ihr Unternehmen mit unserer umfassenden Suite von KI-Tools. Entdecken Sie intelligente Automatisierung und Analysen.",
+      keywords: "KI-Lösungen, Geschäftsautomatisierung, intelligente Tools, KI-Integration",
+      openGraph: {
+        title: "NeuroGen Lab - Führende KI-Lösungsplattform",
+        description: "Entdecken Sie unsere umfassende Suite von KI-gestützten Tools und Lösungen"
       }
     }
   },
@@ -384,6 +420,24 @@ export const seoTranslations = {
         title: "Integración de HubSpot - Mejora Inteligente de CRM | NeuroGen Lab",
         description: "Transforme su experiencia con HubSpot mediante automatización impulsada por IA"
       }
+    },
+    jira: {
+      title: "Integración de Jira | NeuroGen Lab - Gestión Inteligente de Proyectos",
+      description: "Transforme su gestión de proyectos con integración de Jira impulsada por IA. Flujos de trabajo automatizados y priorización inteligente de tareas.",
+      keywords: "integración Jira, gestión de proyectos, flujo de trabajo ágil, colaboración en equipo",
+      openGraph: {
+        title: "Integración de Jira - Gestión Inteligente de Proyectos | NeuroGen Lab",
+        description: "Transforme su gestión de proyectos con integración de Jira impulsada por IA"
+      }
+    },
+    hero: {
+      title: "NeuroGen Lab - Soluciones Empresariales Impulsadas por IA",
+      description: "Transforme su empresa con nuestra suite integral de herramientas de IA. Descubra automatización inteligente y análisis.",
+      keywords: "soluciones IA, automatización empresarial, herramientas inteligentes, integración IA",
+      openGraph: {
+        title: "NeuroGen Lab - Plataforma Líder de Soluciones IA",
+        description: "Descubra nuestra suite integral de herramientas y soluciones impulsadas por IA"
+      }
     }
   },
   ru: {
@@ -489,7 +543,7 @@ export const seoTranslations = {
     email: {
       title: "Email-решение | NeuroGen Lab - Интеллектуальное управление почтой",
       description: "Трансформируйте вашу email-коммуникацию с помощью ИИ-автоматизации. Умная фильтрация и автоматические ответы.",
-      keywords: "email-решение, управление почтой, ИИ-почта, умный почтовый ящик",
+      keywords: "email-решение, управление почтой, ИИ-почта, розумная почтовая скринька",
       openGraph: {
         title: "Email-решение - Интеллектуальное управление почтой | NeuroGen Lab",
         description: "Революционизируйте ваш рабочий процесс с email с помощью ИИ-управления"
@@ -498,7 +552,7 @@ export const seoTranslations = {
     facebookMessenger: {
       title: "Решение для Facebook Messenger | NeuroGen Lab - Интеллектуальный обмен сообщениями",
       description: "Улучшите вашу коммуникацию в Messenger с помощью ИИ-технологии. Автоматические ответы и продвинутые функции.",
-      keywords: "Facebook Messenger, автоматизация Messenger, ИИ-мессенджер, управление чатом",
+      keywords: "Facebook Messenger, автоматизация Messenger, ИИ-месенджер, управление чатом",
       openGraph: {
         title: "Решение для Facebook Messenger - Интеллектуальный обмен сообщениями | NeuroGen Lab",
         description: "Трансформируйте вашу коммуникацию в Messenger с помощью ИИ-автоматизации"
@@ -506,11 +560,29 @@ export const seoTranslations = {
     },
     hubspot: {
       title: "Интеграция HubSpot | NeuroGen Lab - Интеллектуальное улучшение CRM",
-      description: "Улучшите ваш опыт работы с HubSpot с помощью ИИ-технологии. Умная автоматизация и продвинутые функции для улучшенного управления отношениями с клиентами.",
-      keywords: "интеграция HubSpot, улучшение CRM, ИИ-автоматизация, управление клиентами",
+      description: "Улучшите ваш опыт работы с HubSpot с помощью ИИ-технологии. Розумная автоматизация и просунутые функции для покращеного управління відносинами з клієнтами.",
+      keywords: "интеграция HubSpot, покращення CRM, ИИ-автоматизація, управління клієнтами",
       openGraph: {
         title: "Интеграция HubSpot - Интеллектуальное улучшение CRM | NeuroGen Lab",
-        description: "Трансформируйте ваш опыт работы с HubSpot с помощью ИИ-автоматизации"
+        description: "Трансформуйте ваш досвід роботи з HubSpot за допомогою ШІ-автоматизації"
+      }
+    },
+    jira: {
+      title: "Интеграция Jira | NeuroGen Lab - Умное управление проектами",
+      description: "Трансформируйте управление проектами с помощью ИИ-интеграции Jira. Автоматизированные рабочие процессы и интеллектуальная приоритизация задач.",
+      keywords: "интеграция Jira, управление проектами, agile-процессы, командное взаимодействие",
+      openGraph: {
+        title: "Интеграция Jira - Умное управление проектами | NeuroGen Lab",
+        description: "Трансформируйте управление проектами с помощью ИИ-интеграции Jira"
+      }
+    },
+    hero: {
+      title: "NeuroGen Lab - Бизнес-решения на базе ИИ",
+      description: "Трансформируйте ваш бизнес с помощью нашего комплексного набора ИИ-инструментов. Откройте для себя интеллектуальную автоматизацию и аналитику.",
+      keywords: "ИИ-решения, бизнес-автоматизация, интеллектуальные инструменты, ИИ-интеграция",
+      openGraph: {
+        title: "NeuroGen Lab - Ведущая платформа ИИ-решений",
+        description: "Откройте для себя наш комплексный набор инструментов и решений на базе ИИ"
       }
     }
   },
@@ -621,6 +693,24 @@ export const seoTranslations = {
       openGraph: {
         title: "Інтеграція HubSpot - Інтелектуальне покращення CRM | NeuroGen Lab",
         description: "Трансформуйте ваш досвід роботи з HubSpot за допомогою ШІ-автоматизації"
+      }
+    },
+    jira: {
+      title: "Інтеграція Jira | NeuroGen Lab - Розумне управління проектами",
+      description: "Трансформуйте управління проектами за допомогою ШІ-інтеграції Jira. Автоматизовані робочі процеси та інтелектуальна пріоритизація завдань.",
+      keywords: "інтеграція Jira, управління проектами, agile-процеси, командна взаємодія",
+      openGraph: {
+        title: "Інтеграція Jira - Розумне управління проектами | NeuroGen Lab",
+        description: "Трансформуйте управління проектами за допомогою ШІ-інтеграції Jira"
+      }
+    },
+    hero: {
+      title: "NeuroGen Lab - Бізнес-рішення на базі ШІ",
+      description: "Трансформуйте ваш бізнес за допомогою нашого комплексного набору ШІ-інструментів. Відкрийте для себе інтелектуальну автоматизацію та аналітику.",
+      keywords: "ШІ-рішення, бізнес-автоматизація, інтелектуальні інструменти, ШІ-інтеграція",
+      openGraph: {
+        title: "NeuroGen Lab - Провідна платформа ШІ-рішень",
+        description: "Відкрийте для себе наш комплексний набір інструментів та рішень на базі ШІ"
       }
     }
   }

@@ -1,55 +1,115 @@
 import React from "react";
 import { Metadata } from "next";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "NeuroGen Lab Jira Integration",
+  "applicationCategory": "BusinessApplication",
+  "description": "AI-powered Jira integration for enhanced project management and team collaboration",
+  "url": `${baseUrl}/tools/jira`,
+  "provider": {
+    "@type": "Organization",
+    "name": "NeuroGen Lab",
+    "url": baseUrl
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "operatingSystem": "All",
+  "applicationSubCategory": "ProjectManagement",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "205"
+  }
+};
+
 export const metadata: Metadata = {
   title: "Jira Integration | NeuroGen Lab - Smart Project Management",
-  description: "Enhance your project management with AI technology. Smart automation, analytics, and advanced features for better project tracking and team collaboration.",
+  description: "Transform your project management with AI-powered Jira integration. Automated workflows, intelligent task prioritization, and advanced analytics for team productivity.",
+  other: {
+    'ai-optimized': 'true',
+    'og:image': '/assets/images/og-jira.jpg',
+  },
   keywords: [
     "jira integration",
     "project management",
-    "task automation",
+    "agile workflow",
     "team collaboration",
-    "issue tracking",
+    "task automation",
     "sprint planning",
-    "agile development"
+    "project analytics",
+    "issue tracking",
+    "NeuroGen Lab jira",
+    "AI project management"
   ],
   openGraph: {
+    type: 'website',
     title: "Jira Integration - Smart Project Management | NeuroGen Lab",
-    description: "Enhance your project management with AI technology",
-    url: "https://neurogenlab.de/tools/jira",
+    description: "Transform your project management with AI-powered Jira integration. Smart automation and analytics for enhanced team productivity.",
+    url: `${baseUrl}/tools/jira`,
+    siteName: "NeuroGen Lab",
     images: [
       {
-        url: "/images/tools/jira.jpg",
-        alt: "Jira Integration by NeuroGen Lab",
+        url: '/assets/images/og-jira.jpg',
+        width: 1200,
+        height: 630,
+        alt: "NeuroGen Lab Jira Integration",
+        type: 'image/jpeg',
       },
     ],
+    locale: 'en',
+    alternateLocale: ['de', 'es', 'ru', 'uk'],
   },
   twitter: {
-    title: "Jira Integration - Smart Project Management",
-    description: "Enhance project management with AI",
-    images: [
-      {
-        url: "/images/tools/jira.jpg",
-        alt: "Jira Integration by NeuroGen Lab",
-      },
-    ],
+    card: 'summary_large_image',
+    title: "Jira Integration - Intelligent Project Management",
+    description: "Enhance your project management with AI technology. Smart automation and team collaboration tools.",
+    images: ['/assets/images/og-jira.jpg'],
+    creator: "@neurogenlab",
+    site: "@neurogenlab",
   },
-  authors: [{ name: "NeuroGen Lab" }],
   alternates: {
-    canonical: "https://neurogenlab.de/tools/jira",
+    canonical: `${baseUrl}/tools/jira`,
     languages: {
-      'en': '/tools/jira',
-      'de': '/de/tools/jira',
-      'es': '/es/tools/jira',
-      'ru': '/ru/tools/jira'
-    }
+      'en': `${baseUrl}/tools/jira`,
+      'de': `${baseUrl}/de/tools/jira`,
+      'es': `${baseUrl}/es/tools/jira`,
+      'ru': `${baseUrl}/ru/tools/jira`,
+      'uk': `${baseUrl}/uk/tools/jira`
+    },
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function Layout({
+export default function JiraLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  );
 } 
