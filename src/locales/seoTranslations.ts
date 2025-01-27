@@ -101,6 +101,15 @@ export const seoTranslations = {
         title: "Intercom Integration - AI Customer Support | NeuroGen Lab",
         description: "Transform your customer support with AI-powered Intercom integration"
       }
+    },
+    bestSearch: {
+      title: "Best Search | NeuroGen Lab - Intelligent Search Solution",
+      description: "Transform your data discovery with AI-powered search technology. Advanced semantic search, natural language processing, and intelligent indexing.",
+      keywords: "AI search, semantic search, intelligent search, data discovery",
+      openGraph: {
+        title: "Best Search - Intelligent Search Solution | NeuroGen Lab",
+        description: "Revolutionize your data discovery with AI-powered search technology"
+      }
     }
   },
   de: {
@@ -165,6 +174,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Intercom-Integration - KI-Kundenbetreuung | NeuroGen Lab",
         description: "Transformieren Sie Ihren Kundensupport mit KI-gestützter Intercom-Integration"
+      }
+    },
+    bestSearch: {
+      title: "Best Search | NeuroGen Lab - Intelligente Suchlösung",
+      description: "Transformieren Sie Ihre Datensuche mit KI-gestützter Suchtechnologie. Fortschrittliche semantische Suche und intelligente Indexierung.",
+      keywords: "KI-Suche, semantische Suche, intelligente Suche, Datenerkennung",
+      openGraph: {
+        title: "Best Search - Intelligente Suchlösung | NeuroGen Lab",
+        description: "Revolutionieren Sie Ihre Datensuche mit KI-gestützter Suchtechnologie"
       }
     }
   },
@@ -248,6 +266,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Contacto NeuroGen Lab - Soporte de Soluciones IA",
         description: "Conecte con el equipo de expertos de NeuroGen Lab. Estamos aquí para ayudarle a implementar soluciones innovadoras de IA para su negocio."
+      }
+    },
+    bestSearch: {
+      title: "Best Search | NeuroGen Lab - Solución de Búsqueda Inteligente",
+      description: "Transforme su descubrimiento de datos con tecnología de búsqueda impulsada por IA. Búsqueda semántica avanzada e indexación inteligente.",
+      keywords: "búsqueda IA, búsqueda semántica, búsqueda inteligente, descubrimiento de datos",
+      openGraph: {
+        title: "Best Search - Solución de Búsqueda Inteligente | NeuroGen Lab",
+        description: "Revolucione su descubrimiento de datos con tecnología de búsqueda impulsada por IA"
       }
     }
   },
@@ -333,7 +360,15 @@ export const seoTranslations = {
         description: "Трансформируйте вашу поддержку клиентов с помощью ИИ-интеграции Intercom"
       }
     },
-    // ... остальные страницы для русского языка ...
+    bestSearch: {
+      title: "Best Search | NeuroGen Lab - Интеллектуальное решение для поиска",
+      description: "Трансформируйте поиск данных с помощью технологии на базе ИИ. Продвинутый семантический поиск и интеллектуальная индексация.",
+      keywords: "ИИ-поиск, семантический поиск, интеллектуальный поиск, поиск данных",
+      openGraph: {
+        title: "Best Search - Интеллектуальное решение для поиска | NeuroGen Lab",
+        description: "Революционизируйте поиск данных с помощью технологии на базе ИИ"
+      }
+    }
   },
   uk: {
     whatsapp: {
@@ -397,6 +432,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Інтеграція з Intercom - Підтримка клієнтів з ШІ | NeuroGen Lab",
         description: "Трансформуйте вашу підтримку клієнтів за допомогою ШІ-інтеграції Intercom"
+      }
+    },
+    bestSearch: {
+      title: "Best Search | NeuroGen Lab - Інтелектуальне рішення для пошуку",
+      description: "Трансформуйте пошук даних за допомогою технології на базі ШІ. Просунутий семантичний пошук та інтелектуальна індексація.",
+      keywords: "ШІ-пошук, семантичний пошук, інтелектуальний пошук, пошук даних",
+      openGraph: {
+        title: "Best Search - Інтелектуальне рішення для пошуку | NeuroGen Lab",
+        description: "Революціонізуйте пошук даних за допомогою технології на базі ШІ"
       }
     }
   }
