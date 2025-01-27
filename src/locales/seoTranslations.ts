@@ -74,6 +74,15 @@ export const seoTranslations = {
         title: "AI Voice Bot - Intelligent Voice Assistant | NeuroGen Lab",
         description: "Enhance customer experience with AI-powered voice interactions"
       }
+    },
+    antiSpam: {
+      title: "Anti-Spam Protection | NeuroGen Lab - Advanced Security Solution",
+      description: "Protect your business communication with AI-powered anti-spam technology. Advanced filtering, real-time protection, and intelligent threat detection.",
+      keywords: "anti-spam protection, email security, spam filter, AI security",
+      openGraph: {
+        title: "Anti-Spam Protection - Advanced Security Solution | NeuroGen Lab",
+        description: "Secure your business communications with AI-powered anti-spam technology"
+      }
     }
   },
   de: {
@@ -111,6 +120,15 @@ export const seoTranslations = {
       openGraph: {
         title: "KI-Sprachbot - Intelligenter Sprachassistent | NeuroGen Lab",
         description: "Verbessern Sie das Kundenerlebnis mit KI-gestützten Sprachinteraktionen"
+      }
+    },
+    antiSpam: {
+      title: "Anti-Spam-Schutz | NeuroGen Lab - Fortschrittliche Sicherheitslösung",
+      description: "Schützen Sie Ihre Geschäftskommunikation mit KI-gestützter Anti-Spam-Technologie. Fortschrittliche Filterung und Echtzeitschutz.",
+      keywords: "Anti-Spam-Schutz, E-Mail-Sicherheit, Spam-Filter, KI-Sicherheit",
+      openGraph: {
+        title: "Anti-Spam-Schutz - Fortschrittliche Sicherheitslösung | NeuroGen Lab",
+        description: "Sichern Sie Ihre Geschäftskommunikation mit KI-gestützter Anti-Spam-Technologie"
       }
     }
   },
@@ -172,6 +190,15 @@ export const seoTranslations = {
         description: "Улучшите клиентский опыт с помощью голосового взаимодействия на базе ИИ"
       }
     },
+    antiSpam: {
+      title: "Защита от спама | NeuroGen Lab - Продвинутое решение безопасности",
+      description: "Защитите вашу бизнес-коммуникацию с помощью антиспам-технологии на базе ИИ. Продвинутая фильтрация и защита в реальном времени.",
+      keywords: "защита от спама, безопасность почты, спам-фильтр, ИИ-безопасность",
+      openGraph: {
+        title: "Защита от спама - Продвинутое решение безопасности | NeuroGen Lab",
+        description: "Обеспечьте безопасность вашей бизнес-коммуникации с помощью антиспам-технологии на базе ИИ"
+      }
+    },
     // ... остальные страницы для русского языка ...
   },
   uk: {
@@ -209,6 +236,15 @@ export const seoTranslations = {
       openGraph: {
         title: "ШІ-голосовий бот - Інтелектуальний голосовий помічник | NeuroGen Lab",
         description: "Покращіть клієнтський досвід за допомогою голосової взаємодії на базі ШІ"
+      }
+    },
+    antiSpam: {
+      title: "Захист від спаму | NeuroGen Lab - Передове рішення безпеки",
+      description: "Захистіть вашу бізнес-комунікацію за допомогою антиспам-технології на базі ШІ. Передова фільтрація та захист у реальному часі.",
+      keywords: "захист від спаму, безпека пошти, спам-фільтр, ШІ-безпека",
+      openGraph: {
+        title: "Захист від спаму - Передове рішення безпеки | NeuroGen Lab",
+        description: "Забезпечте безпеку вашої бізнес-комунікації за допомогою антиспам-технології на базі ШІ"
       }
     }
   }
