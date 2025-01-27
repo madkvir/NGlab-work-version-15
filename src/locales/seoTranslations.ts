@@ -92,6 +92,15 @@ export const seoTranslations = {
         title: "Instagram Integration - AI Social Media Management | NeuroGen Lab",
         description: "Transform your Instagram business presence with AI automation"
       }
+    },
+    intercom: {
+      title: "Intercom Integration | NeuroGen Lab - AI Customer Support",
+      description: "Enhance your Intercom customer support with AI automation. Smart responses, automated workflows, and intelligent engagement solutions.",
+      keywords: "Intercom integration, AI customer support, customer engagement, support automation",
+      openGraph: {
+        title: "Intercom Integration - AI Customer Support | NeuroGen Lab",
+        description: "Transform your customer support with AI-powered Intercom integration"
+      }
     }
   },
   de: {
@@ -148,10 +157,99 @@ export const seoTranslations = {
         title: "Instagram-Integration - KI-Social-Media-Management | NeuroGen Lab",
         description: "Transformieren Sie Ihre Instagram-Geschäftspräsenz mit KI-Automatisierung"
       }
+    },
+    intercom: {
+      title: "Intercom-Integration | NeuroGen Lab - KI-Kundenbetreuung",
+      description: "Verbessern Sie Ihren Intercom-Kundensupport mit KI-Automatisierung. Intelligente Antworten und automatisierte Workflows.",
+      keywords: "Intercom-Integration, KI-Kundenbetreuung, Kundenengagement, Support-Automatisierung",
+      openGraph: {
+        title: "Intercom-Integration - KI-Kundenbetreuung | NeuroGen Lab",
+        description: "Transformieren Sie Ihren Kundensupport mit KI-gestützter Intercom-Integration"
+      }
     }
   },
   es: {
-    // ... аналогичная структура для испанского ...
+    whatsapp: {
+      title: "Asistente de WhatsApp con IA | NeuroGen Lab - Solución de Automatización Empresarial",
+      description: "Mejore su comunicación empresarial en WhatsApp con nuestro asistente impulsado por IA. Automatice respuestas y proporcione soporte 24/7.",
+      keywords: "automatización de WhatsApp, WhatsApp empresarial, asistente de IA, bot de WhatsApp",
+      openGraph: {
+        title: "Asistente de WhatsApp con IA - Solución de Comunicación Empresarial | NeuroGen Lab",
+        description: "Transforme su comunicación empresarial en WhatsApp con automatización impulsada por IA"
+      }
+    },
+    aiAvatar: {
+      title: "Generador de Avatares con IA | NeuroGen Lab - Imágenes de Perfil Profesionales",
+      description: "Cree avatares profesionales generados por IA para sus perfiles empresariales. Transforme su identidad de marca con nuestra tecnología avanzada.",
+      keywords: "generador de avatares IA, foto de perfil profesional, avatar empresarial, imagen de perfil IA",
+      openGraph: {
+        title: "Generador de Avatares con IA - Imágenes de Perfil Profesionales | NeuroGen Lab",
+        description: "Transforme su presencia digital con avatares profesionales generados por IA"
+      }
+    },
+    aiAssistant: {
+      title: "Asistente de IA | NeuroGen Lab - Automatización Empresarial Inteligente",
+      description: "Mejore sus operaciones empresariales con nuestro asistente de IA inteligente. Automatice tareas y aumente la productividad.",
+      keywords: "asistente de IA, automatización empresarial, automatización inteligente, herramienta de productividad",
+      openGraph: {
+        title: "Asistente de IA - Automatización Empresarial Inteligente | NeuroGen Lab",
+        description: "Transforme sus operaciones empresariales con un asistente de IA inteligente"
+      }
+    },
+    aiVoiceBot: {
+      title: "Bot de Voz con IA | NeuroGen Lab - Asistente de Voz Inteligente",
+      description: "Transforme las interacciones con clientes con nuestro Bot de Voz con IA. Procesamiento de lenguaje natural y soporte multilingüe.",
+      keywords: "bot de voz IA, asistente de voz, reconocimiento de voz, automatización de voz",
+      openGraph: {
+        title: "Bot de Voz con IA - Asistente de Voz Inteligente | NeuroGen Lab",
+        description: "Mejore la experiencia del cliente con interacciones de voz impulsadas por IA"
+      }
+    },
+    antiSpam: {
+      title: "Protección Anti-Spam | NeuroGen Lab - Solución de Seguridad Avanzada",
+      description: "Proteja su comunicación empresarial con tecnología anti-spam impulsada por IA. Filtrado avanzado y protección en tiempo real.",
+      keywords: "protección anti-spam, seguridad de correo, filtro spam, seguridad IA",
+      openGraph: {
+        title: "Protección Anti-Spam - Solución de Seguridad Avanzada | NeuroGen Lab",
+        description: "Asegure su comunicación empresarial con tecnología anti-spam impulsada por IA"
+      }
+    },
+    instagram: {
+      title: "Integración de Instagram | NeuroGen Lab - Gestión de Redes Sociales con IA",
+      description: "Optimice su presencia en Instagram con automatización impulsada por IA. Gestión inteligente de contenido y análisis de engagement.",
+      keywords: "automatización de Instagram, gestión de redes sociales, herramienta IA Instagram, Instagram empresarial",
+      openGraph: {
+        title: "Integración de Instagram - Gestión de Redes Sociales con IA | NeuroGen Lab",
+        description: "Transforme su presencia empresarial en Instagram con automatización IA"
+      }
+    },
+    intercom: {
+      title: "Integración de Intercom | NeuroGen Lab - Soporte al Cliente con IA",
+      description: "Mejore su soporte al cliente en Intercom con automatización IA. Respuestas inteligentes y flujos de trabajo automatizados.",
+      keywords: "integración Intercom, soporte al cliente IA, engagement de clientes, automatización de soporte",
+      openGraph: {
+        title: "Integración de Intercom - Soporte al Cliente con IA | NeuroGen Lab",
+        description: "Transforme su soporte al cliente con integración IA de Intercom"
+      }
+    },
+    home: {
+      title: "NeuroGen Lab | Soluciones de IA para el Crecimiento Empresarial",
+      description: "Transforme su negocio con las soluciones innovadoras de IA de NeuroGen Lab. Proporcionamos herramientas de inteligencia artificial y servicios de consultoría.",
+      keywords: "soluciones IA, automatización empresarial, inteligencia artificial, aprendizaje automático, NeuroGen Lab",
+      openGraph: {
+        title: "NeuroGen Lab - Proveedor Líder de Soluciones IA",
+        description: "Soluciones innovadoras de IA para el crecimiento empresarial y la transformación digital. Descubra cómo NeuroGen Lab puede ayudar a su negocio."
+      }
+    },
+    contacts: {
+      title: "Contacto NeuroGen Lab | Soluciones y Soporte IA",
+      description: "Póngase en contacto con NeuroGen Lab para soluciones y soporte de IA. Nuestro equipo está listo para ayudarle a transformar su negocio con inteligencia artificial.",
+      keywords: "contacto NeuroGen Lab, soporte IA, consultoría empresarial, contacto soluciones IA",
+      openGraph: {
+        title: "Contacto NeuroGen Lab - Soporte de Soluciones IA",
+        description: "Conecte con el equipo de expertos de NeuroGen Lab. Estamos aquí para ayudarle a implementar soluciones innovadoras de IA para su negocio."
+      }
+    }
   },
   ru: {
     home: {
@@ -226,6 +324,15 @@ export const seoTranslations = {
         description: "Трансформируйте ваше бизнес-присутствие в Instagram с помощью ИИ-автоматизации"
       }
     },
+    intercom: {
+      title: "Интеграция с Intercom | NeuroGen Lab - Поддержка клиентов с ИИ",
+      description: "Улучшите вашу поддержку клиентов в Intercom с помощью ИИ-автоматизации. Умные ответы и автоматизированные рабочие процессы.",
+      keywords: "интеграция Intercom, поддержка клиентов с ИИ, вовлечение клиентов, автоматизация поддержки",
+      openGraph: {
+        title: "Интеграция с Intercom - Поддержка клиентов с ИИ | NeuroGen Lab",
+        description: "Трансформируйте вашу поддержку клиентов с помощью ИИ-интеграции Intercom"
+      }
+    },
     // ... остальные страницы для русского языка ...
   },
   uk: {
@@ -281,6 +388,15 @@ export const seoTranslations = {
       openGraph: {
         title: "Інтеграція з Instagram - Управління соцмережами з ШІ | NeuroGen Lab",
         description: "Трансформуйте вашу бізнес-присутність в Instagram за допомогою ШІ-автоматизації"
+      }
+    },
+    intercom: {
+      title: "Інтеграція з Intercom | NeuroGen Lab - Підтримка клієнтів з ШІ",
+      description: "Покращіть вашу підтримку клієнтів в Intercom за допомогою ШІ-автоматизації. Розумні відповіді та автоматизовані робочі процеси.",
+      keywords: "інтеграція Intercom, підтримка клієнтів з ШІ, залучення клієнтів, автоматизація підтримки",
+      openGraph: {
+        title: "Інтеграція з Intercom - Підтримка клієнтів з ШІ | NeuroGen Lab",
+        description: "Трансформуйте вашу підтримку клієнтів за допомогою ШІ-інтеграції Intercom"
       }
     }
   }
