@@ -11,7 +11,7 @@ interface DemoModalProps {
 const DemoModal = ({ 
   isOpen, 
   onClose, 
-  videoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  videoUrl = "https://www.youtube.com/embed/HK6y8DAPN_0",
   language 
 }: DemoModalProps) => {
   if (!isOpen) return null;

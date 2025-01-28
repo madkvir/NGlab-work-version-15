@@ -88,25 +88,7 @@ const HowItWorks = () => {
             ))}
           </div>
         </div>
-
-        {/* Call to Action */}
-        <div className='mt-5 flex flex-col sm:flex-row items-center justify-center gap-5'>
-          <div className='relative group w-full sm:w-auto'>
-            <div className='absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200'></div>
-            <button className='relative w-full group bg-gray-900/90 text-white px-5 py-3 rounded-lg transition-all hover:animate-glow flex items-center justify-center gap-2 text-base font-semibold'>
-              {t.buttons.getStarted}
-              <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-            </button>
-          </div>
-          <div className='relative group w-full sm:w-auto'>
-            <div className='absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200'></div>
-            <button className='relative w-full group bg-gray-900/90 text-white px-5 py-3 rounded-lg transition-all hover:animate-glow flex items-center justify-center gap-2 text-base font-semibold'>
-              {t.buttons.watchDemo}
-              <Play className='w-5 h-5 group-hover:scale-110 transition-transform fill-current' />
-            </button>
-          </div>
-        </div>
-
+        
         {/* Bottom Divider */}
         <div className='mt-5'>
           <Divider />

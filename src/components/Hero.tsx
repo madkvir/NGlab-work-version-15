@@ -126,7 +126,7 @@ const Hero = ({ language }: HeroProps) => {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         language={language}
-        // videoUrl="https://www.youtube.com/embed/YOUR_VIDEO_ID" // Добавьте позже реальный ID видео
+        // videoUrl="https://www.youtube.com/watch?v=HK6y8DAPN_0" // Добавьте позже реальный ID видео
       />
     </>
   );
