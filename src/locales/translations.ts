@@ -395,6 +395,29 @@ export const toolGroupTranslations = {
   }
 };
 
+export const demoModalTranslations = {
+  en: {
+    watchDemo: "Watch our demo",
+    closeButton: "Close modal"
+  },
+  de: {
+    watchDemo: "Sehen Sie unsere Demo",
+    closeButton: "Modal schließen"
+  },
+  es: {
+    watchDemo: "Ver nuestra demo",
+    closeButton: "Cerrar modal"
+  },
+  ru: {
+    watchDemo: "Смотрите нашу демонстрацию",
+    closeButton: "Закрыть окно"
+  },
+  ua: {
+    watchDemo: "Дивіться нашу демонстрацію",
+    closeButton: "Закрити вікно"
+  }
+} as const;
+
 export const heroTranslations = {
   en: {
     title: {
@@ -1042,7 +1065,7 @@ export const faqTranslations = {
       },
       {
         question: "Какую поддержку вы предоставляете?",
-        answer: "Мы предлагаем комплексную поддержку, включающая техническую помощь 24/7, выделенных менеджеров по работе с клиентами, подробную документацию и регулярные обучающие сессии. Наша команда всегда готова помочь вам максимально эффективно использовать наши ИИ-решения."
+        answer: "Мы предлагаем комплексную поддержку, включающую техническую помощь 24/7, выделенных менеджеров по работе с клиентами, подробную документацию и регулярные обучающие сессии. Наша команда всегда готова помочь вам максимально эффективно использовать наши ИИ-решения."
       },
       {
         question: "Доступен ли NeuroGen Lab на разных языках?",
@@ -3502,7 +3525,7 @@ const customDevelopmentTranslations = {
       }
     },
     metaTitle: "Desarrollo Personalizado | NeuroGen Lab - Soluciones de Software a Medida",
-    metaDescription: "Transforme su negocio con desarrollo de software personalizado. Obtenga soluciones a medida que se ajustan perfectamente a sus necesidades e impulsan el crecimiento."
+    metaDescription: "Transforme su negocio con desarrollo de software personalizado. Obtenga soluciones a medida que se ajusten perfectamente a sus necesidades e impulsan el crecimiento."
   },
   ru: {
     title: "Индивидуальная Разработка",
