@@ -1,12 +1,18 @@
 "use client";
 import { Check, Sparkles, Wrench, Boxes } from "lucide-react";
+import { useRouter } from "next/navigation";
 import GlowingButton from "./common/GlowingButton";
 import { pricingTranslations } from '../locales/translations';
 import { useLanguage } from '../context/LanguageContext';
 
 const Pricing = () => {
+  const router = useRouter();
   const { language } = useLanguage();
   const t = pricingTranslations[language];
+
+  const handleGetStarted = () => {
+    router.push('/contacts');
+  };
 
   return (
     <section id="pricing" className="py-5 -mt-8">
@@ -51,7 +57,9 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <GlowingButton to="/contacts">{t.customDev.cta}</GlowingButton>
+              <GlowingButton onClick={handleGetStarted}>
+                {t.customDev.cta}
+              </GlowingButton>
             </div>
           </div>
 
@@ -80,7 +88,9 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <GlowingButton to="/signup">{t.platform.cta}</GlowingButton>
+              <GlowingButton onClick={handleGetStarted}>
+                {t.platform.cta}
+              </GlowingButton>
             </div>
           </div>
         </div>
@@ -95,7 +105,9 @@ const Pricing = () => {
               <p className="text-gray-400 mb-6">
                 {t.trial.description}
               </p>
-              <GlowingButton to="/signup">{t.trial.cta}</GlowingButton>
+              <GlowingButton onClick={handleGetStarted}>
+                {t.trial.cta}
+              </GlowingButton>
             </div>
           </div>
         </div>
