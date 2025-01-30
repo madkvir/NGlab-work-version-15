@@ -13,7 +13,8 @@ import {
   Activity,
   Shield,
   Clock,
-  Smile
+  Smile,
+  BrainCircuit
 } from "lucide-react";
 import Link from "next/link";
 import BackToHome from "../BackToHome";
@@ -308,69 +309,64 @@ const GuideContent = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <main className="min-h-screen bg-gray-900">
-      <div className="absolute inset-0 bg-gray-900" />
-      <div className="relative pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Back button */}
-          <div className="mb-12">
-            <Link 
-              href="/" 
-              className="inline-flex items-center text-sm text-gray-400 hover:text-emerald-400 transition-colors"
-            >
-              ← На главную
-            </Link>
-          </div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+      {/* Back button */}
+      <div className="mb-12">
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-sm text-gray-400 hover:text-emerald-400 transition-colors"
+        >
+          ← На главную
+        </Link>
+      </div>
 
-          {/* Header section */}
-          <div className="flex flex-col items-center justify-center text-center mb-16">
-            <div className="inline-flex justify-center items-center w-16 h-16 rounded-full bg-emerald-500/20 mb-6">
-              <IconWrapper icon={Book} className="w-8 h-8 text-emerald-400" />
-            </div>
-            <h1 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">
-              от Идеи до Реализации
-            </h1>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Представьте, что ваш бизнес — это целая экосистема, в которой каждая часть важна. 
-              Наша задача — дополнить эту экосистему «умным помощником», который возьмёт на себя 
-              рутинные задачи и поможет компании расти.
-            </p>
-          </div>
+      {/* Header section */}
+      <div className="text-center mb-16">
+        <div className="inline-flex justify-center items-center w-16 h-16 rounded-full bg-emerald-500/20 mb-6">
+          <IconWrapper icon={BrainCircuit} className="w-8 h-8 text-emerald-1400" />
+        </div>
+        <h1 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">
+          от Идеи до Реализации
+        </h1>
+        <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+          Представьте, что ваш бизнес — это целая экосистема, в которой каждая часть важна. 
+          Наша задача — дополнить эту экосистему «умным помощником», который возьмёт на себя 
+          рутинные задачи и поможет компании расти.
+        </p>
+      </div>
 
-          {/* Мобильная кнопка меню */}
-          <div className="md:hidden mb-8">
-            <button 
-              className="w-full p-4 bg-gray-800/50 text-emerald-400 rounded-lg hover:bg-gray-800/70 transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? 'Скрыть меню' : 'Показать меню'}
-            </button>
-          </div>
+      {/* Мобильная кнопка меню */}
+      <div className="md:hidden mb-8">
+        <button 
+          className="w-full p-4 bg-gray-800/50 text-emerald-400 rounded-lg hover:bg-gray-800/70 transition-colors"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? 'Скрыть меню' : 'Показать меню'}
+        </button>
+      </div>
 
-          {/* Main content */}
-          <div className="flex flex-col md:flex-row gap-8 lg:gap-12">
-            <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:block`}>
-              <GuideSidebar activeStage={activeStage} setActiveStage={(stage) => {
-                setActiveStage(stage);
-                setIsMobileMenuOpen(false);
-              }} />
-            </div>
-            
-            <div className="flex-1 max-w-full md:max-w-3xl">
-              <div className="bg-gray-800/50 rounded-xl p-8 hover:bg-gray-800/70 transition-all duration-300">
-                <h2 className="text-2xl font-bold text-emerald-400 mb-4">
-                  {stageContent[activeStage].title}
-                </h2>
-                <h3 className="text-xl text-gray-200 mb-8">
-                  {stageContent[activeStage].subtitle}
-                </h3>
-                {stageContent[activeStage].content}
-              </div>
-            </div>
+      {/* Main content */}
+      <div className="flex flex-col md:flex-row gap-8 lg:gap-12">
+        <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:block`}>
+          <GuideSidebar activeStage={activeStage} setActiveStage={(stage) => {
+            setActiveStage(stage);
+            setIsMobileMenuOpen(false);
+          }} />
+        </div>
+        
+        <div className="flex-1 max-w-full md:max-w-3xl">
+          <div className="bg-gray-800/50 rounded-xl p-8 hover:bg-gray-800/70 transition-all duration-300">
+            <h2 className="text-2xl font-bold text-emerald-400 mb-4">
+              {stageContent[activeStage].title}
+            </h2>
+            <h3 className="text-xl text-gray-200 mb-8">
+              {stageContent[activeStage].subtitle}
+            </h3>
+            {stageContent[activeStage].content}
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 
