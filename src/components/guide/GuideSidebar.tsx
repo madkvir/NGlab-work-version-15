@@ -1,26 +1,31 @@
 "use client";
 import React from 'react';
+import { Lightbulb, ScrollText, Cog, CheckCircle } from 'lucide-react';
 
 const navItems = [
   {
     id: "stage1",
     title: "С ЧЕГО НАЧИНАЕМ",
     stage: "Этап 1",
+    icon: Lightbulb,
   },
   {
     id: "stage2",
     title: "ПРАВОВЫЕ АСПЕКТЫ",
     stage: "Этап 2",
+    icon: ScrollText,
   },
   {
     id: "stage3",
     title: "КАК ПРОХОДИТ РАБОТА",
     stage: "Этап 3",
+    icon: Cog,
   },
   {
     id: "stage4",
     title: "РЕЗУЛЬТАТЫ",
     stage: "Этап 4",
+    icon: CheckCircle,
   },
 ];
 
@@ -43,7 +48,10 @@ const GuideSidebar: React.FC<GuideSidebarProps> = ({ activeStage, setActiveStage
                   : 'bg-gray-800/50 text-gray-400 hover:bg-gray-800 hover:text-emerald-400'
                 }`}
             >
-              <div className="text-sm font-medium mb-1 opacity-80">{item.stage}</div>
+              <div className="flex items-center gap-3 mb-1">
+                <item.icon className="w-5 h-5" />
+                <span className="text-sm font-medium opacity-80">{item.stage}</span>
+              </div>
               <div className="font-semibold text-sm md:text-base">{item.title}</div>
             </button>
           </li>

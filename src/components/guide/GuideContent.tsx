@@ -130,7 +130,7 @@ const stageContent: StageContentMap = {
     )
   },
   stage2: {
-    title: "Договорные Условия и Правовые Аспекты",
+    title: "ПРАВОВЫЕ АСПЕКТЫ",
     subtitle: "Оферта, Договор, Техническое задание",
     content: (
       <>
