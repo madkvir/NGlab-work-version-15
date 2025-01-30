@@ -309,9 +309,9 @@ const GuideContent = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
       {/* Back button */}
-      <div className="mb-12">
+      <div className="mb-10">
         <Link 
           href="/" 
           className="inline-flex items-center text-sm text-gray-400 hover:text-emerald-400 transition-colors"
@@ -321,14 +321,14 @@ const GuideContent = () => {
       </div>
 
       {/* Header section */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-14">
         <div className="inline-flex justify-center items-center w-16 h-16 rounded-full bg-emerald-500/20 mb-6">
           <IconWrapper icon={BrainCircuit} className="w-8 h-8 text-emerald-1400" />
         </div>
-        <h1 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">
+        <h1 className="text-4xl font-bold mb-5 bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">
           от Идеи до Реализации
         </h1>
-        <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
           Представьте, что ваш бизнес — это целая экосистема, в которой каждая часть важна. 
           Наша задача — дополнить эту экосистему «умным помощником», который возьмёт на себя 
           рутинные задачи и поможет компании расти.
@@ -346,7 +346,7 @@ const GuideContent = () => {
       </div>
 
       {/* Main content */}
-      <div className="flex flex-col md:flex-row gap-8 lg:gap-12">
+      <div className="flex flex-col md:flex-row gap-8">
         <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:block`}>
           <GuideSidebar activeStage={activeStage} setActiveStage={(stage) => {
             setActiveStage(stage);
