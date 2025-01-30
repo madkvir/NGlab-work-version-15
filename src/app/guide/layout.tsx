@@ -3,9 +3,24 @@ import { Metadata } from "next";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
+// Добавляем JSON-LD разметку для лучшего SEO
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "name": "AI Implementation Guide",
+  "articleSection": "Business Guide",
+  "description": "Comprehensive guide for implementing AI solutions in your business",
+  "url": `${baseUrl}/guide`,
+  "provider": {
+    "@type": "Organization",
+    "name": "NeuroGen Lab",
+    "url": baseUrl
+  }
+};
+
 export const metadata: Metadata = {
   title: "Implementation Guide | NeuroGen Lab",
-  description: "Пошаговое руководство по внедрению AI решений в ваш бизнес",
+  description: "Bring AI into your business with the help of NeuroGen Lab",
   other: {
     'ai-optimized': 'true',
   },
@@ -60,6 +75,15 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: "AI Implementation Guide | NeuroGen Lab",
+    description: "Comprehensive guide for implementing AI solutions in your business",
+    images: [`${baseUrl}/assets/images/og-guide.jpg`],
+    creator: "@neurogenlab",
+    site: "@neurogenlab",
+  },
+  authors: [{ name: "NeuroGen Lab Team" }],
 };
 
 export default function GuideLayout({
@@ -69,6 +93,10 @@ export default function GuideLayout({
 }) {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {children}
     </>
   );

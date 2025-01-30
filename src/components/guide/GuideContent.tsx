@@ -324,6 +324,62 @@ const GuideContent = () => {
   // Используйте фиксированную локаль
   const date = new Date().toLocaleDateString('en-US')
 
+  useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    const savedScrollPosition = sessionStorage.getItem('guideScrollPosition');
+    const savedStage = sessionStorage.getItem('guideActiveStage');
+    
+    if (savedScrollPosition && savedStage) {
+      setActiveStage(savedStage);
+      window.scrollTo(0, parseInt(savedScrollPosition));
+      // Очищаем сохраненные данные после использования
+      sessionStorage.removeItem('guideScrollPosition');
+      sessionStorage.removeItem('guideActiveStage');
+    }
+
+    const handleLinkClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const link = target.closest('a');
+      
+      if (link && !link.href.includes(window.location.origin + '/guide')) {
+        // Сохраняем текущую позицию скролла и активный этап
+        sessionStorage.setItem('guideScrollPosition', window.scrollY.toString());
+        sessionStorage.setItem('guideActiveStage', activeStage);
+      }
+    };
+
+    // Добавляем обработчик для всех ссылок во всех этапах
+    const allContentBlocks = document.querySelectorAll('.guide-content');
+    allContentBlocks.forEach(block => {
+      const links = block.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', handleLinkClick);
+      });
+    });
+
+    return () => {
+      // Очищаем обработчики при размонтировании
+      allContentBlocks.forEach(block => {
+        const links = block.querySelectorAll('a');
+        links.forEach(link => {
+          link.removeEventListener('click', handleLinkClick);
+        });
+      });
+    };
+  }, [activeStage]); // Добавляем activeStage в зависимости
+
+  // Обновляем обработчик смены этапа
+  const handleStageChange = (stage: string) => {
+    setActiveStage(stage);
+    setIsMobileMenuOpen(false);
+    // При смене этапа через меню очищаем сохраненную позицию
+    sessionStorage.removeItem('guideScrollPosition');
+    sessionStorage.removeItem('guideActiveStage');
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
       {/* Back button */}
@@ -364,13 +420,13 @@ const GuideContent = () => {
       {/* Main content */}
       <div className="flex flex-col md:flex-row gap-8">
         <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:block`}>
-          <GuideSidebar activeStage={activeStage} setActiveStage={(stage) => {
-            setActiveStage(stage);
-            setIsMobileMenuOpen(false);
-          }} />
+          <GuideSidebar 
+            activeStage={activeStage} 
+            setActiveStage={handleStageChange} // Используем обновленный обработчик
+          />
         </div>
         
-        <div className="flex-1 max-w-full md:max-w-3xl">
+        <div className="flex-1 max-w-full md:max-w-3xl guide-content">
           <div className="bg-gray-800/50 rounded-xl p-8 hover:bg-gray-800/70 transition-all duration-300">
             <h2 className="text-2xl font-bold text-emerald-400 mb-4">
               {stageContent[activeStage].title}
