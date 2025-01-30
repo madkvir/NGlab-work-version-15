@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { 
   Book, 
   CheckCircle, 
@@ -18,264 +18,144 @@ import {
 import Link from "next/link";
 import BackToHome from "../BackToHome";
 import IconWrapper from "../common/IconWrapper";
+import GuideSidebar from "./GuideSidebar";
+
+interface StageContent {
+  title: string;
+  subtitle: string;
+  content: React.ReactNode;
+}
+
+type StageContentMap = {
+  [key: string]: StageContent;
+};
+
+const stageContent: StageContentMap = {
+  stage1: {
+    title: "С ЧЕГО НАЧИНАЕМ",
+    subtitle: "Первая встреча (Знакомство)",
+    content: (
+      <>
+        <h3 className="text-emerald-400 text-xl font-semibold mb-4">Почему это важно?</h3>
+        <p className="text-gray-400 mb-6">
+          Мы стремимся понять, в чём именно ваш бизнес силён, а где возникают
+          сложности. Можно сказать, что мы проводим «диагностику»: выясняем,
+          какие задачи наиболее критичны.
+        </p>
+        <h3 className="text-emerald-400 text-xl font-semibold mb-4">Что делаем мы?</h3>
+        <p className="text-gray-400">
+          Расспрашиваем о ваших целях, анализируем основные проблемы. Хотите
+          автоматизировать работу с клиентами? Или, может быть, упростить
+          внутренние процессы? На этом этапе мы определяем приоритеты.
+        </p>
+      </>
+    )
+  },
+  stage2: {
+    title: "КАК ПРОХОДИТ РАБОТА",
+    subtitle: "Процесс разработки",
+    content: (
+      <>
+        <h3 className="text-emerald-400 text-xl font-semibold mb-4">Этапы работы</h3>
+        <p className="text-gray-400 mb-6">
+          На этом этапе мы погружаемся в процессы вашей компании и начинаем
+          разработку решений.
+        </p>
+      </>
+    )
+  },
+  stage3: {
+    title: "КАКИЕ УЛУЧШЕНИЯ",
+    subtitle: "Результаты внедрения",
+    content: (
+      <>
+        <h3 className="text-emerald-400 text-xl font-semibold mb-4">Что улучшается</h3>
+        <p className="text-gray-400 mb-6">
+          После внедрения наших решений вы заметите значительные улучшения в
+          работе компании.
+        </p>
+      </>
+    )
+  },
+  stage4: {
+    title: "РЕЗУЛЬТАТЫ",
+    subtitle: "Итоги внедрения",
+    content: (
+      <>
+        <h3 className="text-emerald-400 text-xl font-semibold mb-4">Финальный этап</h3>
+        <p className="text-gray-400 mb-6">
+          На этом этапе мы анализируем результаты внедрения и планируем
+          дальнейшее развитие.
+        </p>
+      </>
+    )
+  }
+};
 
 const GuideContent = () => {
+  const [activeStage, setActiveStage] = useState('stage1');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
-    <main className="pt-24 pb-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <BackToHome />
-        
-        {/* Header */}
-        <div className="text-center mb-12 md:mb-20">
-          <div className="inline-flex justify-center items-center w-16 h-16 md:w-20 md:h-20 rounded-full bg-emerald-500/10 mb-6 md:mb-8">
-            <IconWrapper icon={Book} className="w-8 h-8 md:w-10 md:h-10 text-emerald-400" />
+    <main className="min-h-screen bg-gray-900">
+      <div className="absolute inset-0 bg-gray-900" />
+      <div className="relative pt-24 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back button */}
+          <div className="mb-12">
+            <Link 
+              href="/" 
+              className="inline-flex items-center text-sm text-gray-400 hover:text-emerald-400 transition-colors"
+            >
+              ← На главную
+            </Link>
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">ИНСТРУКЦИЯ ПО ВНЕДРЕНИЮ ИИ</h1>
-          <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-            Представьте, что ваш бизнес — это целая экосистема, в которой каждая часть важна. 
-            Наша задача — дополнить эту экосистему «умным помощником», который возьмёт на себя 
-            рутинные задачи и поможет компании расти.
-          </p>
-        </div>
 
-        {/* Timeline Steps */}
-        <div className="space-y-16 md:space-y-24">
-          {/* Step 1 */}
-          <section>
-            <div className="flex items-center gap-4 mb-8 md:mb-12">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                <IconWrapper icon={Users} className="w-5 h-5 md:w-6 md:h-6 text-emerald-400" />
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold">С ЧЕГО НАЧИНАЕМ</h2>
+          {/* Header section */}
+          <div className="flex flex-col items-center justify-center text-center mb-16">
+            <div className="inline-flex justify-center items-center w-16 h-16 rounded-full bg-emerald-500/20 mb-6">
+              <IconWrapper icon={Book} className="w-8 h-8 text-emerald-400" />
             </div>
+            <h1 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">
+              ИНСТРУКЦИЯ ПО ВНЕДРЕНИЮ ИИ
+            </h1>
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+              Представьте, что ваш бизнес — это целая экосистема, в которой каждая часть важна. 
+              Наша задача — дополнить эту экосистему «умным помощником», который возьмёт на себя 
+              рутинные задачи и поможет компании расти.
+            </p>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-              {/* First Meeting - улучшаем внутренние отступы */}
-              <div className="bg-gray-900/50 rounded-xl p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-semibold text-emerald-400 mb-6">
-                  Первая встреча (Знакомство)
-                </h3>
-                <div className="space-y-4 md:space-y-6">
-                  <div>
-                    <h4 className="font-semibold text-emerald-400 mb-2">Почему это важно?</h4>
-                    <p className="text-gray-400 leading-relaxed">
-                      Мы стремимся понять, в чём именно ваш бизнес силён, а где возникают сложности. 
-                      Можно сказать, что мы проводим «диагностику»: выясняем, какие задачи наиболее критичны.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-emerald-400 mb-2">Что делаем мы?</h4>
-                    <p className="text-gray-400 leading-relaxed">
-                      Расспрашиваем о ваших целях, анализируем основные проблемы. 
-                      Хотите сократить время отклика клиентам? Сократить время обработки запросов?
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-emerald-400 mb-2">Что делаете вы?</h4>
-                    <p className="text-gray-400 leading-relaxed">
-                      Просто делитесь информацией о том, как устроен бизнес и какие задачи планируете 
-                      решать в ближайшем будущем. Технические и IT-вопросы мы берём на себя.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-emerald-400 mb-2">Юридический аспект</h4>
-                    <p className="text-gray-400 leading-relaxed">
-                    Мы подготавливаем для вас "Техническое задание-Предложение" и если вас всё устраивает, то подписываем договор.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* Data Preparation - аналогичные улучшения */}
-              <div className="bg-gray-900/50 rounded-xl p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-semibold text-emerald-400 mb-6">
-                  Подготовка данных
-                </h3>
-                <div className="space-y-4 md:space-y-6">
-                  <div>
-                    <h4 className="font-semibold text-emerald-400 mb-2">Зачем это нужно?</h4>
-                    <p className="text-gray-400 leading-relaxed">
-                      Чтобы «умный помощник» понимал, с чем имеет дело. Для вашего ИИ Агента необходима 
-                      вся информация о вашей компании для того, чтобы он мог оперировать данными.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-emerald-400 mb-2">Как мы действуем?</h4>
-                    <p className="text-gray-400 leading-relaxed">
-                      Мы берём исходные данные, приводим их в порядок и настраиваем загрузку в нашу систему. 
-                      Чем лучше подготовлены материалы, тем точнее будет работать ИИ.
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-8">
-                  <Link 
-                    href="/counseling"
-                    className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition-colors"
-                  >
-                    <span>📌 Закажите консультацию</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Step 2 - обновляем сетку */}
-          <section>
-            <div className="flex items-center gap-4 mb-8 md:mb-12">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                <IconWrapper icon={Settings} className="w-5 h-5 md:w-6 md:h-6 text-emerald-400" />
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold">КАК ПРОХОДИТ РАБОТА</h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-              {/* Tools Setup - улучшаем списки */}
-              <div className="bg-gray-900/50 rounded-xl p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-semibold text-emerald-400 mb-6">
-                  Настройка инструментов
-                </h3>
-                <ul className="space-y-3 md:space-y-4">
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Подбор необходимых модулей</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Интеграция с каналами связи</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Полный цикл настройки</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Testing */}
-              <div className="bg-gray-900/50 rounded-xl p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-semibold text-emerald-400 mb-6">
-                  Тестирование
-                </h3>
-                <ul className="space-y-3 md:space-y-4">
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Запуск пилотной версии</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Оценка эффективности</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Внесение корректировок</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Training */}
-              <div className="bg-gray-900/50 rounded-xl p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-semibold text-emerald-400 mb-6">
-                  Обучение и расширение
-                </h3>
-                <ul className="space-y-3 md:space-y-4">
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Тонкая настройка ИИ</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Подключение новых модулей</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Обучение персонала</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Benefits - улучшаем карточки */}
-          <section>
-            <div className="flex items-center gap-4 mb-8 md:mb-12">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                <IconWrapper icon={Activity} className="w-5 h-5 md:w-6 md:h-6 text-emerald-400" />
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold">КАКИЕ УЛУЧШЕНИЯ ВЫ ЗАМЕТИТЕ</h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-              {/* Benefit Cards - унифицируем высоту */}
-              <div className="bg-gray-900/50 rounded-xl p-6 md:p-8 h-full">
-                <h3 className="text-xl md:text-2xl font-semibold text-emerald-400 mb-4">
-                  Меньше рутины
-                </h3>
-                <ul className="space-y-3 md:space-y-4">
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">80% автоматизации стандартных задач</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">70% экономии рабочего времени</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Security */}
-              <div className="bg-gray-900/50 rounded-xl p-6 md:p-8 h-full">
-                <h3 className="text-xl md:text-2xl font-semibold text-emerald-400 mb-4">
-                  Защита и стабильность
-                </h3>
-
-                <ul className="space-y-3 md:space-y-4">
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Надёжная защита данных</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Фильтрация спама</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Happy Clients */}
-              <div className="bg-gray-900/50 rounded-xl p-6 md:p-8 h-full">
-                <h3 className="text-xl md:text-2xl font-semibold text-emerald-400 mb-4">
-                  Довольные клиенты
-                </h3>
-
-                <ul className="space-y-3 md:space-y-4">
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Ответ за 7-15 секунд</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <IconWrapper icon={CheckCircle} className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-400 leading-relaxed">Современный подход</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        {/* CTA Section */}
-        <div className="mt-16 md:mt-20 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-            Готовы внедрить ИИ в свой бизнес?
-          </h2>
-          <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6">
-            <button className="flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg transition-all">
-              <IconWrapper icon={Phone} className="w-5 h-5" />
-              <span>Связаться с нами</span>
+          {/* Мобильная кнопка меню */}
+          <div className="md:hidden mb-8">
+            <button 
+              className="w-full p-4 bg-gray-800/50 text-emerald-400 rounded-lg hover:bg-gray-800/70 transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? 'Скрыть меню' : 'Показать меню'}
             </button>
-            <button className="flex items-center justify-center gap-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 px-6 md:px-8 py-3 md:py-4 rounded-lg transition-all">
-              <IconWrapper icon={MessageCircle} className="w-5 h-5" />
-              <span>Получить консультацию</span>
-            </button>
+          </div>
+
+          {/* Main content */}
+          <div className="flex flex-col md:flex-row gap-8 lg:gap-12">
+            <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:block`}>
+              <GuideSidebar activeStage={activeStage} setActiveStage={(stage) => {
+                setActiveStage(stage);
+                setIsMobileMenuOpen(false);
+              }} />
+            </div>
+            
+            <div className="flex-1 max-w-full md:max-w-3xl">
+              <div className="bg-gray-800/50 rounded-xl p-8 hover:bg-gray-800/70 transition-all duration-300">
+                <h2 className="text-2xl font-bold text-emerald-400 mb-4">
+                  {stageContent[activeStage].title}
+                </h2>
+                <h3 className="text-xl text-gray-200 mb-8">
+                  {stageContent[activeStage].subtitle}
+                </h3>
+                {stageContent[activeStage].content}
+              </div>
+            </div>
           </div>
         </div>
       </div>
