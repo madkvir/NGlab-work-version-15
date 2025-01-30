@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   Book, 
   CheckCircle, 
@@ -20,6 +20,8 @@ import Link from "next/link";
 import BackToHome from "../BackToHome";
 import IconWrapper from "../common/IconWrapper";
 import GuideSidebar from "./GuideSidebar";
+import DemoModal from "../modals/DemoModal";
+import BookDemoBtn from "../BookDemoBtn";
 
 interface StageContent {
   title: string;
@@ -307,6 +309,20 @@ const stageContent: StageContentMap = {
 const GuideContent = () => {
   const [activeStage, setActiveStage] = useState('stage1');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showDemoModal, setShowDemoModal] = useState(false);
+
+  const isBrowser = typeof window !== 'undefined'
+  if (isBrowser) {
+    // Удаляем атрибуты darkreader при монтировании компонента
+    const elements = document.querySelectorAll('[data-darkreader-scheme], [data-darkreader-mode]');
+    elements.forEach(el => {
+      el.removeAttribute('data-darkreader-scheme');
+      el.removeAttribute('data-darkreader-mode');
+    });
+  }
+
+  // Используйте фиксированную локаль
+  const date = new Date().toLocaleDateString('en-US')
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
@@ -366,6 +382,25 @@ const GuideContent = () => {
           </div>
         </div>
       </div>
+
+      {/* Добавляем кнопки */}
+      <div className="flex flex-col sm:flex-row justify-center items-stretch gap-4 mt-12">
+        <Link 
+          href="/contacts" 
+          className="w-full sm:w-[180px] h-10 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors text-center flex items-center justify-center"
+        >
+          Contact Sales
+        </Link>
+        <div className="w-full sm:w-[180px]">
+          <BookDemoBtn />
+        </div>
+      </div>
+
+      {/* DemoModal */}
+      <DemoModal 
+        showModal={showDemoModal}
+        setShowModal={setShowDemoModal}
+      />
     </div>
   );
 };
