@@ -33,20 +33,80 @@ type StageContentMap = {
 const stageContent: StageContentMap = {
   stage1: {
     title: "С ЧЕГО НАЧИНАЕМ",
-    subtitle: "Первая встреча (Знакомство)",
+    subtitle: "Первая встреча (Знакомство) и Анализ потребностей",
     content: (
       <>
-        <h3 className="text-emerald-400 text-xl font-semibold mb-4">Почему это важно?</h3>
+        <h3 className="text-emerald-400 text-xl font-semibold mb-4">Диагностика</h3>
         <p className="text-gray-400 mb-6">
-          Мы стремимся понять, в чём именно ваш бизнес силён, а где возникают
-          сложности. Можно сказать, что мы проводим «диагностику»: выясняем,
-          какие задачи наиболее критичны.
+          На встрече мы стремимся понять, в какой части бизнес-процесса
+          возникают сложности. Можно сказать, что мы проводим
+          «диагностику» выясняем, какие задачи наиболее критичны.
         </p>
-        <h3 className="text-emerald-400 text-xl font-semibold mb-4">Что делаем мы?</h3>
-        <p className="text-gray-400">
-          Расспрашиваем о ваших целях, анализируем основные проблемы. Хотите
-          автоматизировать работу с клиентами? Или, может быть, упростить
-          внутренние процессы? На этом этапе мы определяем приоритеты.
+        <h3 className="text-emerald-400 text-xl font-semibold mb-4">Цели и Задачи</h3>
+        <p className="text-gray-400 mb-6">
+          Расспрашиваем о ваших целях, анализируем основные проблемы. 
+          Хотите сократить время отклика клиентам? Какую информацию
+          чаще всего запрашивают ваши клиенты? Какие вопросы
+          вызывают у сотрудников наибольшую сложность?
+        </p>
+        <h3 className="text-emerald-400 text-xl font-semibold mb-4">Сбор информации</h3>
+        <p className="text-gray-400 mb-6">
+          Что делаете вы? Просто делитесь информацией о том, как 
+          устроен бизнес процес и какие задачи планируете решать за счёт
+          интеграции ИИ Агента. Технические и IT-вопросы мы берём на
+          себя. Собираем предварительную информацию о количестве
+          возможных запросов, анализируем их природу (технические,
+          клиентские, операционные) и оцениваем, какие задачи можно
+          автоматизировать с помощью ИИ. Выясняем пиковые нагрузки,
+          среднее количество обращений в день/месяц и прогнозируем
+          потенциал роста.
+        </p>
+        <h3 className="text-emerald-400 text-xl font-semibold mb-4">Демонстрация Кейсов</h3>
+        <p className="text-gray-400 mb-6">
+          Проводим демонстрацию релевантного кейса с разбором 
+          успешных примеров внедрения ИИ в аналогичных бизнесах.
+          Показываем, как работают наши инструменты в реальном
+          времени, какие задачи они решают и какие результаты можно
+          ожидать. Отвечаем на все вопросы и обсуждаем потенциальные
+          возможности адаптации под ваш бизнес.
+        </p>
+        <h3 className="text-emerald-400 text-xl font-semibold mb-4">
+          Определение Источников и Систем с которыми необходимо взаимодействовать
+        </h3>
+        <p className="text-gray-400 mb-6">
+          Выясняем, какие источники необходимо подключить: {' '}
+          <Link href="/tools/facebook-messenger" className="text-white hover:text-emerald-400 transition-colors">
+            Facebook
+          </Link>
+          ,{' '}
+          <Link href="/tools/ai-chat-bot" className="text-white hover:text-emerald-400 transition-colors">
+            Виджет на сайт
+          </Link>
+          ,{' '}
+          <Link href="/tools/whatsapp" className="text-white hover:text-emerald-400 transition-colors">
+            WhatsApp
+          </Link>
+          ,{' '}
+          <Link href="/tools/instagram" className="text-white hover:text-emerald-400 transition-colors">
+            Instagram
+          </Link>
+          {' '}и другие платформы. Анализируем используемые системы управления, такие как{' '}
+          <Link href="/tools/hubspot" className="text-white hover:text-emerald-400 transition-colors">
+            HubSpot
+          </Link>
+          ,{' '}
+          <Link href="/tools/salesforce" className="text-white hover:text-emerald-400 transition-colors">
+            Salesforce
+          </Link>
+          ,{' '}
+          <Link href="/tools/email" className="text-white hover:text-emerald-400 transition-colors">
+            Email
+          </Link>
+          , базы данных{' '}
+          <Link href="/tools/custom-development" className="text-white hover:text-emerald-400 transition-colors">
+            SQL или NoSQL
+          </Link>
+          {' '}. Оцениваем необходимость интеграции с API, автоматизированного сбора данных и синхронизации между различными платформами для бесперебойной работы.
         </p>
       </>
     )
