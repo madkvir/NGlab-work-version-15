@@ -22,6 +22,8 @@ import IconWrapper from "../common/IconWrapper";
 import GuideSidebar from "./GuideSidebar";
 import DemoModal from "../modals/DemoModal";
 import BookDemoBtn from "../BookDemoBtn";
+import { useLanguage } from "../../context/LanguageContext";
+import { guideTranslations } from "../../locales/guideTranslations";
 
 interface StageContent {
   title: string;
@@ -310,6 +312,8 @@ const GuideContent = () => {
   const [activeStage, setActiveStage] = useState('stage1');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
+  const { language } = useLanguage();
+  const t = guideTranslations[language];
 
   const isBrowser = typeof window !== 'undefined'
   if (isBrowser) {
@@ -380,6 +384,42 @@ const GuideContent = () => {
     sessionStorage.removeItem('guideActiveStage');
   };
 
+  const renderStageContent = () => {
+    const stage = t.stages[activeStage];
+    
+    return (
+      <div className="bg-gray-800/50 rounded-xl p-8 hover:bg-gray-800/70 transition-all duration-300">
+        <h2 className="text-2xl font-bold text-emerald-400 mb-4">
+          {stage.title}
+        </h2>
+        <h3 className="text-xl text-gray-200 mb-8">
+          {stage.subtitle}
+        </h3>
+        
+        {/* Render only non-empty sections */}
+        {Object.entries(stage.sections).map(([key, section]) => {
+          if (section.title || section.content) {
+            return (
+              <div key={key}>
+                {section.title && (
+                  <h3 className="text-emerald-400 text-xl font-semibold mb-4">
+                    {section.title}
+                  </h3>
+                )}
+                {section.content && (
+                  <p className="text-gray-400 mb-6 whitespace-pre-line">
+                    {section.content}
+                  </p>
+                )}
+              </div>
+            );
+          }
+          return null;
+        })}
+      </div>
+    );
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
       {/* Back button */}
@@ -388,7 +428,7 @@ const GuideContent = () => {
           href="/" 
           className="inline-flex items-center text-sm text-gray-400 hover:text-emerald-400 transition-colors"
         >
-          ← На главную
+          {t.navigation.backHome}
         </Link>
       </div>
 
@@ -398,22 +438,20 @@ const GuideContent = () => {
           <IconWrapper icon={BrainCircuit} className="w-8 h-8 text-emerald-1400" />
         </div>
         <h1 className="text-4xl font-bold mb-5 bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-emerald-600">
-          от Идеи до Реализации
+          {t.header.title}
         </h1>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Представьте, что ваш бизнес — это целая экосистема, в которой каждая часть важна. 
-          Наша задача — дополнить эту экосистему «умным помощником», который возьмёт на себя 
-          рутинные задачи и поможет компании расти.
+          {t.header.subtitle}
         </p>
       </div>
 
-      {/* Мобильная кнопка меню */}
+      {/* Mobile menu button */}
       <div className="md:hidden mb-8">
         <button 
           className="w-full p-4 bg-gray-800/50 text-emerald-400 rounded-lg hover:bg-gray-800/70 transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? 'Скрыть меню' : 'Показать меню'}
+          {isMobileMenuOpen ? t.mobileMenu.hide : t.mobileMenu.show}
         </button>
       </div>
 
@@ -422,30 +460,22 @@ const GuideContent = () => {
         <div className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:block`}>
           <GuideSidebar 
             activeStage={activeStage} 
-            setActiveStage={handleStageChange} // Используем обновленный обработчик
+            setActiveStage={handleStageChange}
           />
         </div>
         
         <div className="flex-1 max-w-full md:max-w-3xl guide-content">
-          <div className="bg-gray-800/50 rounded-xl p-8 hover:bg-gray-800/70 transition-all duration-300">
-            <h2 className="text-2xl font-bold text-emerald-400 mb-4">
-              {stageContent[activeStage].title}
-            </h2>
-            <h3 className="text-xl text-gray-200 mb-8">
-              {stageContent[activeStage].subtitle}
-            </h3>
-            {stageContent[activeStage].content}
-          </div>
+          {renderStageContent()}
         </div>
       </div>
 
-      {/* Добавляем кнопки */}
+      {/* Buttons */}
       <div className="flex flex-col sm:flex-row justify-center items-stretch gap-4 mt-12">
         <Link 
           href="/contacts" 
           className="w-full sm:w-[180px] h-10 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors text-center flex items-center justify-center"
         >
-          Contact Sales
+          {t.buttons.contactSales}
         </Link>
         <div className="w-full sm:w-[180px]">
           <BookDemoBtn />
