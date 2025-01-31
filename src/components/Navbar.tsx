@@ -480,24 +480,25 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="p-2 rounded-lg text-gray-400 hover:text-white 
                            hover:bg-gray-800/50 transition-all duration-300
-                           flex items-center gap-2 relative"
+                           flex items-center justify-center relative
+                           w-10 h-10"
+                aria-label={isMenuOpen ? t.close : t.menu}
               >
-                <span className="text-sm">{isMenuOpen ? t.close : t.menu}</span>
-                <div className="relative w-5 h-5">
+                <div className="relative w-5 h-5 translate-y-[2px]">
                   <div className={`
                     absolute inset-0 transition-all duration-300
-                    ${isMenuOpen ? 'rotate-45 translate-y-0' : '-translate-y-1'}
-                    border-t-2 border-current
+                    ${isMenuOpen ? 'rotate-45 translate-y-2' : '-translate-y-1.5'}
+                    border-t-[2px] border-current
                   `}></div>
                   <div className={`
                     absolute inset-0 transition-all duration-300
                     ${isMenuOpen ? 'opacity-0' : 'opacity-100'}
-                    border-t-2 border-current
+                    border-t-[2px] border-current
                   `}></div>
                   <div className={`
                     absolute inset-0 transition-all duration-300
-                    ${isMenuOpen ? '-rotate-45 translate-y-0' : 'translate-y-1'}
-                    border-t-2 border-current
+                    ${isMenuOpen ? '-rotate-45 translate-y-2' : 'translate-y-1.5'}
+                    border-t-[2px] border-current
                   `}></div>
                 </div>
               </button>
