@@ -11,7 +11,7 @@ const AIChatBot = () => {
   const { language } = useLanguage();
   const t = aiChatBotTranslations[language] || aiChatBotTranslations.en;
 
-  const articleContent = {
+  const articleContent = React.useMemo(() => ({
     mainTitle: t.articleContent.mainTitle,
     subtitle: t.articleContent.subtitle,
     introText: t.articleContent.introText,
@@ -30,7 +30,7 @@ const AIChatBot = () => {
     topReasonsTitle: t.articleContent.topReasonsTitle,
     reasonList: t.articleContent.reasonList,
     finalConclusion: t.articleContent.finalConclusion
-  };
+  }), [language]);
 
   return (
     <ToolPageTemplate
@@ -47,14 +47,16 @@ const AIChatBot = () => {
       articleContent={articleContent}
       imageComponent={
         <div className="max-w-7xl mx-auto">
-          <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
+          <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300" 
+               role="presentation">
             <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
               <Image
                 src="/assets/tools/ai-chat-bot.jpg"
-                alt="AI Chat Bot Interface"
+                alt={t.imageAlt || "AI Chat Bot Interface"}
                 fill
                 className="object-cover"
                 priority
+                loading="eager"
               />
             </div>
           </div>

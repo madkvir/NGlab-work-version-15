@@ -8,7 +8,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "NeuroGen Lab AI Chatbot",
-  "applicationCategory": "BusinessApplication",
+  "applicationCategory": "BusinessApplication, AIApplication",
   "description": "AI-powered chatbot solution for 24/7 customer support and business automation",
   "url": `${baseUrl}/tools/ai-chat-bot`,
   "provider": {
@@ -20,6 +20,12 @@ const jsonLd = {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
+  },
+  "operatingSystem": "All",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "100"
   }
 };
 

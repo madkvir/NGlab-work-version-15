@@ -5091,7 +5091,7 @@ export { antiSpamTranslations };
 const counselingTranslations = {
   en: {
     title: "AI Counseling",
-    description: "Experience personalized AI-powered counseling solutions. Get professional guidance and support with our advanced artificial intelligence technology.",
+    description: "Consultation focused on growth, automation, and profit increase.",
     sectionTitles: {
       features: "Key Features",
       benefits: "Benefits",
@@ -5216,11 +5216,11 @@ const counselingTranslations = {
       }
     },
     metaTitle: "AI Counseling | NeuroGen Lab - Professional Support Solutions",
-    metaDescription: "Experience personalized AI-powered counseling. Get professional guidance and support with our advanced artificial intelligence technology."
+    metaDescription: "Consultation focused on growth, automation, and profit increase."
   },
   de: {
     title: "KI-Beratung",
-    description: "Erleben Sie personalisierte KI-gestützte Beratungslösungen. Erhalten Sie professionelle Anleitung und Unterstützung mit unserer fortschrittlichen künstlichen Intelligenz.",
+    description: "Beratung mit Fokus auf Wachstum, Automatisierung und Gewinnsteigerung.",
     sectionTitles: {
       features: "Hauptfunktionen",
       benefits: "Vorteile",
@@ -5345,11 +5345,11 @@ const counselingTranslations = {
       }
     },
     metaTitle: "KI-Beratung | NeuroGen Lab - Professionelle Unterstützungslösungen",
-    metaDescription: "Erleben Sie personalisierte KI-gestützte Beratung. Erhalten Sie professionelle Anleitung und Unterstützung mit unserer fortschrittlichen künstlichen Intelligenz."
+    metaDescription: "Beratung mit Fokus auf Wachstum, Automatisierung und Gewinnsteigerung."
   },
   es: {
     title: "Asesoramiento con IA",
-    description: "Experimente soluciones de asesoramiento personalizadas impulsadas por IA. Obtenga orientación y apoyo profesional con nuestra avanzada tecnología de inteligencia artificial.",
+    description: "Consultoría centrada en el crecimiento, la automatización y el aumento de beneficios.",
     sectionTitles: {
       features: "Características Principales",
       benefits: "Beneficios",
@@ -5478,7 +5478,7 @@ const counselingTranslations = {
   },
   ru: {
     title: "ИИ Консультация Бизнеса",
-    description: "Получите персонализированное консультирование вашего бизнеса по использованию ИИ. Профессиональное руководство и поддержка с помощью нашей передовой технологии искусственного интеллекта.",
+    description: "Консультация с фокусом на рост, автоматизацию и увеличение прибыли.",
     sectionTitles: {
       features: "Ключевые Возможности",
       benefits: "Преимущества",
@@ -5607,7 +5607,7 @@ const counselingTranslations = {
   },
   ua: {
     title: "ШІ Бізнес Консультація",
-    description: "Отримайте персоналізовану консультацію щодо шнтеграції ШІ в ваш бізнес. Професійне керівництво та підтримка за допомогою нашої передової технології штучного інтелекту.",
+    description: "Консультація з фокусом на зростання, автоматизацію та збільшення прибутку.",
     sectionTitles: {
       features: "Ключові Можливості",
       benefits: "Переваги",
