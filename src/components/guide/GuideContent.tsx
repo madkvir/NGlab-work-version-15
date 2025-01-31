@@ -421,15 +421,10 @@ const GuideContent = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
       {/* Back button */}
       <div className="mb-10">
-        <Link 
-          href="/" 
-          className="inline-flex items-center text-sm text-gray-400 hover:text-emerald-400 transition-colors"
-        >
-          {t.navigation.backHome}
-        </Link>
+        <BackToHome />
       </div>
 
       {/* Header section */}

@@ -1093,7 +1093,7 @@ export const guideTranslations: GuideTranslations = {
         }
       },
       stage4: {
-        title: "ПІДТРИМКА ТА РОЗВИТОК",
+        title: "РЕЗУЛЬТАТИ",
         subtitle: "Неперервна покращення та оптимізація",
         sections: {
           monitoring: {
@@ -1165,7 +1165,7 @@ export const guideTranslations: GuideTranslations = {
         stage: "Этап 3"
       },
       stage4: {
-        title: "ПІДТРИМКА ТА РОЗВИТОК",
+        title: "РЕЗУЛЬТАТИ",
         stage: "Этап 4"
       }
     }
