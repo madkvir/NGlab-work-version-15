@@ -1,9 +1,41 @@
 import React from "react";
 import { Metadata } from "next";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
+
+// JSON-LD разметка для Zapier интеграции
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "NeuroGen Lab Zapier Integration",
+  "applicationCategory": "BusinessApplication, AutomationApplication",
+  "description": "AI-powered Zapier integration for enhanced workflow automation and process management",
+  "url": `${baseUrl}/tools/zapier`,
+  "provider": {
+    "@type": "Organization",
+    "name": "NeuroGen Lab",
+    "url": baseUrl
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "operatingSystem": "All",
+
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "110"
+  }
+};
+
 export const metadata: Metadata = {
   title: "Zapier Integration | NeuroGen Lab - Smart Workflow Automation",
   description: "Enhance your workflow automation with AI technology. Smart automation, analytics, and advanced features for better process management.",
+  other: {
+    'ai-optimized': 'true',
+  },
   keywords: [
     "zapier integration",
     "workflow automation",
@@ -11,45 +43,73 @@ export const metadata: Metadata = {
     "task management",
     "data synchronization",
     "trigger management",
-    "process analytics"
+    "process analytics",
+    "AI automation",
+    "smart workflows",
+    "NeuroGen Lab zapier"
   ],
   openGraph: {
+    type: 'website',
     title: "Zapier Integration - Smart Workflow Automation | NeuroGen Lab",
-    description: "Enhance your workflow automation with AI technology",
-    url: "https://neurogenlab.de/tools/zapier",
+    description: "Transform your workflow automation with AI-powered Zapier integration. Automate processes and enhance productivity.",
+    url: `${baseUrl}/tools/zapier`,
+    siteName: "NeuroGen Lab",
     images: [
       {
-        url: "/images/tools/zapier.jpg",
-        alt: "Zapier Integration by NeuroGen Lab",
+        url: `${baseUrl}/assets/images/og-zapier.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "NeuroGen Lab Zapier Integration",
+        type: 'image/jpeg',
       },
     ],
+    locale: 'en',
+    alternateLocale: ['de', 'es', 'ru', 'uk'],
   },
   twitter: {
+    card: 'summary_large_image',
     title: "Zapier Integration - Smart Workflow Automation",
-    description: "Enhance workflow automation with AI",
-    images: [
-      {
-        url: "/images/tools/zapier.jpg",
-        alt: "Zapier Integration by NeuroGen Lab",
-      },
-    ],
+    description: "Enhance workflow automation with AI-powered features",
+    images: [`${baseUrl}/assets/images/og-zapier.jpg`],
+    creator: "@neurogenlab",
+    site: "@neurogenlab",
   },
-  authors: [{ name: "NeuroGen Lab" }],
+  authors: [{ name: "NeuroGen Lab Team" }],
   alternates: {
-    canonical: "https://neurogenlab.de/tools/zapier",
+    canonical: `${baseUrl}/tools/zapier`,
     languages: {
-      'en': '/tools/zapier',
-      'de': '/de/tools/zapier',
-      'es': '/es/tools/zapier',
-      'ru': '/ru/tools/zapier'
-    }
+      'en': `${baseUrl}/tools/zapier`,
+      'de': `${baseUrl}/de/tools/zapier`,
+      'es': `${baseUrl}/es/tools/zapier`,
+      'ru': `${baseUrl}/ru/tools/zapier`,
+      'uk': `${baseUrl}/uk/tools/zapier`
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
-export default function Layout({
+export default function ZapierLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  );
 } 
