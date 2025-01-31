@@ -31,6 +31,12 @@ type GuideTranslations = {
       contactSales: string;
       bookDemo: string;
     };
+    sidebar: {
+      [key: string]: {
+        title: string;
+        stage: string;
+      };
+    };
   };
 };
 
@@ -183,7 +189,7 @@ export const guideTranslations: GuideTranslations = {
         }
       },
       stage4: {
-        title: "SUPPORT AND DEVELOPMENT",
+        title: "RESULTS",
         subtitle: "Continuous Improvement and Optimization",
         sections: {
           monitoring: {
@@ -240,6 +246,24 @@ export const guideTranslations: GuideTranslations = {
     buttons: {
       contactSales: "Contact Sales",
       bookDemo: "Book Demo",
+    },
+    sidebar: {
+      stage1: {
+        title: "WHERE WE START",
+        stage: "Stage 1"
+      },
+      stage2: {
+        title: "LEGAL ASPECTS",
+        stage: "Stage 2"
+      },
+      stage3: {
+        title: "IMPLEMENTATION",
+        stage: "Stage 3"
+      },
+      stage4: {
+        title: "RESULTS",
+        stage: "Stage 4"
+      }
     }
   },
   ru: {
@@ -336,7 +360,7 @@ export const guideTranslations: GuideTranslations = {
         }
       },
       stage3: {
-        title: "IMPLEMENTATION",
+        title: "КАК ПРОХОДИТ РАБОТА",
         subtitle: "Integration and Launch",
         sections: {
           dataPreparation: {
@@ -390,8 +414,8 @@ export const guideTranslations: GuideTranslations = {
         }
       },
       stage4: {
-        title: "ПОДДЕРЖКА И РАЗВИТИЕ",
-        subtitle: "Непрерывное улучшение и оптимизация",
+        title: "РЕЗУЛЬТАТЫ",
+        subtitle: "Continuous Improvement and Optimization",
         sections: {
           monitoring: {
             title: "System Monitoring and Analytics",
@@ -447,6 +471,24 @@ export const guideTranslations: GuideTranslations = {
     buttons: {
       contactSales: "Отдел продаж",
       bookDemo: "Заказать демо",
+    },
+    sidebar: {
+      stage1: {
+        title: "С ЧЕГО НАЧИНАЕМ",
+        stage: "Этап 1"
+      },
+      stage2: {
+        title: "ПРАВОВЫЕ АСПЕКТЫ",
+        stage: "Этап 2"
+      },
+      stage3: {
+        title: "КАК ПРОХОДИТ РАБОТА",
+        stage: "Этап 3"
+      },
+      stage4: {
+        title: "РЕЗУЛЬТАТЫ",
+        stage: "Этап 4"
+      }
     }
   },
   de: {
@@ -593,7 +635,7 @@ export const guideTranslations: GuideTranslations = {
         }
       },
       stage4: {
-        title: "SUPPORT UND ENTWICKLUNG",
+        title: "ERGEBNISSE",
         subtitle: "Kontinuierliche Verbesserung und Optimierung",
         sections: {
           monitoring: {
@@ -650,6 +692,24 @@ export const guideTranslations: GuideTranslations = {
     buttons: {
       contactSales: "Vertrieb kontaktieren",
       bookDemo: "Demo buchen",
+    },
+    sidebar: {
+      stage1: {
+        title: "WOMIT WIR BEGINNEN",
+        stage: "Stage 1"
+      },
+      stage2: {
+        title: "RECHTLICHE ASPEKTE",
+        stage: "Stage 2"
+      },
+      stage3: {
+        title: "IMPLEMENTIERUNG",
+        stage: "Stage 3"
+      },
+      stage4: {
+        title: "ERGEBNISSE",
+        stage: "Stage 4"
+      }
     }
   },
   es: {
@@ -699,7 +759,7 @@ export const guideTranslations: GuideTranslations = {
           },
           sourcesList: {
             title: "",
-            content: `• Sistemas CRM y ERP
+            content: `• CRM y ERP sistemas
 • Canales de comunicación
 • Documentación y bases de conocimiento
 • Herramientas analíticas
@@ -796,7 +856,7 @@ export const guideTranslations: GuideTranslations = {
         }
       },
       stage4: {
-        title: "SOPORTE Y DESARROLLO",
+        title: "RESULTADOS",
         subtitle: "Mejora y Optimización Continua",
         sections: {
           monitoring: {
@@ -853,6 +913,24 @@ export const guideTranslations: GuideTranslations = {
     buttons: {
       contactSales: "Contactar ventas",
       bookDemo: "Reservar demo",
+    },
+    sidebar: {
+      stage1: {
+        title: "POR DÓNDE EMPEZAMOS",
+        stage: "Stage 1"
+      },
+      stage2: {
+        title: "ASPECTOS LEGALES",
+        stage: "Stage 2"
+      },
+      stage3: {
+        title: "IMPLEMENTACIÓN",
+        stage: "Stage 3"
+      },
+      stage4: {
+        title: "RESULTADOS",
+        stage: "Stage 4"
+      }
     }
   },
   ua: {
@@ -1072,6 +1150,24 @@ export const guideTranslations: GuideTranslations = {
     buttons: {
       contactSales: "Відділ продажів",
       bookDemo: "Замовити демо",
+    },
+    sidebar: {
+      stage1: {
+        title: "З ЧОГО ПОЧИНАЄМО",
+        stage: "Этап 1"
+      },
+      stage2: {
+        title: "ПРАВОВІ АСПЕКТИ",
+        stage: "Этап 2"
+      },
+      stage3: {
+        title: "ВПРОВАДЖЕННЯ",
+        stage: "Этап 3"
+      },
+      stage4: {
+        title: "ПІДТРИМКА ТА РОЗВИТОК",
+        stage: "Этап 4"
+      }
     }
   }
 }; 

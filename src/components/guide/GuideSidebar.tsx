@@ -1,30 +1,32 @@
 "use client";
 import React from 'react';
 import { Lightbulb, ScrollText, Cog, CheckCircle } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
+import { guideTranslations } from '../../locales/guideTranslations';
 
-const navItems = [
+const getNavItems = (translations: any) => [
   {
     id: "stage1",
-    title: "С ЧЕГО НАЧИНАЕМ",
-    stage: "Этап 1",
+    title: translations.sidebar.stage1.title,
+    stage: translations.sidebar.stage1.stage,
     icon: Lightbulb,
   },
   {
     id: "stage2",
-    title: "ПРАВОВЫЕ АСПЕКТЫ",
-    stage: "Этап 2",
+    title: translations.sidebar.stage2.title,
+    stage: translations.sidebar.stage2.stage,
     icon: ScrollText,
   },
   {
     id: "stage3",
-    title: "КАК ПРОХОДИТ РАБОТА",
-    stage: "Этап 3",
+    title: translations.sidebar.stage3.title,
+    stage: translations.sidebar.stage3.stage,
     icon: Cog,
   },
   {
     id: "stage4",
-    title: "РЕЗУЛЬТАТЫ",
-    stage: "Этап 4",
+    title: translations.sidebar.stage4.title,
+    stage: translations.sidebar.stage4.stage,
     icon: CheckCircle,
   },
 ];
@@ -35,6 +37,10 @@ interface GuideSidebarProps {
 }
 
 const GuideSidebar: React.FC<GuideSidebarProps> = ({ activeStage, setActiveStage }) => {
+  const { language } = useLanguage();
+  const t = guideTranslations[language];
+  const navItems = getNavItems(t);
+
   return (
     <nav className="w-full md:w-64">
       <ul className="space-y-3 md:space-y-4">
