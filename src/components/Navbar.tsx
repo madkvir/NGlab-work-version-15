@@ -11,6 +11,7 @@ import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import { translations } from "../locales/translations";
 import { useLanguage } from "../context/LanguageContext";
+import dynamic from "next/dynamic";
 
 type LanguageType = 'en' | 'de' | 'es' | 'ru' | 'ua';
 
@@ -107,6 +108,8 @@ const Navbar = () => {
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const langMenuRef = useRef<HTMLDivElement>(null);
   const langButtonRef = useRef<HTMLButtonElement>(null);
+  const [value, setValue] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useClickOutside<HTMLDivElement | HTMLButtonElement>(
     [menuRef, buttonRef],
@@ -130,6 +133,13 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  useEffect(() => {
+    setValue(null);
+  }, []);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
   }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
