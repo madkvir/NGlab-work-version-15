@@ -6,7 +6,11 @@ import React, { useState } from "react";
 import dynamic from "next/dynamic";
 const BookingModal = dynamic(() => import("./BookingModal"));
 
-const BookDemoBtn = () => {
+interface BookDemoBtnProps {
+  isMobile?: boolean;
+}
+
+const BookDemoBtn: React.FC<BookDemoBtnProps> = ({ isMobile }) => {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const t = translations[language];

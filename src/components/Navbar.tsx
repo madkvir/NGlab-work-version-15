@@ -2,7 +2,7 @@
 
 import BookDemoBtn from "./BookDemoBtn";
 import React, { useState, useRef, useEffect, KeyboardEvent } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, Mail, MessageCircle, Linkedin, MapPin } from "lucide-react";
 import Logo from "./Logo";
 import SolutionsMenu from "./SolutionsMenu";
 import { useClickOutside } from "./hooks/useClickOutside";
@@ -11,6 +11,8 @@ import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import { translations } from "../locales/translations";
 import { useLanguage } from "../context/LanguageContext";
+
+type LanguageType = 'en' | 'de' | 'es' | 'ru' | 'ua';
 
 const buttonTranslations = {
   en: {
@@ -193,9 +195,11 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed w-full z-50 transition-all duration-300 border-b border-gray-900/50 ${
-          isScrolled ? "bg-[#0B0F19]/95 backdrop-blur-sm py-3" : "bg-transparent py-4"
-        }`}
+        className={`
+          fixed w-full z-50 transition-all duration-300 border-b border-gray-900/50
+          ${isScrolled ? "bg-[#0B0F19]/95 backdrop-blur-sm py-3" : "bg-transparent py-4"}
+          md:py-2 lg:py-4
+        `}
         style={{ opacity }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -400,14 +404,104 @@ const Navbar = () => {
               </div>
             </div>
 
-            <button
-              ref={buttonRef}
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors flex items-center gap-2"
-            >
-              <span className="text-sm">Menu</span>
-              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
+            <div className="flex items-center gap-2 md:hidden">
+              <div className="relative">
+                <button
+                  ref={langButtonRef}
+                  onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                  className="flex items-center gap-2 px-3 h-10 rounded-lg border border-gray-700/50 
+                             hover:border-emerald-500/50 hover:bg-emerald-500/5 
+                             transition-all duration-300"
+                  aria-expanded={isLangMenuOpen}
+                  aria-haspopup="true"
+                >
+                  <img
+                    src={languageOptions[language].flag}
+                    alt=""
+                    className="w-5 h-4 object-cover rounded-sm"
+                  />
+                  <span className="text-gray-400 text-sm font-medium">
+                    {language.toUpperCase()}
+                  </span>
+                  <ChevronDown
+                    className={`w-4 h-4 text-gray-400 transition-transform duration-300 
+                               ${isLangMenuOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+
+                <div
+                  ref={langMenuRef}
+                  role="menu"
+                  className={`
+                    absolute top-full right-0 mt-2 py-2 
+                    bg-[#0B0F19]/95 backdrop-blur-sm 
+                    border border-gray-700/50 rounded-lg 
+                    shadow-lg shadow-black/20
+                    min-w-[180px] w-max
+                    transition-all duration-300 transform origin-top-right
+                    ${isLangMenuOpen 
+                      ? 'opacity-100 visible scale-100' 
+                      : 'opacity-0 invisible scale-95'
+                    }
+                    z-50
+                  `}
+                >
+                  {Object.entries(languageOptions).map(([key, value], index) => (
+                    <button
+                      key={key}
+                      role="menuitem"
+                      onClick={() => {
+                        setLanguage(key as keyof typeof languageOptions);
+                        setIsLangMenuOpen(false);
+                      }}
+                      className={`
+                        w-full flex items-center gap-3 px-4 py-2
+                        hover:bg-emerald-500/10 transition-colors duration-200
+                        focus:outline-none focus:bg-emerald-500/10
+                        ${language === key ? 'text-emerald-500' : 'text-gray-400'}
+                      `}
+                    >
+                      <img
+                        src={value.flag}
+                        alt=""
+                        className="w-5 h-4 object-cover rounded-sm flex-shrink-0"
+                      />
+                      <span className="text-sm whitespace-nowrap">{value.label}</span>
+                      {language === key && (
+                        <div className="ml-auto w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <button
+                ref={buttonRef}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="p-2 rounded-lg text-gray-400 hover:text-white 
+                           hover:bg-gray-800/50 transition-all duration-300
+                           flex items-center gap-2 relative"
+              >
+                <span className="text-sm">{isMenuOpen ? t.close : t.menu}</span>
+                <div className="relative w-5 h-5">
+                  <div className={`
+                    absolute inset-0 transition-all duration-300
+                    ${isMenuOpen ? 'rotate-45 translate-y-0' : '-translate-y-1'}
+                    border-t-2 border-current
+                  `}></div>
+                  <div className={`
+                    absolute inset-0 transition-all duration-300
+                    ${isMenuOpen ? 'opacity-0' : 'opacity-100'}
+                    border-t-2 border-current
+                  `}></div>
+                  <div className={`
+                    absolute inset-0 transition-all duration-300
+                    ${isMenuOpen ? '-rotate-45 translate-y-0' : 'translate-y-1'}
+                    border-t-2 border-current
+                  `}></div>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -418,8 +512,105 @@ const Navbar = () => {
           className="md:hidden fixed inset-x-0 top-[72px] bg-[#0B0F19]/95 backdrop-blur-md z-40 overflow-y-auto"
           style={{ height: "calc(100vh - 72px)" }}
         >
-          <div className="px-4 pt-2 pb-3 space-y-1">
-            <SolutionsMenu isMobile language="en" />
+          <div className="px-4 py-6 space-y-6">
+            {/* Solutions Menu Section */}
+            <div className="border-b border-gray-700/50 pb-6">
+              <h3 className="text-gray-400 text-sm font-medium px-4 mb-4">
+                {t.solutions}
+              </h3>
+              <SolutionsMenu isMobile language={language as "en" | "de" | "es" | "ru" | "ua"} />
+            </div>
+
+            {/* Main Navigation Links */}
+            <div className="space-y-4">
+              <h3 className="text-gray-400 text-sm font-medium px-4 mb-2">
+                {t.pages}
+              </h3>
+              <div className="space-y-2">
+                <Link
+                  href="/guide"
+                  className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
+                             rounded-lg transition-all duration-300 flex items-center justify-between"
+                >
+                  <span>{t.links.guide}</span>
+                </Link>
+                <a
+                  href="#faq"
+                  onClick={(e) => handleNavClick(e, "faq")}
+                  className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
+                             rounded-lg transition-all duration-300 flex items-center justify-between"
+                >
+                  <span>{t.links.faq}</span>
+                </a>
+                <Link
+                  href="/blog"
+                  className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
+                             rounded-lg transition-all duration-300 flex items-center justify-between"
+                >
+                  <span>{t.links.blog}</span>
+                </Link>
+                <Link
+                  href="/about-us"
+                  className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
+                             rounded-lg transition-all duration-300 flex items-center justify-between"
+                >
+                  <span>{t.links.aboutUs}</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Bottom Section с контактами */}
+            <div className="border-t border-gray-700/50 pt-6 space-y-6">
+              {/* Book Demo Button */}
+              <div className="px-4">
+                <BookDemoBtn isMobile />
+              </div>
+
+              {/* Contact Section */}
+              <div className="px-4 space-y-4">
+                <h3 className="text-gray-400 text-sm font-medium">
+                  {t.contact}
+                </h3>
+                <div className="space-y-3">
+                  <a
+                    href="tel:+49(0)3012345678"
+                    className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span>+49 (0) 30 12345678</span>
+                  </a>
+                  <a
+                    href="mailto:office@neurogenlab.de"
+                    className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span>office@neurogenlab.de</span>
+                  </a>
+                  <a
+                    href="https://wa.me/your_whatsapp_number"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    <span>WhatsApp</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/your_company"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                    <span>LinkedIn</span>
+                  </a>
+                  <div className="flex items-center gap-3 text-gray-400">
+                    <MapPin className="w-5 h-5" />
+                    <span>Gartenweg 2<br />16515 Oranienburg, Germany</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}
