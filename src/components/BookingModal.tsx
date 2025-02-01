@@ -22,9 +22,9 @@ import { CALENDAR_CONFIG } from "../config/calendar";
 import { LANGUAGES, SUBJECTS, POSITIONS } from "../config/constants";
 import { LanguageSelect } from "./LanguageSelect";
 import { SuccessModal } from "./SuccessModal";
-import { modalTranslations } from '../locales/modalTranslations';
-import { useLanguage } from '../context/LanguageContext';
-import { Spinner } from './Spinner';
+import { modalTranslations } from "../locales/modalTranslations";
+import { useLanguage } from "../context/LanguageContext";
+import { Spinner } from "./Spinner";
 import { BookingFormData } from "../types/booking";
 
 interface BookingModalProps {
@@ -72,17 +72,17 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     setValue,
   } = useForm<BookingFormData>({
     defaultValues: {
-      name: '',
-      email: '',
-      website: '',
+      name: "",
+      email: "",
+      website: "",
       subject: SUBJECTS[0],
       timezone: defaultTimezone,
       position: POSITIONS[0],
-      comments: '',
+      comments: "",
       language: LANGUAGES[0],
-      datetime: '',
-      'bot-field': ''
-    }
+      datetime: "",
+      "bot-field": ""
+    },
   });
   const { language } = useLanguage();
   const t = modalTranslations[language];
@@ -102,30 +102,36 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
   const timezonesWithOffset = useMemo(() => {
     return [
-      'UTC',
-      'Europe/London',
-      'Europe/Paris',
-      'Europe/Berlin',
-      'Europe/Kiev',
-      'Europe/Moscow',
-      'America/New_York',
-      'America/Los_Angeles',
-      'Asia/Tokyo',
-      'Australia/Sydney'
+      "UTC",
+      "Europe/London",
+      "Europe/Paris",
+      "Europe/Berlin",
+      "Europe/Kiev",
+      "Europe/Moscow",
+      "America/New_York",
+      "America/Los_Angeles",
+      "Asia/Tokyo",
+      "Australia/Sydney",
     ].map((tz) => ({
       value: tz,
       label: `${tz} (${format(new Date(), "xxx", { timeZone: tz })})`,
     }));
   }, []);
 
-  const handleSelect = useCallback((info: { start: Date; end: Date }) => {
-    const start = info.start;
-    if (validateDateTime(start)) {
-      setSelectedDate(start);
-    } else {
-      alert(t.invalidTimeSlot || 'Please select a valid time slot between 9:00 and 18:00');
-    }
-  }, [t]);
+  const handleSelect = useCallback(
+    (info: { start: Date; end: Date }) => {
+      const start = info.start;
+      if (validateDateTime(start)) {
+        setSelectedDate(start);
+      } else {
+        alert(
+          t.invalidTimeSlot ||
+            "Please select a valid time slot between 9:00 and 18:00"
+        );
+      }
+    },
+    [t]
+  );
 
   const handleClose = useCallback(() => {
     reset();
@@ -136,7 +142,9 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
   const onSubmit = useCallback(
     async (data: BookingFormData) => {
       if (!selectedDate || !validateDateTime(selectedDate)) {
-        alert(t.invalidDateTime || 'Please select a valid date and time');
+        alert(
+          t.invalidDateTime || "Please select a valid date and time"
+        );
         return;
       }
 
@@ -154,10 +162,11 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
           subject: data.subject,
           timezone: selectedTimezone,
           position: data.position,
-          comments: data.comments || '',
+          comments: data.comments || "",
           language: data.language,
           datetime: formattedDate,
           "form-name": "booking",
+          "bot-field": data["bot-field"] || "",
         } as const;
 
         const response = await fetch("/", {
@@ -174,7 +183,10 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
         handleClose();
       } catch (error) {
         console.error("Booking failed:", error);
-        alert(t.bookingFailed || 'Failed to submit booking request. Please try again.');
+        alert(
+          t.bookingFailed ||
+            "Failed to submit booking request. Please try again."
+        );
       } finally {
         setIsSubmitting(false);
       }
@@ -230,11 +242,20 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                     onSubmit={handleSubmit(onSubmit)}
                     className="space-y-4"
                     data-netlify="true"
+                    data-netlify-honeypot="bot-field"
                     name="booking"
                     method="POST"
                   >
+                    {/* Обязательно скрытое поле с именем формы */}
                     <input type="hidden" name="form-name" value="booking" />
-                    <input type="hidden" name="selectedTimezone" />
+                    {/* Honeypot-поле */}
+                    <input type="hidden" {...register("bot-field")} />
+                    {/* Если необходимо, можно передать выбранный часовой пояс */}
+                    <input
+                      type="hidden"
+                      name="selectedTimezone"
+                      value={selectedTimezone}
+                    />
 
                     <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4">
                       <div className="order-1 lg:order-1 space-y-4">
@@ -401,15 +422,15 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                           focus-visible:outline-2 focus-visible:outline-offset-2 
                           focus-visible:outline-[#3DFEA3] transition-colors 
                           disabled:opacity-50 disabled:cursor-not-allowed
-                          ${isSubmitting ? 'opacity-50' : ''}`}
+                          ${isSubmitting ? "opacity-50" : ""}`}
                       >
                         {isSubmitting ? (
                           <span className="flex items-center justify-center">
                             <Spinner className="mr-2" />
-                            {t.bookingProcess || 'Processing...'}
+                            {t.bookingProcess || "Processing..."}
                           </span>
                         ) : (
-                          t.bookingButton || 'Book Meeting'
+                          t.bookingButton || "Book Meeting"
                         )}
                       </button>
                     </div>
