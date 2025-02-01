@@ -18,23 +18,26 @@ import {
 import FullCalendar from "@fullcalendar/react";
 import FormField from "./FormField";
 import { format, zonedTimeToUtc } from "date-fns-tz";
-import type { BookingFormData } from "../types/booking";
 import { CALENDAR_CONFIG } from "../config/calendar";
 import { LANGUAGES, SUBJECTS, POSITIONS } from "../config/constants";
 import { LanguageSelect } from "./LanguageSelect";
 import { SuccessModal } from "./SuccessModal";
 import { modalTranslations } from '../locales/modalTranslations';
 import { useLanguage } from '../context/LanguageContext';
+import { Spinner } from './Spinner';
+import { BookingFormData } from "../types/booking";
 
 interface BookingModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const encode = (data: any) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
+const encode = (data: Record<string, string | boolean | number>) => {
+  const formData = new URLSearchParams();
+  Object.entries(data).forEach(([key, value]) => {
+    formData.append(key, String(value));
+  });
+  return formData.toString();
 };
 
 const validateUrl = (url: string) => {
@@ -47,7 +50,15 @@ const validateUrl = (url: string) => {
   }
 };
 
+const validateDateTime = (date: Date | null) => {
+  if (!date) return false;
+  const now = new Date();
+  const hour = date.getHours();
+  return date > now && hour >= 9 && hour < 18;
+};
+
 export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
+  const defaultTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -59,8 +70,20 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     reset,
     watch,
     setValue,
-  } = useForm<BookingFormData>();
-  const defaultTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  } = useForm<BookingFormData>({
+    defaultValues: {
+      name: '',
+      email: '',
+      website: '',
+      subject: SUBJECTS[0],
+      timezone: defaultTimezone,
+      position: POSITIONS[0],
+      comments: '',
+      language: LANGUAGES[0],
+      datetime: '',
+      'bot-field': ''
+    }
+  });
   const { language } = useLanguage();
   const t = modalTranslations[language];
 
@@ -97,11 +120,12 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
   const handleSelect = useCallback((info: { start: Date; end: Date }) => {
     const start = info.start;
-    const hour = start.getHours();
-    if (hour >= 9 && hour < 18) {
+    if (validateDateTime(start)) {
       setSelectedDate(start);
+    } else {
+      alert(t.invalidTimeSlot || 'Please select a valid time slot between 9:00 and 18:00');
     }
-  }, []);
+  }, [t]);
 
   const handleClose = useCallback(() => {
     reset();
@@ -111,42 +135,51 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
   const onSubmit = useCallback(
     async (data: BookingFormData) => {
-      if (!selectedDate) {
-        alert("Please select a date and time");
+      if (!selectedDate || !validateDateTime(selectedDate)) {
+        alert(t.invalidDateTime || 'Please select a valid date and time');
         return;
       }
 
       setIsSubmitting(true);
       try {
         const utcDate = zonedTimeToUtc(selectedDate, selectedTimezone);
-
         const formattedDate = format(utcDate, "yyyy-MM-dd'T'HH:mm:ssXXX", {
           timeZone: "UTC",
         });
 
         const formData = {
-          ...data,
+          name: data.name,
+          email: data.email,
+          website: data.website,
+          subject: data.subject,
+          timezone: selectedTimezone,
+          position: data.position,
+          comments: data.comments || '',
+          language: data.language,
           datetime: formattedDate,
           "form-name": "booking",
-          selectedTimezone: selectedTimezone,
-        };
+        } as const;
 
-        await fetch("/", {
+        const response = await fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode(formData),
         });
 
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
         setShowSuccessModal(true);
         handleClose();
       } catch (error) {
         console.error("Booking failed:", error);
-        alert("Failed to submit booking request. Please try again.");
+        alert(t.bookingFailed || 'Failed to submit booking request. Please try again.');
       } finally {
         setIsSubmitting(false);
       }
     },
-    [selectedDate, selectedTimezone, handleClose]
+    [selectedDate, selectedTimezone, handleClose, t]
   );
 
   return (
@@ -363,9 +396,21 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="rounded-md bg-[#3DFEA3] px-6 py-2 text-sm leading-5 font-semibold text-[#0A1A1F] shadow-sm hover:bg-[#3DFEA3]/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#3DFEA3] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        className={`rounded-md bg-[#3DFEA3] px-6 py-2 text-sm leading-5 font-semibold 
+                          text-[#0A1A1F] shadow-sm hover:bg-[#3DFEA3]/90 focus-visible:outline 
+                          focus-visible:outline-2 focus-visible:outline-offset-2 
+                          focus-visible:outline-[#3DFEA3] transition-colors 
+                          disabled:opacity-50 disabled:cursor-not-allowed
+                          ${isSubmitting ? 'opacity-50' : ''}`}
                       >
-                        {isSubmitting ? t.bookingProcess : t.bookingButton}
+                        {isSubmitting ? (
+                          <span className="flex items-center justify-center">
+                            <Spinner className="mr-2" />
+                            {t.bookingProcess || 'Processing...'}
+                          </span>
+                        ) : (
+                          t.bookingButton || 'Book Meeting'
+                        )}
                       </button>
                     </div>
                   </form>

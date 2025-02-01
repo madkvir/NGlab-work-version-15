@@ -6,12 +6,13 @@ export type Position = typeof POSITIONS[number];
 
 export interface BookingFormData {
   name: string;
-  language: Language;
   email: string;
-  website: string; // Removed optional flag
+  website: string;
+  subject: string;
   timezone: string;
-  subject: BookingSubject;
-  position: Position;
-  datetime: Date;
+  position: string;
   comments?: string;
+  language: string;
+  datetime: string | Date;
+  'bot-field'?: string;
 }
