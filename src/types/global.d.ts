@@ -2,6 +2,7 @@ export {};
 
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer?: Object[];
+    [key: string]: any;
   }
 } 
