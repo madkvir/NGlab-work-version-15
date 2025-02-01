@@ -28,33 +28,34 @@ const NewsletterForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (formData["bot-field"]) {
+    const formValues = formData;
+    
+    if (formValues["bot-field"]) {
       return;
     }
 
-    // Push to dataLayer
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: "form_submission",
       form_name: "newsletter_form",
       form_data: {
-        email: formData.email,
-        consent: formData.consent,
+        email: formValues.email,
+        consent: formValues.consent,
         submission_timestamp: new Date().toISOString(),
         page_url: window.location.href,
       },
     });
 
-    const form = new FormData();
-    form.append("form-name", "newsletter");
-    form.append("email", formData.email);
-    form.append("consent", formData.consent.toString());
+    const submitData = new FormData();
+    submitData.append("form-name", "newsletter");
+    submitData.append("email", formValues.email);
+    submitData.append("consent", formValues.consent.toString());
 
     try {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(form as any).toString(),
+        body: new URLSearchParams(submitData as any).toString(),
       });
 
       if (response.ok) {
