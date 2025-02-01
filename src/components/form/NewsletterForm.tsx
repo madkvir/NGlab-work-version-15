@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import FormStatus from "./FormStatus";
+import { useLanguage } from '../../context/LanguageContext';
+import { newsletterFormTranslations } from '../../locales/translations';
 
 const NewsletterForm = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +13,8 @@ const NewsletterForm = () => {
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { language } = useLanguage();
+  const t = newsletterFormTranslations[language];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, type, checked, value } = e.target;
@@ -24,33 +28,34 @@ const NewsletterForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (formData["bot-field"]) {
+    const formValues = formData;
+    
+    if (formValues["bot-field"]) {
       return;
     }
 
-    // Push to dataLayer
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: "form_submission",
       form_name: "newsletter_form",
       form_data: {
-        email: formData.email,
-        consent: formData.consent,
+        email: formValues.email,
+        consent: formValues.consent,
         submission_timestamp: new Date().toISOString(),
         page_url: window.location.href,
       },
     });
 
-    const form = new FormData();
-    form.append("form-name", "newsletter");
-    form.append("email", formData.email);
-    form.append("consent", formData.consent.toString());
+    const submitData = new FormData();
+    submitData.append("form-name", "newsletter");
+    submitData.append("email", formValues.email);
+    submitData.append("consent", formValues.consent.toString());
 
     try {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(form as any).toString(),
+        body: new URLSearchParams(submitData as any).toString(),
       });
 
       if (response.ok) {
@@ -77,9 +82,9 @@ const NewsletterForm = () => {
         </div>
         <div>
           <h4 className="text-sm sm:text-base font-semibold text-emerald-400">
-            Successfully Subscribed!
+            {t.successTitle}
           </h4>
-          <p className="text-xs sm:text-sm text-gray-400">Thank you for joining our newsletter.</p>
+          <p className="text-xs sm:text-sm text-gray-400">{t.successMessage}</p>
         </div>
       </div>
     );
@@ -91,6 +96,7 @@ const NewsletterForm = () => {
       className="space-y-3 sm:space-y-4"
       data-netlify="true"
       name="newsletter"
+      method="POST"
     >
       <input type="hidden" name="form-name" value="newsletter" />
       <input type="hidden" name="bot-field" />
@@ -104,7 +110,7 @@ const NewsletterForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Your email address"
+            placeholder={t.placeholder}
             className="w-full bg-gray-900/90 text-white text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-2.5 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/50 placeholder:text-gray-400 animate-glow shadow-[0_0_15px_rgba(16,185,129,0.2)] transition-all duration-300"
             required
           />
@@ -129,9 +135,9 @@ const NewsletterForm = () => {
           required
         />
         <label htmlFor="newsletter-consent" className="text-xs sm:text-sm text-gray-400">
-          I agree to receive newsletters and accept the{" "}
+          {t.agreement}{" "}
           <a href="/privacy" className="text-emerald-400 hover:text-emerald-300 transition-colors">
-            Privacy Policy
+            {t.privacyPolicy}
           </a>
         </label>
       </div>

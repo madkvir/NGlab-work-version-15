@@ -1,5 +1,7 @@
+"use client";
 import React from 'react';
-import { MessageSquare, Mic, Code, Bot, Brain, Users, HelpCircle } from 'lucide-react';
+import { MessageSquare, Mic, Code2, UserCircle2, Bot, HeartHandshake, HelpCircle } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface ServiceSelectionProps {
   services: {
@@ -13,43 +15,219 @@ interface ServiceSelectionProps {
   onChange: (service: string) => void;
 }
 
+const serviceTranslations = {
+  en: {
+    services: {
+      aiChatBot: {
+        title: "AI Agent (Chat Bot)",
+        description: "24/7 intelligent customer support",
+        tooltip: "Automated chat support with AI capabilities"
+      },
+      aiVoiceBot: {
+        title: "AI Agent (Voice Bot)",
+        description: "Voice-enabled AI assistant",
+        tooltip: "Natural voice interactions powered by AI"
+      },
+      customDevelopment: {
+        title: "Custom Development",
+        description: "Tailored AI solutions",
+        tooltip: "Custom AI development for your specific needs"
+      },
+      aiAvatar: {
+        title: "AI Avatar",
+        description: "Digital AI representation",
+        tooltip: "Virtual AI avatars for digital interactions"
+      },
+      aiAssistant: {
+        title: "AI Assistant",
+        description: "Personal AI helper",
+        tooltip: "AI-powered personal assistance and automation"
+      },
+      counseling: {
+        title: "Counseling",
+        description: "Expert AI guidance",
+        tooltip: "Professional consultation on AI implementation"
+      }
+    }
+  },
+  de: {
+    services: {
+      aiChatBot: {
+        title: "KI-Agent (Chat-Bot)",
+        description: "24/7 intelligenter Kundensupport",
+        tooltip: "Automatisierter Chat-Support mit KI-Fähigkeiten"
+      },
+      aiVoiceBot: {
+        title: "KI-Agent (Sprach-Bot)",
+        description: "Sprachgesteuerter KI-Assistent",
+        tooltip: "Natürliche Sprachinteraktionen mit KI"
+      },
+      customDevelopment: {
+        title: "Individuelle Entwicklung",
+        description: "Maßgeschneiderte KI-Lösungen",
+        tooltip: "Individuelle KI-Entwicklung für Ihre Bedürfnisse"
+      },
+      aiAvatar: {
+        title: "KI-Avatar",
+        description: "Digitale KI-Repräsentation",
+        tooltip: "Virtuelle KI-Avatare für digitale Interaktionen"
+      },
+      aiAssistant: {
+        title: "KI-Assistent",
+        description: "Persönlicher KI-Helfer",
+        tooltip: "KI-gestützte persönliche Assistenz und Automatisierung"
+      },
+      counseling: {
+        title: "Beratung",
+        description: "Experten-KI-Beratung",
+        tooltip: "Professionelle Beratung zur KI-Implementierung"
+      }
+    }
+  },
+  es: {
+    services: {
+      aiChatBot: {
+        title: "Agente IA (Chat Bot)",
+        description: "Soporte al cliente 24/7",
+        tooltip: "Soporte de chat automatizado con capacidades de IA"
+      },
+      aiVoiceBot: {
+        title: "Agente IA (Bot de Voz)",
+        description: "Asistente IA por voz",
+        tooltip: "Interacciones de voz naturales con IA"
+      },
+      customDevelopment: {
+        title: "Desarrollo Personalizado",
+        description: "Soluciones IA a medida",
+        tooltip: "Desarrollo personalizado de IA para sus necesidades"
+      },
+      aiAvatar: {
+        title: "Avatar IA",
+        description: "Representación digital IA",
+        tooltip: "Avatares virtuales IA para interacciones digitales"
+      },
+      aiAssistant: {
+        title: "Asistente IA",
+        description: "Ayudante personal IA",
+        tooltip: "Asistencia personal y automatización con IA"
+      },
+      counseling: {
+        title: "Asesoramiento",
+        description: "Guía experta en IA",
+        tooltip: "Consultoría profesional en implementación de IA"
+      }
+    }
+  },
+  ru: {
+    services: {
+      aiChatBot: {
+        title: "ИИ Агент (Чат-бот)",
+        description: "Поддержка клиентов 24/7",
+        tooltip: "Автоматизированная поддержка с возможностями ИИ"
+      },
+      aiVoiceBot: {
+        title: "ИИ Агент (Голосовой бот)",
+        description: "Голосовой ИИ-ассистент",
+        tooltip: "Естественное голосовое взаимодействие с ИИ"
+      },
+      customDevelopment: {
+        title: "Индивидуальная разработка",
+        description: "Решения ИИ под заказ",
+        tooltip: "Разработка ИИ под ваши потребности"
+      },
+      aiAvatar: {
+        title: "ИИ Аватар",
+        description: "Цифровой ИИ-представитель",
+        tooltip: "Виртуальные ИИ-аватары для цифрового взаимодействия"
+      },
+      aiAssistant: {
+        title: "ИИ Ассистент",
+        description: "Персональный ИИ-помощник",
+        tooltip: "Персональная помощь и автоматизация с ИИ"
+      },
+      counseling: {
+        title: "Консультация",
+        description: "Экспертное руководство",
+        tooltip: "Профессиональная консультация по внедрению ИИ"
+      }
+    }
+  },
+  ua: {
+    services: {
+      aiChatBot: {
+        title: "ШІ Агент (Чат-бот)",
+        description: "Підтримка клієнтів 24/7",
+        tooltip: "Автоматизована підтримка з можливостями ШІ"
+      },
+      aiVoiceBot: {
+        title: "ШІ Агент (Голосовий бот)",
+        description: "Голосовий ШІ-асистент",
+        tooltip: "Природна голосова взаємодія з ШІ"
+      },
+      customDevelopment: {
+        title: "Індивідуальна розробка",
+        description: "Рішення ШІ на замовлення",
+        tooltip: "Розробка ШІ під ваші потреби"
+      },
+      aiAvatar: {
+        title: "ШІ Аватар",
+        description: "Цифровий ШІ-представник",
+        tooltip: "Віртуальні ШІ-аватари для цифрової взаємодії"
+      },
+      aiAssistant: {
+        title: "ШІ Асистент",
+        description: "Персональний ШІ-помічник",
+        tooltip: "Персональна допомога та автоматизація з ШІ"
+      },
+      counseling: {
+        title: "Консультація",
+        description: "Експертне керівництво",
+        tooltip: "Професійна консультація з впровадження ШІ"
+      }
+    }
+  }
+};
+
 const ServiceSelection: React.FC<ServiceSelectionProps> = ({ services, onChange }) => {
+  const { language } = useLanguage();
+  const t = serviceTranslations[language];
+
   const serviceOptions = [
     {
       id: 'aiChatBot',
-      name: 'AI Agent (Chat Bot)',
+      name: t.services.aiChatBot.title,
       icon: <MessageSquare className="w-4 h-4" />,
-      info: 'Intelligent chatbot for 24/7 customer support and automated responses'
+      info: t.services.aiChatBot.description
     },
     {
       id: 'aiVoiceBot',
-      name: 'AI Agent (Voice Bot)',
+      name: t.services.aiVoiceBot.title,
       icon: <Mic className="w-4 h-4" />,
-      info: 'Voice-enabled AI agent for natural conversations and phone support'
+      info: t.services.aiVoiceBot.description
     },
     {
       id: 'customDevelopment',
-      name: 'Custom Development',
-      icon: <Code className="w-4 h-4" />,
-      info: 'Tailored AI solutions built specifically for your business needs'
+      name: t.services.customDevelopment.title,
+      icon: <Code2 className="w-4 h-4" />,
+      info: t.services.customDevelopment.description
     },
     {
       id: 'aiAvatar',
-      name: 'AI Avatar',
+      name: t.services.aiAvatar.title,
       icon: <Bot className="w-4 h-4" />,
-      info: 'Digital avatars powered by AI for immersive user experiences'
+      info: t.services.aiAvatar.description
     },
     {
       id: 'aiAssistant',
-      name: 'AI Assistant',
-      icon: <Brain className="w-4 h-4" />,
-      info: 'Personal AI assistant for task automation and productivity'
+      name: t.services.aiAssistant.title,
+      icon: <UserCircle2 className="w-4 h-4" />,
+      info: t.services.aiAssistant.description
     },
     {
       id: 'counseling',
-      name: 'Counseling',
-      icon: <Users className="w-4 h-4" />,
-      info: 'Expert consultation on AI implementation and strategy'
+      name: t.services.counseling.title,
+      icon: <HeartHandshake className="w-4 h-4" />,
+      info: t.services.counseling.description
     }
   ];
 

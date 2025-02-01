@@ -8,8 +8,35 @@ import ServiceSelection from './ServiceSelection';
 import PhoneInput from './PhoneInput';
 import { countryCodes } from '../../data/countryCodes';
 import Link from 'next/link';
+import { useLanguage } from '../../context/LanguageContext';
+
+declare global {
+  interface Window {
+    dataLayer?: Object[];
+  }
+}
+
+const formTranslations = {
+  en: {
+    firstName: "Your Name *",
+    companyName: "Company Name",
+    email: "Email Address *",
+    phone: "Phone Number",
+    interests: "I'm interested in: *",
+    message: "Message",
+    consent: "I agree to the processing of my personal data according to the",
+    privacyPolicy: "Privacy Policy",
+    success: {
+      title: "Message Sent Successfully!",
+      description: "Thank you for contacting us. We'll get back to you as soon as possible."
+    }
+  },
+  // ... other translations
+};
 
 const ContactForm = () => {
+  const { language } = useLanguage();
+  const t = formTranslations[language];
   const [countryCode, setCountryCode] = useState('+49');
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -86,7 +113,7 @@ const ContactForm = () => {
 
     const formData = new FormData();
     formData.append('form-name', 'contact');
-    formData.append('name', formState.firstName);
+    formData.append('firstName', formState.firstName);
     formData.append('companyName', formState.companyName);
     formData.append('email', formState.email);
     formData.append('phone', `${countryCode} ${formState.phone}`);
@@ -137,9 +164,9 @@ const ContactForm = () => {
             <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-400" />
           </div>
           <div className="space-y-2">
-            <h3 className="text-lg sm:text-xl font-semibold text-white">Message Sent Successfully!</h3>
+            <h3 className="text-lg sm:text-xl font-semibold text-white">{t.success.title}</h3>
             <p className="text-sm sm:text-base text-gray-400">
-              Thank you for contacting us. We'll get back to you as soon as possible.
+              {t.success.description}
             </p>
           </div>
         </div>
@@ -153,6 +180,7 @@ const ContactForm = () => {
       className="space-y-4 sm:space-y-6" 
       data-netlify="true" 
       name="contact"
+      method="POST"
     >
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="bot-field" />
@@ -161,7 +189,7 @@ const ContactForm = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <FormField
-          label="Your Name *"
+          label={t.firstName}
           name="firstName"
           value={formState.firstName}
           onChange={handleChange}
@@ -169,7 +197,7 @@ const ContactForm = () => {
         />
 
         <FormField
-          label="Company Name"
+          label={t.companyName}
           name="companyName"
           value={formState.companyName}
           onChange={handleChange}
@@ -177,7 +205,7 @@ const ContactForm = () => {
       </div>
 
       <FormField
-        label="Email Address *"
+        label={t.email}
         name="email"
         type="email"
         value={formState.email}
@@ -195,7 +223,7 @@ const ContactForm = () => {
 
       <div>
         <label className="block text-sm font-medium text-gray-400 mb-2">
-          I'm interested in: *
+          {t.interests}
         </label>
         <ServiceSelection
           services={formState.services}
@@ -204,7 +232,7 @@ const ContactForm = () => {
       </div>
 
       <FormField
-        label="Message"
+        label={t.message}
         name="message"
         as="textarea"
         rows={3}
@@ -223,9 +251,9 @@ const ContactForm = () => {
           required
         />
         <label htmlFor="consent" className="text-xs sm:text-sm text-gray-400">
-          I agree to the processing of my personal data according to the{' '}
+          {t.consent}{' '}
           <Link href="/privacy" className="text-emerald-400 hover:text-emerald-300 transition-colors">
-            Privacy Policy
+            {t.privacyPolicy}
           </Link>
         </label>
       </div>

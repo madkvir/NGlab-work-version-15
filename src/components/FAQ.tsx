@@ -1,40 +1,12 @@
 import Divider from "./Divider";
-import FAQAccordeon from "./FAQAccordion";
-
-const faqs = [
-  {
-    question: "What is NeuroGen Lab? How does it work?",
-    answer:
-      "NeuroGen Lab is an AI-powered platform that helps businesses automate and enhance their operations through advanced artificial intelligence. Our system uses cutting-edge machine learning algorithms to understand and process your business data, providing intelligent automation and insights.",
-  },
-  {
-    question: "What kind of businesses can benefit from NeuroGen Lab?",
-    answer:
-      "NeuroGen Lab is designed to help businesses of all sizes across various industries. Whether you're a small startup or a large enterprise, our AI solutions can be customized to meet your specific needs in customer service, data analysis, content generation, and more.",
-  },
-  {
-    question: "How long does it take to implement the solution?",
-    answer:
-      "Implementation time varies depending on your specific needs and the complexity of integration. Typically, basic setup can be completed within a few days, while more complex custom solutions may take several weeks. Our team provides support throughout the entire process.",
-  },
-  {
-    question: "Is my data safe with NeuroGen Lab?",
-    answer:
-      "Yes, we take data security very seriously. We employ industry-standard encryption protocols, regular security audits, and strict data handling procedures. All data is processed in compliance with GDPR and other relevant data protection regulations.",
-  },
-  {
-    question: "What kind of support do you provide?",
-    answer:
-      "We offer comprehensive support including 24/7 technical assistance, dedicated account managers, detailed documentation, and regular training sessions. Our team is always available to help you maximize the benefits of our AI solutions.",
-  },
-  {
-    question: "Is NeuroGen Lab available in multiple languages?",
-    answer:
-      "Yes, our platform supports multiple languages and can be customized for different regional requirements. Contact our sales team for specific language availability and customization options.",
-  },
-];
+import FAQAccordion from "./FAQAccordion";
+import { faqTranslations } from '../locales/translations';
+import { useLanguage } from '../context/LanguageContext';
 
 const FAQ = () => {
+  const { language } = useLanguage();
+  const t = faqTranslations[language];
+
   return (
     <section id="faq" className="py-5 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-5">
@@ -47,19 +19,19 @@ const FAQ = () => {
         <div className="text-center mb-5">
           <div className="inline-block px-5 py-2 rounded-full bg-gray-900/50 backdrop-blur-sm mb-5">
             <span className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent font-semibold">
-              FAQ
+              {t.sectionTitle}
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
-            Frequently Asked Questions
+            {t.title}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Find answers to common questions about our AI solutions
+            {t.description}
           </p>
         </div>
 
         {/* FAQ Accordion */}
-        <FAQAccordeon faqs={faqs} />
+        <FAQAccordion faqs={t.faqs} />
       </div>
     </section>
   );

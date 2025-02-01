@@ -1,81 +1,128 @@
+'use client';
+
 import React from "react";
-import { Metadata } from "next";
+import { Code2 } from "lucide-react";
 import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { Code } from "lucide-react";
+import { useLanguage } from '../../../context/LanguageContext';
+import { customDevelopmentTranslations } from '../../../locales/translations';
+import Image from 'next/image';
 
-export const metadata: Metadata = {
-  title: "Custom Development | NeuroGen Lab - Tailored AI Solutions",
-  description:
-    "Get custom-built AI solutions for your unique business needs. Our expert development team delivers scalable, secure, and efficient artificial intelligence implementations.",
-  keywords: [
-    "custom AI development",
-    "tailored solutions",
-    "AI implementation",
-    "software development",
-  ],
-  openGraph: {
-    title: "Custom Development - Tailored AI Solutions | NeuroGen Lab",
-    description: "Expert custom AI development for your unique business needs",
-    url: "https://neurogenlab.de/tools/custom-development",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "Custom AI Development - Tailored Solutions",
-    description: "Build custom AI solutions for your business needs",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/custom-development",
-  },
-};
+const CustomDevelopmentPage = () => {
+  const { language } = useLanguage();
+  const t = customDevelopmentTranslations[language] || customDevelopmentTranslations.en;
 
-const CustomDevelopment = () => {
+  // Добавляем значения по умолчанию
+  const defaultContent = {
+    mainTitle: 'Custom Development',
+    subtitle: 'Tailored Software Solutions',
+    introText: 'Transform your business with custom software development',
+    introList: [] as string[],
+    howItWorksTitle: 'How It Works',
+    howItWorksText: 'Our development process',
+    howItWorksList: [] as string[],
+    keyFeaturesTitle: 'Key Features',
+    features: {
+      realTime: {
+        title: 'Agile Development',
+        description: 'Flexible and iterative development process',
+      },
+      multiLanguage: {
+        title: 'Multi-platform Support',
+        description: 'Solutions for all platforms and devices',
+      },
+      scalability: {
+        title: 'Scalable Architecture',
+        description: 'Built to grow with your business',
+      },
+      analytics: {
+        title: 'Advanced Integration',
+        description: 'Seamless integration with existing systems',
+      },
+    },
+    industriesTitle: 'Industries',
+    industriesText: 'Solutions for all industries',
+    industries: [] as string[],
+    conclusionTitle: 'Conclusion',
+    conclusionText: 'Transform your business today',
+    conclusionList: [] as string[],
+    topReasonsTitle: 'Top Reasons',
+    reasonList: [] as string[],
+    finalConclusion: {
+      title: 'Get Started',
+      text: 'Begin your digital transformation journey',
+    }
+  };
+
+  const articleContent = React.useMemo(() => ({
+    mainTitle: t?.articleContent?.mainTitle || defaultContent.mainTitle,
+    subtitle: t?.articleContent?.subtitle || defaultContent.subtitle,
+    introText: t?.articleContent?.introText || defaultContent.introText,
+    introList: t?.articleContent?.introList || defaultContent.introList,
+    howItWorksTitle: t?.articleContent?.howItWorksTitle || defaultContent.howItWorksTitle,
+    howItWorksText: t?.articleContent?.howItWorksText || defaultContent.howItWorksText,
+    howItWorksList: t?.articleContent?.howItWorksList || defaultContent.howItWorksList,
+    keyFeaturesTitle: t?.articleContent?.keyFeaturesTitle || defaultContent.keyFeaturesTitle,
+    features: {
+      realTime: {
+        title: t?.articleContent?.features?.realTime?.title || defaultContent.features.realTime.title,
+        description: t?.articleContent?.features?.realTime?.description || defaultContent.features.realTime.description,
+      },
+      multiLanguage: {
+        title: t?.articleContent?.features?.multiLanguage?.title || defaultContent.features.multiLanguage.title,
+        description: t?.articleContent?.features?.multiLanguage?.description || defaultContent.features.multiLanguage.description,
+      },
+      scalability: {
+        title: t?.articleContent?.features?.scalability?.title || defaultContent.features.scalability.title,
+        description: t?.articleContent?.features?.scalability?.description || defaultContent.features.scalability.description,
+      },
+      analytics: {
+        title: t?.articleContent?.features?.analytics?.title || defaultContent.features.analytics.title,
+        description: t?.articleContent?.features?.analytics?.description || defaultContent.features.analytics.description,
+      },
+    },
+    industriesTitle: t?.articleContent?.industriesTitle || defaultContent.industriesTitle,
+    industriesText: t?.articleContent?.industriesText || defaultContent.industriesText,
+    industries: t?.articleContent?.industries || defaultContent.industries,
+    conclusionTitle: t?.articleContent?.conclusionTitle || defaultContent.conclusionTitle,
+    conclusionText: t?.articleContent?.conclusionText || defaultContent.conclusionText,
+    conclusionList: t?.articleContent?.conclusionList || defaultContent.conclusionList,
+    topReasonsTitle: t?.articleContent?.topReasonsTitle || defaultContent.topReasonsTitle,
+    reasonList: t?.articleContent?.reasonList || defaultContent.reasonList,
+    finalConclusion: t?.articleContent?.finalConclusion || defaultContent.finalConclusion
+  }), [language, t]);
+
   return (
     <ToolPageTemplate
-      title="Custom Development"
-      description="Build tailored AI solutions that perfectly match your business needs with our expert custom development services."
-      icon={<Code className="w-8 h-8 text-emerald-400" />}
-      features={[
-        "Customized AI Solution Design",
-        "Scalable Architecture",
-        "Secure Implementation",
-        "Performance Optimization",
-        "Integration Services",
-        "Quality Assurance",
-        "Continuous Support",
-      ]}
-      benefits={[
-        "Tailored to Your Needs",
-        "Competitive Advantage",
-        "Improved Efficiency",
-        "Future-proof Solutions",
-        "Technical Excellence",
-        "Ongoing Support",
-        "ROI Optimization",
-      ]}
-      integrations={[
-        "Legacy Systems",
-        "Cloud Platforms",
-        "Third-party APIs",
-        "Database Systems",
-        "Analytics Tools",
-        "Security Frameworks",
-      ]}
-      metaTitle="Custom Development | NeuroGen Lab - Tailored AI Solutions"
-      metaDescription="Get custom-built AI solutions for your unique business needs. Our expert development team delivers scalable, secure, and efficient artificial intelligence implementations."
+      title={t?.title || 'Custom Development'}
+      description={t?.description || 'Tailored software solutions'}
+      icon={<Code2 className="w-8 h-8 text-emerald-500" />}
+      features={t?.features || []}
+      benefits={t?.benefits || []}
+      integrations={t?.integrations || []}
+      sectionTitles={t?.sectionTitles || {}}
+      metaTitle={t?.metaTitle || 'Custom Development'}
+      metaDescription={t?.metaDescription || 'Tailored software solutions'}
+      isComingSoon={false}
+      articleContent={articleContent}
+      imageComponent={
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-emerald-900/50 rounded-xl p-6 hover:bg-emerald-900/70 transition-all duration-300" 
+               role="presentation">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <Image
+                src="/assets/tools/custom-development.jpg"
+                alt={t?.imageAlt || "Custom Development Solutions"}
+                fill
+                className="object-cover"
+                priority
+                loading="eager"
+              />
+            </div>
+          </div>
+        </div>
+      }
     />
   );
 };
 
-export default CustomDevelopment;
+export default CustomDevelopmentPage;

@@ -1,81 +1,45 @@
+'use client';
+
 import React from "react";
-import { Metadata } from "next";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
 import { MessageCircle } from "lucide-react";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+import { useLanguage } from "../../../context/LanguageContext";
+import { whatsappTranslations } from "../../../locales/translations";
+import Image from 'next/image';
 
-export const metadata: Metadata = {
-  title: "WhatsApp Business Integration | NeuroGen Lab - Messaging Solution",
-  description:
-    "Optimize your business communication with our WhatsApp integration. Enable automated responses, secure messaging, and enhanced customer engagement through WhatsApp Business API.",
-  keywords: [
-    "whatsapp business",
-    "messaging integration",
-    "customer communication",
-    "business api",
-  ],
-  openGraph: {
-    title: "WhatsApp Business Integration - Smart Messaging | NeuroGen Lab",
-    description: "Enhance customer communication with WhatsApp automation",
-    url: "https://neurogenlab.de/tools/whatsapp",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
-  },
-  twitter: {
-    title: "WhatsApp Business Integration - Messaging Solution",
-    description: "Transform business messaging with WhatsApp integration",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/whatsapp",
-  },
-};
+const WhatsAppPage = () => {
+  const { language } = useLanguage();
+  const t = whatsappTranslations[language] || whatsappTranslations.en;
 
-const WhatsApp = () => {
   return (
     <ToolPageTemplate
-      title="WhatsApp Business Integration"
-      description="Leverage the power of WhatsApp Business API with our intelligent integration solution for enhanced customer communication."
-      icon={<MessageCircle className="w-8 h-8 text-emerald-400" />}
-      features={[
-        "Business API Integration",
-        "Automated Messaging",
-        "Template Message Support",
-        "Interactive Buttons",
-        "File and Media Sharing",
-        "Contact Management",
-        "Broadcast Messaging",
-      ]}
-      benefits={[
-        "Global Customer Reach",
-        "Instant Response Capability",
-        "Reduced Support Costs",
-        "Enhanced Customer Experience",
-        "Secure Communication",
-        "Business Process Automation",
-        "Improved Conversion Rates",
-      ]}
-      integrations={[
-        "WhatsApp Business API",
-        "CRM Systems",
-        "Payment Gateways",
-        "E-commerce Platforms",
-        "Customer Support Tools",
-        "Analytics Platforms",
-      ]}
-      metaTitle="WhatsApp Business Integration | NeuroGen Lab - Messaging Solution"
-      metaDescription="Optimize your business communication with our WhatsApp integration. Enable automated responses, secure messaging, and enhanced customer engagement through WhatsApp Business API."
+      title={t.title}
+      description={t.description}
+      icon={<MessageCircle className="w-8 h-8 text-green-500" />}
+      features={t.features}
+      benefits={t.benefits}
+      integrations={t.integrations}
+      sectionTitles={t.sectionTitles}
+      metaTitle={t.metaTitle}
+      metaDescription={t.metaDescription}
+      isComingSoon={false}
+      imageComponent={
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <Image
+                src="/assets/tools/whatsapp.jpg"
+                alt="WhatsApp Integration Interface"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      }
     />
   );
 };
 
-export default WhatsApp;
+export default WhatsAppPage;

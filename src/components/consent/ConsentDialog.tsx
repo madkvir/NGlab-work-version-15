@@ -12,12 +12,17 @@ import type { ConsentSettings } from "../../utils/consent/types";
 import GlowingButton from "../common/GlowingButton";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { useLanguage } from '../../context/LanguageContext';
+import { consentDialogTranslations } from '../../locales/translations';
+import LanguageSelector from '../common/LanguageSelector';
 
 const ConsentDialog: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [settings, setSettings] = useState<ConsentSettings>(() => getStoredConsent());
   const [showDetails, setShowDetails] = useState(false);
   const router = useRouter();
+  const { language } = useLanguage();
+  const t = consentDialogTranslations[language];
 
   useEffect(() => {
     if (!hasStoredConsent()) {
@@ -62,23 +67,26 @@ const ConsentDialog: React.FC = () => {
         <div className="flex items-center justify-between p-3 border-b border-gray-800">
           <div className="flex items-center gap-2">
             <Shield className="w-5 h-5 text-emerald-400" />
-            <h2 className="text-lg font-semibold text-white">Privacy Settings</h2>
+            <h2 className="text-lg font-semibold text-white">{t.title}</h2>
           </div>
-          {showDetails && (
-            <button
-              onClick={() => setShowDetails(false)}
-              className="p-1 text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          )}
+          <div className="flex items-center gap-4">
+            <LanguageSelector />
+            {showDetails && (
+              <button
+                onClick={() => setShowDetails(false)}
+                className="p-1 text-gray-400 hover:text-white transition-colors"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
         </div>
 
         <div className="p-3">
           {!showDetails ? (
             <>
               <p className="text-sm text-gray-400 mb-4">
-                We use cookies to enhance your browsing experience and analyze our traffic.
+                {t.description}
               </p>
               <div className="space-y-2">
                 <GlowingButton
@@ -87,7 +95,7 @@ const ConsentDialog: React.FC = () => {
                   fullWidth
                   size="sm"
                 >
-                  Accept All
+                  {t.acceptAll}
                 </GlowingButton>
                 <GlowingButton
                   onClick={() => setShowDetails(true)}
@@ -95,10 +103,10 @@ const ConsentDialog: React.FC = () => {
                   fullWidth
                   size="sm"
                 >
-                  Customize
+                  {t.customize}
                 </GlowingButton>
                 <GlowingButton onClick={handleRejectAll} variant="outline" fullWidth size="sm">
-                  Reject All
+                  {t.rejectAll}
                 </GlowingButton>
                 <div className="text-xs text-gray-400 text-center pt-2">
                   <Link
@@ -106,7 +114,7 @@ const ConsentDialog: React.FC = () => {
                     onClick={(e) => handleLinkClick(e, "/privacy")}
                     className="text-emerald-400 hover:underline"
                   >
-                    Privacy Policy
+                    {t.privacyPolicy}
                   </Link>
                   {" • "}
                   <Link
@@ -114,7 +122,7 @@ const ConsentDialog: React.FC = () => {
                     onClick={(e) => handleLinkClick(e, "/cookie-policy")}
                     className="text-emerald-400 hover:underline"
                   >
-                    Cookie Policy
+                    {t.cookiePolicy}
                   </Link>
                 </div>
               </div>
@@ -148,7 +156,7 @@ const ConsentDialog: React.FC = () => {
                 ))}
               </div>
               <GlowingButton onClick={handleSavePreferences} fullWidth size="sm">
-                Save Preferences
+                {t.savePreferences}
               </GlowingButton>
             </>
           )}
