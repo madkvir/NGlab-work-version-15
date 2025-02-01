@@ -1,5 +1,4 @@
 import React, { useState, useMemo, useEffect, useCallback } from "react";
-
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
@@ -19,19 +18,13 @@ import {
 import FullCalendar from "@fullcalendar/react";
 import FormField from "./FormField";
 import { format, zonedTimeToUtc } from "date-fns-tz";
-import { BookingFormData } from "../types/booking";
+import type { BookingFormData } from "../types/booking";
 import { CALENDAR_CONFIG } from "../config/calendar";
 import { LANGUAGES, SUBJECTS, POSITIONS } from "../config/constants";
 import { LanguageSelect } from "./LanguageSelect";
 import { SuccessModal } from "./SuccessModal";
 import { modalTranslations } from '../locales/modalTranslations';
 import { useLanguage } from '../context/LanguageContext';
-
-declare global {
-  interface Intl {
-    supportedValuesOf(input: string): string[];
-  }
-}
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -45,7 +38,6 @@ const encode = (data: any) => {
 };
 
 const validateUrl = (url: string) => {
-  // Add protocol if missing
   const urlWithProtocol = url.match(/^https?:\/\//) ? url : `https://${url}`;
   try {
     new URL(urlWithProtocol);
@@ -79,12 +71,12 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
   useEffect(() => {
     if (isOpen) {
       setCalendarKey((prev) => prev + 1);
-      // Force calendar resize
       setTimeout(() => {
         window.dispatchEvent(new Event("resize"));
       }, 100);
     }
   }, [isOpen]);
+
   const timezonesWithOffset = useMemo(() => {
     return [
       'UTC',
@@ -187,7 +179,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                 <Dialog.Panel className="relative transform overflow-visible rounded-lg bg-[#152328] p-4 shadow-2xl ring-1 ring-[#3DFEA3]/20 backdrop-blur-sm">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-4">
-                      <img src="/logo.png" alt="NGlab" className="h-16 w-auto" />
+                      <img src="/NG.svg" alt="NGlab" className="h-16 w-auto" />
                       <Dialog.Title className="text-xl leading-6 font-bold text-white">
                         {t.bookDemo}
                       </Dialog.Title>

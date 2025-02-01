@@ -96,6 +96,7 @@ const NewsletterForm = () => {
       className="space-y-3 sm:space-y-4"
       data-netlify="true"
       name="newsletter"
+      method="POST"
     >
       <input type="hidden" name="form-name" value="newsletter" />
       <input type="hidden" name="bot-field" />
