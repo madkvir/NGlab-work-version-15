@@ -1,3 +1,4 @@
+import React from 'react';
 import { X } from 'lucide-react';
 import { demoModalTranslations } from '../locales/translations';
 

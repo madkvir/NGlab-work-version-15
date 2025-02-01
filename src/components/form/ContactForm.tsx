@@ -10,6 +10,12 @@ import { countryCodes } from '../../data/countryCodes';
 import Link from 'next/link';
 import { useLanguage } from '../../context/LanguageContext';
 
+declare global {
+  interface Window {
+    dataLayer?: Object[];
+  }
+}
+
 const formTranslations = {
   en: {
     firstName: "Your Name *",
