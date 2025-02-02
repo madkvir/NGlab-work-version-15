@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: "export",
+  webpack: (config, { isServer }) => {
+    config.module.rules.push({
+      test: /\.(html)$/,
+      use: { loader: "html-loader" },
+    });
+
+    return config;
+  },
   distDir: "./dist", // Changes the build output directory to `./dist/`.
   images: {
     unoptimized: true, // для статической генерации
@@ -8,19 +16,19 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/assets/images/:path*',
+        source: "/assets/images/:path*",
         headers: [
           {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
           },
           {
-            key: 'Access-Control-Allow-Origin',
-            value: '*'
-          }
+            key: "Access-Control-Allow-Origin",
+            value: "*",
+          },
         ],
       },
-    ]
+    ];
   },
 };
 
