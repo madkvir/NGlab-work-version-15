@@ -1,73 +1,43 @@
-import React from "react";
-import { Metadata } from "next";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { MessageSquare } from "lucide-react";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Enhance Messaging with Facebook Messenger Integration",
-  description:
-    "Enhance your customer communication with our Facebook Messenger integration. Provide instant, intelligent responses and seamless customer support through social messaging.",
-  keywords: ["facebook messenger", "messenger integration", "social messaging", "customer support"],
-  openGraph: {
-    title: "Facebook Messenger Integration - Smart Social Support | NeuroGen Lab",
-    description: "Connect with customers through intelligent Messenger automation",
-    url: "https://neurogenlab.de/tools/facebook-messenger",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "Facebook Messenger Integration - Smart Communication",
-    description: "Enhance customer support with Messenger automation",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/facebook-messenger",
-  },
-};
+import React from "react";
+import { MessageCircle } from "lucide-react";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+import { useLanguage } from "../../../context/LanguageContext";
+import { messengerTranslations } from "../../../locales/translations";
+import Image from 'next/image';
+
 const FacebookMessenger = () => {
+  const { language } = useLanguage();
+  const t = messengerTranslations[language] || messengerTranslations.en;
+
   return (
     <ToolPageTemplate
-      title="Facebook Messenger Integration"
-      description="Connect with your customers seamlessly through Facebook Messenger with our intelligent AI-powered integration solution."
-      icon={<MessageSquare className="w-8 h-8 text-emerald-400" />}
-      features={[
-        "Automated Message Handling",
-        "Smart Response System",
-        "Customer Data Integration",
-        "Multi-language Support",
-        "Rich Media Messaging",
-        "Analytics Dashboard",
-        "Custom Bot Flows",
-      ]}
-      benefits={[
-        "Instant Customer Engagement",
-        "24/7 Availability",
-        "Reduced Response Time",
-        "Increased Customer Satisfaction",
-        "Seamless CRM Integration",
-        "Enhanced Customer Experience",
-        "Valuable Insights Generation",
-      ]}
-      integrations={[
-        "Facebook Business Suite",
-        "CRM Systems",
-        "Analytics Platforms",
-        "E-commerce Platforms",
-        "Customer Support Tools",
-        "Marketing Automation",
-      ]}
-      metaTitle="Enhance Messaging with Facebook Messenger Integration"
-      metaDescription="Enhance your customer communication with our Facebook Messenger integration. Provide instant, intelligent responses and seamless customer support through social messaging."
+      title={t.title}
+      description={t.description}
+      icon={<MessageCircle className="w-8 h-8 text-blue-500" />}
+      features={t.features}
+      benefits={t.benefits}
+      integrations={t.integrations}
+      sectionTitles={t.sectionTitles}
+      metaTitle={t.metaTitle}
+      metaDescription={t.metaDescription}
+      isComingSoon={false}
+      imageComponent={
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <Image
+                src="/assets/tools/facebook-messenger.jpg"
+                alt="Facebook Messenger Integration Interface"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      }
     />
   );
 };

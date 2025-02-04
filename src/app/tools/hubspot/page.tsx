@@ -1,75 +1,45 @@
-import React from "react";
-import { Metadata } from "next";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { Building2 } from "lucide-react";
+'use client';
 
-export const metadata: Metadata = {
-  title: "HubSpot Integration | NeuroGen Lab - Marketing Automation Solution",
-  description:
-    "Transform your marketing and sales with our HubSpot integration. Implement intelligent automation, enhance customer engagement, and improve ROI through AI-powered tools.",
-  keywords: ["hubspot integration", "marketing automation", "sales automation", "CRM"],
-  openGraph: {
-    title: "HubSpot Integration - Smart Marketing | NeuroGen Lab",
-    description: "Transform your marketing with intelligent HubSpot automation",
-    url: "https://neurogenlab.de/tools/hubspot",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "HubSpot Integration - Marketing Automation",
-    description: "Enhance marketing with smart HubSpot integration",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/hubspot",
-  },
-};
-const HubSpot = () => {
+import React from "react";
+import { Database } from "lucide-react";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+import { useLanguage } from "../../../context/LanguageContext";
+import { hubspotTranslations } from "../../../locales/translations";
+import Image from 'next/image';
+
+const Hubspot = () => {
+  const { language } = useLanguage();
+  const t = hubspotTranslations[language] || hubspotTranslations.en;
+
   return (
     <ToolPageTemplate
-      title="HubSpot Integration"
-      description="Elevate your marketing and sales operations with our comprehensive HubSpot integration featuring AI-powered automation and analytics."
-      icon={<Building2 className="w-8 h-8 text-emerald-400" />}
-      features={[
-        "Marketing Automation",
-        "Sales Pipeline Management",
-        "Contact Intelligence",
-        "Smart Content Creation",
-        "Analytics Dashboard",
-        "Email Campaign Automation",
-        "Lead Nurturing Workflows",
-      ]}
-      benefits={[
-        "Improved Marketing ROI",
-        "Enhanced Lead Quality",
-        "Automated Customer Journey",
-        "Better Sales Alignment",
-        "Data-Driven Marketing",
-        "Personalized Engagement",
-        "Streamlined Operations",
-      ]}
-      integrations={[
-        "HubSpot CRM",
-        "Marketing Hub",
-        "Sales Hub",
-        "Service Hub",
-        "CMS Hub",
-        "Operations Hub",
-      ]}
-      metaTitle="HubSpot Integration | NeuroGen Lab - Marketing Automation Solution"
-      metaDescription="Transform your marketing and sales with our HubSpot integration. Implement intelligent automation, enhance customer engagement, and improve ROI through AI-powered tools."
+      title={t.title}
+      description={t.description}
+      icon={<Database className="w-8 h-8 text-orange-500" />}
+      features={t.features}
+      benefits={t.benefits}
+      integrations={t.integrations}
+      sectionTitles={t.sectionTitles}
+      metaTitle={t.metaTitle}
+      metaDescription={t.metaDescription}
+      isComingSoon={false}
+      imageComponent={
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <Image
+                src="/assets/tools/hubspot.jpg"
+                alt="Hubspot Integration Interface"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      }
     />
   );
 };
 
-export default HubSpot;
+export default Hubspot;

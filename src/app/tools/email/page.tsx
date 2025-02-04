@@ -1,74 +1,43 @@
-import React from "react";
-import { Metadata } from "next";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { Mail } from "lucide-react";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Email Integration | NeuroGen Lab - Intelligent Email Solution",
-  description:
-    "Optimize your email communications with our intelligent integration solution. Automate responses, manage templates, and gain valuable insights from your email interactions.",
-  keywords: ["email integration", "email automation", "smart email", "communication tools"],
-  openGraph: {
-    title: "Email Integration - Smart Communication | NeuroGen Lab",
-    description: "Streamline your email communications with AI automation",
-    url: "https://neurogenlab.de/tools/email",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "Email Integration - Intelligent Communication",
-    description: "Enhance email efficiency with smart automation",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/email",
-  },
-};
+import React from "react";
+import { Mail } from "lucide-react";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+import { useLanguage } from "../../../context/LanguageContext";
+import { emailTranslations } from "../../../locales/translations";
+import Image from 'next/image';
 
 const Email = () => {
+  const { language } = useLanguage();
+  const t = emailTranslations[language] || emailTranslations.en;
+
   return (
     <ToolPageTemplate
-      title="Email Integration"
-      description="Enhance your email communications with our intelligent email integration solution that streamlines messaging and automates responses."
-      icon={<Mail className="w-8 h-8 text-emerald-400" />}
-      features={[
-        "Smart Email Routing",
-        "Automated Response System",
-        "Template Management",
-        "Email Analytics",
-        "Priority Inbox",
-        "Multi-account Support",
-        "Advanced Filtering",
-      ]}
-      benefits={[
-        "Improved Response Time",
-        "Enhanced Email Organization",
-        "Reduced Manual Work",
-        "Better Communication Flow",
-        "Increased Productivity",
-        "Data-driven Insights",
-        "Streamlined Workflows",
-      ]}
-      integrations={[
-        "Gmail",
-        "Microsoft Outlook",
-        "CRM Systems",
-        "Marketing Platforms",
-        "Help Desk Software",
-        "Analytics Tools",
-      ]}
-      metaTitle="Email Integration | NeuroGen Lab - Intelligent Email Solution"
-      metaDescription="Optimize your email communications with our intelligent integration solution. Automate responses, manage templates, and gain valuable insights from your email interactions."
+      title={t.title}
+      description={t.description}
+      icon={<Mail className="w-8 h-8 text-blue-400" />}
+      features={t.features}
+      benefits={t.benefits}
+      integrations={t.integrations}
+      sectionTitles={t.sectionTitles}
+      metaTitle={t.metaTitle}
+      metaDescription={t.metaDescription}
+      isComingSoon={false}
+      imageComponent={
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <Image
+                src="/assets/tools/email.jpg"
+                alt="Email Integration Interface"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      }
     />
   );
 };

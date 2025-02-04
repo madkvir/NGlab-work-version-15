@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Calendar Theme */
+.fc {
+  --fc-border-color: rgba(61, 254, 163, 0.2);
+  --fc-button-bg-color: #152328;
+  --fc-button-border-color: rgba(61, 254, 163, 0.2);
+  --fc-button-hover-bg-color: #1f3238;
+  --fc-button-hover-border-color: #3dfea3;
+  --fc-button-active-bg-color: #1f3238;
+  --fc-today-bg-color: rgba(61, 254, 163, 0.1);
+  --fc-neutral-bg-color: #152328;
+  --fc-page-bg-color: #0a1a1f;
+  --fc-list-event-hover-bg-color: #152328;
+  --fc-highlight-color: rgba(61, 254, 163, 0.2);
+}
+
+.fc {
+  background-color: var(--fc-page-bg-color);
+  color: #fff;
+  font-family: "Inter", system-ui, sans-serif !important;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+  padding: 0.25rem 0;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  display: block;
+  min-width: 80px;
+  width: 100%;
+}
+
+.fc .fc-button {
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.625rem !important;
+  color: #fff;
+  opacity: 1 !important;
+  background-color: var(--fc-button-bg-color) !important;
+  border-color: var(--fc-button-border-color) !important;
+  font-family: "Inter", system-ui, sans-serif !important;
+}
+
+.fc .fc-button:hover {
+  background-color: var(--fc-button-hover-bg-color) !important;
+  border-color: var(--fc-button-hover-border-color) !important;
+}
+
+.fc .fc-button:disabled {
+  opacity: 0.5 !important;
+}
+
+.fc .fc-prev-button,
+.fc .fc-next-button {
+  background-color: var(--fc-button-bg-color) !important;
+  border-color: var(--fc-button-border-color) !important;
+  padding: 0.25rem 0.5rem !important;
+}
+
+.fc .fc-prev-button:hover,
+.fc .fc-next-button:hover {
+  background-color: var(--fc-button-hover-bg-color) !important;
+  border-color: var(--fc-button-hover-border-color) !important;
+}
+
+.fc .fc-timegrid-slot {
+  height: 1rem !important;
+}
+
+.fc td,
+.fc th {
+  padding: 0 !important;
+  border-color: rgba(61, 254, 163, 0.2) !important;
+}
+
+.fc-timegrid-slot-label {
+  font-size: 0.75rem !important;
+  color: #fff;
+  font-family: "Inter", system-ui, sans-serif !important;
+}
+
+.fc .fc-col-header-cell-cushion {
+  font-size: 0.75rem !important;
+  padding: 2px !important;
+  color: #fff;
+  font-family: "Inter", system-ui, sans-serif !important;
+  font-weight: 500;
+}
+
+.fc-timegrid-axis-cushion {
+  font-size: 0.75rem !important;
+  color: #fff;
+  font-family: "Inter", system-ui, sans-serif !important;
+}
+
+.fc-direction-ltr .fc-timegrid-slot-label-frame {
+  text-align: center;
+  font-size: 0.75rem !important;
+  color: #fff;
+  font-family: "Inter", system-ui, sans-serif !important;
+}
+
+.fc-col-header-cell {
+  padding: 2px !important;
+  background-color: #152328;
+}
+
+.fc .fc-timegrid-axis {
+  width: 65px !important;
+  background-color: #152328;
+}
+
+.fc .fc-timegrid-slot-label-frame {
+  width: 65px !important;
+}
+
+.fc .fc-timegrid-axis-frame {
+  min-height: 1rem !important;
+  height: 1rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fc .fc-timegrid-slot-label-cushion {
+  margin: 0 !important;
+  padding: 0 2px !important;
+}
+
+.fc-highlight {
+  background-color: rgba(61, 254, 163, 0.15) !important;
+}
+
+.fc-timegrid.fc-timeGridWeek-view {
+  min-height: auto !important;
+}
+
+.fc-view-harness {
+  height: auto !important;
+  min-height: 400px !important;
+}
+
+.fc .fc-timegrid-col.fc-day-today {
+  background-color: rgba(61, 254, 163, 0.05) !important;
+}
+
+.fc .fc-timegrid-col {
+  background-color: #152328;
+}
+
+/* Select with flags styles */
+select option {
+  padding-left: 30px !important;
+  background-repeat: no-repeat !important;
+  background-position: 6px center !important;
+  background-size: 16px auto !important;
+}
+
+/* Mobile and Tablet Responsive Styles */
+@media (max-width: 1023px) {
+  .fc .fc-toolbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 0.75rem !important;
+    text-align: center;
+    width: 100%;
+  }
+
+  .fc .fc-button {
+    padding: 0.125rem 0.375rem !important;
+    font-size: 0.625rem !important;
+  }
+
+  .fc .fc-timegrid-axis {
+    width: 40px !important;
+  }
+
+  .fc .fc-timegrid-slot-label-frame {
+    width: 40px !important;
+  }
+
+  .fc-timegrid-slot-label,
+  .fc .fc-col-header-cell-cushion,
+  .fc-timegrid-axis-cushion {
+    font-size: 0.625rem !important;
+  }
+
+  .fc .fc-timegrid-axis-cushion.fc-scrollgrid-shrink-cushion {
+    max-width: 40px;
+  }
+
+  /* Increase slot height for hourly slots on mobile/tablet */
+  .fc .fc-timegrid-slot {
+    height: 2rem !important;
+  }
+
+  .fc-view-harness {
+    min-height: 300px !important;
+  }
+}

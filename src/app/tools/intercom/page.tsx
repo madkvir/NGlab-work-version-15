@@ -1,81 +1,45 @@
+'use client';
+
 import React from "react";
-import { Metadata } from "next";
+import { MessageSquare } from "lucide-react";
 import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { MessageCircle } from "lucide-react";
+import { useLanguage } from "../../../context/LanguageContext";
+import { intercomTranslations } from "../../../locales/translations";
+import Image from 'next/image';
 
-export const metadata: Metadata = {
-  title: "Intercom Integration | NeuroGen Lab - Customer Messaging Solution",
-  description:
-    "Optimize your customer messaging with our Intercom integration. Automate support, engage customers intelligently, and improve conversion rates through targeted communication.",
-  keywords: [
-    "intercom integration",
-    "customer messaging",
-    "support automation",
-    "customer engagement",
-  ],
-  openGraph: {
-    title: "Intercom Integration - Smart Customer Support | NeuroGen Lab",
-    description: "Enhance customer messaging with intelligent automation",
-    url: "https://neurogenlab.de/tools/intercom",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "Intercom Integration - Customer Messaging",
-    description: "Optimize support with smart Intercom automation",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/intercom",
-  },
-};
+const IntercomPage = () => {
+  const { language } = useLanguage();
+  const t = intercomTranslations[language] || intercomTranslations.en;
 
-const Intercom = () => {
   return (
     <ToolPageTemplate
-      title="Intercom Integration"
-      description="Enhance your customer messaging with our Intercom integration that provides intelligent customer engagement and support automation."
-      icon={<MessageCircle className="w-8 h-8 text-emerald-400" />}
-      features={[
-        "Automated Customer Support",
-        "Targeted Messaging",
-        "Customer Segmentation",
-        "Engagement Analytics",
-        "Custom Bots",
-        "Product Tours",
-        "Help Center Integration",
-      ]}
-      benefits={[
-        "Improved Customer Engagement",
-        "Automated Support Workflows",
-        "Better Customer Understanding",
-        "Increased Conversion Rates",
-        "Streamlined Communication",
-        "Personalized Experiences",
-        "Efficient Support Process",
-      ]}
-      integrations={[
-        "CRM Systems",
-        "Marketing Platforms",
-        "Analytics Tools",
-        "Help Desk Software",
-        "E-commerce Platforms",
-        "Product Analytics",
-      ]}
-      metaTitle="Intercom Integration | NeuroGen Lab - Customer Messaging Solution"
-      metaDescription="Optimize your customer messaging with our Intercom integration. Automate support, engage customers intelligently, and improve conversion rates through targeted communication."
+      title={t.title}
+      description={t.description}
+      icon={<MessageSquare className="w-8 h-8 text-blue-500" />}
+      features={t.features}
+      benefits={t.benefits}
+      integrations={t.integrations}
+      sectionTitles={t.sectionTitles}
+      metaTitle={t.metaTitle}
+      metaDescription={t.metaDescription}
+      isComingSoon={false}
+      imageComponent={
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <Image
+                src="/assets/tools/intercom.jpg"
+                alt="Intercom Integration Interface"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      }
     />
   );
 };
 
-export default Intercom;
+export default IntercomPage;

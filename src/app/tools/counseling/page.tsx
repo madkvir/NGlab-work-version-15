@@ -1,79 +1,84 @@
-import React from "react";
-import { Metadata } from "next";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { Users } from "lucide-react";
+'use client';
 
-export const metadata: Metadata = {
-  title: "AI Implementation Counseling | NeuroGen Lab - Expert Guidance",
-  description:
-    "Get expert guidance for your AI implementation journey. Our counseling services ensure successful integration of artificial intelligence into your business operations.",
-  keywords: [
-    "AI counseling",
-    "implementation guidance",
-    "AI consulting",
-    "business transformation",
-  ],
-  openGraph: {
-    title: "AI Implementation Counseling - Expert Guidance | NeuroGen Lab",
-    description: "Expert guidance for successful AI implementation in business",
-    url: "https://neurogenlab.de/tools/counseling",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "AI Implementation Counseling - Expert Support",
-    description: "Professional guidance for AI business integration",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/counseling",
-  },
-};
+import React from "react";
+import { HeartHandshake } from "lucide-react";
+import ToolPageTemplate from"../../../components/ToolPageTemplate";
+import { useLanguage } from '../../../context/LanguageContext';
+import { counselingTranslations } from '../../../locales/translations';
+import Image from 'next/image';
 
 const Counseling = () => {
+  const { language } = useLanguage();
+  const t = counselingTranslations[language] || counselingTranslations.en;
+
+  const articleContent = React.useMemo(() => ({
+    mainTitle: t.articleContent.mainTitle,
+    subtitle: t.articleContent.subtitle,
+    introText: t.articleContent.introText,
+    introList: t.articleContent.introList,
+    howItWorksTitle: t.articleContent.howItWorksTitle,
+    howItWorksText: t.articleContent.howItWorksText,
+    howItWorksList: t.articleContent.howItWorksList,
+    keyFeaturesTitle: t.articleContent.keyFeaturesTitle,
+    features: {
+      realTime: {
+        title: t.articleContent.features.realTime.title,
+        description: t.articleContent.features.realTime.description,
+      },
+      multiLanguage: {
+        title: t.articleContent.features.multiLanguage.title,
+        description: t.articleContent.features.multiLanguage.description,
+      },
+      scalability: {
+        title: t.articleContent.features.scalability.title,
+        description: t.articleContent.features.scalability.description,
+      },
+      analytics: {
+        title: t.articleContent.features.analytics.title,
+        description: t.articleContent.features.analytics.description,
+      },
+    },
+    industriesTitle: t.articleContent.industriesTitle,
+    industriesText: t.articleContent.industriesText,
+    industries: t.articleContent.industries,
+    conclusionTitle: t.articleContent.conclusionTitle,
+    conclusionText: t.articleContent.conclusionText,
+    conclusionList: t.articleContent.conclusionList,
+    topReasonsTitle: t.articleContent.topReasonsTitle,
+    reasonList: t.articleContent.reasonList,
+    finalConclusion: t.articleContent.finalConclusion
+  }), [language]);
+
   return (
     <ToolPageTemplate
-      title="AI Implementation Counseling"
-      description="Get expert guidance on implementing AI solutions in your business with our comprehensive counseling services."
-      icon={<Users className="w-8 h-8 text-emerald-400" />}
-      features={[
-        "Strategic AI Planning",
-        "Technology Assessment",
-        "Implementation Roadmap",
-        "Risk Analysis",
-        "Change Management",
-        "Training Programs",
-        "Performance Monitoring",
-      ]}
-      benefits={[
-        "Expert Guidance",
-        "Risk Mitigation",
-        "Optimized Implementation",
-        "Cost-effective Solutions",
-        "Smooth Transition",
-        "Knowledge Transfer",
-        "Long-term Success",
-      ]}
-      integrations={[
-        "Project Management",
-        "Training Platforms",
-        "Documentation Systems",
-        "Collaboration Tools",
-        "Analytics Platforms",
-        "Resource Planning",
-      ]}
-      metaTitle="AI Implementation Counseling | NeuroGen Lab - Expert Guidance"
-      metaDescription="Get expert guidance for your AI implementation journey. Our counseling services ensure successful integration of artificial intelligence into your business operations."
+      title={t.title}
+      description={t.description}
+      icon={<HeartHandshake className="w-8 h-8 text-purple-400" />}
+      features={t.features}
+      benefits={t.benefits}
+      integrations={t.integrations}
+      sectionTitles={t.sectionTitles}
+      metaTitle={t.metaTitle}
+      metaDescription={t.metaDescription}
+      isComingSoon={false}
+      articleContent={articleContent}
+      imageComponent={
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-purple-900/50 rounded-xl p-6 hover:bg-purple-900/70 transition-all duration-300" 
+               role="presentation">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <Image
+                src="/assets/tools/counseling.jpg"
+                alt={t.imageAlt || "AI Counseling Interface"}
+                fill
+                className="object-cover"
+                priority
+                loading="eager"
+              />
+            </div>
+          </div>
+        </div>
+      }
     />
   );
 };

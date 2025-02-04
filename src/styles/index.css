@@ -47,11 +47,11 @@
   .animate-hot-pulse {
     animation: hot-pulse 2s ease-in-out infinite;
   }
-  
+
   .menu-text-hover {
     transition: transform 0.2s ease-out;
   }
-  
+
   .menu-text-hover:hover {
     animation: menu-text-hover 0.3s ease-out;
   }

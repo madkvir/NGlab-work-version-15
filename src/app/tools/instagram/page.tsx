@@ -1,79 +1,45 @@
-import React from "react";
-import { Metadata } from "next";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { InstagramIcon } from "lucide-react";
+'use client';
 
-export const metadata: Metadata = {
-  title: "Instagram Integration - Smart Social Commerce | NeuroGen Lab",
-  description: "Enhance your Instagram presence with AI-powered automation",
-  keywords: [
-    "instagram integration",
-    "social media automation",
-    "instagram bot",
-    "social commerce",
-  ],
-  openGraph: {
-    title: "Instagram Integration - Smart Social Commerce | NeuroGen Lab",
-    description: "Enhance your Instagram presence with AI-powered automation",
-    url: "https://neurogenlab.de/tools/instagram",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  twitter: {
-    title: "Instagram Integration - Social Media Automation",
-    description: "Boost Instagram engagement with smart automation",
-    images: [
-      {
-        url: "", // TODO: add URL
-        alt: "", // TODO: add alt text
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/tools/instagram",
-  },
-};
-const Instagram = () => {
+import React from "react";
+import { Instagram } from "lucide-react";
+import ToolPageTemplate from "../../../components/ToolPageTemplate";
+import { useLanguage } from "../../../context/LanguageContext";
+import { instagramTranslations } from "../../../locales/translations";
+import Image from 'next/image';
+
+const InstagramPage = () => {
+  const { language } = useLanguage();
+  const t = instagramTranslations[language] || instagramTranslations.en;
+
   return (
     <ToolPageTemplate
-      title="Instagram Integration"
-      description="Elevate your Instagram presence with AI-powered messaging and engagement tools designed for modern social commerce."
-      icon={<InstagramIcon className="w-8 h-8 text-emerald-400" />}
-      features={[
-        "Direct Message Automation",
-        "Story Interaction Management",
-        "Comment Response System",
-        "Visual Content Analysis",
-        "Engagement Tracking",
-        "Shopping Integration",
-        "Influencer Collaboration Tools",
-      ]}
-      benefits={[
-        "Increased Engagement Rates",
-        "Automated Response Management",
-        "Enhanced Social Commerce",
-        "Improved Customer Service",
-        "Real-time Analytics",
-        "Brand Consistency",
-        "Time and Resource Savings",
-      ]}
-      integrations={[
-        "Instagram Business API",
-        "Social Media Management Tools",
-        "E-commerce Platforms",
-        "Content Management Systems",
-        "Analytics Tools",
-        "CRM Systems",
-      ]}
-      metaTitle="Instagram Integration | NeuroGen Lab - Social Media Automation"
-      metaDescription="Transform your Instagram business presence with our AI-powered integration. Automate responses, manage engagement, and drive social commerce success."
+      title={t.title}
+      description={t.description}
+      icon={<Instagram className="w-8 h-8 text-pink-500" />}
+      features={t.features}
+      benefits={t.benefits}
+      integrations={t.integrations}
+      sectionTitles={t.sectionTitles}
+      metaTitle={t.metaTitle}
+      metaDescription={t.metaDescription}
+      isComingSoon={false}
+      imageComponent={
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden">
+              <Image
+                src="/assets/tools/instagram.jpg"
+                alt="Instagram Integration Interface"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      }
     />
   );
 };
 
-export default Instagram;
+export default InstagramPage;

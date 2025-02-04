@@ -1,11 +1,17 @@
 "use client";
 import { Check, Sparkles, Wrench, Boxes } from "lucide-react";
+import { useRouter } from "next/navigation";
 import GlowingButton from "./common/GlowingButton";
-import { redirect } from "next/navigation";
+import { pricingTranslations } from '../locales/translations';
+import { useLanguage } from '../context/LanguageContext';
 
 const Pricing = () => {
-  const handleContactSales = () => {
-    redirect("/contacts");
+  const router = useRouter();
+  const { language } = useLanguage();
+  const t = pricingTranslations[language];
+
+  const handleGetStarted = () => {
+    router.push('/contacts');
   };
 
   return (
@@ -15,12 +21,12 @@ const Pricing = () => {
         <div className="text-center mb-5">
           <div className="inline-block px-5 py-2 rounded-full bg-gray-900/50 backdrop-blur-sm mb-5">
             <span className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent font-semibold">
-              PRICING
+              {t.sectionTitle}
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">Choose Your AI Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">{t.title}</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Start with 500 free tokens to test our platform capabilities
+            {t.description}
           </p>
         </div>
 
@@ -33,35 +39,27 @@ const Pricing = () => {
               <div className="flex items-center justify-between mb-8">
                 <div>
                   <Wrench className="w-12 h-12 text-emerald-400 mb-4" />
-                  <h3 className="text-2xl font-bold text-white">Custom Development</h3>
-                  <p className="text-gray-400 mt-2">Tailored AI Solutions</p>
+                  <h3 className="text-2xl font-bold text-white">{t.customDev.title}</h3>
+                  <p className="text-gray-400 mt-2">{t.customDev.subtitle}</p>
                 </div>
                 <div className="text-right">
-                  <span className="text-gray-400">Starting from</span>
-                  <div className="text-2xl font-bold text-white mt-1">Custom Quote</div>
+                  <span className="text-gray-400">{t.customDev.startingFrom}</span>
+                  <div className="text-2xl font-bold text-white mt-1">{t.customDev.price}</div>
                 </div>
               </div>
 
               <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-emerald-400 mt-0.5 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">Custom AI model development</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-emerald-400 mt-0.5 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">Dedicated development team</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-emerald-400 mt-0.5 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">Unique business logic implementation</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-emerald-400 mt-0.5 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">Custom integrations & API development</span>
-                </li>
+                {t.customDev.features.map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <Check className="w-5 h-5 text-emerald-400 mt-0.5 mr-3 flex-shrink-0" />
+                    <span className="text-gray-300">{feature}</span>
+                  </li>
+                ))}
               </ul>
 
-              <GlowingButton onClick={handleContactSales}>Contact Sales</GlowingButton>
+              <GlowingButton onClick={handleGetStarted}>
+                {t.customDev.cta}
+              </GlowingButton>
             </div>
           </div>
 
@@ -72,35 +70,27 @@ const Pricing = () => {
               <div className="flex items-center justify-between mb-8">
                 <div>
                   <Boxes className="w-12 h-12 text-emerald-400 mb-4" />
-                  <h3 className="text-2xl font-bold text-white">Platform Access</h3>
-                  <p className="text-gray-400 mt-2">Full Suite of AI Tools</p>
+                  <h3 className="text-2xl font-bold text-white">{t.platform.title}</h3>
+                  <p className="text-gray-400 mt-2">{t.platform.subtitle}</p>
                 </div>
                 <div className="text-right">
-                  <span className="text-gray-400">Monthly</span>
-                  <div className="text-2xl font-bold text-white mt-1">€499</div>
+                  <span className="text-gray-400">{t.platform.period}</span>
+                  <div className="text-2xl font-bold text-white mt-1">{t.platform.price}</div>
                 </div>
               </div>
 
               <ul className="space-y-4 mb-8">
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-emerald-400 mt-0.5 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">Access to all platform features</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-emerald-400 mt-0.5 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">Unlimited AI generations</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-emerald-400 mt-0.5 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">All integrations included</span>
-                </li>
-                <li className="flex items-start">
-                  <Check className="w-5 h-5 text-emerald-400 mt-0.5 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">Priority support</span>
-                </li>
+                {t.platform.features.map((feature, index) => (
+                  <li key={index} className="flex items-start">
+                    <Check className="w-5 h-5 text-emerald-400 mt-0.5 mr-3 flex-shrink-0" />
+                    <span className="text-gray-300">{feature}</span>
+                  </li>
+                ))}
               </ul>
 
-              <GlowingButton to="/signup">Get Started</GlowingButton>
+              <GlowingButton onClick={handleGetStarted}>
+                {t.platform.cta}
+              </GlowingButton>
             </div>
           </div>
         </div>
@@ -111,11 +101,13 @@ const Pricing = () => {
             <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
             <div className="relative bg-gray-900/90 rounded-xl p-8 text-center">
               <Sparkles className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-3">Start Free Trial</h3>
+              <h3 className="text-2xl font-bold text-white mb-3">{t.trial.title}</h3>
               <p className="text-gray-400 mb-6">
-                Get 500 tokens to test our platform's capabilities with no commitment
+                {t.trial.description}
               </p>
-              <GlowingButton to="/signup">Try for Free</GlowingButton>
+              <GlowingButton onClick={handleGetStarted}>
+                {t.trial.cta}
+              </GlowingButton>
             </div>
           </div>
         </div>

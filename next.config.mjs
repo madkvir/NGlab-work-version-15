@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
-  distDir: "./dist", // Changes the build output directory to `./dist/`.
+  reactStrictMode: true,
+  webpack: (config, { isServer }) => {
+    config.module.rules.push({
+      test: /\.(html)$/,
+      use: { loader: "html-loader" },
+    });
+
+    return config;
+  },
 };
 
 export default nextConfig;
