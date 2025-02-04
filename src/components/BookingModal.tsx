@@ -81,7 +81,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
       comments: "",
       language: LANGUAGES[0],
       datetime: "",
-      "bot-field": ""
+      "bot-field": "",
     },
   });
   const { language } = useLanguage();
@@ -124,10 +124,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
       if (validateDateTime(start)) {
         setSelectedDate(start);
       } else {
-        alert(
-          t.invalidTimeSlot ||
-            "Please select a valid time slot between 9:00 and 18:00"
-        );
+        alert(t.invalidTimeSlot || "Please select a valid time slot between 9:00 and 18:00");
       }
     },
     [t]
@@ -142,9 +139,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
   const onSubmit = useCallback(
     async (data: BookingFormData) => {
       if (!selectedDate || !validateDateTime(selectedDate)) {
-        alert(
-          t.invalidDateTime || "Please select a valid date and time"
-        );
+        alert(t.invalidDateTime || "Please select a valid date and time");
         return;
       }
 
@@ -169,7 +164,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
           "bot-field": data["bot-field"] || "",
         } as const;
 
-        const response = await fetch("/", {
+        const response = await fetch("/forms.html", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode(formData),
@@ -183,10 +178,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
         handleClose();
       } catch (error) {
         console.error("Booking failed:", error);
-        alert(
-          t.bookingFailed ||
-            "Failed to submit booking request. Please try again."
-        );
+        alert(t.bookingFailed || "Failed to submit booking request. Please try again.");
       } finally {
         setIsSubmitting(false);
       }
@@ -251,11 +243,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                     {/* Honeypot-поле */}
                     <input type="hidden" {...register("bot-field")} />
                     {/* Если необходимо, можно передать выбранный часовой пояс */}
-                    <input
-                      type="hidden"
-                      name="selectedTimezone"
-                      value={selectedTimezone}
-                    />
+                    <input type="hidden" name="selectedTimezone" value={selectedTimezone} />
 
                     <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4">
                       <div className="order-1 lg:order-1 space-y-4">
@@ -263,9 +251,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                           <h2 className="text-base leading-6 font-semibold text-white mb-1.5">
                             {t.consultation}
                           </h2>
-                          <p className="text-sm leading-5 text-gray-300 mb-2">
-                            {t.discover}
-                          </p>
+                          <p className="text-sm leading-5 text-gray-300 mb-2">{t.discover}</p>
                           <p className="text-sm leading-5 text-gray-300 font-medium">
                             {t.chooseTime}
                           </p>

@@ -1,14 +1,14 @@
-'use client'
-import React, { useState } from 'react';
-import { CheckCircle } from 'lucide-react';
-import FormField from './FormField';
-import FormStatus from './FormStatus';
-import SubmitButton from './SubmitButton';
-import ServiceSelection from './ServiceSelection';
-import PhoneInput from './PhoneInput';
-import { countryCodes } from '../../data/countryCodes';
-import Link from 'next/link';
-import { useLanguage } from '../../context/LanguageContext';
+"use client";
+import React, { useState } from "react";
+import { CheckCircle } from "lucide-react";
+import FormField from "./FormField";
+import FormStatus from "./FormStatus";
+import SubmitButton from "./SubmitButton";
+import ServiceSelection from "./ServiceSelection";
+import PhoneInput from "./PhoneInput";
+import { countryCodes } from "../../data/countryCodes";
+import Link from "next/link";
+import { useLanguage } from "../../context/LanguageContext";
 
 declare global {
   interface Window {
@@ -28,8 +28,8 @@ const formTranslations = {
     privacyPolicy: "Privacy Policy",
     success: {
       title: "Message Sent Successfully!",
-      description: "Thank you for contacting us. We'll get back to you as soon as possible."
-    }
+      description: "Thank you for contacting us. We'll get back to you as soon as possible.",
+    },
   },
   // ... other translations
 };
@@ -37,42 +37,42 @@ const formTranslations = {
 const ContactForm = () => {
   const { language } = useLanguage();
   const t = formTranslations[language];
-  const [countryCode, setCountryCode] = useState('+49');
+  const [countryCode, setCountryCode] = useState("+49");
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formState, setFormState] = useState({
-    firstName: '',
-    companyName: '',
-    email: '',
-    phone: '',
-    message: '',
+    firstName: "",
+    companyName: "",
+    email: "",
+    phone: "",
+    message: "",
     consent: false,
-    'bot-field': '',
+    "bot-field": "",
     services: {
       aiChatBot: false,
       aiVoiceBot: false,
       customDevelopment: false,
       aiAvatar: false,
       aiAssistant: false,
-      counseling: false
-    }
+      counseling: false,
+    },
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
-    setFormState(prev => ({
+    setFormState((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
+      [name]: type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
     }));
   };
 
   const handleServiceChange = (service: string) => {
-    setFormState(prev => ({
+    setFormState((prev) => ({
       ...prev,
       services: {
         ...prev.services,
-        [service]: !prev.services[service as keyof typeof prev.services]
-      }
+        [service]: !prev.services[service as keyof typeof prev.services],
+      },
     }));
   };
 
@@ -80,7 +80,7 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (formState['bot-field']) {
+    if (formState["bot-field"]) {
       return;
     }
 
@@ -96,8 +96,8 @@ const ContactForm = () => {
     // Push form data to dataLayer
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
-      event: 'form_submission',
-      form_name: 'contact_form',
+      event: "form_submission",
+      form_name: "contact_form",
       form_data: {
         name: formState.firstName,
         company: formState.companyName,
@@ -107,50 +107,50 @@ const ContactForm = () => {
         selected_services: selectedServices,
         consent: formState.consent,
         submission_timestamp: new Date().toISOString(),
-        page_url: window.location.href
-      }
+        page_url: window.location.href,
+      },
     });
 
     const formData = new FormData();
-    formData.append('form-name', 'contact');
-    formData.append('firstName', formState.firstName);
-    formData.append('companyName', formState.companyName);
-    formData.append('email', formState.email);
-    formData.append('phone', `${countryCode} ${formState.phone}`);
-    formData.append('message', formState.message);
-    formData.append('consent', formState.consent.toString());
-    formData.append('selectedServices', selectedServices.join(', '));
+    formData.append("form-name", "contact");
+    formData.append("firstName", formState.firstName);
+    formData.append("companyName", formState.companyName);
+    formData.append("email", formState.email);
+    formData.append("phone", `${countryCode} ${formState.phone}`);
+    formData.append("message", formState.message);
+    formData.append("consent", formState.consent.toString());
+    formData.append("selectedServices", selectedServices.join(", "));
 
     try {
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
+      const response = await fetch("/forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
       });
 
       if (response.ok) {
         setFormState({
-          firstName: '',
-          companyName: '',
-          email: '',
-          phone: '',
-          message: '',
+          firstName: "",
+          companyName: "",
+          email: "",
+          phone: "",
+          message: "",
           consent: false,
-          'bot-field': '',
+          "bot-field": "",
           services: {
             aiChatBot: false,
             aiVoiceBot: false,
             customDevelopment: false,
             aiAvatar: false,
             aiAssistant: false,
-            counseling: false
-          }
+            counseling: false,
+          },
         });
         setShowSuccess(true);
         setTimeout(() => setShowSuccess(false), 5000);
       }
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error("Form submission error:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -165,9 +165,7 @@ const ContactForm = () => {
           </div>
           <div className="space-y-2">
             <h3 className="text-lg sm:text-xl font-semibold text-white">{t.success.title}</h3>
-            <p className="text-sm sm:text-base text-gray-400">
-              {t.success.description}
-            </p>
+            <p className="text-sm sm:text-base text-gray-400">{t.success.description}</p>
           </div>
         </div>
       </div>
@@ -175,16 +173,16 @@ const ContactForm = () => {
   }
 
   return (
-    <form 
-      onSubmit={handleSubmit} 
-      className="space-y-4 sm:space-y-6" 
-      data-netlify="true" 
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-4 sm:space-y-6"
+      data-netlify="true"
       name="contact"
       method="POST"
     >
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="bot-field" />
-      
+
       <FormStatus status="idle" error={null} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -222,13 +220,8 @@ const ContactForm = () => {
       />
 
       <div>
-        <label className="block text-sm font-medium text-gray-400 mb-2">
-          {t.interests}
-        </label>
-        <ServiceSelection
-          services={formState.services}
-          onChange={handleServiceChange}
-        />
+        <label className="block text-sm font-medium text-gray-400 mb-2">{t.interests}</label>
+        <ServiceSelection services={formState.services} onChange={handleServiceChange} />
       </div>
 
       <FormField
@@ -251,8 +244,11 @@ const ContactForm = () => {
           required
         />
         <label htmlFor="consent" className="text-xs sm:text-sm text-gray-400">
-          {t.consent}{' '}
-          <Link href="/privacy" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+          {t.consent}{" "}
+          <Link
+            href="/privacy"
+            className="text-emerald-400 hover:text-emerald-300 transition-colors"
+          >
             {t.privacyPolicy}
           </Link>
         </label>
