@@ -9,7 +9,8 @@ import { useClickOutside } from "./hooks/useClickOutside";
 import { useScrollLock } from "./hooks/useScrollLock";
 import { useRouter, usePathname } from "next/navigation";
 import { Link } from "../i18n/routing";
-import { translations } from "../locales/translations";
+// import { translations } from "../locales/translations";
+import { useTranslations } from "next-intl";
 import { useLanguage } from "../context/LanguageContext";
 // import dynamic from "next/dynamic";
 
@@ -103,7 +104,7 @@ const Navbar = () => {
   const router = useRouter();
   const location = usePathname();
   const { language, setLanguage } = useLanguage();
-  const t = translations[language];
+  const t = useTranslations("SharedLayout");
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const langMenuRef = useRef<HTMLDivElement>(null);
@@ -250,7 +251,7 @@ const Navbar = () => {
               <div className="relative group mx-6">
                 <div className="absolute -top-[6px] left-1/2 transform -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse before:content-[''] before:absolute before:inset-0 before:rounded-full before:bg-emerald-500/30 before:animate-ping"></div>
                 <button className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center gap-1 group">
-                  {t.solutions}
+                  {t("solutions")}
                   <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                 </button>
                 <SolutionsMenu language={language as "en" | "de" | "es" | "ru" | "ua"} />
@@ -258,7 +259,7 @@ const Navbar = () => {
 
               <div className="relative group mx-6">
                 <button className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center gap-1 group">
-                  {t.pages}
+                  {t("pages")}
                   <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                 </button>
 
@@ -267,26 +268,26 @@ const Navbar = () => {
                     href="/guide"
                     className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105"
                   >
-                    {t.links.guide}
+                    {t("guide")}
                   </Link>
                   <a
                     href="#faq"
                     onClick={(e) => handleNavClick(e, "faq")}
                     className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105"
                   >
-                    {t.links.faq}
+                    {t("faq")}
                   </a>
                   <Link
                     href="/blog"
                     className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105"
                   >
-                    {t.links.blog}
+                    {t("blog")}
                   </Link>
                   <Link
                     href="/about-us"
                     className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105"
                   >
-                    {t.links.aboutUs}
+                    {t("aboutUs")}
                   </Link>
                 </div>
               </div>
@@ -296,14 +297,14 @@ const Navbar = () => {
                 onClick={(e) => handleNavClick(e, "pricing")}
                 className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-105 mx-6"
               >
-                {t.links.pricing}
+                {t("pricing")}
               </Link>
 
               <Link
                 href="/contacts"
                 className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-105 mx-6"
               >
-                {t.links.contacts}
+                {t("contacts")}
               </Link>
             </div>
 
@@ -493,7 +494,7 @@ const Navbar = () => {
                            hover:bg-gray-800/50 transition-all duration-300
                            flex items-center justify-center relative
                            w-10 h-10"
-                aria-label={isMenuOpen ? t.close : t.menu}
+                aria-label={isMenuOpen ? t("close") : t("menu")}
               >
                 <div className="relative w-5 h-5 translate-y-[2px]">
                   <div
@@ -533,20 +534,20 @@ const Navbar = () => {
           <div className="px-4 py-6 space-y-6">
             {/* Solutions Menu Section */}
             <div className="border-b border-gray-700/50 pb-6">
-              <h3 className="text-gray-400 text-sm font-medium px-4 mb-4">{t.solutions}</h3>
+              <h3 className="text-gray-400 text-sm font-medium px-4 mb-4">{t("solutions")}</h3>
               <SolutionsMenu isMobile language={language as "en" | "de" | "es" | "ru" | "ua"} />
             </div>
 
             {/* Main Navigation Links */}
             <div className="space-y-4">
-              <h3 className="text-gray-400 text-sm font-medium px-4 mb-2">{t.pages}</h3>
+              <h3 className="text-gray-400 text-sm font-medium px-4 mb-2">{t("pages")}</h3>
               <div className="space-y-2">
                 <Link
                   href="/guide"
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
                 >
-                  <span>{t.links.guide}</span>
+                  <span>{t("guide")}</span>
                 </Link>
                 <a
                   href="#faq"
@@ -554,21 +555,21 @@ const Navbar = () => {
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
                 >
-                  <span>{t.links.faq}</span>
+                  <span>{t("faq")}</span>
                 </a>
                 <Link
                   href="/blog"
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
                 >
-                  <span>{t.links.blog}</span>
+                  <span>{t("blog")}</span>
                 </Link>
                 <Link
                   href="/about-us"
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
                 >
-                  <span>{t.links.aboutUs}</span>
+                  <span>{t("aboutUs")}</span>
                 </Link>
               </div>
             </div>
@@ -582,7 +583,7 @@ const Navbar = () => {
 
               {/* Contact Section */}
               <div className="px-4 space-y-4">
-                <h3 className="text-gray-400 text-sm font-medium">{t.contact}</h3>
+                <h3 className="text-gray-400 text-sm font-medium">{t("contact")}</h3>
                 <div className="space-y-3">
                   <a
                     href="tel:+49(0)3012345678"
