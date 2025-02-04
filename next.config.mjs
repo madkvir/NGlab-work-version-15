@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   reactStrictMode: true,
   webpack: (config, { isServer }) => {
@@ -9,10 +12,10 @@ const nextConfig = {
 
     return config;
   },
-  i18n: {
-    locales: ["en-US", "uk", "ru"],
-    defaultLocale: "en-US",
-  },
+  // i18n: {
+  //   locales: ["en-US", "uk", "ru", "de", "es"],
+  //   defaultLocale: "en-US",
+  // },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

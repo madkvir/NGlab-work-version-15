@@ -2,18 +2,18 @@
 
 import BookDemoBtn from "./BookDemoBtn";
 import React, { useState, useRef, useEffect, KeyboardEvent } from "react";
-import { Menu, X, ChevronDown, Phone, Mail, MessageCircle, Linkedin, MapPin } from "lucide-react";
+import { ChevronDown, Phone, Mail, MessageCircle, Linkedin, MapPin } from "lucide-react";
 import Logo from "./Logo";
 import SolutionsMenu from "./SolutionsMenu";
 import { useClickOutside } from "./hooks/useClickOutside";
 import { useScrollLock } from "./hooks/useScrollLock";
 import { useRouter, usePathname } from "next/navigation";
-import Link from "next/link";
+import { Link } from "../i18n/routing";
 import { translations } from "../locales/translations";
 import { useLanguage } from "../context/LanguageContext";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 
-type LanguageType = 'en' | 'de' | 'es' | 'ru' | 'ua';
+// type LanguageType = 'en' | 'de' | 'es' | 'ru' | 'ua';
 
 const buttonTranslations = {
   en: {
@@ -449,9 +449,10 @@ const Navbar = () => {
                     shadow-lg shadow-black/20
                     min-w-[180px] w-max
                     transition-all duration-300 transform origin-top-right
-                    ${isLangMenuOpen 
-                      ? 'opacity-100 visible scale-100' 
-                      : 'opacity-0 invisible scale-95'
+                    ${
+                      isLangMenuOpen
+                        ? "opacity-100 visible scale-100"
+                        : "opacity-0 invisible scale-95"
                     }
                     z-50
                   `}
@@ -468,7 +469,7 @@ const Navbar = () => {
                         w-full flex items-center gap-3 px-4 py-2
                         hover:bg-emerald-500/10 transition-colors duration-200
                         focus:outline-none focus:bg-emerald-500/10
-                        ${language === key ? 'text-emerald-500' : 'text-gray-400'}
+                        ${language === key ? "text-emerald-500" : "text-gray-400"}
                       `}
                     >
                       <img
@@ -495,21 +496,27 @@ const Navbar = () => {
                 aria-label={isMenuOpen ? t.close : t.menu}
               >
                 <div className="relative w-5 h-5 translate-y-[2px]">
-                  <div className={`
+                  <div
+                    className={`
                     absolute inset-0 transition-all duration-300
-                    ${isMenuOpen ? 'rotate-45 translate-y-2' : '-translate-y-1.5'}
+                    ${isMenuOpen ? "rotate-45 translate-y-2" : "-translate-y-1.5"}
                     border-t-[2px] border-current
-                  `}></div>
-                  <div className={`
+                  `}
+                  ></div>
+                  <div
+                    className={`
                     absolute inset-0 transition-all duration-300
-                    ${isMenuOpen ? 'opacity-0' : 'opacity-100'}
+                    ${isMenuOpen ? "opacity-0" : "opacity-100"}
                     border-t-[2px] border-current
-                  `}></div>
-                  <div className={`
+                  `}
+                  ></div>
+                  <div
+                    className={`
                     absolute inset-0 transition-all duration-300
-                    ${isMenuOpen ? '-rotate-45 translate-y-2' : 'translate-y-1.5'}
+                    ${isMenuOpen ? "-rotate-45 translate-y-2" : "translate-y-1.5"}
                     border-t-[2px] border-current
-                  `}></div>
+                  `}
+                  ></div>
                 </div>
               </button>
             </div>
@@ -526,17 +533,13 @@ const Navbar = () => {
           <div className="px-4 py-6 space-y-6">
             {/* Solutions Menu Section */}
             <div className="border-b border-gray-700/50 pb-6">
-              <h3 className="text-gray-400 text-sm font-medium px-4 mb-4">
-                {t.solutions}
-              </h3>
+              <h3 className="text-gray-400 text-sm font-medium px-4 mb-4">{t.solutions}</h3>
               <SolutionsMenu isMobile language={language as "en" | "de" | "es" | "ru" | "ua"} />
             </div>
 
             {/* Main Navigation Links */}
             <div className="space-y-4">
-              <h3 className="text-gray-400 text-sm font-medium px-4 mb-2">
-                {t.pages}
-              </h3>
+              <h3 className="text-gray-400 text-sm font-medium px-4 mb-2">{t.pages}</h3>
               <div className="space-y-2">
                 <Link
                   href="/guide"
@@ -579,9 +582,7 @@ const Navbar = () => {
 
               {/* Contact Section */}
               <div className="px-4 space-y-4">
-                <h3 className="text-gray-400 text-sm font-medium">
-                  {t.contact}
-                </h3>
+                <h3 className="text-gray-400 text-sm font-medium">{t.contact}</h3>
                 <div className="space-y-3">
                   <a
                     href="tel:+49(0)3012345678"
@@ -617,7 +618,10 @@ const Navbar = () => {
                   </a>
                   <div className="flex items-center gap-3 text-gray-400">
                     <MapPin className="w-5 h-5" />
-                    <span>Gartenweg 2<br />16515 Oranienburg, Germany</span>
+                    <span>
+                      Gartenweg 2<br />
+                      16515 Oranienburg, Germany
+                    </span>
                   </div>
                 </div>
               </div>

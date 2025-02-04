@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import React from "react";
 import { Scale } from "lucide-react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import Divider from "../../components/Divider";
-import ScrollToTop from "../../components/ScrollToTop";
-import BackToHome from "../../components/BackToHome";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import Divider from "../../../components/Divider";
+import ScrollToTop from "../../../components/ScrollToTop";
+import BackToHome from "../../../components/BackToHome";
 
 export const metadata: Metadata = {
   title: "Disclaimer - NeuroGen Lab",

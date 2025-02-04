@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { Home, AlertTriangle } from "lucide-react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import Link from "next/link";
 
 export default function Custom404() {
