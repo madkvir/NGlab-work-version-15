@@ -7,7 +7,7 @@ import Logo from "./Logo";
 import SolutionsMenu from "./SolutionsMenu";
 import { useClickOutside } from "./hooks/useClickOutside";
 import { useScrollLock } from "./hooks/useScrollLock";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useParams } from "next/navigation";
 import { Link } from "../i18n/routing";
 import { translations } from "../locales/translations";
 import { useLanguage } from "../context/LanguageContext";
@@ -102,8 +102,11 @@ const Navbar = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const router = useRouter();
   const location = usePathname();
-  const { language, setLanguage } = useLanguage();
-  const t = translations[language];
+  const { setLanguage } = useLanguage();
+
+  const { locale } = useParams();
+  const language = (locale as keyof typeof translations) ?? "en";
+  const t = translations[language ?? "en"];
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const langMenuRef = useRef<HTMLDivElement>(null);
