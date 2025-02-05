@@ -37,7 +37,6 @@ const formTranslations = {
 const ContactForm = () => {
   const language = getPageLangUnit(formTranslations);
   const t = formTranslations[language];
-  console.log("language", t);
   const [countryCode, setCountryCode] = useState("+49");
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
