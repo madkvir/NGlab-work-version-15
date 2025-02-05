@@ -1,12 +1,14 @@
+"use client";
 import React from "react";
 import { BarChart3 } from "lucide-react";
 import ToolPageTemplate from "../../../../components/ToolPageTemplate";
 import { salesforceTranslations } from "../../../../locales/translations";
 import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
+import getPageLangUnit from "../../../../utils/getPageLangUnit";
 
-const SalesforcePage = async ({ params }) => {
-  const language = await getServerPageLang(salesforceTranslations, params);
+const SalesforcePage = () => {
+  const language = getPageLangUnit(salesforceTranslations);
   const t = salesforceTranslations[language] || salesforceTranslations.en;
 
   // Добавляем значения по умолчанию

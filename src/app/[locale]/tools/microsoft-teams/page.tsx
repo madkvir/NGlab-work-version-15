@@ -1,12 +1,14 @@
+"use client";
 import React from "react";
 import { Users } from "lucide-react";
 import ToolPageTemplate from "../../../../components/ToolPageTemplate";
 import { teamsTranslations } from "../../../../locales/translations";
 import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
+import getPageLangUnit from "../../../../utils/getPageLangUnit";
 
-const TeamsPage = async ({ params }) => {
-  const language = await getServerPageLang(teamsTranslations, params);
+const TeamsPage = () => {
+  const language = getPageLangUnit(teamsTranslations);
   const t = teamsTranslations[language] || teamsTranslations.en;
 
   // Добавляем значения по умолчанию

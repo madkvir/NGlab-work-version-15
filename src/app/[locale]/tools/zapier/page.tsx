@@ -1,12 +1,13 @@
+"use client";
 import React from "react";
 import { Workflow } from "lucide-react";
 import ToolPageTemplate from "../../../../components/ToolPageTemplate";
 import { zapierTranslations } from "../../../../locales/translations";
 import Image from "next/image";
-import getServerPageLang from "../../../../utils/getServerPageLang";
+import getPageLangUnit from "../../../../utils/getPageLangUnit";
 
-const ZapierPage = async ({ params }) => {
-  const language = await getServerPageLang(zapierTranslations, params);
+const ZapierPage = () => {
+  const language = getPageLangUnit(zapierTranslations);
   const t = zapierTranslations[language] || zapierTranslations.en;
 
   // Добавляем значения по умолчанию
