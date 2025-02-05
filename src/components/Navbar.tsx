@@ -117,6 +117,19 @@ const Navbar = () => {
   const [value, setValue] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
+  const pathname = usePathname();
+  // const { locale } = useParams();
+
+  const changeLanguage = (newLocale: string) => {
+    if (newLocale === "ua") {
+      const newPath = `/uk${pathname.substring(3)}`; // Убираем старую локаль из пути
+      router.push(newPath);
+      return;
+    }
+    const newPath = `/${newLocale}${pathname.substring(3)}`; // Убираем старую локаль из пути
+    router.push(newPath);
+  };
+
   useClickOutside<HTMLDivElement | HTMLButtonElement>(
     [menuRef, buttonRef],
     () => setIsMenuOpen(false),
@@ -394,7 +407,7 @@ const Navbar = () => {
                       key={key}
                       role="menuitem"
                       onClick={() => {
-                        setLanguage(key as keyof typeof languageOptions);
+                        changeLanguage(key as keyof typeof languageOptions);
                         setIsLangMenuOpen(false);
                       }}
                       className={`
@@ -468,7 +481,8 @@ const Navbar = () => {
                       key={key}
                       role="menuitem"
                       onClick={() => {
-                        setLanguage(key as keyof typeof languageOptions);
+                        console.log("click");
+                        changeLanguage(key);
                         setIsLangMenuOpen(false);
                       }}
                       className={`
