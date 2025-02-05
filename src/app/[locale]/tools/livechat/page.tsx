@@ -1,12 +1,14 @@
+"use client";
 import React from "react";
 import { MessageCircle } from "lucide-react";
 import ToolPageTemplate from "../../../../components/ToolPageTemplate";
 import { livechatTranslations } from "../../../../locales/translations";
 import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
+import getPageLangUnit from "../../../../utils/getPageLangUnit";
 
-const LiveChatPage = async ({ params }) => {
-  const language = await getServerPageLang(livechatTranslations, params);
+const LiveChatPage = () => {
+  const language = getPageLangUnit(livechatTranslations);
   const t = livechatTranslations[language] || livechatTranslations.en;
 
   // Добавляем значения по умолчанию

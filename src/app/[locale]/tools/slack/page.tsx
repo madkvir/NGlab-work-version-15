@@ -1,12 +1,15 @@
+"use client";
+
 import React from "react";
 import { MessageSquare } from "lucide-react";
 import ToolPageTemplate from "../../../../components/ToolPageTemplate";
 import { slackTranslations } from "../../../../locales/translations";
 import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
+import getPageLangUnit from "../../../../utils/getPageLangUnit";
 
-const SlackPage = async ({ params }) => {
-  const language = await getServerPageLang(slackTranslations, params);
+const SlackPage = () => {
+  const language = getPageLangUnit(slackTranslations);
   const t = slackTranslations[language] || slackTranslations.en;
 
   // Добавляем значения по умолчанию
