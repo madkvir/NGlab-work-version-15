@@ -1,12 +1,12 @@
 import { Metadata } from "next";
 import React from "react";
 import { Scale } from "lucide-react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import Divider from "../../components/Divider";
-import ScrollToTop from "../../components/ScrollToTop";
-import BackToHome from "../../components/BackToHome";
-import CookiePolicyList from "../../components/CookiePolicyList";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import Divider from "../../../components/Divider";
+import ScrollToTop from "../../../components/ScrollToTop";
+import BackToHome from "../../../components/BackToHome";
+import CookiePolicyList from "../../../components/CookiePolicyList";
 
 export const metadata: Metadata = {
   title: "Cookie Policy - NeuroGen Lab",

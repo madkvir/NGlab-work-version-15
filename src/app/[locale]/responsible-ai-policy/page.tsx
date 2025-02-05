@@ -1,12 +1,12 @@
 import { Metadata } from "next";
 import React from "react";
 import { Scale, Shield, CreditCard, Brain, Gavel, PhoneCall, AlertTriangle } from "lucide-react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import Divider from "../../components/Divider";
-import ScrollToTop from "../../components/ScrollToTop";
-import BackToHome from "../../components/BackToHome";
-import Accordion from "../../components/Accordion";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import Divider from "../../../components/Divider";
+import ScrollToTop from "../../../components/ScrollToTop";
+import BackToHome from "../../../components/BackToHome";
+import Accordion from "../../../components/Accordion";
 
 export const metadata: Metadata = {
   title: "Responsible AI Policy - NeuroGen Lab | Ethical AI Guidelines",

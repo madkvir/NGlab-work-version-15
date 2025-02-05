@@ -1,14 +1,12 @@
-'use client';
-
 import React from "react";
 import { MessageSquare } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { useLanguage } from "../../../context/LanguageContext";
-import { intercomTranslations } from "../../../locales/translations";
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { intercomTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
 
-const IntercomPage = () => {
-  const { language } = useLanguage();
+const IntercomPage = async ({ params }) => {
+  const language = await getServerPageLang(intercomTranslations, params);
   const t = intercomTranslations[language] || intercomTranslations.en;
 
   return (

@@ -1,14 +1,12 @@
-'use client';
-
 import React from "react";
 import { Table } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { useLanguage } from "../../../context/LanguageContext";
-import { tablesTranslations } from "../../../locales/translations";
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { tablesTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
 
-const TablesPage = () => {
-  const { language } = useLanguage();
+const TablesPage = async ({ params }) => {
+  const language = await getServerPageLang(tablesTranslations, params);
   const t = tablesTranslations[language] || tablesTranslations.en;
 
   return (

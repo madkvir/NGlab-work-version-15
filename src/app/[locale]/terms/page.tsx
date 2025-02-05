@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Accordion from "../../components/Accordion";
+import Accordion from "../../../components/Accordion";
 import React from "react";
 import {
   Scale,
@@ -30,11 +30,11 @@ import {
   MoreHorizontal,
   PhoneCall,
 } from "lucide-react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import Divider from "../../components/Divider";
-import ScrollToTop from "../../components/ScrollToTop";
-import BackToHome from "../../components/BackToHome";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import Divider from "../../../components/Divider";
+import ScrollToTop from "../../../components/ScrollToTop";
+import BackToHome from "../../../components/BackToHome";
 
 export const metadata: Metadata = {
   title: "Terms of Service - NeuroGen Lab | Legal Agreement",

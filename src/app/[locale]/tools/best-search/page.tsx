@@ -1,14 +1,12 @@
-'use client';
-
 import React from "react";
 import { Search } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { useLanguage } from '../../../context/LanguageContext';
-import { bestSearchTranslations } from '../../../locales/translations';
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { bestSearchTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
 
-const BestSearch = () => {
-  const { language } = useLanguage();
+const BestSearch = async ({ params }) => {
+  const language = await getServerPageLang(bestSearchTranslations, params);
   const t = bestSearchTranslations[language] || bestSearchTranslations.en;
 
   return (

@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import ScrollToTop from "../../components/ScrollToTop";
-import ContactContent from "../../components/contact/ContactContent";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import ScrollToTop from "../../../components/ScrollToTop";
+import ContactContent from "../../../components/contact/ContactContent";
 
 const Contacts = () => {
   return (

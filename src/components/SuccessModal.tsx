@@ -1,8 +1,8 @@
-import React from 'react';
-import { Dialog, Transition } from '@headlessui/react';
-import { CheckCircle2, X } from 'lucide-react';
-import { modalTranslations } from '../locales/modalTranslations';
-import { useLanguage } from '../context/LanguageContext';
+import React from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { CheckCircle2, X } from "lucide-react";
+import { modalTranslations } from "../locales/modalTranslations";
+import getPageLangUnit from "../utils/getPageLangUnit";
 
 interface SuccessModalProps {
   isOpen: boolean;
@@ -11,7 +11,7 @@ interface SuccessModalProps {
 }
 
 export function SuccessModal({ isOpen, onClose, email }: SuccessModalProps) {
-  const { language } = useLanguage();
+  const language = getPageLangUnit(modalTranslations);
   const t = modalTranslations[language];
 
   return (
@@ -53,19 +53,18 @@ export function SuccessModal({ isOpen, onClose, email }: SuccessModalProps) {
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#3DFEA3]/10 mb-4">
                     <CheckCircle2 className="h-8 w-8 text-[#3DFEA3]" />
                   </div>
-                  
+
                   <Dialog.Title className="text-xl font-semibold text-white mb-2">
                     {t.bookingConfirmed}
                   </Dialog.Title>
-                  
+
                   <div className="text-gray-300 space-y-2">
                     <p>{t.thankYou}</p>
                     <p>
-                      {t.emailConfirmation} <span className="text-[#3DFEA3] font-medium">{email}</span>
+                      {t.emailConfirmation}{" "}
+                      <span className="text-[#3DFEA3] font-medium">{email}</span>
                     </p>
-                    <p className="text-sm">
-                      {t.checkInbox}
-                    </p>
+                    <p className="text-sm">{t.checkInbox}</p>
                   </div>
 
                   <button

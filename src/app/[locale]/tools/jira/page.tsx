@@ -1,14 +1,12 @@
-'use client';
-
 import React from "react";
 import { Trello } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { useLanguage } from "../../../context/LanguageContext";
-import { jiraTranslations } from "../../../locales/translations";
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { jiraTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
 
-const JiraPage = () => {
-  const { language } = useLanguage();
+const JiraPage = async ({ params }) => {
+  const language = await getServerPageLang(jiraTranslations, params);
   const t = jiraTranslations[language] || jiraTranslations.en;
 
   return (

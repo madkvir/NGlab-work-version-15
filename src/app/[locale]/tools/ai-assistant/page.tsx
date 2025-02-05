@@ -1,14 +1,13 @@
-'use client';
-
 import React from "react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
 import { Brain } from "lucide-react";
-import { useLanguage } from '../../../context/LanguageContext';
-import { aiAssistantTranslations } from '../../../locales/translations';
-import Image from 'next/image';
+import { aiAssistantTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
+import { Params } from "next/dist/server/request/params";
 
-const AIAssistant = () => {
-  const { language } = useLanguage();
+const AIAssistant = async ({ params }: Params) => {
+  const language = await getServerPageLang(aiAssistantTranslations, params);
   const t = aiAssistantTranslations[language];
 
   return (

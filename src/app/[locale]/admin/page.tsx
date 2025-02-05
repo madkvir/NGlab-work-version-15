@@ -2,10 +2,10 @@
 import React from "react";
 import { useState } from "react";
 import { Lock } from "lucide-react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import AdminLogin from "../../components/admin/AdminLogin";
-import AdminDashboard from "../../components/admin/AdminDashboard";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import AdminLogin from "../../../components/admin/AdminLogin";
+import AdminDashboard from "../../../components/admin/AdminDashboard";
 
 const Admin = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

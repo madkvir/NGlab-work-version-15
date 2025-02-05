@@ -1,5 +1,4 @@
 import { ReactNode, Suspense } from "react";
-import Head from "next/head";
 import "./globals.css";
 import "../../styles/index.css";
 import "../../styles/animations.css";
@@ -162,8 +161,8 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children, params }: { children: ReactNode; params }) {
-  // const cookieStore = await cookies();
-  // const initialLanguage = cookieStore.get("NEXT_LOCALE")?.value || "en";
+  const cookieStore = await cookies();
+  const initialLanguage = cookieStore.get("NEXT_LOCALE")?.value || "en";
   const { locale } = await params;
   if (!routing.locales.includes(locale as any)) {
     notFound();
@@ -225,8 +224,7 @@ export default async function RootLayout({ children, params }: { children: React
                 <CookieConsent />
                 <ChatWidget />
               </Suspense>
-            </NextIntlClientProvider>
-            {/* </LanguageProvider> */}
+              {/* </NextIntlClientProvider> */}
             </LanguageProvider>
           </BlogProvider>
         </div>

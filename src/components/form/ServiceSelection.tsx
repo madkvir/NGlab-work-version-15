@@ -1,7 +1,6 @@
-"use client";
 import React from 'react';
 import { MessageSquare, Mic, Code2, UserCircle2, Bot, HeartHandshake, HelpCircle } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
+import getPageLangUnit from '../../utils/getPageLangUnit';
 
 interface ServiceSelectionProps {
   services: {
@@ -189,7 +188,7 @@ const serviceTranslations = {
 };
 
 const ServiceSelection: React.FC<ServiceSelectionProps> = ({ services, onChange }) => {
-  const { language } = useLanguage();
+  const language = getPageLangUnit(serviceTranslations);
   const t = serviceTranslations[language];
 
   const serviceOptions = [

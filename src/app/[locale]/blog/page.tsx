@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import React from "react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import ScrollToTop from "../../components/ScrollToTop";
-import BackToHome from "../../components/BackToHome";
-import BlogContent from "../../components/BlogContent";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import ScrollToTop from "../../../components/ScrollToTop";
+import BackToHome from "../../../components/BackToHome";
+import BlogContent from "../../../components/BlogContent";
 
 export const metadata: Metadata = {
   title: "Blog - Latest Insights on AI Technology",

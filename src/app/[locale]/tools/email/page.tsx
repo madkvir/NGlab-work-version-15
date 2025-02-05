@@ -1,14 +1,13 @@
-'use client';
-
 import React from "react";
 import { Mail } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { useLanguage } from "../../../context/LanguageContext";
-import { emailTranslations } from "../../../locales/translations";
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { emailTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getPageLangUnit from "../../../../utils/getPageLangUnit";
+import getServerPageLang from "../../../../utils/getServerPageLang";
 
-const Email = () => {
-  const { language } = useLanguage();
+const Email = async ({ params }) => {
+  const language = await getServerPageLang(emailTranslations, params);
   const t = emailTranslations[language] || emailTranslations.en;
 
   return (

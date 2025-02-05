@@ -7,8 +7,8 @@ import SubmitButton from "./SubmitButton";
 import ServiceSelection from "./ServiceSelection";
 import PhoneInput from "./PhoneInput";
 import { countryCodes } from "../../data/countryCodes";
-import Link from "next/link";
-import { useLanguage } from "../../context/LanguageContext";
+import getPageLangUnit from "../../utils/getPageLangUnit";
+import { Link } from "../../i18n/routing";
 
 declare global {
   interface Window {
@@ -35,8 +35,9 @@ const formTranslations = {
 };
 
 const ContactForm = () => {
-  const { language } = useLanguage();
+  const language = getPageLangUnit(formTranslations);
   const t = formTranslations[language];
+  console.log("language", t);
   const [countryCode, setCountryCode] = useState("+49");
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);

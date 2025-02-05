@@ -1,14 +1,12 @@
-'use client';
-
 import React from "react";
 import { MessageSquare } from "lucide-react";
-import ToolPageTemplate from"../../../components/ToolPageTemplate";
-import { useLanguage } from '../../../context/LanguageContext';
-import { discordTranslations } from '../../../locales/translations';
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { discordTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
 
-const Discord = () => {
-  const { language } = useLanguage();
+const Discord = async ({ params }) => {
+  const language = await getServerPageLang(discordTranslations, params);
   const t = discordTranslations[language] || discordTranslations.en;
 
   return (

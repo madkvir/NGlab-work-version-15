@@ -23,9 +23,9 @@ import { LANGUAGES, SUBJECTS, POSITIONS } from "../config/constants";
 import { LanguageSelect } from "./LanguageSelect";
 import { SuccessModal } from "./SuccessModal";
 import { modalTranslations } from "../locales/modalTranslations";
-import { useLanguage } from "../context/LanguageContext";
 import { Spinner } from "./Spinner";
 import { BookingFormData } from "../types/booking";
+import getPageLangUnit from "../utils/getPageLangUnit";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -84,7 +84,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
       "bot-field": "",
     },
   });
-  const { language } = useLanguage();
+  const language = getPageLangUnit(modalTranslations);
   const t = modalTranslations[language];
 
   const selectedTimezone = watch("timezone", defaultTimezone);

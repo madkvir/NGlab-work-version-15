@@ -1,10 +1,10 @@
 "use client";
 
 import { translations } from "../locales/translations";
-import { useLanguage } from "../context/LanguageContext";
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { useParams } from "next/navigation";
+import getPageLangUnit from "../utils/getPageLangUnit";
 const BookingModal = dynamic(() => import("./BookingModal"));
 
 interface BookDemoBtnProps {
@@ -13,13 +13,7 @@ interface BookDemoBtnProps {
 
 const BookDemoBtn: React.FC<BookDemoBtnProps> = ({ isMobile }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { locale } = useParams();
-  let language: string;
-  if (locale === "uk") {
-    language = "ua";
-  } else {
-    language = (locale as keyof typeof translations) ?? "en";
-  }
+  const language = getPageLangUnit(translations);
   const t = translations[language];
   return (
     <>

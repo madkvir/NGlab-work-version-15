@@ -1,17 +1,10 @@
 import Divider from "./Divider";
 import FAQAccordion from "./FAQAccordion";
 import { faqTranslations } from "../locales/translations";
-import { useLanguage } from "../context/LanguageContext";
-import { useParams } from "next/navigation";
+import getPageLangUnit from "../utils/getPageLangUnit";
 
 const FAQ = () => {
-  const { locale } = useParams();
-  let language: string;
-  if (locale === "uk") {
-    language = "ua";
-  } else {
-    language = (locale as keyof typeof faqTranslations) ?? "en";
-  }
+  const language = getPageLangUnit(faqTranslations);
   const t = faqTranslations[language];
 
   return (

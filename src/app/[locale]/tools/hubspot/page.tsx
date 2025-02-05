@@ -1,14 +1,12 @@
-'use client';
-
 import React from "react";
 import { Database } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { useLanguage } from "../../../context/LanguageContext";
-import { hubspotTranslations } from "../../../locales/translations";
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { hubspotTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
 
-const Hubspot = () => {
-  const { language } = useLanguage();
+const Hubspot = async ({ params }) => {
+  const language = await getServerPageLang(hubspotTranslations, params);
   const t = hubspotTranslations[language] || hubspotTranslations.en;
 
   return (

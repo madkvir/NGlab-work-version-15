@@ -1,14 +1,12 @@
-'use client';
-
 import React from "react";
 import { MessageCircle } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { useLanguage } from "../../../context/LanguageContext";
-import { messengerTranslations } from "../../../locales/translations";
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { messengerTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
 
-const FacebookMessenger = () => {
-  const { language } = useLanguage();
+const FacebookMessenger = async ({ params }) => {
+  const language = await getServerPageLang(messengerTranslations, params);
   const t = messengerTranslations[language] || messengerTranslations.en;
 
   return (

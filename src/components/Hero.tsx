@@ -5,8 +5,9 @@ import AdvantageCards from "./AdvantageCards";
 import Particles from "./Particles";
 import Divider from "./Divider";
 import { heroTranslations } from "../locales/translations";
-import { useParams, useRouter } from "next/navigation";
 import DemoModal from "./DemoModal";
+import getPageLangUnit from "../utils/getPageLangUnit";
+import { useRouter } from "../i18n/routing";
 
 interface HeroProps {
   language: "en" | "de" | "es" | "ru" | "ua";
@@ -16,14 +17,8 @@ const Hero = () => {
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { locale } = useParams();
 
-  let language: string;
-  if (locale === "uk") {
-    language = "ua";
-  } else {
-    language = (locale as keyof typeof heroTranslations) ?? "en";
-  }
+  const language = getPageLangUnit(heroTranslations);
 
   const t = heroTranslations[language];
 
@@ -123,7 +118,7 @@ const Hero = () => {
 
             {/* Advantage Cards */}
             <div className="px-4">
-              <AdvantageCards language={language} />
+              <AdvantageCards />
             </div>
 
             <div className="mt-12 w-full">
@@ -136,7 +131,7 @@ const Hero = () => {
       <DemoModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-        language={language}
+
         // videoUrl="https://www.youtube.com/watch?v=HK6y8DAPN_0" // Добавьте позже реальный ID видео
       />
     </>

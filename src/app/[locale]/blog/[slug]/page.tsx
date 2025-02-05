@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { Calendar, User, ArrowLeft } from "lucide-react";
-import Navbar from "../../../components/Navbar";
-import Footer from "../../../components/Footer";
-import ScrollToTop from "../../../components/ScrollToTop";
-import { useBlog } from "../../../context/BlogContext";
+import Navbar from "../../../../components/Navbar";
+import Footer from "../../../../components/Footer";
+import ScrollToTop from "../../../../components/ScrollToTop";
+import { useBlog } from "../../../../context/BlogContext";
 import Link from "next/link";
 import { redirect, useParams } from "next/navigation";
 

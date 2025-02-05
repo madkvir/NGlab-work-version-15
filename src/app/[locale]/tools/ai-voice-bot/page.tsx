@@ -1,14 +1,13 @@
-'use client';
-
 import React from "react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
 import { Mic } from "lucide-react";
-import { useLanguage } from '../../../context/LanguageContext';
-import { aiVoiceBotTranslations } from '../../../locales/translations';
-import Image from 'next/image';
 
-const AIVoiceBot = () => {
-  const { language } = useLanguage();
+import { aiVoiceBotTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
+
+const AIVoiceBot = async ({ params }) => {
+  const language = await getServerPageLang(aiVoiceBotTranslations, params);
   const t = aiVoiceBotTranslations[language];
 
   return (

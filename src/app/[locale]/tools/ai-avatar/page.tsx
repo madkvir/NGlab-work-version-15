@@ -1,15 +1,14 @@
-'use client';
-
 import React from "react";
-import type { FC } from 'react';
+import type { FC } from "react";
 import { ImageIcon } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { useLanguage } from "../../../context/LanguageContext";
-import { aiAvatarTranslations } from "../../../locales/translations";
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { aiAvatarTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
+import { Params } from "next/dist/server/request/params";
 
-const AiAvatar: FC = () => {
-  const { language } = useLanguage();
+const AiAvatar: FC = async ({ params }: Params) => {
+  const language = await getServerPageLang(aiAvatarTranslations, params);
   const t = aiAvatarTranslations[language];
 
   return (

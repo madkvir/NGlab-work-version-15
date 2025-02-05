@@ -2,13 +2,13 @@
 import React from "react";
 import { MapPin, Phone, Mail, Clock, MessageSquare } from "lucide-react";
 import { contactTranslations } from "../../locales/translations";
-import { useLanguage } from "../../context/LanguageContext";
 import ContactForm from "../form/ContactForm";
 import BackToHome from "../BackToHome";
 import Divider from "../Divider";
+import getPageLangUnit from "../../utils/getPageLangUnit";
 
 const ContactContent = () => {
-  const { language } = useLanguage();
+  const language = getPageLangUnit(contactTranslations);
   const t = contactTranslations[language];
 
   const contactInfo = [
@@ -52,9 +52,7 @@ const ContactContent = () => {
         <div className="text-center mb-12">
           <MessageSquare className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
           <h1 className="text-4xl font-bold mb-4">{t.title}</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            {t.subtitle}
-          </p>
+          <p className="text-gray-400 max-w-2xl mx-auto">{t.subtitle}</p>
         </div>
 
         <Divider />
@@ -88,9 +86,7 @@ const ContactContent = () => {
 
             <div className="bg-gray-900/50 rounded-xl p-6 mt-8">
               <h3 className="text-lg font-semibold mb-4">{t.aboutUs.title}</h3>
-              <p className="text-gray-400">
-                {t.aboutUs.content}
-              </p>
+              <p className="text-gray-400">{t.aboutUs.content}</p>
             </div>
           </div>
         </div>
@@ -99,4 +95,4 @@ const ContactContent = () => {
   );
 };
 
-export default ContactContent; 
+export default ContactContent;

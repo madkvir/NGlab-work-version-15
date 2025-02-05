@@ -1,10 +1,7 @@
-'use client';
-
 import React from "react";
 import { ShieldCheck } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import TopReasons from "../../../components/TopReasons";
-import { useLanguage } from '../../../context/LanguageContext';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import TopReasons from "../../../../components/TopReasons";
 
 const AISecurity = () => {
   const reasonList = [
@@ -12,8 +9,8 @@ const AISecurity = () => {
       title: "1. Advanced Threat Detection",
       content: (
         <p className="text-gray-300 mb-4">
-          Our AI security system continuously monitors and identifies potential threats in real-time,
-          providing immediate alerts and responses to security incidents.
+          Our AI security system continuously monitors and identifies potential threats in
+          real-time, providing immediate alerts and responses to security incidents.
         </p>
       ),
     },
@@ -67,10 +64,8 @@ const AISecurity = () => {
         evolving security challenges.
       </p>
 
-      <h2 className="text-3xl font-bold text-white mt-12 mb-6">
-        Why Choose AI Security?
-      </h2>
-      
+      <h2 className="text-3xl font-bold text-white mt-12 mb-6">Why Choose AI Security?</h2>
+
       <TopReasons reasonList={reasonList} />
 
       <div className="mt-12 pt-8">
@@ -95,7 +90,7 @@ const AISecurity = () => {
         "Network Protection",
         "Data Encryption",
         "Access Control",
-        "Security Monitoring"
+        "Security Monitoring",
       ]}
       benefits={[
         "Enhanced Security",
@@ -104,7 +99,7 @@ const AISecurity = () => {
         "Compliance Management",
         "Cost Efficiency",
         "24/7 Monitoring",
-        "Quick Response"
+        "Quick Response",
       ]}
       integrations={[
         "Firewall Systems",
@@ -112,12 +107,12 @@ const AISecurity = () => {
         "Cloud Services",
         "VPN Solutions",
         "Authentication Systems",
-        "Monitoring Tools"
+        "Monitoring Tools",
       ]}
       sectionTitles={{
         features: "Features",
         benefits: "Benefits",
-        integrations: "Integrations"
+        integrations: "Integrations",
       }}
       metaTitle="AI Security | NeuroGen Lab - Advanced Protection Solutions"
       metaDescription="Secure your business with AI-powered protection. Detect and prevent threats in real-time with our advanced security solutions."
@@ -126,4 +121,4 @@ const AISecurity = () => {
   );
 };
 
-export default AISecurity; 
+export default AISecurity;

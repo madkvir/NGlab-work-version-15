@@ -2,86 +2,106 @@
 
 import { Users, Award, Globe, Building, ChevronLeft, ChevronRight, Linkedin } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import Navbar from "../../components/Navbar";
-import BackToHome from "../../components/BackToHome";
-import Divider from "../../components/Divider";
-import ScrollToTop from "../../components/ScrollToTop";
-import Footer from "../../components/Footer";
+import Navbar from "../../../components/Navbar";
+import BackToHome from "../../../components/BackToHome";
+import Divider from "../../../components/Divider";
+import ScrollToTop from "../../../components/ScrollToTop";
+import Footer from "../../../components/Footer";
 import Image from "next/image";
-import { aboutTranslations } from "../../locales/aboutTranslations";
-import { useLanguage } from "../../context/LanguageContext";
+import { aboutTranslations } from "../../../locales/aboutTranslations";
+import getPageLangUnit from "../../../utils/getPageLangUnit";
+import { heroTranslations } from "../../../locales/translations";
+import { useParams } from "next/navigation";
 
 const testimonials = [
   {
     quote: "Reduced query processing time by 80%",
-    problem: "Long response times and operator overload were slowing down customer support and reducing client satisfaction",
-    solution: "Implementation of an AI Agent to automate routine tasks and provide 24/7 customer support",
-    result: "The work of managers has been optimized by delegating typical inquiries to the knowledge base, freeing up their time for handling complex requests.",
+    problem:
+      "Long response times and operator overload were slowing down customer support and reducing client satisfaction",
+    solution:
+      "Implementation of an AI Agent to automate routine tasks and provide 24/7 customer support",
+    result:
+      "The work of managers has been optimized by delegating typical inquiries to the knowledge base, freeing up their time for handling complex requests.",
     // author: "Мария Иванова",
     position: "Head of Customer Service",
     company: "Edugames Rozumniki",
     industry: "Interactive Education",
-    logo: "/assets/companies/rozumniki.svg"
+    logo: "/assets/companies/rozumniki.svg",
   },
   {
     quote: "Product search acceleration by 50% and a 45% reduction in support workload",
-    problem: "Customers struggled to navigate the website's product range, and the support team couldn't handle the increasing volume of inquiries",
-    solution: "Implementation of an AI-powered chatbot with smart catalog search and automated consultations",
-    result: "Within 2 months, 80% of inquiries were handled by the AI agent, and customer product search time was reduced threefold",
+    problem:
+      "Customers struggled to navigate the website's product range, and the support team couldn't handle the increasing volume of inquiries",
+    solution:
+      "Implementation of an AI-powered chatbot with smart catalog search and automated consultations",
+    result:
+      "Within 2 months, 80% of inquiries were handled by the AI agent, and customer product search time was reduced threefold",
     // author: "Александр Петров",
     position: "Head of Sales",
     company: "Logistic Forklift",
     industry: "Sale and rental of special equipment",
-    logo: "/assets/companies/pogruzchik.svg"
+    logo: "/assets/companies/pogruzchik.svg",
   },
   {
     quote: "Increase in the average ticket by 30% and improvement in customer loyalty",
-    problem: "Difficulties in accurately matching services to customer needs and a high workload on administrators",
-    solution: "Implementation of an AI-powered chatbot that analyzes customer preferences, recommends services, announces prices and discounts, and automatically manages appointments",
-    result: "A 50% increase in repeat visits and a 70% reduction in booking processing time within the first four months",
+    problem:
+      "Difficulties in accurately matching services to customer needs and a high workload on administrators",
+    solution:
+      "Implementation of an AI-powered chatbot that analyzes customer preferences, recommends services, announces prices and discounts, and automatically manages appointments",
+    result:
+      "A 50% increase in repeat visits and a 70% reduction in booking processing time within the first four months",
     // author: "Дмитрий Сидоров",
     position: "Founder",
     company: "Epil Care",
     industry: "Beauty and Health",
-    logo: "/assets/companies/epil.svg"
+    logo: "/assets/companies/epil.svg",
   },
   {
     quote: "Doubling Lead-to-Sale conversion rates through automation",
-    problem: "Low website visitor conversion rates and significant workload on managers due to handling routine inquiries",
-    solution: "The Inbound Sales Agent chatbot operates 24/7, engages with website visitors, answers questions about available vehicles, financial and legal options, and schedules test drives. Integration with the CRM enabled automated lead transfer to the sales team",
-    result: "Conversion rates increased from 7% to 14-21% within the first 6 months, reduced staff workload, and improved customer satisfaction",
+    problem:
+      "Low website visitor conversion rates and significant workload on managers due to handling routine inquiries",
+    solution:
+      "The Inbound Sales Agent chatbot operates 24/7, engages with website visitors, answers questions about available vehicles, financial and legal options, and schedules test drives. Integration with the CRM enabled automated lead transfer to the sales team",
+    result:
+      "Conversion rates increased from 7% to 14-21% within the first 6 months, reduced staff workload, and improved customer satisfaction",
     // author: "Елена Смирнова",
     position: "Sales Manager",
     company: "Ken Shaw Lexus",
     industry: "Automotive Sales",
-    logo: "/assets/companies/lexus.svg"
+    logo: "/assets/companies/lexus.svg",
   },
   {
     quote: "Reducing request processing time by 70% through automation",
-    problem: "Long response times for customer inquiries about service and parts, high costs of manual request handling, and lack of 24/7 support",
-    solution: "Deployment of the Inbound Service & Parts Agent — an AI chatbot that handles service bookings, provides parts information, and calculates costs, all while integrating seamlessly with the CRM",
-    result: "Overall request processing time decreased by 70%, and customer satisfaction increased by 40%. The solution reduced staff workload and improved their efficiency",
+    problem:
+      "Long response times for customer inquiries about service and parts, high costs of manual request handling, and lack of 24/7 support",
+    solution:
+      "Deployment of the Inbound Service & Parts Agent — an AI chatbot that handles service bookings, provides parts information, and calculates costs, all while integrating seamlessly with the CRM",
+    result:
+      "Overall request processing time decreased by 70%, and customer satisfaction increased by 40%. The solution reduced staff workload and improved their efficiency",
     // author: "Игорь Васильев",
     position: "Sales Manager",
     company: " Gorrud's Auto Group.",
     industry: "Automotive Sales",
-    logo: "/assets/companies/auto_group.svg"
+    logo: "/assets/companies/auto_group.svg",
   },
   {
     quote: "Enhancing customer engagement efficiency by 50% with an all-in-one solution",
-    problem: "Low lead conversion rates, missed opportunities due to the lack of a unified customer management tool, and high workload for sales and service staff",
-    solution: "The comprehensive Auto Bundle solution, including lead management, automated customer communication via chatbots, multi-channel outreach (WhatsApp, SMS, email), CRM integration, and personalized recommendations based on data analysis",
-    result: "Lead-to-sale conversion rates increased by 30%, missed inquiries dropped to zero, and team efficiency improved thanks to the automation of routine tasks",
+    problem:
+      "Low lead conversion rates, missed opportunities due to the lack of a unified customer management tool, and high workload for sales and service staff",
+    solution:
+      "The comprehensive Auto Bundle solution, including lead management, automated customer communication via chatbots, multi-channel outreach (WhatsApp, SMS, email), CRM integration, and personalized recommendations based on data analysis",
+    result:
+      "Lead-to-sale conversion rates increased by 30%, missed inquiries dropped to zero, and team efficiency improved thanks to the automation of routine tasks",
     // author: "Анна Козлова",
     position: "CEO",
     company: "Walkerton Toyota",
     industry: "Automotive Sales",
-    logo: "/assets/companies/toyota.svg"
-  }
+    logo: "/assets/companies/toyota.svg",
+  },
 ];
 
 const TestimonialsSection = () => {
-  const { language } = useLanguage();
+  const language = getPageLangUnit(heroTranslations);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
@@ -126,8 +146,8 @@ const TestimonialsSection = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const getSlideWidth = () => {
@@ -177,14 +197,14 @@ const TestimonialsSection = () => {
       </h2>
       <div className="relative md:container md:mx-auto">
         <div className="md:max-w-[90%] md:mx-auto w-full relative">
-          <button 
+          <button
             onClick={handlePrev}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:translate-x-0 lg:-translate-x-12 bg-gray-900/50 p-2 rounded-full hover:bg-gray-900/70 transition-all z-10"
           >
             <ChevronLeft className="w-6 h-6 text-emerald-400" />
           </button>
           <div className="overflow-hidden">
-            <div 
+            <div
               className="flex flex-row-reverse transition-transform duration-500 ease-in-out touch-pan-y"
               style={{ transform: `translateX(${currentIndex * getSlideWidth()}%)` }}
               onTouchStart={handleTouchStart}
@@ -192,8 +212,8 @@ const TestimonialsSection = () => {
               onTouchEnd={handleTouchEnd}
             >
               {aboutTranslations[language].testimonials.items.map((item, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-2 md:px-1 lg:px-4 select-none"
                 >
                   <div className="bg-gray-900/50 rounded-xl p-4 h-full hover:bg-gray-900/70 transition-all duration-300">
@@ -212,14 +232,14 @@ const TestimonialsSection = () => {
                         )}
                       </div>
                       <div>
-                        <h3 className="font-semibold text-emerald-400 text-sm md:text-base lg:text-lg">{item.company}</h3>
+                        <h3 className="font-semibold text-emerald-400 text-sm md:text-base lg:text-lg">
+                          {item.company}
+                        </h3>
                         <p className="text-xs md:text-sm text-gray-400">{item.industry}</p>
                       </div>
                     </div>
                     <blockquote className="mb-4">
-                      <p className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
-                        {item.quote}
-                      </p>
+                      <p className="text-lg md:text-xl font-semibold mb-2 md:mb-3">{item.quote}</p>
                       <p className="text-gray-400 text-xs md:text-sm mb-2">
                         <span className="font-semibold text-red-500">
                           {aboutTranslations[language].testimonials.problem}:
@@ -240,16 +260,14 @@ const TestimonialsSection = () => {
                       </p>
                     </blockquote>
                     <footer className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-800">
-                      <p className="text-xs md:text-sm text-gray-400">
-                        {item.position}
-                      </p>
+                      <p className="text-xs md:text-sm text-gray-400">{item.position}</p>
                     </footer>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <button 
+          <button
             onClick={handleNext}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-0 lg:translate-x-12 bg-gray-900/50 p-2 rounded-full hover:bg-gray-900/70 transition-all z-10"
           >
@@ -262,41 +280,41 @@ const TestimonialsSection = () => {
 };
 
 const About = () => {
-  const { language } = useLanguage();
+  const language = getPageLangUnit(aboutTranslations);
   const translations = aboutTranslations[language];
 
   const stats = [
-    { 
-      icon: <Users className="w-6 h-6" />, 
-      endValue: 56, 
-      suffix: "+", 
+    {
+      icon: <Users className="w-6 h-6" />,
+      endValue: 56,
+      suffix: "+",
       label: translations.stats.clients,
       duration: 3000,
-      easing: 'easeOutElastic'
+      easing: "easeOutElastic",
     },
-    { 
-      icon: <Award className="w-6 h-6" />, 
-      endValue: 99.9, 
-      suffix: "%", 
+    {
+      icon: <Award className="w-6 h-6" />,
+      endValue: 99.9,
+      suffix: "%",
       label: translations.stats.uptime,
       duration: 3500,
-      easing: 'easeOutQuart'
+      easing: "easeOutQuart",
     },
-    { 
-      icon: <Globe className="w-6 h-6" />, 
-      endValue: 5, 
-      suffix: "+", 
+    {
+      icon: <Globe className="w-6 h-6" />,
+      endValue: 5,
+      suffix: "+",
       label: translations.stats.countries,
       duration: 5000,
-      easing: 'easeOutBounce'
+      easing: "easeOutBounce",
     },
-    { 
-      icon: <Building className="w-6 h-6" />, 
-      endValue: 630, 
-      suffix: "+", 
+    {
+      icon: <Building className="w-6 h-6" />,
+      endValue: 630,
+      suffix: "+",
       label: translations.stats.solutions,
       duration: 4000,
-      easing: 'easeOutExpo'
+      easing: "easeOutExpo",
     },
   ];
 
@@ -304,25 +322,27 @@ const About = () => {
     {
       year: "2022",
       title: "The Beginning",
-      description: "NeuroGen Lab started its journey, focusing on the development of AI solutions."
+      description: "NeuroGen Lab started its journey, focusing on the development of AI solutions.",
     },
     {
       year: "2023",
       title: "First Success",
-      description: "We launched our AI Agents for small and medium-sized businesses, earning the trust of clients in Ukraine, Germany, and Canada."
+      description:
+        "We launched our AI Agents for small and medium-sized businesses, earning the trust of clients in Ukraine, Germany, and Canada.",
     },
     {
       year: "2024",
       title: "Growth and Recognition",
-      description: "The company successfully expanded its services, adding IT consulting, solutions for car dealerships, and business process automation."
+      description:
+        "The company successfully expanded its services, adding IT consulting, solutions for car dealerships, and business process automation.",
     },
     {
       year: "2025",
       title: "Official Establishment",
-      description: "NeuroGen Lab was officially registered in Germany, embarking on a new phase of growth with a focus on scaling in the European market."
-    }
+      description:
+        "NeuroGen Lab was officially registered in Germany, embarking on a new phase of growth with a focus on scaling in the European market.",
+    },
   ];
-
 
   const team = [
     {
@@ -330,21 +350,21 @@ const About = () => {
       role: "CEO & Founder",
       bio: "AI Project Manager",
       image: "/assets/team/maksym.png",
-      linkedin: "https://www.linkedin.com/in/maxim-bezverkhiy/"
+      linkedin: "https://www.linkedin.com/in/maxim-bezverkhiy/",
     },
     {
       name: "Oleksandr Kulykov",
       role: "CTO",
       bio: "Fullstack Developer",
       image: "/assets/team/oleksandr.jpg",
-      linkedin: "https://www.linkedin.com/in/oleksandr-kulykov/"
+      linkedin: "https://www.linkedin.com/in/oleksandr-kulykov/",
     },
     {
       name: "Liudmyla (Elle) Podolska",
       role: "AI Creator",
       bio: "Innovative 3D Designer",
       image: "/assets/team/liudmyla.jpg",
-      linkedin: "https://www.linkedin.com/in/liudmyla-elle-podolska-644051220/"
+      linkedin: "https://www.linkedin.com/in/liudmyla-elle-podolska-644051220/",
     },
   ];
 
@@ -356,7 +376,7 @@ const About = () => {
   const easingFunctions = {
     easeOutElastic: (t: number) => {
       const p = 0.3;
-      return Math.pow(2, -10 * t) * Math.sin((t - p / 4) * (2 * Math.PI) / p) + 1;
+      return Math.pow(2, -10 * t) * Math.sin(((t - p / 4) * (2 * Math.PI)) / p) + 1;
     },
     easeOutQuart: (t: number) => 1 - Math.pow(1 - t, 4),
     easeOutBounce: (t: number) => {
@@ -367,7 +387,7 @@ const About = () => {
       if (t < 2.5 / d1) return n1 * (t -= 2.25 / d1) * t + 0.9375;
       return n1 * (t -= 2.625 / d1) * t + 0.984375;
     },
-    easeOutExpo: (t: number) => t === 1 ? 1 : 1 - Math.pow(2, -10 * t),
+    easeOutExpo: (t: number) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
   };
 
   useEffect(() => {
@@ -380,13 +400,13 @@ const About = () => {
           }
         }
       },
-      { 
+      {
         threshold: 0.1,
-        rootMargin: '50px'
+        rootMargin: "50px",
       }
     );
 
-    const statsSection = document.getElementById('stats-section');
+    const statsSection = document.getElementById("stats-section");
     if (statsSection) {
       observer.observe(statsSection);
     }
@@ -402,7 +422,7 @@ const About = () => {
     if (!isVisible || animationCompleted) return;
 
     let completedCounters = 0;
-    
+
     stats.forEach((stat, index) => {
       const steps = 60;
       const stepDuration = stat.duration / steps;
@@ -419,9 +439,10 @@ const About = () => {
         }
 
         const progress = currentStep / steps;
-        const easedProgress = easingFunctions[stat.easing as keyof typeof easingFunctions](progress);
-        
-        setCounters(prev => {
+        const easedProgress =
+          easingFunctions[stat.easing as keyof typeof easingFunctions](progress);
+
+        setCounters((prev) => {
           const newCounters = [...prev];
           const newValue = stat.endValue * easedProgress;
           newCounters[index] = Number(newValue.toFixed(1));
@@ -446,9 +467,7 @@ const About = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">{translations.title}</h1>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              {translations.subtitle}
-            </p>
+            <p className="text-gray-400 max-w-2xl mx-auto">{translations.subtitle}</p>
           </div>
 
           <Divider />
@@ -462,7 +481,8 @@ const About = () => {
               >
                 <div className="text-emerald-400 mb-3 flex justify-center">{stat.icon}</div>
                 <div className="text-2xl font-bold text-white mb-1">
-                  {Math.round(counters[index]).toLocaleString()}{stat.suffix}
+                  {Math.round(counters[index]).toLocaleString()}
+                  {stat.suffix}
                 </div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
               </div>
@@ -474,9 +494,7 @@ const About = () => {
 
           {/* История компании */}
           <div className="mt-16">
-            <h2 className="text-2xl font-bold text-center mb-8">
-              {translations.history.title}
-            </h2>
+            <h2 className="text-2xl font-bold text-center mb-8">{translations.history.title}</h2>
             <div className="max-w-4xl mx-auto">
               {translations.history.items.map((item, index) => (
                 <div key={index} className="relative flex items-start mb-8 group">
@@ -504,9 +522,7 @@ const About = () => {
 
           {/* Team Section */}
           <div className="mt-16">
-            <h2 className="text-2xl font-bold text-center mb-8">
-              {translations.team.title}
-            </h2>
+            <h2 className="text-2xl font-bold text-center mb-8">{translations.team.title}</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {team.map((member, index) => (
                 <div
@@ -523,7 +539,7 @@ const About = () => {
                         className="object-cover w-full h-full"
                         onError={(e) => {
                           console.error(`Error loading image for ${member.name}`);
-                          e.currentTarget.src = '/assets/team/default-avatar.webp';
+                          e.currentTarget.src = "/assets/team/default-avatar.webp";
                         }}
                       />
                     ) : (

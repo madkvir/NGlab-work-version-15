@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import ScrollToTop from "../../components/ScrollToTop";
-import GuideContent from "../../components/guide/GuideContent";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import ScrollToTop from "../../../components/ScrollToTop";
+import GuideContent from "../../../components/guide/GuideContent";
 
 export default function GuidePage() {
   return (

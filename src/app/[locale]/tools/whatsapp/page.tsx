@@ -1,14 +1,12 @@
-'use client';
-
 import React from "react";
 import { MessageCircle } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { useLanguage } from "../../../context/LanguageContext";
-import { whatsappTranslations } from "../../../locales/translations";
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { whatsappTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
 
-const WhatsAppPage = () => {
-  const { language } = useLanguage();
+const WhatsAppPage = async ({ params }) => {
+  const language = await getServerPageLang(whatsappTranslations, params);
   const t = whatsappTranslations[language] || whatsappTranslations.en;
 
   return (

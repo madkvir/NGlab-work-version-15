@@ -10,24 +10,17 @@ import {
 } from "../../utils/consent/manager";
 import type { ConsentSettings } from "../../utils/consent/types";
 import GlowingButton from "../common/GlowingButton";
-import { useParams, useRouter } from "next/navigation";
-import Link from "next/link";
-import { useLanguage } from "../../context/LanguageContext";
 import { consentDialogTranslations } from "../../locales/translations";
 import LanguageSelector from "../common/LanguageSelector";
+import { Link, useRouter } from "../../i18n/routing";
+import getPageLangUnit from "../../utils/getPageLangUnit";
 
 const ConsentDialog: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [settings, setSettings] = useState<ConsentSettings>(() => getStoredConsent());
   const [showDetails, setShowDetails] = useState(false);
   const router = useRouter();
-  const { locale } = useParams();
-  let language: string;
-  if (locale === "uk") {
-    language = "ua";
-  } else {
-    language = (locale as keyof typeof consentDialogTranslations) ?? "en";
-  }
+  const language = getPageLangUnit(consentDialogTranslations);
   const t = consentDialogTranslations[language];
 
   useEffect(() => {

@@ -1,14 +1,12 @@
-'use client';
-
 import React from "react";
 import { Instagram } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { useLanguage } from "../../../context/LanguageContext";
-import { instagramTranslations } from "../../../locales/translations";
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { instagramTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
 
-const InstagramPage = () => {
-  const { language } = useLanguage();
+const InstagramPage = async ({ params }) => {
+  const language = await getServerPageLang(instagramTranslations, params);
   const t = instagramTranslations[language] || instagramTranslations.en;
 
   return (

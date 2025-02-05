@@ -1,8 +1,7 @@
-import { UserPlus, Database, Settings, Rocket, TrendingUp, ArrowRight, Play } from "lucide-react";
+import { UserPlus, Database, Settings, Rocket, TrendingUp } from "lucide-react";
 import Divider from "./Divider";
 import { howItWorksTranslations } from "../locales/translations";
-import { useLanguage } from "../context/LanguageContext";
-import { useParams } from "next/navigation";
+import getPageLangUnit from "../utils/getPageLangUnit";
 
 const icons = [
   <UserPlus className="w-6 h-6" />,
@@ -13,13 +12,7 @@ const icons = [
 ];
 
 const HowItWorks = () => {
-  const { locale } = useParams();
-  let language: string;
-  if (locale === "uk") {
-    language = "ua";
-  } else {
-    language = (locale as keyof typeof howItWorksTranslations) ?? "en";
-  }
+  const language = getPageLangUnit(howItWorksTranslations);
   const t = howItWorksTranslations[language];
 
   return (

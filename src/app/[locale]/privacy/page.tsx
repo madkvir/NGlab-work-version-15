@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import { Database, Lock, Share2, Shield, UserCheck } from "lucide-react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import ScrollToTop from "../../components/ScrollToTop";
-import BackToHome from "../../components/BackToHome";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import ScrollToTop from "../../../components/ScrollToTop";
+import BackToHome from "../../../components/BackToHome";
 import React from "react";
-import Accordion from "../../components/Accordion";
+import Accordion from "../../../components/Accordion";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - NeuroGen Lab | Data Protection Notice",

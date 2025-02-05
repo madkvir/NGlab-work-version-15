@@ -1,14 +1,12 @@
-'use client';
-
 import React from "react";
 import { ShieldCheck } from "lucide-react";
-import ToolPageTemplate from "../../../components/ToolPageTemplate";
-import { useLanguage } from '../../../context/LanguageContext';
-import { antiSpamTranslations } from '../../../locales/translations';
-import Image from 'next/image';
+import ToolPageTemplate from "../../../../components/ToolPageTemplate";
+import { antiSpamTranslations } from "../../../../locales/translations";
+import Image from "next/image";
+import getServerPageLang from "../../../../utils/getServerPageLang";
 
-const AntiSpam = () => {
-  const { language } = useLanguage();
+const AntiSpam = async ({ params }) => {
+  const language = await getServerPageLang(antiSpamTranslations, params);
   const t = antiSpamTranslations[language] || antiSpamTranslations.en;
 
   return (

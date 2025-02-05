@@ -1,23 +1,18 @@
-"use client";
 import { Check, Sparkles, Wrench, Boxes } from "lucide-react";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import GlowingButton from "./common/GlowingButton";
 import { pricingTranslations } from "../locales/translations";
-import { useLanguage } from "../context/LanguageContext";
+import getPageLangUnit from "../utils/getPageLangUnit";
+import { redirect } from "../i18n/routing";
 
 const Pricing = () => {
   const router = useRouter();
-  const { locale } = useParams();
-  let language: string;
-  if (locale === "uk") {
-    language = "ua";
-  } else {
-    language = (locale as keyof typeof pricingTranslations) ?? "en";
-  }
+  const language = getPageLangUnit(pricingTranslations);
   const t = pricingTranslations[language];
 
   const handleGetStarted = () => {
     router.push("/contacts");
+    redirect({ href: "/contacts", locale: language.toString() });
   };
 
   return (

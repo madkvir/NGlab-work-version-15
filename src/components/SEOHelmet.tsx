@@ -1,33 +1,33 @@
-import { Helmet } from 'react-helmet-async';
-import { memo, useEffect, useState } from 'react';
+// import { Helmet } from 'react-helmet-async';
+// import { memo, useEffect, useState } from 'react';
 
-interface SEOHelmetProps {
-  title: string;
-  description?: string;
-  children?: React.ReactNode;
-}
+// interface SEOHelmetProps {
+//   title: string;
+//   description?: string;
+//   children?: React.ReactNode;
+// }
 
-const SEOHelmet = memo(({ title, description, children }: SEOHelmetProps) => {
-  const [mounted, setMounted] = useState(false);
+// const SEOHelmet = memo(({ title, description, children }: SEOHelmetProps) => {
+//   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-    return () => setMounted(false);
-  }, []);
+//   useEffect(() => {
+//     setMounted(true);
+//     return () => setMounted(false);
+//   }, []);
 
-  if (!mounted) {
-    return null;
-  }
+//   if (!mounted) {
+//     return null;
+//   }
 
-  return (
-    <Helmet>
-      <title>{title}</title>
-      {description && <meta name="description" content={description} />}
-      {children}
-    </Helmet>
-  );
-});
+//   return (
+//     <Helmet>
+//       <title>{title}</title>
+//       {description && <meta name="description" content={description} />}
+//       {children}
+//     </Helmet>
+//   );
+// });
 
-SEOHelmet.displayName = 'SEOHelmet';
+// SEOHelmet.displayName = 'SEOHelmet';
 
-export default SEOHelmet;
+// export default SEOHelmet;

@@ -2,23 +2,16 @@
 import React, { useState } from "react";
 import { Phone, Mail, Linkedin, MapPin, MessageCircle, ChevronDown } from "lucide-react";
 import NewsletterForm from "./form/NewsletterForm";
-import Link from "next/link";
-import { useRouter, usePathname, useParams } from "next/navigation";
-import { useLanguage } from "../context/LanguageContext";
+import { Link, useRouter, usePathname } from "../i18n/routing";
 import { footerTranslations } from "../locales/footerTranslations";
+import getPageLangUnit from "../utils/getPageLangUnit";
 
 const Footer: React.FC = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const router = useRouter();
   const location = usePathname();
-  const { locale } = useParams();
-  let language: string;
-  if (locale === "uk") {
-    language = "ua";
-  } else {
-    language = (locale as keyof typeof footerTranslations) ?? "en";
-  }
+  const language = getPageLangUnit(footerTranslations);
   const t = footerTranslations[language];
 
   const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {

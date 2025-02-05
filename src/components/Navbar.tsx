@@ -11,6 +11,8 @@ import { useRouter, usePathname, useParams } from "next/navigation";
 import { Link } from "../i18n/routing";
 import { translations } from "../locales/translations";
 import { useLanguage } from "../context/LanguageContext";
+import getPageLangUnit from "../utils/getPageLangUnit";
+
 // import dynamic from "next/dynamic";
 
 // type LanguageType = 'en' | 'de' | 'es' | 'ru' | 'ua';
@@ -104,13 +106,8 @@ const Navbar = () => {
   const location = usePathname();
   const { setLanguage } = useLanguage();
 
-  const { locale } = useParams();
-  let language: string;
-  if (locale === "uk") {
-    language = "ua";
-  } else {
-    language = (locale as keyof typeof translations) ?? "en";
-  }
+  const params = useParams();
+  const language = getPageLangUnit(translations);
 
   const t = translations[language ?? "en"];
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
