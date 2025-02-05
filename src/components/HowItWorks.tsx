@@ -1,7 +1,8 @@
 import { UserPlus, Database, Settings, Rocket, TrendingUp } from "lucide-react";
 import Divider from "./Divider";
 import { howItWorksTranslations } from "../locales/translations";
-import getPageLangUnit from "../utils/getPageLangUnit";
+import getServerPageLang from "../utils/getServerPageLang";
+import { Params } from "next/dist/server/request/params";
 
 const icons = [
   <UserPlus className="w-6 h-6" />,
@@ -11,8 +12,8 @@ const icons = [
   <TrendingUp className="w-6 h-6" />,
 ];
 
-const HowItWorks = () => {
-  const language = getPageLangUnit(howItWorksTranslations);
+const HowItWorks = async ({ params }: Params) => {
+  const language = await getServerPageLang(howItWorksTranslations, params);
   const t = howItWorksTranslations[language];
 
   return (

@@ -1,3 +1,4 @@
+"use client";
 import { Check, Sparkles, Wrench, Boxes } from "lucide-react";
 import { useRouter } from "next/navigation";
 import GlowingButton from "./common/GlowingButton";
