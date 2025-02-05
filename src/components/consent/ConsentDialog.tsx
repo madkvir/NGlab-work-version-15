@@ -10,18 +10,24 @@ import {
 } from "../../utils/consent/manager";
 import type { ConsentSettings } from "../../utils/consent/types";
 import GlowingButton from "../common/GlowingButton";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
-import { useLanguage } from '../../context/LanguageContext';
-import { consentDialogTranslations } from '../../locales/translations';
-import LanguageSelector from '../common/LanguageSelector';
+import { useLanguage } from "../../context/LanguageContext";
+import { consentDialogTranslations } from "../../locales/translations";
+import LanguageSelector from "../common/LanguageSelector";
 
 const ConsentDialog: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [settings, setSettings] = useState<ConsentSettings>(() => getStoredConsent());
   const [showDetails, setShowDetails] = useState(false);
   const router = useRouter();
-  const { language } = useLanguage();
+  const { locale } = useParams();
+  let language: string;
+  if (locale === "uk") {
+    language = "ua";
+  } else {
+    language = (locale as keyof typeof consentDialogTranslations) ?? "en";
+  }
   const t = consentDialogTranslations[language];
 
   useEffect(() => {
@@ -85,9 +91,7 @@ const ConsentDialog: React.FC = () => {
         <div className="p-3">
           {!showDetails ? (
             <>
-              <p className="text-sm text-gray-400 mb-4">
-                {t.description}
-              </p>
+              <p className="text-sm text-gray-400 mb-4">{t.description}</p>
               <div className="space-y-2">
                 <GlowingButton
                   onClick={handleAcceptAll}

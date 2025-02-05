@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-[#0B0F19] text-white">
       <Navbar />
-      <Hero language={language as "en" | "de" | "es" | "ru" | "ua"} />
+      <Hero />
       <HowItWorks />
       <Pricing />
       <FAQ />

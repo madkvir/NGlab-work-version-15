@@ -17,7 +17,14 @@ const Hero = () => {
   const [isClient, setIsClient] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { locale } = useParams();
-  const language = (locale as keyof typeof heroTranslations) ?? "en";
+
+  let language: string;
+  if (locale === "uk") {
+    language = "ua";
+  } else {
+    language = (locale as keyof typeof heroTranslations) ?? "en";
+  }
+
   const t = heroTranslations[language];
 
   useEffect(() => {

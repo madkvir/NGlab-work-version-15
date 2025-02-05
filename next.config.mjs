@@ -12,10 +12,6 @@ const nextConfig = {
 
     return config;
   },
-  // i18n: {
-  //   locales: ["en-US", "uk", "ru", "de", "es"],
-  //   defaultLocale: "en-US",
-  // },
 };
 
 export default withNextIntl(nextConfig);

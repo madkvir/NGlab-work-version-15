@@ -105,7 +105,13 @@ const Navbar = () => {
   const { setLanguage } = useLanguage();
 
   const { locale } = useParams();
-  const language = (locale as keyof typeof translations) ?? "en";
+  let language: string;
+  if (locale === "uk") {
+    language = "ua";
+  } else {
+    language = (locale as keyof typeof translations) ?? "en";
+  }
+
   const t = translations[language ?? "en"];
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(-1);

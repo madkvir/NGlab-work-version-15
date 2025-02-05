@@ -218,8 +218,8 @@ export default async function RootLayout({ children, params }: { children: React
 
         <div id="root">
           <BlogProvider>
-            {/* <LanguageProvider initialLanguage={initialLanguage}> */}
-            <NextIntlClientProvider messages={messages}>
+            <LanguageProvider initialLanguage={initialLanguage}>
+              {/* <NextIntlClientProvider messages={messages}> */}
               <Suspense fallback={<LoadingSpinner />}>
                 {children}
                 <CookieConsent />
@@ -227,6 +227,7 @@ export default async function RootLayout({ children, params }: { children: React
               </Suspense>
             </NextIntlClientProvider>
             {/* </LanguageProvider> */}
+            </LanguageProvider>
           </BlogProvider>
         </div>
       </body>

@@ -1,17 +1,23 @@
 "use client";
 import { Check, Sparkles, Wrench, Boxes } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import GlowingButton from "./common/GlowingButton";
-import { pricingTranslations } from '../locales/translations';
-import { useLanguage } from '../context/LanguageContext';
+import { pricingTranslations } from "../locales/translations";
+import { useLanguage } from "../context/LanguageContext";
 
 const Pricing = () => {
   const router = useRouter();
-  const { language } = useLanguage();
+  const { locale } = useParams();
+  let language: string;
+  if (locale === "uk") {
+    language = "ua";
+  } else {
+    language = (locale as keyof typeof pricingTranslations) ?? "en";
+  }
   const t = pricingTranslations[language];
 
   const handleGetStarted = () => {
-    router.push('/contacts');
+    router.push("/contacts");
   };
 
   return (
@@ -25,9 +31,7 @@ const Pricing = () => {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">{t.title}</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            {t.description}
-          </p>
+          <p className="text-gray-400 max-w-2xl mx-auto">{t.description}</p>
         </div>
 
         {/* Pricing Cards */}
@@ -57,9 +61,7 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <GlowingButton onClick={handleGetStarted}>
-                {t.customDev.cta}
-              </GlowingButton>
+              <GlowingButton onClick={handleGetStarted}>{t.customDev.cta}</GlowingButton>
             </div>
           </div>
 
@@ -88,9 +90,7 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <GlowingButton onClick={handleGetStarted}>
-                {t.platform.cta}
-              </GlowingButton>
+              <GlowingButton onClick={handleGetStarted}>{t.platform.cta}</GlowingButton>
             </div>
           </div>
         </div>
@@ -102,12 +102,8 @@ const Pricing = () => {
             <div className="relative bg-gray-900/90 rounded-xl p-8 text-center">
               <Sparkles className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-white mb-3">{t.trial.title}</h3>
-              <p className="text-gray-400 mb-6">
-                {t.trial.description}
-              </p>
-              <GlowingButton onClick={handleGetStarted}>
-                {t.trial.cta}
-              </GlowingButton>
+              <p className="text-gray-400 mb-6">{t.trial.description}</p>
+              <GlowingButton onClick={handleGetStarted}>{t.trial.cta}</GlowingButton>
             </div>
           </div>
         </div>
