@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import GlowingButton from "./common/GlowingButton";
-import Link from "next/link";
 import { ArticleContent } from "./ArticleContent";
 import BackToHome from "./BackToHome";
 
@@ -19,31 +18,33 @@ interface ToolPageProps {
   metaTitle: string;
   metaDescription: string;
   isComingSoon?: boolean;
-  articleContent?: {
-    mainTitle: string;
-    subtitle: string;
-    introText: string;
-    introList: string[];
-    howItWorksTitle: string;
-    howItWorksText: string;
-    howItWorksList: string[];
-    keyFeaturesTitle: string;
-    features: {
-      realTime: { title: string; description: string };
-      multiLanguage: { title: string; description: string };
-      scalability: { title: string; description: string };
-      analytics: { title: string; description: string };
-    };
-    industriesTitle: string;
-    industriesText: string;
-    industries: any[];
-    conclusionTitle: string;
-    conclusionText: string;
-    conclusionList: string[];
-    topReasonsTitle: string;
-    reasonList: any[];
-    finalConclusion: { title: string; text: string };
-  } | React.ReactNode;
+  articleContent?:
+    | {
+        mainTitle: string;
+        subtitle: string;
+        introText: string;
+        introList: string[];
+        howItWorksTitle: string;
+        howItWorksText: string;
+        howItWorksList: string[];
+        keyFeaturesTitle: string;
+        features: {
+          realTime: { title: string; description: string };
+          multiLanguage: { title: string; description: string };
+          scalability: { title: string; description: string };
+          analytics: { title: string; description: string };
+        };
+        industriesTitle: string;
+        industriesText: string;
+        industries: any[];
+        conclusionTitle: string;
+        conclusionText: string;
+        conclusionList: string[];
+        topReasonsTitle: string;
+        reasonList: any[];
+        finalConclusion: { title: string; text: string };
+      }
+    | React.ReactNode;
   sectionTitles: {
     features: string;
     benefits: string;
@@ -64,7 +65,7 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
   isComingSoon = false,
   articleContent,
   sectionTitles,
-  imageComponent
+  imageComponent,
 }) => {
   React.useEffect(() => {
     document.title = metaTitle;
@@ -81,8 +82,8 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
       <main className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mt-8">
-          <BackToHome />
-        </div>
+            <BackToHome />
+          </div>
 
           <div className="text-center mb-12">
             <div className="inline-flex justify-center items-center w-16 h-16 rounded-full bg-emerald-500/10 mb-6">
@@ -102,7 +103,9 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Features */}
             <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
-              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">{sectionTitles.features}</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">
+                {sectionTitles.features}
+              </h2>
               <ul className="space-y-4">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -115,7 +118,9 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
 
             {/* Benefits */}
             <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
-              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">{sectionTitles.benefits}</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">
+                {sectionTitles.benefits}
+              </h2>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -128,15 +133,13 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
           </div>
 
           {/* Image Section */}
-          {imageComponent && (
-            <div className="mb-12">
-              {imageComponent}
-            </div>
-          )}
+          {imageComponent && <div className="mb-12">{imageComponent}</div>}
 
           {integrations && (
             <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300 mb-12">
-              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">{sectionTitles.integrations}</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">
+                {sectionTitles.integrations}
+              </h2>
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {integrations.map((integration, index) => (
                   <div key={index} className="bg-gray-800/50 rounded-lg p-4 text-center">
@@ -159,7 +162,9 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
               {isComingSoon ? "Coming Soon" : "Get Started"}
             </GlowingButton>
 
-            {articleContent && typeof articleContent === 'object' && 'mainTitle' in articleContent ? (
+            {articleContent &&
+            typeof articleContent === "object" &&
+            "mainTitle" in articleContent ? (
               <ArticleContent content={articleContent} />
             ) : (
               articleContent

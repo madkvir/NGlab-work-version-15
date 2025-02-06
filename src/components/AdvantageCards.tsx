@@ -1,19 +1,21 @@
 import { Activity, Cast, Sparkles, FileCheck } from "lucide-react";
 import React from "react";
 import { advantageCardsTranslations } from "../locales/translations";
+import getPageLangUnit from "../utils/getPageLangUnit";
 
 const icons = [
   <Activity className="w-6 h-6 sm:w-8 sm:h-8" />,
   <Cast className="w-6 h-6 sm:w-8 sm:h-8" />,
   <Sparkles className="w-6 h-6 sm:w-8 sm:h-8" />,
-  <FileCheck className="w-6 h-6 sm:w-8 sm:h-8" />
+  <FileCheck className="w-6 h-6 sm:w-8 sm:h-8" />,
 ];
 
 interface AdvantageCardsProps {
-  language: 'en' | 'de' | 'es' | 'ru' | 'ua';
+  language: "en" | "de" | "es" | "ru" | "ua";
 }
 
-const AdvantageCards = ({ language }: AdvantageCardsProps) => {
+const AdvantageCards = () => {
+  const language = getPageLangUnit(advantageCardsTranslations);
   const t = advantageCardsTranslations[language];
 
   return (

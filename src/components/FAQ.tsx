@@ -1,10 +1,11 @@
 import Divider from "./Divider";
 import FAQAccordion from "./FAQAccordion";
-import { faqTranslations } from '../locales/translations';
-import { useLanguage } from '../context/LanguageContext';
+import { faqTranslations } from "../locales/translations";
+import getServerPageLang from "../utils/getServerPageLang";
+import { Params } from "next/dist/server/request/params";
 
-const FAQ = () => {
-  const { language } = useLanguage();
+const FAQ = async ({ params }: Params) => {
+  const language = await getServerPageLang(faqTranslations, params);
   const t = faqTranslations[language];
 
   return (
@@ -22,12 +23,8 @@ const FAQ = () => {
               {t.sectionTitle}
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
-            {t.title}
-          </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            {t.description}
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">{t.title}</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">{t.description}</p>
         </div>
 
         {/* FAQ Accordion */}

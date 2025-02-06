@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { ChevronUp } from "lucide-react";
+import { usePathname } from "../i18n/routing";
 
 const ScrollToTopOnNavigate = () => {
   const location = usePathname();

@@ -1,8 +1,5 @@
 import React from "react";
-import { Listbox, Transition } from "@headlessui/react";
-import { ChevronDown } from "lucide-react";
 import { LANGUAGES } from "../config/constants";
-import LanguageFlag from "./LanguageFlag";
 import { UseFormRegister } from "react-hook-form";
 import { BookingFormData } from "../types/booking";
 
@@ -12,13 +9,9 @@ interface LanguageSelectProps {
   register: UseFormRegister<BookingFormData>;
 }
 
-export const LanguageSelect: React.FC<LanguageSelectProps> = ({
-  value,
-  onChange,
-  register
-}) => {
-  const { ref, ...rest } = register('language');
-  
+export const LanguageSelect: React.FC<LanguageSelectProps> = ({ value, onChange, register }) => {
+  const { ref, ...rest } = register("language");
+
   return (
     <select
       {...rest}

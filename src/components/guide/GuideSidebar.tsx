@@ -1,8 +1,8 @@
 "use client";
-import React from 'react';
-import { Lightbulb, ScrollText, Cog, CheckCircle } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
-import { guideTranslations } from '../../locales/guideTranslations';
+import React from "react";
+import { Lightbulb, ScrollText, Cog, CheckCircle } from "lucide-react";
+import { guideTranslations } from "../../locales/guideTranslations";
+import getPageLangUnit from "../../utils/getPageLangUnit";
 
 const getNavItems = (translations: any) => [
   {
@@ -37,7 +37,7 @@ interface GuideSidebarProps {
 }
 
 const GuideSidebar: React.FC<GuideSidebarProps> = ({ activeStage, setActiveStage }) => {
-  const { language } = useLanguage();
+  const language = getPageLangUnit(guideTranslations);
   const t = guideTranslations[language];
   const navItems = getNavItems(t);
 
@@ -49,9 +49,10 @@ const GuideSidebar: React.FC<GuideSidebarProps> = ({ activeStage, setActiveStage
             <button
               onClick={() => setActiveStage(item.id)}
               className={`w-full p-4 text-left transition-all rounded-lg
-                ${activeStage === item.id 
-                  ? 'bg-emerald-500/20 text-emerald-400' 
-                  : 'bg-gray-800/50 text-gray-400 hover:bg-gray-800 hover:text-emerald-400'
+                ${
+                  activeStage === item.id
+                    ? "bg-emerald-500/20 text-emerald-400"
+                    : "bg-gray-800/50 text-gray-400 hover:bg-gray-800 hover:text-emerald-400"
                 }`}
             >
               <div className="flex items-center gap-3 mb-1">
@@ -67,4 +68,4 @@ const GuideSidebar: React.FC<GuideSidebarProps> = ({ activeStage, setActiveStage
   );
 };
 
-export default GuideSidebar; 
+export default GuideSidebar;

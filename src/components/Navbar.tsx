@@ -2,18 +2,20 @@
 
 import BookDemoBtn from "./BookDemoBtn";
 import React, { useState, useRef, useEffect, KeyboardEvent } from "react";
-import { Menu, X, ChevronDown, Phone, Mail, MessageCircle, Linkedin, MapPin } from "lucide-react";
+import { ChevronDown, Phone, Mail, MessageCircle, Linkedin, MapPin } from "lucide-react";
 import Logo from "./Logo";
 import SolutionsMenu from "./SolutionsMenu";
 import { useClickOutside } from "./hooks/useClickOutside";
 import { useScrollLock } from "./hooks/useScrollLock";
-import { useRouter, usePathname } from "next/navigation";
-import Link from "next/link";
+import { useRouter, usePathname, useParams } from "next/navigation";
+import { Link } from "../i18n/routing";
 import { translations } from "../locales/translations";
-import { useLanguage } from "../context/LanguageContext";
-import dynamic from "next/dynamic";
+import getPageLangUnit from "../utils/getPageLangUnit";
+import Cookies from "js-cookie";
 
-type LanguageType = 'en' | 'de' | 'es' | 'ru' | 'ua';
+// import dynamic from "next/dynamic";
+
+// type LanguageType = 'en' | 'de' | 'es' | 'ru' | 'ua';
 
 const buttonTranslations = {
   en: {
@@ -102,14 +104,30 @@ const Navbar = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const router = useRouter();
   const location = usePathname();
-  const { language, setLanguage } = useLanguage();
-  const t = translations[language];
+
+  const language = getPageLangUnit(translations);
+
+  const t = translations[language ?? "en"];
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const langMenuRef = useRef<HTMLDivElement>(null);
   const langButtonRef = useRef<HTMLButtonElement>(null);
   const [value, setValue] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+
+  const pathname = usePathname();
+
+  const changeLanguage = (newLocale: string) => {
+    if (newLocale === "ua") {
+      Cookies.set("NEXT_LOCALE", "uk", { path: "/" });
+      const newPath = `/uk${pathname.substring(3)}`; // Убираем старую локаль из пути
+      router.push(newPath);
+      return;
+    }
+    Cookies.set("NEXT_LOCALE", newLocale, { path: "/" });
+    const newPath = `/${newLocale}${pathname.substring(3)}`; // Убираем старую локаль из пути
+    router.push(newPath);
+  };
 
   useClickOutside<HTMLDivElement | HTMLButtonElement>(
     [menuRef, buttonRef],
@@ -182,7 +200,7 @@ const Navbar = () => {
         e.preventDefault();
         if (focusedIndex !== -1) {
           const languages = Object.keys(languageOptions);
-          setLanguage(languages[focusedIndex] as keyof typeof languageOptions);
+          changeLanguage(languages[focusedIndex] as keyof typeof languageOptions);
           setIsLangMenuOpen(false);
           setFocusedIndex(-1);
         }
@@ -216,7 +234,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-16">
             <Logo />
 
-            <div className="hidden md:flex items-center justify-center flex-1 px-16 space-x-8">
+            <div className="hidden lg:flex items-center justify-center flex-1  space-x-8">
               <div className="relative">
                 <button
                   className={`
@@ -307,7 +325,7 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <div className="hidden md:flex items-center">
+            <div className="hidden lg:flex items-center">
               <div className="flex items-center space-x-2 mr-4">
                 {/* <Link
                   href='/signin'
@@ -388,7 +406,7 @@ const Navbar = () => {
                       key={key}
                       role="menuitem"
                       onClick={() => {
-                        setLanguage(key as keyof typeof languageOptions);
+                        changeLanguage(key as keyof typeof languageOptions);
                         setIsLangMenuOpen(false);
                       }}
                       className={`
@@ -414,7 +432,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-2 md:hidden">
+            <div className="flex items-center gap-2 lg:hidden">
               <div className="relative">
                 <button
                   ref={langButtonRef}
@@ -449,9 +467,10 @@ const Navbar = () => {
                     shadow-lg shadow-black/20
                     min-w-[180px] w-max
                     transition-all duration-300 transform origin-top-right
-                    ${isLangMenuOpen 
-                      ? 'opacity-100 visible scale-100' 
-                      : 'opacity-0 invisible scale-95'
+                    ${
+                      isLangMenuOpen
+                        ? "opacity-100 visible scale-100"
+                        : "opacity-0 invisible scale-95"
                     }
                     z-50
                   `}
@@ -461,14 +480,15 @@ const Navbar = () => {
                       key={key}
                       role="menuitem"
                       onClick={() => {
-                        setLanguage(key as keyof typeof languageOptions);
+                        console.log("click");
+                        changeLanguage(key);
                         setIsLangMenuOpen(false);
                       }}
                       className={`
                         w-full flex items-center gap-3 px-4 py-2
                         hover:bg-emerald-500/10 transition-colors duration-200
                         focus:outline-none focus:bg-emerald-500/10
-                        ${language === key ? 'text-emerald-500' : 'text-gray-400'}
+                        ${language === key ? "text-emerald-500" : "text-gray-400"}
                       `}
                     >
                       <img
@@ -495,21 +515,27 @@ const Navbar = () => {
                 aria-label={isMenuOpen ? t.close : t.menu}
               >
                 <div className="relative w-5 h-5 translate-y-[2px]">
-                  <div className={`
+                  <div
+                    className={`
                     absolute inset-0 transition-all duration-300
-                    ${isMenuOpen ? 'rotate-45 translate-y-2' : '-translate-y-1.5'}
+                    ${isMenuOpen ? "rotate-45 translate-y-2" : "-translate-y-1.5"}
                     border-t-[2px] border-current
-                  `}></div>
-                  <div className={`
+                  `}
+                  ></div>
+                  <div
+                    className={`
                     absolute inset-0 transition-all duration-300
-                    ${isMenuOpen ? 'opacity-0' : 'opacity-100'}
+                    ${isMenuOpen ? "opacity-0" : "opacity-100"}
                     border-t-[2px] border-current
-                  `}></div>
-                  <div className={`
+                  `}
+                  ></div>
+                  <div
+                    className={`
                     absolute inset-0 transition-all duration-300
-                    ${isMenuOpen ? '-rotate-45 translate-y-2' : 'translate-y-1.5'}
+                    ${isMenuOpen ? "-rotate-45 translate-y-2" : "translate-y-1.5"}
                     border-t-[2px] border-current
-                  `}></div>
+                  `}
+                  ></div>
                 </div>
               </button>
             </div>
@@ -520,23 +546,19 @@ const Navbar = () => {
       {isMenuOpen && (
         <div
           ref={menuRef}
-          className="md:hidden fixed inset-x-0 top-[72px] bg-[#0B0F19]/95 backdrop-blur-md z-40 overflow-y-auto"
+          className="lg:hidden fixed inset-x-0 top-[72px] bg-[#0B0F19]/95 backdrop-blur-md z-40 overflow-y-auto"
           style={{ height: "calc(100vh - 72px)" }}
         >
           <div className="px-4 py-6 space-y-6">
             {/* Solutions Menu Section */}
             <div className="border-b border-gray-700/50 pb-6">
-              <h3 className="text-gray-400 text-sm font-medium px-4 mb-4">
-                {t.solutions}
-              </h3>
+              <h3 className="text-gray-400 text-sm font-medium px-4 mb-4">{t.solutions}</h3>
               <SolutionsMenu isMobile language={language as "en" | "de" | "es" | "ru" | "ua"} />
             </div>
 
             {/* Main Navigation Links */}
             <div className="space-y-4">
-              <h3 className="text-gray-400 text-sm font-medium px-4 mb-2">
-                {t.pages}
-              </h3>
+              <h3 className="text-gray-400 text-sm font-medium px-4 mb-2">{t.pages}</h3>
               <div className="space-y-2">
                 <Link
                   href="/guide"
@@ -579,9 +601,7 @@ const Navbar = () => {
 
               {/* Contact Section */}
               <div className="px-4 space-y-4">
-                <h3 className="text-gray-400 text-sm font-medium">
-                  {t.contact}
-                </h3>
+                <h3 className="text-gray-400 text-sm font-medium">{t.contact}</h3>
                 <div className="space-y-3">
                   <a
                     href="tel:+49(0)3012345678"
@@ -617,7 +637,10 @@ const Navbar = () => {
                   </a>
                   <div className="flex items-center gap-3 text-gray-400">
                     <MapPin className="w-5 h-5" />
-                    <span>Gartenweg 2<br />16515 Oranienburg, Germany</span>
+                    <span>
+                      Gartenweg 2<br />
+                      16515 Oranienburg, Germany
+                    </span>
                   </div>
                 </div>
               </div>

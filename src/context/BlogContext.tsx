@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 export interface BlogPost {
-  id: number;
+  id: string;
   title: string;
   excerpt: string;
   content: string;
@@ -18,7 +18,7 @@ interface BlogContextType {
   posts: BlogPost[];
   addPost: (post: BlogPost) => void;
   updatePost: (post: BlogPost) => void;
-  deletePost: (id: number) => void;
+  deletePost: (id: string) => void;
   setPosts: (posts: BlogPost[]) => void;
 }
 
@@ -57,7 +57,7 @@ export const BlogProvider: React.FC<{ children: React.ReactNode }> = ({ children
     );
   };
 
-  const deletePost = (id: number) => {
+  const deletePost = (id: string) => {
     setPosts((prev) => prev.filter((p) => p.id !== id));
   };
 
