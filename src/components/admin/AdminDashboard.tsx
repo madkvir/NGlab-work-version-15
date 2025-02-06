@@ -12,7 +12,7 @@ const AdminDashboard: React.FC = () => {
 
   const handleNewPost = () => {
     setCurrentPost({
-      id: Date.now(),
+      id: crypto.randomUUID(),
       title: "",
       slug: "",
       excerpt: "",
@@ -30,7 +30,7 @@ const AdminDashboard: React.FC = () => {
     setIsEditing(true);
   };
 
-  const handleDeletePost = (postId: number) => {
+  const handleDeletePost = (postId: string) => {
     if (window.confirm("Are you sure you want to delete this post?")) {
       deletePost(postId);
     }
