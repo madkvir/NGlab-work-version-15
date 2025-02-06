@@ -4,9 +4,8 @@ import { Brain } from "lucide-react";
 import { aiAssistantTranslations } from "../../../../locales/translations";
 import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
-import { Params } from "next/dist/server/request/params";
 
-const AIAssistant = async ({ params }: Params) => {
+const AIAssistant = async ({ params }) => {
   const language = await getServerPageLang(aiAssistantTranslations, params);
   const t = aiAssistantTranslations[language];
 

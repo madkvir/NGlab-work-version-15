@@ -11,7 +11,7 @@ import Image from "next/image";
 import { aboutTranslations } from "../../../locales/aboutTranslations";
 import getPageLangUnit from "../../../utils/getPageLangUnit";
 import { heroTranslations } from "../../../locales/translations";
-import { useParams } from "next/navigation";
+
 
 const testimonials = [
   {
