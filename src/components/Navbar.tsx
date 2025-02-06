@@ -10,8 +10,8 @@ import { useScrollLock } from "./hooks/useScrollLock";
 import { useRouter, usePathname, useParams } from "next/navigation";
 import { Link } from "../i18n/routing";
 import { translations } from "../locales/translations";
-import { useLanguage } from "../context/LanguageContext";
 import getPageLangUnit from "../utils/getPageLangUnit";
+import Cookies from "js-cookie";
 
 // import dynamic from "next/dynamic";
 
@@ -104,9 +104,7 @@ const Navbar = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const router = useRouter();
   const location = usePathname();
-  const { setLanguage } = useLanguage();
 
-  const params = useParams();
   const language = getPageLangUnit(translations);
 
   const t = translations[language ?? "en"];
@@ -118,14 +116,15 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const pathname = usePathname();
-  // const { locale } = useParams();
 
   const changeLanguage = (newLocale: string) => {
     if (newLocale === "ua") {
+      Cookies.set("NEXT_LOCALE", "uk", { path: "/" });
       const newPath = `/uk${pathname.substring(3)}`; // Убираем старую локаль из пути
       router.push(newPath);
       return;
     }
+    Cookies.set("NEXT_LOCALE", newLocale, { path: "/" });
     const newPath = `/${newLocale}${pathname.substring(3)}`; // Убираем старую локаль из пути
     router.push(newPath);
   };
@@ -201,7 +200,7 @@ const Navbar = () => {
         e.preventDefault();
         if (focusedIndex !== -1) {
           const languages = Object.keys(languageOptions);
-          setLanguage(languages[focusedIndex] as keyof typeof languageOptions);
+          changeLanguage(languages[focusedIndex] as keyof typeof languageOptions);
           setIsLangMenuOpen(false);
           setFocusedIndex(-1);
         }
