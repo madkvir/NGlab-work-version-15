@@ -1,5 +1,6 @@
 const getServerPageLang = async (translations, params) => {
-  const locale = params?.locale;
+  const resolvedParams = await params;
+  const locale = resolvedParams?.locale;
   let language: string | number | symbol;
   if (locale === "uk") {
     language = "ua";
