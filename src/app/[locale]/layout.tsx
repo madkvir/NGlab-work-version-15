@@ -10,7 +10,6 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import ChatWidget from "../../components/ChatWidget";
 import CookieConsent from "../../components/CookieConsent";
 import React from "react";
-import { LanguageProvider } from "../../context/LanguageContext";
 import { cookies } from "next/headers";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -171,7 +170,7 @@ export default async function RootLayout({ children, params }: { children: React
   const messages = await getMessages();
 
   return (
-    <html>
+    <html lang={initialLanguage}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

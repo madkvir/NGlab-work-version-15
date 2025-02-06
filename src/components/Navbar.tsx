@@ -234,7 +234,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-16">
             <Logo />
 
-            <div className="hidden md:flex items-center justify-center flex-1 px-16 space-x-8">
+            <div className="hidden lg:flex items-center justify-center flex-1  space-x-8">
               <div className="relative">
                 <button
                   className={`
@@ -325,7 +325,7 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <div className="hidden md:flex items-center">
+            <div className="hidden lg:flex items-center">
               <div className="flex items-center space-x-2 mr-4">
                 {/* <Link
                   href='/signin'
@@ -432,7 +432,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-2 md:hidden">
+            <div className="flex items-center gap-2 lg:hidden">
               <div className="relative">
                 <button
                   ref={langButtonRef}
@@ -546,7 +546,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div
           ref={menuRef}
-          className="md:hidden fixed inset-x-0 top-[72px] bg-[#0B0F19]/95 backdrop-blur-md z-40 overflow-y-auto"
+          className="lg:hidden fixed inset-x-0 top-[72px] bg-[#0B0F19]/95 backdrop-blur-md z-40 overflow-y-auto"
           style={{ height: "calc(100vh - 72px)" }}
         >
           <div className="px-4 py-6 space-y-6">
