@@ -1,29 +1,27 @@
 import createMiddleware from "next-intl/middleware";
-import { routing } from "./i18n/routing";
 import { NextRequest, NextResponse } from "next/server";
 
-export default createMiddleware(routing);
-// const PUBLIC_FILE = /\.(.*)$/;
+const locales = ["en", "de", "uk", "ru", "es"];
+const defaultLocale = "en";
 
-// export async function middleware(req: NextRequest) {
-//   if (
-//     req.nextUrl.pathname.startsWith("/_next") ||
-//     req.nextUrl.pathname.includes("/api/") ||
-//     PUBLIC_FILE.test(req.nextUrl.pathname)
-//   ) {
-//     return;
-//   }
+const middleware = createMiddleware({
+  locales,
+  defaultLocale,
+});
 
-//   if (req.nextUrl.locale === "default") {
-//     const locale = req.cookies.get("NEXT_LOCALE")?.value || "en";
+export function middlewareWithRedirect(req: NextRequest) {
+  const { pathname } = req.nextUrl;
 
-//     return NextResponse.redirect(
-//       new URL(`/${locale}${req.nextUrl.pathname}${req.nextUrl.search}`, req.url)
-//     );
-//   }
-// }
+  if (locales.some((locale) => pathname.startsWith(`/${locale}`))) {
+    return middleware(req);
+  }
+
+  const newUrl = new URL(`/${defaultLocale}${pathname}`, req.nextUrl.origin);
+  return NextResponse.redirect(newUrl);
+}
+
+export default middlewareWithRedirect;
 
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ["/", "/(de|en|uk|ru|es)/:path*"],
+  matcher: "/((?!api|static|.*\\..*|_next).*)",
 };
