@@ -15,6 +15,7 @@ export async function POST(req: Request) {
     });
 
     const accessToken = tokenData.access_token;
+    const sendpulse_email = process.env.SENDPULSE_EMAIl;
 
     const response = await axios.post(
       `https://api.sendpulse.com/addressbooks/${process.env.SENDPULSE_LIST_ID}/emails`,
@@ -22,7 +23,7 @@ export async function POST(req: Request) {
         confirmation: "force",
         emails: [{ email }],
         double_optin: 3,
-        sender_email: "vi7lancer@gmail.com",
+        sender_email: sendpulse_email,
         message_lang: language,
       },
       {
