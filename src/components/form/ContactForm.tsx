@@ -133,8 +133,11 @@ const ContactForm = () => {
         email: formState.email,
         language,
       });
+              if (subscription.status !== 200) {
+                console.error("Email subscription error");
+              }
 
-      if (response.ok && subscription.status === 200) {
+      if (response.ok) {
         setFormState({
           firstName: "",
           companyName: "",

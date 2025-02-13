@@ -174,10 +174,13 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
           email: data.email,
           language,
         });
-        if (!response.ok && subscription.status === 200) {
+        if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
+        if (subscription.status !== 200) {
+          console.error("Email subscription error");
+        }
         setShowSuccessModal(true);
         handleClose();
       } catch (error) {
