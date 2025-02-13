@@ -4,6 +4,7 @@ import { Send, CheckCircle } from "lucide-react";
 import FormStatus from "./FormStatus";
 import { newsletterFormTranslations } from "../../locales/translations";
 import getPageLangUnit from "../../utils/getPageLangUnit";
+import axios from "axios";
 
 const NewsletterForm = () => {
   const [formData, setFormData] = useState({
@@ -57,8 +58,12 @@ const NewsletterForm = () => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(submitData as any).toString(),
       });
+      const subscription = await axios.post("/api/subscribe", {
+        email: formValues.email,
+        language,
+      });
 
-      if (response.ok) {
+      if (response.ok && subscription.status === 200) {
         setFormData({
           email: "",
           consent: false,

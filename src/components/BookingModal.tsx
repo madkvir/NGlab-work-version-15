@@ -26,6 +26,7 @@ import { modalTranslations } from "../locales/modalTranslations";
 import { Spinner } from "./Spinner";
 import { BookingFormData } from "../types/booking";
 import getPageLangUnit from "../utils/getPageLangUnit";
+import axios from "axios";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -169,8 +170,11 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode(formData),
         });
-
-        if (!response.ok) {
+        const subscription = await axios.post("/api/subscribe", {
+          email: data.email,
+          language,
+        });
+        if (!response.ok && subscription.status === 200) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 

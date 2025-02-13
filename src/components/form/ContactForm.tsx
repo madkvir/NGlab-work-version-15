@@ -9,6 +9,7 @@ import PhoneInput from "./PhoneInput";
 import { countryCodes } from "../../data/countryCodes";
 import getPageLangUnit from "../../utils/getPageLangUnit";
 import { Link } from "../../i18n/routing";
+import axios from "axios";
 
 declare global {
   interface Window {
@@ -128,7 +129,12 @@ const ContactForm = () => {
         body: new URLSearchParams(formData as any).toString(),
       });
 
-      if (response.ok) {
+      const subscription = await axios.post("/api/subscribe", {
+        email: formState.email,
+        language,
+      });
+
+      if (response.ok && subscription.status === 200) {
         setFormState({
           firstName: "",
           companyName: "",
