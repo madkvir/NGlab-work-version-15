@@ -3,7 +3,7 @@ import axios from "axios";
 
 export async function POST(req: Request) {
   try {
-    const { email } = await req.json();
+    const { email, language } = await req.json();
     if (!email) {
       return NextResponse.json({ error: "Email is required" }, { status: 400 });
     }
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
         emails: [{ email }],
         double_optin: 3,
         sender_email: "vi7lancer@gmail.com",
-        message_lang: "ru",
+        message_lang: language,
       },
       {
         headers: {
