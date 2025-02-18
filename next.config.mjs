@@ -12,9 +12,6 @@ const nextConfig = {
 
     return config;
   },
-  images: {
-    domains: ["site-test53.netlify.app"],
-  },
 };
 
 export default withNextIntl(nextConfig);
