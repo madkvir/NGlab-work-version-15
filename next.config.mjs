@@ -12,6 +12,9 @@ const nextConfig = {
 
     return config;
   },
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default withNextIntl(nextConfig);
