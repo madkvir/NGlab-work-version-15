@@ -170,6 +170,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode(formData),
         });
+
         const subscription = await axios.post("/api/subscribe", {
           email: data.email,
           language,
