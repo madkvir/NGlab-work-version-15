@@ -28,8 +28,7 @@ const AIAssistant = async ({ params }) => {
               <Image
                 src="/assets/tools/ai-assistant.jpg"
                 alt="AI Assistant Interface"
-                width={1120}
-                height={630}
+                fill
                 className="object-cover"
                 priority
               />
