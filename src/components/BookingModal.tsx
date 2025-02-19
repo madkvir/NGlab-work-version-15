@@ -173,7 +173,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
         const subscription = await axios.post("/api/subscribe", {
           email: data.email,
-          language,
+          language: data.language,
         });
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
