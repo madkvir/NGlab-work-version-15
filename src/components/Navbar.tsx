@@ -13,8 +13,6 @@ import { translations } from "../locales/translations";
 import getPageLangUnit from "../utils/getPageLangUnit";
 import Cookies from "js-cookie";
 
-// import dynamic from "next/dynamic";
-
 // type LanguageType = 'en' | 'de' | 'es' | 'ru' | 'ua';
 
 const buttonTranslations = {

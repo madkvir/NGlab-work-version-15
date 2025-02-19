@@ -23,5 +23,5 @@ export function middlewareWithRedirect(req: NextRequest) {
 export default middlewareWithRedirect;
 
 export const config = {
-  matcher: "/((?!api|static|.*\\..*|_next).*)",
+  matcher: "/((?!api|static|.*\\..*|_next|public).*)",
 };

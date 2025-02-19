@@ -1,7 +1,9 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";
 
 type Language = "en" | "de" | "es" | "ru" | "uk";
 
@@ -66,8 +68,10 @@ const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { locale } = useParams();
   const language = locale?.toString() ?? "en";
+  const router = useRouter();
   // const { language, setLanguage } = useLanguage();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -80,8 +84,17 @@ const LanguageSelector = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleLanguageChange = (newLang: Language) => {
-    // setLanguage(newLang);
+  const handleLanguageChange = (newLang: string) => {
+    if (newLang === "ua") {
+      Cookies.set("NEXT_LOCALE", "uk", { path: "/" });
+      const newPath = `/uk${pathname.substring(3)}`; // Убираем старую локаль из пути
+      router.push(newPath);
+      setIsOpen(false);
+      return;
+    }
+    Cookies.set("NEXT_LOCALE", newLang, { path: "/" });
+    const newPath = `/${newLang}${pathname.substring(3)}`; // Убираем старую локаль из пути
+    router.push(newPath);
     setIsOpen(false);
   };
 
