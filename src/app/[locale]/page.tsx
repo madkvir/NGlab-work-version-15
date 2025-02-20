@@ -5,8 +5,6 @@ import Pricing from "../../components/Pricing";
 import FAQ from "../../components/FAQ";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
-import CookieConsent from "../../components/CookieConsent";
-import ChatWidget from "../../components/ChatWidget";
 import React from "react";
 
 const Home = () => {
@@ -19,8 +17,6 @@ const Home = () => {
       <FAQ />
       <ScrollToTop />
       <Footer />
-      <CookieConsent />
-      <ChatWidget />
     </div>
   );
 };
