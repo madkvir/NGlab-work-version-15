@@ -1,13 +1,23 @@
-import createMiddleware from "next-intl/middleware";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
 const locales = ["en", "de", "uk", "ru", "es"];
 const defaultLocale = "en";
 
-const middleware = createMiddleware({
-  locales,
-  defaultLocale,
-});
+export default function middleware(request: NextRequest) {
+  // Получаем текущий путь
+  const pathname = request.nextUrl.pathname;
+  
+  // Проверяем, является ли это запросом смены языка
+  if (pathname.includes('/contacts')) {
+    // Добавляем заголовки для предотвращения кеширования
+    const response = NextResponse.next();
+    response.headers.set('Cache-Control', 'no-store, must-revalidate');
+    return response;
+  }
+
+  return NextResponse.next();
+}
 
 export function middlewareWithRedirect(req: NextRequest) {
   const { pathname } = req.nextUrl;
@@ -20,8 +30,6 @@ export function middlewareWithRedirect(req: NextRequest) {
   return NextResponse.redirect(newUrl);
 }
 
-export default middlewareWithRedirect;
-
 export const config = {
-  matcher: "/((?!api|static|.*\\..*|_next|public).*)",
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };
