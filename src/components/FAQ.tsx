@@ -7,7 +7,6 @@ const FAQ = async ({ language }) => {
 
   return (
     <section id="faq" className="py-5 scroll-mt-20">
-      <p>{language}</p>
       <div className="max-w-7xl mx-auto px-5">
         {/* Top Divider */}
         <div className="mb-5">
