@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
-// JSON-LD разметка для counseling
+// JSON-LD разметка для counseling (исправленный вариант)
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
@@ -25,7 +25,11 @@ const jsonLd = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "ratingCount": "150"
+    "ratingCount": "150",
+    "itemReviewed": {
+      "@type": "Service",
+      "name": "NeuroGen Lab AI Counseling"
+    }
   }
 };
 
@@ -73,7 +77,6 @@ export const metadata: Metadata = {
     images: [`${baseUrl}/assets/images/og-counseling.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
-
   },
   authors: [{ name: "NeuroGen Lab Team" }],
   alternates: {
@@ -113,4 +116,4 @@ export default function CounselingLayout({
       {children}
     </>
   );
-} 
+}
