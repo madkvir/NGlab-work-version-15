@@ -3,7 +3,7 @@ import "./globals.css";
 import "../../styles/index.css";
 import "../../styles/animations.css";
 import "../../styles/calendar.css";
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { BlogProvider } from "../../context/BlogContext";
 import LoadingSpinner from "../../components/chat/LoadingSpinner";
 import { GoogleTagManager } from "@next/third-parties/google";

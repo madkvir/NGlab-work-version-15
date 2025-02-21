@@ -118,13 +118,16 @@ const Navbar = () => {
   const changeLanguage = (newLocale: string) => {
     if (newLocale === "ua") {
       Cookies.set("NEXT_LOCALE", "uk", { path: "/" });
-      const newPath = `/uk${pathname.substring(3)}`; // Убираем старую локаль из пути
-      router.push(newPath);
+      const newPath = `/uk${pathname.substring(3)}`;
+      router.replace(newPath);
+      router.refresh();
       return;
     }
     Cookies.set("NEXT_LOCALE", newLocale, { path: "/" });
-    const newPath = `/${newLocale}${pathname.substring(3)}`; // Убираем старую локаль из пути
-    router.push(newPath);
+    const newPath = `/${newLocale}${pathname.substring(3)}`;
+
+    router.replace(newPath);
+    router.refresh();
   };
 
   useClickOutside<HTMLDivElement | HTMLButtonElement>(

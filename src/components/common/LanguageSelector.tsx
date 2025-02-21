@@ -88,14 +88,16 @@ const LanguageSelector = () => {
     if (newLang === "ua") {
       Cookies.set("NEXT_LOCALE", "uk", { path: "/" });
       const newPath = `/uk${pathname.substring(3)}`; // Убираем старую локаль из пути
-      router.push(newPath);
-      setIsOpen(false);
+      router.replace(newPath);
+      router.refresh();
+      // setIsOpen(false);
       return;
     }
     Cookies.set("NEXT_LOCALE", newLang, { path: "/" });
     const newPath = `/${newLang}${pathname.substring(3)}`; // Убираем старую локаль из пути
-    router.push(newPath);
-    setIsOpen(false);
+    router.replace(newPath);
+    router.refresh();
+    // setIsOpen(false);
   };
 
   return (
