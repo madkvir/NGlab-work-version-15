@@ -1,39 +1,43 @@
 import React from "react";
 import { Metadata } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://neurogenlab.de";
 
-// JSON-LD разметка для counseling
+// JSON-LD разметка для counseling (исправленный вариант)
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "NeuroGen Lab AI Counseling",
-  "serviceType": "Consultation for your business",
-  "description": "Professional consultation for your business",
-  "url": `${baseUrl}/tools/counseling`,
+  name: "NeuroGen Lab AI Counseling",
+  serviceType: "Consultation for your business",
+  description: "Professional consultation for your business",
+  url: `${baseUrl}/tools/counseling`,
 
-  "provider": {
+  provider: {
     "@type": "Organization",
-    "name": "NeuroGen Lab",
-    "url": baseUrl
+    name: "NeuroGen Lab",
+    url: baseUrl,
   },
-  "offers": {
+  offers: {
     "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
+    price: "0",
+    priceCurrency: "USD",
   },
-  "aggregateRating": {
+  aggregateRating: {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "ratingCount": "150"
-  }
+    ratingValue: "4.9",
+    ratingCount: "150",
+    itemReviewed: {
+      "@type": "Service",
+      name: "NeuroGen Lab AI Counseling",
+    },
+  },
 };
 
 export const metadata: Metadata = {
   title: "AI Counseling | NeuroGen Lab - Professional Support Solutions",
   description: "Get professional advice for your business.",
   other: {
-    'ai-optimized': 'true',
+    "ai-optimized": "true",
   },
   keywords: [
     "ai counseling",
@@ -45,10 +49,10 @@ export const metadata: Metadata = {
     "emotional support",
     "professional guidance",
     "mental wellness",
-    "NeuroGen Lab counseling"
+    "NeuroGen Lab counseling",
   ],
   openGraph: {
-    type: 'website',
+    type: "website",
     title: "AI Counseling - Professional Support Solutions | NeuroGen Lab",
     description: "Get professional advice for your business.",
     url: `${baseUrl}/tools/counseling`,
@@ -60,30 +64,29 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab AI Counseling Service",
-        type: 'image/jpeg',
+        type: "image/jpeg",
       },
     ],
-    locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    locale: "en",
+    alternateLocale: ["de", "es", "ru", "uk"],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: "AI Counseling - Professional Support",
     description: "Get professional advice for your business.",
     images: [`${baseUrl}/assets/images/og-counseling.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
-
   },
   authors: [{ name: "NeuroGen Lab Team" }],
   alternates: {
     canonical: `${baseUrl}/tools/counseling`,
     languages: {
-      'en': `${baseUrl}/tools/counseling`,
-      'de': `${baseUrl}/de/tools/counseling`,
-      'es': `${baseUrl}/es/tools/counseling`,
-      'ru': `${baseUrl}/ru/tools/counseling`,
-      'uk': `${baseUrl}/uk/tools/counseling`
+      en: `${baseUrl}/tools/counseling`,
+      de: `${baseUrl}/de/tools/counseling`,
+      es: `${baseUrl}/es/tools/counseling`,
+      ru: `${baseUrl}/ru/tools/counseling`,
+      uk: `${baseUrl}/uk/tools/counseling`,
     },
   },
   robots: {
@@ -92,18 +95,14 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
 
-export default function CounselingLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function CounselingLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
@@ -113,4 +112,4 @@ export default function CounselingLayout({
       {children}
     </>
   );
-} 
+}
