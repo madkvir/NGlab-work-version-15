@@ -1,13 +1,10 @@
-const getServerPageLang = async (translations, params) => {
-  const resolvedParams = await params;
-  const locale = resolvedParams?.locale;
-  let language: string | number | symbol;
-  if (locale === "uk") {
-    language = "ua";
-  } else {
-    language = (locale as keyof typeof translations) ?? "en";
+const getServerPageLang = (params) => {
+  if (!params?.locale) {
+    console.warn("⚠️ params.locale is undefined. Falling back to 'en'.");
+    return "en";
   }
-  return language.toString();
+
+  return params.locale === "uk" ? "ua" : params.locale;
 };
 
 export default getServerPageLang;

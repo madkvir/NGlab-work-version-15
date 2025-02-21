@@ -7,7 +7,7 @@ import getPageLangUnit from "../../../../utils/getPageLangUnit";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const Email = async ({ params }) => {
-  const language = await getServerPageLang(emailTranslations, params);
+  const language = await getServerPageLang(params);
   const t = emailTranslations[language] || emailTranslations.en;
 
   return (

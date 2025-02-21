@@ -7,7 +7,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const AIVoiceBot = async ({ params }) => {
-  const language = await getServerPageLang(aiVoiceBotTranslations, params);
+  const language = await getServerPageLang(params);
   const t = aiVoiceBotTranslations[language];
 
   return (

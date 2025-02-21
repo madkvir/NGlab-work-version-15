@@ -6,7 +6,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const FacebookMessenger = async ({ params }) => {
-  const language = await getServerPageLang(messengerTranslations, params);
+  const language = await getServerPageLang(params);
   const t = messengerTranslations[language] || messengerTranslations.en;
 
   return (

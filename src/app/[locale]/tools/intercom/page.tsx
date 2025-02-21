@@ -6,7 +6,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const IntercomPage = async ({ params }) => {
-  const language = await getServerPageLang(intercomTranslations, params);
+  const language = await getServerPageLang(params);
   const t = intercomTranslations[language] || intercomTranslations.en;
 
   return (

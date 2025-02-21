@@ -12,8 +12,7 @@ const icons = [
   <TrendingUp className="w-6 h-6" />,
 ];
 
-const HowItWorks = async ({ params }: Params) => {
-  const language = await getServerPageLang(howItWorksTranslations, params);
+const HowItWorks = async ({ language }) => {
   const t = howItWorksTranslations[language];
 
   return (

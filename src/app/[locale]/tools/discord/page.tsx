@@ -6,7 +6,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const Discord = async ({ params }) => {
-  const language = await getServerPageLang(discordTranslations, params);
+  const language = await getServerPageLang(params);
   const t = discordTranslations[language] || discordTranslations.en;
 
   return (
