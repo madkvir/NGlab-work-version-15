@@ -1636,7 +1636,7 @@ export const contactTranslations = {
     contactInfo: {
       address: {
         title: "Address",
-        content: "Gartenweg 2, 16515 Oranienburg, Germany"
+        content: "Musterstraße 123, 10115 Berlin, Germany"
       },
       phone: {
         title: "Phone",
@@ -1664,7 +1664,7 @@ export const contactTranslations = {
     contactInfo: {
       address: {
         title: "Adresse",
-        content: "Gartenweg 2, 16515 Oranienburg, Germany"
+        content: "Musterstraße 123, 10115 Berlin, Deutschland"
       },
       phone: {
         title: "Telefon",
@@ -1692,7 +1692,7 @@ export const contactTranslations = {
     contactInfo: {
       address: {
         title: "Dirección",
-        content: "Gartenweg 2, 16515 Oranienburg, Germany"
+        content: "Musterstraße 123, 10115 Berlín, Alemania"
       },
       phone: {
         title: "Teléfono",
@@ -1720,7 +1720,7 @@ export const contactTranslations = {
     contactInfo: {
       address: {
         title: "Адрес",
-        content: "Gartenweg 2, 16515 Oranienburg, Germany"
+        content: "Musterstraße 123, 10115 Берлин, Германия"
       },
       phone: {
         title: "Телефон",
@@ -1748,7 +1748,7 @@ export const contactTranslations = {
     contactInfo: {
       address: {
         title: "Адреса",
-        content: "Gartenweg 2, 16515 Oranienburg, Germany"
+        content: "Musterstraße 123, 10115 Берлін, Німеччина"
       },
       phone: {
         title: "Телефон",
