@@ -6,7 +6,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const AntiSpam = async ({ params }) => {
-  const language = await getServerPageLang(antiSpamTranslations, params);
+  const language = await getServerPageLang(params);
   const t = antiSpamTranslations[language] || antiSpamTranslations.en;
 
   return (

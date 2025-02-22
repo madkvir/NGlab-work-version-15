@@ -5,7 +5,6 @@ import { MessageSquare } from "lucide-react";
 import ToolPageTemplate from "../../../../components/ToolPageTemplate";
 import { slackTranslations } from "../../../../locales/translations";
 import Image from "next/image";
-import getServerPageLang from "../../../../utils/getServerPageLang";
 import getPageLangUnit from "../../../../utils/getPageLangUnit";
 
 const SlackPage = () => {

@@ -6,7 +6,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const Hubspot = async ({ params }) => {
-  const language = await getServerPageLang(hubspotTranslations, params);
+  const language = await getServerPageLang(params);
   const t = hubspotTranslations[language] || hubspotTranslations.en;
 
   return (

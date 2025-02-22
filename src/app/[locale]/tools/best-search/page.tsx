@@ -6,7 +6,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const BestSearch = async ({ params }) => {
-  const language = await getServerPageLang(bestSearchTranslations, params);
+  const language = await getServerPageLang(params);
   const t = bestSearchTranslations[language] || bestSearchTranslations.en;
 
   return (

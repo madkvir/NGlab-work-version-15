@@ -6,7 +6,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const TablesPage = async ({ params }) => {
-  const language = await getServerPageLang(tablesTranslations, params);
+  const language = await getServerPageLang(params);
   const t = tablesTranslations[language] || tablesTranslations.en;
 
   return (

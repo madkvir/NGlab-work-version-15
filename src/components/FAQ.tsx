@@ -1,11 +1,8 @@
 import Divider from "./Divider";
 import FAQAccordion from "./FAQAccordion";
 import { faqTranslations } from "../locales/translations";
-import getServerPageLang from "../utils/getServerPageLang";
-import { Params } from "next/dist/server/request/params";
 
-const FAQ = async ({ params }: Params) => {
-  const language = await getServerPageLang(faqTranslations, params);
+const FAQ = async ({ language }) => {
   const t = faqTranslations[language];
 
   return (

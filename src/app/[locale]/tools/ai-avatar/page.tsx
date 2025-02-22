@@ -8,7 +8,7 @@ import getServerPageLang from "../../../../utils/getServerPageLang";
 import { Params } from "next/dist/server/request/params";
 
 const AiAvatar: FC = async ({ params }: Params) => {
-  const language = await getServerPageLang(aiAvatarTranslations, params);
+  const language = await getServerPageLang(params);
   const t = aiAvatarTranslations[language];
 
   return (

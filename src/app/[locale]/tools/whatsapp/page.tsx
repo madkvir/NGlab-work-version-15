@@ -6,7 +6,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const WhatsAppPage = async ({ params }) => {
-  const language = await getServerPageLang(whatsappTranslations, params);
+  const language = await getServerPageLang(params);
   const t = whatsappTranslations[language] || whatsappTranslations.en;
 
   return (

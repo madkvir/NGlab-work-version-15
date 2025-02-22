@@ -6,7 +6,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const JiraPage = async ({ params }) => {
-  const language = await getServerPageLang(jiraTranslations, params);
+  const language = await getServerPageLang(params);
   const t = jiraTranslations[language] || jiraTranslations.en;
 
   return (

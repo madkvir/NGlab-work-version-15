@@ -6,7 +6,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const AIAssistant = async ({ params }) => {
-  const language = await getServerPageLang(aiAssistantTranslations, params);
+  const language = await getServerPageLang(params);
   const t = aiAssistantTranslations[language];
 
   return (

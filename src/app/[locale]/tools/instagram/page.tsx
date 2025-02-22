@@ -6,7 +6,7 @@ import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
 
 const InstagramPage = async ({ params }) => {
-  const language = await getServerPageLang(instagramTranslations, params);
+  const language = await getServerPageLang(params);
   const t = instagramTranslations[language] || instagramTranslations.en;
 
   return (
