@@ -15,6 +15,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "../../i18n/routing";
+import Script from 'next/script';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://neurogenlab.de";
 
@@ -192,7 +193,7 @@ export default async function RootLayout({ children, params }: { children: React
       </head>
       <GoogleTagManager gtmId="GTM-MZNC2SFX" />
       <body>
-        {/* <Script
+        <Script
           id="google-tag-manager"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -204,15 +205,15 @@ export default async function RootLayout({ children, params }: { children: React
               })(window,document,'script','dataLayer','GTM-MZNC2SFX');
             `,
           }}
-        /> */}
-        {/* <noscript>
+        />
+        <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MZNC2SFX"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
-        </noscript> */}
+        </noscript>
 
         <div id="root">
           <BlogProvider>
