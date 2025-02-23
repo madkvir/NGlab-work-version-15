@@ -56,6 +56,8 @@ export const viewport = {
   maximumScale: 1,
 };
 
+const indexNowKey = process.env.INDEXNOW_KEY;
+
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
@@ -156,6 +158,7 @@ export const metadata: Metadata = {
     yahoo: "your-yahoo-verification",
     other: {
       me: ["your-personal-site"],
+      ...(indexNowKey ? { 'msvalidate.01': indexNowKey } : {})
     },
   },
 };
