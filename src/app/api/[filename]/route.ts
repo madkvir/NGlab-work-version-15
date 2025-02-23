@@ -1,16 +1,34 @@
-import { type NextRequest } from 'next/server'
+import { NextRequest } from 'next/server'
 
-export async function GET(request: NextRequest, { params }: { params: { filename: string } }) {
-  const filename = params.filename;
-  
-  // Используем ваш ключ для имени файла
-  if (filename === '836c09d302134195bba40a03154d6606.txt') {
-    return new Response(process.env.INDEXNOW_KEY, {
+export const dynamic = 'force-dynamic'
+
+export async function GET(request: NextRequest) {
+  try {
+    const filename = request.nextUrl.pathname.split('/').pop();
+    
+    if (filename === '836c09d302134195bba40a03154d6606.txt') {
+      return new Response(process.env.INDEXNOW_KEY, {
+        status: 200,
+        headers: {
+          'Content-Type': 'text/plain',
+          'Cache-Control': 'no-store',
+        },
+      })
+    }
+    
+    return new Response('Not Found', { 
+      status: 404,
+      headers: {
+        'Content-Type': 'text/plain',
+      },
+    })
+  } catch (error) {
+    console.error('Error in IndexNow route:', error)
+    return new Response('Internal Server Error', { 
+      status: 500,
       headers: {
         'Content-Type': 'text/plain',
       },
     })
   }
-  
-  return new Response('Not Found', { status: 404 })
 } 
