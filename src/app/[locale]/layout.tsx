@@ -174,7 +174,7 @@ export default async function RootLayout({ children, params }: { children: React
   const messages = await getMessages();
 
   return (
-    <html lang={initialLanguage} suppressHydrationWarning>
+    <html lang={initialLanguage}>
       <head>
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
