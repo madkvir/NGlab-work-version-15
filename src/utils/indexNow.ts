@@ -1,5 +1,5 @@
 export async function submitToIndexNow(urls: string[]) {
-  const key = process.env.INDEXNOW_KEY
+  const key = '836c09d302134195bba40a03154d6606'
   const host = 'neurogenlab.de'
 
   try {
