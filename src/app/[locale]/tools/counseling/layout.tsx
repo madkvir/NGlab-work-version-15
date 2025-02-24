@@ -27,8 +27,9 @@ const jsonLd = {
     ratingValue: "4.9",
     ratingCount: "150",
     itemReviewed: {
-      "@type": "Service",
+      "@type": "Product",
       name: "NeuroGen Lab AI Counseling",
+      description: "Professional consultation for your business"
     },
   },
 };
