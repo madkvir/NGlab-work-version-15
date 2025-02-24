@@ -8397,3 +8397,32 @@ const tablesTranslations = {
 };
 
 export { tablesTranslations };
+
+export const notFoundTranslations = {
+  en: {
+    title: "404 - Page Not Found",
+    description: "Sorry, we couldn't find the page you're looking for. The page might have been removed, had its name changed, or is temporarily unavailable.",
+    backToHome: "Back to Home"
+  },
+  de: {
+    title: "404 - Seite nicht gefunden",
+    description: "Entschuldigung, wir konnten die gesuchte Seite nicht finden. Die Seite wurde möglicherweise entfernt, umbenannt oder ist vorübergehend nicht verfügbar.",
+    backToHome: "Zurück zur Startseite"
+  },
+  es: {
+    title: "404 - Página no encontrada",
+    description: "Lo sentimos, no pudimos encontrar la página que estás buscando. Es posible que la página haya sido eliminada, que se haya cambiado su nombre o que no esté disponible temporalmente.",
+    backToHome: "Volver al inicio"
+  },
+  ru: {
+    title: "404 - Страница не найдена",
+    description: "Извините, мы не смогли найти страницу, которую вы ищете. Возможно, страница была удалена, переименована или временно недоступна.",
+    backToHome: "Вернуться на главную"
+  },
+  uk: {
+    title: "404 - Сторінку не знайдено",
+    description: "Вибачте, ми не змогли знайти сторінку, яку ви шукаєте. Можливо, сторінку було видалено, перейменовано або вона тимчасово недоступна.",
+    backToHome: "Повернутися на головну"
+  }
+} as const;
+

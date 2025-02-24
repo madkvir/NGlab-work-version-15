@@ -4,8 +4,14 @@ import { Home, AlertTriangle } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Link from "next/link";
+import { notFoundTranslations } from "../../locales/translations";
+import { useParams } from "next/navigation";
 
 export default function Custom404() {
+  const params = useParams();
+  const locale = (params?.locale as string) || 'en';
+  const t = notFoundTranslations[locale];
+
   return (
     <div className="min-h-screen bg-[#0B0F19] text-white">
       <Navbar />
@@ -14,11 +20,10 @@ export default function Custom404() {
         <div className="max-w-2xl mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:px-8 text-center">
           <AlertTriangle className="w-16 h-16 text-emerald-400 mx-auto mb-8" />
 
-          <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
+          <h1 className="text-4xl font-bold mb-4">{t.title}</h1>
 
           <p className="text-gray-400 text-lg mb-8">
-            Sorry, we couldn't find the page you're looking for. The page might have been removed,
-            had its name changed, or is temporarily unavailable.
+            {t.description}
           </p>
 
           <div className="relative group inline-block">
@@ -28,7 +33,7 @@ export default function Custom404() {
               className="relative flex items-center justify-center gap-2 px-6 py-3 bg-gray-900/90 rounded-lg text-white group-hover:text-emerald-400 transition-colors"
             >
               <Home className="w-5 h-5" />
-              Back to Home
+              {t.backToHome}
             </Link>
           </div>
         </div>
