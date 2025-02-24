@@ -1,33 +1,37 @@
 "use client";
 
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
-import { useLanguage } from "../context/LanguageContext";
 import { useMemo } from "react";
+import { Link } from "../i18n/routing";
+import getPageLangUnit from "../utils/getPageLangUnit";
+import React from "react";
 
 const backToHomeTranslations = {
   en: {
-    text: "Back to Home"
+    text: "Back to Home",
   },
   de: {
-    text: "Zurück zur Startseite"
+    text: "Zurück zur Startseite",
   },
   es: {
-    text: "Volver al Inicio"
+    text: "Volver al Inicio",
   },
   ru: {
-    text: "На главную"
+    text: "На главную",
   },
   ua: {
-    text: "На головну"
-  }
+    text: "На головну",
+  },
 };
 
 const BackToHome = () => {
-  const { language } = useLanguage();
+  const language = getPageLangUnit(backToHomeTranslations);
 
   const translation = useMemo(() => {
-    return backToHomeTranslations[language as keyof typeof backToHomeTranslations] || backToHomeTranslations.en;
+    return (
+      backToHomeTranslations[language as keyof typeof backToHomeTranslations] ||
+      backToHomeTranslations.en
+    );
   }, [language]);
 
   return (

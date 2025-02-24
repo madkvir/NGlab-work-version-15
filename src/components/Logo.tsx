@@ -1,7 +1,8 @@
 "use client";
-import Link from "next/link";
+
 import { usePathname } from "next/navigation";
 import React from "react";
+import { Link } from "../i18n/routing";
 
 const Logo = () => {
   const location = usePathname();

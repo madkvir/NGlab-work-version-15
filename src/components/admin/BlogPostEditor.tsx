@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { createBlogPost, updateBlogPost } from "../../services/blog.service";
 
 interface BlogPost {
-  id: number;
+  id: string;
   title: string;
   excerpt: string;
   content: string;
@@ -26,7 +26,7 @@ interface BlogPostEditorProps {
 const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel }) => {
   const [formData, setFormData] = useState<BlogPost>(
     post || {
-      id: Date.now(),
+      id: crypto.randomUUID(),
       title: "",
       slug: "",
       excerpt: "",

@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import FormStatus from "./FormStatus";
-import { useLanguage } from '../../context/LanguageContext';
-import { newsletterFormTranslations } from '../../locales/translations';
+import { newsletterFormTranslations } from "../../locales/translations";
+import getPageLangUnit from "../../utils/getPageLangUnit";
+import axios from "axios";
 
 const NewsletterForm = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +14,7 @@ const NewsletterForm = () => {
   });
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { language } = useLanguage();
+  const language = getPageLangUnit(newsletterFormTranslations);
   const t = newsletterFormTranslations[language];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,7 +30,7 @@ const NewsletterForm = () => {
     setIsSubmitting(true);
 
     const formValues = formData;
-    
+
     if (formValues["bot-field"]) {
       return;
     }
@@ -57,6 +58,13 @@ const NewsletterForm = () => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(submitData as any).toString(),
       });
+      const subscription = await axios.post("/api/subscribe", {
+        email: formValues.email,
+        language,
+      });
+      if (subscription.status !== 200) {
+        console.error("Email subscription error");
+      }
 
       if (response.ok) {
         setFormData({
@@ -81,9 +89,7 @@ const NewsletterForm = () => {
           <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
         </div>
         <div>
-          <h4 className="text-sm sm:text-base font-semibold text-emerald-400">
-            {t.successTitle}
-          </h4>
+          <h4 className="text-sm sm:text-base font-semibold text-emerald-400">{t.successTitle}</h4>
           <p className="text-xs sm:text-sm text-gray-400">{t.successMessage}</p>
         </div>
       </div>

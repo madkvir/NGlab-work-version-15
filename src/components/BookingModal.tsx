@@ -23,9 +23,10 @@ import { LANGUAGES, SUBJECTS, POSITIONS } from "../config/constants";
 import { LanguageSelect } from "./LanguageSelect";
 import { SuccessModal } from "./SuccessModal";
 import { modalTranslations } from "../locales/modalTranslations";
-import { useLanguage } from "../context/LanguageContext";
 import { Spinner } from "./Spinner";
 import { BookingFormData } from "../types/booking";
+import getPageLangUnit from "../utils/getPageLangUnit";
+import axios from "axios";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -84,7 +85,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
       "bot-field": "",
     },
   });
-  const { language } = useLanguage();
+  const language = getPageLangUnit(modalTranslations);
   const t = modalTranslations[language];
 
   const selectedTimezone = watch("timezone", defaultTimezone);
@@ -170,10 +171,17 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
           body: encode(formData),
         });
 
+        const subscription = await axios.post("/api/subscribe", {
+          email: data.email,
+          language,
+        });
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
+        if (subscription.status !== 200) {
+          console.error("Email subscription error");
+        }
         setShowSuccessModal(true);
         handleClose();
       } catch (error) {

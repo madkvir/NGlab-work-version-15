@@ -7,8 +7,9 @@ import SubmitButton from "./SubmitButton";
 import ServiceSelection from "./ServiceSelection";
 import PhoneInput from "./PhoneInput";
 import { countryCodes } from "../../data/countryCodes";
-import Link from "next/link";
-import { useLanguage } from "../../context/LanguageContext";
+import getPageLangUnit from "../../utils/getPageLangUnit";
+import { Link } from "../../i18n/routing";
+import axios from "axios";
 
 declare global {
   interface Window {
@@ -31,11 +32,66 @@ const formTranslations = {
       description: "Thank you for contacting us. We'll get back to you as soon as possible.",
     },
   },
-  // ... other translations
+  de: {
+    firstName: "Ihr Name *",
+    companyName: "Firmenname",
+    email: "E-Mail-Adresse *",
+    phone: "Telefonnummer",
+    interests: "Ich interessiere mich für: *",
+    message: "Nachricht",
+    consent: "Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der",
+    privacyPolicy: "Datenschutzerklärung",
+    success: {
+      title: "Nachricht erfolgreich gesendet!",
+      description: "Vielen Dank für Ihre Kontaktaufnahme. Wir melden uns schnellstmöglich bei Ihnen.",
+    },
+  },
+  es: {
+    firstName: "Su Nombre *",
+    companyName: "Nombre de la Empresa",
+    email: "Correo Electrónico *",
+    phone: "Número de Teléfono",
+    interests: "Me interesa: *",
+    message: "Mensaje",
+    consent: "Acepto el procesamiento de mis datos personales según la",
+    privacyPolicy: "Política de Privacidad",
+    success: {
+      title: "¡Mensaje Enviado con Éxito!",
+      description: "Gracias por contactarnos. Nos pondremos en contacto con usted lo antes posible.",
+    },
+  },
+  ru: {
+    firstName: "Ваше имя *",
+    companyName: "Название компании",
+    email: "Электронная почта *",
+    phone: "Номер телефона",
+    interests: "Меня интересует: *",
+    message: "Сообщение",
+    consent: "Я согласен на обработку моих персональных данных в соответствии с",
+    privacyPolicy: "Политикой конфиденциальности",
+    success: {
+      title: "Сообщение успешно отправлено!",
+      description: "Спасибо за обращение. Мы свяжемся с вами в ближайшее время.",
+    },
+  },
+  ua: {
+    firstName: "Ваше ім'я *",
+    companyName: "Назва компанії",
+    email: "Електронна пошта *",
+    phone: "Номер телефону",
+    interests: "Мене цікавить: *",
+    message: "Повідомлення",
+    consent: "Я погоджуюся на обробку моїх персональних даних відповідно до",
+    privacyPolicy: "Політики конфіденційності",
+    success: {
+      title: "Повідомлення успішно надіслано!",
+      description: "Дякуємо за звернення. Ми зв'яжемося з вами найближчим часом.",
+    },
+  },
 };
 
 const ContactForm = () => {
-  const { language } = useLanguage();
+  const language = getPageLangUnit(formTranslations);
   const t = formTranslations[language];
   const [countryCode, setCountryCode] = useState("+49");
   const [showSuccess, setShowSuccess] = useState(false);
@@ -127,6 +183,14 @@ const ContactForm = () => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData as any).toString(),
       });
+
+      const subscription = await axios.post("/api/subscribe", {
+        email: formState.email,
+        language,
+      });
+      if (subscription.status !== 200) {
+        console.error("Email subscription error");
+      }
 
       if (response.ok) {
         setFormState({
