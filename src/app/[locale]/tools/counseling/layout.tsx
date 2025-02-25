@@ -22,16 +22,24 @@ const jsonLd = {
     price: "0",
     priceCurrency: "USD",
   },
+  review: {
+    "@type": "Review",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "4.9",
+      bestRating: "5"
+    },
+    author: {
+      "@type": "Person",
+      name: "Client Review"
+    }
+  },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
     ratingCount: "150",
-    itemReviewed: {
-      "@type": "Product",
-      name: "NeuroGen Lab AI Counseling",
-      description: "Professional consultation for your business"
-    },
-  },
+    bestRating: "5"
+  }
 };
 
 export const metadata: Metadata = {
