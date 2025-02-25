@@ -75,7 +75,6 @@ export default function robots(): MetadataRoute.Robots {
           '/*.svg',
           '/*.ico'
         ],
-        crawlDelay: 2
       },
       {
         userAgent: 'Yandexbot',
