@@ -11,34 +11,10 @@ const jsonLd = {
   serviceType: "Consultation for your business",
   description: "Professional consultation for your business",
   url: `${baseUrl}/tools/counseling`,
-
   provider: {
     "@type": "Organization",
     name: "NeuroGen Lab",
     url: baseUrl,
-  },
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
-  review: {
-    "@type": "Review",
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: "4.9",
-      bestRating: "5"
-    },
-    author: {
-      "@type": "Person",
-      name: "Client Review"
-    }
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    ratingCount: "150",
-    bestRating: "5"
   }
 };
 
