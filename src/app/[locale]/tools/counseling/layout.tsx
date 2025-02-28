@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/counseling`,
     languages: {
-      en: `${baseUrl}/tools/counseling`,
+      en: `${baseUrl}/en/tools/counseling`,
       de: `${baseUrl}/de/tools/counseling`,
       es: `${baseUrl}/es/tools/counseling`,
       ru: `${baseUrl}/ru/tools/counseling`,
