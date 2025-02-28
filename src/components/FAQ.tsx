@@ -2,7 +2,11 @@ import Divider from "./Divider";
 import FAQAccordion from "./FAQAccordion";
 import { faqTranslations } from "../locales/translations";
 
-const FAQ = async ({ language }) => {
+interface FAQProps {
+  language: keyof typeof faqTranslations;
+}
+
+const FAQ = async ({ language }: FAQProps) => {
   const t = faqTranslations[language];
 
   return (

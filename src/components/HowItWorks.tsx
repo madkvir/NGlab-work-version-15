@@ -12,7 +12,11 @@ const icons = [
   <TrendingUp className="w-6 h-6" />,
 ];
 
-const HowItWorks = async ({ language }) => {
+interface HowItWorksProps {
+  language: keyof typeof howItWorksTranslations;
+}
+
+const HowItWorks = async ({ language }: HowItWorksProps) => {
   const t = howItWorksTranslations[language];
 
   return (
