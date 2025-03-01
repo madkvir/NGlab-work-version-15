@@ -4,37 +4,53 @@ import { NextRequest, NextResponse } from "next/server";
 const locales = ["en", "de", "uk", "ru", "es"];
 const defaultLocale = "en";
 
-const middleware = createMiddleware({
+const intlMiddleware = createMiddleware({
   locales,
   defaultLocale,
 });
 
 export function middlewareWithRedirect(req: NextRequest) {
   const url = req.nextUrl;
-  const hostname = url.hostname;
+  let hostname = url.hostname;
   const path = url.pathname;
   
-  // Редирект с HTTP на HTTPS и WWW на non-WWW
-  if (hostname.startsWith('www.')) {
-    const newUrl = new URL(url.href.replace('www.', ''));
-    return NextResponse.redirect(newUrl.href, { status: 301 });
+  // Проверяем, нужно ли изменять URL
+  let changed = false;
+  let newUrl = new URL(url.href);
+
+  // ✅ Убираем www если есть
+  if (hostname.startsWith("www.")) {
+    hostname = hostname.replace("www.", "");
+    newUrl.hostname = hostname;
+    changed = true;
   }
 
-  // Обработка языковых редиректов только после WWW редиректа
-  if (locales.some((locale) => path.startsWith(`/${locale}`))) {
-    return middleware(req);
+  // ✅ Принудительно используем HTTPS
+  if (url.protocol !== "https:") {
+    newUrl.protocol = "https:";
+    changed = true;
   }
 
-  // Редирект на дефолтную локаль
-  const newUrl = new URL(`/${defaultLocale}${path}`, url.origin);
-  return NextResponse.redirect(newUrl.href, { status: 301 });
+  // ✅ Добавляем языковой префикс, если его нет (но доверяем `next-intl/middleware`)
+  if (!locales.some((locale) => path.startsWith(`/${locale}`))) {
+    newUrl.pathname = `/${defaultLocale}${path}`;
+    changed = true;
+  }
+
+  // ✅ Делаем единый 301-редирект, если URL изменился
+  if (changed) {
+    return NextResponse.redirect(newUrl.href, 301);
+  }
+
+  // ✅ Отдаем управление `next-intl/middleware`
+  return intlMiddleware(req);
 }
 
 export default middlewareWithRedirect;
 
 export const config = {
   matcher: [
-    // Исключаем файлы и API роуты
+    // Исключаем файлы и API-роуты
     "/((?!api|static|.*\\.|_next|favicon.ico).*)",
   ],
 };
