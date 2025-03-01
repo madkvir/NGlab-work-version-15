@@ -3,27 +3,7 @@
   publish = ".next"
   functions = "netlify/functions"
 
-# Редирект HTTP → HTTPS
-[[redirects]]
-  from = "http://neurogenlab.de/*"
-  to = "https://neurogenlab.de/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.neurogenlab.de/*"
-  to = "https://neurogenlab.de/:splat"
-  status = 301
-  force = true
-
-# Редирект WWW → без WWW
-[[redirects]]
-  from = "https://www.neurogenlab.de/*"
-  to = "https://neurogenlab.de/:splat"
-  status = 301
-  force = true
-
-# API-редиректы (оставляем как есть)
+# API-редиректы
 [[redirects]]
   from = "/api/posts"
   to = "/.netlify/functions/blog"
@@ -38,7 +18,7 @@
   force = true
   methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 
-# Основной редирект для Next.js SPA
+# Основной редирект для Next.js
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -10,18 +10,31 @@ const middleware = createMiddleware({
 });
 
 export function middlewareWithRedirect(req: NextRequest) {
-  const { pathname } = req.nextUrl;
+  const url = req.nextUrl;
+  const hostname = url.hostname;
+  const path = url.pathname;
+  
+  // Редирект с HTTP на HTTPS и WWW на non-WWW
+  if (hostname.startsWith('www.')) {
+    const newUrl = new URL(url.href.replace('www.', ''));
+    return NextResponse.redirect(newUrl.href, { status: 301 });
+  }
 
-  if (locales.some((locale) => pathname.startsWith(`/${locale}`))) {
+  // Обработка языковых редиректов только после WWW редиректа
+  if (locales.some((locale) => path.startsWith(`/${locale}`))) {
     return middleware(req);
   }
 
-  const newUrl = new URL(`/${defaultLocale}${pathname}`, req.nextUrl.origin);
-  return NextResponse.redirect(newUrl);
+  // Редирект на дефолтную локаль
+  const newUrl = new URL(`/${defaultLocale}${path}`, url.origin);
+  return NextResponse.redirect(newUrl.href, { status: 301 });
 }
 
 export default middlewareWithRedirect;
 
 export const config = {
-  matcher: "/((?!api|static|.*\\..*|_next|public).*)",
+  matcher: [
+    // Исключаем файлы и API роуты
+    "/((?!api|static|.*\\.|_next|favicon.ico).*)",
+  ],
 };
