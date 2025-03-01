@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/email`,
     languages: {
-      'en': `${baseUrl}/tools/email`,
+      'en': `${baseUrl}/en/tools/email`,
       'de': `${baseUrl}/de/tools/email`,
       'es': `${baseUrl}/es/tools/email`,
       'ru': `${baseUrl}/ru/tools/email`,

@@ -78,7 +78,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/zapier`,
     languages: {
-      'en': `${baseUrl}/tools/zapier`,
+      'en': `${baseUrl}/en/tools/zapier`,
       'de': `${baseUrl}/de/tools/zapier`,
       'es': `${baseUrl}/es/tools/zapier`,
       'ru': `${baseUrl}/ru/tools/zapier`,

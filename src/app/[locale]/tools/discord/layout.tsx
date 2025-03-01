@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/discord`,
     languages: {
-      'en': `${baseUrl}/tools/discord`,
+      'en': `${baseUrl}/en/tools/discord`,
       'de': `${baseUrl}/de/tools/discord`,
       'es': `${baseUrl}/es/tools/discord`,
       'ru': `${baseUrl}/ru/tools/discord`,

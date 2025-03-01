@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/jira`,
     languages: {
-      'en': `${baseUrl}/tools/jira`,
+      'en': `${baseUrl}/en/tools/jira`,
       'de': `${baseUrl}/de/tools/jira`,
       'es': `${baseUrl}/es/tools/jira`,
       'ru': `${baseUrl}/ru/tools/jira`,

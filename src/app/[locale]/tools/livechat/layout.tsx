@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/livechat`,
     languages: {
-      'en': `${baseUrl}/tools/livechat`,
+      'en': `${baseUrl}/en/tools/livechat`,
       'de': `${baseUrl}/de/tools/livechat`,
       'es': `${baseUrl}/es/tools/livechat`,
       'ru': `${baseUrl}/ru/tools/livechat`,

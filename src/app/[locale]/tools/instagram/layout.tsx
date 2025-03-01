@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/instagram`,
     languages: {
-      'en': `${baseUrl}/tools/instagram`,
+      'en': `${baseUrl}/en/tools/instagram`,
       'de': `${baseUrl}/de/tools/instagram`,
       'es': `${baseUrl}/es/tools/instagram`,
       'ru': `${baseUrl}/ru/tools/instagram`,

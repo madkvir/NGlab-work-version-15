@@ -78,7 +78,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/slack`,
     languages: {
-      'en': `${baseUrl}/tools/slack`,
+      'en': `${baseUrl}/en/tools/slack`,
       'de': `${baseUrl}/de/tools/slack`,
       'es': `${baseUrl}/es/tools/slack`,
       'ru': `${baseUrl}/ru/tools/slack`,

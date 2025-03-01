@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/intercom`,
     languages: {
-      'en': `${baseUrl}/tools/intercom`,
+      'en': `${baseUrl}/en/tools/intercom`,
       'de': `${baseUrl}/de/tools/intercom`,
       'es': `${baseUrl}/es/tools/intercom`,
       'ru': `${baseUrl}/ru/tools/intercom`,

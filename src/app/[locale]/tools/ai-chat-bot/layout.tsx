@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/ai-chat-bot`,
     languages: {
-      'en': `${baseUrl}/tools/ai-chat-bot`,
+      'en': `${baseUrl}/en/tools/ai-chat-bot`,
       'de': `${baseUrl}/de/tools/ai-chat-bot`,
       'es': `${baseUrl}/es/tools/ai-chat-bot`,
       'ru': `${baseUrl}/ru/tools/ai-chat-bot`,

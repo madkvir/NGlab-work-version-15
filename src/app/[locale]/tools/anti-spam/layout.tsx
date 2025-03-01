@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/anti-spam`,
     languages: {
-      'en': `${baseUrl}/tools/anti-spam`,
+      'en': `${baseUrl}/en/tools/anti-spam`,
       'de': `${baseUrl}/de/tools/anti-spam`,
       'es': `${baseUrl}/es/tools/anti-spam`,
       'ru': `${baseUrl}/ru/tools/anti-spam`,

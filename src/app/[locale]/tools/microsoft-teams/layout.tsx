@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/microsoft-teams`,
     languages: {
-      'en': `${baseUrl}/tools/microsoft-teams`,
+      'en': `${baseUrl}/en/tools/microsoft-teams`,
       'de': `${baseUrl}/de/tools/microsoft-teams`,
       'es': `${baseUrl}/es/tools/microsoft-teams`,
       'ru': `${baseUrl}/ru/tools/microsoft-teams`,

@@ -76,7 +76,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/whatsapp`,
     languages: {
-      'en': `${baseUrl}/tools/whatsapp`,
+      'en': `${baseUrl}/en/tools/whatsapp`,
       'de': `${baseUrl}/de/tools/whatsapp`,
       'es': `${baseUrl}/es/tools/whatsapp`,
       'ru': `${baseUrl}/ru/tools/whatsapp`,

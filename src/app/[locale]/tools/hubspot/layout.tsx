@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/hubspot`,
     languages: {
-      'en': `${baseUrl}/tools/hubspot`,
+      'en': `${baseUrl}/en/tools/hubspot`,
       'de': `${baseUrl}/de/tools/hubspot`,
       'es': `${baseUrl}/es/tools/hubspot`,
       'ru': `${baseUrl}/ru/tools/hubspot`,

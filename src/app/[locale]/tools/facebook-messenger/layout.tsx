@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/facebook-messenger`,
     languages: {
-      'en': `${baseUrl}/tools/facebook-messenger`,
+      'en': `${baseUrl}/en/tools/facebook-messenger`,
       'de': `${baseUrl}/de/tools/facebook-messenger`,
       'es': `${baseUrl}/es/tools/facebook-messenger`,
       'ru': `${baseUrl}/ru/tools/facebook-messenger`,

@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/tools/salesforce`,
     languages: {
-      'en': `${baseUrl}/tools/salesforce`,
+      'en': `${baseUrl}/en/tools/salesforce`,
       'de': `${baseUrl}/de/tools/salesforce`,
       'es': `${baseUrl}/es/tools/salesforce`,
       'ru': `${baseUrl}/ru/tools/salesforce`,
