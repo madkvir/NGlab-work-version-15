@@ -14,9 +14,21 @@ export function middlewareWithRedirect(req: NextRequest) {
   const hostname = url.hostname;
   const path = url.pathname;
   
-  // Редирект с HTTP на HTTPS и WWW на non-WWW
+  // Редирект с HTTP на HTTPS
+  if (!req.headers.get('x-forwarded-proto')?.includes('https')) {
+    const newUrl = new URL(`https://${hostname}${path}`);
+    return NextResponse.redirect(newUrl.href, { status: 301 });
+  }
+
+  // Редирект с WWW на non-WWW
   if (hostname.startsWith('www.')) {
     const newUrl = new URL(url.href.replace('www.', ''));
+    return NextResponse.redirect(newUrl.href, { status: 301 });
+  }
+
+  // Удаление trailing slash, если он есть (кроме корневого пути)
+  if (path.length > 1 && path.endsWith('/')) {
+    const newUrl = new URL(path.slice(0, -1), url.origin);
     return NextResponse.redirect(newUrl.href, { status: 301 });
   }
 
@@ -34,7 +46,9 @@ export default middlewareWithRedirect;
 
 export const config = {
   matcher: [
-    // Исключаем файлы и API роуты
+    // Исключаем файлы и API роуты, но обрабатываем все остальные пути
     "/((?!api|static|.*\\.|_next|favicon.ico).*)",
+    // Добавляем обработку корневого пути
+    "/"
   ],
 };
