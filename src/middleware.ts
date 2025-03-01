@@ -9,40 +9,47 @@ const intlMiddleware = createMiddleware({
   defaultLocale,
 });
 
+// Проверка локального окружения
+const isLocalhost = (hostname: string) => {
+  return hostname === 'localhost' || 
+         hostname === '127.0.0.1' || 
+         hostname.includes('.local') ||
+         hostname.includes('.test');
+};
+
 export function middlewareWithRedirect(req: NextRequest) {
   const url = req.nextUrl;
   let hostname = url.hostname;
   const path = url.pathname;
   
-  // Проверяем, нужно ли изменять URL
-  let changed = false;
-  let newUrl = new URL(url.href);
-
-  // ✅ Убираем www если есть
+  // Для локальной разработки только добавляем языковой префикс
+  if (isLocalhost(hostname)) {
+    if (!locales.some((locale) => path.startsWith(`/${locale}`))) {
+      return NextResponse.redirect(new URL(`/${defaultLocale}${path}`, url));
+    }
+    return intlMiddleware(req);
+  }
+  
+  // Для продакшена делаем все редиректы за один раз
+  let finalUrl = new URL(url.href);
+  
   if (hostname.startsWith("www.")) {
-    hostname = hostname.replace("www.", "");
-    newUrl.hostname = hostname;
-    changed = true;
+    finalUrl.hostname = hostname.replace("www.", "");
   }
-
-  // ✅ Принудительно используем HTTPS
+  
   if (url.protocol !== "https:") {
-    newUrl.protocol = "https:";
-    changed = true;
+    finalUrl.protocol = "https:";
   }
-
-  // ✅ Добавляем языковой префикс, если его нет (но доверяем `next-intl/middleware`)
+  
   if (!locales.some((locale) => path.startsWith(`/${locale}`))) {
-    newUrl.pathname = `/${defaultLocale}${path}`;
-    changed = true;
+    finalUrl.pathname = `/${defaultLocale}${path}`;
   }
-
-  // ✅ Делаем единый 301-редирект, если URL изменился
-  if (changed) {
-    return NextResponse.redirect(newUrl.href, 301);
+  
+  // Делаем редирект только если URL действительно изменился
+  if (finalUrl.href !== url.href) {
+    return NextResponse.redirect(finalUrl.href, 301);
   }
-
-  // ✅ Отдаем управление `next-intl/middleware`
+  
   return intlMiddleware(req);
 }
 
