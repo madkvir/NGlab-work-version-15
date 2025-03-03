@@ -13,17 +13,30 @@ export function middlewareWithRedirect(req: NextRequest) {
   const url = req.nextUrl;
   const hostname = url.hostname;
   const path = url.pathname;
-  
+
+  // Local site dev
+  if (hostname === "localhost") {
+    const { pathname } = req.nextUrl;
+
+    if (locales.some((locale) => pathname.startsWith(`/${locale}`))) {
+      return middleware(req);
+    }
+
+    const newUrl = new URL(`/${defaultLocale}${pathname}`, req.nextUrl.origin);
+    return NextResponse.redirect(newUrl);
+  }
+
   // Комбинированный редирект: HTTP -> HTTPS, WWW -> non-WWW, добавление локали
-  if (!req.headers.get('x-forwarded-proto')?.includes('https') || 
-      hostname.startsWith('www.') || 
-      !locales.some(locale => path.startsWith(`/${locale}`))) {
-    
-    const newHostname = hostname.replace('www.', '');
-    const newPath = locales.some(locale => path.startsWith(`/${locale}`)) 
-      ? path 
-      : `/${defaultLocale}${path === '/' ? '' : path}`;
-    
+  if (
+    !req.headers.get("x-forwarded-proto")?.includes("https") ||
+    hostname.startsWith("www.") ||
+    !locales.some((locale) => path.startsWith(`/${locale}`))
+  ) {
+    const newHostname = hostname.replace("www.", "");
+    const newPath = locales.some((locale) => path.startsWith(`/${locale}`))
+      ? path
+      : `/${defaultLocale}${path === "/" ? "" : path}`;
+
     const newUrl = new URL(`https://${newHostname}${newPath}`);
     return NextResponse.redirect(newUrl.href, { status: 301 });
   }
@@ -34,8 +47,5 @@ export function middlewareWithRedirect(req: NextRequest) {
 export default middlewareWithRedirect;
 
 export const config = {
-  matcher: [
-    "/((?!api|static|.*\\.|_next|favicon.ico).*)",
-    "/"
-  ],
+  matcher: ["/((?!api|static|.*\\.|_next|favicon.ico).*)", "/"],
 };
