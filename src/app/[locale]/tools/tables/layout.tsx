@@ -1,15 +1,17 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "NeuroGen Lab Smart Table Solution",
-  "applicationCategory": "BusinessApplication",
-  "description": "AI-powered table management and data organization solution",
-  "url": `${baseUrl}/tools/table`,
+
+  "name": "NeuroGen Lab Smart Tables",
+  "applicationCategory": "BusinessApplication, DataManagementApplication",
+  "description": "AI-powered table management for efficient data organization and analysis",
+  "url": `${baseUrl}/tools/tables`,
   "provider": {
     "@type": "Organization",
     "name": "NeuroGen Lab",
@@ -21,67 +23,65 @@ const jsonLd = {
     "priceCurrency": "USD"
   },
   "operatingSystem": "All",
-  "applicationSubCategory": "DataManagement",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "185"
+    "ratingValue": "4.7",
+    "ratingCount": "130"
   }
 };
 
 export const metadata: Metadata = {
-  title: "Smart Table | NeuroGen Lab - Intelligent Data Organization",
-  description: "Transform your data management with AI-powered table solutions. Advanced sorting, filtering, and analytics for efficient data organization and analysis.",
+  title: "Smart Tables | NeuroGen Lab - Intelligent Data Management",
+  description: "Transform your data management with AI-powered table solutions. Advanced sorting, filtering, and analytics for efficient organization.",
   other: {
     'ai-optimized': 'true',
-    'og:image': '/assets/images/og-table.jpg',
   },
   keywords: [
-    "smart table",
-    "data organization",
+    "smart tables",
     "data management",
+    "data organization",
     "table analytics",
     "data sorting",
     "data filtering",
     "business data",
     "data visualization",
-    "NeuroGen Lab table",
-    "AI data management"
+    "NeuroGen Lab tables",
+    "AI data solution"
   ],
   openGraph: {
     type: 'website',
-    title: "Smart Table - Intelligent Data Organization | NeuroGen Lab",
-    description: "Transform your data management with AI-powered table solutions. Advanced features for efficient data organization.",
-    url: `${baseUrl}/tools/table`,
+    title: "Smart Tables - Intelligent Data Management | NeuroGen Lab",
+    description: "Transform your data management with AI-powered table solutions. Advanced features for efficient organization.",
+    url: `${baseUrl}/tools/tables`,
     siteName: "NeuroGen Lab",
     images: [
       {
-        url: '/assets/images/og-table.jpg',
+        url: `${baseUrl}/assets/images/og-tables.jpg`,
         width: 1200,
         height: 630,
-        alt: "NeuroGen Lab Smart Table",
+        alt: "NeuroGen Lab Smart Tables",
         type: 'image/jpeg',
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Smart Table - Intelligent Data Management",
-    description: "Enhance your data organization with AI technology. Smart sorting and advanced analytics.",
-    images: ['/assets/images/og-table.jpg'],
+    title: "Smart Tables - Intelligent Data Management",
+    description: "Transform your data management with AI-powered table solutions and analytics.",
+    images: [`${baseUrl}/assets/images/og-tables.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
   alternates: {
-    canonical: `${baseUrl}/tools/table`,
+    canonical: `${baseUrl}/tools/tables`,
     languages: {
-      'en': `${baseUrl}/tools/table`,
-      'de': `${baseUrl}/de/tools/table`,
-      'es': `${baseUrl}/es/tools/table`,
-      'ru': `${baseUrl}/ru/tools/table`,
-      'uk': `${baseUrl}/uk/tools/table`
+      'en': `${baseUrl}/tools/tables`,
+      'de': `${baseUrl}/de/tools/tables`,
+      'es': `${baseUrl}/es/tools/tables`,
+      'ru': `${baseUrl}/ru/tools/tables`,
+      'uk': `${baseUrl}/uk/tools/tables`
     },
   },
   robots: {
@@ -95,10 +95,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function TableLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

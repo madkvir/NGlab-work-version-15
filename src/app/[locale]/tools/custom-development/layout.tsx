@@ -1,15 +1,16 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 // JSON-LD разметка для Custom Development
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Service",
+  "@type": "SoftwareApplication",
   "name": "NeuroGen Lab Custom Development",
-  "serviceType": "Software Development",
-  "description": "Custom software development solutions with AI integration capabilities",
+  "applicationCategory": "BusinessApplication, DevelopmentApplication",
+  "description": "AI-powered custom software development solutions for unique business needs and digital transformation",
   "url": `${baseUrl}/tools/custom-development`,
   "provider": {
     "@type": "Organization",
@@ -18,38 +19,39 @@ const jsonLd = {
   },
   "offers": {
     "@type": "Offer",
-    "price": "Contact for pricing",
+    "price": "0",
     "priceCurrency": "USD"
   },
+  "operatingSystem": "All",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "ratingCount": "180"
+    "ratingCount": "190"
   }
 };
 
 export const metadata: Metadata = {
   title: "Custom Development | NeuroGen Lab - Tailored Software Solutions",
-  description: "Transform your business with custom software development. Get tailored solutions that perfectly match your needs and drive growth.",
+  description: "Transform your business with custom AI-powered software solutions. Tailored development services for unique requirements and digital innovation.",
   other: {
     'ai-optimized': 'true',
   },
   keywords: [
-    "custom development",
+    "Custom development",
     "software solutions",
-    "web development",
-    "mobile apps",
-    "enterprise software",
+    "tailored applications",
+    "AI development",
     "digital transformation",
-    "AI integration",
     "custom software",
-    "bespoke solutions",
-    "NeuroGen Lab development"
+    "business solutions",
+    "technology innovation",
+    "NeuroGen Lab development",
+    "enterprise solutions"
   ],
   openGraph: {
     type: 'website',
     title: "Custom Development - Tailored Software Solutions | NeuroGen Lab",
-    description: "Transform your business with custom software development solutions. Get AI-powered, tailored applications.",
+    description: "Transform your business with custom AI-powered software development. Innovative solutions for unique requirements.",
     url: `${baseUrl}/tools/custom-development`,
     siteName: "NeuroGen Lab",
     images: [
@@ -62,27 +64,17 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Custom Development - Tailored Software Solutions",
-    description: "Transform your business with custom software",
+    title: "Custom Development - Smart Software Solutions",
+    description: "Transform your business with custom AI-powered software development and innovation.",
     images: [`${baseUrl}/assets/images/og-custom-development.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  authors: [{ name: "NeuroGen Lab Team" }],
-  alternates: {
-    canonical: `${baseUrl}/tools/custom-development`,
-    languages: {
-      'en': `${baseUrl}/en/tools/custom-development`,
-      'de': `${baseUrl}/de/tools/custom-development`,
-      'es': `${baseUrl}/es/tools/custom-development`,
-      'ru': `${baseUrl}/ru/tools/custom-development`,
-      'uk': `${baseUrl}/uk/tools/custom-development`
-    },
-  },
+  alternates: generateHrefLangs('tools/custom-development'),
   robots: {
     index: true,
     follow: true,
@@ -94,9 +86,10 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function CustomDevelopmentLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

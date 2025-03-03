@@ -1,14 +1,15 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "NeuroGen Lab Facebook Messenger Solution",
-  "applicationCategory": "BusinessApplication",
-  "description": "AI-powered Facebook Messenger automation for enhanced business communication",
+  "name": "NeuroGen Lab Facebook Messenger Integration",
+  "applicationCategory": "BusinessApplication, MessagingApplication",
+  "description": "AI-powered Facebook Messenger integration for enhanced customer communication and support automation",
   "url": `${baseUrl}/tools/facebook-messenger`,
   "provider": {
     "@type": "Organization",
@@ -21,69 +22,58 @@ const jsonLd = {
     "priceCurrency": "USD"
   },
   "operatingSystem": "All",
-  "applicationSubCategory": "MessagingAutomation",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
-    "ratingCount": "195"
+    "ratingCount": "175"
   }
 };
 
 export const metadata: Metadata = {
-  title: "Facebook Messenger Solution | NeuroGen Lab - Intelligent Messaging",
-  description: "Enhance Messenger communication with AI technology. Automated responses, analytics, and advanced features for better message management.",
+  title: "Facebook Messenger Integration | NeuroGen Lab - Smart Communication",
+  description: "Transform your customer communication with AI-powered Facebook Messenger integration. Automate responses, enhance engagement, and improve customer support.",
   other: {
     'ai-optimized': 'true',
-    'og:image': '/assets/images/og-facebook-messenger.jpg',
   },
   keywords: [
-    "facebook messenger",
-    "messenger automation",
-    "ai messaging",
-    "chat management",
-    "message analytics",
+    "Facebook Messenger integration",
+    "customer communication",
+    "messaging automation",
+    "chat support",
+    "social messaging",
     "automated responses",
-    "business messaging",
-    "messenger bot",
-    "NeuroGen Lab messenger",
-    "AI chat solution"
+    "AI chatbot",
+    "customer engagement",
+    "NeuroGen Lab Messenger",
+    "communication solution"
   ],
   openGraph: {
     type: 'website',
-    title: "Facebook Messenger Solution - Intelligent Messaging | NeuroGen Lab",
-    description: "Transform your Messenger communication with AI-powered automation. Smart responses and advanced analytics for business growth.",
+    title: "Facebook Messenger Integration - Smart Communication | NeuroGen Lab",
+    description: "Transform your customer communication with AI-powered Facebook Messenger integration. Enhanced support and automated responses.",
     url: `${baseUrl}/tools/facebook-messenger`,
     siteName: "NeuroGen Lab",
     images: [
       {
-        url: '/assets/images/og-facebook-messenger.jpg',
+        url: `${baseUrl}/assets/images/og-facebook-messenger.jpg`,
         width: 1200,
         height: 630,
-        alt: "NeuroGen Lab Facebook Messenger Solution",
+        alt: "NeuroGen Lab Facebook Messenger Integration",
         type: 'image/jpeg',
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Facebook Messenger Solution - Smart Communication",
-    description: "Enhance your Messenger communication with AI technology. Intelligent and automated messaging.",
-    images: ['/assets/images/og-facebook-messenger.jpg'],
+    title: "Facebook Messenger Integration - Smart Communication",
+    description: "Transform your customer communication with AI-powered Facebook Messenger integration and automation.",
+    images: [`${baseUrl}/assets/images/og-facebook-messenger.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  alternates: {
-    canonical: `${baseUrl}/tools/facebook-messenger`,
-    languages: {
-      'en': `${baseUrl}/en/tools/facebook-messenger`,
-      'de': `${baseUrl}/de/tools/facebook-messenger`,
-      'es': `${baseUrl}/es/tools/facebook-messenger`,
-      'ru': `${baseUrl}/ru/tools/facebook-messenger`,
-      'uk': `${baseUrl}/uk/tools/facebook-messenger`
-    },
-  },
+  alternates: generateHrefLangs('tools/facebook-messenger'),
   robots: {
     index: true,
     follow: true,
@@ -98,7 +88,7 @@ export const metadata: Metadata = {
   authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function FacebookMessengerLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

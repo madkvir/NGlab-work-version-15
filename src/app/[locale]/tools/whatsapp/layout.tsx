@@ -1,14 +1,15 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "NeuroGen Lab WhatsApp AI Assistant",
-  "applicationCategory": "BusinessApplication",
-  "description": "AI-powered WhatsApp business automation solution for enhanced customer communication and support",
+  "name": "NeuroGen Lab WhatsApp Integration",
+  "applicationCategory": "BusinessApplication, MessagingApplication",
+  "description": "AI-powered WhatsApp integration for business communication and customer support",
   "url": `${baseUrl}/tools/whatsapp`,
   "provider": {
     "@type": "Organization",
@@ -21,36 +22,35 @@ const jsonLd = {
     "priceCurrency": "USD"
   },
   "operatingSystem": "All",
-  "applicationSubCategory": "Messaging",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "150"
+    "ratingValue": "4.7",
+    "ratingCount": "180"
   }
 };
 
 export const metadata: Metadata = {
-  title: "WhatsApp AI Assistant | NeuroGen Lab - Business Automation Solution",
-  description: "Enhance your WhatsApp business communication with our AI-powered assistant. Automate responses, provide 24/7 support, and improve customer engagement.",
+  title: "WhatsApp Integration | NeuroGen Lab - Business Communication",
+  description: "Transform your WhatsApp business communication with AI technology. Automate responses, provide 24/7 support, and enhance customer engagement.",
   other: {
     'ai-optimized': 'true',
   },
   keywords: [
+    "WhatsApp integration",
+    "business messaging",
+    "automated responses",
+    "customer support",
     "WhatsApp automation",
-    "business WhatsApp",
-    "AI assistant",
-    "WhatsApp bot",
-    "customer support automation",
-    "WhatsApp business solution",
-    "automated messaging",
     "business communication",
+    "AI messaging",
+    "chat automation",
     "NeuroGen Lab WhatsApp",
-    "AI messaging"
+    "messaging solution"
   ],
   openGraph: {
     type: 'website',
-    title: "WhatsApp AI Assistant - Business Communication Solution | NeuroGen Lab",
-    description: "Transform your WhatsApp business communication with AI-powered automation. Provide instant responses, automate support, and enhance customer engagement.",
+    title: "WhatsApp Integration - Business Communication | NeuroGen Lab",
+    description: "Enhance your business communication with AI-powered WhatsApp integration. Automated responses and 24/7 customer support.",
     url: `${baseUrl}/tools/whatsapp`,
     siteName: "NeuroGen Lab",
     images: [
@@ -58,31 +58,22 @@ export const metadata: Metadata = {
         url: `${baseUrl}/assets/images/og-whatsapp.jpg`,
         width: 1200,
         height: 630,
-        alt: "NeuroGen Lab WhatsApp AI Assistant",
+        alt: "NeuroGen Lab WhatsApp Integration",
         type: 'image/jpeg',
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
-    title: "WhatsApp AI Assistant - Smart Business Communication",
-    description: "Enhance your WhatsApp business presence with AI-powered automation. Available 24/7, multilingual, and fully customizable.",
+    title: "WhatsApp Integration - Smart Business Communication",
+    description: "Transform your business communication with AI-powered WhatsApp integration.",
     images: [`${baseUrl}/assets/images/og-whatsapp.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  alternates: {
-    canonical: `${baseUrl}/tools/whatsapp`,
-    languages: {
-      'en': `${baseUrl}/en/tools/whatsapp`,
-      'de': `${baseUrl}/de/tools/whatsapp`,
-      'es': `${baseUrl}/es/tools/whatsapp`,
-      'ru': `${baseUrl}/ru/tools/whatsapp`,
-      'uk': `${baseUrl}/uk/tools/whatsapp`
-    },
-  },
+  alternates: generateHrefLangs('tools/whatsapp'),
   robots: {
     index: true,
     follow: true,
@@ -94,10 +85,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function WhatsAppLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

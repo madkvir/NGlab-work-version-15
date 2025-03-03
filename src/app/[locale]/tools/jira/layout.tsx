@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -7,8 +8,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "NeuroGen Lab Jira Integration",
-  "applicationCategory": "BusinessApplication",
-  "description": "AI-powered Jira integration for enhanced project management and team collaboration",
+  "applicationCategory": "BusinessApplication, ProjectManagementApplication",
+  "description": "AI-powered Jira integration for enhanced project management and workflow automation",
   "url": `${baseUrl}/tools/jira`,
   "provider": {
     "@type": "Organization",
@@ -21,11 +22,10 @@ const jsonLd = {
     "priceCurrency": "USD"
   },
   "operatingSystem": "All",
-  "applicationSubCategory": "ProjectManagement",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
-    "ratingCount": "205"
+    "ratingCount": "150"
   }
 };
 
@@ -36,33 +36,32 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Jira Integration | NeuroGen Lab - Smart Project Management",
-  description: "Transform your project management with AI-powered Jira integration. Automated workflows, intelligent task prioritization, and advanced analytics for team productivity.",
+  title: "Jira Integration | NeuroGen Lab - Project Management",
+  description: "Enhance your project management with AI-powered Jira integration. Automate workflows, improve tracking, and boost team productivity.",
   other: {
     'ai-optimized': 'true',
-    'og:image': '/assets/images/og-jira.jpg',
   },
   keywords: [
-    "jira integration",
+    "Jira integration",
     "project management",
-    "agile workflow",
+    "task tracking",
+    "workflow automation",
+    "agile tools",
     "team collaboration",
-    "task automation",
-    "sprint planning",
-    "project analytics",
-    "issue tracking",
-    "NeuroGen Lab jira",
-    "AI project management"
+    "AI automation",
+    "issue management",
+    "NeuroGen Lab Jira",
+    "project solution"
   ],
   openGraph: {
     type: 'website',
-    title: "Jira Integration - Smart Project Management | NeuroGen Lab",
-    description: "Transform your project management with AI-powered Jira integration. Smart automation and analytics for enhanced team productivity.",
+    title: "Jira Integration - Project Management | NeuroGen Lab",
+    description: "Transform your project management with AI-powered Jira integration. Enhanced tracking and automated workflows.",
     url: `${baseUrl}/tools/jira`,
     siteName: "NeuroGen Lab",
     images: [
       {
-        url: '/assets/images/og-jira.jpg',
+        url: `${baseUrl}/assets/images/og-jira.jpg`,
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab Jira Integration",
@@ -70,26 +69,17 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Jira Integration - Intelligent Project Management",
-    description: "Enhance your project management with AI technology. Smart automation and team collaboration tools.",
-    images: ['/assets/images/og-jira.jpg'],
+    title: "Jira Integration - Smart Project Management",
+    description: "Transform your project management with AI-powered Jira integration and automation.",
+    images: [`${baseUrl}/assets/images/og-jira.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  alternates: {
-    canonical: `${baseUrl}/tools/jira`,
-    languages: {
-      'en': `${baseUrl}/en/tools/jira`,
-      'de': `${baseUrl}/de/tools/jira`,
-      'es': `${baseUrl}/es/tools/jira`,
-      'ru': `${baseUrl}/ru/tools/jira`,
-      'uk': `${baseUrl}/uk/tools/jira`
-    },
-  },
+  alternates: generateHrefLangs('tools/jira'),
   robots: {
     index: true,
     follow: true,
@@ -104,7 +94,7 @@ export const metadata: Metadata = {
   authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function JiraLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

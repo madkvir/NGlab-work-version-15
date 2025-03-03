@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -7,8 +8,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "NeuroGen Lab Discord Integration",
-  "applicationCategory": "BusinessApplication",
-  "description": "AI-powered Discord integration for enhanced community management and automation",
+  "applicationCategory": "BusinessApplication, CommunicationApplication",
+  "description": "AI-powered Discord integration for enhanced community management and automated moderation",
   "url": `${baseUrl}/tools/discord`,
   "provider": {
     "@type": "Organization",
@@ -21,42 +22,40 @@ const jsonLd = {
     "priceCurrency": "USD"
   },
   "operatingSystem": "All",
-  "applicationSubCategory": "CommunityManagement",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
-    "ratingCount": "175"
+    "ratingCount": "165"
   }
 };
 
 export const metadata: Metadata = {
-  title: "Discord Integration | NeuroGen Lab - Smart Community Management",
-  description: "Enhance your Discord server with AI-powered automation. Advanced moderation tools, community engagement features, and intelligent bot interactions.",
+  title: "Discord Integration | NeuroGen Lab - Community Management",
+  description: "Transform your Discord server with AI-powered automation. Smart moderation, automated responses, and intelligent community management for enhanced engagement.",
   other: {
     'ai-optimized': 'true',
-    'og:image': '/assets/images/og-discord.jpg',
   },
   keywords: [
     "Discord integration",
     "community management",
-    "Discord bot",
     "server automation",
+    "chat moderation",
+    "bot automation",
+    "automated responses",
     "AI moderation",
-    "community engagement",
-    "Discord tools",
-    "server management",
+    "community tools",
     "NeuroGen Lab Discord",
-    "AI-powered bot"
+    "moderation solution"
   ],
   openGraph: {
     type: 'website',
     title: "Discord Integration - Smart Community Management | NeuroGen Lab",
-    description: "Transform your Discord server with AI-powered automation. Advanced moderation and engagement tools for thriving communities.",
+    description: "Transform your Discord community with AI-powered automation. Enhanced moderation and intelligent management.",
     url: `${baseUrl}/tools/discord`,
     siteName: "NeuroGen Lab",
     images: [
       {
-        url: '/assets/images/og-discord.jpg',
+        url: `${baseUrl}/assets/images/og-discord.jpg`,
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab Discord Integration",
@@ -64,26 +63,17 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Discord Integration - Intelligent Community Solution",
-    description: "Elevate your Discord community with AI-powered tools. Smart moderation and engagement features.",
-    images: ['/assets/images/og-discord.jpg'],
+    title: "Discord Integration - Smart Community Management",
+    description: "Transform your Discord server with AI-powered automation and intelligent moderation.",
+    images: [`${baseUrl}/assets/images/og-discord.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  alternates: {
-    canonical: `${baseUrl}/tools/discord`,
-    languages: {
-      'en': `${baseUrl}/en/tools/discord`,
-      'de': `${baseUrl}/de/tools/discord`,
-      'es': `${baseUrl}/es/tools/discord`,
-      'ru': `${baseUrl}/ru/tools/discord`,
-      'uk': `${baseUrl}/uk/tools/discord`
-    },
-  },
+  alternates: generateHrefLangs('tools/discord'),
   robots: {
     index: true,
     follow: true,
@@ -98,7 +88,7 @@ export const metadata: Metadata = {
   authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function DiscordLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

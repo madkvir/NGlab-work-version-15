@@ -1,14 +1,15 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "NeuroGen Lab Email Solution",
-  "applicationCategory": "BusinessApplication",
-  "description": "AI-powered email management solution for enhanced business communication",
+  "name": "NeuroGen Lab Email Integration",
+  "applicationCategory": "BusinessApplication, CommunicationApplication",
+  "description": "AI-powered email integration for enhanced communication automation and intelligent email management",
   "url": `${baseUrl}/tools/email`,
   "provider": {
     "@type": "Organization",
@@ -21,69 +22,58 @@ const jsonLd = {
     "priceCurrency": "USD"
   },
   "operatingSystem": "All",
-  "applicationSubCategory": "EmailManagement",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "ratingCount": "245"
+    "ratingValue": "4.8",
+    "ratingCount": "185"
   }
 };
 
 export const metadata: Metadata = {
-  title: "Email Solution | NeuroGen Lab - Intelligent Email Management",
-  description: "Transform your email communication with AI-powered automation. Smart filtering, automated responses, priority inbox, and advanced email analytics.",
+  title: "Email Integration | NeuroGen Lab - Smart Email Management",
+  description: "Transform your email communication with AI-powered automation. Smart filtering, automated responses, and intelligent email management for enhanced productivity.",
   other: {
     'ai-optimized': 'true',
-    'og:image': '/assets/images/og-email.jpg',
   },
   keywords: [
-    "email solution",
-    "email management",
-    "AI email",
-    "smart inbox",
+    "Email integration",
     "email automation",
-    "business email",
-    "email analytics",
+    "smart inbox",
+    "email management",
     "automated responses",
+    "email filtering",
+    "AI email",
+    "productivity tools",
     "NeuroGen Lab email",
-    "intelligent email"
+    "communication solution"
   ],
   openGraph: {
     type: 'website',
-    title: "Email Solution - Intelligent Email Management | NeuroGen Lab",
-    description: "Revolutionize your email workflow with AI-powered management. Smart filtering and automated responses for enhanced productivity.",
+    title: "Email Integration - Smart Email Management | NeuroGen Lab",
+    description: "Transform your email workflow with AI-powered automation. Enhanced productivity and intelligent management.",
     url: `${baseUrl}/tools/email`,
     siteName: "NeuroGen Lab",
     images: [
       {
-        url: '/assets/images/og-email.jpg',
+        url: `${baseUrl}/assets/images/og-email.jpg`,
         width: 1200,
         height: 630,
-        alt: "NeuroGen Lab Email Solution",
+        alt: "NeuroGen Lab Email Integration",
         type: 'image/jpeg',
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Email Solution - Smart Email Management",
-    description: "Experience next-generation email management with AI technology. Intelligent, efficient, and automated.",
-    images: ['/assets/images/og-email.jpg'],
+    title: "Email Integration - Smart Communication Management",
+    description: "Transform your email workflow with AI-powered automation and intelligent management.",
+    images: [`${baseUrl}/assets/images/og-email.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  alternates: {
-    canonical: `${baseUrl}/tools/email`,
-    languages: {
-      'en': `${baseUrl}/en/tools/email`,
-      'de': `${baseUrl}/de/tools/email`,
-      'es': `${baseUrl}/es/tools/email`,
-      'ru': `${baseUrl}/ru/tools/email`,
-      'uk': `${baseUrl}/uk/tools/email`
-    },
-  },
+  alternates: generateHrefLangs('tools/email'),
   robots: {
     index: true,
     follow: true,
@@ -98,7 +88,7 @@ export const metadata: Metadata = {
   authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function EmailLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

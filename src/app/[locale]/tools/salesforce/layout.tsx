@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
@@ -74,16 +75,7 @@ export const metadata: Metadata = {
     site: "@neurogenlab",
   },
   authors: [{ name: "NeuroGen Lab Team" }],
-  alternates: {
-    canonical: `${baseUrl}/tools/salesforce`,
-    languages: {
-      'en': `${baseUrl}/en/tools/salesforce`,
-      'de': `${baseUrl}/de/tools/salesforce`,
-      'es': `${baseUrl}/es/tools/salesforce`,
-      'ru': `${baseUrl}/ru/tools/salesforce`,
-      'uk': `${baseUrl}/uk/tools/salesforce`
-    },
-  },
+  alternates: generateHrefLangs('tools/salesforce'),
   robots: {
     index: true,
     follow: true,
@@ -97,7 +89,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SalesforceLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

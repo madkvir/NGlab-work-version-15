@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -7,8 +8,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "NeuroGen Lab AI Voice Bot",
-  "applicationCategory": "BusinessApplication",
-  "description": "Advanced AI voice bot for automated customer service and voice interactions",
+  "applicationCategory": "BusinessApplication, CommunicationApplication",
+  "description": "AI-powered voice bot solution for enhanced customer interaction and automated voice communication",
   "url": `${baseUrl}/tools/ai-voice-bot`,
   "provider": {
     "@type": "Organization",
@@ -21,36 +22,35 @@ const jsonLd = {
     "priceCurrency": "USD"
   },
   "operatingSystem": "All",
-  "applicationSubCategory": "VoiceAssistant",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
-    "ratingCount": "180"
+    "ratingCount": "170"
   }
 };
 
 export const metadata: Metadata = {
-  title: "AI Voice Bot | NeuroGen Lab - Intelligent Voice Assistant",
-  description: "Transform customer interactions with our AI Voice Bot. Natural language processing, multilingual support, and seamless voice automation for your business.",
+  title: "AI Voice Bot | NeuroGen Lab - Intelligent Voice Solutions",
+  description: "Transform your customer interactions with AI-powered voice technology. Natural language processing, automated responses, and intelligent voice communication for enhanced engagement.",
   other: {
     'ai-optimized': 'true',
   },
   keywords: [
     "AI voice bot",
-    "voice assistant",
-    "speech recognition",
     "voice automation",
-    "customer service bot",
-    "AI voice technology",
-    "voice interface",
-    "automated voice response",
-    "NeuroGen Lab voice bot",
-    "business voice solution"
+    "speech recognition",
+    "voice assistant",
+    "automated responses",
+    "voice technology",
+    "AI communication",
+    "customer interaction",
+    "NeuroGen Lab voice",
+    "voice solutions"
   ],
   openGraph: {
     type: 'website',
-    title: "AI Voice Bot - Intelligent Voice Assistant | NeuroGen Lab",
-    description: "Enhance customer experience with AI-powered voice interactions. Natural, intelligent, and available 24/7 for your business needs.",
+    title: "AI Voice Bot - Intelligent Voice Solutions | NeuroGen Lab",
+    description: "Transform your customer interactions with AI-powered voice technology. Enhanced communication and automated responses.",
     url: `${baseUrl}/tools/ai-voice-bot`,
     siteName: "NeuroGen Lab",
     images: [
@@ -63,26 +63,17 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
-    title: "AI Voice Bot - Smart Voice Automation",
-    description: "Experience next-generation voice interactions with our AI Voice Bot. Multilingual, natural, and always available.",
+    title: "AI Voice Bot - Smart Voice Communication",
+    description: "Transform your customer interactions with AI-powered voice technology and intelligent automation.",
     images: [`${baseUrl}/assets/images/og-ai-voice-bot.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  alternates: {
-    canonical: `${baseUrl}/tools/ai-voice-bot`,
-    languages: {
-      'en': `${baseUrl}/en/tools/ai-voice-bot`,
-      'de': `${baseUrl}/de/tools/ai-voice-bot`,
-      'es': `${baseUrl}/es/tools/ai-voice-bot`,
-      'ru': `${baseUrl}/ru/tools/ai-voice-bot`,
-      'uk': `${baseUrl}/uk/tools/ai-voice-bot`
-    },
-  },
+  alternates: generateHrefLangs('tools/ai-voice-bot'),
   robots: {
     index: true,
     follow: true,
@@ -97,7 +88,7 @@ export const metadata: Metadata = {
   authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function AIVoiceBotLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

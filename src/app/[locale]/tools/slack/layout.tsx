@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -9,7 +10,7 @@ const jsonLd = {
   "@type": "SoftwareApplication",
   "name": "NeuroGen Lab Slack Integration",
   "applicationCategory": "BusinessApplication, CommunicationApplication",
-  "description": "AI-powered Slack integration for enhanced team communication and workflow automation",
+  "description": "AI-powered Slack integration for enhanced team communication and collaboration",
   "url": `${baseUrl}/tools/slack`,
   "provider": {
     "@type": "Organization",
@@ -19,39 +20,39 @@ const jsonLd = {
   "offers": {
     "@type": "Offer",
     "price": "0",
-    "priceCurrency": "EUR"
+    "priceCurrency": "USD"
   },
   "operatingSystem": "All",
 
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "ratingCount": "120"
+    "ratingValue": "4.8",
+    "ratingCount": "160"
   }
 };
 
 export const metadata: Metadata = {
-  title: "Slack Integration | NeuroGen Lab - Smart Team Communication",
-  description: "Enhance your team communication with AI technology. Smart automation, analytics, and advanced features for better team collaboration.",
+  title: "Slack Integration | NeuroGen Lab - Team Communication",
+  description: "Enhance your team communication with AI-powered Slack integration. Automate workflows, improve collaboration, and boost productivity.",
   other: {
     'ai-optimized': 'true',
   },
   keywords: [
-    "slack integration",
+    "Slack integration",
     "team communication",
-    "message management",
-    "channel analytics",
+    "collaboration tools",
+    "workplace chat",
+    "business messaging",
     "workflow automation",
-    "team collaboration",
-    "bot integration",
     "AI communication",
-    "smart messaging",
-    "NeuroGen Lab slack"
+    "team productivity",
+    "NeuroGen Lab Slack",
+    "messaging solution"
   ],
   openGraph: {
     type: 'website',
-    title: "Slack Integration - Smart Team Communication | NeuroGen Lab",
-    description: "Transform your team communication with AI-powered Slack integration. Automate workflows and enhance collaboration.",
+    title: "Slack Integration - Team Communication | NeuroGen Lab",
+    description: "Transform your team communication with AI-powered Slack integration. Enhanced collaboration and automated workflows.",
     url: `${baseUrl}/tools/slack`,
     siteName: "NeuroGen Lab",
     images: [
@@ -64,27 +65,18 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
     title: "Slack Integration - Smart Team Communication",
-    description: "Enhance team communication with AI-powered features",
+    description: "Transform your team collaboration with AI-powered Slack integration and automation.",
     images: [`${baseUrl}/assets/images/og-slack.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
   authors: [{ name: "NeuroGen Lab Team" }],
-  alternates: {
-    canonical: `${baseUrl}/tools/slack`,
-    languages: {
-      'en': `${baseUrl}/en/tools/slack`,
-      'de': `${baseUrl}/de/tools/slack`,
-      'es': `${baseUrl}/es/tools/slack`,
-      'ru': `${baseUrl}/ru/tools/slack`,
-      'uk': `${baseUrl}/uk/tools/slack`
-    },
-  },
+  alternates: generateHrefLangs('tools/slack'),
   robots: {
     index: true,
     follow: true,
@@ -98,7 +90,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SlackLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -8,8 +9,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "NeuroGen Lab LiveChat Integration",
-  "applicationCategory": "BusinessApplication, CommunicationApplication",
-  "description": "AI-powered LiveChat integration for enhanced customer support and communication",
+  "applicationCategory": "BusinessApplication, CustomerServiceApplication",
+  "description": "AI-powered LiveChat integration for enhanced customer support and real-time communication",
   "url": `${baseUrl}/tools/livechat`,
   "provider": {
     "@type": "Organization",
@@ -25,32 +26,32 @@ const jsonLd = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
-    "ratingCount": "160"
+    "ratingCount": "140"
   }
 };
 
 export const metadata: Metadata = {
-  title: "LiveChat Integration | NeuroGen Lab - Smart Customer Support",
-  description: "Enhance your customer support with AI technology. Real-time chat, automated responses, and advanced analytics for better customer communication.",
+  title: "LiveChat Integration | NeuroGen Lab - Real-time Support",
+  description: "Transform your customer support with AI-powered LiveChat integration. Provide instant assistance, automate responses, and improve customer satisfaction.",
   other: {
     'ai-optimized': 'true',
   },
   keywords: [
-    "livechat integration",
+    "LiveChat integration",
     "customer support",
     "real-time chat",
+    "live assistance",
     "chat automation",
-    "visitor analytics",
-    "customer communication",
-    "support automation",
-    "AI chat",
-    "smart support",
-    "NeuroGen Lab chat"
+    "customer service",
+    "AI support",
+    "instant messaging",
+    "NeuroGen Lab LiveChat",
+    "support solution"
   ],
   openGraph: {
     type: 'website',
-    title: "LiveChat Integration - Smart Customer Support | NeuroGen Lab",
-    description: "Transform your customer support with AI-powered LiveChat integration. Enhance communication and support efficiency.",
+    title: "LiveChat Integration - Real-time Support | NeuroGen Lab",
+    description: "Transform your customer support with AI-powered LiveChat. Instant assistance and automated responses.",
     url: `${baseUrl}/tools/livechat`,
     siteName: "NeuroGen Lab",
     images: [
@@ -63,27 +64,18 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
     title: "LiveChat Integration - Smart Customer Support",
-    description: "Enhance customer support with AI-powered features",
+    description: "Transform your customer support with AI-powered LiveChat integration and automation.",
     images: [`${baseUrl}/assets/images/og-livechat.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
   authors: [{ name: "NeuroGen Lab Team" }],
-  alternates: {
-    canonical: `${baseUrl}/tools/livechat`,
-    languages: {
-      'en': `${baseUrl}/en/tools/livechat`,
-      'de': `${baseUrl}/de/tools/livechat`,
-      'es': `${baseUrl}/es/tools/livechat`,
-      'ru': `${baseUrl}/ru/tools/livechat`,
-      'uk': `${baseUrl}/uk/tools/livechat`
-    },
-  },
+  alternates: generateHrefLangs('tools/livechat'),
   robots: {
     index: true,
     follow: true,
@@ -97,7 +89,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function LiveChatLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -7,8 +8,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "NeuroGen Lab HubSpot Integration",
-  "applicationCategory": "BusinessApplication",
-  "description": "AI-powered HubSpot integration for enhanced CRM and marketing automation",
+  "applicationCategory": "BusinessApplication, MarketingApplication",
+  "description": "AI-powered HubSpot integration for enhanced marketing automation and customer relationship management",
   "url": `${baseUrl}/tools/hubspot`,
   "provider": {
     "@type": "Organization",
@@ -21,42 +22,40 @@ const jsonLd = {
     "priceCurrency": "USD"
   },
   "operatingSystem": "All",
-  "applicationSubCategory": "CRMEnhancement",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "ratingCount": "215"
+    "ratingValue": "4.8",
+    "ratingCount": "155"
   }
 };
 
 export const metadata: Metadata = {
-  title: "HubSpot Integration | NeuroGen Lab - Intelligent CRM Enhancement",
-  description: "Enhance your HubSpot experience with AI technology. Smart automation, analytics, and advanced features for better customer relationship management.",
+  title: "HubSpot Integration | NeuroGen Lab - Marketing Automation",
+  description: "Transform your marketing and CRM with AI-powered HubSpot integration. Automate campaigns, enhance customer relationships, and boost conversion rates.",
   other: {
     'ai-optimized': 'true',
-    'og:image': '/assets/images/og-hubspot.jpg',
   },
   keywords: [
-    "hubspot integration",
-    "crm enhancement",
-    "ai automation",
-    "customer management",
-    "lead scoring",
-    "data analytics",
-    "business automation",
+    "HubSpot integration",
     "marketing automation",
-    "NeuroGen Lab hubspot",
-    "AI CRM solution"
+    "CRM integration",
+    "lead management",
+    "campaign automation",
+    "customer analytics",
+    "AI marketing",
+    "sales automation",
+    "NeuroGen Lab HubSpot",
+    "marketing solution"
   ],
   openGraph: {
     type: 'website',
-    title: "HubSpot Integration - Intelligent CRM Enhancement | NeuroGen Lab",
-    description: "Transform your HubSpot experience with AI-powered automation. Smart CRM features and advanced analytics for business growth.",
+    title: "HubSpot Integration - Marketing Automation | NeuroGen Lab",
+    description: "Transform your marketing strategy with AI-powered HubSpot integration. Enhanced automation and customer management.",
     url: `${baseUrl}/tools/hubspot`,
     siteName: "NeuroGen Lab",
     images: [
       {
-        url: '/assets/images/og-hubspot.jpg',
+        url: `${baseUrl}/assets/images/og-hubspot.jpg`,
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab HubSpot Integration",
@@ -64,26 +63,17 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
-    title: "HubSpot Integration - Smart CRM Enhancement",
-    description: "Enhance your CRM capabilities with AI technology. Intelligent automation and analytics.",
-    images: ['/assets/images/og-hubspot.jpg'],
+    title: "HubSpot Integration - Smart Marketing Automation",
+    description: "Transform your marketing and CRM with AI-powered HubSpot integration and automation.",
+    images: [`${baseUrl}/assets/images/og-hubspot.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  alternates: {
-    canonical: `${baseUrl}/tools/hubspot`,
-    languages: {
-      'en': `${baseUrl}/en/tools/hubspot`,
-      'de': `${baseUrl}/de/tools/hubspot`,
-      'es': `${baseUrl}/es/tools/hubspot`,
-      'ru': `${baseUrl}/ru/tools/hubspot`,
-      'uk': `${baseUrl}/uk/tools/hubspot`
-    },
-  },
+  alternates: generateHrefLangs('tools/hubspot'),
   robots: {
     index: true,
     follow: true,
@@ -98,7 +88,7 @@ export const metadata: Metadata = {
   authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function HubSpotLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

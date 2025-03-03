@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -7,8 +8,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "NeuroGen Lab Instagram Integration",
-  "applicationCategory": "BusinessApplication",
-  "description": "AI-powered Instagram automation and management solution for business growth",
+  "applicationCategory": "BusinessApplication, SocialMediaApplication",
+  "description": "AI-powered Instagram integration for enhanced social media management and engagement",
   "url": `${baseUrl}/tools/instagram`,
   "provider": {
     "@type": "Organization",
@@ -21,42 +22,40 @@ const jsonLd = {
     "priceCurrency": "USD"
   },
   "operatingSystem": "All",
-  "applicationSubCategory": "SocialMediaManagement",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "190"
+    "ratingValue": "4.7",
+    "ratingCount": "165"
   }
 };
 
 export const metadata: Metadata = {
-  title: "Instagram Integration | NeuroGen Lab - AI Social Media Management",
-  description: "Optimize your Instagram presence with AI-powered automation. Smart content management, engagement analytics, and automated responses for business growth.",
+  title: "Instagram Integration | NeuroGen Lab - Social Media Management",
+  description: "Transform your Instagram presence with AI-powered automation. Enhance engagement, automate responses, and improve social media management.",
   other: {
     'ai-optimized': 'true',
-    'og:image': '/assets/images/og-instagram.jpg',
   },
   keywords: [
-    "Instagram automation",
-    "social media management",
-    "AI Instagram tool",
-    "business Instagram",
-    "Instagram analytics",
-    "content automation",
-    "social engagement",
-    "Instagram marketing",
+    "Instagram integration",
+    "social media",
+    "content management",
+    "engagement automation",
+    "social analytics",
+    "audience growth",
+    "AI automation",
+    "social marketing",
     "NeuroGen Lab Instagram",
-    "AI social media"
+    "social solution"
   ],
   openGraph: {
     type: 'website',
-    title: "Instagram Integration - AI Social Media Management | NeuroGen Lab",
-    description: "Transform your Instagram business presence with AI automation. Smart content management, analytics, and engagement tools for growth.",
+    title: "Instagram Integration - Social Media Management | NeuroGen Lab",
+    description: "Transform your Instagram presence with AI-powered automation. Enhanced engagement and content management.",
     url: `${baseUrl}/tools/instagram`,
     siteName: "NeuroGen Lab",
     images: [
       {
-        url: '/assets/images/og-instagram.jpg',
+        url: `${baseUrl}/assets/images/og-instagram.jpg`,
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab Instagram Integration",
@@ -64,26 +63,17 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Instagram Integration - Smart Social Media Solution",
-    description: "Enhance your Instagram presence with AI-powered automation. Intelligent content management and engagement tools.",
-    images: ['/assets/images/og-instagram.jpg'],
+    title: "Instagram Integration - Smart Social Media Management",
+    description: "Transform your social media presence with AI-powered Instagram integration and automation.",
+    images: [`${baseUrl}/assets/images/og-instagram.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  alternates: {
-    canonical: `${baseUrl}/tools/instagram`,
-    languages: {
-      'en': `${baseUrl}/en/tools/instagram`,
-      'de': `${baseUrl}/de/tools/instagram`,
-      'es': `${baseUrl}/es/tools/instagram`,
-      'ru': `${baseUrl}/ru/tools/instagram`,
-      'uk': `${baseUrl}/uk/tools/instagram`
-    },
-  },
+  alternates: generateHrefLangs('tools/instagram'),
   robots: {
     index: true,
     follow: true,
@@ -95,10 +85,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function InstagramLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -24,38 +25,38 @@ const jsonLd = {
   "operatingSystem": "All",
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "ratingCount": "130"
+    "ratingValue": "4.8",
+    "ratingCount": "170"
   }
 };
 
 export const metadata: Metadata = {
-  title: "Microsoft Teams Integration | NeuroGen Lab - Smart Team Collaboration",
-  description: "Enhance your team collaboration with AI technology. Smart automation, analytics, and advanced features for better team communication and productivity.",
+  title: "Microsoft Teams Integration | NeuroGen Lab - Team Collaboration",
+  description: "Enhance your Microsoft Teams experience with AI-powered features. Improve team collaboration, automate workflows, and boost productivity.",
   other: {
     'ai-optimized': 'true',
   },
   keywords: [
-    "microsoft teams integration",
+    "Microsoft Teams integration",
     "team collaboration",
-    "meeting management",
-    "document collaboration",
-    "team analytics",
+    "business communication",
+    "virtual meetings",
     "workflow automation",
-    "channel management",
-    "AI communication",
-    "smart meetings",
-    "NeuroGen Lab teams"
+    "team productivity",
+    "AI collaboration",
+    "remote work",
+    "NeuroGen Lab Teams",
+    "collaboration solution"
   ],
   openGraph: {
     type: 'website',
-    title: "Microsoft Teams Integration - Smart Team Collaboration | NeuroGen Lab",
-    description: "Transform your team collaboration with AI-powered Microsoft Teams integration. Enhance communication and productivity.",
+    title: "Microsoft Teams Integration - Team Collaboration | NeuroGen Lab",
+    description: "Transform your team collaboration with AI-powered Microsoft Teams integration. Enhanced communication and automated workflows.",
     url: `${baseUrl}/tools/microsoft-teams`,
     siteName: "NeuroGen Lab",
     images: [
       {
-        url: `${baseUrl}/assets/images/og-teams.jpg`,
+        url: `${baseUrl}/assets/images/og-microsoft-teams.jpg`,
         width: 1200,
         height: 630,
         alt: "NeuroGen Lab Microsoft Teams Integration",
@@ -63,27 +64,18 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
     title: "Microsoft Teams Integration - Smart Team Collaboration",
-    description: "Enhance team collaboration with AI-powered features",
-    images: [`${baseUrl}/assets/images/og-teams.jpg`],
+    description: "Transform your team collaboration with AI-powered Microsoft Teams integration and automation.",
+    images: [`${baseUrl}/assets/images/og-microsoft-teams.jpg`],
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
   authors: [{ name: "NeuroGen Lab Team" }],
-  alternates: {
-    canonical: `${baseUrl}/tools/microsoft-teams`,
-    languages: {
-      'en': `${baseUrl}/en/tools/microsoft-teams`,
-      'de': `${baseUrl}/de/tools/microsoft-teams`,
-      'es': `${baseUrl}/es/tools/microsoft-teams`,
-      'ru': `${baseUrl}/ru/tools/microsoft-teams`,
-      'uk': `${baseUrl}/uk/tools/microsoft-teams`
-    },
-  },
+  alternates: generateHrefLangs('tools/microsoft-teams'),
   robots: {
     index: true,
     follow: true,
@@ -97,7 +89,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function TeamsLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;

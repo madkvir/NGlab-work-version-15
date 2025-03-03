@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -30,27 +31,27 @@ const jsonLd = {
 };
 
 export const metadata: Metadata = {
-  title: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Service Solution",
-  description: "Transform your customer service with our AI-powered chatbot. Provide 24/7 support, reduce costs, and deliver exceptional customer experiences.",
+  title: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Support",
+  description: "Transform your customer support with our AI-powered chatbot. Provide 24/7 assistance, automate responses, and enhance customer satisfaction.",
   other: {
     'ai-optimized': 'true',
   },
   keywords: [
     "AI chatbot",
-    "customer service automation",
-    "intelligent chatbot",
-    "24/7 customer support",
-    "AI customer service",
-    "automated support",
-    "virtual assistant",
-    "business automation",
-    "customer experience",
-    "NeuroGen Lab chatbot"
+    "customer support",
+    "automated chat",
+    "business chatbot",
+    "chat automation",
+    "customer service bot",
+    "AI support",
+    "intelligent chat",
+    "NeuroGen Lab chatbot",
+    "AI customer service"
   ],
   openGraph: {
     type: 'website',
     title: "AI Chat Bot - Intelligent Customer Support | NeuroGen Lab",
-    description: "Transform your customer service with 24/7 AI-powered support. Our intelligent chatbot solution helps businesses automate support and improve customer satisfaction.",
+    description: "Enhance your customer support with AI-powered chatbot. Available 24/7, multilingual, and fully customizable.",
     url: `${baseUrl}/tools/ai-chat-bot`,
     siteName: "NeuroGen Lab",
     images: [
@@ -58,32 +59,23 @@ export const metadata: Metadata = {
         url: `${baseUrl}/assets/images/og-ai-chat-bot.jpg`,
         width: 1200,
         height: 630,
-        alt: "NeuroGen Lab AI Chatbot Solution",
+        alt: "NeuroGen Lab AI Chat Bot",
         type: 'image/jpeg',
       },
     ],
     locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
+    alternateLocale: generateOpenGraphAlternateLocales(),
   },
   twitter: {
     card: 'summary_large_image',
     title: "AI Chat Bot - Smart Customer Support",
-    description: "Enhance customer service with AI-powered chat support. Available 24/7, multilingual, and fully customizable.",
+    description: "Transform your customer support with AI technology. Available 24/7, multilingual, and fully customizable.",
     images: [`${baseUrl}/assets/images/og-ai-chat-bot.jpg`],
-    creator: "@neurogenlab", // Добавлен Twitter аккаунт
-    site: "@neurogenlab", // Добавлен Twitter сайт
+    creator: "@neurogenlab",
+    site: "@neurogenlab",
   },
   authors: [{ name: "NeuroGen Lab Team" }], // Добавлены авторы
-  alternates: {
-    canonical: `${baseUrl}/tools/ai-chat-bot`,
-    languages: {
-      'en': `${baseUrl}/en/tools/ai-chat-bot`,
-      'de': `${baseUrl}/de/tools/ai-chat-bot`,
-      'es': `${baseUrl}/es/tools/ai-chat-bot`,
-      'ru': `${baseUrl}/ru/tools/ai-chat-bot`,
-      'uk': `${baseUrl}/uk/tools/ai-chat-bot`
-    },
-  },
+  alternates: generateHrefLangs('tools/ai-chat-bot'),
   robots: {
     index: true,
     follow: true,
@@ -97,7 +89,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AIChatBotLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;
