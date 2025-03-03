@@ -7,7 +7,6 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-
   "name": "NeuroGen Lab Smart Tables",
   "applicationCategory": "BusinessApplication, DataManagementApplication",
   "description": "AI-powered table management for efficient data organization and analysis",
