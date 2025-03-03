@@ -1,6 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
+import { generatePageMetadata } from '../../../../utils/metadata';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -29,7 +30,6 @@ const jsonLd = {
     "ratingCount": "130"
   }
 };
-
 export const metadata: Metadata = {
   title: "Smart Tables | NeuroGen Lab - Intelligent Data Management",
   description: "Transform your data management with AI-powered table solutions. Advanced sorting, filtering, and analytics for efficient organization.",
@@ -96,8 +96,7 @@ export const metadata: Metadata = {
     },
   },
 };
-
-export default function Layout({
+export default function TablesLayout({
   children,
 }: {
   children: React.ReactNode;
