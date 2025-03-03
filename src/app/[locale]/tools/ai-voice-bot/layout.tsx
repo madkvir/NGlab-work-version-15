@@ -1,7 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
 import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
-import { generatePageMetadata } from '../../../../utils/metadata';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -30,15 +29,66 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/ai-voice-bot',
-  'AI Voice Bot | NeuroGen Lab - Intelligent Voice Automation',
-  'Transform your customer communication with AI-powered voice bots. Automate interactions while maintaining natural conversation flow.',
-  `${baseUrl}/assets/images/og-ai-voice-bot.jpg`,
-  'NeuroGen Lab AI Voice Bot'
-);
+export const metadata: Metadata = {
+  title: "AI Voice Bot | NeuroGen Lab - Intelligent Voice Solutions",
+  description: "Transform your customer interactions with AI-powered voice technology. Natural language processing, automated responses, and intelligent voice communication for enhanced engagement.",
+  other: {
+    'ai-optimized': 'true',
+  },
+  keywords: [
+    "AI voice bot",
+    "voice automation",
+    "speech recognition",
+    "voice assistant",
+    "automated responses",
+    "voice technology",
+    "AI communication",
+    "customer interaction",
+    "NeuroGen Lab voice",
+    "voice solutions"
+  ],
+  openGraph: {
+    type: 'website',
+    title: "AI Voice Bot - Intelligent Voice Solutions | NeuroGen Lab",
+    description: "Transform your customer interactions with AI-powered voice technology. Enhanced communication and automated responses.",
+    url: `${baseUrl}/tools/ai-voice-bot`,
+    siteName: "NeuroGen Lab",
+    images: [
+      {
+        url: `${baseUrl}/assets/images/og-ai-voice-bot.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "NeuroGen Lab AI Voice Bot",
+        type: 'image/jpeg',
+      },
+    ],
+    locale: 'en',
+    alternateLocale: generateOpenGraphAlternateLocales(),
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "AI Voice Bot - Smart Voice Communication",
+    description: "Transform your customer interactions with AI-powered voice technology and intelligent automation.",
+    images: [`${baseUrl}/assets/images/og-ai-voice-bot.jpg`],
+    creator: "@neurogenlab",
+    site: "@neurogenlab",
+  },
+  alternates: generateHrefLangs('tools/ai-voice-bot'),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  authors: [{ name: "NeuroGen Lab Team" }],
+};
 
-export default function AiVoiceBotLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;
