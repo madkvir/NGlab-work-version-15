@@ -7,7 +7,8 @@ interface FAQProps {
 }
 
 const FAQ = async ({ language }: FAQProps) => {
-  const t = faqTranslations[language];
+  // Проверяем, существует ли перевод для указанного языка, иначе используем английский
+  const t = faqTranslations[language as keyof typeof faqTranslations] || faqTranslations["en"];
 
   return (
     <section id="faq" className="py-5 scroll-mt-20">

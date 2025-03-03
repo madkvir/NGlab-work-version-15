@@ -17,7 +17,8 @@ interface HowItWorksProps {
 }
 
 const HowItWorks = async ({ language }: HowItWorksProps) => {
-  const t = howItWorksTranslations[language];
+  // Проверяем, существует ли перевод для указанного языка, иначе используем английский
+  const t = howItWorksTranslations[language as keyof typeof howItWorksTranslations] || howItWorksTranslations["en"];
 
   return (
     <section className="py-5 md:py-5 -mt-24 md:mt-0">
