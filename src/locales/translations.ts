@@ -323,6 +323,7 @@ export const toolGroupTranslations = {
     'AI Assistant': 'AI Assistant',
     'Custom Development': 'Custom Development',
     'Counseling': 'Counseling',
+    'KeepinCRM': 'KeepinCRM',
     // ... остальные названия инструментов
   },
   de: {
@@ -341,6 +342,7 @@ export const toolGroupTranslations = {
     'AI Assistant': 'KI-Assistent',
     'Custom Development': 'Individuelle Entwicklung',
     'Counseling': 'Beratung',
+    'KeepinCRM': 'KeepinCRM',
     // ... остальные названия инструментов
   },
   es: {
@@ -359,6 +361,7 @@ export const toolGroupTranslations = {
     'AI Assistant': 'Asistente IA',
     'Custom Development': 'Desarrollo Personalizado',
     'Counseling': 'Asesoramiento',
+    'KeepinCRM': 'KeepinCRM',
     // ... остальные названия инструментов
   },
   ru: {
@@ -375,7 +378,8 @@ export const toolGroupTranslations = {
     'AI Avatar': 'ИИ Аватар',
     'AI Assistant': 'ИИ Ассистент',
     'Custom Development': 'Индивидуальная разработка',
-    'Counseling': 'Консультации'
+    'Counseling': 'Консультации',
+    'KeepinCRM': 'KeepinCRM',
   },
   ua: {
     'AI Tools for Business': 'ШІ інструменти для бізнесу',
@@ -391,7 +395,8 @@ export const toolGroupTranslations = {
     'AI Avatar': 'ШІ Аватар',
     'AI Assistant': 'ШІ Ассистент',
     'Custom Development': 'Індивідуальна розробка',
-    'Counseling': 'Консультації'
+    'Counseling': 'Консультації',
+    'KeepinCRM': 'KeepinCRM',
   }
 };
 

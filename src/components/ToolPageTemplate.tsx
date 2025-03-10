@@ -12,8 +12,8 @@ interface ToolPageProps {
   title: string;
   description: string;
   icon: React.ReactNode;
-  features: string[];
-  benefits: string[];
+  features: (string | { key: string; text: string })[];
+  benefits: (string | { key: string; text: string })[];
   integrations?: string[];
   metaTitle: string;
   metaDescription: string;
@@ -110,7 +110,15 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-emerald-400">•</span>
-                    <span className="text-gray-300">{feature}</span>
+                    <span className="text-gray-300">
+                      {typeof feature === 'string' ? (
+                        feature
+                      ) : (
+                        <>
+                          <strong className="font-semibold text-emerald-300">{feature.key}</strong> – {feature.text}
+                        </>
+                      )}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -125,7 +133,15 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <span className="text-emerald-400">•</span>
-                    <span className="text-gray-300">{benefit}</span>
+                    <span className="text-gray-300">
+                      {typeof benefit === 'string' ? (
+                        benefit
+                      ) : (
+                        <>
+                          <strong className="font-semibold text-emerald-300">{benefit.key}</strong> – {benefit.text}
+                        </>
+                      )}
+                    </span>
                   </li>
                 ))}
               </ul>

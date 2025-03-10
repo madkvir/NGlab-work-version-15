@@ -110,6 +110,12 @@ const SolutionsMenu = ({ isMobile }: SolutionsMenuProps) => {
         to: "/tools/zapier",
       },
       {
+        icon: <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />,
+        name: "KeepinCRM",
+        to: "/tools/keepincrm",
+        hot: true,
+      },
+      {
         icon: <Table2 className="w-5 h-5 sm:w-6 sm:h-6" />,
         name: "Tables",
         to: "/tools/tables",
