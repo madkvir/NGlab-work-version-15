@@ -1,21 +1,14 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import React from "react";
 import { Link } from "../i18n/routing";
 
-const Logo = () => {
-  const location = usePathname();
+interface LogoProps {
+  language?: string;
+}
 
-  const handleClick = (e: React.MouseEvent) => {
-    if (location === "/") {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
+const Logo = ({ language = "en" }: LogoProps) => {
   return (
-    <Link href="/" onClick={handleClick} className="flex items-center">
+    <Link href="/" locale={language}>
       <div className="flex items-center">
         <img
           src="/NG.svg"

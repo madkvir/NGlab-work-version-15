@@ -233,7 +233,7 @@ const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Logo />
+            <Logo language={language} />
 
             <div className="hidden lg:flex items-center justify-center flex-1  space-x-8">
               <div className="relative">

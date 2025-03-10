@@ -12,7 +12,6 @@ const Pricing = () => {
   const t = pricingTranslations[language];
 
   const handleGetStarted = () => {
-    router.push("/contacts");
     redirect({ href: "/contacts", locale: language.toString() });
   };
 
