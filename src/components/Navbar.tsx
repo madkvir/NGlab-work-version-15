@@ -7,8 +7,8 @@ import Logo from "./Logo";
 import SolutionsMenu from "./SolutionsMenu";
 import { useClickOutside } from "./hooks/useClickOutside";
 import { useScrollLock } from "./hooks/useScrollLock";
-import { useRouter } from "next/navigation";
-import { Link, usePathname } from "../i18n/routing";
+import { useRouter, usePathname } from "next/navigation";
+import { Link, usePathname as i18usePathname, useRouter as i18useRouter } from "../i18n/routing";
 import { translations } from "../locales/translations";
 import getPageLangUnit from "../utils/getPageLangUnit";
 import Cookies from "js-cookie";
@@ -101,7 +101,8 @@ const Navbar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const router = useRouter();
-  const location = usePathname();
+  const i18router = i18useRouter();
+  const location = i18usePathname();
 
   const language = getPageLangUnit(translations);
 
@@ -166,8 +167,8 @@ const Navbar = () => {
     setIsMenuOpen(false);
 
     if (location !== "/") {
-      const url = `/${language}/#${encodeURIComponent(id)}`;
-      router.push(url);
+      const url = `/#${encodeURIComponent(id)}`;
+      i18router.push(url);
     } else {
       const element = document.getElementById(id);
       if (element) {
