@@ -166,7 +166,7 @@ const Navbar = () => {
     setIsMenuOpen(false);
 
     if (location !== "/") {
-      const url = `/#${encodeURIComponent(id)}`;
+      const url = `/${language}/#${encodeURIComponent(id)}`;
       router.push(url);
     } else {
       const element = document.getElementById(id);
