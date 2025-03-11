@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import GlowingButton from "./common/GlowingButton";
 import { pricingTranslations } from "../locales/translations";
 import getPageLangUnit from "../utils/getPageLangUnit";
-import { redirect } from "../i18n/routing";
 
 const Pricing = () => {
   const router = useRouter();
