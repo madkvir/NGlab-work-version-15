@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+
+# Sitemaps
+Sitemap: https://neurogenlab.de/sitemap.xml
