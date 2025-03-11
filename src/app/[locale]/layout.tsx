@@ -15,7 +15,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "../../i18n/routing";
-import Script from 'next/script';
+import Script from "next/script";
 import { SUPPORTED_LANGUAGES } from "../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://neurogenlab.de";
@@ -159,16 +159,22 @@ export const metadata: Metadata = {
     yahoo: "your-yahoo-verification",
     other: {
       me: ["your-personal-site"],
-      ...(indexNowKey ? { 'msvalidate.01': indexNowKey } : {})
+      ...(indexNowKey ? { "msvalidate.01": indexNowKey } : {}),
     },
   },
 };
 
-export default async function RootLayout({ children, params }: { children: ReactNode; params: { locale: string } }) {
+export default async function RootLayout({
+  children,
+  params,
+}: {
+  children: ReactNode;
+  params: { locale: string };
+}) {
   const cookieStore = await cookies();
   const initialLanguage = cookieStore.get("NEXT_LOCALE")?.value || "en";
-  const { locale } = params;
-  
+  const { locale } = await params;
+
   if (!SUPPORTED_LANGUAGES.includes(locale as any)) {
     notFound();
   }
@@ -189,7 +195,7 @@ export default async function RootLayout({ children, params }: { children: React
 
         {/* Основной hreflang тег для английской версии как x-default */}
         <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/en`} />
-        
+
         {/* Теги hreflang для всех поддерживаемых языков */}
         {SUPPORTED_LANGUAGES.map((lang) => (
           <link key={lang} rel="alternate" hrefLang={lang} href={`${baseUrl}/${lang}`} />
