@@ -206,7 +206,7 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
               }
               className={isComingSoon ? "cursor-not-allowed opacity-75" : ""}
             >
-              {isComingSoon ? "Coming Soon" : "Get Started"}
+              {isComingSoon ? "Coming Soon" : t.getStarted}
             </GlowingButton>
           </div>
 
