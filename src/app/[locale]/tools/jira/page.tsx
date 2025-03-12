@@ -4,10 +4,12 @@ import ToolPageTemplate from "../../../../components/ToolPageTemplate";
 import { jiraTranslations } from "../../../../locales/translations";
 import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
+import getCommonTranslations from "../../../../utils/getCommonTranslations";
 
 const JiraPage = async ({ params }) => {
   const language = await getServerPageLang(params);
   const t = jiraTranslations[language] || jiraTranslations.en;
+  const commonT = await getCommonTranslations(params);
 
   return (
     <ToolPageTemplate
@@ -21,6 +23,7 @@ const JiraPage = async ({ params }) => {
       metaTitle={t.metaTitle}
       metaDescription={t.metaDescription}
       isComingSoon={false}
+      commonT={commonT}
       imageComponent={
         <div className="max-w-7xl mx-auto">
           <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">

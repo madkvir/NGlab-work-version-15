@@ -7,6 +7,8 @@ import ScrollToTop from "./ScrollToTop";
 import GlowingButton from "./common/GlowingButton";
 import { ArticleContent } from "./ArticleContent";
 import BackToHome from "./BackToHome";
+import { commonTranslations } from "../locales/commonTranslations";
+import getPageLangUnit from "../utils/getPageLangUnit";
 
 interface ToolPageProps {
   title: string;
@@ -52,6 +54,7 @@ interface ToolPageProps {
     integrations: string;
   };
   imageComponent?: React.ReactNode;
+  commonT?: any;
 }
 
 const ToolPageTemplate: React.FC<ToolPageProps> = ({
@@ -67,7 +70,11 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
   articleContent,
   sectionTitles,
   imageComponent,
+  commonT,
 }) => {
+  const language = !commonT ? getPageLangUnit(commonTranslations) : "";
+  const t = commonT || (language ? commonTranslations[language] : commonTranslations.en);
+
   React.useEffect(() => {
     document.title = metaTitle;
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -301,11 +308,10 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
           <div className="bg-gray-900/50 rounded-xl p-8 border border-gray-800/50 mt-12">
             <div className="text-center">
               <h3 className="text-2xl font-semibold mb-4">
-                Need more information? Contact Sales
+                {t.contactBlock.title}
               </h3>
               <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-                Our team is ready to answer your questions and provide you with
-                all the information you need about our AI tools and services.
+                {t.contactBlock.description}
               </p>
               <GlowingButton
                 to="/contacts"
@@ -314,7 +320,7 @@ const ToolPageTemplate: React.FC<ToolPageProps> = ({
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 }
               >
-                Contact Sales
+                {t.contactBlock.buttonText}
               </GlowingButton>
             </div>
           </div>

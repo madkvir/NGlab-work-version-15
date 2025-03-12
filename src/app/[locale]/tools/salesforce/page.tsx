@@ -3,12 +3,15 @@ import React from "react";
 import { BarChart3 } from "lucide-react";
 import ToolPageTemplate from "../../../../components/ToolPageTemplate";
 import { salesforceTranslations } from "../../../../locales/translations";
+import { commonTranslations } from "../../../../locales/commonTranslations";
 import Image from "next/image";
 import getPageLangUnit from "../../../../utils/getPageLangUnit";
 
 const SalesforcePage = () => {
   const language = getPageLangUnit(salesforceTranslations);
   const t = salesforceTranslations[language] || salesforceTranslations.en;
+  // Получаем переводы для общих компонентов
+  const commonT = commonTranslations[language] || commonTranslations.en;
 
   // Добавляем значения по умолчанию
   const defaultContent = {
@@ -121,6 +124,7 @@ const SalesforcePage = () => {
       metaDescription={t?.metaDescription || "Enhance your CRM management"}
       isComingSoon={false}
       articleContent={articleContent}
+      commonT={commonT}
       imageComponent={
         <div className="max-w-7xl mx-auto">
           <div

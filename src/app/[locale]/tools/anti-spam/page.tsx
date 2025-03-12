@@ -4,10 +4,12 @@ import ToolPageTemplate from "../../../../components/ToolPageTemplate";
 import { antiSpamTranslations } from "../../../../locales/translations";
 import Image from "next/image";
 import getServerPageLang from "../../../../utils/getServerPageLang";
+import getCommonTranslations from "../../../../utils/getCommonTranslations";
 
 const AntiSpam = async ({ params }) => {
   const language = await getServerPageLang(params);
   const t = antiSpamTranslations[language] || antiSpamTranslations.en;
+  const commonT = await getCommonTranslations(params);
 
   return (
     <ToolPageTemplate
@@ -21,6 +23,7 @@ const AntiSpam = async ({ params }) => {
       metaTitle={t.metaTitle}
       metaDescription={t.metaDescription}
       isComingSoon={false}
+      commonT={commonT}
       imageComponent={
         <div className="max-w-7xl mx-auto">
           <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
