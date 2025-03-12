@@ -430,14 +430,14 @@ export const heroTranslations = {
       part2: "Artificial Intelligence",
       part3: "for Your Business"
     },
-    description: "Transform your business with cutting-edge AI solutions. Our platform helps you implement intelligent automation and data-driven decision making.",
+    description: "Transform your business with cutting-edge AI solutions. We help you implement intelligent automation, increase efficiency and profit",
     buttons: {
       getStarted: "Get Started",
       watchDemo: "Watch Demo"
     },
-    noCreditCard: "No credit card required for trial",
+    noCreditCard: "Try the Light version for a demonstration on data from your site",
     imageAlt: "AI Technology Platform Interface",
-    advantagesTitle: "Why Choose Our Platform",
+    advantagesTitle: "Why Choose Us",
     advantagesDescription: "Discover the benefits that make our AI solutions stand out from the competition"
   },
   de: {
@@ -446,14 +446,14 @@ export const heroTranslations = {
       part2: "Künstlichen Intelligenz",
       part3: "für Ihr Unternehmen"
     },
-    description: "Transformieren Sie Ihr Unternehmen mit modernsten KI-Lösungen. Unsere Plattform unterstützt Sie bei der Implementierung intelligenter Automatisierung und datengestützter Entscheidungsfindung.",
+    description: "Transformieren Sie Ihr Unternehmen mit modernsten KI-Lösungen. Wir unterstützen Sie bei der Implementierung intelligenter Automatisierung, erhöhen die Effizienz und den Gewinn Ihres Unternehmens",
     buttons: {
       getStarted: "Jetzt Starten",
       watchDemo: "Demo Ansehen"
     },
-    noCreditCard: "Keine Kreditkarte für Testversion erforderlich",
+    noCreditCard: "Testen Sie die Light-Version für eine Demonstration mit Daten von Ihrer Website",
     imageAlt: "KI-Technologie-Plattform-Schnittstelle",
-    advantagesTitle: "Warum unsere Plattform wählen",
+    advantagesTitle: "Warum uns wählen",
     advantagesDescription: "Entdecken Sie die Vorteile, die unsere KI-Lösungen von der Konkurrenz abheben"
   },
   es: {
@@ -462,14 +462,14 @@ export const heroTranslations = {
       part2: "Inteligencia Artificial",
       part3: "para tu Negocio"
     },
-    description: "Transforma tu negocio con soluciones de IA de vanguardia. Nuestra plataforma te ayuda a implementar la automatización inteligente y la toma de decisiones basada en datos.",
+    description: "Transforma tu negocio con soluciones de IA de vanguardia. Podemos ayudar a implementar la automatización inteligente, aumentar la eficiencia y el beneficio de tu negocio",
     buttons: {
       getStarted: "Comenzar",
       watchDemo: "Ver Demo"
     },
-    noCreditCard: "No se requiere tarjeta de crédito para la prueba",
+    noCreditCard: "Pruebe la versión Light para una demostración con los datos de su sitio web",
     imageAlt: "Interfaz de la Plataforma de Tecnología IA",
-    advantagesTitle: "Por qué elegir nuestra plataforma",
+    advantagesTitle: "Por qué elegirnos",
     advantagesDescription: "Descubre los beneficios que hacen que nuestras soluciones de IA destaquen de la competencia"
   },
   ru: {
@@ -478,14 +478,14 @@ export const heroTranslations = {
       part2: "Искусственного Интеллекта",
       part3: "для Вашего Бизнеса"
     },
-    description: "Трансформируйте ваш бизнес с помощью передовых решений ИИ. Наша платформа помогает внедрить интеллектуальную автоматизацию и принятие решений на основе данных.",
+    description: "Трансформируйте ваш бизнес с помощью передовых решений ИИ. Мы помогаем внедрить интеллектуальную автоматизацию, увеличить эффективность и прибыль вашего бизнеса",
     buttons: {
       getStarted: "Начать",
       watchDemo: "Смотреть Демо"
     },
-    noCreditCard: "Кредитная карта не требуется для пробного периода",
+    noCreditCard: "Попробуйте Light-версию для демонстрации на данных с вашего сайта",
     imageAlt: "Интерфейс платформы ИИ технологий",
-    advantagesTitle: "Почему стоит выбрать нашу платформу",
+    advantagesTitle: "Почему стоит выбрать нас",
     advantagesDescription: "Откройте для себя преимущества, которые выделяют наши решения ИИ среди конкурентов"
   },
   ua: {
@@ -494,14 +494,14 @@ export const heroTranslations = {
       part2: "Штучного Інтелекту",
       part3: "для Вашого Бізнесу"
     },
-    description: "Трансформуйте ваш бізнес за допомогою передових рішень ШІ. Наша платформа допомагає впровадити інтелектуальну автоматизацію та прийняття рішень на основі даних.",
+    description: "Трансформуйте ваш бізнес за допомогою передових рішень ШІ. Мы допомагаємо впровадити інтелектуальну автоматизацію, збільшити ефективність та прибуток вашого бізнесу",
     buttons: {
       getStarted: "Розпочати",
       watchDemo: "Дивитись Демо"
     },
-    noCreditCard: "Кредитна картка не потрібна для пробного періоду",
+    noCreditCard: "Спробуйте Light-версію для демонстрації на даних з вашого сайту",
     imageAlt: "Інтерфейс платформи ШІ технологій",
-    advantagesTitle: "Чому варто обрати нашу платформу",
+    advantagesTitle: "Чому варто обрати нас",
     advantagesDescription: "Відкрийте для себе переваги, які вирізняють наші рішення ШІ серед конкурентів"
   }
 } as const;
@@ -510,100 +510,100 @@ export const advantageCardsTranslations = {
   en: {
     cards: [
       {
-        title: "Effortless Content AI",
-        description: "Let our AI-powered service take the hard work out of content creation."
+        title: "Artificial Intelligence for Business",
+        description: "We automate routine processes and enhance customer service efficiency with advanced AI solutions"
       },
       {
-        title: "Your Words, Our Tech",
-        description: "Discover how AI can transform your ideas into engaging content."
+        title: "Your Challenges – Our Technology",
+        description: "We transform complex business processes into user-friendly, automated AI solutions"
       },
       {
-        title: "AI Generation Simple",
-        description: "Experience the ease of content creation with our AI service."
+        title: "Intuitive AI Operation",
+        description: "Easy setup, business adaptation, and minimal implementation time – so AI works for you"
       },
       {
-        title: "Quality AI Content",
-        description: "Get professionally written content in no time with our AI service."
+        title: "High-Quality Results in Minutes",
+        description: "We ensure high accuracy and speed of AI, reducing the time spent on routine tasks"
       }
     ]
   },
   de: {
     cards: [
       {
-        title: "Mühelose KI-Inhalte",
-        description: "Lassen Sie unseren KI-gestützten Service die harte Arbeit bei der Inhaltserstellung übernehmen."
+        title: "Künstliche Intelligenz für Unternehmen",
+        description: "Wir automatisieren Routineprozesse und steigern die Effizienz der Kundenbetreuung mit fortschrittlichen KI-Lösungen"
       },
       {
-        title: "Ihre Worte, Unsere Technik",
-        description: "Entdecken Sie, wie KI Ihre Ideen in fesselnde Inhalte verwandeln kann."
+        title: "Ihre Herausforderungen – unsere Technologie",
+        description: "Wir verwandeln komplexe Geschäftsprozesse in benutzerfreundliche, automatisierte KI-Lösungen"
       },
       {
-        title: "KI-Generierung Einfach",
-        description: "Erleben Sie die Leichtigkeit der Inhaltserstellung mit unserem KI-Service."
+        title: "Intuitive Nutzung der KI",
+        description: "Einfache Einrichtung, Anpassung an Ihr Unternehmen und minimale Implementierungszeit – damit die KI für Sie arbeitet"
       },
       {
-        title: "Qualitativ Hochwertige KI-Inhalte",
-        description: "Erhalten Sie professionell geschriebene Inhalte in kürzester Zeit mit unserem KI-Service."
+        title: "Hochwertige Ergebnisse in Minuten",
+        description: "Wir garantieren höchste Genauigkeit und Geschwindigkeit der KI, wodurch Routineaufgaben in kürzester Zeit erledigt werden"
       }
     ]
   },
   es: {
     cards: [
       {
-        title: "IA de Contenido Sin Esfuerzo",
-        description: "Deja que nuestro servicio impulsado por IA se encargue del trabajo duro en la creación de contenido."
+        title: "Inteligencia Artificial para negocios",
+        description: "Automatizamos procesos rutinarios y mejoramos la eficiencia en la gestión de clientes con soluciones avanzadas de IA"
       },
       {
-        title: "Tus Palabras, Nuestra Tecnología",
-        description: "Descubre cómo la IA puede transformar tus ideas en contenido atractivo."
+        title: "Tus desafíos, nuestra tecnología",
+        description: "Transformamos procesos comerciales complejos en soluciones automatizadas basadas en IA"
       },
       {
-        title: "Generación IA Simple",
-        description: "Experimenta la facilidad de crear contenido con nuestro servicio de IA."
+        title: "Interacción intuitiva con IA",
+        description: "Configuración sencilla, adaptación a tu negocio y un tiempo mínimo de implementación para que la IA trabaje para ti"
       },
       {
-        title: "Contenido IA de Calidad",
-        description: "Obtén contenido escrito profesionalmente en poco tiempo con nuestro servicio de IA."
+        title: "Resultados de calidad en minutos",
+        description: "Garantizamos alta precisión y velocidad en el trabajo de IA, reduciendo el tiempo en tareas rutinarias"
       }
     ]
   },
   ru: {
     cards: [
       {
-        title: "ИИ для создания контента",
-        description: "Позвольте нашему сервису на базе ИИ взять на себя всю сложную работу по созданию контента."
+        title: "ИИ для бизнеса",
+        description: "Автоматизируем рутинные процессы и повышаем эффективность работы с клиентами с помощью передовых ИИ-решений"
       },
       {
-        title: "Ваши слова, наши технологии",
-        description: "Узнайте, как ИИ может превратить ваши идеи в привлекательный контент."
+        title: "Ваши задачи – наши технологии",
+        description: "Превращаем сложные бизнес-процессы в удобные автоматизированные решения на базе ИИ"
       },
       {
-        title: "Простая генерация с ИИ",
-        description: "Оцените простоту создания контента с нашим ИИ-сервисом."
+        title: "Интуитивная работа с ИИ",
+        description: "Простая настройка, адаптация под бизнес и минимальное время на внедрение – всё, чтобы ИИ работал на вас"
       },
       {
-        title: "Качественный контент от ИИ",
-        description: "Получите профессионально написанный контент за считанные минуты с нашим ИИ-сервисом."
+        title: "Качественные результаты за минуты",
+        description: "Гарантируем высокую точность и скорость работы ИИ, сокращая время на выполнение рутинных задач"
       }
     ]
   },
   ua: {
     cards: [
       {
-        title: "ШІ для створення контенту",
-        description: "Дозвольте нашому сервісу на базі ШІ взяти на себе всю складну роботу зі створення контенту."
+        title: "ШІ для бізнесу",
+        description: "Автоматизуємо рутинні процеси і підвищуємо ефективність роботи з клієнтами за допомогою передових ШІ-рішень"
       },
       {
-        title: "Ваші слова, наші технології",
-        description: "Дізнайтеся, як ШІ може перетворити ваші ідеї на привабливий контент."
+        title: "Ваші задачі – наші технології",
+        description: "Перетворюємо складні бізнес-процеси на зручні автоматизовані рішення на основі ШІ"
       },
       {
-        title: "Проста генерація з ШІ",
-        description: "Оцініть простоту створення контенту з нашим ШІ-сервісом."
+        title: "Інтуїтивна робота з ШІ",
+        description: "Просте налаштування, адаптація під бізнес і мінімальний час на впровадження – все, щоб ШІ працював на вас"
       },
       {
-        title: "Якісний контент від ШІ",
-        description: "Отримайте професійно написаний контент за лічені хвилини з нашим ШІ-сервісом."
+        title: "Якісні результати за хвилини",
+        description: "Гарантуємо високу точність і швидкість роботи ІІ, скорочуючи час на виконання рутинних завдань"
       }
     ]
   }
