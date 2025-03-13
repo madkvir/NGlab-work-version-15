@@ -361,51 +361,51 @@ export const guideTranslations: GuideTranslations = {
       },
       stage3: {
         title: "КАК ПРОХОДИТ РАБОТА",
-        subtitle: "Integration and Launch",
+        subtitle: "Интеграция и запуск",
         sections: {
           dataPreparation: {
-            title: "Data Preparation and Knowledge Base Creation",
-            content: "We start by preparing and structuring the data that will form the foundation of your AI assistant's knowledge base. This includes processing documentation, FAQs, product descriptions, and other relevant information sources."
+            title: "Подготовка данных и создание базы знаний",
+            content: "Мы начинаем с подготовки и структурирования данных, которые станут основой базы знаний вашего ИИ-ассистента. Это включает в себя обработку документации, FAQ, описаний продуктов и других релевантных источников информации."
           },
           integrationProcess: {
-            title: "Integration Process",
-            content: `We connect the AI assistant to your communication channels: Facebook, Website Widget, WhatsApp, Instagram, and other platforms. We also integrate with your management systems such as HubSpot, Salesforce, Email, SQL or NoSQL databases. This ensures seamless data flow and synchronization across all platforms.`
+            title: "Процесс интеграции",
+            content: `Мы подключаем ИИ-ассистента к вашим коммуникационным каналам: Facebook, Виджет на сайт, WhatsApp, Instagram и другим платформам. Также интегрируем с вашими системами управления, такими как HubSpot, Salesforce, Email, базы данных SQL или NoSQL. Это обеспечивает бесперебойный поток данных и синхронизацию между всеми платформами.`
           },
           aiTraining: {
-            title: "AI Training and Testing",
-            content: "We conduct thorough training of the AI model using your prepared data. This includes:"
+            title: "Обучение и тестирование ИИ",
+            content: "Мы проводим тщательное обучение модели ИИ с использованием подготовленных данных. Это включает:"
           },
           trainingList: {
             title: "",
-            content: `• Initial model training on your knowledge base
-• Fine-tuning responses based on your business specifics
-• Testing various scenarios and use cases
-• Response accuracy verification
-• Integration testing with all connected systems`
+            content: `• Начальное обучение модели на вашей базе знаний
+• Тонкая настройка ответов на основе специфики вашего бизнеса
+• Тестирование различных сценариев и случаев использования
+• Проверка точности ответов
+• Интеграционное тестирование с всеми подключенными системами`
           },
           qualityAssurance: {
-            title: "Quality Assurance",
-            content: "We perform comprehensive testing of all system components:"
+            title: "Гарантия качества",
+            content: "Мы проводим всестороннее тестирование всех компонентов системы:"
           },
           qaList: {
             title: "",
-            content: `• Verification of response accuracy and relevance
-• Testing of all integration points
-• Load testing and performance optimization
-• Security testing and data protection verification
-• User interface testing and experience optimization`
+            content: `• Проверка точности и релевантности ответов
+• Тестирование всех точек интеграции
+• Тестирование нагрузки и оптимизация производительности
+• Тестирование безопасности и проверка защиты данных
+• Тестирование пользовательского интерфейса и оптимизация опыта`
           },
           launch: {
-            title: "Launch and Initial Support",
-            content: "After successful testing, we proceed with the launch. This includes:"
+            title: "Запуск и начальная поддержка",
+            content: "После успешно проведённого тестирования мы переходим к запуску. Это включает:"
           },
           launchList: {
             title: "",
-            content: `• System deployment in production environment
-• Real-time monitoring setup
-• Staff training on system usage
-• Documentation provision
-• Initial support and quick issue resolution`
+            content: `• Развёртывание системы в производственной среде
+• Настройка реального времени мониторинга
+• Обучение персонала по использованию системы
+• Предоставление документации
+• Начальная поддержка и быстрое решение проблем`
           },
           stageResults: {
             title: "",
@@ -415,31 +415,31 @@ export const guideTranslations: GuideTranslations = {
       },
       stage4: {
         title: "РЕЗУЛЬТАТЫ",
-        subtitle: "Continuous Improvement and Optimization",
+        subtitle: "Непрерывное улучшение и оптимизация",
         sections: {
           monitoring: {
-            title: "System Monitoring and Analytics",
-            content: "We continuously monitor the AI assistant's performance and collect analytics on:"
+            title: "Мониторинг и анализ",
+            content: "Мы непрерывно мониторим производительность ИИ-ассистента и собираем аналитику по:"
           },
           monitoringList: {
             title: "",
-            content: `• Response accuracy and relevance
-• User satisfaction metrics
-• System load and performance
-• Most frequent queries and scenarios
-• Areas requiring optimization`
+            content: `• Точности и релевантности ответов
+• Метрики удовлетворённости пользователей
+• Нагрузки и производительности системы
+• Часто используемые запросы и сценарии
+• Области, требующие оптимизации`
           },
           optimization: {
-            title: "Continuous Optimization",
-            content: "Based on the collected analytics, we regularly:"
+            title: "Непрерывная оптимизация",
+            content: "На основе собранной аналитики мы регулярно:"
           },
           optimizationList: {
             title: "",
-            content: `• Update and expand the knowledge base
-• Fine-tune response algorithms
-• Optimize system performance
-• Add new features and capabilities
-• Improve user experience`
+            content: `• Обновление и расширение базы знаний
+• Тонкая настройка алгоритмов ответов
+• Оптимизация производительности системы
+• Добавление новых функций и возможностей
+• Улучшение пользовательского опыта`
           },
           support: {
             title: "Техническая поддержка",
