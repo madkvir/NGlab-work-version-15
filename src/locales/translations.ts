@@ -611,30 +611,30 @@ export const advantageCardsTranslations = {
 
 export const howItWorksTranslations = {
   en: {
-    sectionTitle: "HOW IT WORKS",
-    title: "Guide Our AI to Create Your Success",
-    description: "Follow our proven implementation process to transform your business with AI",
-    steps: [
-      {
-        title: "Registration",
-        description: "Quick setup of your account with essential business details."
-      },
-      {
-        title: "Knowledge Base Setup",
-        description: "Import your existing content and configure AI learning parameters."
-      },
-      {
-        title: "Integration Configuration",
-        description: "Connect with your preferred platforms and communication channels."
-      },
-      {
-        title: "Production Launch",
-        description: "Deploy your AI solution with our expert guidance and support."
-      },
-      {
-        title: "Success & ROI",
-        description: "Monitor performance metrics and optimize for better results."
-      }
+    "sectionTitle": "HOW IT WORKS",
+    "title": "Guide AI to Your Success",
+    "description": "Follow our proven implementation process – we handle everything for you!",
+    "steps": [
+        {
+            "title": "Registration",
+            "description": "You submit your request – we set up the account, considering all the specifics of your business"
+        },
+        {
+            "title": "Knowledge Base Setup",
+            "description": "We gather and import all necessary data, tailoring the AI to your business needs"
+        },
+        {
+            "title": "Integration Setup",
+            "description": "We connect your AI Agent to the required plugins and communication channels"
+        },
+        {
+            "title": "Production Deployment",
+            "description": "We implement the ready-to-use solution and provide ongoing support – you just start using it"
+        },
+        {
+            "title": "Success & ROI",
+            "description": "We monitor performance and optimize the system to ensure you achieve the best results"
+        }
     ],
     buttons: {
       getStarted: "Get Started Free",
@@ -642,30 +642,30 @@ export const howItWorksTranslations = {
     }
   },
   de: {
-    sectionTitle: "WIE ES FUNKTIONIERT",
-    title: "Führen Sie unsere KI zu Ihrem Erfolg",
-    description: "Folgen Sie unserem bewährten Implementierungsprozess, um Ihr Unternehmen mit KI zu transformieren",
-    steps: [
-      {
-        title: "Registrierung",
-        description: "Schnelle Einrichtung Ihres Kontos mit wichtigen Geschäftsdaten."
-      },
-      {
-        title: "Wissensbasis-Einrichtung",
-        description: "Importieren Sie Ihre bestehenden Inhalte und konfigurieren Sie KI-Lernparameter."
-      },
-      {
-        title: "Integrationskonfiguration",
-        description: "Verbinden Sie sich mit Ihren bevorzugten Plattformen und Kommunikationskanälen."
-      },
-      {
-        title: "Produktionsstart",
-        description: "Implementieren Sie Ihre KI-Lösung mit unserer Expertenberatung und Unterstützung."
-      },
-      {
-        title: "Erfolg & ROI",
-        description: "Überwachen Sie Leistungskennzahlen und optimieren Sie für bessere Ergebnisse."
-      }
+    "sectionTitle": "WIE ES FUNKTIONIERT",
+    "title": "Steuern Sie die KI zu Ihrem Erfolg",
+    "description": "Folgen Sie unserem bewährten Implementierungsprozess – wir erledigen alles für Sie!",
+    "steps": [
+        {
+            "title": "Registrierung",
+            "description": "Sie senden einfach Ihre Anfrage – wir richten das Konto ein und berücksichtigen alle Besonderheiten Ihres Unternehmens"
+        },
+        {
+            "title": "Einrichtung der Wissensdatenbank",
+            "description": "Wir sammeln und importieren alle notwendigen Daten und passen die KI an Ihr Unternehmen an"
+        },
+        {
+            "title": "Integration einrichten",
+            "description": "Wir verbinden Ihren KI-Agenten mit den erforderlichen Plugins und Kommunikationskanälen"
+        },
+        {
+            "title": "Einführung in die Produktion",
+            "description": "Wir implementieren die fertige Lösung und bieten kontinuierlichen Support – Sie müssen sie nur noch nutzen"
+        },
+        {
+            "title": "Erfolg und ROI",
+            "description": "Wir überwachen die Leistung und optimieren das System, damit Sie die besten Ergebnisse erzielen"
+        }
     ],
     buttons: {
       getStarted: "Kostenlos Starten",
@@ -673,30 +673,30 @@ export const howItWorksTranslations = {
     }
   },
   es: {
-    sectionTitle: "CÓMO FUNCIONA",
-    title: "Guía Nuestra IA para Crear tu Éxito",
-    description: "Sigue nuestro proceso de implementación probado para transformar tu negocio con IA",
-    steps: [
-      {
-        title: "Registro",
-        description: "Configuración rápida de tu cuenta con detalles comerciales esenciales."
-      },
-      {
-        title: "Configuración de Base de Conocimientos",
-        description: "Importa tu contenido existente y configura los parámetros de aprendizaje de IA."
-      },
-      {
-        title: "Configuración de Integración",
-        description: "Conéctate con tus plataformas y canales de comunicación preferidos."
-      },
-      {
-        title: "Lanzamiento a Producción",
-        description: "Implementa tu solución de IA con nuestra guía y soporte experto."
-      },
-      {
-        title: "Éxito y ROI",
-        description: "Monitorea métricas de rendimiento y optimiza para mejores resultados."
-      }
+    "sectionTitle": "CÓMO FUNCIONA",
+    "title": "Dirige la IA hacia tu éxito",
+    "description": "Sigue nuestro proceso de implementación probado: ¡nosotros hacemos todo por ti!",
+    "steps": [
+        {
+            "title": "Registro",
+            "description": "Tú solo dejas tu solicitud, nosotros configuramos la cuenta teniendo en cuenta todas las particularidades de tu negocio"
+        },
+        {
+            "title": "Configuración de la base de conocimientos",
+            "description": "Recopilamos e importamos los datos necesarios, adaptando la IA a tu negocio"
+        },
+        {
+            "title": "Configuración de la integración",
+            "description": "Conectamos tu Agente de IA con los complementos y canales necesarios"
+        },
+        {
+            "title": "Lanzamiento en producción",
+            "description": "Implementamos la solución lista y proporcionamos soporte continuo – solo necesitas empezar a usarla"
+        },
+        {
+            "title": "Éxito y ROI",
+            "description": "Supervisamos el rendimiento y optimizamos el sistema para que obtengas los mejores resultados"
+        }
     ],
     buttons: {
       getStarted: "Comenzar Gratis",
@@ -705,28 +705,28 @@ export const howItWorksTranslations = {
   },
   ru: {
     sectionTitle: "КАК ЭТО РАБОТАЕТ",
-    title: "Направьте наш ИИ к вашему успеху",
-    description: "Следуйте нашему проверенному процессу внедрения для трансформации вашего бизнеса с помощью ИИ",
+    title: "Направьте ИИ к вашему успеху",
+    description: "Следуйте нашему проверенному процессу внедрения – мы сделаем всё за вас!",
     steps: [
       {
         title: "Регистрация",
-        description: "Быстрая настройка вашего аккаунта с важными деталями бизнеса."
+        description: "Вы оставляете заявку – мы настраиваем аккаунт с учетом всех особенностей вашего бизнеса"
       },
       {
         title: "Настройка базы знаний",
-        description: "Импортируйте существующий контент и настройте параметры обучения ИИ."
+        description: "Мы самостоятельно собираем и импортируем нужные данные, подстраивая ИИ под ваш бизнес"
       },
       {
         title: "Настройка интеграции",
-        description: "Подключитесь к предпочитаемым платформам и каналам связи."
+        description: "Подключаем вашего ИИ-Агента к нужным плагинам и каналам"
       },
       {
         title: "Запуск в производство",
-        description: "Разверните ваше ИИ-решение с нашим экспертным руководством и поддержкой."
+        description: "Внедряем готовое решение и обеспечиваем его поддержку – вам остается только пользоваться"
       },
       {
         title: "Успех и ROI",
-        description: "Отслеживайте показатели эффективности и оптимизируйте для лучших результатов."
+        description: "Мы следим за эффективностью и оптимизируем систему, чтобы вы получали максимальный результат"
       }
     ],
     buttons: {
@@ -735,30 +735,30 @@ export const howItWorksTranslations = {
     }
   },
   ua: {
-    sectionTitle: "ЯК ЦЕ ПРАЦЮЄ",
-    title: "Спрямуйте наш ШІ до вашого успіху",
-    description: "Дотримуйтесь нашого перевіреного процесу впровадження для трансформації вашого бізнесу за допомогою ШІ",
-    steps: [
-      {
-        title: "Реєстрація",
-        description: "Швидке налаштування вашого облікового запису з важливими деталями бізнесу."
-      },
-      {
-        title: "Налаштування бази знань",
-        description: "Імпортуйте існуючий контент та налаштуйте параметри навчання ШІ."
-      },
-      {
-        title: "Налаштування інтеграції",
-        description: "Підключіться до бажаних платформ та каналів зв'язку."
-      },
-      {
-        title: "Запуск у виробництво",
-        description: "Розгорніть ваше ШІ-рішення з нашим експертним керівництвом та підтримкою."
-      },
-      {
-        title: "Успіх та ROI",
-        description: "Відстежуйте показники ефективності та оптимізуйте для кращих результатів."
-      }
+    "sectionTitle": "ЯК ЦЕ ПРАЦЮЄ",
+    "title": "Спрямуйте ШІ до вашого успіху",
+    "description": "Дотримуйтесь нашого перевіреного процесу впровадження – ми зробимо все за вас!",
+    "steps": [
+        {
+            "title": "Реєстрація",
+            "description": "Ви залишаєте заявку – ми налаштовуємо акаунт з урахуванням усіх особливостей вашого бізнесу"
+        },
+        {
+            "title": "Налаштування бази знань",
+            "description": "Ми самостійно збираємо та імпортуємо необхідні дані, адаптуючи ШІ під ваш бізнес"
+        },
+        {
+            "title": "Налаштування інтеграції",
+            "description": "Підключаємо вашого ШІ-Агента до необхідних плагінів і каналів"
+        },
+        {
+            "title": "Запуск у виробництво",
+            "description": "Впроваджуємо готове рішення та забезпечуємо його підтримку – вам залишається лише користуватися"
+        },
+        {
+            "title": "Успіх і ROI",
+            "description": "Ми стежимо за ефективністю та оптимізуємо систему, щоб ви отримували максимальний результат"
+        }
     ],
     buttons: {
       getStarted: "Почати безкоштовно",
@@ -771,7 +771,7 @@ export const pricingTranslations = {
   en: {
     sectionTitle: "PRICING",
     title: "Choose Your AI Journey",
-    description: "Start with 500 free tokens to test our platform capabilities",
+    description: "Start with the Light version to demonstrate and test the capabilities of our AI Agent",
     customDev: {
       title: "Custom Development",
       subtitle: "Tailored AI Solutions",
@@ -807,7 +807,7 @@ export const pricingTranslations = {
   de: {
     sectionTitle: "PREISE",
     title: "Wählen Sie Ihren KI-Weg",
-    description: "Beginnen Sie mit 500 kostenlosen Tokens zum Testen unserer Plattform",
+    description: "Beginnen Sie mit der Light-Version, um die Fähigkeiten unseres KI-Agenten zu demonstrieren und zu testen",
     customDev: {
       title: "Individuelle Entwicklung",
       subtitle: "Maßgeschneiderte KI-Lösungen",
@@ -843,7 +843,7 @@ export const pricingTranslations = {
   es: {
     sectionTitle: "PRECIOS",
     title: "Elija su camino con IA",
-    description: "Comience con 500 tokens gratuitos para probar nuestra plataforma",
+    description: "Empieza con la versión Light para demostrar y probar las capacidades de nuestro agente de IA",
     customDev: {
       title: "Desarrollo Personalizado",
       subtitle: "Soluciones de IA a medida",
@@ -882,17 +882,16 @@ export const pricingTranslations = {
   ru: {
     sectionTitle: "ЦЕНЫ",
     title: "Выберите свой путь с ИИ",
-    description: "Начните с 500 бесплатных токенов для тестирования возможностей нашей платформы",
+    description: "Начните с Light версиии для демонстрации и тестирования возможностей нашего ИИ Агента",
     customDev: {
       title: "Индивидуальная разработка",
-      subtitle: "Индивидуальные ИИ-решения",
+      subtitle: "Создаем кастомные ИИ-решения под ваш бизнес:",
       // startingFrom: "От",
       // price: "Индивидуальная цена",
       features: [
-        "Разработка индивидуальных ИИ-моделей",
-        "Выделенная команда разработчиков",
-        "Реализация уникальной бизнес-логики",
-        "Индивидуальные интеграции и разработка API"
+        "Разработка моделей ИИ",
+        "Уникальная бизнес-логика",
+        "Интеграция с вашими системами",
       ],
       cta: "Отдел продаж"
     },
@@ -910,15 +909,15 @@ export const pricingTranslations = {
       cta: "Начать"
     },
     trial: {
-      title: "Начать бесплатный период",
-      description: "Получите 500 токенов для тестирования нашей платформы без обязательств",
+      title: "Закажите бесплатную консультацию",
+      description: "Получите анализ вашего бизнеса и предложение по ИИ-решению",
       cta: "Попробовать бесплатно"
     }
   },
   ua: {
     sectionTitle: "ЦІНИ",
     title: "Оберіть свій шлях з ШІ",
-    description: "Почніть з 500 безкоштовних токенів для тестування можливостей нашої платформи",
+    description: "Почніть з Light версіїї для демонстрації і тестування можливостей нашого ШІ Агенту",
     customDev: {
       title: "Індивідуальна розробка",
       subtitle: "Індивідуальні ШІ-рішення",
