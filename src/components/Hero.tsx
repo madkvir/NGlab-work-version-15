@@ -7,14 +7,13 @@ import Divider from "./Divider";
 import { heroTranslations } from "../locales/translations";
 import DemoModal from "./DemoModal";
 import getPageLangUnit from "../utils/getPageLangUnit";
-import { useRouter } from "../i18n/routing";
+import Link from "next/link";
 
 interface HeroProps {
   language: "en" | "de" | "es" | "ru" | "ua";
 }
 
 const Hero = () => {
-  const router = useRouter();
   const [isClient, setIsClient] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -25,10 +24,6 @@ const Hero = () => {
   useEffect(() => {
     setIsClient(true);
   }, []);
-
-  const handleGetStarted = () => {
-    router.push("/contacts");
-  };
 
   const handleWatchDemo = () => {
     setIsModalOpen(true);
@@ -72,13 +67,13 @@ const Hero = () => {
 
             <div className="flex flex-col items-center space-y-4 sm:space-y-6 mt-6 sm:mt-12 px-2 sm:px-4">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
-                <button
-                  onClick={handleGetStarted}
+                <Link
+                  href="/contacts"
                   className="w-full sm:w-auto group bg-gradient-to-r from-emerald-400 to-green-300 hover-gradient text-white px-4 sm:px-8 py-2.5 sm:py-4 rounded-lg transition-all hover:animate-glow flex items-center justify-center gap-2 text-sm sm:text-lg font-semibold select-none"
                 >
                   {t.buttons.getStarted}
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </Link>
                 <button
                   onClick={handleWatchDemo}
                   className="w-full sm:w-auto group px-6 sm:px-8 py-3 sm:py-4 rounded-lg border border-gray-700 hover:border-emerald-400 transition-colors text-base sm:text-lg font-semibold flex items-center justify-center gap-2 select-none"

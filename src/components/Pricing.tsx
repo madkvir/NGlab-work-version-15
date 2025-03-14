@@ -1,18 +1,17 @@
 "use client";
 import { Check, Sparkles, Wrench, Database, Code, Zap } from "lucide-react";
-import { useRouter } from "next/navigation";
 import GlowingButton from "./common/GlowingButton";
 import { pricingTranslations } from "../locales/pricingTranslations";
 import getPageLangUnit from "../utils/getPageLangUnit";
-import { redirect } from "../i18n/routing";
+import { useRouter } from "next/navigation";
 
 const Pricing = () => {
-  const router = useRouter();
   const language = getPageLangUnit(pricingTranslations);
   const t = pricingTranslations[language];
+  const router = useRouter();
 
   const handleGetStarted = () => {
-    redirect({ href: "/contacts", locale: language.toString() });
+    router.push("/contacts");
   };
 
   return (
@@ -34,7 +33,6 @@ const Pricing = () => {
           <div className="relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl blur opacity-30"></div>
             <div className="relative bg-gray-900/90 rounded-xl p-8 md:p-10">
-              
               {/* Custom Development Section */}
               <div className="mb-12 pb-12 border-b border-gray-700">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
@@ -63,7 +61,9 @@ const Pricing = () => {
                   </div>
                   <div className="bg-gray-800/30 rounded-lg p-5">
                     <Zap className="w-8 h-8 text-emerald-400 mb-3" />
-                    <h4 className="text-white font-semibold mb-2">{t.customDev.integrationTitle}</h4>
+                    <h4 className="text-white font-semibold mb-2">
+                      {t.customDev.integrationTitle}
+                    </h4>
                     <p className="text-gray-300 text-sm">{t.customDev.integrationDescription}</p>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ const Pricing = () => {
                     {t.customDev.pricingFactors}
                   </p>
                 </div>
-                
+
                 <div className="text-center">
                   <GlowingButton onClick={handleGetStarted}>{t.customDev.cta}</GlowingButton>
                 </div>
@@ -84,7 +84,7 @@ const Pricing = () => {
               <div className="text-center max-w-2xl mx-auto">
                 <Sparkles className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-3">{t.trial.title}</h3>
-                
+
                 <div className="bg-gray-800/30 rounded-lg p-6 mb-6">
                   <p className="text-gray-300 mb-4">{t.trial.description}</p>
                   <div className="flex flex-wrap justify-center gap-6 mb-4">
@@ -98,10 +98,9 @@ const Pricing = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <GlowingButton onClick={handleGetStarted}>{t.trial.cta}</GlowingButton>
               </div>
-              
             </div>
           </div>
         </div>
