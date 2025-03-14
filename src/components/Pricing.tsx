@@ -3,14 +3,14 @@ import { Check, Sparkles, Wrench, Database, Code, Zap } from "lucide-react";
 import GlowingButton from "./common/GlowingButton";
 import { pricingTranslations } from "../locales/pricingTranslations";
 import getPageLangUnit from "../utils/getPageLangUnit";
-import { redirect } from "../i18n/routing";
+import { redirect } from "next/navigation";
 
 const Pricing = () => {
   const language = getPageLangUnit(pricingTranslations);
   const t = pricingTranslations[language];
 
   const handleGetStarted = () => {
-    redirect({ href: "/contacts", locale: language.toString() });
+    redirect("/contacts");
   };
 
   return (
