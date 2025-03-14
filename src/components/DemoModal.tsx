@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 import { demoModalTranslations } from "../locales/translations";
-import getPageLangUnit from "../utils/getPageLangUnit";
+import { useParams } from "next/navigation";
 
 // Добавляем объект с URL видео для каждого языка
 const videoUrls = {
@@ -18,14 +18,10 @@ interface DemoModalProps {
   videoUrl?: string;
 }
 
-const DemoModal = ({
-  isOpen,
-  onClose,
-  videoUrl,
-}: DemoModalProps) => {
+const DemoModal = ({ isOpen, onClose, videoUrl }: DemoModalProps) => {
   // Создаем ref для iframe для предзагрузки
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  
+
   // Обработчик нажатия клавиши Escape
   useEffect(() => {
     const handleEscapeKey = (e: KeyboardEvent) => {
@@ -33,18 +29,18 @@ const DemoModal = ({
         onClose();
       }
     };
-    
+
     // Добавляем обработчик при открытии модального окна
     if (isOpen) {
       document.addEventListener("keydown", handleEscapeKey);
     }
-    
+
     // Удаляем обработчик при закрытии
     return () => {
       document.removeEventListener("keydown", handleEscapeKey);
     };
   }, [isOpen, onClose]);
-  
+
   // Предзагрузка видео
   useEffect(() => {
     if (isOpen && iframeRef.current) {
@@ -55,26 +51,34 @@ const DemoModal = ({
 
   if (!isOpen) return null;
 
+  const { locale } = useParams();
+  const getPageLangUnit = (translations) => {
+    let language: string | number | symbol;
+    if (locale === "uk") {
+      language = "ua";
+    } else {
+      language = (locale as keyof typeof translations) ?? "en";
+    }
+    return language.toString();
+  };
   const language = getPageLangUnit(demoModalTranslations);
+
   const t = demoModalTranslations[language];
-  
+
   // Используем URL из пропсов, если он передан, иначе берем URL для текущего языка
   const videoSrc = videoUrl || videoUrls[language] || videoUrls.en;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-black/80 backdrop-blur-sm" 
-        onClick={onClose} 
-      />
+      <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
 
       {/* Modal с анимацией */}
-      <div 
+      <div
         className="relative z-10 w-full max-w-4xl mx-4 bg-[#0B0F19] border border-emerald-400/20 rounded-2xl overflow-hidden shadow-2xl
                   animate-fadeIn"
         style={{
-          animation: isOpen ? 'fadeIn 0.3s ease-out forwards' : 'fadeOut 0.2s ease-in forwards'
+          animation: isOpen ? "fadeIn 0.3s ease-out forwards" : "fadeOut 0.2s ease-in forwards",
         }}
       >
         {/* Header */}
