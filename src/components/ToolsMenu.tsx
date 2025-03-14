@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { toolGroups } from "../data/toolGroups";
-import { Link } from "../i18n/routing";
+import Link from "next/link";
 
 interface ToolsMenuProps {
   isMobile?: boolean;

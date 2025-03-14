@@ -2,9 +2,9 @@
 
 import { ArrowLeft } from "lucide-react";
 import { useMemo } from "react";
-import { Link } from "../i18n/routing";
 import getPageLangUnit from "../utils/getPageLangUnit";
 import React from "react";
+import Link from "next/link";
 
 const backToHomeTranslations = {
   en: {

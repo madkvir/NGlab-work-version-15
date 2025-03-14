@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import { Link } from "../../../../i18n/routing";
 import ImageWithFallback from "./ImageWithFallback";
 import GlowingButton from "../../../../components/common/GlowingButton";
 import { integrationSetupTranslations } from "../../../../locales/integrationSetupTranslations";
+import Link from "next/link";
 
 interface IntegrationSetupStepsProps {
   language: string;

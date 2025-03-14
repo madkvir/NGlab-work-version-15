@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { toolGroupTranslations } from "../locales/translations";
 import getPageLangUnit from "../utils/getPageLangUnit";
-import { Link } from "../i18n/routing";
+import Link from "next/link";
 
 interface SolutionsMenuProps {
   isMobile?: boolean;
