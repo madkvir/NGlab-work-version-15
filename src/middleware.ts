@@ -2,43 +2,50 @@ import createMiddleware from "next-intl/middleware";
 import { NextRequest, NextResponse } from "next/server";
 
 const locales = ["en", "de", "uk", "ru", "es"];
-const defaultLocale = "en";
+const fallbackLocale = "en";
 
 const middleware = createMiddleware({
   locales,
-  defaultLocale,
+  defaultLocale: fallbackLocale,
 });
 
 export function middlewareWithRedirect(req: NextRequest) {
   const url = req.nextUrl;
-  const hostname = url.hostname;
-  const path = url.pathname;
+  let hostname = url.hostname;
+  let path = url.pathname;
 
-  // Local site dev
   if (hostname === "localhost") {
-    const { pathname } = req.nextUrl;
-
-    if (locales.some((locale) => pathname.startsWith(`/${locale}`))) {
-      return middleware(req);
+    if (!locales.some((locale) => path.startsWith(`/${locale}`))) {
+      const cookieLocale = req.cookies.get("NEXT_LOCALE")?.value;
+      const effectiveLocale = locales.includes(cookieLocale || "") ? cookieLocale : fallbackLocale;
+      url.pathname = `/${effectiveLocale}${path}`;
+      return NextResponse.redirect(url, 301);
     }
-
-    const newUrl = new URL(`/${defaultLocale}${pathname}`, req.nextUrl.origin);
-    return NextResponse.redirect(newUrl);
+    return middleware(req);
   }
 
-  // Комбинированный редирект: HTTP -> HTTPS, WWW -> non-WWW, добавление локали
-  if (
-    !req.headers.get("x-forwarded-proto")?.includes("https") ||
-    hostname.startsWith("www.") ||
-    !locales.some((locale) => path.startsWith(`/${locale}`))
-  ) {
-    const newHostname = hostname.replace("www.", "");
-    const newPath = locales.some((locale) => path.startsWith(`/${locale}`))
-      ? path
-      : `/${defaultLocale}${path === "/" ? "" : path}`;
+  let needsRedirect = false;
 
-    const newUrl = new URL(`https://${newHostname}${newPath}`);
-    return NextResponse.redirect(newUrl.href, { status: 301 });
+  if (!req.headers.get("x-forwarded-proto")?.includes("https")) {
+    url.protocol = "https:";
+    needsRedirect = true;
+  }
+
+  if (hostname.startsWith("www.")) {
+    hostname = hostname.replace(/^www\./, "");
+    url.hostname = hostname;
+    needsRedirect = true;
+  }
+
+  if (!locales.some((l) => path.startsWith(`/${l}`))) {
+    const cookieLocale = req.cookies.get("NEXT_LOCALE")?.value;
+    const effectiveLocale = locales.includes(cookieLocale || "") ? cookieLocale : fallbackLocale;
+    url.pathname = `/${effectiveLocale}${path === "/" ? "" : path}`;
+    needsRedirect = true;
+  }
+
+  if (needsRedirect) {
+    return NextResponse.redirect(url, 301);
   }
 
   return middleware(req);
@@ -47,5 +54,5 @@ export function middlewareWithRedirect(req: NextRequest) {
 export default middlewareWithRedirect;
 
 export const config = {
-  matcher: ["/((?!api|static|.*\\.|_next|favicon.ico).*)", "/"],
+  matcher: ["/((?!api|static|.*\\..*|_next|favicon.ico).*)", "/"],
 };
