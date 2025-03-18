@@ -59,44 +59,131 @@ const mainRoutes = [
     path: '/terms',
     changefreq: 'yearly',
     priority: 0.3,
+  },
+  {
+    path: '/tools/ai-assistant',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/ai-avatar',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/ai-chat-bot',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/ai-security',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/ai-voice-bot',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/anti-spam',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/best-search',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/counseling',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/custom-development',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/discord',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/email',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/facebook-messenger',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/hubspot',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/instagram',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/intercom',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/jira',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/keepincrm',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/livechat',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/microsoft-teams',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/salesforce',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/slack',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/tables',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/whatsapp',
+    changefreq: 'weekly',
+    priority: 0.6,
+  },
+  {
+    path: '/tools/zapier',
+    changefreq: 'weekly',
+    priority: 0.6,
   }
 ] as const
 
-// Маршруты инструментов
-const toolsRoutes = [
-  '/tools/ai-assistant',
-  '/tools/ai-avatar',
-  '/tools/ai-chat-bot',
-  '/tools/ai-security',
-  '/tools/ai-voice-bot',
-  '/tools/anti-spam',
-  '/tools/best-search',
-  '/tools/counseling',
-  '/tools/custom-development',
-  '/tools/discord',
-  '/tools/email',
-  '/tools/facebook-messenger',
-  '/tools/hubspot',
-  '/tools/instagram',
-  '/tools/intercom',
-  '/tools/jira',
-  '/tools/livechat',
-  '/tools/microsoft-teams',
-  '/tools/salesforce',
-  '/tools/slack',
-  '/tools/tables',
-  '/tools/whatsapp',
-  '/tools/zapier',
-].map(path => ({
-  path,
-  changefreq: 'weekly' as const,
-  priority: 0.6
-}))
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = [...mainRoutes, ...toolsRoutes]
-  
-  return routes.flatMap(route => 
+  return mainRoutes.flatMap(route => 
     LANGUAGES.map(lang => ({
       url: `${baseUrl}/${lang}${route.path}`,
       lastModified: new Date().toISOString(),
@@ -109,4 +196,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }))
     }))
   )
-} 
+}
