@@ -38,8 +38,9 @@ const FAQAccordeon = ({ faqs, locale }: FAQAccordeonProps) => {
           </strong>
         );
       case 'link':
+        const localeCode = locale === 'ua' ? 'uk' : locale;
         const url = fragment.url?.startsWith('/') 
-          ? `/${locale}${fragment.url}` 
+          ? `/${localeCode}${fragment.url}` 
           : fragment.url;
         return (
           <Link 
