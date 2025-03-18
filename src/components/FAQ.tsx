@@ -1,6 +1,6 @@
 import Divider from "./Divider";
 import FAQAccordion from "./FAQAccordion";
-import { faqTranslations } from "../locales/translations";
+import { faqTranslations } from "./FAQData";
 
 interface FAQProps {
   language: keyof typeof faqTranslations;
@@ -30,7 +30,7 @@ const FAQ = async ({ language }: FAQProps) => {
         </div>
 
         {/* FAQ Accordion */}
-        <FAQAccordion faqs={t.faqs} />
+        <FAQAccordion faqs={t.faqs} locale={language} />
       </div>
     </section>
   );
