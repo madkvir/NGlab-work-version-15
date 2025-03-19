@@ -1,35 +1,47 @@
-"use client";
 import React from "react";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import Navbar from "../../../../components/Navbar";
 import Footer from "../../../../components/Footer";
 import ScrollToTop from "../../../../components/ScrollToTop";
-import { useBlog } from "../../../../context/BlogContext";
 import Link from "next/link";
 import { redirect, useParams } from "next/navigation";
+import axios from "axios";
 
-// export async function generateStaticParams() {
-//   const { posts } = useBlog();
+export async function generateStaticParams() {
+  try {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+    const response = await axios.get(`${apiUrl}/api/blog`);
 
-//   if (!posts || posts.length === 0) {
-//     return [];
-//   }
+    if (!Array.isArray(response.data)) {
+      console.error("Invalid API response format:", response.data);
+      return [];
+    }
 
-//   return posts.map((post) => ({
-//     slug: post.slug,
-//   }));
-// }
+    return response.data.map((post) => ({
+      slug: post.slug,
+    }));
+  } catch (error) {
+    console.error("Error fetching blog posts:", error);
+    return [];
+  }
+}
 
-const BlogPost = () => {
-  const { slug } = useParams();
-  const { posts } = useBlog();
-  const post = posts.find((p) => p.slug === slug);
+const BlogPost = async ({ params }) => {
+  const { slug } = params;
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
-  if (!post) {
+  const { data: posts } = await axios.get(`${apiUrl}/api/blog`);
+
+  const response = await axios.get(`${apiUrl}/api/blog/${slug}`);
+
+  // Ensure response contains the post data
+  if (!response.data || typeof response.data !== "object") {
+    console.error("Invalid post data:", response.data);
     redirect("/404");
   }
 
-  // Get related posts (same category, excluding current post)
+  const post = response.data;
+
   const relatedPosts = posts
     .filter((p) => p.category === post.category && p.id !== post.id)
     .slice(0, 2);
@@ -75,7 +87,10 @@ const BlogPost = () => {
 
             {/* Featured Image */}
             <div className="rounded-xl overflow-hidden mb-8">
-              <img src={post.image} alt={post.title} className="w-full h-auto" />
+              {post.images.length > 0 &&
+                post.images.map((image) => (
+                  <img key={image} src={image} alt={post.title} className="w-full h-auto" />
+                ))}
             </div>
 
             {/* Article Content */}

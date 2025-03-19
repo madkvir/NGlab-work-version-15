@@ -1,28 +1,29 @@
 "use client";
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import { useState } from "react";
 import { Search, Calendar, User } from "lucide-react";
 import Link from "next/link";
-import { useBlog } from "../context/BlogContext";
+import axios from "axios";
+import { BlogPost } from "../types/blog";
+import LoadingSpinner from "./chat/LoadingSpinner";
+// import { useBlog } from "../context/BlogContext";
 
 const BlogContent = () => {
-  const { posts } = useBlog();
+  const [posts, setPosts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
 
-  // Get unique categories from posts
-  const categories = Array.from(new Set(posts.map((post) => post.category)))
+  const categories = Array.from(new Set(posts.map((post: BlogPost) => post.category)))
     .filter(Boolean)
     .map((category) => ({
       id: category.toLowerCase(),
       name: category,
-      count: posts.filter((post) => post.category === category).length,
+      count: posts.filter((post: BlogPost) => post.category === category).length,
     }));
 
-  // Filter posts based on search query and selected category
-  const filteredPosts = posts.filter((post) => {
+  const filteredPosts = posts.filter((post: BlogPost) => {
     const matchesSearch =
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
@@ -31,11 +32,27 @@ const BlogContent = () => {
     return matchesSearch && matchesCategory;
   });
 
-  // Calculate pagination
   const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
+  const [fetchingBlog, setFetchingBlog] = useState(true);
+
+  const fetchPosts = useCallback(async () => {
+    try {
+      setFetchingBlog(true);
+      const response = await axios.get("/api/blog");
+      setPosts(response.data);
+    } catch (error) {
+      console.error("Failed to fetch posts:", error);
+    } finally {
+      setFetchingBlog(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
   return (
     <>
@@ -94,58 +111,67 @@ const BlogContent = () => {
         </div>
 
         {/* Blog Posts Grid */}
-        <div className="lg:w-3/4">
-          <div className="grid md:grid-cols-2 gap-8">
-            {currentPosts.map((post) => (
-              <Link
-                key={post.id}
-                href={`/blog/${post.id}`}
-                className="group bg-gray-900/50 rounded-xl overflow-hidden hover:bg-gray-900/70 transition-all duration-300"
-              >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-
-                <div className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
-                    <span className="bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full text-xs">
-                      {post.category}
-                    </span>
-                    <span>{post.readTime}</span>
-                  </div>
-
-                  <h2 className="text-xl font-semibold mb-3 text-white group-hover:text-emerald-400 transition-colors">
-                    {post.title}
-                  </h2>
-
-                  <p className="text-gray-400 mb-4 line-clamp-3">{post.excerpt}</p>
-
-                  <div className="flex items-center justify-between text-sm text-gray-400">
-                    <div className="flex items-center">
-                      <User className="w-4 h-4 mr-2" />
-                      {post.author}
+        {fetchingBlog ? (
+          <LoadingSpinner />
+        ) : (
+          <div className="lg:w-3/4">
+            <div className="grid md:grid-cols-2 gap-8">
+              {currentPosts &&
+                currentPosts.map((post: BlogPost) => (
+                  <Link
+                    key={post._id}
+                    href={`/blog/${post.slug}`}
+                    className="group bg-gray-900/50 rounded-xl overflow-hidden hover:bg-gray-900/70 transition-all duration-300"
+                  >
+                    <div className="aspect-video overflow-hidden">
+                      {post.images.length > 0 &&
+                        post.images.map((image) => (
+                          <img
+                            key={image}
+                            src={image}
+                            alt={post.title}
+                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                          />
+                        ))}
                     </div>
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {post.date}
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
 
-          {/* No Results Message */}
-          {filteredPosts.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-400">No articles found matching your criteria.</p>
+                    <div className="p-6">
+                      <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                        <span className="bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full text-xs">
+                          {post.category}
+                        </span>
+                        <span>{post.readTime}</span>
+                      </div>
+
+                      <h2 className="text-xl font-semibold mb-3 text-white group-hover:text-emerald-400 transition-colors">
+                        {post.title}
+                      </h2>
+
+                      <p className="text-gray-400 mb-4 line-clamp-3">{post.excerpt}</p>
+
+                      <div className="flex items-center justify-between text-sm text-gray-400">
+                        <div className="flex items-center">
+                          <User className="w-4 h-4 mr-2" />
+                          {post.author}
+                        </div>
+                        <div className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          {post.date}
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
             </div>
-          )}
-        </div>
+
+            {/* No Results Message */}
+            {!fetchingBlog && filteredPosts.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-gray-400">No articles found matching your criteria.</p>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </>
   );
