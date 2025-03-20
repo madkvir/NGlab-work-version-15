@@ -3,8 +3,3 @@
   publish = ".next"
   functions = "netlify/functions"
 
-# Основной редирект для Next.js
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
