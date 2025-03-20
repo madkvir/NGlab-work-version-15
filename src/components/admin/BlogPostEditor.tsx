@@ -4,6 +4,7 @@ import { Editor } from "@tinymce/tinymce-react";
 import axios from "axios";
 import { generateSlug } from "../../utils/slug";
 import { BlogPost } from "../../types/blog";
+import { useParams } from "next/navigation";
 
 interface BlogPostEditorProps {
   post: Partial<BlogPost> | null;
@@ -12,6 +13,7 @@ interface BlogPostEditorProps {
 }
 
 const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel }) => {
+  const { locale } = useParams();
   const [formData, setFormData] = useState<Partial<BlogPost>>(
     post || {
       title: "",
@@ -69,7 +71,7 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
         throw new Error("Please fill in all required fields");
       }
 
-      const slug = generateSlug(formData.title);
+      const slug = generateSlug(formData.title, locale);
       const postData = {
         ...formData,
         content: editorRef.current?.getContent() || formData.content,
