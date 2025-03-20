@@ -70,14 +70,11 @@ export async function PUT(req: Request) {
     const images = form.getAll("images") as File[];
     const id = form.get("_id");
 
-    console.log("images", images);
-    const exstImages = images.filter((img) => typeof img === "string");
-    const newImg = images.filter((img) => typeof img !== "string");
-    console.log("exstImages", exstImages, exstImages.length);
-    console.log("newImg", newImg);
+    const postInfo = await Post.findOne({ _id: id });
+    const exstImages = postInfo.images;
 
     const uploadedImages = await Promise.all(
-      newImg.map(async (file) => {
+      images.map(async (file) => {
         const buffer = await file.arrayBuffer();
         const base64String = Buffer.from(buffer).toString("base64");
         const dataUri = `data:${file.type};base64,${base64String}`;
@@ -98,7 +95,7 @@ export async function PUT(req: Request) {
       category: form.get("category"),
       author: form.get("author"),
       date: form.get("date"),
-      images: exstImages.length > 0 ? [...exstImages, ...uploadedImages] : [...uploadedImages],
+      images: [...exstImages, ...uploadedImages],
     };
     const result = await Post.findByIdAndUpdate(id, updPost);
     console.log("result update", result);

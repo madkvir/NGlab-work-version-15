@@ -77,10 +77,7 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
         content: editorRef.current?.getContent() || formData.content,
         slug: slug,
       };
-
-      if (postData.images && postData.images.length === 0) {
-        delete postData.images;
-      }
+      delete postData.images;
 
       const formDataToSend = new FormData();
 
