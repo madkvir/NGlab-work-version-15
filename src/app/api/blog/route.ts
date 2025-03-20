@@ -63,9 +63,45 @@ export async function POST(req: NextRequest) {
 
 export async function PUT(req: Request) {
   try {
-    const body = await req.json();
     await dbConnect();
-    const result = await Post.findByIdAndUpdate(body._id, body);
+    console.log("db connect succesful!");
+
+    const form = await req.formData();
+    const images = form.getAll("images") as File[];
+    const id = form.get("_id");
+
+    console.log("images", images);
+    const exstImages = images.filter((img) => typeof img === "string");
+    const newImg = images.filter((img) => typeof img !== "string");
+    console.log("exstImages", exstImages, exstImages.length);
+    console.log("newImg", newImg);
+
+    const uploadedImages = await Promise.all(
+      newImg.map(async (file) => {
+        const buffer = await file.arrayBuffer();
+        const base64String = Buffer.from(buffer).toString("base64");
+        const dataUri = `data:${file.type};base64,${base64String}`;
+
+        const uploadResponse = await cloudinary.uploader.upload(dataUri, {
+          folder: "blog_images",
+        });
+
+        return uploadResponse.secure_url;
+      })
+    );
+
+    const updPost = {
+      title: form.get("title"),
+      slug: form.get("slug"),
+      excerpt: form.get("excerpt"),
+      content: form.get("content"),
+      category: form.get("category"),
+      author: form.get("author"),
+      date: form.get("date"),
+      images: exstImages.length > 0 ? [...exstImages, ...uploadedImages] : [...uploadedImages],
+    };
+    const result = await Post.findByIdAndUpdate(id, updPost);
+    console.log("result update", result);
 
     return NextResponse.json({ success: true, data: result }, { status: 201 });
   } catch (error) {

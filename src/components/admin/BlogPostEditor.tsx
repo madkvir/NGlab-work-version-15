@@ -76,6 +76,10 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
         slug: slug,
       };
 
+      if (postData.images && postData.images.length === 0) {
+        delete postData.images;
+      }
+
       const formDataToSend = new FormData();
 
       Object.keys(postData).forEach((key) => {

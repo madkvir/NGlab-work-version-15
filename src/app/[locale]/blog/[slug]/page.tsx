@@ -27,7 +27,7 @@ export async function generateStaticParams() {
 }
 
 const BlogPost = async ({ params }) => {
-  const { slug } = params;
+  const { slug } = await params;
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
   const { data: posts } = await axios.get(`${apiUrl}/api/blog`);
