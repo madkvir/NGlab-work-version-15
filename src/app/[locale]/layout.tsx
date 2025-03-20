@@ -14,8 +14,6 @@ import { cookies } from "next/headers";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing } from "../../i18n/routing";
-import Script from "next/script";
 import { SUPPORTED_LANGUAGES } from "../../utils/generateHrefLangs";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://neurogenlab.de";

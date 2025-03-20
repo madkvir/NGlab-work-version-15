@@ -1,44 +1,33 @@
 import React, { useState, useRef } from "react";
 import { Save, X, Upload } from "lucide-react";
 import { Editor } from "@tinymce/tinymce-react";
-import { v4 as uuidv4 } from "uuid";
-import { createBlogPost, updateBlogPost } from "../../services/blog.service";
-
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  image: string;
-  category: string;
-  readTime?: string;
-  slug: string;
-}
+import axios from "axios";
+import { generateSlug } from "../../utils/slug";
+import { BlogPost } from "../../types/blog";
+import { useParams } from "next/navigation";
 
 interface BlogPostEditorProps {
-  post: BlogPost | null;
+  post: Partial<BlogPost> | null;
   onSave: (post: BlogPost) => void;
   onCancel: () => void;
 }
 
 const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel }) => {
-  const [formData, setFormData] = useState<BlogPost>(
+  const { locale } = useParams();
+  const [formData, setFormData] = useState<Partial<BlogPost>>(
     post || {
-      id: crypto.randomUUID(),
       title: "",
       slug: "",
       excerpt: "",
       content: "",
-      image: "",
       category: "",
       author: "",
       date: new Date().toISOString().split("T")[0],
     }
   );
+  const [imgPreviews, setImgPreviews] = useState<string[] | []>([]);
 
-  const [uploadedImages, setUploadedImages] = useState<string[]>([]);
+  const [uploadedImages, setUploadedImages] = useState<File[] | []>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -57,26 +46,19 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
     const files = e.target.files;
     if (!files) return;
 
-    const uploadedUrls: string[] = [];
+    const newPreviews: string[] = [];
+    const newFiles: File[] = [];
 
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-      const fileExtension = file.name.split(".").pop();
-      const uniqueFileName = `${uuidv4()}.${fileExtension}`;
+      const objectUrl = URL.createObjectURL(file);
 
-      try {
-        const objectUrl = URL.createObjectURL(file);
-        uploadedUrls.push(objectUrl);
-
-        if (i === 0 && !formData.image) {
-          setFormData((prev) => ({ ...prev, image: objectUrl }));
-        }
-      } catch (error) {
-        console.error("Error uploading image:", error);
-      }
+      newPreviews.push(objectUrl);
+      newFiles.push(file);
     }
 
-    setUploadedImages((prev) => [...prev, ...uploadedUrls]);
+    setImgPreviews((prev) => [...prev, ...newPreviews]);
+    setUploadedImages((prev) => [...prev, ...newFiles]);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -89,17 +71,37 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
         throw new Error("Please fill in all required fields");
       }
 
+      const slug = generateSlug(formData.title, locale);
       const postData = {
         ...formData,
         content: editorRef.current?.getContent() || formData.content,
+        slug: slug,
       };
+      delete postData.images;
+
+      const formDataToSend = new FormData();
+
+      Object.keys(postData).forEach((key) => {
+        formDataToSend.append(key, (postData as any)[key]);
+      });
+
+      if (uploadedImages) {
+        uploadedImages.forEach((file: File) => {
+          formDataToSend.append("images", file);
+        });
+      }
 
       let savedPost;
-      if (post) {
-        savedPost = await updateBlogPost(post.id, postData);
+      if (post && post._id) {
+        savedPost = await axios.put("/api/blog", formDataToSend, {
+          headers: {},
+        });
       } else {
-        savedPost = await createBlogPost(postData);
+        savedPost = await axios.post("/api/blog", formDataToSend, {
+          headers: {},
+        });
       }
+
       onSave(savedPost);
     } catch (error) {
       console.error("Error saving post:", error);
@@ -145,13 +147,15 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
               <Upload className="w-5 h-5" />
               Upload Images
             </button>
-            {formData.image && (
-              <img
-                src={formData.image}
-                alt="Featured"
-                className="w-16 h-16 object-cover rounded-lg"
-              />
-            )}
+            {formData.images &&
+              formData.images.map((image) => (
+                <img
+                  key={image}
+                  src={image}
+                  alt="Featured"
+                  className="w-16 h-16 object-cover rounded-lg"
+                />
+              ))}
           </div>
         </div>
       </div>
@@ -248,11 +252,11 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
         </div>
       </div>
 
-      {uploadedImages.length > 0 && (
+      {imgPreviews.length > 0 && (
         <div>
           <label className="block text-sm font-medium text-gray-400 mb-2">Uploaded Images</label>
           <div className="grid grid-cols-6 gap-4">
-            {uploadedImages.map((url, index) => (
+            {imgPreviews.map((url, index) => (
               <img
                 key={index}
                 src={url}
