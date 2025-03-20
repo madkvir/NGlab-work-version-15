@@ -4,24 +4,37 @@ import Navbar from "../../../../components/Navbar";
 import Footer from "../../../../components/Footer";
 import ScrollToTop from "../../../../components/ScrollToTop";
 import Link from "next/link";
-import { notFound, redirect, useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import axios from "axios";
+import dbConnect from "../../../../lib/mongodb";
+import Post from "../../../../server/models/Post";
 
 export async function generateStaticParams() {
   try {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-    const response = await axios.get(`${apiUrl}/api/blog`);
+    // const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+    // console.log("Fetching blog posts from:", apiUrl);
 
-    if (!Array.isArray(response.data)) {
-      console.error("Invalid API response format:", response.data);
-      return [];
-    }
+    // const response = await axios.get(`${apiUrl}/api/blog`);
 
-    return response.data.map((post) => ({
+    // if (!Array.isArray(response.data)) {
+    //   console.error("Invalid API response format:", response.data);
+    //   return [];
+    // }
+
+    // return response.data.map((post) => ({
+    //   slug: post.slug,
+    // }));
+    await dbConnect();
+    const posts = await Post.find({});
+    return posts.map((post) => ({
       slug: post.slug,
     }));
   } catch (error) {
-    console.error("Error fetching blog posts:", error);
+    if (error.code === "ECONNREFUSED") {
+      console.error("Connection refused, make sure the API server is running:", error);
+    } else {
+      console.error("Error fetching blog posts during generateStaticParams:", error);
+    }
     return [];
   }
 }
