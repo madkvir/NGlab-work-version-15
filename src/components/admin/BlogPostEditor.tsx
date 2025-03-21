@@ -33,6 +33,8 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const editorRef = useRef<any>(null);
 
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -93,11 +95,11 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
 
       let savedPost;
       if (post && post._id) {
-        savedPost = await axios.put("/api/blog", formDataToSend, {
+        savedPost = await axios.put(`${apiUrl}/api/blog`, formDataToSend, {
           headers: {},
         });
       } else {
-        savedPost = await axios.post("/api/blog", formDataToSend, {
+        savedPost = await axios.post(`${apiUrl}/api/blog`, formDataToSend, {
           headers: {},
         });
       }

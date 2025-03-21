@@ -11,10 +11,12 @@ const AdminDashboard: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[] | []>([]);
   const [fetchingBlog, setFetchingBlog] = useState(true);
 
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+
   const fetchPosts = useCallback(async () => {
     try {
       setFetchingBlog(true);
-      const response = await axios.get("/api/blog");
+      const response = await axios.get(`${apiUrl}/api/blog`);
       setPosts(response.data);
     } catch (error) {
       console.error("Failed to fetch posts:", error);
@@ -48,8 +50,8 @@ const AdminDashboard: React.FC = () => {
 
   const handleDeletePost = async (postId: string) => {
     if (window.confirm("Are you sure you want to delete this post?")) {
-      await axios.delete("/api/blog", { data: { id: postId } });
-      const response = await axios.get("/api/blog");
+      await axios.delete(`${apiUrl}/api/blog`, { data: { id: postId } });
+      const response = await axios.get(`${apiUrl}/api/blog`);
       setPosts(response.data);
     }
   };

@@ -11,19 +11,6 @@ import Post from "../../../../server/models/Post";
 
 export async function generateStaticParams() {
   try {
-    // const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
-    // console.log("Fetching blog posts from:", apiUrl);
-
-    // const response = await axios.get(`${apiUrl}/api/blog`);
-
-    // if (!Array.isArray(response.data)) {
-    //   console.error("Invalid API response format:", response.data);
-    //   return [];
-    // }
-
-    // return response.data.map((post) => ({
-    //   slug: post.slug,
-    // }));
     await dbConnect();
     const posts = await Post.find({});
     return posts.map((post) => ({

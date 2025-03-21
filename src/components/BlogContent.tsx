@@ -15,6 +15,8 @@ const BlogContent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
 
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+
   const categories = Array.from(new Set(posts.map((post: BlogPost) => post.category)))
     .filter(Boolean)
     .map((category) => ({
@@ -41,7 +43,7 @@ const BlogContent = () => {
   const fetchPosts = useCallback(async () => {
     try {
       setFetchingBlog(true);
-      const response = await axios.get("/api/blog");
+      const response = await axios.get(`${apiUrl}/api/blog`);
       setPosts(response.data);
     } catch (error) {
       console.error("Failed to fetch posts:", error);
