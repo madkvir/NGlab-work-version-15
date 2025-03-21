@@ -3,3 +3,5 @@
   publish = ".next"
   functions = "netlify/functions"
 
+[functions]
+  directory = "netlify/functions"
