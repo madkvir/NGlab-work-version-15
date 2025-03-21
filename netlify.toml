@@ -5,15 +5,18 @@
 
 # API-редиректы
 [[redirects]]
-  from = "/api/*"
-  to = "https://neurogenlab.de/api/:splat"
+  from = "/api/posts"
+  to = "/.netlify/functions/blog"
   status = 200
   force = true
+  methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 
-  [functions]
-  included_files = ["**/*.js", "**/*.ts"]
-  node_bundler = "esbuild"
-
+[[redirects]]
+  from = "/api/posts/*"
+  to = "/.netlify/functions/blog/:splat"
+  status = 200
+  force = true
+  methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 
 # Основной редирект для Next.js
 [[redirects]]
