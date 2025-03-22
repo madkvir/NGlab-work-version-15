@@ -262,29 +262,6 @@ export const handler = async (event, context) => {
     'Cache-Control': 'no-store, no-cache'
   };
 
-  // Для дополнительной отладки - сразу возвращаем тестовые данные если запрашивается основной домен
-  if (requestHost.includes('neurogenlab.de') && httpMethod === 'GET' && !event.pathParameters?.slug) {
-    console.log('Использование тестовых данных для домена neurogenlab.de');
-    return {
-      statusCode: 200,
-      headers,
-      body: JSON.stringify([
-        {
-          _id: 'test-domain-post',
-          title: 'Тестовый пост для домена neurogenlab.de',
-          slug: 'test-domain-post',
-          excerpt: 'Это тестовый пост для проверки работы API на основном домене',
-          content: '<p>Содержимое тестового поста для домена neurogenlab.de</p>',
-          author: 'System',
-          date: new Date().toISOString().split('T')[0],
-          readTime: '1 min read',
-          category: 'Test',
-          images: ['https://via.placeholder.com/800x400']
-        }
-      ])
-    };
-  }
-
   // Экстренный обходной механизм для операций обновления при проблемах с MongoDB
   // Если заголовок X-Use-Mock установлен и есть проблемы с подключением к MongoDB
   if (httpMethod === 'PUT' && event.headers['client-source'] === 'react-app') {
