@@ -90,32 +90,62 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
 
       let savedPost;
 
+      // Функция для повторных попыток HTTP запросов с экспоненциальной задержкой
+      const retryFetch = async (fn, maxRetries = 3, delay = 1000) => {
+        let lastError;
+        for (let i = 0; i < maxRetries; i++) {
+          try {
+            return await fn();
+          } catch (error) {
+            console.error(`Попытка ${i + 1} из ${maxRetries} не удалась:`, error);
+            lastError = error;
+            
+            // Ждем перед следующей попыткой, увеличивая время ожидания
+            if (i < maxRetries - 1) {
+              const waitTime = delay * Math.pow(2, i);
+              console.log(`Ожидание ${waitTime}мс перед следующей попыткой...`);
+              await new Promise(resolve => setTimeout(resolve, waitTime));
+            }
+          }
+        }
+        // Если все попытки неудачны, выбрасываем последнюю ошибку
+        throw lastError;
+      };
+
       if (post && post._id) {
         console.log('Обновляем существующий пост с ID:', post._id);
         
-        // Используем прямой URL к функции Netlify вместо API пути
+        // Используем прямой URL к функции Netlify
         const netlifyFunctionUrl = `${window.location.origin}/.netlify/functions/blog`;
         console.log('Использую прямой URL функции Netlify:', netlifyFunctionUrl);
         
         try {
-          const response = await axios.put(netlifyFunctionUrl, 
-            { 
-              _id: post._id,
-              ...postData 
-            }, 
-            {
-              headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest',
-                'Client-Source': 'react-app',
-                'Cache-Control': 'no-cache, no-store'
-              },
-              timeout: 30000 // Увеличиваем таймаут до 30 секунд
-            }
-          );
+          // Повторяем попытки обновления до трех раз с задержкой
+          const updatePost = async () => {
+            console.log('Отправка PUT запроса на URL:', netlifyFunctionUrl);
+            
+            const response = await axios.put(netlifyFunctionUrl, 
+              { 
+                _id: post._id,
+                ...postData 
+              }, 
+              {
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json',
+                  'X-Requested-With': 'XMLHttpRequest',
+                  'Client-Source': 'react-app',
+                  'Cache-Control': 'no-cache, no-store'
+                },
+                timeout: 45000 // Увеличиваем таймаут до 45 секунд
+              }
+            );
+            
+            console.log('Ответ от сервера:', response.status, response.statusText);
+            return response;
+          };
           
-          console.log('Ответ от сервера:', response.status, response.statusText);
+          const response = await retryFetch(updatePost);
           
           if (response.data) {
             savedPost = response.data;
@@ -148,7 +178,8 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
       } else {
         // Создание нового поста
         console.log('Создаем новый пост');
-        try {
+        
+        const createPost = async () => {
           const response = await axios.post(`${apiUrl}/api/blog`, postData, {
             headers: {
               'Content-Type': 'application/json',
@@ -156,9 +187,14 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
               'X-Requested-With': 'XMLHttpRequest',
               'Client-Source': 'react-app'
             },
-            timeout: 30000 // Тоже увеличиваем таймаут до 30 секунд
+            timeout: 30000 // 30 секунд таймаут
           });
           
+          return response;
+        };
+        
+        try {
+          const response = await retryFetch(createPost);
           savedPost = response.data;
         } catch (axiosError) {
           console.error('Axios error при создании поста:', axiosError);

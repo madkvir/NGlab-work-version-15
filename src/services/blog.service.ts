@@ -5,14 +5,8 @@ import type { BlogPost } from "../types/blog";
 function getApiUrl() {
   // На клиенте
   if (typeof window !== 'undefined') {
-    // Если на домене netlify.app - используем API без изменений
-    if (window.location.hostname.includes('netlify.app')) {
-      console.log('Использование netlify домена для API');
-      return `${window.location.origin}/api/blog`;
-    }
-    
-    // Если на кастомном домене - используем напрямую функции Netlify
-    console.log('Использование кастомного домена для API');
+    // Всегда используем прямой URL к функциям Netlify для стабильности
+    console.log('Использование прямой ссылки на Netlify функцию');
     return `${window.location.origin}/.netlify/functions/blog`;
   }
   
@@ -30,6 +24,30 @@ const apiRequestHeaders = {
 };
 
 /**
+ * Функция для повторных попыток
+ */
+async function retryFetch(fn, maxRetries = 3, delay = 1000) {
+  let lastError;
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      return await fn();
+    } catch (error) {
+      console.error(`Попытка ${i + 1} из ${maxRetries} не удалась:`, error);
+      lastError = error;
+      
+      // Ждем перед следующей попыткой, увеличивая время ожидания
+      if (i < maxRetries - 1) {
+        const waitTime = delay * Math.pow(2, i);
+        console.log(`Ожидание ${waitTime}мс перед следующей попыткой...`);
+        await new Promise(resolve => setTimeout(resolve, waitTime));
+      }
+    }
+  }
+  // Если все попытки неудачны, выбрасываем последнюю ошибку
+  throw lastError;
+}
+
+/**
  * Сервис для работы с блогом
  */
 export const BlogService = {
@@ -40,12 +58,16 @@ export const BlogService = {
     const apiUrl = getApiUrl();
     console.log('Использую API URL для получения постов:', apiUrl);
     
-    try {
+    const fetchPosts = async () => {
       const response = await axios.get(apiUrl, {
         headers: apiRequestHeaders,
-        timeout: 10000 // 10 секунд таймаут
+        timeout: 15000 // 15 секунд таймаут
       });
       return response.data;
+    };
+    
+    try {
+      return await retryFetch(fetchPosts);
     } catch (error) {
       console.error('Ошибка при получении постов блога:', error.response || error.message);
       return [];
@@ -59,12 +81,16 @@ export const BlogService = {
     const apiUrl = getApiUrl();
     console.log(`Использую API URL для получения поста по slug ${slug}:`, apiUrl);
     
-    try {
+    const fetchPostBySlug = async () => {
       const response = await axios.get(`${apiUrl}/${slug}`, {
         headers: apiRequestHeaders,
-        timeout: 10000
+        timeout: 15000
       });
       return response.data;
+    };
+    
+    try {
+      return await retryFetch(fetchPostBySlug);
     } catch (error) {
       console.error(`Ошибка при получении поста по slug ${slug}:`, error.response || error.message);
       throw error;
@@ -78,12 +104,16 @@ export const BlogService = {
     const apiUrl = getApiUrl();
     console.log('Использую API URL для создания поста:', apiUrl);
     
-    try {
+    const createPost = async () => {
       const response = await axios.post(apiUrl, post, {
         headers: apiRequestHeaders,
-        timeout: 15000 // 15 секунд для создания
+        timeout: 30000 // 30 секунд для создания
       });
       return response.data;
+    };
+    
+    try {
+      return await retryFetch(createPost);
     } catch (error) {
       console.error('Ошибка при создании поста блога:', error.response || error.message);
       throw error;
@@ -97,23 +127,27 @@ export const BlogService = {
     const apiUrl = getApiUrl();
     console.log(`Использую API URL для обновления поста ${id}:`, apiUrl);
     
-    try {
-      // Создаем объект с ID для отправки в теле запроса
-      const postWithId = { 
-        _id: id,
-        ...post 
-      };
-      
-      console.log('Отправляемые данные:', JSON.stringify(postWithId).substring(0, 100) + '...');
-      
+    // Создаем объект с ID для отправки в теле запроса
+    const postWithId = { 
+      _id: id,
+      ...post 
+    };
+    
+    console.log('Отправляемые данные:', JSON.stringify(postWithId).substring(0, 100) + '...');
+    
+    const updatePost = async () => {
       // Отправляем на общий эндпоинт
       const response = await axios.put(apiUrl, postWithId, {
         headers: apiRequestHeaders,
-        timeout: 15000 // 15 секунд для обновления
+        timeout: 45000 // 45 секунд для обновления
       });
       
       console.log('Ответ сервера:', response.status, response.statusText);
       return response.data;
+    };
+    
+    try {
+      return await retryFetch(updatePost);
     } catch (error) {
       console.error(`Ошибка при обновлении поста ${id}:`, error.response || error.message);
       throw error;
@@ -127,12 +161,16 @@ export const BlogService = {
     const apiUrl = getApiUrl();
     console.log(`Использую API URL для удаления поста ${id}:`, apiUrl);
     
-    try {
+    const deletePost = async () => {
       const response = await axios.delete(`${apiUrl}/${id}`, {
         headers: apiRequestHeaders,
-        timeout: 10000
+        timeout: 15000
       });
       return response.data;
+    };
+    
+    try {
+      return await retryFetch(deletePost);
     } catch (error) {
       console.error(`Ошибка при удалении поста ${id}:`, error.response || error.message);
       throw error;

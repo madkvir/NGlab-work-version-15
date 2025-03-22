@@ -1,8 +1,9 @@
 import { MongoClient, ObjectId } from 'mongodb';
 
-// Подключение к MongoDB
+// Переменные для хранения состояния соединения с MongoDB
 let cachedDb = null;
 let cachedClient = null;
+let connectionPromise = null; // Добавляем переменную для отслеживания процесса подключения
 
 // Функция для исправления URL MongoDB
 function fixMongoDBUrl(url) {
@@ -23,79 +24,106 @@ function fixMongoDBUrl(url) {
 }
 
 async function connectToDatabase() {
+  // Если соединение уже устанавливается, ждем его завершения
+  if (connectionPromise) {
+    console.log('Соединение уже устанавливается, ожидаем завершения...');
+    return connectionPromise;
+  }
+
+  // Если соединение уже существует, проверяем его активность
   if (cachedDb && cachedClient) {
-    // Проверяем, активно ли соединение
     try {
-      await cachedClient.db("admin").command({ ping: 1 });
+      // Проверка соединения с малым таймаутом
+      await cachedClient.db("admin").command({ ping: 1 }, { maxTimeMS: 1000 });
       console.log('Используем существующее подключение к MongoDB');
       return { client: cachedClient, database: cachedDb };
     } catch (e) {
       console.log('Существующее подключение не активно, создаем новое');
+      // Очищаем кеш, но не закрываем соединение явно, чтобы избежать блокировки
       cachedDb = null;
       cachedClient = null;
     }
   }
   
-  // Расширенное логирование для отладки
-  console.log('Доступные переменные окружения:', Object.keys(process.env).join(', '));
+  // Создаем промис для установки соединения, чтобы не создавать параллельные подключения
+  connectionPromise = (async () => {
+    try {
+      // Расширенное логирование для отладки
+      console.log('Инициализация подключения к MongoDB');
+      
+      // Используем MONGODB_URL вместо MONGODB_URI
+      let uri = process.env.MONGODB_URL || process.env.MONGODB_URI;
+      
+      // Проверка наличия URI для подключения к MongoDB
+      if (!uri) {
+        console.error('MONGODB_URL не определен в переменных окружения');
+        throw new Error('MONGODB_URL не определен. Пожалуйста, настройте переменную окружения MONGODB_URL.');
+      }
+      
+      // Проверка формата URI и попытка исправить
+      if (typeof uri !== 'string') {
+        console.error('MONGODB_URL не является строкой:', typeof uri);
+        throw new Error('MONGODB_URL должен быть строкой.');
+      }
+      
+      // Попытка исправить URI, если он имеет неправильный формат
+      const fixedUri = fixMongoDBUrl(uri);
+      if (fixedUri !== uri) {
+        console.log('URI был исправлен');
+        uri = fixedUri;
+      }
+      
+      // Проверка правильного формата URI
+      if (!uri.startsWith('mongodb://') && !uri.startsWith('mongodb+srv://')) {
+        console.error('MONGODB_URL имеет неправильный формат. URI должен начинаться с mongodb:// или mongodb+srv://');
+        throw new Error('MONGODB_URL имеет неправильный формат.');
+      }
+      
+      console.log('Подключение к MongoDB с URI:', 
+        uri.indexOf('@') > 0 ? 
+          uri.substring(0, uri.indexOf('://') + 3) + '***:***@' + uri.substring(uri.indexOf('@') + 1) : 
+          uri.substring(0, 20) + '...');
+      
+      console.log('Создание клиента MongoDB...');
+      
+      // Оптимизированные настройки для предотвращения истечения времени ожидания
+      const client = new MongoClient(uri, {
+        serverSelectionTimeoutMS: 10000,  // Увеличиваем таймаут выбора сервера 
+        connectTimeoutMS: 10000,         // Увеличиваем таймаут подключения
+        socketTimeoutMS: 45000,          // Увеличиваем таймаут сокета для долгих операций
+        maxPoolSize: 20,                 // Увеличиваем пул соединений
+        minPoolSize: 5,                  // Минимальный размер пула
+        maxIdleTimeMS: 120000,           // 2 минуты простоя до закрытия
+        waitQueueTimeoutMS: 10000,       // 10 секунд ожидания в очереди
+        keepAlive: true,                 // Держать соединение открытым
+        keepAliveInitialDelay: 300000    // Проверка соединения каждые 5 минут
+      });
+      
+      console.log('Подключение к MongoDB...');
+      await client.connect();
+      
+      console.log('Получение БД...');
+      const database = client.db(process.env.MONGODB_DATABASE || 'blog');
+      
+      // Проверка соединения с БД
+      await database.command({ ping: 1 });
+      console.log('Подключение к MongoDB успешно установлено');
+      
+      // Сохраняем соединение в кэше
+      cachedClient = client;
+      cachedDb = database;
+      
+      return { client, database };
+    } catch (error) {
+      console.error('Ошибка подключения к MongoDB:', error);
+      throw error;
+    } finally {
+      // Сбрасываем промис соединения после завершения
+      connectionPromise = null;
+    }
+  })();
   
-  // Используем MONGODB_URL вместо MONGODB_URI
-  let uri = process.env.MONGODB_URL || process.env.MONGODB_URI;
-  
-  // Проверка наличия URI для подключения к MongoDB
-  if (!uri) {
-    console.error('MONGODB_URL не определен в переменных окружения');
-    throw new Error('MONGODB_URL не определен. Пожалуйста, настройте переменную окружения MONGODB_URL.');
-  }
-  
-  // Проверка формата URI и попытка исправить
-  if (typeof uri !== 'string') {
-    console.error('MONGODB_URL не является строкой:', typeof uri);
-    throw new Error('MONGODB_URL должен быть строкой.');
-  }
-  
-  // Попытка исправить URI, если он имеет неправильный формат
-  const fixedUri = fixMongoDBUrl(uri);
-  if (fixedUri !== uri) {
-    console.log('URI был исправлен');
-    uri = fixedUri;
-  }
-  
-  // Проверка правильного формата URI
-  if (!uri.startsWith('mongodb://') && !uri.startsWith('mongodb+srv://')) {
-    console.error('MONGODB_URL имеет неправильный формат. URI должен начинаться с mongodb:// или mongodb+srv://');
-    throw new Error('MONGODB_URL имеет неправильный формат.');
-  }
-  
-  console.log('Подключение к MongoDB с URI:', 
-    uri.indexOf('@') > 0 ? 
-      uri.substring(0, uri.indexOf('://') + 3) + '***:***@' + uri.substring(uri.indexOf('@') + 1) : 
-      uri.substring(0, 20) + '...');
-  
-  try {
-    console.log('Создание клиента MongoDB...');
-    // Добавляем параметры для оптимизации подключения
-    const client = new MongoClient(uri, {
-      serverSelectionTimeoutMS: 5000, // Таймаут выбора сервера
-      connectTimeoutMS: 5000,        // Таймаут подключения
-      socketTimeoutMS: 10000,        // Таймаут сокета
-      maxPoolSize: 10,              // Максимальный размер пула соединений
-      minPoolSize: 5                // Минимальный размер пула соединений
-    });
-    
-    console.log('Подключение к MongoDB...');
-    await client.connect();
-    const database = client.db(process.env.MONGODB_DATABASE || 'blog');
-    
-    // Сохраняем соединение в кэше
-    cachedClient = client;
-    cachedDb = database;
-    
-    return { client, database };
-  } catch (error) {
-    console.error('Error connecting to MongoDB:', error);
-    throw error;
-  }
+  return connectionPromise;
 }
 
 // Функция-заглушка для тестирования API без MongoDB
@@ -371,12 +399,11 @@ export const handler = async (event, context) => {
       try {
         console.log('Обработка PUT запроса...');
         
-        // Безопасный парсинг тела запроса
+        // Парсим и проверяем тело запроса
         let parsedBody;
         try {
           parsedBody = typeof body === 'string' ? JSON.parse(body) : body;
-          console.log('Тело запроса успешно распарсено. Тип:', typeof parsedBody);
-          console.log('Содержимое запроса:', JSON.stringify(parsedBody).substring(0, 200) + '...');
+          console.log('Тело запроса успешно распарсено. ID поста:', parsedBody._id);
         } catch (e) {
           console.error('Ошибка при парсинге JSON:', e);
           return {
@@ -413,26 +440,31 @@ export const handler = async (event, context) => {
         
         // Вычисляем slug и readTime только если предоставлен title или content
         if (parsedBody.title !== undefined) {
-          updateFields.slug = createSlug(parsedBody.title);
+          updateFields.slug = generateSlug(parsedBody.title);
         }
         
         if (parsedBody.content !== undefined) {
           updateFields.readTime = calculateReadTime(parsedBody.content);
         }
         
+        // Добавляем дату обновления
+        updateFields.updatedAt = new Date().toISOString();
+        
         console.log('Поля для обновления:', Object.keys(updateFields));
         
-        // Подключение к MongoDB - используем соединение без закрытия после операции
-        const { client, database } = await connectToDatabase();
-        console.log('Подключение к MongoDB установлено для PUT запроса');
+        // Подключение к MongoDB с улучшенной обработкой ошибок
+        const db = await connectToDatabase().catch(error => {
+          console.error('Критическая ошибка при подключении к MongoDB:', error);
+          throw new Error(`Не удалось подключиться к базе данных: ${error.message}`);
+        });
         
+        const { database } = db;
         const collection = database.collection('posts');
         
-        // Конвертируем ID в ObjectId
+        // Конвертируем ID в ObjectId с проверкой формата
         let objectId;
         try {
           objectId = new ObjectId(id);
-          console.log('ID успешно конвертирован в ObjectId:', objectId);
         } catch (e) {
           console.error('Ошибка при конвертации ID в ObjectId:', e);
           return {
@@ -442,14 +474,15 @@ export const handler = async (event, context) => {
           };
         }
         
-        // Обновляем документ напрямую с update вместо findOneAndUpdate
+        // Обновляем документ и получаем результат
+        console.log('Выполнение операции обновления...');
+        
         try {
-          console.log('Выполнение операции обновления...');
-          
-          // Сначала обновляем документ
+          // Оборачиваем весь процесс обновления в более надежную конструкцию
           const updateResult = await collection.updateOne(
             { _id: objectId },
-            { $set: updateFields }
+            { $set: updateFields },
+            { maxTimeMS: 30000 } // 30 секунд максимум на операцию обновления
           );
           
           console.log('Результат обновления:', JSON.stringify(updateResult));
@@ -463,8 +496,17 @@ export const handler = async (event, context) => {
             };
           }
           
-          // Затем получаем обновленный документ
-          const updatedPost = await collection.findOne({ _id: objectId });
+          // Получаем обновленный документ
+          const updatedPost = await collection.findOne({ _id: objectId }, { maxTimeMS: 5000 });
+          
+          if (!updatedPost) {
+            console.error('Обновленный пост не найден после обновления');
+            return {
+              statusCode: 500,
+              headers,
+              body: JSON.stringify({ message: 'Пост был обновлен, но не найден после обновления' })
+            };
+          }
           
           console.log('Пост успешно обновлен');
           
@@ -473,19 +515,19 @@ export const handler = async (event, context) => {
             headers,
             body: JSON.stringify(updatedPost)
           };
-        } catch (updateError) {
-          console.error('Ошибка при выполнении операции обновления:', updateError);
-          throw updateError;
+        } catch (dbError) {
+          console.error('Ошибка при выполнении операции обновления в БД:', dbError);
+          throw new Error(`Ошибка базы данных при обновлении: ${dbError.message}`);
         }
       } catch (error) {
-        console.error('Ошибка при обновлении поста:', error);
+        console.error('Общая ошибка при обновлении поста:', error);
         console.error('Стек ошибки:', error.stack);
         return {
           statusCode: 500,
           headers,
           body: JSON.stringify({ 
             message: `Ошибка при обновлении поста: ${error.message}`,
-            stack: error.stack
+            stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
           })
         };
       }
