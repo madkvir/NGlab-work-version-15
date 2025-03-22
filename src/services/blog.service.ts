@@ -31,7 +31,9 @@ export const createBlogPost = async (
 
 export const updateBlogPost = async (id: string, post: Partial<BlogPost>): Promise<BlogPost> => {
   try {
-    const response = await axios.put(`${API_URL}/${id}`, post, {
+    const postWithId = { ...post, _id: id };
+    
+    const response = await axios.put(`${API_URL}`, postWithId, {
       headers: {
         "Content-Type": "application/json",
       },

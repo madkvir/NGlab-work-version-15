@@ -244,22 +244,66 @@ export const handler = async (event, context) => {
     }
 
     // PUT update blog post
-    if (httpMethod === 'PUT' && event.pathParameters?.id) {
-      const { id } = event.pathParameters;
+    if (httpMethod === 'PUT') {
+      console.log('Обработка PUT-запроса, body:', body?.substring(0, 200));
       const updateData = JSON.parse(body);
+      
+      // Получаем ID из разных возможных источников
+      let id;
+      if (event.pathParameters?.id) {
+        id = event.pathParameters.id;
+      } else if (updateData._id) {
+        // Если ID нет в pathParameters, берем из тела запроса
+        id = updateData._id;
+      } else {
+        return {
+          statusCode: 400,
+          headers,
+          body: JSON.stringify({ error: 'ID not provided' })
+        };
+      }
+      
+      console.log('Обновление поста с ID:', id);
       const readTime = `${Math.ceil(updateData.content.length / 1000)} min read`;
       const slug = generateSlug(updateData.title);
 
-      await collection.updateOne(
-        { _id: new ObjectId(id) },
-        { $set: { ...updateData, readTime, slug } }
-      );
+      try {
+        // Проверяем формат ID и преобразуем его в ObjectId если нужно
+        const postId = id.length === 24 ? new ObjectId(id) : id;
+        
+        // Создаем объект фильтра с поддержкой как строковых, так и ObjectId значений
+        const filter = typeof postId === 'string' ? { _id: postId } : { _id: new ObjectId(postId) };
+        
+        const result = await collection.updateOne(
+          filter,
+          { $set: { ...updateData, readTime, slug } }
+        );
+        
+        if (result.matchedCount === 0) {
+          return {
+            statusCode: 404,
+            headers,
+            body: JSON.stringify({ error: `Post with ID ${id} not found` })
+          };
+        }
 
-      return {
-        statusCode: 200,
-        headers,
-        body: JSON.stringify({ message: 'Post updated successfully' })
-      };
+        return {
+          statusCode: 200,
+          headers,
+          body: JSON.stringify({ 
+            message: 'Post updated successfully',
+            id: id,
+            slug: slug
+          })
+        };
+      } catch (error) {
+        console.error('Error updating post:', error);
+        return {
+          statusCode: 500,
+          headers,
+          body: JSON.stringify({ error: `Failed to update post: ${error.message}` })
+        };
+      }
     }
 
     // DELETE blog post
