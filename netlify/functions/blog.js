@@ -29,18 +29,19 @@ async function connectToDatabase() {
   // Расширенное логирование для отладки
   console.log('Доступные переменные окружения:', Object.keys(process.env).join(', '));
   
-  let uri = process.env.MONGODB_URI;
+  // Используем MONGODB_URL вместо MONGODB_URI
+  let uri = process.env.MONGODB_URL || process.env.MONGODB_URI;
   
   // Проверка наличия URI для подключения к MongoDB
   if (!uri) {
-    console.error('MONGODB_URI не определен в переменных окружения');
-    throw new Error('MONGODB_URI не определен. Пожалуйста, настройте переменную окружения MONGODB_URI.');
+    console.error('MONGODB_URL не определен в переменных окружения');
+    throw new Error('MONGODB_URL не определен. Пожалуйста, настройте переменную окружения MONGODB_URL.');
   }
   
   // Проверка формата URI и попытка исправить
   if (typeof uri !== 'string') {
-    console.error('MONGODB_URI не является строкой:', typeof uri);
-    throw new Error('MONGODB_URI должен быть строкой.');
+    console.error('MONGODB_URL не является строкой:', typeof uri);
+    throw new Error('MONGODB_URL должен быть строкой.');
   }
   
   // Попытка исправить URI, если он имеет неправильный формат
@@ -52,8 +53,8 @@ async function connectToDatabase() {
   
   // Проверка правильного формата URI
   if (!uri.startsWith('mongodb://') && !uri.startsWith('mongodb+srv://')) {
-    console.error('MONGODB_URI имеет неправильный формат. URI должен начинаться с mongodb:// или mongodb+srv://');
-    throw new Error('MONGODB_URI имеет неправильный формат.');
+    console.error('MONGODB_URL имеет неправильный формат. URI должен начинаться с mongodb:// или mongodb+srv://');
+    throw new Error('MONGODB_URL имеет неправильный формат.');
   }
   
   console.log('Подключение к MongoDB с URI:', 
