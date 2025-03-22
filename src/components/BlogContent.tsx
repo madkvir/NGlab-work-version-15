@@ -48,6 +48,28 @@ const BlogContent = () => {
     console.log('Загрузка постов блога с домена:', window.location.origin);
     console.log('Текущий хост:', window.location.hostname);
     
+    // Прямое получение постов с Netlify домена
+    const directFetch = async () => {
+      try {
+        const directUrl = 'https://dazzling-entremet-f8021e.netlify.app/.netlify/functions/blog';
+        console.log('Используем прямой URL для получения постов:', directUrl);
+        
+        const response = await axios.get(directUrl, {
+          headers: {
+            'Content-Type': 'application/json',
+            'Cache-Control': 'no-cache, no-store'
+          },
+          timeout: 15000
+        });
+        
+        console.log('Прямой запрос успешен, получено постов:', response.data.length);
+        return response.data;
+      } catch (error) {
+        console.error('Ошибка при прямом запросе:', error);
+        throw error;
+      }
+    };
+    
     // Функция для повторных попыток загрузки с задержкой
     const fetchWithRetry = async (maxRetries = 3) => {
       let attempts = 0;
@@ -57,7 +79,11 @@ const BlogContent = () => {
           attempts++;
           console.log(`Попытка загрузки постов #${attempts}`);
           
-          const data = await BlogService.getPosts();
+          // Сначала пробуем прямой URL к Netlify
+          const data = attempts === 1 ? 
+            await directFetch() : 
+            await BlogService.getPosts();
+            
           console.log(`Получено ${data.length} постов блога`);
           
           if (!data || data.length === 0) {
