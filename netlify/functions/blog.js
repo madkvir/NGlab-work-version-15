@@ -230,36 +230,39 @@ function calculateReadTime(content) {
  * @type {import('@netlify/functions').Handler}
  */
 export const handler = async (event, context) => {
-  const { httpMethod, path, body } = event;
-
-  // Добавляем проверку домена и источника запроса
-  const requestHost = event.headers.host || 'unknown-host';
-  const requestOrigin = event.headers.origin || event.headers.referer || 'unknown-origin';
+  // Получаем метод запроса
+  const httpMethod = event.httpMethod;
   
-  // Расширенное логирование для отладки
+  // Получаем путь запроса и параметры
+  const path = event.path;
+  const slug = event.pathParameters?.slug || event.queryStringParameters?.slug;
+  
+  // Анализируем заголовки для определения источника запроса
+  const requestHost = event.headers.host || '';
+  const requestOrigin = event.headers.origin || '';
+  const isReactApp = (event.headers['client-source'] === 'react-app' || 
+                      event.headers['x-client-source'] === 'react-app');
+  
   console.log('=== REQUEST DEBUGGING ===');
   console.log('Request host:', requestHost);
   console.log('Request origin:', requestOrigin);
   console.log('Request headers:', JSON.stringify(event.headers));
   console.log('Request path:', path);
   console.log('Request method:', httpMethod);
-  
-  // Проверка тела запроса для PUT без логирования полного содержимого (только размер)
-  if (httpMethod === 'PUT' && body) {
-    console.log('PUT request body size:', typeof body === 'string' ? body.length : 'non-string body');
-  }
   console.log('========================');
-
-  // Set CORS headers - расширяем для поддержки разных доменов
-  // Принимаем запросы с любого домена
-  const origin = event.headers.origin || '*';
+  
+  // Проверяем размер тела запроса для PUT-запросов, но не логируем содержимое
+  if (httpMethod === 'PUT' && event.body) {
+    console.log('PUT request body size:', 
+      typeof event.body === 'string' ? event.body.length : 'not string');
+  }
+  
+  // Устанавливаем CORS заголовки
   const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With, Accept, Client-Source',
+    'Access-Control-Allow-Origin': '*', // Разрешить запросы с любого домена
+    'Access-Control-Allow-Headers': 'Content-Type, Accept, X-Requested-With, Client-Source, X-Client-Source, X-Update-Operation, Cache-Control',
     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Credentials': 'true',
-    'Cache-Control': 'no-store, no-cache'
+    'Content-Type': 'application/json'
   };
 
   // Экстренный обходной механизм для операций обновления при проблемах с MongoDB
@@ -269,7 +272,7 @@ export const handler = async (event, context) => {
     
     try {
       // Попытка парсинга тела запроса
-      const updatedData = typeof body === 'string' ? JSON.parse(body) : body;
+      const updatedData = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
       
       // Выполняем быстрое обновление без MongoDB, если обнаружены проблемы с подключением
       if (updatedData && updatedData._id) {
@@ -317,7 +320,7 @@ export const handler = async (event, context) => {
 
     // POST new blog post
     if (httpMethod === 'POST') {
-      const postData = JSON.parse(body);
+      const postData = JSON.parse(event.body);
       const date = new Date().toISOString().split('T')[0];
       const readTime = `${Math.ceil(postData.content.length / 1000)} min read`;
       
@@ -390,10 +393,10 @@ export const handler = async (event, context) => {
     }
 
     // Добавление запасного маршрута через POST для обновления постов
-    if (httpMethod === 'POST' && body) {
+    if (httpMethod === 'POST' && event.body) {
       try {
         // Парсим тело запроса
-        const postData = typeof body === 'string' ? JSON.parse(body) : body;
+        const postData = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
         
         // Проверяем, является ли это операцией обновления (наличие _id и специального флага)
         const isUpdate = postData._id || path.includes('/update');
@@ -458,7 +461,7 @@ export const handler = async (event, context) => {
         // Парсим и проверяем тело запроса
         let parsedBody;
         try {
-          parsedBody = typeof body === 'string' ? JSON.parse(body) : body;
+          parsedBody = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
           console.log('Тело запроса успешно распарсено. ID поста:', parsedBody._id);
         } catch (e) {
           console.error('Ошибка при парсинге JSON:', e);
@@ -613,7 +616,7 @@ export const handler = async (event, context) => {
         
         // Аварийное решение - отправляем 200 вместо 500
         try {
-          const errorData = typeof body === 'string' ? JSON.parse(body) : body;
+          const errorData = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
           return {
             statusCode: 200,
             headers,
@@ -667,7 +670,7 @@ export const handler = async (event, context) => {
     let errorMessage = error.message || 'Internal Server Error';
     if (error instanceof SyntaxError && error.message.includes('JSON')) {
       errorMessage = 'Invalid JSON in request body';
-      console.error('JSON parse error with body:', body?.substring(0, 200));
+      console.error('JSON parse error with body:', event.body?.substring(0, 200));
     }
     
     return {

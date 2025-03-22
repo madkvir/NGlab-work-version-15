@@ -3,14 +3,11 @@ import type { BlogPost } from "../types/blog";
 
 // Получение правильного API URL в зависимости от домена
 function getApiUrl() {
-  // На клиенте
+  // На клиенте всегда используем Netlify домен
   if (typeof window !== 'undefined') {
-    // Всегда используем прямой URL к функциям Netlify для стабильности
-    console.log('Использование прямой ссылки на Netlify функцию');
-    return `${window.location.origin}/.netlify/functions/blog`;
+    return 'https://dazzling-entremet-f8021e.netlify.app/.netlify/functions/blog';
   }
-  
-  // На сервере (SSR) - используем относительный путь
+  // На сервере используем относительный путь
   return '/.netlify/functions/blog';
 }
 

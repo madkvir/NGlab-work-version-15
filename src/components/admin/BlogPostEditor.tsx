@@ -94,12 +94,16 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
       if (post?._id) {
         console.log('Обновление существующего поста с ID:', post._id);
         
+        // Всегда используем рабочий домен для обновлений
+        const updateUrl = 'https://dazzling-entremet-f8021e.netlify.app/.netlify/functions/blog';
+        console.log('Используем прямой URL:', updateUrl);
+        
         try {
           // ВАЖНО: Используем POST вместо PUT для обхода проблем с 502
           console.log('Используем POST для обновления вместо PUT');
           
           // Добавляем _id в данные для идентификации как запроса на обновление
-          const response = await axios.post('/.netlify/functions/blog', postData, {
+          const response = await axios.post(updateUrl, postData, {
             headers: {
               'Content-Type': 'application/json',
               'Cache-Control': 'no-cache, no-store',
