@@ -58,7 +58,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
-  // Явно указываем URL Netlify Functions независимо от домена
-  return 'https://dazzling-entremet-f8021e.netlify.app/.netlify/functions/blog';
-}
