@@ -31,16 +31,38 @@ export const createBlogPost = async (
 
 export const updateBlogPost = async (id: string, post: Partial<BlogPost>): Promise<BlogPost> => {
   try {
+    console.log('Отправка запроса на обновление поста:', id);
+    console.log('Данные для обновления:', JSON.stringify(post, null, 2).substring(0, 200));
+    
+    // Включаем ID в тело запроса
     const postWithId = { ...post, _id: id };
     
     const response = await axios.put(`${API_URL}`, postWithId, {
       headers: {
         "Content-Type": "application/json",
+        "Accept": "application/json",
+        "X-Requested-With": "XMLHttpRequest"
       },
+      timeout: 10000, // 10 секунд таймаут
     });
+    
+    console.log('Ответ сервера:', response.status);
     return response.data;
   } catch (error) {
     console.error("Error updating blog post:", error);
+    
+    // Детальный лог ошибки
+    if (error.response) {
+      // Ответ получен, но с ошибкой
+      console.error('Error response:', {
+        status: error.response.status,
+        data: error.response.data
+      });
+    } else if (error.request) {
+      // Запрос отправлен, но ответ не получен
+      console.error('No response received:', error.request);
+    }
+    
     throw new Error(error instanceof Error ? error.message : "Failed to update blog post");
   }
 };

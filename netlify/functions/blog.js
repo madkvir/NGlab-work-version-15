@@ -125,6 +125,22 @@ async function mockDatabase() {
   };
 }
 
+// Безопасный парсинг JSON
+function safeParseJSON(jsonString) {
+  if (typeof jsonString !== 'string') {
+    console.error('safeParseJSON: input is not a string:', typeof jsonString);
+    return null;
+  }
+
+  try {
+    return JSON.parse(jsonString);
+  } catch (error) {
+    console.error('safeParseJSON error:', error.message);
+    console.error('safeParseJSON input:', jsonString.substring(0, 200));
+    return null;
+  }
+}
+
 /**
  * @type {import('@netlify/functions').Handler}
  */
@@ -245,63 +261,87 @@ export const handler = async (event, context) => {
 
     // PUT update blog post
     if (httpMethod === 'PUT') {
-      console.log('Обработка PUT-запроса, body:', body?.substring(0, 200));
-      const updateData = JSON.parse(body);
-      
-      // Получаем ID из разных возможных источников
-      let id;
-      if (event.pathParameters?.id) {
-        id = event.pathParameters.id;
-      } else if (updateData._id) {
-        // Если ID нет в pathParameters, берем из тела запроса
-        id = updateData._id;
-      } else {
-        return {
-          statusCode: 400,
-          headers,
-          body: JSON.stringify({ error: 'ID not provided' })
-        };
-      }
-      
-      console.log('Обновление поста с ID:', id);
-      const readTime = `${Math.ceil(updateData.content.length / 1000)} min read`;
-      const slug = generateSlug(updateData.title);
-
       try {
-        // Проверяем формат ID и преобразуем его в ObjectId если нужно
-        const postId = id.length === 24 ? new ObjectId(id) : id;
+        // Упрощенная обработка
+        console.log('PUT запрос получен, метод:', httpMethod);
+        console.log('Заголовки:', JSON.stringify(event.headers));
+        console.log('Тело запроса (raw):', body);
         
-        // Создаем объект фильтра с поддержкой как строковых, так и ObjectId значений
-        const filter = typeof postId === 'string' ? { _id: postId } : { _id: new ObjectId(postId) };
+        // Безопасный парсинг JSON
+        const updateData = safeParseJSON(body);
         
+        if (!updateData) {
+          return {
+            statusCode: 400,
+            headers,
+            body: JSON.stringify({ error: 'Invalid JSON in request body' })
+          };
+        }
+        
+        console.log('Данные для обновления (parsed):', JSON.stringify(updateData).substring(0, 100));
+        
+        // Обязательно нужен ID
+        if (!updateData._id) {
+          console.error('ID не предоставлен в PUT запросе');
+          return {
+            statusCode: 400,
+            headers,
+            body: JSON.stringify({ error: 'ID not provided' })
+          };
+        }
+        
+        // Расчет дополнительных полей
+        const readTime = updateData.content ? `${Math.ceil(updateData.content.length / 1000)} min read` : undefined;
+        const slug = updateData.title ? generateSlug(updateData.title) : undefined;
+
+        // Данные для обновления
+        const updateFields = {};
+        
+        // Добавляем только переданные поля
+        if (updateData.title) updateFields.title = updateData.title;
+        if (updateData.excerpt) updateFields.excerpt = updateData.excerpt;
+        if (updateData.content) updateFields.content = updateData.content;
+        if (updateData.category) updateFields.category = updateData.category;
+        if (updateData.author) updateFields.author = updateData.author;
+        if (updateData.images) updateFields.images = updateData.images;
+        if (readTime) updateFields.readTime = readTime;
+        if (slug) updateFields.slug = slug;
+
+        console.log('Поля для обновления:', JSON.stringify(updateFields).substring(0, 100));
+        
+        // Обновляем документ
         const result = await collection.updateOne(
-          filter,
-          { $set: { ...updateData, readTime, slug } }
+          { _id: new ObjectId(updateData._id) },
+          { $set: updateFields }
         );
+        
+        console.log('Результат обновления:', JSON.stringify(result));
         
         if (result.matchedCount === 0) {
           return {
             statusCode: 404,
             headers,
-            body: JSON.stringify({ error: `Post with ID ${id} not found` })
+            body: JSON.stringify({ error: `Post with ID ${updateData._id} not found` })
           };
         }
 
+        // Запрашиваем обновленный документ
+        const updatedPost = await collection.findOne({ _id: new ObjectId(updateData._id) });
+        
         return {
           statusCode: 200,
           headers,
-          body: JSON.stringify({ 
-            message: 'Post updated successfully',
-            id: id,
-            slug: slug
-          })
+          body: JSON.stringify(updatedPost)
         };
       } catch (error) {
-        console.error('Error updating post:', error);
+        console.error('Ошибка при обновлении поста:', error);
         return {
           statusCode: 500,
           headers,
-          body: JSON.stringify({ error: `Failed to update post: ${error.message}` })
+          body: JSON.stringify({ 
+            error: `Failed to update post: ${error.message}`,
+            stack: error.stack
+          })
         };
       }
     }
