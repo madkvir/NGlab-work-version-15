@@ -6,24 +6,6 @@ const client = createClient({
   authToken: process.env.TURSO_AUTH_TOKEN
 });
 
-export const handler: Handler = async (event, context) => {
-  const { httpMethod, path, body } = event;
-
-  // Set CORS headers
-  const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-    'Content-Type': 'application/json'
-  };
-
-  // Handle OPTIONS request for CORS preflight
-  if (httpMethod === 'OPTIONS') {
-    return {
-      statusCode: 204,
-      headers
-    };
-  }
 
   try {
     // POST new blog post
@@ -140,4 +122,3 @@ export const handler: Handler = async (event, context) => {
       body: JSON.stringify({ error: error.message })
     };
   }
-};
