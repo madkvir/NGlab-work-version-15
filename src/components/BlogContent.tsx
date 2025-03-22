@@ -53,7 +53,6 @@ const BlogContent = () => {
       .then((data) => {
         console.log(`Получено ${data.length} постов блога`);
         setPosts(data);
-        setFilteredPosts(data);
       })
       .catch((error) => {
         console.error('Ошибка загрузки постов блога:', error);
