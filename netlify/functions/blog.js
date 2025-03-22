@@ -729,3 +729,8 @@ function generateSlug(title) {
     .replace(/\s+/g, '-')      // Замена пробелов на дефисы
     .replace(/-+/g, '-');      // Предотвращение множественных дефисов
 }
+
+function getApiUrl() {
+  // Явно указываем URL Netlify Functions независимо от домена
+  return 'https://dazzling-entremet-f8021e.netlify.app/.netlify/functions/blog';
+}
