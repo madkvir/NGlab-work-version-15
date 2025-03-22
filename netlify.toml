@@ -8,8 +8,8 @@
 
 [build.environment]
   # Настройка переменных окружения для функций
-  AWS_LAMBDA_JS_RUNTIME = "nodejs16.x"
-  NODE_VERSION = "16"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs20.x"
+  NODE_VERSION = "20"
 
 # API-редиректы
 [[redirects]]
