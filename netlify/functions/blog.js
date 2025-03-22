@@ -147,24 +147,27 @@ function safeParseJSON(jsonString) {
 export const handler = async (event, context) => {
   const { httpMethod, path, body } = event;
 
-  // Логирование для отладки
-  console.log('Request details:', {
-    method: httpMethod,
-    path: path,
-    pathParameters: event.pathParameters,
-    queryStringParameters: event.queryStringParameters,
-  });
+  // Расширенное логирование для отладки
+  console.log('=== REQUEST DEBUGGING ===');
+  console.log('Request headers:', JSON.stringify(event.headers));
+  console.log('Request origin:', event.headers.origin || event.headers.referer || 'unknown');
+  console.log('Request path:', path);
+  console.log('Request method:', httpMethod);
+  console.log('========================');
 
-  // Set CORS headers
+  // Set CORS headers - расширяем для поддержки разных доменов
+  const origin = event.headers.origin || '*';
   const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Origin': origin,
+    'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With, Accept',
     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Credentials': 'true'
   };
 
   // Handle OPTIONS request for CORS preflight
   if (httpMethod === 'OPTIONS') {
+    console.log('Обработка CORS preflight запроса');
     return {
       statusCode: 204,
       headers

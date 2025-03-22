@@ -43,10 +43,28 @@ const BlogContent = () => {
   const fetchPosts = useCallback(async () => {
     try {
       setFetchingBlog(true);
-      const response = await axios.get(`${apiUrl}/api/blog`);
+      
+      // Получаем полный URL с учетом текущего домена
+      const currentOrigin = window.location.origin;
+      console.log('Текущий домен:', currentOrigin);
+      
+      // Используем полный URL для API, чтобы избежать проблем с доменами
+      const fullApiUrl = `${currentOrigin}/api/blog`;
+      console.log('Полный URL API:', fullApiUrl);
+      
+      console.log('Отправка запроса для получения постов блога...');
+      const response = await axios.get(fullApiUrl);
+      
+      console.log('Получен ответ, посты:', response.data.length);
       setPosts(response.data);
     } catch (error) {
       console.error("Failed to fetch posts:", error);
+      
+      // Более подробная информация об ошибке
+      if (error.response) {
+        console.error('Error response data:', error.response.data);
+        console.error('Error response status:', error.response.status);
+      }
     } finally {
       setFetchingBlog(false);
     }
