@@ -16,7 +16,7 @@ const AdminDashboard: React.FC = () => {
   const fetchPosts = useCallback(async () => {
     try {
       setFetchingBlog(true);
-      const response = await axios.get(`${apiUrl}/api/blog-api`);
+      const response = await axios.get(`${apiUrl}/api/blog`);
       setPosts(response.data);
     } catch (error) {
       console.error("Failed to fetch posts:", error);
@@ -50,8 +50,8 @@ const AdminDashboard: React.FC = () => {
 
   const handleDeletePost = async (postId: string) => {
     if (window.confirm("Are you sure you want to delete this post?")) {
-      await axios.delete(`${apiUrl}/api/blog-api`, { data: { id: postId } });
-      const response = await axios.get(`${apiUrl}/api/blog-api`);
+      await axios.delete(`${apiUrl}/api/blog`, { data: { id: postId } });
+      const response = await axios.get(`${apiUrl}/api/blog`);
       setPosts(response.data);
     }
   };
