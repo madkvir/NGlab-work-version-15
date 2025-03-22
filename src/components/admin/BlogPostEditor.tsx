@@ -86,44 +86,92 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
       
       delete postData.images;
 
-      console.log('Отправляемые данные поста:', postData);
+      console.log('Отправляемые данные поста:', JSON.stringify(postData).substring(0, 500) + '...');
 
       let savedPost;
 
       if (post && post._id) {
         console.log('Обновляем существующий пост с ID:', post._id);
         
-        const response = await axios.put(`${apiUrl}/api/blog`, 
-          { 
-            _id: post._id,
-            ...postData 
-          }, 
-          {
+        // Используем прямой URL к функции Netlify вместо API пути
+        const netlifyFunctionUrl = `${window.location.origin}/.netlify/functions/blog`;
+        console.log('Использую прямой URL функции Netlify:', netlifyFunctionUrl);
+        
+        try {
+          const response = await axios.put(netlifyFunctionUrl, 
+            { 
+              _id: post._id,
+              ...postData 
+            }, 
+            {
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest',
+                'Client-Source': 'react-app',
+                'Cache-Control': 'no-cache, no-store'
+              },
+              timeout: 30000 // Увеличиваем таймаут до 30 секунд
+            }
+          );
+          
+          console.log('Ответ от сервера:', response.status, response.statusText);
+          
+          if (response.data) {
+            savedPost = response.data;
+            console.log('Пост успешно сохранен:', savedPost);
+          } else {
+            console.error('Сервер вернул пустой ответ');
+            throw new Error('Server returned empty response');
+          }
+        } catch (axiosError) {
+          console.error('Axios error:', axiosError);
+          
+          // Проверяем разные типы ошибок
+          if (axiosError.response) {
+            // Сервер ответил с ошибкой
+            console.error('Ответ сервера с ошибкой:', 
+              axiosError.response.status, axiosError.response.data);
+            throw new Error(`Server error: ${axiosError.response.status} - ${
+              axiosError.response.data?.message || JSON.stringify(axiosError.response.data)
+            }`);
+          } else if (axiosError.request) {
+            // Запрос был сделан, но ответ не получен
+            console.error('Нет ответа от сервера:', axiosError.request);
+            throw new Error('No response received from server. The request may have timed out.');
+          } else {
+            // Ошибка при настройке запроса
+            console.error('Ошибка запроса:', axiosError.message);
+            throw axiosError;
+          }
+        }
+      } else {
+        // Создание нового поста
+        console.log('Создаем новый пост');
+        try {
+          const response = await axios.post(`${apiUrl}/api/blog`, postData, {
             headers: {
               'Content-Type': 'application/json',
               'Accept': 'application/json',
               'X-Requested-With': 'XMLHttpRequest',
-              'Client-Source': 'react-app',
-              'Cache-Control': 'no-cache, no-store'
+              'Client-Source': 'react-app'
             },
-            timeout: 15000
+            timeout: 30000 // Тоже увеличиваем таймаут до 30 секунд
+          });
+          
+          savedPost = response.data;
+        } catch (axiosError) {
+          console.error('Axios error при создании поста:', axiosError);
+          if (axiosError.response) {
+            throw new Error(`Server error: ${axiosError.response.status} - ${
+              axiosError.response.data?.message || JSON.stringify(axiosError.response.data)
+            }`);
+          } else if (axiosError.request) {
+            throw new Error('No response received from server. The request may have timed out.');
+          } else {
+            throw axiosError;
           }
-        );
-        
-        savedPost = response.data;
-      } else {
-        console.log('Создаем новый пост');
-        const response = await axios.post(`${apiUrl}/api/blog`, postData, {
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'X-Requested-With': 'XMLHttpRequest',
-            'Client-Source': 'react-app'
-          },
-          timeout: 15000
-        });
-        
-        savedPost = response.data;
+        }
       }
 
       console.log('Пост успешно сохранен:', savedPost);
@@ -132,7 +180,9 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
       console.error("Error saving post:", error);
       if (error.response) {
         console.error('Ответ сервера:', error.response.status, error.response.data);
-        setError(`Ошибка сервера: ${error.response.status} - ${error.response.data.message || 'Неизвестная ошибка'}`);
+        setError(`Ошибка сервера: ${error.response.status} - ${
+          error.response.data?.message || JSON.stringify(error.response.data)
+        }`);
       } else {
         setError(error instanceof Error ? error.message : "Failed to save post. Please try again.");
       }
