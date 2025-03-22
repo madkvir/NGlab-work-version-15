@@ -95,12 +95,16 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
         console.log('Обновление существующего поста с ID:', post._id);
         
         try {
-          // Упрощаем запрос - используем минимум данных
-          const response = await axios.put('/.netlify/functions/blog', postData, {
+          // ВАЖНО: Используем POST вместо PUT для обхода проблем с 502
+          console.log('Используем POST для обновления вместо PUT');
+          
+          // Добавляем _id в данные для идентификации как запроса на обновление
+          const response = await axios.post('/.netlify/functions/blog', postData, {
             headers: {
               'Content-Type': 'application/json',
               'Cache-Control': 'no-cache, no-store',
-              'Client-Source': 'react-app' // Маркер для идентификации запросов от React
+              'Client-Source': 'react-app', // Маркер для идентификации запросов от React
+              'X-Update-Operation': 'true'  // Дополнительный маркер для обновления
             },
             timeout: 30000 // 30 секунд - максимум для Netlify Functions
           });

@@ -126,6 +126,7 @@ export const BlogService = {
   async updateBlogPost(id: string, post: any) {
     const apiUrl = getApiUrl();
     console.log(`Использую API URL для обновления поста ${id}:`, apiUrl);
+    console.log('ВАЖНО: Используем POST вместо PUT для обхода проблем 502');
     
     // Создаем объект с ID для отправки в теле запроса
     const postWithId = { 
@@ -136,9 +137,12 @@ export const BlogService = {
     console.log('Отправляемые данные:', JSON.stringify(postWithId).substring(0, 100) + '...');
     
     const updatePost = async () => {
-      // Отправляем на общий эндпоинт
-      const response = await axios.put(apiUrl, postWithId, {
-        headers: apiRequestHeaders,
+      // Отправляем через POST вместо PUT для обхода ошибок 502
+      const response = await axios.post(apiUrl, postWithId, {
+        headers: {
+          ...apiRequestHeaders,
+          'X-Update-Operation': 'true'  // Специальный маркер для обновления
+        },
         timeout: 30000 // 30 секунд для обновления (лимит Netlify Functions)
       });
       
@@ -150,6 +154,15 @@ export const BlogService = {
       return await retryFetch(updatePost);
     } catch (error) {
       console.error(`Ошибка при обновлении поста ${id}:`, error.response || error.message);
+      
+      // Сохраняем локально на случай сбоя API
+      try {
+        localStorage.setItem(`local_post_${id}`, JSON.stringify(postWithId));
+        console.log('Локальная копия поста сохранена');
+      } catch (localError) {
+        console.error('Не удалось сохранить локально:', localError);
+      }
+      
       throw error;
     }
   },
@@ -190,16 +203,18 @@ export const BlogService = {
       
       console.log('Обновляю пост через сервис блогов, ID:', post._id);
       console.log('Используемый URL:', apiUrl);
+      console.log('ВАЖНО: Используем POST вместо PUT для обхода проблем 502');
       
       // Заголовки для идентификации запроса
       const apiRequestHeaders = {
         'Content-Type': 'application/json',
         'Cache-Control': 'no-cache, no-store',
-        'Client-Source': 'react-app'
+        'Client-Source': 'react-app',
+        'X-Update-Operation': 'true'  // Маркер что это обновление
       };
       
-      // Отправляем на общий эндпоинт
-      const response = await axios.put(apiUrl, postWithId, {
+      // Отправляем на общий эндпоинт через POST вместо PUT
+      const response = await axios.post(apiUrl, postWithId, {
         headers: apiRequestHeaders,
         timeout: 30000 // 30 секунд для обновления (лимит Netlify Functions)
       });
