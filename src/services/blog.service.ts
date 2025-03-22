@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { BlogPost } from "../types/blog";
 
-const API_URL = "/.netlify/functions/blog";
+const API_URL = "/api/blog";
 
 export const getBlogPosts = async (): Promise<BlogPost[]> => {
   const response = await axios.get(API_URL);

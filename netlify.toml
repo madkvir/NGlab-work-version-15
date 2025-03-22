@@ -3,23 +3,39 @@
   publish = ".next"
   functions = "netlify/functions"
 
+[functions]
+  node_bundler = "esbuild"
+  # Увеличиваем таймаут функций с 10 до 30 секунд
+  timeout = 30
+
 # API-редиректы
 [[redirects]]
-  from = "/api/posts"
-  to = "/.netlify/functions/blog"
-  status = 200
-  force = true
-  methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
-
-[[redirects]]
-  from = "/api/posts/*"
+  from = "/api/blog/*"
   to = "/.netlify/functions/blog/:splat"
   status = 200
   force = true
-  methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+
+[[redirects]]
+  from = "/api/blog"
+  to = "/.netlify/functions/blog"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
 
 # Основной редирект для Next.js
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"

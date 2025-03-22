@@ -64,7 +64,12 @@ async function connectToDatabase() {
   
   try {
     console.log('Создание клиента MongoDB...');
-    const client = new MongoClient(uri);
+    // Добавляем параметры для оптимизации подключения
+    const client = new MongoClient(uri, {
+      serverSelectionTimeoutMS: 5000, // Таймаут выбора сервера
+      connectTimeoutMS: 5000,        // Таймаут подключения
+      socketTimeoutMS: 10000         // Таймаут сокета
+    });
     
     console.log('Подключение к MongoDB...');
     await client.connect();
@@ -125,6 +130,14 @@ async function mockDatabase() {
  */
 export const handler = async (event, context) => {
   const { httpMethod, path, body } = event;
+
+  // Логирование для отладки
+  console.log('Request details:', {
+    method: httpMethod,
+    path: path,
+    pathParameters: event.pathParameters,
+    queryStringParameters: event.queryStringParameters,
+  });
 
   // Set CORS headers
   const headers = {
@@ -268,10 +281,27 @@ export const handler = async (event, context) => {
     };
   } catch (error) {
     console.error('Error:', error);
+    
+    // Расширенное логирование ошибки для отладки
+    if (error.stack) {
+      console.error('Error stack:', error.stack);
+    }
+    
+    // Проверка на ошибку синтаксиса JSON
+    let errorMessage = error.message || 'Internal Server Error';
+    if (error instanceof SyntaxError && error.message.includes('JSON')) {
+      errorMessage = 'Invalid JSON in request body';
+      console.error('JSON parse error with body:', body?.substring(0, 200));
+    }
+    
     return {
-      statusCode: 500,
+      statusCode: error.statusCode || 500,
       headers,
-      body: JSON.stringify({ error: error.message })
+      body: JSON.stringify({ 
+        error: errorMessage,
+        path: path, 
+        method: httpMethod 
+      })
     };
   }
 };
