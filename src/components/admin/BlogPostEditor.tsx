@@ -73,41 +73,69 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
         throw new Error("Please fill in all required fields");
       }
 
-      const slug = generateSlug(formData.title, locale);
+      const slug = generateSlug(formData.title || '', locale);
+      
       const postData = {
         ...formData,
-        content: editorRef.current?.getContent() || formData.content,
+        content: editorRef.current?.getContent() || formData.content || '',
         slug: slug,
+        category: formData.category || 'Uncategorized',
+        author: formData.author || 'Admin',
+        date: formData.date || new Date().toISOString().split("T")[0],
       };
+      
       delete postData.images;
 
-      const formDataToSend = new FormData();
-
-      Object.keys(postData).forEach((key) => {
-        formDataToSend.append(key, (postData as any)[key]);
-      });
-
-      if (uploadedImages) {
-        uploadedImages.forEach((file: File) => {
-          formDataToSend.append("images", file);
-        });
-      }
+      console.log('Отправляемые данные поста:', postData);
 
       let savedPost;
+
       if (post && post._id) {
-        savedPost = await axios.put(`${apiUrl}/api/blog`, formDataToSend, {
-          headers: {},
-        });
+        console.log('Обновляем существующий пост с ID:', post._id);
+        
+        const response = await axios.put(`${apiUrl}/api/blog`, 
+          { 
+            _id: post._id,
+            ...postData 
+          }, 
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              'X-Requested-With': 'XMLHttpRequest',
+              'Client-Source': 'react-app',
+              'Cache-Control': 'no-cache, no-store'
+            },
+            timeout: 15000
+          }
+        );
+        
+        savedPost = response.data;
       } else {
-        savedPost = await axios.post(`${apiUrl}/api/blog`, formDataToSend, {
-          headers: {},
+        console.log('Создаем новый пост');
+        const response = await axios.post(`${apiUrl}/api/blog`, postData, {
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest',
+            'Client-Source': 'react-app'
+          },
+          timeout: 15000
         });
+        
+        savedPost = response.data;
       }
 
+      console.log('Пост успешно сохранен:', savedPost);
       onSave(savedPost);
     } catch (error) {
       console.error("Error saving post:", error);
-      setError(error instanceof Error ? error.message : "Failed to save post. Please try again.");
+      if (error.response) {
+        console.error('Ответ сервера:', error.response.status, error.response.data);
+        setError(`Ошибка сервера: ${error.response.status} - ${error.response.data.message || 'Неизвестная ошибка'}`);
+      } else {
+        setError(error instanceof Error ? error.message : "Failed to save post. Please try again.");
+      }
     } finally {
       setIsSubmitting(false);
     }

@@ -141,6 +141,29 @@ function safeParseJSON(jsonString) {
   }
 }
 
+// Безопасное преобразование к нижнему регистру
+function safeToLowerCase(str) {
+  return typeof str === 'string' ? str.toLowerCase() : '';
+}
+
+// Безопасное создание slug
+function createSlug(title) {
+  if (!title) return '';
+  return safeToLowerCase(title)
+    .replace(/[^\w\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/--+/g, '-')
+    .trim();
+}
+
+// Расчет времени чтения
+function calculateReadTime(content) {
+  if (!content) return '1 min read';
+  const words = content.split(/\s+/).length;
+  const minutes = Math.ceil(words / 200);
+  return `${minutes} min read`;
+}
+
 /**
  * @type {import('@netlify/functions').Handler}
  */
@@ -295,87 +318,109 @@ export const handler = async (event, context) => {
     // PUT update blog post
     if (httpMethod === 'PUT') {
       try {
-        // Упрощенная обработка
-        console.log('PUT запрос получен, метод:', httpMethod);
-        console.log('Заголовки:', JSON.stringify(event.headers));
-        console.log('Тело запроса (raw):', body);
+        console.log('Обработка PUT запроса...');
         
-        // Безопасный парсинг JSON
-        const updateData = safeParseJSON(body);
-        
-        if (!updateData) {
+        // Безопасный парсинг тела запроса
+        let parsedBody;
+        try {
+          parsedBody = typeof body === 'string' ? JSON.parse(body) : body;
+          console.log('Тело запроса успешно распарсено:', typeof parsedBody);
+        } catch (e) {
+          console.error('Ошибка при парсинге JSON:', e);
           return {
             statusCode: 400,
             headers,
-            body: JSON.stringify({ error: 'Invalid JSON in request body' })
+            body: JSON.stringify({ message: 'Некорректный JSON в теле запроса' })
           };
         }
         
-        console.log('Данные для обновления (parsed):', JSON.stringify(updateData).substring(0, 100));
-        
-        // Обязательно нужен ID
-        if (!updateData._id) {
-          console.error('ID не предоставлен в PUT запросе');
+        // Проверяем наличие ID в теле запроса
+        const id = parsedBody._id;
+        if (!id) {
+          console.error('ID не найден в теле запроса');
           return {
             statusCode: 400,
             headers,
-            body: JSON.stringify({ error: 'ID not provided' })
+            body: JSON.stringify({ message: 'ID не предоставлен' })
           };
         }
         
-        // Расчет дополнительных полей
-        const readTime = updateData.content ? `${Math.ceil(updateData.content.length / 1000)} min read` : undefined;
-        const slug = updateData.title ? generateSlug(updateData.title) : undefined;
-
-        // Данные для обновления
+        console.log('Обновление поста с ID:', id);
+        
+        // Безопасно извлекаем данные с проверкой на undefined
         const updateFields = {};
         
-        // Добавляем только переданные поля
-        if (updateData.title) updateFields.title = updateData.title;
-        if (updateData.excerpt) updateFields.excerpt = updateData.excerpt;
-        if (updateData.content) updateFields.content = updateData.content;
-        if (updateData.category) updateFields.category = updateData.category;
-        if (updateData.author) updateFields.author = updateData.author;
-        if (updateData.images) updateFields.images = updateData.images;
-        if (readTime) updateFields.readTime = readTime;
-        if (slug) updateFields.slug = slug;
-
-        console.log('Поля для обновления:', JSON.stringify(updateFields).substring(0, 100));
+        // Копируем только те поля, которые есть в запросе
+        if (parsedBody.title !== undefined) updateFields.title = parsedBody.title;
+        if (parsedBody.content !== undefined) updateFields.content = parsedBody.content;
+        if (parsedBody.excerpt !== undefined) updateFields.excerpt = parsedBody.excerpt;
+        if (parsedBody.author !== undefined) updateFields.author = parsedBody.author;
+        if (parsedBody.date !== undefined) updateFields.date = parsedBody.date;
+        if (parsedBody.category !== undefined) updateFields.category = parsedBody.category || 'Uncategorized';
+        if (parsedBody.images !== undefined) updateFields.images = Array.isArray(parsedBody.images) ? parsedBody.images : [];
         
-        // Обновляем документ
-        const result = await collection.updateOne(
-          { _id: new ObjectId(updateData._id) },
-          { $set: updateFields }
+        // Вычисляем slug и readTime только если предоставлен title или content
+        if (parsedBody.title !== undefined) {
+          updateFields.slug = createSlug(parsedBody.title);
+        }
+        
+        if (parsedBody.content !== undefined) {
+          updateFields.readTime = calculateReadTime(parsedBody.content);
+        }
+        
+        console.log('Поля для обновления:', Object.keys(updateFields));
+        
+        // Подключение к MongoDB
+        await db.client.connect();
+        console.log('Подключение к MongoDB установлено для PUT запроса');
+        
+        const database = db.client.db(process.env.MONGODB_DATABASE || 'blog');
+        const collection = database.collection('posts');
+        
+        // Конвертируем ID в ObjectId
+        let objectId;
+        try {
+          objectId = new ObjectId(id);
+        } catch (e) {
+          console.error('Ошибка при конвертации ID в ObjectId:', e);
+          return {
+            statusCode: 400,
+            headers,
+            body: JSON.stringify({ message: 'Некорректный формат ID' })
+          };
+        }
+        
+        // Обновляем документ и возвращаем обновленный документ
+        const result = await collection.findOneAndUpdate(
+          { _id: objectId },
+          { $set: updateFields },
+          { returnDocument: 'after' }
         );
         
-        console.log('Результат обновления:', JSON.stringify(result));
-        
-        if (result.matchedCount === 0) {
+        if (!result.value) {
+          console.error('Пост не найден для обновления');
           return {
             statusCode: 404,
             headers,
-            body: JSON.stringify({ error: `Post with ID ${updateData._id} not found` })
+            body: JSON.stringify({ message: 'Пост не найден' })
           };
         }
-
-        // Запрашиваем обновленный документ
-        const updatedPost = await collection.findOne({ _id: new ObjectId(updateData._id) });
         
+        console.log('Пост успешно обновлен');
         return {
           statusCode: 200,
           headers,
-          body: JSON.stringify(updatedPost)
+          body: JSON.stringify(result.value)
         };
       } catch (error) {
         console.error('Ошибка при обновлении поста:', error);
         return {
           statusCode: 500,
           headers,
-          body: JSON.stringify({ 
-            error: `Failed to update post: ${error.message}`,
-            stack: error.stack
-          })
+          body: JSON.stringify({ message: `Ошибка при обновлении поста: ${error.message}` })
         };
+      } finally {
+        await db.client.close();
       }
     }
 
