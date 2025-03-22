@@ -48,14 +48,14 @@ const BlogContent = () => {
     console.log('Загрузка постов блога с домена:', window.location.origin);
     console.log('Текущий хост:', window.location.hostname);
     
-    // Прямое получение постов с Netlify домена
+    // Прямое получение постов
     const directFetch = async () => {
       try {
-        // Hardcoded URL для обхода проблем с разными доменами
-        const directUrl = 'https://dazzling-entremet-f8021e.netlify.app/.netlify/functions/blog';
-        console.log('Используем прямой URL для получения постов:', directUrl);
+        // Используем относительный путь
+        const apiUrl = '/.netlify/functions/blog';
+        console.log('Используем API URL для получения постов:', apiUrl);
         
-        const response = await fetch(directUrl, {
+        const response = await fetch(apiUrl, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

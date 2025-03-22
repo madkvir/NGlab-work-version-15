@@ -35,7 +35,7 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
   const editorRef = useRef<any>(null);
   const router = useRouter();
 
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+  const apiUrl = '/.netlify/functions/blog';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -65,95 +65,68 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
     setUploadedImages((prev) => [...prev, ...newFiles]);
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setError(null);
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
     
     try {
-      console.log('Начинаем сохранение поста...');
+      setIsSubmitting(true);
+      setError(null);
       
-      // Формируем данные для отправки, обязательно включая ID
-      const postData = {
-        _id: post?._id, // Это критично для операции обновления
+      // Проверка, что у нас есть содержимое
+      if (!formData.content || formData.content.trim() === '<p></p>') {
+        throw new Error('Содержимое статьи не может быть пустым');
+      }
+      
+      // Создаем объект данных с включением id и метода
+      const submitData = {
+        _id: formData._id,
+        method: formData._id ? 'PUT' : 'POST', // Указываем метод внутри запроса
         title: formData.title,
-        content: formData.content,
+        slug: formData.slug,
         excerpt: formData.excerpt,
+        content: formData.content,
         author: formData.author || 'Admin',
-        date: formData.date || new Date().toISOString().split('T')[0],
         category: formData.category || 'Uncategorized',
-        images: formData.images || []
+        date: formData.date || new Date().toISOString().split('T')[0],
+        images: formData.images || [],
       };
       
-      // Логируем данные для отладки (ограничиваем вывод контента)
-      console.log('URL для запроса:', post?._id 
-        ? '/.netlify/functions/blog' // Прямое обращение к функции Netlify
-        : '/api/blog');
-        
-      // Прямой запрос к Netlify функции для обновления
-      if (post?._id) {
-        console.log('Обновление существующего поста с ID:', post._id);
-        
-        // Всегда используем рабочий домен для обновлений
-        const updateUrl = 'https://dazzling-entremet-f8021e.netlify.app/.netlify/functions/blog';
-        console.log('Используем прямой URL:', updateUrl);
-        
-        try {
-          // ВАЖНО: Используем POST вместо PUT для обхода проблем с 502
-          console.log('Используем POST для обновления вместо PUT');
-          
-          // Добавляем _id в данные для идентификации как запроса на обновление
-          const response = await axios.post(updateUrl, postData, {
-            headers: {
-              'Content-Type': 'application/json',
-              'Cache-Control': 'no-cache, no-store',
-              'Client-Source': 'react-app', // Маркер для идентификации запросов от React
-              'X-Update-Operation': 'true'  // Дополнительный маркер для обновления
-            },
-            timeout: 30000 // 30 секунд - максимум для Netlify Functions
-          });
-          
-          console.log('Успешный ответ от сервера:', response.status);
-          onSave(response.data);
-          router.push('/admin/manage-blogs');
-        } catch (error) {
-          // Подробная обработка ошибок для диагностики
-          if (axios.isAxiosError(error)) {
-            if (error.response) {
-              // Получен ответ от сервера с ошибкой
-              console.error('Ошибка от сервера:', error.response.status, error.response.data);
-              setError(`Ошибка сервера: ${error.response.status} - ${JSON.stringify(error.response.data)}`);
-            } else if (error.request) {
-              // Запрос был отправлен, но ответ не получен
-              console.error('Нет ответа от сервера:', error.request);
-              setError('Сервер не ответил на запрос. Возможно, проблема с соединением.');
-              
-              // Пробуем аварийно сохранить данные локально
-              try {
-                localStorage.setItem(`draft_post_${post._id}`, JSON.stringify(postData));
-                setError(`Сервер не ответил. Черновик сохранен локально. ${error.message}`);
-              } catch (localError) {
-                console.error('Не удалось сохранить локально:', localError);
-              }
-            } else {
-              // Что-то другое вызвало ошибку
-              console.error('Ошибка запроса:', error.message);
-              setError(`Ошибка запроса: ${error.message}`);
-            }
-          } else {
-            console.error('Неизвестная ошибка:', error);
-            setError('Произошла неизвестная ошибка при обновлении поста');
-          }
-        }
-      } else {
-        // Создание нового поста
-        const response = await axios.post('/api/blog', postData);
-        onSave(response.data);
-        router.push('/admin/manage-blogs');
+      console.log('Отправляем данные блога методом POST:', submitData);
+      
+      // Отправляем данные методом POST (всегда!)
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0'
+        },
+        body: JSON.stringify(submitData)
+      });
+      
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Ошибка API:', response.status, errorText);
+        throw new Error(`Ошибка при сохранении: ${response.status} ${errorText}`);
       }
+      
+      const result = await response.json();
+      console.log('Пост успешно сохранен:', result);
+      
+      // Обновляем успех и редиректим
+      onSave(result);
+      setTimeout(() => {
+        router.push('/admin/manage-blogs');
+      }, 1500);
+      
     } catch (error) {
-      console.error('Ошибка сохранения поста:', error);
-      setError('Ошибка при сохранении поста: ' + (error instanceof Error ? error.message : 'Неизвестная ошибка'));
+      console.error('Ошибка при сохранении поста:', error);
+      if (error instanceof Error) {
+        setError(error.message);
+      } else {
+        setError('Произошла неизвестная ошибка при сохранении');
+      }
     } finally {
       setIsSubmitting(false);
     }

@@ -1,13 +1,9 @@
 import axios from "axios";
 import type { BlogPost } from "../types/blog";
 
-// Получение правильного API URL в зависимости от домена
+// Функция получения URL API в зависимости от домена
 function getApiUrl() {
-  // На клиенте всегда используем Netlify домен
-  if (typeof window !== 'undefined') {
-    return 'https://dazzling-entremet-f8021e.netlify.app/.netlify/functions/blog';
-  }
-  // На сервере используем относительный путь
+  // Используем относительный путь вместо жесткого URL
   return '/.netlify/functions/blog';
 }
 
