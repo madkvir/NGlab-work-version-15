@@ -1,113 +1,141 @@
 import axios from "axios";
 import type { BlogPost } from "../types/blog";
 
-// Получаем базовый URL в зависимости от среды
+// Получение правильного API URL в зависимости от домена
 function getApiUrl() {
-  // В браузере
+  // На клиенте
   if (typeof window !== 'undefined') {
-    const currentOrigin = window.location.origin;
-    return `${currentOrigin}/api/blog`;
+    // Если на домене netlify.app - используем API без изменений
+    if (window.location.hostname.includes('netlify.app')) {
+      console.log('Использование netlify домена для API');
+      return `${window.location.origin}/api/blog`;
+    }
+    
+    // Если на кастомном домене - используем напрямую функции Netlify
+    console.log('Использование кастомного домена для API');
+    return `${window.location.origin}/.netlify/functions/blog`;
   }
   
-  // На сервере используем относительный путь
-  return "/api/blog";
+  // На сервере (SSR) - используем относительный путь
+  return '/.netlify/functions/blog';
 }
 
-export const getBlogPosts = async (): Promise<BlogPost[]> => {
-  const apiUrl = getApiUrl();
-  console.log(`Получение постов блога с URL: ${apiUrl}`);
-  
-  try {
-    const response = await axios.get(apiUrl);
-    console.log(`Получено ${response.data.length} постов блога`);
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching blog posts:", error);
-    
-    // Пробуем через относительный URL если происходит ошибка с полным URL
-    if (typeof window !== 'undefined' && apiUrl.startsWith(window.location.origin)) {
-      console.log("Повторная попытка с относительным URL...");
-      try {
-        const fallbackResponse = await axios.get("/api/blog");
-        return fallbackResponse.data;
-      } catch (fallbackError) {
-        console.error("Fallback request also failed:", fallbackError);
-      }
-    }
-    
-    throw error;
-  }
+// Добавляем больше отладочной информации
+const apiRequestHeaders = {
+  'Content-Type': 'application/json',
+  'X-Requested-With': 'XMLHttpRequest',
+  'Accept': 'application/json',
+  'Client-Source': 'react-app',
+  'Cache-Control': 'no-cache, no-store'
 };
 
-export const getBlogPostBySlug = async (slug: string): Promise<BlogPost> => {
-  const apiUrl = getApiUrl();
-  const response = await axios.get(`${apiUrl}/${slug}`);
-  return response.data;
-};
-
-export const createBlogPost = async (
-  post: Omit<BlogPost, "id" | "slug" | "date" | "readTime">
-): Promise<BlogPost> => {
-  try {
+/**
+ * Сервис для работы с блогом
+ */
+export const BlogService = {
+  /**
+   * Получить все статьи блога
+   */
+  async getPosts() {
     const apiUrl = getApiUrl();
-    const response = await axios.post(apiUrl, post, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    return response.data;
-  } catch (error) {
-    console.error("Error creating blog post:", error);
-    throw new Error(error instanceof Error ? error.message : "Failed to create blog post");
-  }
-};
-
-export const updateBlogPost = async (id: string, post: Partial<BlogPost>): Promise<BlogPost> => {
-  try {
-    const apiUrl = getApiUrl();
-    console.log('Отправка запроса на обновление поста:', id);
-    console.log('URL API:', apiUrl);
-    console.log('Данные для обновления:', JSON.stringify(post, null, 2).substring(0, 200));
+    console.log('Использую API URL для получения постов:', apiUrl);
     
-    // Включаем ID в тело запроса
-    const postWithId = { ...post, _id: id };
-    
-    const response = await axios.put(apiUrl, postWithId, {
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        "X-Requested-With": "XMLHttpRequest"
-      },
-      timeout: 10000, // 10 секунд таймаут
-    });
-    
-    console.log('Ответ сервера:', response.status);
-    return response.data;
-  } catch (error) {
-    console.error("Error updating blog post:", error);
-    
-    // Детальный лог ошибки
-    if (error.response) {
-      // Ответ получен, но с ошибкой
-      console.error('Error response:', {
-        status: error.response.status,
-        data: error.response.data
+    try {
+      const response = await axios.get(apiUrl, {
+        headers: apiRequestHeaders,
+        timeout: 10000 // 10 секунд таймаут
       });
-    } else if (error.request) {
-      // Запрос отправлен, но ответ не получен
-      console.error('No response received:', error.request);
+      return response.data;
+    } catch (error) {
+      console.error('Ошибка при получении постов блога:', error.response || error.message);
+      return [];
     }
-    
-    throw new Error(error instanceof Error ? error.message : "Failed to update blog post");
-  }
-};
+  },
 
-export const deleteBlogPost = async (id: number): Promise<void> => {
-  try {
+  /**
+   * Получить статью по slug
+   */
+  async getPostBySlug(slug: string) {
     const apiUrl = getApiUrl();
-    await axios.delete(`${apiUrl}/${id}`);
-  } catch (error) {
-    console.error("Error deleting blog post:", error);
-    throw new Error(error instanceof Error ? error.message : "Failed to delete blog post");
+    console.log(`Использую API URL для получения поста по slug ${slug}:`, apiUrl);
+    
+    try {
+      const response = await axios.get(`${apiUrl}/${slug}`, {
+        headers: apiRequestHeaders,
+        timeout: 10000
+      });
+      return response.data;
+    } catch (error) {
+      console.error(`Ошибка при получении поста по slug ${slug}:`, error.response || error.message);
+      throw error;
+    }
+  },
+
+  /**
+   * Создать новую статью
+   */
+  async createBlogPost(post: any) {
+    const apiUrl = getApiUrl();
+    console.log('Использую API URL для создания поста:', apiUrl);
+    
+    try {
+      const response = await axios.post(apiUrl, post, {
+        headers: apiRequestHeaders,
+        timeout: 15000 // 15 секунд для создания
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Ошибка при создании поста блога:', error.response || error.message);
+      throw error;
+    }
+  },
+
+  /**
+   * Обновить статью
+   */
+  async updateBlogPost(id: string, post: any) {
+    const apiUrl = getApiUrl();
+    console.log(`Использую API URL для обновления поста ${id}:`, apiUrl);
+    
+    try {
+      // Создаем объект с ID для отправки в теле запроса
+      const postWithId = { 
+        _id: id,
+        ...post 
+      };
+      
+      console.log('Отправляемые данные:', JSON.stringify(postWithId).substring(0, 100) + '...');
+      
+      // Отправляем на общий эндпоинт
+      const response = await axios.put(apiUrl, postWithId, {
+        headers: apiRequestHeaders,
+        timeout: 15000 // 15 секунд для обновления
+      });
+      
+      console.log('Ответ сервера:', response.status, response.statusText);
+      return response.data;
+    } catch (error) {
+      console.error(`Ошибка при обновлении поста ${id}:`, error.response || error.message);
+      throw error;
+    }
+  },
+
+  /**
+   * Удалить статью
+   */
+  async deleteBlogPost(id: string) {
+    const apiUrl = getApiUrl();
+    console.log(`Использую API URL для удаления поста ${id}:`, apiUrl);
+    
+    try {
+      const response = await axios.delete(`${apiUrl}/${id}`, {
+        headers: apiRequestHeaders,
+        timeout: 10000
+      });
+      return response.data;
+    } catch (error) {
+      console.error(`Ошибка при удалении поста ${id}:`, error.response || error.message);
+      throw error;
+    }
   }
 };

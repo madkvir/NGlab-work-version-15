@@ -6,6 +6,7 @@ import Link from "next/link";
 import axios from "axios";
 import { BlogPost } from "../types/blog";
 import LoadingSpinner from "./chat/LoadingSpinner";
+import { BlogService } from '../services/blog.service';
 // import { useBlog } from "../context/BlogContext";
 
 const BlogContent = () => {
@@ -14,6 +15,8 @@ const BlogContent = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
@@ -38,40 +41,27 @@ const BlogContent = () => {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
-  const [fetchingBlog, setFetchingBlog] = useState(true);
-
-  const fetchPosts = useCallback(async () => {
-    try {
-      setFetchingBlog(true);
-      
-      // Получаем полный URL с учетом текущего домена
-      const currentOrigin = window.location.origin;
-      console.log('Текущий домен:', currentOrigin);
-      
-      // Используем полный URL для API, чтобы избежать проблем с доменами
-      const fullApiUrl = `${currentOrigin}/api/blog`;
-      console.log('Полный URL API:', fullApiUrl);
-      
-      console.log('Отправка запроса для получения постов блога...');
-      const response = await axios.get(fullApiUrl);
-      
-      console.log('Получен ответ, посты:', response.data.length);
-      setPosts(response.data);
-    } catch (error) {
-      console.error("Failed to fetch posts:", error);
-      
-      // Более подробная информация об ошибке
-      if (error.response) {
-        console.error('Error response data:', error.response.data);
-        console.error('Error response status:', error.response.status);
-      }
-    } finally {
-      setFetchingBlog(false);
-    }
-  }, []);
 
   useEffect(() => {
-    fetchPosts();
+    setLoading(true);
+    
+    console.log('Загрузка постов блога с домена:', window.location.origin);
+    console.log('Текущий хост:', window.location.hostname);
+    
+    // Используем обновленный метод из BlogService
+    BlogService.getPosts()
+      .then((data) => {
+        console.log(`Получено ${data.length} постов блога`);
+        setPosts(data);
+        setFilteredPosts(data);
+      })
+      .catch((error) => {
+        console.error('Ошибка загрузки постов блога:', error);
+        setError(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   return (
@@ -131,7 +121,7 @@ const BlogContent = () => {
         </div>
 
         {/* Blog Posts Grid */}
-        {fetchingBlog ? (
+        {loading ? (
           <LoadingSpinner />
         ) : (
           <div className="lg:w-3/4">
@@ -185,7 +175,7 @@ const BlogContent = () => {
             </div>
 
             {/* No Results Message */}
-            {!fetchingBlog && filteredPosts.length === 0 && (
+            {!loading && filteredPosts.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-400">No articles found matching your criteria.</p>
               </div>
