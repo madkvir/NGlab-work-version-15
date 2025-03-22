@@ -124,22 +124,24 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
           const updatePost = async () => {
             console.log('Отправка PUT запроса на URL:', netlifyFunctionUrl);
             
-            const response = await axios.put(netlifyFunctionUrl, 
-              { 
-                _id: post._id,
-                ...postData 
-              }, 
-              {
-                headers: {
-                  'Content-Type': 'application/json',
-                  'Accept': 'application/json',
-                  'X-Requested-With': 'XMLHttpRequest',
-                  'Client-Source': 'react-app',
-                  'Cache-Control': 'no-cache, no-store'
-                },
-                timeout: 45000 // Увеличиваем таймаут до 45 секунд
-              }
-            );
+            // Создаем данные для обновления с минимальным набором полей
+            const putData = { 
+              _id: post._id,
+              ...postData 
+            };
+            
+            console.log('Отправляемые данные:', JSON.stringify(putData).substring(0, 200) + '...');
+            
+            const response = await axios.put(netlifyFunctionUrl, putData, {
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest',
+                'Client-Source': 'react-app',
+                'Cache-Control': 'no-cache, no-store'
+              },
+              timeout: 30000 // Уменьшаем до 30 секунд, чтобы не превысить лимит Netlify Functions
+            });
             
             console.log('Ответ от сервера:', response.status, response.statusText);
             return response;

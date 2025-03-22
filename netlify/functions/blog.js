@@ -86,34 +86,52 @@ async function connectToDatabase() {
       
       console.log('Создание клиента MongoDB...');
       
-      // Оптимизированные настройки для предотвращения истечения времени ожидания
-      const client = new MongoClient(uri, {
-        serverSelectionTimeoutMS: 10000,  // Увеличиваем таймаут выбора сервера 
-        connectTimeoutMS: 10000,         // Увеличиваем таймаут подключения
-        socketTimeoutMS: 45000,          // Увеличиваем таймаут сокета для долгих операций
-        maxPoolSize: 20,                 // Увеличиваем пул соединений
-        minPoolSize: 5,                  // Минимальный размер пула
-        maxIdleTimeMS: 120000,           // 2 минуты простоя до закрытия
-        waitQueueTimeoutMS: 10000,       // 10 секунд ожидания в очереди
-        keepAlive: true,                 // Держать соединение открытым
-        keepAliveInitialDelay: 300000    // Проверка соединения каждые 5 минут
-      });
-      
-      console.log('Подключение к MongoDB...');
-      await client.connect();
-      
-      console.log('Получение БД...');
-      const database = client.db(process.env.MONGODB_DATABASE || 'blog');
-      
-      // Проверка соединения с БД
-      await database.command({ ping: 1 });
-      console.log('Подключение к MongoDB успешно установлено');
-      
-      // Сохраняем соединение в кэше
-      cachedClient = client;
-      cachedDb = database;
-      
-      return { client, database };
+      try {
+        // Оптимизированные базовые настройки - только самые необходимые
+        const client = new MongoClient(uri, {
+          serverSelectionTimeoutMS: 10000,  // Таймаут выбора сервера
+          connectTimeoutMS: 10000,         // Таймаут подключения
+          socketTimeoutMS: 30000           // Таймаут сокета для операций
+        });
+        
+        console.log('Подключение к MongoDB...');
+        await client.connect();
+        
+        console.log('Получение БД...');
+        const database = client.db(process.env.MONGODB_DATABASE || 'blog');
+        
+        // Проверка соединения с БД
+        await database.command({ ping: 1 });
+        console.log('Подключение к MongoDB успешно установлено');
+        
+        // Сохраняем соединение в кэше
+        cachedClient = client;
+        cachedDb = database;
+        
+        return { client, database };
+      } catch (connError) {
+        // Подробное логирование ошибки подключения
+        console.error('Ошибка при подключении к MongoDB:', connError);
+        console.error('Тип ошибки:', connError.constructor.name);
+        console.error('Сообщение ошибки:', connError.message);
+        
+        if (connError.name === 'MongoParseError') {
+          console.error('Проблема с параметрами подключения, пробуем подключиться без дополнительных опций');
+          
+          // Пробуем подключиться без дополнительных опций
+          const client = new MongoClient(uri);
+          await client.connect();
+          const database = client.db(process.env.MONGODB_DATABASE || 'blog');
+          
+          // Сохраняем соединение в кэше
+          cachedClient = client;
+          cachedDb = database;
+          
+          return { client, database };
+        }
+        
+        throw connError;
+      }
     } catch (error) {
       console.error('Ошибка подключения к MongoDB:', error);
       throw error;
@@ -481,8 +499,7 @@ export const handler = async (event, context) => {
           // Оборачиваем весь процесс обновления в более надежную конструкцию
           const updateResult = await collection.updateOne(
             { _id: objectId },
-            { $set: updateFields },
-            { maxTimeMS: 30000 } // 30 секунд максимум на операцию обновления
+            { $set: updateFields }
           );
           
           console.log('Результат обновления:', JSON.stringify(updateResult));
@@ -496,8 +513,8 @@ export const handler = async (event, context) => {
             };
           }
           
-          // Получаем обновленный документ
-          const updatedPost = await collection.findOne({ _id: objectId }, { maxTimeMS: 5000 });
+          // Получаем обновленный документ без использования maxTimeMS
+          const updatedPost = await collection.findOne({ _id: objectId });
           
           if (!updatedPost) {
             console.error('Обновленный пост не найден после обновления');

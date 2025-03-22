@@ -139,7 +139,7 @@ export const BlogService = {
       // Отправляем на общий эндпоинт
       const response = await axios.put(apiUrl, postWithId, {
         headers: apiRequestHeaders,
-        timeout: 45000 // 45 секунд для обновления
+        timeout: 30000 // 30 секунд для обновления (лимит Netlify Functions)
       });
       
       console.log('Ответ сервера:', response.status, response.statusText);
