@@ -1,11 +1,10 @@
-import React, { useState, useRef, FormEvent } from "react";
+import React, { useState, useRef } from "react";
 import { Save, X, Upload } from "lucide-react";
 import { Editor } from "@tinymce/tinymce-react";
 import axios from "axios";
 import { generateSlug } from "../../utils/slug";
 import { BlogPost } from "../../types/blog";
 import { useParams } from "next/navigation";
-import { useRouter } from "next/navigation";
 
 interface BlogPostEditorProps {
   post: Partial<BlogPost> | null;
@@ -33,9 +32,8 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const editorRef = useRef<any>(null);
-  const router = useRouter();
 
-  const apiUrl = '/.netlify/functions/blog';
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -65,68 +63,51 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
     setUploadedImages((prev) => [...prev, ...newFiles]);
   };
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
+
     try {
-      setIsSubmitting(true);
-      setError(null);
-      
-      // Проверка, что у нас есть содержимое
-      if (!formData.content || formData.content.trim() === '<p></p>') {
-        throw new Error('Содержимое статьи не может быть пустым');
+      if (!formData.title || !formData.content || !formData.excerpt) {
+        throw new Error("Please fill in all required fields");
       }
-      
-      // Создаем объект данных с включением id и метода
-      const submitData = {
-        _id: formData._id,
-        method: formData._id ? 'PUT' : 'POST', // Указываем метод внутри запроса
-        title: formData.title,
-        slug: formData.slug,
-        excerpt: formData.excerpt,
-        content: formData.content,
-        author: formData.author || 'Admin',
-        category: formData.category || 'Uncategorized',
-        date: formData.date || new Date().toISOString().split('T')[0],
-        images: formData.images || [],
+
+      const slug = generateSlug(formData.title, locale);
+      const postData = {
+        ...formData,
+        content: editorRef.current?.getContent() || formData.content,
+        slug: slug,
       };
-      
-      console.log('Отправляем данные блога методом POST:', submitData);
-      
-      // Отправляем данные методом POST (всегда!)
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Cache-Control': 'no-cache, no-store, must-revalidate',
-          'Pragma': 'no-cache',
-          'Expires': '0'
-        },
-        body: JSON.stringify(submitData)
+      delete postData.images;
+
+      const formDataToSend = new FormData();
+
+      Object.keys(postData).forEach((key) => {
+        formDataToSend.append(key, (postData as any)[key]);
       });
-      
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error('Ошибка API:', response.status, errorText);
-        throw new Error(`Ошибка при сохранении: ${response.status} ${errorText}`);
+
+      if (uploadedImages) {
+        uploadedImages.forEach((file: File) => {
+          formDataToSend.append("images", file);
+        });
       }
-      
-      const result = await response.json();
-      console.log('Пост успешно сохранен:', result);
-      
-      // Обновляем успех и редиректим
-      onSave(result);
-      setTimeout(() => {
-        router.push('/admin/manage-blogs');
-      }, 1500);
-      
-    } catch (error) {
-      console.error('Ошибка при сохранении поста:', error);
-      if (error instanceof Error) {
-        setError(error.message);
+
+      let savedPost;
+      if (post && post._id) {
+        savedPost = await axios.put(`${apiUrl}/api/blog`, formDataToSend, {
+          headers: {},
+        });
       } else {
-        setError('Произошла неизвестная ошибка при сохранении');
+        savedPost = await axios.post(`${apiUrl}/api/blog`, formDataToSend, {
+          headers: {},
+        });
       }
+
+      onSave(savedPost);
+    } catch (error) {
+      console.error("Error saving post:", error);
+      setError(error instanceof Error ? error.message : "Failed to save post. Please try again.");
     } finally {
       setIsSubmitting(false);
     }

@@ -6,17 +6,14 @@ import Link from "next/link";
 import axios from "axios";
 import { BlogPost } from "../types/blog";
 import LoadingSpinner from "./chat/LoadingSpinner";
-import { BlogService } from '../services/blog.service';
 // import { useBlog } from "../context/BlogContext";
 
 const BlogContent = () => {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [posts, setPosts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
@@ -41,133 +38,22 @@ const BlogContent = () => {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
+  const [fetchingBlog, setFetchingBlog] = useState(true);
+
+  const fetchPosts = useCallback(async () => {
+    try {
+      setFetchingBlog(true);
+      const response = await axios.get(`${apiUrl}/api/blog`);
+      setPosts(response.data);
+    } catch (error) {
+      console.error("Failed to fetch posts:", error);
+    } finally {
+      setFetchingBlog(false);
+    }
+  }, []);
 
   useEffect(() => {
-    setLoading(true);
-    
-    console.log('Загрузка постов блога с домена:', window.location.origin);
-    console.log('Текущий хост:', window.location.hostname);
-    
-    // Прямое получение постов
-    const directFetch = async () => {
-      try {
-        // Используем относительный путь
-        const apiUrl = '/.netlify/functions/blog';
-        console.log('Используем API URL для получения постов:', apiUrl);
-        
-        const response = await fetch(apiUrl, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'Cache-Control': 'no-cache, no-store, must-revalidate',
-            'Pragma': 'no-cache',
-            'Expires': '0'
-          },
-          cache: 'no-store'
-        });
-        
-        if (!response.ok) {
-          throw new Error(`Ошибка HTTP: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        console.log('Прямой запрос успешен, получено постов:', data.length);
-        return data;
-      } catch (error) {
-        console.error('Ошибка при прямом запросе:', error);
-        throw error;
-      }
-    };
-
-    // Функция для повторных попыток загрузки с задержкой
-    const fetchWithRetry = async (maxRetries = 3) => {
-      let attempts = 0;
-      let lastError: Error | null = null;
-      
-      while (attempts < maxRetries) {
-        try {
-          attempts++;
-          console.log(`Попытка загрузки постов #${attempts}`);
-          
-          // ВСЕГДА используем прямой URL к Netlify 
-          // УБРАТЬ все попытки через BlogService.getPosts();
-          const data = await directFetch();
-            
-          console.log(`Получено ${data.length} постов блога`);
-          
-          if (!data || data.length === 0) {
-            console.warn('Получен пустой список постов');
-            lastError = new Error('Пустой список постов');
-            
-            // Ждем перед следующей попыткой
-            const delay = 2000 * attempts; // Увеличиваем задержку с каждой попыткой
-            console.log(`Ожидание ${delay}мс перед следующей попыткой...`);
-            await new Promise(resolve => setTimeout(resolve, delay));
-            continue;
-          }
-          
-          // Добавляем readTime для постов, где его нет
-          const postsWithReadTime = data.map(post => ({
-            ...post,
-            readTime: post.readTime || `${Math.ceil((post.content?.length || 0) / 1000)} min read`
-          }));
-          
-          console.log('Все посты имеют поле readTime:', postsWithReadTime.every(post => post.readTime));
-          
-          // Дополнительное логирование каждого поста
-          postsWithReadTime.forEach((post, index) => {
-            console.log(`Пост ${index + 1} [${post._id}]:`, 
-              `Заголовок: ${post.title.substring(0, 30)}..., `,
-              `Категория: ${post.category}, `,
-              `ReadTime: ${post.readTime}`
-            );
-          });
-          
-          return postsWithReadTime;
-        } catch (error) {
-          console.error(`Ошибка при попытке #${attempts}:`, error);
-          lastError = error;
-          
-          // Ждем перед следующей попыткой
-          const delay = 2000 * attempts; // Увеличиваем задержку с каждой попыткой
-          console.log(`Ожидание ${delay}мс перед следующей попыткой...`);
-          await new Promise(resolve => setTimeout(resolve, delay));
-        }
-      }
-      
-      // Все попытки не удались
-      console.error('Все попытки загрузки не удались. Возвращаем тестовые данные.');
-      throw lastError || new Error('Не удалось загрузить посты после нескольких попыток');
-    };
-    
-    // Запускаем загрузку с повторными попытками
-    fetchWithRetry()
-      .then(data => {
-        setPosts(data);
-        console.log('Посты успешно загружены и установлены в состояние компонента.');
-      })
-      .catch(error => {
-        console.error('Критическая ошибка загрузки постов блога:', error);
-        setError(error.message);
-        
-        // Устанавливаем тестовые данные в случае ошибки
-        setPosts([{
-          _id: 'test-post',
-          title: 'Тестовый пост',
-          slug: 'test-post',
-          excerpt: 'Это тестовый пост, созданный из-за проблем с загрузкой данных из базы',
-          content: '<p>Тестовый контент</p>',
-          author: 'System',
-          date: new Date().toISOString().split('T')[0],
-          readTime: '1 min read',
-          category: 'Test',
-          images: []
-        }]);
-      })
-      .finally(() => {
-        setLoading(false);
-        console.log('Загрузка завершена, состояние loading установлено в false.');
-      });
+    fetchPosts();
   }, []);
 
   return (
@@ -227,7 +113,7 @@ const BlogContent = () => {
         </div>
 
         {/* Blog Posts Grid */}
-        {loading ? (
+        {fetchingBlog ? (
           <LoadingSpinner />
         ) : (
           <div className="lg:w-3/4">
@@ -256,7 +142,7 @@ const BlogContent = () => {
                         <span className="bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full text-xs">
                           {post.category}
                         </span>
-                        {post.readTime && <span>{post.readTime}</span>}
+                        <span>{post.readTime}</span>
                       </div>
 
                       <h2 className="text-xl font-semibold mb-3 text-white group-hover:text-emerald-400 transition-colors">
@@ -281,7 +167,7 @@ const BlogContent = () => {
             </div>
 
             {/* No Results Message */}
-            {!loading && filteredPosts.length === 0 && (
+            {!fetchingBlog && filteredPosts.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-400">No articles found matching your criteria.</p>
               </div>
