@@ -10,13 +10,13 @@ import { BlogService } from '../services/blog.service';
 // import { useBlog } from "../context/BlogContext";
 
 const BlogContent = () => {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
@@ -51,60 +51,53 @@ const BlogContent = () => {
     // Прямое получение постов с Netlify домена
     const directFetch = async () => {
       try {
+        // Hardcoded URL для обхода проблем с разными доменами
         const directUrl = 'https://dazzling-entremet-f8021e.netlify.app/.netlify/functions/blog';
         console.log('Используем прямой URL для получения постов:', directUrl);
         
-        const response = await axios.get(directUrl, {
+        const response = await fetch(directUrl, {
+          method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            'Cache-Control': 'no-cache, no-store'
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0'
           },
-          timeout: 15000
+          cache: 'no-store'
         });
         
-        console.log('Прямой запрос успешен, получено постов:', response.data.length);
-        return response.data;
+        if (!response.ok) {
+          throw new Error(`Ошибка HTTP: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        console.log('Прямой запрос успешен, получено постов:', data.length);
+        return data;
       } catch (error) {
         console.error('Ошибка при прямом запросе:', error);
         throw error;
       }
     };
-    
+
     // Функция для повторных попыток загрузки с задержкой
     const fetchWithRetry = async (maxRetries = 3) => {
       let attempts = 0;
+      let lastError: Error | null = null;
       
       while (attempts < maxRetries) {
         try {
           attempts++;
           console.log(`Попытка загрузки постов #${attempts}`);
           
-          // Сначала пробуем прямой URL к Netlify
-          const data = attempts === 1 ? 
-            await directFetch() : 
-            await BlogService.getPosts();
+          // ВСЕГДА используем прямой URL к Netlify 
+          // УБРАТЬ все попытки через BlogService.getPosts();
+          const data = await directFetch();
             
           console.log(`Получено ${data.length} постов блога`);
           
           if (!data || data.length === 0) {
             console.warn('Получен пустой список постов');
-            
-            // Если это последняя попытка и нет данных, используем тестовые данные
-            if (attempts === maxRetries) {
-              console.log('Использую тестовые данные для отображения');
-              return [{
-                _id: 'test-post',
-                title: 'Тестовый пост',
-                slug: 'test-post',
-                excerpt: 'Это тестовый пост, созданный из-за проблем с загрузкой данных из базы',
-                content: '<p>Тестовый контент</p>',
-                author: 'System',
-                date: new Date().toISOString().split('T')[0],
-                readTime: '1 min read',
-                category: 'Test',
-                images: []
-              }];
-            }
+            lastError = new Error('Пустой список постов');
             
             // Ждем перед следующей попыткой
             const delay = 2000 * attempts; // Увеличиваем задержку с каждой попыткой
@@ -120,26 +113,20 @@ const BlogContent = () => {
           }));
           
           console.log('Все посты имеют поле readTime:', postsWithReadTime.every(post => post.readTime));
+          
+          // Дополнительное логирование каждого поста
+          postsWithReadTime.forEach((post, index) => {
+            console.log(`Пост ${index + 1} [${post._id}]:`, 
+              `Заголовок: ${post.title.substring(0, 30)}..., `,
+              `Категория: ${post.category}, `,
+              `ReadTime: ${post.readTime}`
+            );
+          });
+          
           return postsWithReadTime;
         } catch (error) {
           console.error(`Ошибка при попытке #${attempts}:`, error);
-          
-          // Если это последняя попытка, возвращаем тестовые данные
-          if (attempts === maxRetries) {
-            console.log('Возвращаю тестовые данные после неудачных попыток загрузки');
-            return [{
-              _id: 'test-post',
-              title: 'Тестовый пост',
-              slug: 'test-post',
-              excerpt: 'Это тестовый пост, созданный из-за проблем с загрузкой данных из базы',
-              content: '<p>Тестовый контент</p>',
-              author: 'System',
-              date: new Date().toISOString().split('T')[0],
-              readTime: '1 min read',
-              category: 'Test',
-              images: []
-            }];
-          }
+          lastError = error;
           
           // Ждем перед следующей попыткой
           const delay = 2000 * attempts; // Увеличиваем задержку с каждой попыткой
@@ -148,20 +135,38 @@ const BlogContent = () => {
         }
       }
       
-      return [];
+      // Все попытки не удались
+      console.error('Все попытки загрузки не удались. Возвращаем тестовые данные.');
+      throw lastError || new Error('Не удалось загрузить посты после нескольких попыток');
     };
     
     // Запускаем загрузку с повторными попытками
     fetchWithRetry()
       .then(data => {
         setPosts(data);
+        console.log('Посты успешно загружены и установлены в состояние компонента.');
       })
       .catch(error => {
         console.error('Критическая ошибка загрузки постов блога:', error);
         setError(error.message);
+        
+        // Устанавливаем тестовые данные в случае ошибки
+        setPosts([{
+          _id: 'test-post',
+          title: 'Тестовый пост',
+          slug: 'test-post',
+          excerpt: 'Это тестовый пост, созданный из-за проблем с загрузкой данных из базы',
+          content: '<p>Тестовый контент</p>',
+          author: 'System',
+          date: new Date().toISOString().split('T')[0],
+          readTime: '1 min read',
+          category: 'Test',
+          images: []
+        }]);
       })
       .finally(() => {
         setLoading(false);
+        console.log('Загрузка завершена, состояние loading установлено в false.');
       });
   }, []);
 
