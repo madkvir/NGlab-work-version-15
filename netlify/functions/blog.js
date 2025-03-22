@@ -1,10 +1,26 @@
-import { Handler } from '@netlify/functions';
-import { createClient } from '@libsql/client';
+import { MongoClient, ObjectId } from 'mongodb';
 
-const client = createClient({
-  url: process.env.TURSO_DATABASE_URL,
-  authToken: process.env.TURSO_AUTH_TOKEN
-});
+// Подключение к MongoDB
+let cachedDb = null;
+
+async function connectToDatabase() {
+  if (cachedDb) {
+    return cachedDb;
+  }
+  
+  const uri = process.env.MONGODB_URI;
+  const client = new MongoClient(uri);
+  
+  try {
+    await client.connect();
+    const database = client.db(process.env.MONGODB_DATABASE || 'blog');
+    cachedDb = { client, database };
+    return cachedDb;
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+    throw error;
+  }
+}
 
 /**
  * @type {import('@netlify/functions').Handler}
@@ -29,56 +45,69 @@ export const handler = async (event, context) => {
   }
 
   try {
+    const { database } = await connectToDatabase();
+    const collection = database.collection('posts');
+
     // POST new blog post
     if (httpMethod === 'POST') {
-      const { title, excerpt, content, image, category, author } = JSON.parse(body);
+      const postData = JSON.parse(body);
       const date = new Date().toISOString().split('T')[0];
-      const readTime = `${Math.ceil(content.length / 1000)} min read`;
-      const slug = title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+      const readTime = `${Math.ceil(postData.content.length / 1000)} min read`;
+      
+      // Генерация slug, включая транслитерацию для кириллицы
+      const slug = generateSlug(postData.title);
+      
+      const newPost = {
+        ...postData,
+        date,
+        readTime,
+        slug
+      };
 
-      const result = await client.execute({
-        sql: `INSERT INTO posts (title, slug, excerpt, content, image, category, author, date, readTime) 
-              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        args: [title, slug, excerpt, content, image, category, author, date, readTime]
-      });
-
+      const result = await collection.insertOne(newPost);
+      
       return {
         statusCode: 201,
         headers,
         body: JSON.stringify({ 
-          id: result.lastInsertRowid,
-          title,
-          slug,
-          excerpt,
-          content,
-          image,
-          category,
-          author,
-          date,
-          readTime
+          _id: result.insertedId,
+          ...newPost
         })
       };
     }
 
     // GET all posts
     if (httpMethod === 'GET' && !event.pathParameters?.slug) {
-      const result = await client.execute('SELECT * FROM posts ORDER BY date DESC');
+      const posts = await collection.find({}).sort({ date: -1 }).toArray();
       return {
         statusCode: 200,
         headers,
-        body: JSON.stringify(result.rows)
+        body: JSON.stringify(posts)
       };
     }
 
     // GET single post by slug
     if (httpMethod === 'GET' && event.pathParameters?.slug) {
       const { slug } = event.pathParameters;
-      const result = await client.execute({
-        sql: 'SELECT * FROM posts WHERE slug = ?',
-        args: [slug]
-      });
       
-      if (!result.rows[0]) {
+      // Попытка найти по оригинальному slug
+      let post = await collection.findOne({ slug });
+      
+      // Если не найдено, попробуем другие варианты
+      if (!post) {
+        // Пробуем найти по декодированному slug
+        const decodedSlug = decodeURIComponent(slug);
+        post = await collection.findOne({ slug: decodedSlug });
+        
+        // Если по-прежнему не найдено, попробуем сгенерировать правильный slug
+        if (!post) {
+          // Можно попытаться найти по части заголовка, но это менее надежно
+          const transliteratedSlug = generateSlug(decodedSlug);
+          post = await collection.findOne({ slug: transliteratedSlug });
+        }
+      }
+      
+      if (!post) {
         return {
           statusCode: 404,
           headers,
@@ -89,24 +118,21 @@ export const handler = async (event, context) => {
       return {
         statusCode: 200,
         headers,
-        body: JSON.stringify(result.rows[0])
+        body: JSON.stringify(post)
       };
     }
 
     // PUT update blog post
     if (httpMethod === 'PUT' && event.pathParameters?.id) {
       const { id } = event.pathParameters;
-      const { title, excerpt, content, image, category, author } = JSON.parse(body);
-      const readTime = `${Math.ceil(content.length / 1000)} min read`;
-      const slug = title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+      const updateData = JSON.parse(body);
+      const readTime = `${Math.ceil(updateData.content.length / 1000)} min read`;
+      const slug = generateSlug(updateData.title);
 
-      await client.execute({
-        sql: `UPDATE posts 
-              SET title = ?, slug = ?, excerpt = ?, content = ?, 
-                  image = ?, category = ?, author = ?, readTime = ?
-              WHERE id = ?`,
-        args: [title, slug, excerpt, content, image, category, author, readTime, id]
-      });
+      await collection.updateOne(
+        { _id: new ObjectId(id) },
+        { $set: { ...updateData, readTime, slug } }
+      );
 
       return {
         statusCode: 200,
@@ -119,10 +145,7 @@ export const handler = async (event, context) => {
     if (httpMethod === 'DELETE' && event.pathParameters?.id) {
       const { id } = event.pathParameters;
       
-      await client.execute({
-        sql: 'DELETE FROM posts WHERE id = ?',
-        args: [id]
-      });
+      await collection.deleteOne({ _id: new ObjectId(id) });
 
       return {
         statusCode: 204,
@@ -144,3 +167,28 @@ export const handler = async (event, context) => {
     };
   }
 };
+
+// Функция для генерации slug, включая поддержку кириллицы
+function generateSlug(title) {
+  if (!title) return '';
+  
+  // Транслитерация кириллицы в латиницу
+  const cyrillicToLatin = {
+    'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ё': 'yo', 
+    'ж': 'zh', 'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm', 
+    'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u', 
+    'ф': 'f', 'х': 'h', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'sch', 'ъ': '', 
+    'ы': 'y', 'ь': '', 'э': 'e', 'ю': 'yu', 'я': 'ya'
+  };
+  
+  // Преобразование в нижний регистр и транслитерация
+  const transliterated = title.toLowerCase().split('').map(char => 
+    cyrillicToLatin[char] || char
+  ).join('');
+  
+  // Замена специальных символов и пробелов на дефисы
+  return transliterated
+    .replace(/[^\w\s-]/g, '') // Удаление специальных символов
+    .replace(/\s+/g, '-')      // Замена пробелов на дефисы
+    .replace(/-+/g, '-');      // Предотвращение множественных дефисов
+}
