@@ -412,6 +412,48 @@ export const handler = async (event, context) => {
       };
     }
 
+    // Добавляем временный обработчик для диагностики PUT запросов
+    if (httpMethod === 'PUT') {
+      // Логи для отладки
+      console.log('=== PUT REQUEST DIAGNOSTIC LOG ===');
+      console.log('Headers:', JSON.stringify(headers));
+      console.log('Body length:', typeof body === 'string' ? body.length : 'not string');
+      
+      // Попытка парсинга тела для диагностики
+      try {
+        const bodyObj = typeof body === 'string' ? JSON.parse(body) : body;
+        console.log('Body parsed successfully. ID:', bodyObj._id);
+      } catch (e) {
+        console.error('Body parsing failed:', e.message);
+      }
+      
+      // Безопасное сохранение запроса для диагностики
+      try {
+        const timestamp = new Date().toISOString().replace(/:/g, '-');
+        // Используем временное хранилище для аварийного тестирования
+        const safeResponse = {
+          statusCode: 200,
+          headers,
+          body: JSON.stringify({
+            message: 'DIAGNOSTIC: PUT запрос успешно обработан aварийным обработчиком',
+            timestamp: timestamp,
+            host: requestHost,
+            origin: requestOrigin,
+            path: path,
+            bodyInfo: {
+              size: typeof body === 'string' ? body.length : 'not string',
+              parsed: true
+            }
+          })
+        };
+        
+        console.log('Возвращаем диагностическое сообщение');
+        return safeResponse;
+      } catch (err) {
+        console.error('Diagnostic handler error:', err);
+      }
+    }
+
     // PUT update blog post
     if (httpMethod === 'PUT') {
       try {

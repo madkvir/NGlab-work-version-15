@@ -175,5 +175,49 @@ export const BlogService = {
       console.error(`Ошибка при удалении поста ${id}:`, error.response || error.message);
       throw error;
     }
+  },
+
+  async updatePost(post: any): Promise<any> {
+    try {
+      // Обязательно копируем ID поста для операции обновления
+      const postWithId = {
+        _id: post._id,
+        ...post
+      };
+      
+      // Прямой URL к функции Netlify для обеспечения стабильности
+      const apiUrl = '/.netlify/functions/blog';
+      
+      console.log('Обновляю пост через сервис блогов, ID:', post._id);
+      console.log('Используемый URL:', apiUrl);
+      
+      // Заголовки для идентификации запроса
+      const apiRequestHeaders = {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache, no-store',
+        'Client-Source': 'react-app'
+      };
+      
+      // Отправляем на общий эндпоинт
+      const response = await axios.put(apiUrl, postWithId, {
+        headers: apiRequestHeaders,
+        timeout: 30000 // 30 секунд для обновления (лимит Netlify Functions)
+      });
+      
+      console.log('Успешный ответ от сервера:', response.status);
+      return response.data;
+    } catch (error) {
+      console.error('Ошибка при обновлении поста в сервисе:', error);
+      
+      // Сохраняем локально на случай сбоя API
+      try {
+        localStorage.setItem(`local_post_${post._id}`, JSON.stringify(post));
+        console.log('Локальная копия поста сохранена');
+      } catch (localError) {
+        console.error('Не удалось сохранить локально:', localError);
+      }
+      
+      throw error;
+    }
   }
 };

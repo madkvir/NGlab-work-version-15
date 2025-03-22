@@ -1,10 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, FormEvent } from "react";
 import { Save, X, Upload } from "lucide-react";
 import { Editor } from "@tinymce/tinymce-react";
 import axios from "axios";
 import { generateSlug } from "../../utils/slug";
 import { BlogPost } from "../../types/blog";
 import { useParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface BlogPostEditorProps {
   post: Partial<BlogPost> | null;
@@ -32,6 +33,7 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const editorRef = useRef<any>(null);
+  const router = useRouter();
 
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
@@ -63,167 +65,87 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
     setUploadedImages((prev) => [...prev, ...newFiles]);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError(null);
-
+    
     try {
-      if (!formData.title || !formData.content || !formData.excerpt) {
-        throw new Error("Please fill in all required fields");
-      }
-
-      const slug = generateSlug(formData.title || '', locale);
+      console.log('Начинаем сохранение поста...');
       
+      // Формируем данные для отправки, обязательно включая ID
       const postData = {
-        ...formData,
-        content: editorRef.current?.getContent() || formData.content || '',
-        slug: slug,
-        category: formData.category || 'Uncategorized',
+        _id: post?._id, // Это критично для операции обновления
+        title: formData.title,
+        content: formData.content,
+        excerpt: formData.excerpt,
         author: formData.author || 'Admin',
-        date: formData.date || new Date().toISOString().split("T")[0],
+        date: formData.date || new Date().toISOString().split('T')[0],
+        category: formData.category || 'Uncategorized',
+        images: formData.images || []
       };
       
-      delete postData.images;
-
-      console.log('Отправляемые данные поста:', JSON.stringify(postData).substring(0, 500) + '...');
-
-      let savedPost;
-
-      // Функция для повторных попыток HTTP запросов с экспоненциальной задержкой
-      const retryFetch = async (fn, maxRetries = 3, delay = 1000) => {
-        let lastError;
-        for (let i = 0; i < maxRetries; i++) {
-          try {
-            return await fn();
-          } catch (error) {
-            console.error(`Попытка ${i + 1} из ${maxRetries} не удалась:`, error);
-            lastError = error;
-            
-            // Ждем перед следующей попыткой, увеличивая время ожидания
-            if (i < maxRetries - 1) {
-              const waitTime = delay * Math.pow(2, i);
-              console.log(`Ожидание ${waitTime}мс перед следующей попыткой...`);
-              await new Promise(resolve => setTimeout(resolve, waitTime));
-            }
-          }
-        }
-        // Если все попытки неудачны, выбрасываем последнюю ошибку
-        throw lastError;
-      };
-
-      if (post && post._id) {
-        console.log('Обновляем существующий пост с ID:', post._id);
+      // Логируем данные для отладки (ограничиваем вывод контента)
+      console.log('URL для запроса:', post?._id 
+        ? '/.netlify/functions/blog' // Прямое обращение к функции Netlify
+        : '/api/blog');
         
-        // Используем прямой URL к функции Netlify
-        const netlifyFunctionUrl = `${window.location.origin}/.netlify/functions/blog`;
-        console.log('Использую прямой URL функции Netlify:', netlifyFunctionUrl);
+      // Прямой запрос к Netlify функции для обновления
+      if (post?._id) {
+        console.log('Обновление существующего поста с ID:', post._id);
         
         try {
-          // Повторяем попытки обновления до трех раз с задержкой
-          const updatePost = async () => {
-            console.log('Отправка PUT запроса на URL:', netlifyFunctionUrl);
-            
-            // Создаем данные для обновления с минимальным набором полей
-            const putData = { 
-              _id: post._id,
-              ...postData 
-            };
-            
-            console.log('Отправляемые данные:', JSON.stringify(putData).substring(0, 200) + '...');
-            
-            const response = await axios.put(netlifyFunctionUrl, putData, {
-              headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json',
-                'X-Requested-With': 'XMLHttpRequest',
-                'Client-Source': 'react-app',
-                'Cache-Control': 'no-cache, no-store'
-              },
-              timeout: 30000 // Уменьшаем до 30 секунд, чтобы не превысить лимит Netlify Functions
-            });
-            
-            console.log('Ответ от сервера:', response.status, response.statusText);
-            return response;
-          };
+          // Упрощаем запрос - используем минимум данных
+          const response = await axios.put('/.netlify/functions/blog', postData, {
+            headers: {
+              'Content-Type': 'application/json',
+              'Cache-Control': 'no-cache, no-store',
+              'Client-Source': 'react-app' // Маркер для идентификации запросов от React
+            },
+            timeout: 30000 // 30 секунд - максимум для Netlify Functions
+          });
           
-          const response = await retryFetch(updatePost);
-          
-          if (response.data) {
-            savedPost = response.data;
-            console.log('Пост успешно сохранен:', savedPost);
+          console.log('Успешный ответ от сервера:', response.status);
+          onSave(response.data);
+          router.push('/admin/manage-blogs');
+        } catch (error) {
+          // Подробная обработка ошибок для диагностики
+          if (axios.isAxiosError(error)) {
+            if (error.response) {
+              // Получен ответ от сервера с ошибкой
+              console.error('Ошибка от сервера:', error.response.status, error.response.data);
+              setError(`Ошибка сервера: ${error.response.status} - ${JSON.stringify(error.response.data)}`);
+            } else if (error.request) {
+              // Запрос был отправлен, но ответ не получен
+              console.error('Нет ответа от сервера:', error.request);
+              setError('Сервер не ответил на запрос. Возможно, проблема с соединением.');
+              
+              // Пробуем аварийно сохранить данные локально
+              try {
+                localStorage.setItem(`draft_post_${post._id}`, JSON.stringify(postData));
+                setError(`Сервер не ответил. Черновик сохранен локально. ${error.message}`);
+              } catch (localError) {
+                console.error('Не удалось сохранить локально:', localError);
+              }
+            } else {
+              // Что-то другое вызвало ошибку
+              console.error('Ошибка запроса:', error.message);
+              setError(`Ошибка запроса: ${error.message}`);
+            }
           } else {
-            console.error('Сервер вернул пустой ответ');
-            throw new Error('Server returned empty response');
-          }
-        } catch (axiosError) {
-          console.error('Axios error:', axiosError);
-          
-          // Проверяем разные типы ошибок
-          if (axiosError.response) {
-            // Сервер ответил с ошибкой
-            console.error('Ответ сервера с ошибкой:', 
-              axiosError.response.status, axiosError.response.data);
-            throw new Error(`Server error: ${axiosError.response.status} - ${
-              axiosError.response.data?.message || JSON.stringify(axiosError.response.data)
-            }`);
-          } else if (axiosError.request) {
-            // Запрос был сделан, но ответ не получен
-            console.error('Нет ответа от сервера:', axiosError.request);
-            throw new Error('No response received from server. The request may have timed out.');
-          } else {
-            // Ошибка при настройке запроса
-            console.error('Ошибка запроса:', axiosError.message);
-            throw axiosError;
+            console.error('Неизвестная ошибка:', error);
+            setError('Произошла неизвестная ошибка при обновлении поста');
           }
         }
       } else {
         // Создание нового поста
-        console.log('Создаем новый пост');
-        
-        const createPost = async () => {
-          const response = await axios.post(`${apiUrl}/api/blog`, postData, {
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json',
-              'X-Requested-With': 'XMLHttpRequest',
-              'Client-Source': 'react-app'
-            },
-            timeout: 30000 // 30 секунд таймаут
-          });
-          
-          return response;
-        };
-        
-        try {
-          const response = await retryFetch(createPost);
-          savedPost = response.data;
-        } catch (axiosError) {
-          console.error('Axios error при создании поста:', axiosError);
-          if (axiosError.response) {
-            throw new Error(`Server error: ${axiosError.response.status} - ${
-              axiosError.response.data?.message || JSON.stringify(axiosError.response.data)
-            }`);
-          } else if (axiosError.request) {
-            throw new Error('No response received from server. The request may have timed out.');
-          } else {
-            throw axiosError;
-          }
-        }
+        const response = await axios.post('/api/blog', postData);
+        onSave(response.data);
+        router.push('/admin/manage-blogs');
       }
-
-      console.log('Пост успешно сохранен:', savedPost);
-      onSave(savedPost);
     } catch (error) {
-      console.error("Error saving post:", error);
-      if (error.response) {
-        console.error('Ответ сервера:', error.response.status, error.response.data);
-        setError(`Ошибка сервера: ${error.response.status} - ${
-          error.response.data?.message || JSON.stringify(error.response.data)
-        }`);
-      } else {
-        setError(error instanceof Error ? error.message : "Failed to save post. Please try again.");
-      }
+      console.error('Ошибка сохранения поста:', error);
+      setError('Ошибка при сохранении поста: ' + (error instanceof Error ? error.message : 'Неизвестная ошибка'));
     } finally {
       setIsSubmitting(false);
     }
