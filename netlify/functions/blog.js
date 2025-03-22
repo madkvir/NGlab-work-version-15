@@ -218,12 +218,22 @@ function createSlug(title) {
     .trim();
 }
 
-// Расчет времени чтения
+// Функция для вычисления времени чтения
 function calculateReadTime(content) {
   if (!content) return '1 min read';
-  const words = content.split(/\s+/).length;
-  const minutes = Math.ceil(words / 200);
+  // В среднем человек читает около 200-250 слов в минуту
+  // Простое приближение - считаем 1000 символов за 1 минуту чтения
+  const minutes = Math.ceil(content.length / 1000);
   return `${minutes} min read`;
+}
+
+// Функция для обогащения постов данными
+function enrichPosts(posts) {
+  return posts.map(post => ({
+    ...post,
+    // Добавляем readTime, если отсутствует
+    readTime: post.readTime || calculateReadTime(post.content)
+  }));
 }
 
 /**
@@ -349,10 +359,11 @@ export const handler = async (event, context) => {
     // GET all posts
     if (httpMethod === 'GET' && !event.pathParameters?.slug) {
       const posts = await collection.find({}).sort({ date: -1 }).toArray();
+      const enrichedPosts = enrichPosts(posts);
       return {
         statusCode: 200,
         headers,
-        body: JSON.stringify(posts)
+        body: JSON.stringify(enrichedPosts)
       };
     }
 
@@ -385,10 +396,15 @@ export const handler = async (event, context) => {
         };
       }
 
+      const enrichedPost = {
+        ...post,
+        readTime: calculateReadTime(post.content)
+      };
+
       return {
         statusCode: 200,
         headers,
-        body: JSON.stringify(post)
+        body: JSON.stringify(enrichedPost)
       };
     }
 
@@ -590,10 +606,15 @@ export const handler = async (event, context) => {
           
           console.log('Обновление успешно завершено');
           
+          const enrichedPost = {
+            ...updatedPost,
+            readTime: calculateReadTime(updatedPost.content)
+          };
+
           return {
             statusCode: 200,
             headers,
-            body: JSON.stringify(updatedPost)
+            body: JSON.stringify(enrichedPost)
           };
         } catch (dbError) {
           console.error('Ошибка базы данных при обновлении:', dbError);

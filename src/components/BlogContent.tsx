@@ -113,7 +113,14 @@ const BlogContent = () => {
             continue;
           }
           
-          return data;
+          // Добавляем readTime для постов, где его нет
+          const postsWithReadTime = data.map(post => ({
+            ...post,
+            readTime: post.readTime || `${Math.ceil((post.content?.length || 0) / 1000)} min read`
+          }));
+          
+          console.log('Все посты имеют поле readTime:', postsWithReadTime.every(post => post.readTime));
+          return postsWithReadTime;
         } catch (error) {
           console.error(`Ошибка при попытке #${attempts}:`, error);
           
@@ -244,7 +251,7 @@ const BlogContent = () => {
                         <span className="bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full text-xs">
                           {post.category}
                         </span>
-                        <span>{post.readTime}</span>
+                        {post.readTime && <span>{post.readTime}</span>}
                       </div>
 
                       <h2 className="text-xl font-semibold mb-3 text-white group-hover:text-emerald-400 transition-colors">
