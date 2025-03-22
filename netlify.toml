@@ -5,19 +5,24 @@
 
 [functions]
   node_bundler = "esbuild"
+  included_files = ["netlify/functions/**"]
+  external_node_modules = ["mongodb"]
 
 [build.environment]
   # Настройка переменных окружения для функций
   AWS_LAMBDA_JS_RUNTIME = "nodejs20.x"
   NODE_VERSION = "20"
+  # Добавляем режим отладки
+  DEBUG = "netlify:function:invoke,netlify:edge"
 
-# Разрешаем CORS для всех доменов
+# Разрешаем CORS для всех доменов с конкретными заголовками
 [[headers]]
   for = "/api/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Headers = "*"
     Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Cache-Control = "no-store, no-cache"
     
 # Детальные заголовки для функций
 [[headers]]
@@ -26,6 +31,14 @@
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Headers = "*"
     Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Cache-Control = "no-store, no-cache"
+
+# Отключаем кеширование для всего сайта
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Cache-Control = "no-store, must-revalidate"
+    Pragma = "no-cache"
 
 # API-редиректы с четким указанием для обоих доменов
 [[redirects]]
@@ -40,7 +53,7 @@
   status = 200
   force = true
 
-# Основной редирект для Next.js
+# Редирект для ошибки 404
 [[redirects]]
   from = "/*"
   to = "/index.html"

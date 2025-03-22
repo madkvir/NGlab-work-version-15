@@ -147,23 +147,53 @@ function safeParseJSON(jsonString) {
 export const handler = async (event, context) => {
   const { httpMethod, path, body } = event;
 
+  // Добавляем проверку домена и источника запроса
+  const requestHost = event.headers.host || 'unknown-host';
+  const requestOrigin = event.headers.origin || event.headers.referer || 'unknown-origin';
+  
   // Расширенное логирование для отладки
   console.log('=== REQUEST DEBUGGING ===');
+  console.log('Request host:', requestHost);
+  console.log('Request origin:', requestOrigin);
   console.log('Request headers:', JSON.stringify(event.headers));
-  console.log('Request origin:', event.headers.origin || event.headers.referer || 'unknown');
   console.log('Request path:', path);
   console.log('Request method:', httpMethod);
   console.log('========================');
 
   // Set CORS headers - расширяем для поддержки разных доменов
+  // Принимаем запросы с любого домена
   const origin = event.headers.origin || '*';
   const headers = {
-    'Access-Control-Allow-Origin': origin,
+    'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': 'Content-Type, X-Requested-With, Accept',
     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Credentials': 'true'
+    'Access-Control-Allow-Credentials': 'true',
+    'Cache-Control': 'no-store, no-cache'
   };
+
+  // Для дополнительной отладки - сразу возвращаем тестовые данные если запрашивается основной домен
+  if (requestHost.includes('neurogenlab.de') && httpMethod === 'GET' && !event.pathParameters?.slug) {
+    console.log('Использование тестовых данных для домена neurogenlab.de');
+    return {
+      statusCode: 200,
+      headers,
+      body: JSON.stringify([
+        {
+          _id: 'test-domain-post',
+          title: 'Тестовый пост для домена neurogenlab.de',
+          slug: 'test-domain-post',
+          excerpt: 'Это тестовый пост для проверки работы API на основном домене',
+          content: '<p>Содержимое тестового поста для домена neurogenlab.de</p>',
+          author: 'System',
+          date: new Date().toISOString().split('T')[0],
+          readTime: '1 min read',
+          category: 'Test',
+          images: ['https://via.placeholder.com/800x400']
+        }
+      ])
+    };
+  }
 
   // Handle OPTIONS request for CORS preflight
   if (httpMethod === 'OPTIONS') {
