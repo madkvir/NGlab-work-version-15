@@ -30,10 +30,10 @@ const BlogPost = async ({ params }) => {
   const { slug } = await params;
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
-  const { data: posts } = await axios.get(`${apiUrl}/api/blog-api`);
+  const { data: posts } = await axios.get(`${apiUrl}/api/blog`);
 
   try {
-    const response = await axios.get(`${apiUrl}/api/blog-api/${slug}`);
+    const response = await axios.get(`${apiUrl}/api/blog/${slug}`);
     const post = response.data;
 
     const relatedPosts = posts

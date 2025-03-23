@@ -95,11 +95,11 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
 
       let savedPost;
       if (post && post._id) {
-        savedPost = await axios.put(`${apiUrl}/api/blog-api`, formDataToSend, {
+        savedPost = await axios.put(`${apiUrl}/api/blog`, formDataToSend, {
           headers: {},
         });
       } else {
-        savedPost = await axios.post(`${apiUrl}/api/blog-api`, formDataToSend, {
+        savedPost = await axios.post(`${apiUrl}/api/blog`, formDataToSend, {
           headers: {},
         });
       }

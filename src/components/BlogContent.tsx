@@ -43,7 +43,7 @@ const BlogContent = () => {
   const fetchPosts = useCallback(async () => {
     try {
       setFetchingBlog(true);
-      const response = await axios.get(`${apiUrl}/api/blog-api`);
+      const response = await axios.get(`${apiUrl}/api/blog`);
       setPosts(response.data);
     } catch (error) {
       console.error("Failed to fetch posts:", error);
