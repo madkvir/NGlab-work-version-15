@@ -6,7 +6,7 @@ const client = createClient({
   authToken: process.env.TURSO_AUTH_TOKEN
 });
 
-export const handler: Handler = async (event, context) => {
+export const handler = async (event, context) => {
   const { httpMethod, path, body } = event;
 
   // Set CORS headers

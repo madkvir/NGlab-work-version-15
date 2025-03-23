@@ -3,22 +3,26 @@
   publish = ".next"
   functions = "netlify/functions"
 
-# API-редиректы
+# Сначала API-редиректы (более специфичные)
 [[redirects]]
-  from = "/api/posts"
-  to = "/.netlify/functions/blog"
-  status = 200
-  force = true
-  methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
-
-[[redirects]]
-  from = "/api/posts/*"
+  from = "/api/blog/*"
   to = "/.netlify/functions/blog/:splat"
   status = 200
   force = true
-  methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 
-# Основной редирект для Next.js
+[[redirects]]
+  from = "/api/blog"
+  to = "/.netlify/functions/blog"
+  status = 200
+  force = true
+
+# Затем редирект для блога (более специфичный, чем глобальный)
+[[redirects]]
+  from = "/blog/*"
+  to = "/blog/[slug]"
+  status = 200
+
+# И только в конце глобальный редирект
 [[redirects]]
   from = "/*"
   to = "/index.html"
