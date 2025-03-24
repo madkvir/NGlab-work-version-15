@@ -17,34 +17,49 @@ export async function OPTIONS() {
 
 export async function GET(req: NextRequest, { params }) {
   try {
+    console.log("Starting GET request for blog post with params:", params);
+    
     await dbConnect();
-    console.log("db connect");
+    console.log("MongoDB connection established");
 
     const { slug } = await params;
     if (!slug) {
-      console.error("Slug not found");
+      console.error("Slug parameter is missing");
       return NextResponse.json(
-        { success: false, error: "Slug not found" }, 
-        { status: 404, headers: corsHeaders }
+        { success: false, error: "Slug parameter is required" }, 
+        { status: 400, headers: corsHeaders }
       );
     }
 
+    console.log("Searching for post with slug:", slug);
     const post = await Post.findOne({ slug });
 
     if (!post) {
-      console.error("Post not found");
+      console.error(`Post not found for slug: ${slug}`);
       return NextResponse.json(
         { success: false, error: "Post not found" }, 
         { status: 404, headers: corsHeaders }
       );
     }
 
+    console.log("Post found successfully:", post._id);
     return NextResponse.json(post, { status: 200, headers: corsHeaders });
   } catch (error) {
-    console.error("❌ Error fetching post:", error);
+    console.error("Error in GET /api/blog/[slug]:", error);
+    console.error("Error details:", {
+      name: error.name,
+      message: error.message,
+      stack: error.stack
+    });
+    
+    // Возвращаем 500 для серверных ошибок
     return NextResponse.json(
-      { success: false, error: "Bad Request" }, 
-      { status: 400, headers: corsHeaders }
+      { 
+        success: false, 
+        error: "Internal Server Error",
+        details: process.env.NODE_ENV === 'development' ? error.message : undefined 
+      }, 
+      { status: 500, headers: corsHeaders }
     );
   }
 }

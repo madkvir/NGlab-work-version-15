@@ -27,12 +27,14 @@ export async function generateStaticParams() {
 }
 
 const BlogPost = async ({ params }) => {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const apiUrl = typeof window !== 'undefined' 
     ? window.location.origin 
     : process.env.NEXT_PUBLIC_API_URL || 'https://neurogenlab.de';
 
   try {
+    console.log(`Fetching blog post with slug: ${slug}, locale: ${locale}`);
+    
     // Получаем данные поста
     const response = await axios.get(`${apiUrl}/api/blog/${slug}`, {
       headers: {
@@ -41,10 +43,11 @@ const BlogPost = async ({ params }) => {
       }
     });
     
-    console.log("Post response:", response.data);
+    console.log("Post data received successfully");
     const post = response.data;
 
     // Получаем все посты для related posts
+    console.log("Fetching all posts for related content");
     const { data: allPosts } = await axios.get(`${apiUrl}/api/blog`, {
       headers: {
         'Accept': 'application/json',
@@ -52,11 +55,13 @@ const BlogPost = async ({ params }) => {
       }
     });
     
-    console.log("All posts response:", allPosts);
+    console.log(`Found ${allPosts.length} total posts`);
 
     const relatedPosts = allPosts
       .filter((p) => p.category === post.category && p._id !== post._id)
       .slice(0, 2);
+
+    console.log(`Found ${relatedPosts.length} related posts`);
 
     return (
       <div className="min-h-screen bg-[#0B0F19] text-white">
@@ -156,13 +161,20 @@ const BlogPost = async ({ params }) => {
       </div>
     );
   } catch (error) {
-    console.error("❌ Error fetching post:", error);
+    console.error("Error in BlogPost component:", error);
+    console.error("Error details:", {
+      name: error.name,
+      message: error.message,
+      response: error.response?.data
+    });
 
     if (error.response?.status === 404) {
+      console.log("Post not found, redirecting to 404");
       notFound();
     }
 
-    throw error;
+    // Для остальных ошибок выбрасываем их для обработки глобальным error boundary
+    throw new Error(`Failed to load blog post: ${error.message}`);
   }
 };
 
