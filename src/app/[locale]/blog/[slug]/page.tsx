@@ -28,7 +28,9 @@ export async function generateStaticParams() {
 
 const BlogPost = async ({ params }) => {
   const { slug } = await params;
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+  const apiUrl = typeof window !== 'undefined' 
+    ? window.location.origin 
+    : process.env.NEXT_PUBLIC_API_URL || 'https://neurogenlab.de';
 
   try {
     // Получаем данные поста
@@ -38,6 +40,8 @@ const BlogPost = async ({ params }) => {
         'Content-Type': 'application/json'
       }
     });
+    
+    console.log("Post response:", response.data);
     const post = response.data;
 
     // Получаем все посты для related posts
@@ -47,6 +51,8 @@ const BlogPost = async ({ params }) => {
         'Content-Type': 'application/json'
       }
     });
+    
+    console.log("All posts response:", allPosts);
 
     const relatedPosts = allPosts
       .filter((p) => p.category === post.category && p._id !== post._id)

@@ -4,9 +4,10 @@ import Post from "../../../../server/models/Post";
 
 // Конфигурация CORS
 const corsHeaders = {
-  'Access-Control-Allow-Origin': 'https://neurogenlab.de',
+  'Access-Control-Allow-Origin': '*', // Временно разрешаем все домены для отладки
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization, Accept',
+  'Access-Control-Allow-Credentials': 'true'
 };
 
 // Обработка OPTIONS запроса для CORS preflight
