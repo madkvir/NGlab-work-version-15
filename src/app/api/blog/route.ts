@@ -11,7 +11,7 @@ cloudinary.config({
 
 // Конфигурация CORS
 const corsHeaders = {
-  'Access-Control-Allow-Origin': 'https://neuropeplab.de',
+  'Access-Control-Allow-Origin': 'https://neurogenlab.de',
   'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
 };
