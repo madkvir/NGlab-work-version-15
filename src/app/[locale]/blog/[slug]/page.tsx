@@ -30,14 +30,26 @@ const BlogPost = async ({ params }) => {
   const { slug } = await params;
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
-  const { data: posts } = await axios.get(`${apiUrl}/api/blog`);
-
   try {
-    const response = await axios.get(`${apiUrl}/api/blog/${slug}`);
+    // Получаем данные поста
+    const response = await axios.get(`${apiUrl}/api/blog/${slug}`, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
     const post = response.data;
 
-    const relatedPosts = posts
-      .filter((p) => p.category === post.category && p.id !== post.id)
+    // Получаем все посты для related posts
+    const { data: allPosts } = await axios.get(`${apiUrl}/api/blog`, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
+
+    const relatedPosts = allPosts
+      .filter((p) => p.category === post.category && p._id !== post._id)
       .slice(0, 2);
 
     return (
