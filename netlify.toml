@@ -3,23 +3,28 @@
   publish = ".next"
   functions = "netlify/functions"
 
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["mongodb"]
+
 # API-редиректы
 [[redirects]]
-  from = "/api/posts"
-  to = "/.netlify/functions/blog"
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
   status = 200
   force = true
-  methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
-
-[[redirects]]
-  from = "/api/posts/*"
-  to = "/.netlify/functions/blog/:splat"
-  status = 200
-  force = true
-  methods = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 
 # Основной редирект для Next.js
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  conditions = {Role = ["admin"]}
+
+# Добавляем заголовки CORS
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"

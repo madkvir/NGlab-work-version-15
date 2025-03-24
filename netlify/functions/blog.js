@@ -1,12 +1,21 @@
-import { Handler } from '@netlify/functions';
-import { createClient } from '@libsql/client';
+import { MongoClient } from 'mongodb';
 
-const client = createClient({
-  url: process.env.TURSO_DATABASE_URL,
-  authToken: process.env.TURSO_AUTH_TOKEN
-});
+const uri = process.env.MONGODB_URL;
+const dbName = process.env.MONGODB_DATABASE;
 
-export const handler: Handler = async (event, context) => {
+let cachedClient = null;
+
+async function connectToDatabase() {
+  if (cachedClient) {
+    return cachedClient;
+  }
+
+  const client = await MongoClient.connect(uri);
+  cachedClient = client;
+  return client;
+}
+
+export const handler = async (event, context) => {
   const { httpMethod, path, body } = event;
 
   // Set CORS headers
@@ -26,6 +35,10 @@ export const handler: Handler = async (event, context) => {
   }
 
   try {
+    const client = await connectToDatabase();
+    const db = client.db(dbName);
+    const collection = db.collection('posts');
+
     // POST new blog post
     if (httpMethod === 'POST') {
       const { title, excerpt, content, image, category, author } = JSON.parse(body);
@@ -33,17 +46,23 @@ export const handler: Handler = async (event, context) => {
       const readTime = `${Math.ceil(content.length / 1000)} min read`;
       const slug = title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
 
-      const result = await client.execute({
-        sql: `INSERT INTO posts (title, slug, excerpt, content, image, category, author, date, readTime) 
-              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        args: [title, slug, excerpt, content, image, category, author, date, readTime]
+      const result = await collection.insertOne({
+        title,
+        slug,
+        excerpt,
+        content,
+        image,
+        category,
+        author,
+        date,
+        readTime
       });
 
       return {
         statusCode: 201,
         headers,
-        body: JSON.stringify({ 
-          id: result.lastInsertRowid,
+        body: JSON.stringify({
+          id: result.insertedId,
           title,
           slug,
           excerpt,
@@ -59,23 +78,20 @@ export const handler: Handler = async (event, context) => {
 
     // GET all posts
     if (httpMethod === 'GET' && !event.pathParameters?.slug) {
-      const result = await client.execute('SELECT * FROM posts ORDER BY date DESC');
+      const posts = await collection.find({}).sort({ date: -1 }).toArray();
       return {
         statusCode: 200,
         headers,
-        body: JSON.stringify(result.rows)
+        body: JSON.stringify(posts)
       };
     }
 
     // GET single post by slug
     if (httpMethod === 'GET' && event.pathParameters?.slug) {
       const { slug } = event.pathParameters;
-      const result = await client.execute({
-        sql: 'SELECT * FROM posts WHERE slug = ?',
-        args: [slug]
-      });
+      const post = await collection.findOne({ slug });
       
-      if (!result.rows[0]) {
+      if (!post) {
         return {
           statusCode: 404,
           headers,
@@ -86,7 +102,7 @@ export const handler: Handler = async (event, context) => {
       return {
         statusCode: 200,
         headers,
-        body: JSON.stringify(result.rows[0])
+        body: JSON.stringify(post)
       };
     }
 
@@ -97,13 +113,29 @@ export const handler: Handler = async (event, context) => {
       const readTime = `${Math.ceil(content.length / 1000)} min read`;
       const slug = title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
 
-      await client.execute({
-        sql: `UPDATE posts 
-              SET title = ?, slug = ?, excerpt = ?, content = ?, 
-                  image = ?, category = ?, author = ?, readTime = ?
-              WHERE id = ?`,
-        args: [title, slug, excerpt, content, image, category, author, readTime, id]
-      });
+      const result = await collection.updateOne(
+        { _id: id },
+        {
+          $set: {
+            title,
+            slug,
+            excerpt,
+            content,
+            image,
+            category,
+            author,
+            readTime
+          }
+        }
+      );
+
+      if (result.matchedCount === 0) {
+        return {
+          statusCode: 404,
+          headers,
+          body: JSON.stringify({ error: 'Post not found' })
+        };
+      }
 
       return {
         statusCode: 200,
@@ -116,10 +148,15 @@ export const handler: Handler = async (event, context) => {
     if (httpMethod === 'DELETE' && event.pathParameters?.id) {
       const { id } = event.pathParameters;
       
-      await client.execute({
-        sql: 'DELETE FROM posts WHERE id = ?',
-        args: [id]
-      });
+      const result = await collection.deleteOne({ _id: id });
+
+      if (result.deletedCount === 0) {
+        return {
+          statusCode: 404,
+          headers,
+          body: JSON.stringify({ error: 'Post not found' })
+        };
+      }
 
       return {
         statusCode: 204,
