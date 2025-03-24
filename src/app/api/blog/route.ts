@@ -9,15 +9,30 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+// Конфигурация CORS
+const corsHeaders = {
+  'Access-Control-Allow-Origin': 'https://neuropeplab.de',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
+// Обработка OPTIONS запроса для CORS preflight
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders });
+}
+
 export async function GET() {
   try {
     await dbConnect();
     const posts = await Post.find({});
 
-    return NextResponse.json(posts);
+    return NextResponse.json(posts, { headers: corsHeaders });
   } catch (error) {
     console.error("❌ Error fetching posts:", error);
-    return NextResponse.json({ success: false, error: "Internal Server Error" }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: "Internal Server Error" }, 
+      { status: 500, headers: corsHeaders }
+    );
   }
 }
 
@@ -54,10 +69,16 @@ export async function POST(req: NextRequest) {
       images: uploadedImages,
     });
 
-    return NextResponse.json({ success: true, data: newPost }, { status: 201 });
+    return NextResponse.json(
+      { success: true, data: newPost }, 
+      { status: 201, headers: corsHeaders }
+    );
   } catch (error) {
     console.error("❌ Error creating post:", error);
-    return NextResponse.json({ success: false, error: "Bad Request" }, { status: 400 });
+    return NextResponse.json(
+      { success: false, error: "Bad Request" }, 
+      { status: 400, headers: corsHeaders }
+    );
   }
 }
 
@@ -100,10 +121,16 @@ export async function PUT(req: Request) {
     const result = await Post.findByIdAndUpdate(id, updPost);
     console.log("result update", result);
 
-    return NextResponse.json({ success: true, data: result }, { status: 201 });
+    return NextResponse.json(
+      { success: true, data: result }, 
+      { status: 201, headers: corsHeaders }
+    );
   } catch (error) {
     console.error("❌ Error updating post:", error);
-    return NextResponse.json({ success: false, error: "Bad Request" }, { status: 400 });
+    return NextResponse.json(
+      { success: false, error: "Bad Request" }, 
+      { status: 400, headers: corsHeaders }
+    );
   }
 }
 
@@ -112,7 +139,10 @@ export async function DELETE(req: Request) {
     const { id } = await req.json();
 
     if (!id) {
-      return NextResponse.json({ success: false, error: "Missing ID" }, { status: 400 });
+      return NextResponse.json(
+        { success: false, error: "Missing ID" }, 
+        { status: 400, headers: corsHeaders }
+      );
     }
 
     await dbConnect();
@@ -126,13 +156,22 @@ export async function DELETE(req: Request) {
     }
 
     if (!result) {
-      return NextResponse.json({ success: false, error: "Post not found" }, { status: 404 });
+      return NextResponse.json(
+        { success: false, error: "Post not found" }, 
+        { status: 404, headers: corsHeaders }
+      );
     }
 
     console.log("delete result", result);
-    return NextResponse.json({ success: true, data: result });
+    return NextResponse.json(
+      { success: true, data: result },
+      { headers: corsHeaders }
+    );
   } catch (error) {
     console.error("❌ Error deleting post:", error);
-    return NextResponse.json({ success: false, error: "Internal Server Error" }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: "Internal Server Error" }, 
+      { status: 500, headers: corsHeaders }
+    );
   }
 }
