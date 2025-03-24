@@ -11,7 +11,9 @@ const AdminDashboard: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[] | []>([]);
   const [fetchingBlog, setFetchingBlog] = useState(true);
 
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+  const apiUrl = typeof window !== 'undefined' 
+    ? window.location.origin 
+    : process.env.NEXT_PUBLIC_API_URL || 'https://neurogenlab.de';
 
   const fetchPosts = useCallback(async () => {
     try {

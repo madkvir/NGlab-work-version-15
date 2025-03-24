@@ -15,7 +15,9 @@ const BlogContent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
 
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+  const apiUrl = typeof window !== 'undefined' 
+    ? window.location.origin 
+    : process.env.NEXT_PUBLIC_API_URL || 'https://neurogenlab.de';
 
   const categories = Array.from(new Set(posts.map((post: BlogPost) => post.category)))
     .filter(Boolean)
