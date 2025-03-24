@@ -1934,871 +1934,871 @@ ua: {
 },
 
 };
-const aiChatBotTranslations = {
-  en: {
-    title: "AI Chat Bot",
-    description: "Enhance your customer service with our intelligent chatbot solution that provides 24/7 support and seamless customer interactions.",
-    sectionTitles: {
-      features: "Key Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
-    },
-    features: [
-      "Natural Language Processing",
-      "Multi-language Support",
-      "Custom Knowledge Base",
-      "Real-time Analytics",
-      "Human Handoff",
-      "Automated Responses",
-      "Contextual Understanding"
-    ],
-    benefits: [
-      "24/7 Customer Support",
-      "Reduced Support Costs",
-      "Faster Response Times",
-      "Consistent Experience",
-      "Scalable Solution",
-      "Valuable Insights",
-      "Improved Satisfaction"
-    ],
-    integrations: [
-      "Website Widget",
-      "Facebook Messenger",
-      "WhatsApp",
-      "Slack",
-      "Microsoft Teams",
-      "Custom API"
-    ],
-    articleContent: {
-      mainTitle: "AI Chat Bot for Business – Automate and Innovate with NeuroGen Lab",
-      subtitle: "Unlock the Power of Artificial Intelligence",
-      introText: "At NeuroGen Lab, we bring you an advanced AI Chat Bot designed to:",
-      introList: [
-        "Automate communication",
-        "Enhance customer interactions",
-        "Streamline operations"
-      ],
-      howItWorksTitle: "How Does Our AI Chat Bot Work?",
-      howItWorksText: "Our chat bot leverages GPT-4 and cutting-edge conversational AI technology to:",
-      howItWorksList: [
-        "Understand context",
-        "Process requests in real-time",
-        "Generate accurate, human-like responses"
-      ],
-      keyFeaturesTitle: "Key Features of Our AI Chat Bot",
-      features: {
-        realTime: {
-          title: "Real-Time Communication",
-          description: "Engage users instantly and resolve inquiries without delay."
-        },
-        multiLanguage: {
-          title: "Multi-Language Support",
-          description: "Communicate with a global audience seamlessly."
-        },
-        scalability: {
-          title: "Scalability",
-          description: "Handle thousands of simultaneous queries with unmatched precision."
-        },
-        analytics: {
-          title: "Performance Analytics",
-          description: "Gain actionable insights to optimize your customer engagement strategy."
-        }
-      },
-      industriesTitle: "Industries We Serve",
-      industriesText: "Our versatile AI Chat Bot adapts to any industry, empowering businesses to automate and grow:",
-      industries: [
-        {
-          icon: "🏪",
-          name: "Retail",
-          description: "Automate sales inquiries and enhance customer service."
-        },
-        {
-          icon: "🏥",
-          name: "Healthcare",
-          description: "Provide 24/7 virtual assistance for patients and medical staff."
-        },
-        {
-          icon: "🎓",
-          name: "Education",
-          description: "Support students with course information and academic guidance."
-        },
-        {
-          icon: "🛒",
-          name: "E-commerce",
-          description: "Boost conversions with instant, real-time support."
-        },
-        {
-          icon: "💼",
-          name: "Finance",
-          description: "Streamline FAQs and client interactions with intelligent automation."
-        }
-      ],
-      conclusionTitle: "Start Transforming Your Business Today 🚀",
-      conclusionText: "Experience the future of communication with NeuroGen Lab's AI Chat Bot.",
-      conclusionList: [
-        "Optimize your workflows",
-        "Improve customer satisfaction",
-        "Reduce costs"
-      ],
-      topReasonsTitle: "5 Top Reasons Why Your Business Needs an AI Chat Bot",
-      reasonList: [
-        {
-          title: "1. 24/7 Automated Customer Support",
-          content: {
-            text: "An AI Chat Bot works round-the-clock, providing instant responses to customer inquiries. This helps to:",
-            list: [
-              "Increase customer satisfaction with fast response times",
-              "Reduce wait times for answers",
-              "Resolve repetitive and common queries without human intervention"
-            ]
-          }
-        },
-        {
-          title: "2. Reduce Operational Costs",
-          content: {
-            text: "Implementing an AI Chat Bot significantly lowers expenses related to manual support:",
-            list: [
-              "Automates routine tasks, freeing up your employees' time",
-              "Reduces the workload for call centers and support teams",
-              "Cuts costs on hiring, training, and maintaining support staff"
-            ]
-          }
-        },
-        {
-          title: "3. Increase Sales and Conversions",
-          content: {
-            text: "AI Chat Bots do more than answer questions — they actively drive sales:",
-            list: [
-              "Recommend products based on customer preferences",
-              "Guide users through the sales funnel to finalize purchases",
-              "Capture leads and gather contact information for your sales team"
-            ]
-          }
-        },
-        {
-          title: "4. Instant Scalability for High Volumes",
-          content: {
-            text: "An AI Chat Bot can handle thousands of inquiries simultaneously:",
-            list: [
-              "Processes requests quickly, even during peak hours",
-              "Works effectively for businesses of all sizes",
-              "Handles large-scale events seamlessly"
-            ]
-          }
-        },
-        {
-          title: "5. Enhanced Customer Experience",
-          content: {
-            text: "Improve overall customer satisfaction with personalized interactions:",
-            list: [
-              "Provides consistent and accurate responses across all channels",
-              "Offers multilingual support for global customer base",
-              "Maintains conversation context for more natural interactions"
-            ]
-          }
-        }
-      ],
-      finalConclusion: {
-        title: "Conclusion",
-        text: "By using NeuroGen Lab's AI Chat Bot, businesses can unlock efficiency, provide exceptional customer experiences, and stay ahead of the competition. Get started today and transform your business with the power of AI-driven automation."
-      }
-    },
-    metaTitle: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Service Solution",
-    metaDescription: "Transform your customer service with our AI-powered chatbot. Provide 24/7 support, reduce costs, and deliver exceptional customer experiences."
-  },
+// const aiChatBotTranslations = {
+//   en: {
+//     title: "AI Chat Bot",
+//     description: "Enhance your customer service with our intelligent chatbot solution that provides 24/7 support and seamless customer interactions.",
+//     sectionTitles: {
+//       features: "Key Features",
+//       benefits: "Benefits",
+//       integrations: "Integrations"
+//     },
+//     features: [
+//       "Natural Language Processing",
+//       "Multi-language Support",
+//       "Custom Knowledge Base",
+//       "Real-time Analytics",
+//       "Human Handoff",
+//       "Automated Responses",
+//       "Contextual Understanding"
+//     ],
+//     benefits: [
+//       "24/7 Customer Support",
+//       "Reduced Support Costs",
+//       "Faster Response Times",
+//       "Consistent Experience",
+//       "Scalable Solution",
+//       "Valuable Insights",
+//       "Improved Satisfaction"
+//     ],
+//     integrations: [
+//       "Website Widget",
+//       "Facebook Messenger",
+//       "WhatsApp",
+//       "Slack",
+//       "Microsoft Teams",
+//       "Custom API"
+//     ],
+//     articleContent: {
+//       mainTitle: "AI Chat Bot for Business – Automate and Innovate with NeuroGen Lab",
+//       subtitle: "Unlock the Power of Artificial Intelligence",
+//       introText: "At NeuroGen Lab, we bring you an advanced AI Chat Bot designed to:",
+//       introList: [
+//         "Automate communication",
+//         "Enhance customer interactions",
+//         "Streamline operations"
+//       ],
+//       howItWorksTitle: "How Does Our AI Chat Bot Work?",
+//       howItWorksText: "Our chat bot leverages GPT-4 and cutting-edge conversational AI technology to:",
+//       howItWorksList: [
+//         "Understand context",
+//         "Process requests in real-time",
+//         "Generate accurate, human-like responses"
+//       ],
+//       keyFeaturesTitle: "Key Features of Our AI Chat Bot",
+//       features: {
+//         realTime: {
+//           title: "Real-Time Communication",
+//           description: "Engage users instantly and resolve inquiries without delay."
+//         },
+//         multiLanguage: {
+//           title: "Multi-Language Support",
+//           description: "Communicate with a global audience seamlessly."
+//         },
+//         scalability: {
+//           title: "Scalability",
+//           description: "Handle thousands of simultaneous queries with unmatched precision."
+//         },
+//         analytics: {
+//           title: "Performance Analytics",
+//           description: "Gain actionable insights to optimize your customer engagement strategy."
+//         }
+//       },
+//       industriesTitle: "Industries We Serve",
+//       industriesText: "Our versatile AI Chat Bot adapts to any industry, empowering businesses to automate and grow:",
+//       industries: [
+//         {
+//           icon: "🏪",
+//           name: "Retail",
+//           description: "Automate sales inquiries and enhance customer service."
+//         },
+//         {
+//           icon: "🏥",
+//           name: "Healthcare",
+//           description: "Provide 24/7 virtual assistance for patients and medical staff."
+//         },
+//         {
+//           icon: "🎓",
+//           name: "Education",
+//           description: "Support students with course information and academic guidance."
+//         },
+//         {
+//           icon: "🛒",
+//           name: "E-commerce",
+//           description: "Boost conversions with instant, real-time support."
+//         },
+//         {
+//           icon: "💼",
+//           name: "Finance",
+//           description: "Streamline FAQs and client interactions with intelligent automation."
+//         }
+//       ],
+//       conclusionTitle: "Start Transforming Your Business Today 🚀",
+//       conclusionText: "Experience the future of communication with NeuroGen Lab's AI Chat Bot.",
+//       conclusionList: [
+//         "Optimize your workflows",
+//         "Improve customer satisfaction",
+//         "Reduce costs"
+//       ],
+//       topReasonsTitle: "5 Top Reasons Why Your Business Needs an AI Chat Bot",
+//       reasonList: [
+//         {
+//           title: "1. 24/7 Automated Customer Support",
+//           content: {
+//             text: "An AI Chat Bot works round-the-clock, providing instant responses to customer inquiries. This helps to:",
+//             list: [
+//               "Increase customer satisfaction with fast response times",
+//               "Reduce wait times for answers",
+//               "Resolve repetitive and common queries without human intervention"
+//             ]
+//           }
+//         },
+//         {
+//           title: "2. Reduce Operational Costs",
+//           content: {
+//             text: "Implementing an AI Chat Bot significantly lowers expenses related to manual support:",
+//             list: [
+//               "Automates routine tasks, freeing up your employees' time",
+//               "Reduces the workload for call centers and support teams",
+//               "Cuts costs on hiring, training, and maintaining support staff"
+//             ]
+//           }
+//         },
+//         {
+//           title: "3. Increase Sales and Conversions",
+//           content: {
+//             text: "AI Chat Bots do more than answer questions — they actively drive sales:",
+//             list: [
+//               "Recommend products based on customer preferences",
+//               "Guide users through the sales funnel to finalize purchases",
+//               "Capture leads and gather contact information for your sales team"
+//             ]
+//           }
+//         },
+//         {
+//           title: "4. Instant Scalability for High Volumes",
+//           content: {
+//             text: "An AI Chat Bot can handle thousands of inquiries simultaneously:",
+//             list: [
+//               "Processes requests quickly, even during peak hours",
+//               "Works effectively for businesses of all sizes",
+//               "Handles large-scale events seamlessly"
+//             ]
+//           }
+//         },
+//         {
+//           title: "5. Enhanced Customer Experience",
+//           content: {
+//             text: "Improve overall customer satisfaction with personalized interactions:",
+//             list: [
+//               "Provides consistent and accurate responses across all channels",
+//               "Offers multilingual support for global customer base",
+//               "Maintains conversation context for more natural interactions"
+//             ]
+//           }
+//         }
+//       ],
+//       finalConclusion: {
+//         title: "Conclusion",
+//         text: "By using NeuroGen Lab's AI Chat Bot, businesses can unlock efficiency, provide exceptional customer experiences, and stay ahead of the competition. Get started today and transform your business with the power of AI-driven automation."
+//       }
+//     },
+//     metaTitle: "AI Chat Bot | NeuroGen Lab - Intelligent Customer Service Solution",
+//     metaDescription: "Transform your customer service with our AI-powered chatbot. Provide 24/7 support, reduce costs, and deliver exceptional customer experiences."
+//   },
 
-  de: {
-    title: "KI-Chatbot",
-    description: "Verbessern Sie Ihren Kundenservice mit unserer intelligenten Chatbot-Lösung, die rund um die Uhr Support und nahtlose Kundeninteraktionen bietet.",
-    sectionTitles: {
-      features: "Hauptfunktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
-    },
-    features: [
-      "Verarbeitung natürlicher Sprache",
-      "Mehrsprachige Unterstützung",
-      "Anpassbare Wissensbasis",
-      "Echtzeit-Analytik",
-      "Menschliche Übergabe",
-      "Automatisierte Antworten",
-      "Kontextuelles Verständnis"
-    ],
-    benefits: [
-      "24/7 Kundenbetreuung",
-      "Reduzierte Supportkosten",
-      "Schnellere Reaktionszeiten",
-      "Konsistente Erfahrung",
-      "Skalierbare Lösung",
-      "Wertvolle Einblicke",
-      "Verbesserte Zufriedenheit"
-    ],
-    integrations: [
-      "Website-Widget",
-      "Facebook Messenger",
-      "WhatsApp",
-      "Slack",
-      "Microsoft Teams",
-      "Benutzerdefinierte API"
-    ],
-    articleContent: {
-      mainTitle: "KI-Chatbot für Unternehmen – Automatisieren und Innovieren mit NeuroGen Lab",
-      subtitle: "Nutzen Sie die Kraft der Künstlichen Intelligenz",
-      introText: "Bei NeuroGen Lab bieten wir Ihnen einen fortschrittlichen KI-Chatbot, der entwickelt wurde, um:",
-      introList: [
-        "Kommunikation zu automatisieren",
-        "Kundeninteraktionen zu verbessern",
-        "Abläufe zu optimieren"
-      ],
-      howItWorksTitle: "Wie funktioniert unser KI-Chatbot?",
-      howItWorksText: "Unser Chatbot nutzt GPT-4 und modernste Konversations-KI-Technologie, um:",
-      howItWorksList: [
-        "Kontext zu verstehen",
-        "Anfragen in Echtzeit zu verarbeiten",
-        "Präzise, menschenähnliche Antworten zu generieren"
-      ],
-      keyFeaturesTitle: "Hauptfunktionen unseres KI-Chatbots",
-      features: {
-        realTime: {
-          title: "Echtzeit-Kommunikation",
-          description: "Erreichen Sie Benutzer sofort und lösen Sie Anfragen ohne Verzögerung."
-        },
-        multiLanguage: {
-          title: "Mehrsprachige Unterstützung",
-          description: "Kommunizieren Sie nahtlos mit einem globalen Publikum."
-        },
-        scalability: {
-          title: "Skalierbarkeit",
-          description: "Bewältigen Sie tausende gleichzeitiger Anfragen mit unübertroffener Präzision."
-        },
-        analytics: {
-          title: "Leistungsanalyse",
-          description: "Gewinnen Sie umsetzbare Erkenntnisse zur Optimierung Ihrer Kundenengagement-Strategie."
-        }
-      },
-      industriesTitle: "Branchen, die wir bedienen",
-      industriesText: "Unser vielseitiger KI-Chatbot passt sich jeder Branche an und ermöglicht Unternehmen Automatisierung und Wachstum:",
-      industries: [
-        {
-          icon: "🏪",
-          name: "Einzelhandel",
-          description: "Automatisieren Sie Verkaufsanfragen und verbessern Sie den Kundenservice."
-        },
-        {
-          icon: "🏥",
-          name: "Gesundheitswesen",
-          description: "Bieten Sie 24/7 virtuelle Unterstützung für Patienten und medizinisches Personal."
-        },
-        {
-          icon: "🎓",
-          name: "Bildung",
-          description: "Unterstützen Sie Studenten mit Kursinformationen und akademischer Beratung."
-        },
-        {
-          icon: "🛒",
-          name: "E-Commerce",
-          description: "Steigern Sie Konversionen durch sofortige Echtzeitunterstützung."
-        },
-        {
-          icon: "💼",
-          name: "Finanzen",
-          description: "Optimieren Sie FAQ und Kundeninteraktionen durch intelligente Automatisierung."
-        }
-      ],
-      conclusionTitle: "Beginnen Sie heute mit der Transformation Ihres Unternehmens 🚀",
-      conclusionText: "Erleben Sie die Zukunft der Kommunikation mit dem KI-Chatbot von NeuroGen Lab.",
-      conclusionList: [
-        "Optimieren Sie Ihre Arbeitsabläufe",
-        "Verbessern Sie die Kundenzufriedenheit",
-        "Reduzieren Sie Kosten"
-      ],
-      topReasonsTitle: "5 wichtige Gründe, warum Ihr Unternehmen einen KI-Chatbot benötigt",
-      reasonList: [
-        {
-          title: "1. 24/7 Automatisierter Kundenservice",
-          content: {
-            text: "Ein KI-Chatbot arbeitet rund um die Uhr und bietet sofortige Antworten auf Kundenanfragen. Dies hilft:",
-            list: [
-              "Die Kundenzufriedenheit durch schnelle Reaktionszeiten zu erhöhen",
-              "Wartezeiten für Antworten zu reduzieren",
-              "Wiederkehrende und häufige Anfragen ohne menschliches Eingreifen zu lösen"
-            ]
-          }
-        },
-        {
-          title: "2. Betriebskosten senken",
-          content: {
-            text: "Die Implementierung eines KI-Chatbots reduziert deutlich die Kosten für manuellen Support:",
-            list: [
-              "Automatisiert Routineaufgaben und entlastet Ihre Mitarbeiter",
-              "Reduziert die Arbeitsbelastung für Call-Center und Support-Teams",
-              "Senkt Kosten für Einstellung, Schulung und Wartung von Support-Personal"
-            ]
-          }
-        },
-        {
-          title: "3. Umsatz und Konversionen steigern",
-          content: {
-            text: "KI-Chatbots tun mehr als nur Fragen zu beantworten — sie treiben aktiv den Verkauf an:",
-            list: [
-              "Empfehlen Produkte basierend auf Kundenpräferenzen",
-              "Führen Benutzer durch den Verkaufstrichter zum Abschluss",
-              "Erfassen Leads und sammeln Kontaktinformationen für Ihr Vertriebsteam"
-            ]
-          }
-        },
-        {
-          title: "4. Sofortige Skalierbarkeit für hohe Volumen",
-          content: {
-            text: "Ein KI-Chatbot kann tausende von Anfragen gleichzeitig bearbeiten:",
-            list: [
-              "Verarbeitet Anfragen schnell, auch zu Stoßzeiten",
-              "Arbeitet effektiv für Unternehmen jeder Größe",
-              "Bewältigt Großveranstaltungen problemlos"
-            ]
-          }
-        },
-        {
-          title: "5. Verbesserte Kundenerfahrung",
-          content: {
-            text: "Verbessern Sie die allgemeine Kundenzufriedenheit durch personalisierte Interaktionen:",
-            list: [
-              "Bietet konsistente und präzise Antworten über alle Kanäle",
-              "Ermöglicht mehrsprachigen Support für globale Kundenbasis",
-              "Behält Gesprächskontext für natürlichere Interaktionen bei"
-            ]
-          }
-        }
-      ],
-      finalConclusion: {
-        title: "Fazit",
-        text: "Mit dem KI-Chatbot von NeuroGen Lab können Unternehmen Effizienz freisetzen, außergewöhnliche Kundenerlebnisse bieten und der Konkurrenz voraus sein. Starten Sie noch heute und transformieren Sie Ihr Unternehmen mit der Kraft KI-gesteuerter Automatisierung."
-      }
-    },
-    metaTitle: "KI-Chatbot | NeuroGen Lab - Intelligente Kundenservice-Lösung",
-    metaDescription: "Transformieren Sie Ihren Kundenservice mit unserem KI-gestützten Chatbot. Bieten Sie 24/7 Support und außergewöhnliche Kundenerlebnisse."
-  },
+//   de: {
+//     title: "KI-Chatbot",
+//     description: "Verbessern Sie Ihren Kundenservice mit unserer intelligenten Chatbot-Lösung, die rund um die Uhr Support und nahtlose Kundeninteraktionen bietet.",
+//     sectionTitles: {
+//       features: "Hauptfunktionen",
+//       benefits: "Vorteile",
+//       integrations: "Integrationen"
+//     },
+//     features: [
+//       "Verarbeitung natürlicher Sprache",
+//       "Mehrsprachige Unterstützung",
+//       "Anpassbare Wissensbasis",
+//       "Echtzeit-Analytik",
+//       "Menschliche Übergabe",
+//       "Automatisierte Antworten",
+//       "Kontextuelles Verständnis"
+//     ],
+//     benefits: [
+//       "24/7 Kundenbetreuung",
+//       "Reduzierte Supportkosten",
+//       "Schnellere Reaktionszeiten",
+//       "Konsistente Erfahrung",
+//       "Skalierbare Lösung",
+//       "Wertvolle Einblicke",
+//       "Verbesserte Zufriedenheit"
+//     ],
+//     integrations: [
+//       "Website-Widget",
+//       "Facebook Messenger",
+//       "WhatsApp",
+//       "Slack",
+//       "Microsoft Teams",
+//       "Benutzerdefinierte API"
+//     ],
+//     articleContent: {
+//       mainTitle: "KI-Chatbot für Unternehmen – Automatisieren und Innovieren mit NeuroGen Lab",
+//       subtitle: "Nutzen Sie die Kraft der Künstlichen Intelligenz",
+//       introText: "Bei NeuroGen Lab bieten wir Ihnen einen fortschrittlichen KI-Chatbot, der entwickelt wurde, um:",
+//       introList: [
+//         "Kommunikation zu automatisieren",
+//         "Kundeninteraktionen zu verbessern",
+//         "Abläufe zu optimieren"
+//       ],
+//       howItWorksTitle: "Wie funktioniert unser KI-Chatbot?",
+//       howItWorksText: "Unser Chatbot nutzt GPT-4 und modernste Konversations-KI-Technologie, um:",
+//       howItWorksList: [
+//         "Kontext zu verstehen",
+//         "Anfragen in Echtzeit zu verarbeiten",
+//         "Präzise, menschenähnliche Antworten zu generieren"
+//       ],
+//       keyFeaturesTitle: "Hauptfunktionen unseres KI-Chatbots",
+//       features: {
+//         realTime: {
+//           title: "Echtzeit-Kommunikation",
+//           description: "Erreichen Sie Benutzer sofort und lösen Sie Anfragen ohne Verzögerung."
+//         },
+//         multiLanguage: {
+//           title: "Mehrsprachige Unterstützung",
+//           description: "Kommunizieren Sie nahtlos mit einem globalen Publikum."
+//         },
+//         scalability: {
+//           title: "Skalierbarkeit",
+//           description: "Bewältigen Sie tausende gleichzeitiger Anfragen mit unübertroffener Präzision."
+//         },
+//         analytics: {
+//           title: "Leistungsanalyse",
+//           description: "Gewinnen Sie umsetzbare Erkenntnisse zur Optimierung Ihrer Kundenengagement-Strategie."
+//         }
+//       },
+//       industriesTitle: "Branchen, die wir bedienen",
+//       industriesText: "Unser vielseitiger KI-Chatbot passt sich jeder Branche an und ermöglicht Unternehmen Automatisierung und Wachstum:",
+//       industries: [
+//         {
+//           icon: "🏪",
+//           name: "Einzelhandel",
+//           description: "Automatisieren Sie Verkaufsanfragen und verbessern Sie den Kundenservice."
+//         },
+//         {
+//           icon: "🏥",
+//           name: "Gesundheitswesen",
+//           description: "Bieten Sie 24/7 virtuelle Unterstützung für Patienten und medizinisches Personal."
+//         },
+//         {
+//           icon: "🎓",
+//           name: "Bildung",
+//           description: "Unterstützen Sie Studenten mit Kursinformationen und akademischer Beratung."
+//         },
+//         {
+//           icon: "🛒",
+//           name: "E-Commerce",
+//           description: "Steigern Sie Konversionen durch sofortige Echtzeitunterstützung."
+//         },
+//         {
+//           icon: "💼",
+//           name: "Finanzen",
+//           description: "Optimieren Sie FAQ und Kundeninteraktionen durch intelligente Automatisierung."
+//         }
+//       ],
+//       conclusionTitle: "Beginnen Sie heute mit der Transformation Ihres Unternehmens 🚀",
+//       conclusionText: "Erleben Sie die Zukunft der Kommunikation mit dem KI-Chatbot von NeuroGen Lab.",
+//       conclusionList: [
+//         "Optimieren Sie Ihre Arbeitsabläufe",
+//         "Verbessern Sie die Kundenzufriedenheit",
+//         "Reduzieren Sie Kosten"
+//       ],
+//       topReasonsTitle: "5 wichtige Gründe, warum Ihr Unternehmen einen KI-Chatbot benötigt",
+//       reasonList: [
+//         {
+//           title: "1. 24/7 Automatisierter Kundenservice",
+//           content: {
+//             text: "Ein KI-Chatbot arbeitet rund um die Uhr und bietet sofortige Antworten auf Kundenanfragen. Dies hilft:",
+//             list: [
+//               "Die Kundenzufriedenheit durch schnelle Reaktionszeiten zu erhöhen",
+//               "Wartezeiten für Antworten zu reduzieren",
+//               "Wiederkehrende und häufige Anfragen ohne menschliches Eingreifen zu lösen"
+//             ]
+//           }
+//         },
+//         {
+//           title: "2. Betriebskosten senken",
+//           content: {
+//             text: "Die Implementierung eines KI-Chatbots reduziert deutlich die Kosten für manuellen Support:",
+//             list: [
+//               "Automatisiert Routineaufgaben und entlastet Ihre Mitarbeiter",
+//               "Reduziert die Arbeitsbelastung für Call-Center und Support-Teams",
+//               "Senkt Kosten für Einstellung, Schulung und Wartung von Support-Personal"
+//             ]
+//           }
+//         },
+//         {
+//           title: "3. Umsatz und Konversionen steigern",
+//           content: {
+//             text: "KI-Chatbots tun mehr als nur Fragen zu beantworten — sie treiben aktiv den Verkauf an:",
+//             list: [
+//               "Empfehlen Produkte basierend auf Kundenpräferenzen",
+//               "Führen Benutzer durch den Verkaufstrichter zum Abschluss",
+//               "Erfassen Leads und sammeln Kontaktinformationen für Ihr Vertriebsteam"
+//             ]
+//           }
+//         },
+//         {
+//           title: "4. Sofortige Skalierbarkeit für hohe Volumen",
+//           content: {
+//             text: "Ein KI-Chatbot kann tausende von Anfragen gleichzeitig bearbeiten:",
+//             list: [
+//               "Verarbeitet Anfragen schnell, auch zu Stoßzeiten",
+//               "Arbeitet effektiv für Unternehmen jeder Größe",
+//               "Bewältigt Großveranstaltungen problemlos"
+//             ]
+//           }
+//         },
+//         {
+//           title: "5. Verbesserte Kundenerfahrung",
+//           content: {
+//             text: "Verbessern Sie die allgemeine Kundenzufriedenheit durch personalisierte Interaktionen:",
+//             list: [
+//               "Bietet konsistente und präzise Antworten über alle Kanäle",
+//               "Ermöglicht mehrsprachigen Support für globale Kundenbasis",
+//               "Behält Gesprächskontext für natürlichere Interaktionen bei"
+//             ]
+//           }
+//         }
+//       ],
+//       finalConclusion: {
+//         title: "Fazit",
+//         text: "Mit dem KI-Chatbot von NeuroGen Lab können Unternehmen Effizienz freisetzen, außergewöhnliche Kundenerlebnisse bieten und der Konkurrenz voraus sein. Starten Sie noch heute und transformieren Sie Ihr Unternehmen mit der Kraft KI-gesteuerter Automatisierung."
+//       }
+//     },
+//     metaTitle: "KI-Chatbot | NeuroGen Lab - Intelligente Kundenservice-Lösung",
+//     metaDescription: "Transformieren Sie Ihren Kundenservice mit unserem KI-gestützten Chatbot. Bieten Sie 24/7 Support und außergewöhnliche Kundenerlebnisse."
+//   },
 
-  es: {
-    title: "Bot de Chat IA",
-    description: "Mejore su servicio al cliente con nuestra solución de chatbot inteligente que proporciona soporte 24/7 e interacciones fluidas con los clientes.",
-    sectionTitles: {
-      features: "Características Principales",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
-    },
-    features: [
-      "Procesamiento del Lenguaje Natural",
-      "Soporte Multilingüe",
-      "Base de Conocimientos Personalizada",
-      "Análisis en Tiempo Real",
-      "Transferencia a Humanos",
-      "Respuestas Automatizadas",
-      "Comprensión Contextual"
-    ],
-    benefits: [
-      "Soporte al Cliente 24/7",
-      "Costos de Soporte Reducidos",
-      "Tiempos de Respuesta Más Rápidos",
-      "Experiencia Consistente",
-      "Solución Escalable",
-      "Información Valiosa",
-      "Satisfacción Mejorada"
-    ],
-    integrations: [
-      "Widget para Sitio Web",
-      "Facebook Messenger",
-      "WhatsApp",
-      "Slack",
-      "Microsoft Teams",
-      "API Personalizada"
-    ],
-    articleContent: {
-      mainTitle: "Bot de Chat IA para Empresas – Automatice e Innove con NeuroGen Lab",
-      subtitle: "Desbloquee el Poder de la Inteligencia Artificial",
-      introText: "En NeuroGen Lab, le ofrecemos un Bot de Chat IA avanzado diseñado para:",
-      introList: [
-        "Automatizar la comunicación",
-        "Mejorar las interacciones con clientes",
-        "Optimizar operaciones"
-      ],
-      howItWorksTitle: "¿Cómo Funciona Nuestro Bot de Chat IA?",
-      howItWorksText: "Nuestro chatbot utiliza GPT-4 y tecnología de IA conversacional de vanguardia para:",
-      howItWorksList: [
-        "Comprender el contexto",
-        "Procesar solicitudes en tiempo real",
-        "Generar respuestas precisas y naturales"
-      ],
-      keyFeaturesTitle: "Características Principales de Nuestro Bot de Chat IA",
-      features: {
-        realTime: {
-          title: "Comunicación en Tiempo Real",
-          description: "Interactúe con usuarios al instante y resuelva consultas sin demora."
-        },
-        multiLanguage: {
-          title: "Soporte Multilingüe",
-          description: "Comuníquese con una audiencia global sin problemas."
-        },
-        scalability: {
-          title: "Escalabilidad",
-          description: "Maneje miles de consultas simultáneas con precisión incomparable."
-        },
-        analytics: {
-          title: "Análisis de Rendimiento",
-          description: "Obtenga información procesable para optimizar su estrategia de participación del cliente."
-        }
-      },
-      industriesTitle: "Industrias que Servimos",
-      industriesText: "Nuestro versátil Bot de Chat IA se adapta a cualquier industria, permitiendo a las empresas automatizar y crecer:",
-      industries: [
-        {
-          icon: "🏪",
-          name: "Comercio Minorista",
-          description: "Automatice consultas de ventas y mejore el servicio al cliente."
-        },
-        {
-          icon: "🏥",
-          name: "Salud",
-          description: "Proporcione asistencia virtual 24/7 para pacientes y personal médico."
-        },
-        {
-          icon: "🎓",
-          name: "Educación",
-          description: "Apoye a los estudiantes con información de cursos y orientación académica."
-        },
-        {
-          icon: "🛒",
-          name: "Comercio Electrónico",
-          description: "Aumente las conversiones con soporte instantáneo en tiempo real."
-        },
-        {
-          icon: "💼",
-          name: "Finanzas",
-          description: "Optimice las FAQ e interacciones con clientes mediante automatización inteligente."
-        }
-      ],
-      conclusionTitle: "Comience a Transformar su Negocio Hoy 🚀",
-      conclusionText: "Experimente el futuro de la comunicación con el Bot de Chat IA de NeuroGen Lab.",
-      conclusionList: [
-        "Optimice sus flujos de trabajo",
-        "Mejore la satisfacción del cliente",
-        "Reduzca costos"
-      ],
-      topReasonsTitle: "5 Razones Principales por las que su Negocio Necesita un Bot de Chat IA",
-      reasonList: [
-        {
-          title: "1. Soporte al Cliente Automatizado 24/7",
-          content: {
-            text: "Un Bot de Chat IA trabaja las 24 horas, proporcionando respuestas instantáneas a las consultas de los clientes. Esto ayuda a:",
-            list: [
-              "Aumentar la satisfacción del cliente con tiempos de respuesta rápidos",
-              "Reducir los tiempos de espera para obtener respuestas",
-              "Resolver consultas repetitivas y comunes sin intervención humana"
-            ]
-          }
-        },
-        {
-          title: "2. Reducir Costos Operativos",
-          content: {
-            text: "La implementación de un Bot de Chat IA reduce significativamente los gastos relacionados con el soporte manual:",
-            list: [
-              "Automatiza tareas rutinarias, liberando el tiempo de sus empleados",
-              "Reduce la carga de trabajo para centros de llamadas y equipos de soporte",
-              "Reduce costos en contratación, capacitación y mantenimiento de personal de soporte"
-            ]
-          }
-        },
-        {
-          title: "3. Aumentar Ventas y Conversiones",
-          content: {
-            text: "Los Bots de Chat IA hacen más que responder preguntas — impulsan activamente las ventas:",
-            list: [
-              "Recomiendan productos basados en las preferencias del cliente",
-              "Guían a los usuarios a través del embudo de ventas hasta finalizar las compras",
-              "Capturan leads y recopilan información de contacto para su equipo de ventas"
-            ]
-          }
-        },
-        {
-          title: "4. Escalabilidad Instantánea para Altos Volúmenes",
-          content: {
-            text: "Un Bot de Chat IA puede manejar miles de consultas simultáneamente:",
-            list: [
-              "Procesa solicitudes rápidamente, incluso en horas pico",
-              "Funciona eficazmente para empresas de todos los tamaños",
-              "Maneja eventos a gran escala sin problemas"
-            ]
-          }
-        },
-        {
-          title: "5. Experiencia del Cliente Mejorada",
-          content: {
-            text: "Mejore la satisfacción general del cliente con interacciones personalizadas:",
-            list: [
-              "Proporciona respuestas consistentes y precisas en todos los canales",
-              "Ofrece soporte multilingüe para base de clientes global",
-              "Mantiene el contexto de la conversación para interacciones más naturales"
-            ]
-          }
-        }
-      ],
-      finalConclusion: {
-        title: "Conclusión",
-        text: "Al utilizar el Bot de Chat IA de NeuroGen Lab, las empresas pueden desbloquear la eficiencia, proporcionar experiencias excepcionales al cliente y mantenerse adelante de la competencia. Comience hoy y transforme su negocio con el poder de la automatización impulsada por IA."
-      }
-    },
-    metaTitle: "Bot de Chat IA | NeuroGen Lab - Solución Inteligente de Servicio al Cliente",
-    metaDescription: "Transforme su servicio al cliente con nuestro chatbot impulsado por IA. Proporcione soporte 24/7 y brinde experiencias excepcionales al cliente."
-  },
-  // ... предыдущие переводы (en, de, es) остаются без изменений ...
+//   es: {
+//     title: "Bot de Chat IA",
+//     description: "Mejore su servicio al cliente con nuestra solución de chatbot inteligente que proporciona soporte 24/7 e interacciones fluidas con los clientes.",
+//     sectionTitles: {
+//       features: "Características Principales",
+//       benefits: "Beneficios",
+//       integrations: "Integraciones"
+//     },
+//     features: [
+//       "Procesamiento del Lenguaje Natural",
+//       "Soporte Multilingüe",
+//       "Base de Conocimientos Personalizada",
+//       "Análisis en Tiempo Real",
+//       "Transferencia a Humanos",
+//       "Respuestas Automatizadas",
+//       "Comprensión Contextual"
+//     ],
+//     benefits: [
+//       "Soporte al Cliente 24/7",
+//       "Costos de Soporte Reducidos",
+//       "Tiempos de Respuesta Más Rápidos",
+//       "Experiencia Consistente",
+//       "Solución Escalable",
+//       "Información Valiosa",
+//       "Satisfacción Mejorada"
+//     ],
+//     integrations: [
+//       "Widget para Sitio Web",
+//       "Facebook Messenger",
+//       "WhatsApp",
+//       "Slack",
+//       "Microsoft Teams",
+//       "API Personalizada"
+//     ],
+//     articleContent: {
+//       mainTitle: "Bot de Chat IA para Empresas – Automatice e Innove con NeuroGen Lab",
+//       subtitle: "Desbloquee el Poder de la Inteligencia Artificial",
+//       introText: "En NeuroGen Lab, le ofrecemos un Bot de Chat IA avanzado diseñado para:",
+//       introList: [
+//         "Automatizar la comunicación",
+//         "Mejorar las interacciones con clientes",
+//         "Optimizar operaciones"
+//       ],
+//       howItWorksTitle: "¿Cómo Funciona Nuestro Bot de Chat IA?",
+//       howItWorksText: "Nuestro chatbot utiliza GPT-4 y tecnología de IA conversacional de vanguardia para:",
+//       howItWorksList: [
+//         "Comprender el contexto",
+//         "Procesar solicitudes en tiempo real",
+//         "Generar respuestas precisas y naturales"
+//       ],
+//       keyFeaturesTitle: "Características Principales de Nuestro Bot de Chat IA",
+//       features: {
+//         realTime: {
+//           title: "Comunicación en Tiempo Real",
+//           description: "Interactúe con usuarios al instante y resuelva consultas sin demora."
+//         },
+//         multiLanguage: {
+//           title: "Soporte Multilingüe",
+//           description: "Comuníquese con una audiencia global sin problemas."
+//         },
+//         scalability: {
+//           title: "Escalabilidad",
+//           description: "Maneje miles de consultas simultáneas con precisión incomparable."
+//         },
+//         analytics: {
+//           title: "Análisis de Rendimiento",
+//           description: "Obtenga información procesable para optimizar su estrategia de participación del cliente."
+//         }
+//       },
+//       industriesTitle: "Industrias que Servimos",
+//       industriesText: "Nuestro versátil Bot de Chat IA se adapta a cualquier industria, permitiendo a las empresas automatizar y crecer:",
+//       industries: [
+//         {
+//           icon: "🏪",
+//           name: "Comercio Minorista",
+//           description: "Automatice consultas de ventas y mejore el servicio al cliente."
+//         },
+//         {
+//           icon: "🏥",
+//           name: "Salud",
+//           description: "Proporcione asistencia virtual 24/7 para pacientes y personal médico."
+//         },
+//         {
+//           icon: "🎓",
+//           name: "Educación",
+//           description: "Apoye a los estudiantes con información de cursos y orientación académica."
+//         },
+//         {
+//           icon: "🛒",
+//           name: "Comercio Electrónico",
+//           description: "Aumente las conversiones con soporte instantáneo en tiempo real."
+//         },
+//         {
+//           icon: "💼",
+//           name: "Finanzas",
+//           description: "Optimice las FAQ e interacciones con clientes mediante automatización inteligente."
+//         }
+//       ],
+//       conclusionTitle: "Comience a Transformar su Negocio Hoy 🚀",
+//       conclusionText: "Experimente el futuro de la comunicación con el Bot de Chat IA de NeuroGen Lab.",
+//       conclusionList: [
+//         "Optimice sus flujos de trabajo",
+//         "Mejore la satisfacción del cliente",
+//         "Reduzca costos"
+//       ],
+//       topReasonsTitle: "5 Razones Principales por las que su Negocio Necesita un Bot de Chat IA",
+//       reasonList: [
+//         {
+//           title: "1. Soporte al Cliente Automatizado 24/7",
+//           content: {
+//             text: "Un Bot de Chat IA trabaja las 24 horas, proporcionando respuestas instantáneas a las consultas de los clientes. Esto ayuda a:",
+//             list: [
+//               "Aumentar la satisfacción del cliente con tiempos de respuesta rápidos",
+//               "Reducir los tiempos de espera para obtener respuestas",
+//               "Resolver consultas repetitivas y comunes sin intervención humana"
+//             ]
+//           }
+//         },
+//         {
+//           title: "2. Reducir Costos Operativos",
+//           content: {
+//             text: "La implementación de un Bot de Chat IA reduce significativamente los gastos relacionados con el soporte manual:",
+//             list: [
+//               "Automatiza tareas rutinarias, liberando el tiempo de sus empleados",
+//               "Reduce la carga de trabajo para centros de llamadas y equipos de soporte",
+//               "Reduce costos en contratación, capacitación y mantenimiento de personal de soporte"
+//             ]
+//           }
+//         },
+//         {
+//           title: "3. Aumentar Ventas y Conversiones",
+//           content: {
+//             text: "Los Bots de Chat IA hacen más que responder preguntas — impulsan activamente las ventas:",
+//             list: [
+//               "Recomiendan productos basados en las preferencias del cliente",
+//               "Guían a los usuarios a través del embudo de ventas hasta finalizar las compras",
+//               "Capturan leads y recopilan información de contacto para su equipo de ventas"
+//             ]
+//           }
+//         },
+//         {
+//           title: "4. Escalabilidad Instantánea para Altos Volúmenes",
+//           content: {
+//             text: "Un Bot de Chat IA puede manejar miles de consultas simultáneamente:",
+//             list: [
+//               "Procesa solicitudes rápidamente, incluso en horas pico",
+//               "Funciona eficazmente para empresas de todos los tamaños",
+//               "Maneja eventos a gran escala sin problemas"
+//             ]
+//           }
+//         },
+//         {
+//           title: "5. Experiencia del Cliente Mejorada",
+//           content: {
+//             text: "Mejore la satisfacción general del cliente con interacciones personalizadas:",
+//             list: [
+//               "Proporciona respuestas consistentes y precisas en todos los canales",
+//               "Ofrece soporte multilingüe para base de clientes global",
+//               "Mantiene el contexto de la conversación para interacciones más naturales"
+//             ]
+//           }
+//         }
+//       ],
+//       finalConclusion: {
+//         title: "Conclusión",
+//         text: "Al utilizar el Bot de Chat IA de NeuroGen Lab, las empresas pueden desbloquear la eficiencia, proporcionar experiencias excepcionales al cliente y mantenerse adelante de la competencia. Comience hoy y transforme su negocio con el poder de la automatización impulsada por IA."
+//       }
+//     },
+//     metaTitle: "Bot de Chat IA | NeuroGen Lab - Solución Inteligente de Servicio al Cliente",
+//     metaDescription: "Transforme su servicio al cliente con nuestro chatbot impulsado por IA. Proporcione soporte 24/7 y brinde experiencias excepcionales al cliente."
+//   },
+//   // ... предыдущие переводы (en, de, es) остаются без изменений ...
 
-  ru: {
-    title: "ИИ Чат-бот",
-    description: "Улучшите ваш клиентский сервис с помощью нашего интеллектуального чат-бота, обеспечивающего круглосуточную поддержку и безупречное взаимодействие с клиентами.",
-    sectionTitles: {
-      features: "Ключевые возможности",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
-    },
-    features: [
-      "Обработка естественного языка",
-      "Многоязычная поддержка",
-      "Настраиваемая база знаний",
-      "Аналитика в реальном времени",
-      "Передача живому оператору",
-      "Автоматические ответы",
-      "Контекстное понимание"
-    ],
-    benefits: [
-      "Круглосуточная поддержка",
-      "Снижение затрат на поддержку",
-      "Быстрое время отклика",
-      "Стабильное качество обслуживания",
-      "Масштабируемое решение",
-      "Ценные аналитические данные",
-      "Повышение удовлетворенности"
-    ],
-    integrations: [
-      "Виджет для сайта",
-      "Facebook Messenger",
-      "WhatsApp",
-      "Slack",
-      "Microsoft Teams",
-      "Пользовательский API"
-    ],
-    articleContent: {
-      mainTitle: "ИИ Чат-бот для бизнеса – Автоматизация и инновации с NeuroGen Lab",
-      subtitle: "Раскройте потенциал искусственного интеллекта",
-      introText: "В NeuroGen Lab мы предлагаем вам продвинутый ИИ чат-бот, разработанный для:",
-      introList: [
-        "Автоматизации коммуникации",
-        "Улучшения взаимодействия с клиентами",
-        "Оптимизации операций"
-      ],
-      howItWorksTitle: "Как работает наш ИИ чат-бот?",
-      howItWorksText: "Наш чат-бот использует GPT-4 и передовые технологии разговорного ИИ для:",
-      howItWorksList: [
-        "Понимания контекста",
-        "Обработки запросов в реальном времени",
-        "Генерации точных, человекоподобных ответов"
-      ],
-      keyFeaturesTitle: "Ключевые функции нашего ИИ чат-бота",
-      features: {
-        realTime: {
-          title: "Общение в реальном времени",
-          description: "Мгновенное взаимодействие с пользователями и решение запросов без задержек."
-        },
-        multiLanguage: {
-          title: "Многоязычная поддержка",
-          description: "Беспрепятственное общение с глобальной аудиторией."
-        },
-        scalability: {
-          title: "Масштабируемость",
-          description: "Обработка тысяч одновременных запросов с непревзойденной точностью."
-        },
-        analytics: {
-          title: "Анализ производительности",
-          description: "Получение действенных инсайтов для оптимизации стратегии взаимодействия с клиентами."
-        }
-      },
-      industriesTitle: "Отрасли, которые мы обслуживаем",
-      industriesText: "Наш универсальный ИИ чат-бот адаптируется к любой отрасли, позволяя бизнесу автоматизировать процессы и расти:",
-      industries: [
-        {
-          icon: "🏪",
-          name: "Розничная торговля",
-          description: "Автоматизация запросов по продажам и улучшение обслуживания клиентов."
-        },
-        {
-          icon: "🏥",
-          name: "Здравоохранение",
-          description: "Круглосуточная виртуальная поддержка пациентов и медицинского персонала."
-        },
-        {
-          icon: "🎓",
-          name: "Образование",
-          description: "Поддержка студентов информацией о курсах и академическое руководство."
-        },
-        {
-          icon: "🛒",
-          name: "Электронная коммерция",
-          description: "Увеличение конверсий с помощью мгновенной поддержки в реальном времени."
-        },
-        {
-          icon: "💼",
-          name: "Финансы",
-          description: "Оптимизация FAQ и взаимодействия с клиентами через интеллектуальную автоматизацию."
-        }
-      ],
-      conclusionTitle: "Начните трансформацию вашего бизнеса сегодня 🚀",
-      conclusionText: "Испытайте будущее коммуникации с ИИ чат-ботом от NeuroGen Lab.",
-      conclusionList: [
-        "Оптимизируйте рабочие процессы",
-        "Повысьте удовлетворенность клиентов",
-        "Сократите расходы"
-      ],
-      topReasonsTitle: "5 главных причин, почему вашему бизнесу нужен ИИ чат-бот",
-      reasonList: [
-        {
-          title: "1. Автоматизированная поддержка клиентов 24/7",
-          content: {
-            text: "ИИ чат-бот работает круглосуточно, предоставляя мгновенные ответы на запросы клиентов. Это помогает:",
-            list: [
-              "Повысить удовлетворенность клиентов быстрыми ответами",
-              "Сократить время ожидания ответов",
-              "Решать повторяющиеся и общие запросы без участия человека"
-            ]
-          }
-        },
-        {
-          title: "2. Снижение операционных расходов",
-          content: {
-            text: "Внедрение ИИ чат-бота значительно снижает расходы на ручную поддержку:",
-            list: [
-              "Автоматизирует рутинные задачи, освобождая время сотрудников",
-              "Снижает нагрузку на колл-центры и команды поддержки",
-              "Сокращает затраты на найм, обучение и содержание персонала поддержки"
-            ]
-          }
-        },
-        {
-          title: "3. Увеличение продаж и конверсий",
-          content: {
-            text: "ИИ чат-боты делают больше, чем просто отвечают на вопросы — они активно способствуют продажам:",
-            list: [
-              "Рекомендуют продукты на основе предпочтений клиентов",
-              "Проводят пользователей через воронку продаж до завершения покупки",
-              "Собирают лиды и контактную информацию для вашей команды продаж"
-            ]
-          }
-        },
-        {
-          title: "4. Мгновенная масштабируемость для больших объемов",
-          content: {
-            text: "ИИ чат-бот может обрабатывать тысячи запросов одновременно:",
-            list: [
-              "Быстро обрабатывает запросы даже в часы пик",
-              "Эффективно работает для бизнеса любого размера",
-              "Легко справляется с масштабными мероприятиями"
-            ]
-          }
-        },
-        {
-          title: "5. Улучшенный клиентский опыт",
-          content: {
-            text: "Повысьте общую удовлетворенность клиентов с помощью персонализированного взаимодействия:",
-            list: [
-              "Обеспечивает последовательные и точные ответы по всем каналам",
-              "Предлагает многоязычную поддержку для глобальной клиентской базы",
-              "Сохраняет контекст разговора для более естественного общения"
-            ]
-          }
-        }
-      ],
-      finalConclusion: {
-        title: "Заключение",
-        text: "Используя ИИ чат-бот от NeuroGen Lab, бизнес может раскрыть эффективность, обеспечить исключительный клиентский опыт и оставаться впереди конкурентов. Начните сегодня и трансформируйте ваш бизнес с помощью автоматизации на базе ИИ."
-      }
-    },
-    metaTitle: "ИИ Чат-бот | NeuroGen Lab - Интеллектуальное решение для клиентского сервиса",
-    metaDescription: "Трансформируйте ваш клиентский сервис с помощью нашего чат-бота на базе ИИ. Обеспечьте круглосуточную поддержку и исключительный клиентский опыт."
-  },
-  // ... предыдущие переводы (en, de, es, ru) остаются без изменений ...
+//   ru: {
+//     title: "ИИ Чат-бот",
+//     description: "Улучшите ваш клиентский сервис с помощью нашего интеллектуального чат-бота, обеспечивающего круглосуточную поддержку и безупречное взаимодействие с клиентами.",
+//     sectionTitles: {
+//       features: "Ключевые возможности",
+//       benefits: "Преимущества",
+//       integrations: "Интеграции"
+//     },
+//     features: [
+//       "Обработка естественного языка",
+//       "Многоязычная поддержка",
+//       "Настраиваемая база знаний",
+//       "Аналитика в реальном времени",
+//       "Передача живому оператору",
+//       "Автоматические ответы",
+//       "Контекстное понимание"
+//     ],
+//     benefits: [
+//       "Круглосуточная поддержка",
+//       "Снижение затрат на поддержку",
+//       "Быстрое время отклика",
+//       "Стабильное качество обслуживания",
+//       "Масштабируемое решение",
+//       "Ценные аналитические данные",
+//       "Повышение удовлетворенности"
+//     ],
+//     integrations: [
+//       "Виджет для сайта",
+//       "Facebook Messenger",
+//       "WhatsApp",
+//       "Slack",
+//       "Microsoft Teams",
+//       "Пользовательский API"
+//     ],
+//     articleContent: {
+//       mainTitle: "ИИ Чат-бот для бизнеса – Автоматизация и инновации с NeuroGen Lab",
+//       subtitle: "Раскройте потенциал искусственного интеллекта",
+//       introText: "В NeuroGen Lab мы предлагаем вам продвинутый ИИ чат-бот, разработанный для:",
+//       introList: [
+//         "Автоматизации коммуникации",
+//         "Улучшения взаимодействия с клиентами",
+//         "Оптимизации операций"
+//       ],
+//       howItWorksTitle: "Как работает наш ИИ чат-бот?",
+//       howItWorksText: "Наш чат-бот использует GPT-4 и передовые технологии разговорного ИИ для:",
+//       howItWorksList: [
+//         "Понимания контекста",
+//         "Обработки запросов в реальном времени",
+//         "Генерации точных, человекоподобных ответов"
+//       ],
+//       keyFeaturesTitle: "Ключевые функции нашего ИИ чат-бота",
+//       features: {
+//         realTime: {
+//           title: "Общение в реальном времени",
+//           description: "Мгновенное взаимодействие с пользователями и решение запросов без задержек."
+//         },
+//         multiLanguage: {
+//           title: "Многоязычная поддержка",
+//           description: "Беспрепятственное общение с глобальной аудиторией."
+//         },
+//         scalability: {
+//           title: "Масштабируемость",
+//           description: "Обработка тысяч одновременных запросов с непревзойденной точностью."
+//         },
+//         analytics: {
+//           title: "Анализ производительности",
+//           description: "Получение действенных инсайтов для оптимизации стратегии взаимодействия с клиентами."
+//         }
+//       },
+//       industriesTitle: "Отрасли, которые мы обслуживаем",
+//       industriesText: "Наш универсальный ИИ чат-бот адаптируется к любой отрасли, позволяя бизнесу автоматизировать процессы и расти:",
+//       industries: [
+//         {
+//           icon: "🏪",
+//           name: "Розничная торговля",
+//           description: "Автоматизация запросов по продажам и улучшение обслуживания клиентов."
+//         },
+//         {
+//           icon: "🏥",
+//           name: "Здравоохранение",
+//           description: "Круглосуточная виртуальная поддержка пациентов и медицинского персонала."
+//         },
+//         {
+//           icon: "🎓",
+//           name: "Образование",
+//           description: "Поддержка студентов информацией о курсах и академическое руководство."
+//         },
+//         {
+//           icon: "🛒",
+//           name: "Электронная коммерция",
+//           description: "Увеличение конверсий с помощью мгновенной поддержки в реальном времени."
+//         },
+//         {
+//           icon: "💼",
+//           name: "Финансы",
+//           description: "Оптимизация FAQ и взаимодействия с клиентами через интеллектуальную автоматизацию."
+//         }
+//       ],
+//       conclusionTitle: "Начните трансформацию вашего бизнеса сегодня 🚀",
+//       conclusionText: "Испытайте будущее коммуникации с ИИ чат-ботом от NeuroGen Lab.",
+//       conclusionList: [
+//         "Оптимизируйте рабочие процессы",
+//         "Повысьте удовлетворенность клиентов",
+//         "Сократите расходы"
+//       ],
+//       topReasonsTitle: "5 главных причин, почему вашему бизнесу нужен ИИ чат-бот",
+//       reasonList: [
+//         {
+//           title: "1. Автоматизированная поддержка клиентов 24/7",
+//           content: {
+//             text: "ИИ чат-бот работает круглосуточно, предоставляя мгновенные ответы на запросы клиентов. Это помогает:",
+//             list: [
+//               "Повысить удовлетворенность клиентов быстрыми ответами",
+//               "Сократить время ожидания ответов",
+//               "Решать повторяющиеся и общие запросы без участия человека"
+//             ]
+//           }
+//         },
+//         {
+//           title: "2. Снижение операционных расходов",
+//           content: {
+//             text: "Внедрение ИИ чат-бота значительно снижает расходы на ручную поддержку:",
+//             list: [
+//               "Автоматизирует рутинные задачи, освобождая время сотрудников",
+//               "Снижает нагрузку на колл-центры и команды поддержки",
+//               "Сокращает затраты на найм, обучение и содержание персонала поддержки"
+//             ]
+//           }
+//         },
+//         {
+//           title: "3. Увеличение продаж и конверсий",
+//           content: {
+//             text: "ИИ чат-боты делают больше, чем просто отвечают на вопросы — они активно способствуют продажам:",
+//             list: [
+//               "Рекомендуют продукты на основе предпочтений клиентов",
+//               "Проводят пользователей через воронку продаж до завершения покупки",
+//               "Собирают лиды и контактную информацию для вашей команды продаж"
+//             ]
+//           }
+//         },
+//         {
+//           title: "4. Мгновенная масштабируемость для больших объемов",
+//           content: {
+//             text: "ИИ чат-бот может обрабатывать тысячи запросов одновременно:",
+//             list: [
+//               "Быстро обрабатывает запросы даже в часы пик",
+//               "Эффективно работает для бизнеса любого размера",
+//               "Легко справляется с масштабными мероприятиями"
+//             ]
+//           }
+//         },
+//         {
+//           title: "5. Улучшенный клиентский опыт",
+//           content: {
+//             text: "Повысьте общую удовлетворенность клиентов с помощью персонализированного взаимодействия:",
+//             list: [
+//               "Обеспечивает последовательные и точные ответы по всем каналам",
+//               "Предлагает многоязычную поддержку для глобальной клиентской базы",
+//               "Сохраняет контекст разговора для более естественного общения"
+//             ]
+//           }
+//         }
+//       ],
+//       finalConclusion: {
+//         title: "Заключение",
+//         text: "Используя ИИ чат-бот от NeuroGen Lab, бизнес может раскрыть эффективность, обеспечить исключительный клиентский опыт и оставаться впереди конкурентов. Начните сегодня и трансформируйте ваш бизнес с помощью автоматизации на базе ИИ."
+//       }
+//     },
+//     metaTitle: "ИИ Чат-бот | NeuroGen Lab - Интеллектуальное решение для клиентского сервиса",
+//     metaDescription: "Трансформируйте ваш клиентский сервис с помощью нашего чат-бота на базе ИИ. Обеспечьте круглосуточную поддержку и исключительный клиентский опыт."
+//   },
+//   // ... предыдущие переводы (en, de, es, ru) остаются без изменений ...
 
-  ua: {
-    title: "ШІ Чат-бот",
-    description: "Покращіть ваш клієнтський сервіс за допомогою нашого інтелектуального чат-бота, що забезпечує цілодобову підтримку та бездоганну взаємодію з клієнтами.",
-    sectionTitles: {
-      features: "Ключові можливості",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
-    },
-    features: [
-      "Обробка природної мови",
-      "Багатомовна підтримка",
-      "Налаштовувана база знань",
-      "Аналітика в реальному часі",
-      "Передача живому оператору",
-      "Автоматичні відповіді",
-      "Контекстне розуміння"
-    ],
-    benefits: [
-      "Цілодобова підтримка",
-      "Зниження витрат на підтримку",
-      "Швидкий час відгуку",
-      "Стабільна якість обслуговування",
-      "Масштабоване рішення",
-      "Цінні аналітичні дані",
-      "Підвищення задоволеності"
-    ],
-    integrations: [
-      "Віджет для сайту",
-      "Facebook Messenger",
-      "WhatsApp",
-      "Slack",
-      "Microsoft Teams",
-      "Користувацький API"
-    ],
-    articleContent: {
-      mainTitle: "ШІ Чат-бот для бізнесу – Автоматизація та інновації з NeuroGen Lab",
-      subtitle: "Розкрийте потенціал штучного інтелекту",
-      introText: "У NeuroGen Lab ми пропонуємо вам передовий ШІ чат-бот, розроблений для:",
-      introList: [
-        "Автоматизації комунікації",
-        "Покращення взаємодії з клієнтами",
-        "Оптимізації операцій"
-      ],
-      howItWorksTitle: "Як працює наш ШІ чат-бот?",
-      howItWorksText: "Наш чат-бот використовує GPT-4 та передові технології розмовного ШІ для:",
-      howItWorksList: [
-        "Розуміння контексту",
-        "Обробки запитів у реальному часі",
-        "Генерації точних, людиноподібних відповідей"
-      ],
-      keyFeaturesTitle: "Ключові функції нашого ШІ чат-бота",
-      features: {
-        realTime: {
-          title: "Спілкування в реальному часі",
-          description: "Миттєва взаємодія з користувачами та вирішення запитів без затримок."
-        },
-        multiLanguage: {
-          title: "Багатомовна підтримка",
-          description: "Безперешкодне спілкування з глобальною аудиторією."
-        },
-        scalability: {
-          title: "Масштабованість",
-          description: "Обробка тисяч одночасних запитів з неперевершеною точністю."
-        },
-        analytics: {
-          title: "Аналіз продуктивності",
-          description: "Отримання дієвих інсайтів для оптимізації стратегії взаємодії з клієнтами."
-        }
-      },
-      industriesTitle: "Галузі, які ми обслуговуємо",
-      industriesText: "Наш універсальний ШІ чат-бот адаптується до будь-якої галузі, дозволяючи бізнесу автоматизувати процеси та зростати:",
-      industries: [
-        {
-          icon: "🏪",
-          name: "Роздрібна торгівля",
-          description: "Автоматизація запитів з продажу та покращення обслуговування клієнтів."
-        },
-        {
-          icon: "🏥",
-          name: "Охорона здоров'я",
-          description: "Цілодобова віртуальна підтримка пацієнтів та медичного персоналу."
-        },
-        {
-          icon: "🎓",
-          name: "Освіта",
-          description: "Підтримка студентів інформацією про курси та академічне керівництво."
-        },
-        {
-          icon: "🛒",
-          name: "Електронна комерція",
-          description: "Збільшення конверсій за допомогою миттєвої підтримки в реальному часі."
-        },
-        {
-          icon: "💼",
-          name: "Фінанси",
-          description: "Оптимізація FAQ та взаємодії з клієнтами через інтелектуальну автоматизацію."
-        }
-      ],
-      conclusionTitle: "Почніть трансформувати свій бізнес сьогодні 🚀",
-      conclusionText: "Відчуйте майбутнє комунікації з ШІ чат-ботом від NeuroGen Lab.",
-      conclusionList: [
-        "Оптимізуйте робочі процеси",
-        "Покращіть задоволеність клієнтів",
-        "Зменшіть витрати"
-      ],
-      topReasonsTitle: "5 головних причин, чому вашому бізнесу потрібен ШІ чат-бот",
-      reasonList: [
-        {
-          title: "1. Автоматизована підтримка клієнтів 24/7",
-          content: {
-            text: "ШІ чат-бот працює цілодобово, надаючи миттєві відповіді на запити клієнтів. Це допомагає:",
-            list: [
-              "Підвищити задоволеність клієнтів швидкими відповідями",
-              "Зменшити час очікування відповідей",
-              "Вирішувати повторювані та поширені запити без втручання людини"
-            ]
-          }
-        },
-        {
-          title: "2. Зниження операційних витрат",
-          content: {
-            text: "Впровадження ШІ чат-бота значно знижує витрати на ручну підтримку:",
-            list: [
-              "Автоматизує рутинні завдання, звільняючи час співробітників",
-              "Знижує навантаження на колл-центри та команди підтримки",
-              "Скорочує витрати на найм, навчання та утримання персоналу підтримки"
-            ]
-          }
-        },
-        {
-          title: "3. Збільшення продажів та конверсій",
-          content: {
-            text: "ШІ чат-боти роблять більше, ніж просто відповідають на питання — вони активно сприяють продажам:",
-            list: [
-              "Рекомендують продукти на основі вподобань клієнтів",
-              "Проводять користувачів через воронку продажів до завершення покупки",
-              "Збирають ліди та контактну інформацію для вашої команди продажів"
-            ]
-          }
-        },
-        {
-          title: "4. Миттєва масштабованість для великих обсягів",
-          content: {
-            text: "ШІ чат-бот може обробляти тисячі запитів одночасно:",
-            list: [
-              "Швидко обробляє запити навіть у години пік",
-              "Ефективно працює для бізнесу будь-якого розміру",
-              "Легко справляється з масштабними заходами"
-            ]
-          }
-        },
-        {
-          title: "5. Покращений клієнтський досвід",
-          content: {
-            text: "Підвищіть загальну задоволеність клієнтів за допомогою персоналізованої взаємодії:",
-            list: [
-              "Забезпечує послідовні та точні відповіді по всіх каналах",
-              "Пропонує багатомовну підтримку для глобальної клієнтської бази",
-              "Зберігає контекст розмови для більш природного спілкування"
-            ]
-          }
-        }
-      ],
-      finalConclusion: {
-        title: "Висновок",
-        text: "Використовуючи ШІ чат-бот від NeuroGen Lab, бізнес може розкрити ефективність, забезпечити винятковий клієнтський досвід та залишатися попереду конкурентів. Почніть сьогодні та трансформуйте ваш бізнес за допомогою автоматизації на базі ШІ."
-      }
-    },
-    metaTitle: "ШІ Чат-бот | NeuroGen Lab - Інтелектуальне рішення для клієнтського сервісу",
-    metaDescription: "Трансформуйте ваш клієнтський сервіс за допомогою нашого чат-бота на базі ШІ. Забезпечте цілодобову підтримку та винятковий клієнтський досвід."
-  }
-} as const;
+//   ua: {
+//     title: "ШІ Чат-бот",
+//     description: "Покращіть ваш клієнтський сервіс за допомогою нашого інтелектуального чат-бота, що забезпечує цілодобову підтримку та бездоганну взаємодію з клієнтами.",
+//     sectionTitles: {
+//       features: "Ключові можливості",
+//       benefits: "Переваги",
+//       integrations: "Інтеграції"
+//     },
+//     features: [
+//       "Обробка природної мови",
+//       "Багатомовна підтримка",
+//       "Налаштовувана база знань",
+//       "Аналітика в реальному часі",
+//       "Передача живому оператору",
+//       "Автоматичні відповіді",
+//       "Контекстне розуміння"
+//     ],
+//     benefits: [
+//       "Цілодобова підтримка",
+//       "Зниження витрат на підтримку",
+//       "Швидкий час відгуку",
+//       "Стабільна якість обслуговування",
+//       "Масштабоване рішення",
+//       "Цінні аналітичні дані",
+//       "Підвищення задоволеності"
+//     ],
+//     integrations: [
+//       "Віджет для сайту",
+//       "Facebook Messenger",
+//       "WhatsApp",
+//       "Slack",
+//       "Microsoft Teams",
+//       "Користувацький API"
+//     ],
+//     articleContent: {
+//       mainTitle: "ШІ Чат-бот для бізнесу – Автоматизація та інновації з NeuroGen Lab",
+//       subtitle: "Розкрийте потенціал штучного інтелекту",
+//       introText: "У NeuroGen Lab ми пропонуємо вам передовий ШІ чат-бот, розроблений для:",
+//       introList: [
+//         "Автоматизації комунікації",
+//         "Покращення взаємодії з клієнтами",
+//         "Оптимізації операцій"
+//       ],
+//       howItWorksTitle: "Як працює наш ШІ чат-бот?",
+//       howItWorksText: "Наш чат-бот використовує GPT-4 та передові технології розмовного ШІ для:",
+//       howItWorksList: [
+//         "Розуміння контексту",
+//         "Обробки запитів у реальному часі",
+//         "Генерації точних, людиноподібних відповідей"
+//       ],
+//       keyFeaturesTitle: "Ключові функції нашого ШІ чат-бота",
+//       features: {
+//         realTime: {
+//           title: "Спілкування в реальному часі",
+//           description: "Миттєва взаємодія з користувачами та вирішення запитів без затримок."
+//         },
+//         multiLanguage: {
+//           title: "Багатомовна підтримка",
+//           description: "Безперешкодне спілкування з глобальною аудиторією."
+//         },
+//         scalability: {
+//           title: "Масштабованість",
+//           description: "Обробка тисяч одночасних запитів з неперевершеною точністю."
+//         },
+//         analytics: {
+//           title: "Аналіз продуктивності",
+//           description: "Отримання дієвих інсайтів для оптимізації стратегії взаємодії з клієнтами."
+//         }
+//       },
+//       industriesTitle: "Галузі, які ми обслуговуємо",
+//       industriesText: "Наш універсальний ШІ чат-бот адаптується до будь-якої галузі, дозволяючи бізнесу автоматизувати процеси та зростати:",
+//       industries: [
+//         {
+//           icon: "🏪",
+//           name: "Роздрібна торгівля",
+//           description: "Автоматизація запитів з продажу та покращення обслуговування клієнтів."
+//         },
+//         {
+//           icon: "🏥",
+//           name: "Охорона здоров'я",
+//           description: "Цілодобова віртуальна підтримка пацієнтів та медичного персоналу."
+//         },
+//         {
+//           icon: "🎓",
+//           name: "Освіта",
+//           description: "Підтримка студентів інформацією про курси та академічне керівництво."
+//         },
+//         {
+//           icon: "🛒",
+//           name: "Електронна комерція",
+//           description: "Збільшення конверсій за допомогою миттєвої підтримки в реальному часі."
+//         },
+//         {
+//           icon: "💼",
+//           name: "Фінанси",
+//           description: "Оптимізація FAQ та взаємодії з клієнтами через інтелектуальну автоматизацію."
+//         }
+//       ],
+//       conclusionTitle: "Почніть трансформувати свій бізнес сьогодні 🚀",
+//       conclusionText: "Відчуйте майбутнє комунікації з ШІ чат-ботом від NeuroGen Lab.",
+//       conclusionList: [
+//         "Оптимізуйте робочі процеси",
+//         "Покращіть задоволеність клієнтів",
+//         "Зменшіть витрати"
+//       ],
+//       topReasonsTitle: "5 головних причин, чому вашому бізнесу потрібен ШІ чат-бот",
+//       reasonList: [
+//         {
+//           title: "1. Автоматизована підтримка клієнтів 24/7",
+//           content: {
+//             text: "ШІ чат-бот працює цілодобово, надаючи миттєві відповіді на запити клієнтів. Це допомагає:",
+//             list: [
+//               "Підвищити задоволеність клієнтів швидкими відповідями",
+//               "Зменшити час очікування відповідей",
+//               "Вирішувати повторювані та поширені запити без втручання людини"
+//             ]
+//           }
+//         },
+//         {
+//           title: "2. Зниження операційних витрат",
+//           content: {
+//             text: "Впровадження ШІ чат-бота значно знижує витрати на ручну підтримку:",
+//             list: [
+//               "Автоматизує рутинні завдання, звільняючи час співробітників",
+//               "Знижує навантаження на колл-центри та команди підтримки",
+//               "Скорочує витрати на найм, навчання та утримання персоналу підтримки"
+//             ]
+//           }
+//         },
+//         {
+//           title: "3. Збільшення продажів та конверсій",
+//           content: {
+//             text: "ШІ чат-боти роблять більше, ніж просто відповідають на питання — вони активно сприяють продажам:",
+//             list: [
+//               "Рекомендують продукти на основі вподобань клієнтів",
+//               "Проводять користувачів через воронку продажів до завершення покупки",
+//               "Збирають ліди та контактну інформацію для вашої команди продажів"
+//             ]
+//           }
+//         },
+//         {
+//           title: "4. Миттєва масштабованість для великих обсягів",
+//           content: {
+//             text: "ШІ чат-бот може обробляти тисячі запитів одночасно:",
+//             list: [
+//               "Швидко обробляє запити навіть у години пік",
+//               "Ефективно працює для бізнесу будь-якого розміру",
+//               "Легко справляється з масштабними заходами"
+//             ]
+//           }
+//         },
+//         {
+//           title: "5. Покращений клієнтський досвід",
+//           content: {
+//             text: "Підвищіть загальну задоволеність клієнтів за допомогою персоналізованої взаємодії:",
+//             list: [
+//               "Забезпечує послідовні та точні відповіді по всіх каналах",
+//               "Пропонує багатомовну підтримку для глобальної клієнтської бази",
+//               "Зберігає контекст розмови для більш природного спілкування"
+//             ]
+//           }
+//         }
+//       ],
+//       finalConclusion: {
+//         title: "Висновок",
+//         text: "Використовуючи ШІ чат-бот від NeuroGen Lab, бізнес може розкрити ефективність, забезпечити винятковий клієнтський досвід та залишатися попереду конкурентів. Почніть сьогодні та трансформуйте ваш бізнес за допомогою автоматизації на базі ШІ."
+//       }
+//     },
+//     metaTitle: "ШІ Чат-бот | NeuroGen Lab - Інтелектуальне рішення для клієнтського сервісу",
+//     metaDescription: "Трансформуйте ваш клієнтський сервіс за допомогою нашого чат-бота на базі ШІ. Забезпечте цілодобову підтримку та винятковий клієнтський досвід."
+//   }
+// } as const;
 
-export { aiChatBotTranslations };
+// export { aiChatBotTranslations };
 
 const customDevelopmentTranslations = {
   en: {

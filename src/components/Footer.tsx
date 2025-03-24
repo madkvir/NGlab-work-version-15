@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Phone, Mail, Linkedin, MapPin, MessageCircle, ChevronDown } from "lucide-react";
 import NewsletterForm from "./form/NewsletterForm";
 import { Link, useRouter, usePathname } from "../i18n/routing";
-import { footerTranslations } from "../locales/footerTranslations";
+import { footerTranslations } from "../locales/translations";
 import getPageLangUnit from "../utils/getPageLangUnit";
 
 const Footer: React.FC = () => {
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
   const router = useRouter();
   const location = usePathname();
   const language = getPageLangUnit(footerTranslations);
-  const t = footerTranslations[language];
+  const t = footerTranslations[language as keyof typeof footerTranslations] || footerTranslations.en;
 
   const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
                 className="sm:w-[50px] md:w-[110px] lg:w-[140px]"
               />
             </Link>
-            <p className="text-gray-400 text-sm text-center md:text-left">{t.companyInfo}</p>
+            <p className="text-gray-400 text-sm text-center md:text-left">{t.companyDescription}</p>
           </div>
 
           {/* Navigation and Contact Info Grid */}
@@ -58,14 +58,14 @@ const Footer: React.FC = () => {
                 onClick={() => setIsNavigationOpen(!isNavigationOpen)}
                 className="w-full flex items-center justify-between md:hidden mb-4"
               >
-                <h3 className="text-lg font-semibold">{t.navigation}</h3>
+                <h3 className="text-lg font-semibold">{t.navigation.title}</h3>
                 <ChevronDown
                   className={`w-5 h-5 text-emerald-400 transition-transform ${
                     isNavigationOpen ? "rotate-180" : ""
                   }`}
                 />
               </button>
-              <h3 className="hidden md:block text-lg font-semibold mb-4">{t.navigation}</h3>
+              <h3 className="hidden md:block text-lg font-semibold mb-4">{t.navigation.title}</h3>
               <ul
                 className={`space-y-2 flex flex-col items-center md:items-start overflow-hidden transition-all duration-300 md:h-auto ${
                   isNavigationOpen ? "h-auto opacity-100" : "h-0 md:h-auto opacity-0 md:opacity-100"
@@ -77,12 +77,12 @@ const Footer: React.FC = () => {
                     onClick={(e) => handleNavigation(e, "pricing")}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    {t.pricing}
+                    {t.navigation.links.pricing}
                   </a>
                 </li>
                 <li>
                   <Link href="/guide" className="text-gray-400 hover:text-white transition-colors">
-                    {t.guide}
+                    {t.navigation.links.guide}
                   </Link>
                 </li>
                 <li>
@@ -91,20 +91,17 @@ const Footer: React.FC = () => {
                     onClick={(e) => handleNavigation(e, "faq")}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    {t.faq}
+                    {t.navigation.links.faq}
                   </a>
                 </li>
                 <li>
-                  <Link
-                    href="/about-us"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {t.aboutUs}
+                  <Link href="/about-us" className="text-gray-400 hover:text-white transition-colors">
+                    {t.navigation.links.aboutUs}
                   </Link>
                 </li>
                 <li>
                   <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
-                    {t.blog}
+                    {t.navigation.links.blog}
                   </Link>
                 </li>
               </ul>
@@ -116,14 +113,14 @@ const Footer: React.FC = () => {
                 onClick={() => setIsContactOpen(!isContactOpen)}
                 className="w-full flex items-center justify-between md:hidden mb-4"
               >
-                <h3 className="text-lg font-semibold">{t.contactUs}</h3>
+                <h3 className="text-lg font-semibold">{t.contactUs.title}</h3>
                 <ChevronDown
                   className={`w-5 h-5 text-emerald-400 transition-transform ${
                     isContactOpen ? "rotate-180" : ""
                   }`}
                 />
               </button>
-              <h3 className="hidden md:block text-lg font-semibold mb-4">{t.contactUs}</h3>
+              <h3 className="hidden md:block text-lg font-semibold mb-4">{t.contactUs.title}</h3>
               <ul
                 className={`space-y-3 flex flex-col items-center md:items-start overflow-hidden transition-all duration-300 md:h-auto ${
                   isContactOpen ? "h-auto opacity-100" : "h-0 md:h-auto opacity-0 md:opacity-100"
@@ -131,20 +128,20 @@ const Footer: React.FC = () => {
               >
                 <li>
                   <a
-                    href="tel:+49 (0) 30 123456789"
+                    href={`tel:${t.contactUs.phone}`}
                     className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                   >
                     <Phone className="w-5 h-5 text-emerald-400" />
-                    +49 (0) 30 123456789
+                    {t.contactUs.phone}
                   </a>
                 </li>
                 <li>
                   <a
-                    href="mailto:office@neurogenlab.de"
+                    href={`mailto:${t.contactUs.email}`}
                     className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                   >
                     <Mail className="w-5 h-5 text-emerald-400" />
-                    office@neurogenlab.de
+                    {t.contactUs.email}
                   </a>
                 </li>
                 <li>
@@ -155,7 +152,7 @@ const Footer: React.FC = () => {
                     className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                   >
                     <MessageCircle className="w-5 h-5 text-emerald-400" />
-                    WhatsApp
+                    {t.contactUs.whatsApp}
                   </a>
                 </li>
                 <li>
@@ -166,14 +163,14 @@ const Footer: React.FC = () => {
                     className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
                   >
                     <Linkedin className="w-5 h-5 text-emerald-400" />
-                    LinkedIn
+                    {t.contactUs.linkedIn}
                   </a>
                 </li>
-                <li className="flex items-center gap-2 text-center md:text-left">
+                <li className="flex items-start gap-2">
                   <MapPin className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                   <span className="text-gray-400">
-                    Gartenweg 2<br />
-                    16515 Oranienburg, Germany
+                    {t.contactUs.address.street}<br />
+                    {t.contactUs.address.city}
                   </span>
                 </li>
               </ul>
@@ -195,47 +192,47 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Copyright and Legal Links */}
-        <div className="flex flex-col items-center pt-8 border-t border-gray-900/50">
+        <div className="border-t border-gray-900/50 pt-8">
           <div className="flex flex-wrap justify-center gap-6 mb-4">
             <Link
               href="/terms"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
-              {t.legal.termsOfService || "Terms of Service"}
+              {t.legalLinks.termsOfService}
             </Link>
             <Link
               href="/privacy"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
-              {t.legal.privacyPolicy || "Privacy Policy"}
+              {t.legalLinks.privacyPolicy}
             </Link>
             <Link
               href="/cookie-policy"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
-              {t.legal.cookiePolicy || "Cookie Policy"}
+              {t.legalLinks.cookiePolicy}
             </Link>
             <Link
               href="/impressum"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
-              {t.legal.impressum || "Impressum"}
+              {t.legalLinks.impressum}
             </Link>
             <Link
               href="/responsible-ai-policy"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
-              {t.legal.responsibleAiPolicy || "Responsible AI Policy"}
+              {t.legalLinks.responsibleAiPolicy}
             </Link>
             <Link
               href="/disclaimer"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
-              {t.legal.disclaimer || "Disclaimer"}
+              {t.legalLinks.disclaimer}
             </Link>
           </div>
-          <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} NeuroGen Lab. {t.legal.copyright || "All rights reserved."}
+          <p className="text-gray-400 text-sm text-center">
+            {t.copyright.replace("{year}", new Date().getFullYear().toString())}
           </p>
         </div>
       </div>
