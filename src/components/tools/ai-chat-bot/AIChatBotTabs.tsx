@@ -4,6 +4,7 @@ import { MessagesSquare, HeadsetIcon, TrendingUp } from 'lucide-react';
 import { ConsultationTab } from './tabs/ConsultationTab';
 import { SupportTab } from './tabs/SupportTab';
 import { SalesTab } from './tabs/SalesTab';
+import { useAIChatBotTranslations } from '../../../hooks/useAIChatBotTranslations';
 
 const tabVariants = {
   enter: {
@@ -22,26 +23,27 @@ const tabVariants = {
 
 export const AIChatBotTabs: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const { tabs } = useAIChatBotTranslations();
 
-  const tabs = [
+  const tabConfig = [
     {
       id: 0,
-      title: 'ИИ Консультации и FAQ',
-      subtitle: 'Персонализированные ответы клиентам',
+      title: tabs.consultation.title,
+      subtitle: tabs.consultation.subtitle,
       component: ConsultationTab,
       icon: <MessagesSquare className="w-5 h-5" />,
     },
     {
       id: 1,
-      title: 'ИИ Поддержка Клиентов',
-      subtitle: 'Круглосуточная поддержка клиентов',
+      title: tabs.support.title,
+      subtitle: tabs.support.subtitle,
       component: SupportTab,
       icon: <HeadsetIcon className="w-5 h-5" />,
     },
     {
       id: 2,
-      title: 'ИИ Автоматизация Продаж',
-      subtitle: 'Увеличение конверсии и продаж',
+      title: tabs.sales.title,
+      subtitle: tabs.sales.subtitle,
       component: SalesTab,
       icon: <TrendingUp className="w-5 h-5" />,
     },
@@ -55,8 +57,8 @@ export const AIChatBotTabs: React.FC = () => {
         <motion.div 
           className="hidden sm:block absolute -bottom-[1.5mm] h-[2px] bg-emerald-400"
           animate={{
-            left: `${(100 / tabs.length) * activeTab + (100 / tabs.length) * (1/3)}%`,
-            width: `${(100 / tabs.length) / 3}%`
+            left: `${(100 / tabConfig.length) * activeTab + (100 / tabConfig.length) * (1/3)}%`,
+            width: `${(100 / tabConfig.length) / 3}%`
           }}
           transition={{
             type: "spring",
@@ -64,7 +66,7 @@ export const AIChatBotTabs: React.FC = () => {
             damping: 30
           }}
         />
-        {tabs.map((tab) => (
+        {tabConfig.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
@@ -121,7 +123,7 @@ export const AIChatBotTabs: React.FC = () => {
           variants={tabVariants}
           transition={{ duration: 0.3 }}
         >
-          {React.createElement(tabs[activeTab].component)}
+          {React.createElement(tabConfig[activeTab].component)}
         </motion.div>
       </AnimatePresence>
     </div>

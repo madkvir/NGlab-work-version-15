@@ -2,20 +2,6 @@ import React from 'react';
 
 interface ContentProps {
   content: {
-    mainTitle: string;
-    subtitle: string;
-    introText: string;
-    introList: readonly string[];
-    howItWorksTitle: string;
-    howItWorksText: string;
-    howItWorksList: readonly string[];
-    keyFeaturesTitle: string;
-    features: {
-      realTime: { title: string; description: string };
-      multiLanguage: { title: string; description: string };
-      scalability: { title: string; description: string };
-      analytics: { title: string; description: string };
-    };
     industriesTitle: string;
     industriesText: string;
     industries: ReadonlyArray<{
@@ -44,39 +30,6 @@ interface ContentProps {
 export const AIChatBotContent: React.FC<ContentProps> = ({ content }) => {
   return (
     <article className="prose prose-invert max-w-none">
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-6">{content.mainTitle}</h2>
-        <p className="text-xl text-gray-400 mb-8">{content.subtitle}</p>
-        <p className="mb-4">{content.introText}</p>
-        <ul className="list-disc pl-6 mb-8">
-          {content.introList.map((item, index) => (
-            <li key={index} className="text-gray-300">{item}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mb-12">
-        <h3 className="text-2xl font-bold mb-4">{content.howItWorksTitle}</h3>
-        <p className="mb-4">{content.howItWorksText}</p>
-        <ul className="list-disc pl-6 mb-8">
-          {content.howItWorksList.map((item, index) => (
-            <li key={index} className="text-gray-300">{item}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="mb-12">
-        <h3 className="text-2xl font-bold mb-6">{content.keyFeaturesTitle}</h3>
-        <div className="grid md:grid-cols-2 gap-6">
-          {Object.entries(content.features).map(([key, feature]) => (
-            <div key={key} className="bg-gray-800/50 rounded-lg p-6">
-              <h4 className="text-xl font-semibold mb-3 text-emerald-400">{feature.title}</h4>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="mb-12">
         <h3 className="text-2xl font-bold mb-4">{content.industriesTitle}</h3>
         <p className="mb-6">{content.industriesText}</p>

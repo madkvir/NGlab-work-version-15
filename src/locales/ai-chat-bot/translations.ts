@@ -40,40 +40,6 @@ export const aiChatBotTranslations = {
       buttonText: "Contact Sales"
     },
     articleContent: {
-      mainTitle: "AI Chat Bot for Business – Automate and Innovate with NeuroGen Lab",
-      subtitle: "Unlock the Power of Artificial Intelligence",
-      introText: "At NeuroGen Lab, we bring you an advanced AI Chat Bot designed to:",
-      introList: [
-        "Automate communication",
-        "Enhance customer interactions",
-        "Streamline operations"
-      ],
-      howItWorksTitle: "How Does Our AI Chat Bot Work?",
-      howItWorksText: "Our chat bot leverages GPT-4 and cutting-edge conversational AI technology to:",
-      howItWorksList: [
-        "Understand context",
-        "Process requests in real-time",
-        "Generate accurate, human-like responses"
-      ],
-      keyFeaturesTitle: "Key Features of Our AI Chat Bot",
-      features: {
-        realTime: {
-          title: "Real-Time Communication",
-          description: "Engage users instantly and resolve inquiries without delay."
-        },
-        multiLanguage: {
-          title: "Multi-Language Support",
-          description: "Communicate with a global audience seamlessly."
-        },
-        scalability: {
-          title: "Scalability",
-          description: "Handle thousands of simultaneous queries with unmatched precision."
-        },
-        analytics: {
-          title: "Performance Analytics",
-          description: "Gain actionable insights to optimize your customer engagement strategy."
-        }
-      },
       industriesTitle: "Industries We Serve",
       industriesText: "Our versatile AI Chat Bot adapts to any industry, empowering businesses to automate and grow:",
       industries: [
@@ -172,6 +138,20 @@ export const aiChatBotTranslations = {
         title: "Conclusion",
         text: "By using NeuroGen Lab's AI Chat Bot, businesses can unlock efficiency, provide exceptional customer experiences, and stay ahead of the competition. Get started today and transform your business with the power of AI-driven automation."
       }
+    },
+    tabs: {
+      consultation: {
+        title: "AI Consultations and FAQ",
+        subtitle: "Personalized customer responses"
+      },
+      support: {
+        title: "AI Customer Support",
+        subtitle: "24/7 customer support"
+      },
+      sales: {
+        title: "AI Sales Automation",
+        subtitle: "Increase conversion and sales"
+      }
     }
   },
   ru: {
@@ -215,40 +195,6 @@ export const aiChatBotTranslations = {
       buttonText: "Связаться с отделом продаж"
     },
     articleContent: {
-      mainTitle: "ИИ-Чатбот для бизнеса – Автоматизация и инновации с NeuroGen Lab",
-      subtitle: "Раскройте потенциал искусственного интеллекта",
-      introText: "В NeuroGen Lab мы предлагаем продвинутый ИИ-чатбот, разработанный для:",
-      introList: [
-        "Автоматизации коммуникации",
-        "Улучшения взаимодействия с клиентами",
-        "Оптимизации операций"
-      ],
-      howItWorksTitle: "Как работает наш ИИ-чатбот?",
-      howItWorksText: "Наш чат-бот использует GPT-4 и передовые технологии разговорного ИИ для:",
-      howItWorksList: [
-        "Понимания контекста",
-        "Обработки запросов в реальном времени",
-        "Генерации точных, человекоподобных ответов"
-      ],
-      keyFeaturesTitle: "Ключевые возможности нашего ИИ-чатбота",
-      features: {
-        realTime: {
-          title: "Общение в реальном времени",
-          description: "Мгновенное взаимодействие с пользователями и решение запросов без задержек."
-        },
-        multiLanguage: {
-          title: "Многоязычная поддержка",
-          description: "Беспрепятственное общение с глобальной аудиторией."
-        },
-        scalability: {
-          title: "Масштабируемость",
-          description: "Обработка тысяч одновременных запросов с непревзойденной точностью."
-        },
-        analytics: {
-          title: "Аналитика производительности",
-          description: "Получение полезных данных для оптимизации стратегии взаимодействия с клиентами."
-        }
-      },
       industriesTitle: "Отрасли, которые мы обслуживаем",
       industriesText: "Наш универсальный ИИ-чатбот адаптируется к любой отрасли, позволяя бизнесу автоматизировать процессы и расти:",
       industries: [
@@ -305,7 +251,7 @@ export const aiChatBotTranslations = {
             list: [
               "Автоматизирует рутинные задачи, освобождая время сотрудников",
               "Снижает нагрузку на колл-центры и команды поддержки",
-              "Сокращает затраты на найм, обучение и содержание персонала поддержки"
+              "Скорочует затраты на найм, обучение и содержание персонала поддержки"
             ]
           }
         },
@@ -346,6 +292,20 @@ export const aiChatBotTranslations = {
       finalConclusion: {
         title: "Заключение",
         text: "Используя ИИ-чатбот от NeuroGen Lab, бизнес может повысить эффективность, обеспечить исключительный клиентский опыт и опередить конкурентов. Начните сегодня и трансформируйте свой бизнес с помощью автоматизации на базе ИИ."
+      }
+    },
+    tabs: {
+      consultation: {
+        title: "ИИ Консультации и FAQ",
+        subtitle: "Персонализированные ответы клиентам"
+      },
+      support: {
+        title: "ИИ Поддержка Клиентов",
+        subtitle: "Круглосуточная поддержка клиентов"
+      },
+      sales: {
+        title: "ИИ Автоматизация Продаж",
+        subtitle: "Увеличение конверсии и продаж"
       }
     }
   },
@@ -390,40 +350,6 @@ export const aiChatBotTranslations = {
       buttonText: "Зв'язатися з відділом продажів"
     },
     articleContent: {
-      mainTitle: "ШІ-Чатбот для бізнесу – Автоматизація та інновації з NeuroGen Lab",
-      subtitle: "Розкрийте потенціал штучного інтелекту",
-      introText: "В NeuroGen Lab ми пропонуємо просунутий ШІ-чатбот, розроблений для:",
-      introList: [
-        "Автоматизації комунікації",
-        "Покращення взаємодії з клієнтами",
-        "Оптимізації операцій"
-      ],
-      howItWorksTitle: "Як працює наш ШІ-чатбот?",
-      howItWorksText: "Наш чат-бот використовує GPT-4 та передові технології розмовного ШІ для:",
-      howItWorksList: [
-        "Розуміння контексту",
-        "Обробки запитів у реальному часі",
-        "Генерації точних, людоподібних відповідей"
-      ],
-      keyFeaturesTitle: "Ключові можливості нашого ШІ-чатбота",
-      features: {
-        realTime: {
-          title: "Спілкування в реальному часі",
-          description: "Миттєва взаємодія з користувачами та вирішення запитів без затримок."
-        },
-        multiLanguage: {
-          title: "Багатомовна підтримка",
-          description: "Безперешкодне спілкування з глобальною аудиторією."
-        },
-        scalability: {
-          title: "Масштабованість",
-          description: "Обробка тисяч одночасних запитів з неперевершеною точністю."
-        },
-        analytics: {
-          title: "Аналітика продуктивності",
-          description: "Отримання корисних даних для оптимізації стратегії взаємодії з клієнтами."
-        }
-      },
       industriesTitle: "Галузі, які ми обслуговуємо",
       industriesText: "Наш універсальний ШІ-чатбот адаптується до будь-якої галузі, дозволяючи бізнесу автоматизувати процеси та рости:",
       industries: [
@@ -522,6 +448,20 @@ export const aiChatBotTranslations = {
         title: "Висновок",
         text: "Використовуючи ШІ-чатбот від NeuroGen Lab, бізнес може підвищити ефективність, забезпечити винятковий клієнтський досвід та випередити конкурентів. Почніть сьогодні та трансформуйте свій бізнес за допомогою автоматизації на базі ШІ."
       }
+    },
+    tabs: {
+      consultation: {
+        title: "ШІ Консультації та FAQ",
+        subtitle: "Персоналізовані відповіді клієнтам"
+      },
+      support: {
+        title: "ШІ Підтримка Клієнтів",
+        subtitle: "Цілодобова підтримка клієнтів"
+      },
+      sales: {
+        title: "ШІ Автоматизація Продажів",
+        subtitle: "Збільшення конверсії та продажів"
+      }
     }
   },
   de: {
@@ -565,40 +505,6 @@ export const aiChatBotTranslations = {
       buttonText: "Vertrieb kontaktieren"
     },
     articleContent: {
-      mainTitle: "KI-Chatbot für Unternehmen – Automatisierung und Innovation mit NeuroGen Lab",
-      subtitle: "Entfesseln Sie die Kraft der künstlichen Intelligenz",
-      introText: "Bei NeuroGen Lab bieten wir Ihnen einen fortschrittlichen KI-Chatbot, entwickelt für:",
-      introList: [
-        "Automatisierung der Kommunikation",
-        "Verbesserung der Kundeninteraktionen",
-        "Optimierung der Abläufe"
-      ],
-      howItWorksTitle: "Wie funktioniert unser KI-Chatbot?",
-      howItWorksText: "Unser Chatbot nutzt GPT-4 und fortschrittliche Konversations-KI-Technologie für:",
-      howItWorksList: [
-        "Kontextverständnis",
-        "Echtzeit-Verarbeitung von Anfragen",
-        "Generierung präziser, menschenähnlicher Antworten"
-      ],
-      keyFeaturesTitle: "Hauptfunktionen unseres KI-Chatbots",
-      features: {
-        realTime: {
-          title: "Echtzeit-Kommunikation",
-          description: "Sofortige Interaktion mit Benutzern und zügige Beantwortung von Anfragen."
-        },
-        multiLanguage: {
-          title: "Mehrsprachige Unterstützung",
-          description: "Nahtlose Kommunikation mit einem globalen Publikum."
-        },
-        scalability: {
-          title: "Skalierbarkeit",
-          description: "Verarbeitung tausender gleichzeitiger Anfragen mit unübertroffener Präzision."
-        },
-        analytics: {
-          title: "Leistungsanalytik",
-          description: "Gewinnen Sie wertvolle Einblicke zur Optimierung Ihrer Kundeninteraktionsstrategie."
-        }
-      },
       industriesTitle: "Branchen, die wir bedienen",
       industriesText: "Unser vielseitiger KI-Chatbot passt sich jeder Branche an und ermöglicht Unternehmen die Automatisierung und das Wachstum:",
       industries: [
@@ -697,6 +603,20 @@ export const aiChatBotTranslations = {
         title: "Fazit",
         text: "Durch die Nutzung des KI-Chatbots von NeuroGen Lab können Unternehmen Effizienz steigern, außergewöhnliche Kundenerlebnisse bieten und der Konkurrenz voraus sein. Starten Sie noch heute und transformieren Sie Ihr Unternehmen mit der Kraft KI-gestützter Automatisierung."
       }
+    },
+    tabs: {
+      consultation: {
+        title: "KI-Beratung und FAQ",
+        subtitle: "Personalisierte Kundenantworten"
+      },
+      support: {
+        title: "KI-Kundensupport",
+        subtitle: "24/7 Kundensupport"
+      },
+      sales: {
+        title: "KI-Vertriebsautomatisierung",
+        subtitle: "Steigerung der Konversion und Verkäufe"
+      }
     }
   },
   es: {
@@ -740,40 +660,6 @@ export const aiChatBotTranslations = {
       buttonText: "Contactar ventas"
     },
     articleContent: {
-      mainTitle: "Chatbot de IA para Negocios – Automatización e Innovación con NeuroGen Lab",
-      subtitle: "Libere el poder de la inteligencia artificial",
-      introText: "En NeuroGen Lab, le ofrecemos un Chatbot de IA avanzado, diseñado para:",
-      introList: [
-        "Automatizar la comunicación",
-        "Mejorar las interacciones con clientes",
-        "Optimizar operaciones"
-      ],
-      howItWorksTitle: "¿Cómo funciona nuestro Chatbot de IA?",
-      howItWorksText: "Nuestro chatbot utiliza GPT-4 y tecnología avanzada de IA conversacional para:",
-      howItWorksList: [
-        "Entender el contexto",
-        "Procesar solicitudes en tiempo real",
-        "Generar respuestas precisas y humanas"
-      ],
-      keyFeaturesTitle: "Características principales de nuestro Chatbot de IA",
-      features: {
-        realTime: {
-          title: "Comunicación en tiempo real",
-          description: "Interacción instantánea con usuarios y resolución de consultas sin demoras."
-        },
-        multiLanguage: {
-          title: "Soporte multilingüe",
-          description: "Comunicación fluida con una audiencia global."
-        },
-        scalability: {
-          title: "Escalabilidad",
-          description: "Procesamiento de miles de consultas simultáneas con precisión inigualable."
-        },
-        analytics: {
-          title: "Analítica de rendimiento",
-          description: "Obtenga perspectivas valiosas para optimizar su estrategia de interacción con clientes."
-        }
-      },
       industriesTitle: "Industrias que atendemos",
       industriesText: "Nuestro versátil Chatbot de IA se adapta a cualquier industria, permitiendo a las empresas automatizar y crecer:",
       industries: [
@@ -871,6 +757,20 @@ export const aiChatBotTranslations = {
       finalConclusion: {
         title: "Conclusión",
         text: "Al utilizar el Chatbot de IA de NeuroGen Lab, las empresas pueden desbloquear la eficiencia, proporcionar experiencias excepcionales al cliente y mantenerse por delante de la competencia. Comience hoy y transforme su negocio con el poder de la automatización impulsada por IA."
+      }
+    },
+    tabs: {
+      consultation: {
+        title: "Consultas de IA y FAQ",
+        subtitle: "Respuestas personalizadas a clientes"
+      },
+      support: {
+        title: "Soporte al Cliente con IA",
+        subtitle: "Soporte al cliente 24/7"
+      },
+      sales: {
+        title: "Automatización de Ventas con IA",
+        subtitle: "Aumento de conversión y ventas"
       }
     }
   }

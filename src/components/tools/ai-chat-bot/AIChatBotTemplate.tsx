@@ -8,8 +8,6 @@ import GlowingButton from "../../common/GlowingButton";
 import BackToHome from "../../BackToHome";
 import { useAIChatBotTranslations } from '../../../hooks/useAIChatBotTranslations';
 import { AIChatBotContent } from './AIChatBotContent';
-import { AIChatBotFeatures } from './AIChatBotFeatures';
-import { AIChatBotBenefits } from './AIChatBotBenefits';
 import { AIChatBotIntegrations } from './AIChatBotIntegrations';
 import { AIChatBotTabs } from './AIChatBotTabs';
 
@@ -55,24 +53,6 @@ const AIChatBotTemplate: React.FC<AIChatBotTemplateProps> = ({
           {/* Основной контент */}
           <AIChatBotContent content={t.articleContent} />
           
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Features */}
-            <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
-              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">
-                {t.sectionTitles.features}
-              </h2>
-              <AIChatBotFeatures />
-            </div>
-
-            {/* Benefits */}
-            <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
-              <h2 className="text-2xl font-semibold mb-6 text-emerald-400">
-                {t.sectionTitles.benefits}
-              </h2>
-              <AIChatBotBenefits />
-            </div>
-          </div>
-
           {/* Блок "Нужна дополнительная информация? Свяжитесь с отделом продаж" */}
           <div className="bg-gray-900/50 rounded-xl p-8 border border-gray-800/50 mt-12">
             <div className="text-center">

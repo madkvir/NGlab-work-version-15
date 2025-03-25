@@ -1,7 +1,10 @@
 import React from 'react';
 import { MessageSquare, CheckCircle, Users, Brain } from 'lucide-react';
+import { useAIChatBotTranslations } from '../../../../hooks/useAIChatBotTranslations';
 
 export const ConsultationTab: React.FC = () => {
+  const { t } = useAIChatBotTranslations();
+
   return (
     <div className="space-y-12">
       {/* SEO-оптимизированный заголовок */}
@@ -15,7 +18,7 @@ export const ConsultationTab: React.FC = () => {
         </p>
       </div>
 
-      {/* Ключевые преимущества */}
+      {/* Ключевые преимущества с иконками */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="bg-gray-900/50 rounded-xl p-6 border border-gray-800">
           <div className="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4">
@@ -33,7 +36,7 @@ export const ConsultationTab: React.FC = () => {
           </div>
           <h3 className="text-xl font-semibold mb-3">Умная база знаний</h3>
           <p className="text-gray-400">
-            Самообучающаяся система, которая постоянно улучшает качество ответов
+          Интеллектуальная система QA для дообучения ИИ-агента
           </p>
         </div>
 
@@ -43,8 +46,39 @@ export const ConsultationTab: React.FC = () => {
           </div>
           <h3 className="text-xl font-semibold mb-3">Снижение нагрузки</h3>
           <p className="text-gray-400">
-            Уменьшение нагрузки на службу поддержки до 80% за счет автоматизации
+            Уменьшение нагрузки на службу поддержки до 90% за счет автоматизации
           </p>
+        </div>
+      </div>
+
+      {/* Ключевые возможности и преимущества */}
+      <div className="grid md:grid-cols-2 gap-8">
+        <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
+          <h2 className="text-2xl font-semibold mb-6 text-emerald-400">
+            {t.sectionTitles.features}
+          </h2>
+          <ul className="space-y-4">
+            {t.features.map((feature, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <span className="text-emerald-400">•</span>
+                <span className="text-gray-300">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300">
+          <h2 className="text-2xl font-semibold mb-6 text-emerald-400">
+            {t.sectionTitles.benefits}
+          </h2>
+          <ul className="space-y-4">
+            {t.benefits.map((benefit, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <span className="text-emerald-400">•</span>
+                <span className="text-gray-300">{benefit}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
@@ -58,7 +92,7 @@ export const ConsultationTab: React.FC = () => {
             <CheckCircle className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-1" />
             <div>
               <h4 className="text-lg font-medium mb-2">
-                Автоматическое обучение на основе FAQ
+                Обучение на основе Базы знаний (сайт, документы, YouTube, базы данных)
               </h4>
               <p className="text-gray-400">
                 Система анализирует часто задаваемые вопросы и создает базу знаний для мгновенных ответов
@@ -90,21 +124,6 @@ export const ConsultationTab: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* SEO-блок */}
-      <div className="prose prose-invert max-w-none">
-        <h2 className="text-2xl font-semibold mb-4">
-          Преимущества ИИ-консультанта для вашего бизнеса
-        </h2>
-        <ul className="list-disc pl-6 space-y-2 text-gray-400">
-          <li>Сокращение времени ожидания ответа для клиентов до нескольких секунд</li>
-          <li>Снижение операционных расходов на поддержку клиентов</li>
-          <li>Повышение удовлетворенности клиентов за счет быстрых и точных ответов</li>
-          <li>Масштабируемость: одновременная обработка тысяч запросов</li>
-          <li>Аналитика и инсайты на основе вопросов клиентов</li>
-          <li>Интеграция с существующими системами и базами знаний</li>
-        </ul>
       </div>
     </div>
   );

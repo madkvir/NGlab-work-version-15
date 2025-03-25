@@ -9,6 +9,7 @@ export const useAIChatBotTranslations = () => {
   return { 
     t, 
     language,
-    articleContent: t.articleContent 
+    articleContent: t.articleContent,
+    tabs: t.tabs
   };
 }; 
