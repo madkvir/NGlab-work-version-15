@@ -49,9 +49,9 @@ export const aiChatBotTranslations = {
           description: "Automate sales inquiries and enhance customer service."
         },
         {
-          icon: "🏥",
-          name: "Healthcare",
-          description: "Provide 24/7 virtual assistance for patients and medical staff."
+          icon: "💼",
+          name: "Services",
+          description: "Customer support in the service sector: from consultations to online bookings and answers to frequent questions."
         },
         {
           icon: "🎓",
@@ -67,14 +67,12 @@ export const aiChatBotTranslations = {
           icon: "💼",
           name: "Finance",
           description: "Streamline FAQs and client interactions with intelligent automation."
+        },
+        {
+          icon: "🚗",
+          name: "Automotive",
+          description: "Consultations on car availability, test drive appointments and 24/7 customer support."
         }
-      ],
-      conclusionTitle: "Start Transforming Your Business Today 🚀",
-      conclusionText: "Experience the future of communication with NeuroGen Lab's AI Chat Bot.",
-      conclusionList: [
-        "Optimize your workflows",
-        "Improve customer satisfaction",
-        "Reduce costs"
       ],
       topReasonsTitle: "5 Top Reasons Why Your Business Needs an AI Chat Bot",
       reasonList: [
@@ -204,9 +202,9 @@ export const aiChatBotTranslations = {
           description: "Автоматизация запросов по продажам и улучшение обслуживания клиентов."
         },
         {
-          icon: "🏥",
-          name: "Здравоохранение",
-          description: "Круглосуточная виртуальная помощь пациентам и медицинскому персоналу."
+          icon: "💼",
+          name: "Услуги",
+          description: "Поддержка клиентов в сфере услуг: от консультаций до онлайн-записей и ответов на частые вопросы."
         },
         {
           icon: "🎓",
@@ -222,14 +220,12 @@ export const aiChatBotTranslations = {
           icon: "💼",
           name: "Финансы",
           description: "Оптимизация FAQ и взаимодействия с клиентами с помощью интеллектуальной автоматизации."
+        },
+        {
+          icon: "🚗",
+          name: "Автоиндустрия",
+          description: "Консультации по наличию автомобилей, записи на тест-драйв и сопровождение клиентов 24/7."
         }
-      ],
-      conclusionTitle: "Начните трансформацию вашего бизнеса сегодня 🚀",
-      conclusionText: "Испытайте будущее коммуникации с ИИ-чатботом от NeuroGen Lab.",
-      conclusionList: [
-        "Оптимизируйте рабочие процессы",
-        "Повысьте удовлетворенность клиентов",
-        "Сократите расходы"
       ],
       topReasonsTitle: "5 главных причин, почему вашему бизнесу нужен ИИ-чатбот",
       reasonList: [
@@ -359,9 +355,9 @@ export const aiChatBotTranslations = {
           description: "Автоматизація запитів щодо продажів та покращення обслуговування клієнтів."
         },
         {
-          icon: "🏥",
-          name: "Охорона здоров'я",
-          description: "Цілодобова віртуальна допомога пацієнтам та медичному персоналу."
+          icon: "💼",
+          name: "Послуги",
+          description: "Підтримка клієнтів у сфері послуг: від консультацій до онлайн-записів та відповідей на часті запитання."
         },
         {
           icon: "🎓",
@@ -377,14 +373,12 @@ export const aiChatBotTranslations = {
           icon: "💼",
           name: "Фінанси",
           description: "Оптимізація FAQ та взаємодії з клієнтами за допомогою інтелектуальної автоматизації."
+        },
+        {
+          icon: "🚗",
+          name: "Автоіндустрія",
+          description: "Консультації щодо наявності автомобілів, запис на тест-драйв та супровід клієнтів 24/7."
         }
-      ],
-      conclusionTitle: "Почніть трансформацію вашого бізнесу сьогодні 🚀",
-      conclusionText: "Спробуйте майбутнє комунікації з ШІ-чатботом від NeuroGen Lab.",
-      conclusionList: [
-        "Оптимізуйте робочі процеси",
-        "Підвищіть задоволеність клієнтів",
-        "Скоротьте витрати"
       ],
       topReasonsTitle: "5 головних причин, чому вашому бізнесу потрібен ШІ-чатбот",
       reasonList: [
@@ -514,9 +508,9 @@ export const aiChatBotTranslations = {
           description: "Automatisierung von Verkaufsanfragen und Verbesserung des Kundenservices."
         },
         {
-          icon: "🏥",
-          name: "Gesundheitswesen",
-          description: "24/7 virtuelle Unterstützung für Patienten und medizinisches Personal."
+          icon: "💼",
+          name: "Dienstleistungen",
+          description: "Kundenbetreuung im Dienstleistungssektor: von Beratungen bis hin zu Online-Buchungen und Antworten auf häufige Fragen."
         },
         {
           icon: "🎓",
@@ -532,14 +526,12 @@ export const aiChatBotTranslations = {
           icon: "💼",
           name: "Finanzen",
           description: "Optimierung von FAQs und Kundeninteraktionen durch intelligente Automatisierung."
+        },
+        {
+          icon: "🚗",
+          name: "Automobilindustrie",
+          description: "Beratung zur Fahrzeugverfügbarkeit, Terminvereinbarung für Probefahrten und 24/7-Kundenbetreuung."
         }
-      ],
-      conclusionTitle: "Starten Sie heute die Transformation Ihres Unternehmens 🚀",
-      conclusionText: "Erleben Sie die Zukunft der Kommunikation mit dem KI-Chatbot von NeuroGen Lab.",
-      conclusionList: [
-        "Optimieren Sie Ihre Arbeitsabläufe",
-        "Verbessern Sie die Kundenzufriedenheit",
-        "Reduzieren Sie die Kosten"
       ],
       topReasonsTitle: "5 Top-Gründe, warum Ihr Unternehmen einen KI-Chatbot benötigt",
       reasonList: [
@@ -669,9 +661,9 @@ export const aiChatBotTranslations = {
           description: "Automatización de consultas de ventas y mejora del servicio al cliente."
         },
         {
-          icon: "🏥",
-          name: "Salud",
-          description: "Asistencia virtual 24/7 para pacientes y personal médico."
+          icon: "💼",
+          name: "Servicios",
+          description: "Soporte al cliente en el sector de servicios: desde consultas hasta reservas en línea y respuestas a preguntas frecuentes."
         },
         {
           icon: "🎓",
@@ -687,14 +679,12 @@ export const aiChatBotTranslations = {
           icon: "💼",
           name: "Finanzas",
           description: "Optimización de preguntas frecuentes e interacciones con clientes mediante automatización inteligente."
+        },
+        {
+          icon: "🚗",
+          name: "Industria automotriz",
+          description: "Consultas sobre disponibilidad de vehículos, citas para pruebas de manejo y soporte al cliente 24/7."
         }
-      ],
-      conclusionTitle: "Comience la transformación de su negocio hoy 🚀",
-      conclusionText: "Experimente el futuro de la comunicación con el Chatbot de IA de NeuroGen Lab.",
-      conclusionList: [
-        "Optimice sus flujos de trabajo",
-        "Mejore la satisfacción del cliente",
-        "Reduzca costos"
       ],
       topReasonsTitle: "5 razones principales por las que su negocio necesita un Chatbot de IA",
       reasonList: [

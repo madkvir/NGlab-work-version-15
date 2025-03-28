@@ -7,7 +7,7 @@ const AIChatBot = () => {
   return (
     <AIChatBotTemplate
       imageComponent={
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto mt-12">
           <div
             className="bg-gray-900/50 rounded-xl p-6 hover:bg-gray-900/70 transition-all duration-300"
             role="presentation"
