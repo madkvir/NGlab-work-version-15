@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HelpCircle } from 'lucide-react';
+import { HelpCircle, Globe } from 'lucide-react';
 import { useAIChatBotTranslations } from '../../../hooks/useAIChatBotTranslations';
 
 type Integration = string | { name: string; description: string };
@@ -150,12 +150,15 @@ export const AIChatBotIntegrations: React.FC = () => {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <div className="bg-gray-900/50 rounded-lg p-4 hover:bg-gray-900/70 transition-all duration-300 mb-8">
-        <h2 className="text-xl font-semibold mb-3 text-emerald-400">
+      <div className="rounded-lg p-5 mb-8">
+        <h2 className="text-xl font-semibold mb-4 text-emerald-400 flex items-center gap-2">
+          <Globe className="w-5 h-5" />
           {currentTranslations.title}
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-          {(t.integrations as readonly Integration[]).map((integration, index) => {
+        
+        {/* Отображаем интеграции единым списком через точку */}
+        <div className="flex flex-wrap items-center gap-1 text-gray-400 text-sm">
+          {(t.integrations as readonly Integration[]).map((integration, index, arr) => {
             const [showTooltip, setShowTooltip] = useState(false);
             const integrationName = typeof integration === 'string' ? integration : integration.name;
             const localizedName = getLocalizedName(integrationName);
@@ -163,24 +166,23 @@ export const AIChatBotIntegrations: React.FC = () => {
             const description = currentTranslations.descriptions[originalKey];
             
             return (
-              <div 
-                key={index} 
-                className="bg-gray-800/50 rounded-md p-2 text-center relative group cursor-help"
-                onMouseEnter={() => setShowTooltip(true)}
-                onMouseLeave={() => setShowTooltip(false)}
-              >
-                <div className="flex items-center justify-center gap-1 text-sm">
+              <React.Fragment key={index}>
+                <div
+                  className="inline-flex items-center relative cursor-help text-gray-300 hover:text-emerald-300 transition-colors duration-200"
+                  onMouseEnter={() => setShowTooltip(true)}
+                  onMouseLeave={() => setShowTooltip(false)}
+                >
                   <span>{localizedName}</span>
+                  {showTooltip && description && (
+                    <div className="absolute z-10 w-64 p-3 text-sm bg-gray-800/90 backdrop-blur-sm rounded-md shadow-lg text-left 
+                      left-1/2 transform -translate-x-1/2 bottom-full mb-2 border-l-2 border-emerald-500/50">
+                      <div className="text-gray-200 leading-relaxed">{description}</div>
+                    </div>
+                  )}
                 </div>
-                {showTooltip && description && (
-                  <div className="absolute z-10 w-56 p-3 text-sm bg-gray-900 border border-gray-700 rounded-md shadow-lg text-left 
-                    left-1/2 transform -translate-x-1/2 bottom-full mb-2">
-                    <div className="text-gray-300">{description}</div>
-                    <div className="absolute w-2 h-2 bg-gray-900 border-r border-b border-gray-700 transform rotate-45 -bottom-1 
-                      left-1/2 -translate-x-1/2"></div>
-                  </div>
-                )}
-              </div>
+                {/* Добавляем точку ПОСЛЕ элемента, но не после последнего */}
+                {index < arr.length - 1 && <span className="text-gray-600">•</span>}
+              </React.Fragment>
             );
           })}
         </div>

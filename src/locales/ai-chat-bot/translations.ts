@@ -77,13 +77,14 @@ export const aiChatBotTranslations = {
       topReasonsTitle: "5 Top Reasons Why Your Business Needs an AI Chat Bot",
       reasonList: [
         {
-          title: "1. 24/7 Automated Customer Support",
+          title: "1. How AI Chat Bots Change Customer Service",
           content: {
-            text: "An AI Chat Bot works round-the-clock, providing instant responses to customer inquiries. This helps to:",
+            text: "In today's business world, fast and 24/7 customer support has become not just a competitive advantage but a standard of quality. Companies that want to retain customers and increase sales are moving to automated 24/7 support using AI Chat Bots.",
             list: [
-              "Increase customer satisfaction with fast response times",
-              "Reduce wait times for answers",
-              "Resolve repetitive and common queries without human intervention"
+              "🔹 What is automated customer support?\nIt's a system where artificial intelligence (AI) answers customer inquiries in real-time, without human intervention. Such solutions allow:\n\n• to react instantly to inquiries;\n• to handle repetitive and common questions (FAQ);\n• to reduce the load on operators;\n• to provide support during off-hours, weekends, and holidays.",
+              "🔹 Benefits of 24/7 AI Support\n• Круглосуточная доступность\nВаш бизнес работает даже когда сотрудники спят. ИИ-чатбот всегда онлайн и готов мгновенно ответить на любые вопросы.\n\n• Скорость реакции\nИИ обрабатывает запросы в течение секунд, обеспечивая высокий уровень удовлетворённости клиентов.\n\n• Экономия ресурсов\nАвтоматизация позволяет существенно сократить затраты на call-центр и персонал поддержки.\n\n• Стабильное качество сервиса\nИИ не устаёт, не ошибается и всегда вежлив. Это гарантирует одинаково высокий уровень обслуживания для каждого клиента.",
+              "🔹 Where is automated customer support used?\n• Online stores and eCommerce — automation of order processing, delivery status, returns.\n• Service companies — consultations, bookings, answers to frequent questions.\n• Financial sector — quick balance check, explaining rates, customer bank support.\n• Automotive business — providing information about vehicle availability, test drive recording, answers to questions about insurance and service.",
+              "🔹 Why is this important?\nStudies show that:\n\n• More than 60% of customers expect a response within 5 minutes.\n• Companies that have implemented AI support 24/7 increase customer retention rate up to 30%.\n• Automated chats help reduce service costs by up to 40%."
             ]
           }
         },
@@ -230,13 +231,14 @@ export const aiChatBotTranslations = {
       topReasonsTitle: "5 главных причин, почему вашему бизнесу нужен ИИ-чатбот",
       reasonList: [
         {
-          title: "1. Автоматизированная поддержка клиентов 24/7",
+          title: "1. Как ИИ-чатботы меняют клиентский сервис",
           content: {
-            text: "ИИ-чатбот работает круглосуточно, обеспечивая мгновенные ответы на запросы клиентов. Это помогает:",
+            text: "В современном бизнесе быстрая и круглосуточная поддержка клиентов стала не просто конкурентным преимуществом, а стандартом качества. Компании, которые хотят удерживать клиентов и увеличивать продажи, переходят на автоматизированную поддержку 24/7 с помощью ИИ-чатботов.",
             list: [
-              "Повысить удовлетворенность клиентов быстрыми ответами",
-              "Сократить время ожидания ответов",
-              "Решать повторяющиеся и общие вопросы без участия человека"
+              "🔹 Что такое автоматизированная поддержка клиентов?\nЭто система, в которой искусственный интеллект (AI) отвечает на запросы клиентов в режиме реального времени, без участия человека. Такие решения позволяют:\n\n• моментально реагировать на обращения;\n• обрабатывать повторяющиеся и частые вопросы (FAQ);\n• снижать нагрузку на операторов;\n• обеспечить поддержку в нерабочее время, выходные и праздники.",
+              "🔹 Преимущества ИИ-поддержки 24/7\n• Круглосуточная доступность\nВаш бизнес работает даже когда сотрудники спят. ИИ-чатбот всегда онлайн и готов мгновенно ответить на любые вопросы.\n\n• Скорость реакции\nИИ обрабатывает запросы в течение секунд, обеспечивая высокий уровень удовлетворённости клиентов.\n\n• Экономия ресурсов\nАвтоматизация позволяет существенно сократить затраты на call-центр и персонал поддержки.\n\n• Стабильное качество сервиса\nИИ не устаёт, не ошибается и всегда вежлив. Это гарантирует одинаково высокий уровень обслуживания для каждого клиента.",
+              "🔹 Где используется автоматическая клиентская поддержка?\n• Интернет-магазины и eCommerce — автоматизация обработки заказов, статуса доставки, возвратов.\n• Сервисные компании — консультации, бронирования, ответы на частые вопросы.\n• Финансовый сектор — быстрая проверка баланса, объяснение тарифов, поддержка клиентов банка.\n• Автобизнес — предоставление информации о наличии авто, запись на тест-драйв, ответы на вопросы о страховке и сервисе.",
+              "🔹 Почему это важно?\nИсследования показывают, что:\n\n• Более 60% клиентов ожидают ответа в течение 5 минут.\n• Компании, внедрившие AI-поддержку 24/7, увеличивают уровень удержания клиентов на до 30%.\n• Автоматизированные чаты помогают сократить затраты на обслуживание до 40%."
             ]
           }
         },
@@ -268,8 +270,8 @@ export const aiChatBotTranslations = {
             text: "ИИ-чатбот может обрабатывать тысячи запросов одновременно:",
             list: [
               "Быстро обрабатывает запросы даже в часы пик",
-              "Эффективно работает для бизнеса любого размера",
-              "Легко справляется с масштабными мероприятиями"
+              "Эффективно працює для бізнесу будь-якого розміру",
+              "Легко справляється з масштабними заходами"
             ]
           }
         },
@@ -383,13 +385,14 @@ export const aiChatBotTranslations = {
       topReasonsTitle: "5 головних причин, чому вашому бізнесу потрібен ШІ-чатбот",
       reasonList: [
         {
-          title: "1. Автоматизована підтримка клієнтів 24/7",
+          title: "1. Как ИИ-чатботы меняют клиентский сервис",
           content: {
-            text: "ШІ-чатбот працює цілодобово, забезпечуючи миттєві відповіді на запити клієнтів. Це допомагає:",
+            text: "В современном бизнесе быстрая и круглосуточная поддержка клиентов стала не просто конкурентным преимуществом, а стандартом качества. Компании, которые хотят удерживать клиентов и увеличивать продажи, переходят на автоматизированную поддержку 24/7 с помощью ИИ-чатботов.",
             list: [
-              "Підвищити задоволеність клієнтів швидкими відповідями",
-              "Скоротити час очікування відповідей",
-              "Вирішувати повторювані та загальні питання без участі людини"
+              "Что такое автоматизированная поддержка клиентов?\nЭто система, в которой искусственный интеллект (AI) отвечает на запросы клиентов в режиме реального времени, без участия человека. Такие решения позволяют:\n\n• моментально реагировать на обращения;\n• обрабатывать повторяющиеся и частые вопросы (FAQ);\n• снижать нагрузку на операторов;\n• обеспечить поддержку в нерабочее время, выходные и праздники.",
+              "🔹 Преимущества ИИ-поддержки 24/7\n• Круглосуточная доступность\nВаш бизнес работает даже когда сотрудники спят. ИИ-чатбот всегда онлайн и готов мгновенно ответить на любые вопросы.\n\n• Скорость реакции\nИИ обрабатывает запросы в течение секунд, обеспечивая высокий уровень удовлетворённости клиентов.\n\n• Экономия ресурсов\nАвтоматизация позволяет существенно сократить затраты на call-центр и персонал поддержки.\n\n• Стабильное качество сервиса\nИИ не устаёт, не ошибается и всегда вежлив. Это гарантирует одинаково высокий уровень обслуживания для каждого клиента.",
+              "Где используется автоматическая клиентская поддержка?\n• Интернет-магазины и eCommerce — автоматизация обработки заказов, статуса доставки, возвратов.\n• Сервисные компании — консультации, бронирования, ответы на частые вопросы.\n• Финансовый сектор — быстрая проверка баланса, объяснение тарифов, поддержка клиентов банка.\n• Автобизнес — предоставление информации о наличии авто, запись на тест-драйв, ответы на вопросы о страховке и сервисе.",
+              "Почему это важно?\nИсследования показывают, что:\n\n• Более 60% клиентов ожидают ответа в течение 5 минут.\n• Компании, внедрившие AI-поддержку 24/7, увеличивают уровень удержания клиентов на до 30%.\n• Автоматизированные чаты помогают сократить затраты на обслуживание до 40%."
             ]
           }
         },
@@ -536,13 +539,14 @@ export const aiChatBotTranslations = {
       topReasonsTitle: "5 Top-Gründe, warum Ihr Unternehmen einen KI-Chatbot benötigt",
       reasonList: [
         {
-          title: "1. 24/7 automatisierter Kundensupport",
+          title: "1. How AI Chat Bots Change Customer Service",
           content: {
-            text: "Ein KI-Chatbot arbeitet rund um die Uhr und bietet sofortige Antworten auf Kundenanfragen. Dies hilft:",
+            text: "In today's business world, fast and 24/7 customer support has become not just a competitive advantage but a standard of quality. Companies that want to retain customers and increase sales are moving to automated 24/7 support using AI Chat Bots.",
             list: [
-              "Steigerung der Kundenzufriedenheit durch schnelle Reaktionszeiten",
-              "Reduzierung der Wartezeiten auf Antworten",
-              "Lösung wiederkehrender und häufiger Anfragen ohne menschliches Eingreifen"
+              "🔹 What is automated customer support?\nIt's a system where artificial intelligence (AI) answers customer inquiries in real-time, without human intervention. Such solutions allow:\n\n• to react instantly to inquiries;\n• to handle repetitive and common questions (FAQ);\n• to reduce the load on operators;\n• to provide support during off-hours, weekends, and holidays.",
+              "🔹 Benefits of 24/7 AI Support\n• Круглосуточная доступность\nВаш бизнес работает даже когда сотрудники спят. ИИ-чатбот всегда онлайн и готов мгновенно ответить на любые вопросы.\n\n• Скорость реакции\nИИ обрабатывает запросы в течение секунд, обеспечивая высокий уровень удовлетворённости клиентов.\n\n• Экономия ресурсов\nАвтоматизация позволяет существенно сократить затраты на call-центр и персонал поддержки.\n\n• Стабильное качество сервиса\nИИ не устаёт, не ошибается и всегда вежлив. Это гарантирует одинаково высокий уровень обслуживания для каждого клиента.",
+              "🔹 Where is automated customer support used?\n• Online stores and eCommerce — automation of order processing, delivery status, returns.\n• Service companies — consultations, bookings, answers to frequent questions.\n• Financial sector — quick balance check, explaining rates, customer bank support.\n• Automotive business — providing information about vehicle availability, test drive recording, answers to questions about insurance and service.",
+              "🔹 Why is this important?\nStudies show that:\n\n• More than 60% of customers expect a response within 5 minutes.\n• Companies that have implemented AI support 24/7 increase customer retention rate up to 30%.\n• Automated chats help reduce service costs by up to 40%."
             ]
           }
         },
@@ -551,7 +555,7 @@ export const aiChatBotTranslations = {
           content: {
             text: "Die Implementierung eines KI-Chatbots senkt die Kosten für manuelle Unterstützung erheblich:",
             list: [
-              "Automatisierung routinemäßiger Aufgaben, Freigabe von Mitarbeiterzeit",
+              "Automatisiert routinemäßige Aufgaben, Freigabe von Mitarbeiterzeit",
               "Reduzierung der Arbeitsbelastung für Callcenter und Support-Teams",
               "Senkung der Kosten für Einstellung, Schulung und Wartung von Support-Mitarbeitern"
             ]
@@ -560,7 +564,7 @@ export const aiChatBotTranslations = {
         {
           title: "3. Steigerung von Verkäufen und Konversionen",
           content: {
-            text: "KI-Chatbots tun mehr als nur Fragen beantworten – sie treiben aktiv Verkäufe an:",
+            text: "KI-Chatbots tun mehr als nur Fragen beantworten — sie treiben aktiv Verkäufe an:",
             list: [
               "Produktempfehlungen basierend auf Kundenpräferenzen",
               "Führung von Nutzern durch den Sales-Funnel bis zum Kaufabschluss",
@@ -689,13 +693,14 @@ export const aiChatBotTranslations = {
       topReasonsTitle: "5 razones principales por las que su negocio necesita un Chatbot de IA",
       reasonList: [
         {
-          title: "1. Soporte al cliente automatizado 24/7",
+          title: "1. How AI Chat Bots Change Customer Service",
           content: {
-            text: "Un Chatbot de IA funciona las 24 horas, proporcionando respuestas instantáneas a las consultas de los clientes. Esto ayuda a:",
+            text: "In today's business world, fast and 24/7 customer support has become not just a competitive advantage but a standard of quality. Companies that want to retain customers and increase sales are moving to automated 24/7 support using AI Chat Bots.",
             list: [
-              "Aumentar la satisfacción del cliente con tiempos de respuesta rápidos",
-              "Reducir los tiempos de espera para respuestas",
-              "Resolver consultas repetitivas y comunes sin intervención humana"
+              "🔹 What is automated customer support?\nIt's a system where artificial intelligence (AI) answers customer inquiries in real-time, without human intervention. Such solutions allow:\n\n• to react instantly to inquiries;\n• to handle repetitive and common questions (FAQ);\n• to reduce the load on operators;\n• to provide support during off-hours, weekends, and holidays.",
+              "🔹 Benefits of 24/7 AI Support\n• Круглосуточная доступность\nВаш бизнес работает даже когда сотрудники спят. ИИ-чатбот всегда онлайн и готов мгновенно ответить на любые вопросы.\n\n• Скорость реакции\nИИ обрабатывает запросы в течение секунд, обеспечивая высокий уровень удовлетворённости клиентов.\n\n• Экономия ресурсов\nАвтоматизация позволяет существенно сократить затраты на call-центр и персонал поддержки.\n\n• Стабильное качество сервиса\nИИ не устаёт, не ошибается и всегда вежлив. Это гарантирует одинаково высокий уровень обслуживания для каждого клиента.",
+              "🔹 Where is automated customer support used?\n• Online stores and eCommerce — automation of order processing, delivery status, returns.\n• Service companies — consultations, bookings, answers to frequent questions.\n• Financial sector — quick balance check, explaining rates, customer bank support.\n• Automotive business — providing information about vehicle availability, test drive recording, answers to questions about insurance and service.",
+              "🔹 Why is this important?\nStudies show that:\n\n• More than 60% of customers expect a response within 5 minutes.\n• Companies that have implemented AI support 24/7 increase customer retention rate up to 30%.\n• Automated chats help reduce service costs by up to 40%."
             ]
           }
         },
