@@ -2,9 +2,11 @@
 import React, { useState } from "react";
 import { Phone, Mail, Linkedin, MapPin, MessageCircle, ChevronDown } from "lucide-react";
 import NewsletterForm from "./form/NewsletterForm";
-import { Link, useRouter, usePathname } from "../i18n/routing";
+// import { Link, useRouter, usePathname } from "../i18n/routing";
 import { footerTranslations } from "../locales/translations";
 import getPageLangUnit from "../utils/getPageLangUnit";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
@@ -12,7 +14,8 @@ const Footer: React.FC = () => {
   const router = useRouter();
   const location = usePathname();
   const language = getPageLangUnit(footerTranslations);
-  const t = footerTranslations[language as keyof typeof footerTranslations] || footerTranslations.en;
+  const t =
+    footerTranslations[language as keyof typeof footerTranslations] || footerTranslations.en;
 
   const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -95,7 +98,10 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <Link href="/about-us" className="text-gray-400 hover:text-white transition-colors">
+                  <Link
+                    href="/about-us"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
                     {t.navigation.links.aboutUs}
                   </Link>
                 </li>
@@ -169,7 +175,8 @@ const Footer: React.FC = () => {
                 <li className="flex items-start gap-2">
                   <MapPin className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                   <span className="text-gray-400">
-                    {t.contactUs.address.street}<br />
+                    {t.contactUs.address.street}
+                    <br />
                     {t.contactUs.address.city}
                   </span>
                 </li>
