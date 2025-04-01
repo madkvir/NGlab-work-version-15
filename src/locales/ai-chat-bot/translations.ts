@@ -245,6 +245,7 @@ export const aiChatBotTranslations = {
         {
           title: "Снижение операционных расходов",
           content: {
+            text: "",
             list: [
               "",
               "",
