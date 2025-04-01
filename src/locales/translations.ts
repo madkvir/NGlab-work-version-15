@@ -13,31 +13,31 @@ export const translations = {
     signIn: 'Sign In',
     BookADemo: 'Book a Demo',
     aiVoiceBot: {
-      title: "AI Voice Bot",
-      description: "Intelligent voice assistant for your business",
+      title: 'AI Voice Bot',
+      description: 'Intelligent voice assistant for your business',
       features: [
-        "Natural Language Processing",
-        "Voice Recognition",
-        "Multi-language Support",
-        "Custom Voice Training"
+        'Natural Language Processing',
+        'Voice Recognition',
+        'Multi-language Support',
+        'Custom Voice Training',
       ],
       benefits: [
-        "24/7 Customer Support",
-        "Reduced Response Time",
-        "Consistent Service Quality",
-        "Cost Efficiency"
+        '24/7 Customer Support',
+        'Reduced Response Time',
+        'Consistent Service Quality',
+        'Cost Efficiency',
       ],
       integrations: [
-        "Phone Systems",
-        "CRM Platforms",
-        "Chat Applications",
-        "Analytics Tools"
+        'Phone Systems',
+        'CRM Platforms',
+        'Chat Applications',
+        'Analytics Tools',
       ],
       sectionTitles: {
-        features: "Features",
-        benefits: "Benefits",
-        integrations: "Integrations"
-      }
+        features: 'Features',
+        benefits: 'Benefits',
+        integrations: 'Integrations',
+      },
     },
     links: {
       home: 'Home',
@@ -74,31 +74,31 @@ export const translations = {
     signIn: 'Anmelden',
     BookADemo: 'Eine Demo buchen',
     aiVoiceBot: {
-      title: "KI-Sprach-Bot",
-      description: "Intelligente Sprachassistent für Ihr Unternehmen",
+      title: 'KI-Sprach-Bot',
+      description: 'Intelligente Sprachassistent für Ihr Unternehmen',
       features: [
-        "Verarbeitung natürlicher Sprache",
-        "Spracherkennung",
-        "Mehrsprachige Unterstützung",
-        "Eigenständige Sprachtraining"
+        'Verarbeitung natürlicher Sprache',
+        'Spracherkennung',
+        'Mehrsprachige Unterstützung',
+        'Eigenständige Sprachtraining',
       ],
       benefits: [
-        "24/7 Kundendienst",
-        "Reduzierte Antwortzeit",
-        "Konsistente Servicequalität",
-        "Kosteneffizienz"
+        '24/7 Kundendienst',
+        'Reduzierte Antwortzeit',
+        'Konsistente Servicequalität',
+        'Kosteneffizienz',
       ],
       integrations: [
-        "Telefonsysteme",
-        "CRM-Plattformen",
-        "Chat-Anwendungen",
-        "Analysewerkzeuge"
+        'Telefonsysteme',
+        'CRM-Plattformen',
+        'Chat-Anwendungen',
+        'Analysewerkzeuge',
       ],
       sectionTitles: {
-        features: "Hauptfunktionen",
-        benefits: "Vorteile",
-        integrations: "Integrationen"
-      }
+        features: 'Hauptfunktionen',
+        benefits: 'Vorteile',
+        integrations: 'Integrationen',
+      },
     },
     links: {
       home: 'Startseite',
@@ -135,31 +135,31 @@ export const translations = {
     signIn: 'Iniciar sesión',
     BookADemo: 'Reservar una Demo',
     aiVoiceBot: {
-      title: "Bot de Voz IA",
-      description: "Asistente de voz inteligente para su negocio",
+      title: 'Bot de Voz IA',
+      description: 'Asistente de voz inteligente para su negocio',
       features: [
-        "Procesamiento del lenguaje natural",
-        "Reconocimiento de voz",
-        "Soporte multi-idioma",
-        "Entrenamiento de voz personalizado"
+        'Procesamiento del lenguaje natural',
+        'Reconocimiento de voz',
+        'Soporte multi-idioma',
+        'Entrenamiento de voz personalizado',
       ],
       benefits: [
-        "Soporte al cliente 24/7",
-        "Tiempo de respuesta reducido",
-        "Calidad de servicio consistente",
-        "Eficiencia en costes"
+        'Soporte al cliente 24/7',
+        'Tiempo de respuesta reducido',
+        'Calidad de servicio consistente',
+        'Eficiencia en costes',
       ],
       integrations: [
-        "Sistemas de telefonía",
-        "Plataformas CRM",
-        "Aplicaciones de chat",
-        "Herramientas de análisis"
+        'Sistemas de telefonía',
+        'Plataformas CRM',
+        'Aplicaciones de chat',
+        'Herramientas de análisis',
       ],
       sectionTitles: {
-        features: "Características principales",
-        benefits: "Beneficios",
-        integrations: "Integraciones"
-      }
+        features: 'Características principales',
+        benefits: 'Beneficios',
+        integrations: 'Integraciones',
+      },
     },
     links: {
       home: 'Inicio',
@@ -196,31 +196,31 @@ export const translations = {
     signIn: 'Войти',
     BookADemo: 'Забронировать Демо',
     aiVoiceBot: {
-      title: "ИИ Голосовой Агент",
-      description: "Интеллектуальный голосовой помощник для вашего бизнеса",
+      title: 'ИИ Голосовой Агент',
+      description: 'Интеллектуальный голосовой помощник для вашего бизнеса',
       features: [
-        "Обработка естественного языка",
-        "Распознавание речи",
-        "Мультиязычное сопровождение",
-        "Индивидуальное обучение голосу"
+        'Обработка естественного языка',
+        'Распознавание речи',
+        'Мультиязычное сопровождение',
+        'Индивидуальное обучение голосу',
       ],
       benefits: [
-        "Поддержка клиентов 24/7",
-        "Сокращение времени ответа",
-        "Постоянное качество обслуживания",
-        "Эффективность затрат"
+        'Поддержка клиентов 24/7',
+        'Сокращение времени ответа',
+        'Постоянное качество обслуживания',
+        'Эффективность затрат',
       ],
       integrations: [
-        "Телефонные системы",
-        "Платформы CRM",
-        "Чат-приложения",
-        "Инструменты анализа"
+        'Телефонные системы',
+        'Платформы CRM',
+        'Чат-приложения',
+        'Инструменты анализа',
       ],
       sectionTitles: {
-        features: "Ключевые возможности",
-        benefits: "Преимущества",
-        integrations: "Интеграции"
-      }
+        features: 'Ключевые возможности',
+        benefits: 'Преимущества',
+        integrations: 'Интеграции',
+      },
     },
     links: {
       home: 'Главная',
@@ -257,31 +257,31 @@ export const translations = {
     signIn: 'Увійти',
     BookADemo: 'Забронювати Демо',
     aiVoiceBot: {
-      title: "AI Голосовий Агент",
-      description: "Інтелектуальний голосовий асистент для вашого бізнесу",
+      title: 'AI Голосовий Агент',
+      description: 'Інтелектуальний голосовий асистент для вашого бізнесу',
       features: [
-        "Обробка природної мови",
-        "Розпізнавання мови",
-        "Мультимовний супровід",
-        "Індивідуальне навчання голосу"
+        'Обробка природної мови',
+        'Розпізнавання мови',
+        'Мультимовний супровід',
+        'Індивідуальне навчання голосу',
       ],
       benefits: [
-        "Підтримка клієнтів 24/7",
-        "Скорочення часу відповіді",
-        "Постійна якість обслуговування",
-        "Ефективність витрат"
+        'Підтримка клієнтів 24/7',
+        'Скорочення часу відповіді',
+        'Постійна якість обслуговування',
+        'Ефективність витрат',
       ],
       integrations: [
-        "Телефонні системи",
-        "Платформи CRM",
-        "Чат-застосунки",
-        "Інструменти аналізу"
+        'Телефонні системи',
+        'Платформи CRM',
+        'Чат-застосунки',
+        'Інструменти аналізу',
       ],
       sectionTitles: {
-        features: "Ключові можливості",
-        benefits: "Переваги",
-        integrations: "Інтеграції"
-      }
+        features: 'Ключові можливості',
+        benefits: 'Переваги',
+        integrations: 'Інтеграції',
+      },
     },
     links: {
       home: 'Головна',
@@ -309,1630 +309,1754 @@ export const translations = {
 export const toolGroupTranslations = {
   en: {
     'AI Tools for Business': 'AI Tools for Business',
-    'Messaging': 'Messaging',
-    'Integration': 'Integration',
+    Messaging: 'Messaging',
+    Integration: 'Integration',
     'Security & Search': 'Security & Search',
-    'Communication': 'Communication',
+    Communication: 'Communication',
     'Coming Soon': 'Coming Soon',
-    'Hot': 'Hot',
-    'Coming': 'Coming',
+    Hot: 'Hot',
+    Coming: 'Coming',
     // Названия инструментов
     'AI Chat Bot': 'AI Chat Bot',
     'AI Voice Bot': 'AI Voice Bot',
     'AI Avatar': 'AI Avatar',
     'AI Assistant': 'AI Assistant',
     'Custom Development': 'Custom Development',
-    'Counseling': 'Counseling',
-    'KeepinCRM': 'KeepinCRM',
+    Counseling: 'Counseling',
+    KeepinCRM: 'KeepinCRM',
     // ... остальные названия инструментов
   },
   de: {
     'AI Tools for Business': 'KI-Tools für Unternehmen',
-    'Messaging': 'Nachrichten',
-    'Integration': 'Integration',
+    Messaging: 'Nachrichten',
+    Integration: 'Integration',
     'Security & Search': 'Sicherheit & Suche',
-    'Communication': 'Kommunikation',
+    Communication: 'Kommunikation',
     'Coming Soon': 'Demnächst verfügbar',
-    'Hot': 'Beliebt',
-    'Coming': 'Demnächst',
+    Hot: 'Beliebt',
+    Coming: 'Demnächst',
     // Названия инструментов
     'AI Chat Bot': 'KI-Chat-Bot',
     'AI Voice Bot': 'KI-Sprach-Bot',
     'AI Avatar': 'KI-Avatar',
     'AI Assistant': 'KI-Assistent',
     'Custom Development': 'Individuelle Entwicklung',
-    'Counseling': 'Beratung',
-    'KeepinCRM': 'KeepinCRM',
+    Counseling: 'Beratung',
+    KeepinCRM: 'KeepinCRM',
     // ... остальные названия инструментов
   },
   es: {
     'AI Tools for Business': 'Herramientas de IA para Negocios',
-    'Messaging': 'Mensajería',
-    'Integration': 'Integración',
+    Messaging: 'Mensajería',
+    Integration: 'Integración',
     'Security & Search': 'Seguridad y Búsqueda',
-    'Communication': 'Comunicación',
+    Communication: 'Comunicación',
     'Coming Soon': 'Próximamente',
-    'Hot': 'Popular',
-    'Coming': 'Próximo',
+    Hot: 'Popular',
+    Coming: 'Próximo',
     // Названия инструментов
     'AI Chat Bot': 'Bot de Chat IA',
     'AI Voice Bot': 'Bot de Voz IA',
     'AI Avatar': 'Avatar IA',
     'AI Assistant': 'Asistente IA',
     'Custom Development': 'Desarrollo Personalizado',
-    'Counseling': 'Asesoramiento',
-    'KeepinCRM': 'KeepinCRM',
+    Counseling: 'Asesoramiento',
+    KeepinCRM: 'KeepinCRM',
     // ... остальные названия инструментов
   },
   ru: {
     'AI Tools for Business': 'ИИ инструменты для бизнеса',
-    'Messaging': 'Обмен сообщениями',
-    'Integration': 'Интеграция',
+    Messaging: 'Обмен сообщениями',
+    Integration: 'Интеграция',
     'Security & Search': 'Безопасность и поиск',
-    'Communication': 'Коммуникация',
+    Communication: 'Коммуникация',
     'Coming Soon': 'Скоро',
-    'Hot': 'Популярное',
-    'Coming': 'Скоро',
+    Hot: 'Популярное',
+    Coming: 'Скоро',
     'AI Chat Bot': 'ИИ Чат-Агент',
     'AI Voice Bot': 'ИИ Голосовой Агент',
     'AI Avatar': 'ИИ Аватар',
     'AI Assistant': 'ИИ Ассистент',
     'Custom Development': 'Индивидуальная разработка',
-    'Counseling': 'Консультации',
-    'KeepinCRM': 'KeepinCRM',
+    Counseling: 'Консультации',
+    KeepinCRM: 'KeepinCRM',
   },
   ua: {
     'AI Tools for Business': 'ШІ інструменти для бізнесу',
-    'Messaging': 'Обмін повідомленнями',
-    'Integration': 'Інтеграція',
+    Messaging: 'Обмін повідомленнями',
+    Integration: 'Інтеграція',
     'Security & Search': 'Безпека та пошук',
-    'Communication': 'Комунікація',
+    Communication: 'Комунікація',
     'Coming Soon': 'Скоро',
-    'Hot': 'Популярне',
-    'Coming': 'Скоро',
+    Hot: 'Популярне',
+    Coming: 'Скоро',
     'AI Chat Bot': 'ШІ Чат-Агент',
     'AI Voice Bot': 'ШІ Голосовий Агент',
     'AI Avatar': 'ШІ Аватар',
     'AI Assistant': 'ШІ Ассистент',
     'Custom Development': 'Індивідуальна розробка',
-    'Counseling': 'Консультації',
-    'KeepinCRM': 'KeepinCRM',
-  }
+    Counseling: 'Консультації',
+    KeepinCRM: 'KeepinCRM',
+  },
 };
 
 export const demoModalTranslations = {
   en: {
-    watchDemo: "Watch our demo",
-    closeButton: "Close modal"
+    watchDemo: 'Watch our demo',
+    closeButton: 'Close modal',
   },
   de: {
-    watchDemo: "Sehen Sie unsere Demo",
-    closeButton: "Modal schließen"
+    watchDemo: 'Sehen Sie unsere Demo',
+    closeButton: 'Modal schließen',
   },
   es: {
-    watchDemo: "Ver nuestra demo",
-    closeButton: "Cerrar modal"
+    watchDemo: 'Ver nuestra demo',
+    closeButton: 'Cerrar modal',
   },
   ru: {
-    watchDemo: "Смотрите нашу демонстрацию",
-    closeButton: "Закрыть окно"
+    watchDemo: 'Смотрите нашу демонстрацию',
+    closeButton: 'Закрыть окно',
   },
   ua: {
-    watchDemo: "Дивіться нашу демонстрацію",
-    closeButton: "Закрити вікно"
-  }
+    watchDemo: 'Дивіться нашу демонстрацію',
+    closeButton: 'Закрити вікно',
+  },
 } as const;
 
 export const heroTranslations = {
   en: {
     title: {
-      part1: "Unlock the Power of",
-      part2: "Artificial Intelligence",
-      part3: "for Your Business"
+      part1: 'Unlock the Power of',
+      part2: 'Artificial Intelligence',
+      part3: 'for Your Business',
     },
-    description: "Transform your business with cutting-edge AI solutions. We help you implement intelligent automation, increase efficiency and profit",
+    description:
+      'Transform your business with cutting-edge AI solutions. We help you implement intelligent automation, increase efficiency and profit',
     buttons: {
-      getStarted: "Get Started",
-      watchDemo: "Watch Demo"
+      getStarted: 'Get Started',
+      watchDemo: 'Watch Demo',
     },
-    noCreditCard: "Try the Light version for a demonstration on data from your site",
-    imageAlt: "AI Technology Platform Interface",
-    advantagesTitle: "Why Choose Us",
-    advantagesDescription: "Discover the benefits that make our AI solutions stand out from the competition"
+    noCreditCard:
+      'Try the Light version for a demonstration on data from your site',
+    imageAlt: 'AI Technology Platform Interface',
+    advantagesTitle: 'Why Choose Us',
+    advantagesDescription:
+      'Discover the benefits that make our AI solutions stand out from the competition',
   },
   de: {
     title: {
-      part1: "Nutzen Sie die Kraft der",
-      part2: "Künstlichen Intelligenz",
-      part3: "für Ihr Unternehmen"
+      part1: 'Nutzen Sie die Kraft der',
+      part2: 'Künstlichen Intelligenz',
+      part3: 'für Ihr Unternehmen',
     },
-    description: "Transformieren Sie Ihr Unternehmen mit modernsten KI-Lösungen. Wir unterstützen Sie bei der Implementierung intelligenter Automatisierung, erhöhen die Effizienz und den Gewinn Ihres Unternehmens",
+    description:
+      'Transformieren Sie Ihr Unternehmen mit modernsten KI-Lösungen. Wir unterstützen Sie bei der Implementierung intelligenter Automatisierung, erhöhen die Effizienz und den Gewinn Ihres Unternehmens',
     buttons: {
-      getStarted: "Jetzt Starten",
-      watchDemo: "Demo Ansehen"
+      getStarted: 'Jetzt Starten',
+      watchDemo: 'Demo Ansehen',
     },
-    noCreditCard: "Testen Sie die Light-Version für eine Demonstration mit Daten von Ihrer Website",
-    imageAlt: "KI-Technologie-Plattform-Schnittstelle",
-    advantagesTitle: "Warum uns wählen",
-    advantagesDescription: "Entdecken Sie die Vorteile, die unsere KI-Lösungen von der Konkurrenz abheben"
+    noCreditCard:
+      'Testen Sie die Light-Version für eine Demonstration mit Daten von Ihrer Website',
+    imageAlt: 'KI-Technologie-Plattform-Schnittstelle',
+    advantagesTitle: 'Warum uns wählen',
+    advantagesDescription:
+      'Entdecken Sie die Vorteile, die unsere KI-Lösungen von der Konkurrenz abheben',
   },
   es: {
     title: {
-      part1: "Desbloquea el Poder de la",
-      part2: "Inteligencia Artificial",
-      part3: "para tu Negocio"
+      part1: 'Desbloquea el Poder de la',
+      part2: 'Inteligencia Artificial',
+      part3: 'para tu Negocio',
     },
-    description: "Transforma tu negocio con soluciones de IA de vanguardia. Podemos ayudar a implementar la automatización inteligente, aumentar la eficiencia y el beneficio de tu negocio",
+    description:
+      'Transforma tu negocio con soluciones de IA de vanguardia. Podemos ayudar a implementar la automatización inteligente, aumentar la eficiencia y el beneficio de tu negocio',
     buttons: {
-      getStarted: "Comenzar",
-      watchDemo: "Ver Demo"
+      getStarted: 'Comenzar',
+      watchDemo: 'Ver Demo',
     },
-    noCreditCard: "Pruebe la versión Light para una demostración con los datos de su sitio web",
-    imageAlt: "Interfaz de la Plataforma de Tecnología IA",
-    advantagesTitle: "Por qué elegirnos",
-    advantagesDescription: "Descubre los beneficios que hacen que nuestras soluciones de IA destaquen de la competencia"
+    noCreditCard:
+      'Pruebe la versión Light para una demostración con los datos de su sitio web',
+    imageAlt: 'Interfaz de la Plataforma de Tecnología IA',
+    advantagesTitle: 'Por qué elegirnos',
+    advantagesDescription:
+      'Descubre los beneficios que hacen que nuestras soluciones de IA destaquen de la competencia',
   },
   ru: {
     title: {
-      part1: "Раскройте Потенциал",
-      part2: "Искусственного Интеллекта",
-      part3: "для Вашего Бизнеса"
+      part1: 'Раскройте Потенциал',
+      part2: 'Искусственного Интеллекта',
+      part3: 'для Вашего Бизнеса',
     },
-    description: "Трансформируйте ваш бизнес с помощью передовых решений ИИ. Мы помогаем внедрить интеллектуальную автоматизацию, увеличить эффективность и прибыль вашего бизнеса",
+    description:
+      'Трансформируйте ваш бизнес с помощью передовых решений ИИ. Мы помогаем внедрить интеллектуальную автоматизацию, увеличить эффективность и прибыль вашего бизнеса',
     buttons: {
-      getStarted: "Начать",
-      watchDemo: "Смотреть Демо"
+      getStarted: 'Начать',
+      watchDemo: 'Смотреть Демо',
     },
-    noCreditCard: "Попробуйте Light-версию для демонстрации на данных с вашего сайта",
-    imageAlt: "Интерфейс платформы ИИ технологий",
-    advantagesTitle: "Почему стоит выбрать нас",
-    advantagesDescription: "Откройте для себя преимущества, которые выделяют наши решения ИИ среди конкурентов"
+    noCreditCard:
+      'Попробуйте Light-версию для демонстрации на данных с вашего сайта',
+    imageAlt: 'Интерфейс платформы ИИ технологий',
+    advantagesTitle: 'Почему стоит выбрать нас',
+    advantagesDescription:
+      'Откройте для себя преимущества, которые выделяют наши решения ИИ среди конкурентов',
   },
   ua: {
     title: {
-      part1: "Розкрийте Потенціал",
-      part2: "Штучного Інтелекту",
-      part3: "для Вашого Бізнесу"
+      part1: 'Розкрийте Потенціал',
+      part2: 'Штучного Інтелекту',
+      part3: 'для Вашого Бізнесу',
     },
-    description: "Трансформуйте ваш бізнес за допомогою передових рішень ШІ. Мы допомагаємо впровадити інтелектуальну автоматизацію, збільшити ефективність та прибуток вашого бізнесу",
+    description:
+      'Трансформуйте ваш бізнес за допомогою передових рішень ШІ. Мы допомагаємо впровадити інтелектуальну автоматизацію, збільшити ефективність та прибуток вашого бізнесу',
     buttons: {
-      getStarted: "Розпочати",
-      watchDemo: "Дивитись Демо"
+      getStarted: 'Розпочати',
+      watchDemo: 'Дивитись Демо',
     },
-    noCreditCard: "Спробуйте Light-версію для демонстрації на даних з вашого сайту",
-    imageAlt: "Інтерфейс платформи ШІ технологій",
-    advantagesTitle: "Чому варто обрати нас",
-    advantagesDescription: "Відкрийте для себе переваги, які вирізняють наші рішення ШІ серед конкурентів"
-  }
+    noCreditCard:
+      'Спробуйте Light-версію для демонстрації на даних з вашого сайту',
+    imageAlt: 'Інтерфейс платформи ШІ технологій',
+    advantagesTitle: 'Чому варто обрати нас',
+    advantagesDescription:
+      'Відкрийте для себе переваги, які вирізняють наші рішення ШІ серед конкурентів',
+  },
 } as const;
 
 export const advantageCardsTranslations = {
   en: {
     cards: [
       {
-        title: "Artificial Intelligence for Business",
-        description: "We automate routine processes and enhance customer service efficiency with advanced AI solutions"
+        title: 'Artificial Intelligence for Business',
+        description:
+          'We automate routine processes and enhance customer service efficiency with advanced AI solutions',
       },
       {
-        title: "Your Challenges – Our Technology",
-        description: "We transform complex business processes into user-friendly, automated AI solutions"
+        title: 'Your Challenges – Our Technology',
+        description:
+          'We transform complex business processes into user-friendly, automated AI solutions',
       },
       {
-        title: "Intuitive AI Operation",
-        description: "Easy setup, business adaptation, and minimal implementation time – so AI works for you"
+        title: 'Intuitive AI Operation',
+        description:
+          'Easy setup, business adaptation, and minimal implementation time – so AI works for you',
       },
       {
-        title: "High-Quality Results in Minutes",
-        description: "We ensure high accuracy and speed of AI, reducing the time spent on routine tasks"
-      }
-    ]
+        title: 'High-Quality Results in Minutes',
+        description:
+          'We ensure high accuracy and speed of AI, reducing the time spent on routine tasks',
+      },
+    ],
   },
   de: {
     cards: [
       {
-        title: "Künstliche Intelligenz für Unternehmen",
-        description: "Wir automatisieren Routineprozesse und steigern die Effizienz der Kundenbetreuung mit fortschrittlichen KI-Lösungen"
+        title: 'Künstliche Intelligenz für Unternehmen',
+        description:
+          'Wir automatisieren Routineprozesse und steigern die Effizienz der Kundenbetreuung mit fortschrittlichen KI-Lösungen',
       },
       {
-        title: "Ihre Herausforderungen – unsere Technologie",
-        description: "Wir verwandeln komplexe Geschäftsprozesse in benutzerfreundliche, automatisierte KI-Lösungen"
+        title: 'Ihre Herausforderungen – unsere Technologie',
+        description:
+          'Wir verwandeln komplexe Geschäftsprozesse in benutzerfreundliche, automatisierte KI-Lösungen',
       },
       {
-        title: "Intuitive Nutzung der KI",
-        description: "Einfache Einrichtung, Anpassung an Ihr Unternehmen und minimale Implementierungszeit – damit die KI für Sie arbeitet"
+        title: 'Intuitive Nutzung der KI',
+        description:
+          'Einfache Einrichtung, Anpassung an Ihr Unternehmen und minimale Implementierungszeit – damit die KI für Sie arbeitet',
       },
       {
-        title: "Hochwertige Ergebnisse in Minuten",
-        description: "Wir garantieren höchste Genauigkeit und Geschwindigkeit der KI, wodurch Routineaufgaben in kürzester Zeit erledigt werden"
-      }
-    ]
+        title: 'Hochwertige Ergebnisse in Minuten',
+        description:
+          'Wir garantieren höchste Genauigkeit und Geschwindigkeit der KI, wodurch Routineaufgaben in kürzester Zeit erledigt werden',
+      },
+    ],
   },
   es: {
     cards: [
       {
-        title: "Inteligencia Artificial para negocios",
-        description: "Automatizamos procesos rutinarios y mejoramos la eficiencia en la gestión de clientes con soluciones avanzadas de IA"
+        title: 'Inteligencia Artificial para negocios',
+        description:
+          'Automatizamos procesos rutinarios y mejoramos la eficiencia en la gestión de clientes con soluciones avanzadas de IA',
       },
       {
-        title: "Tus desafíos, nuestra tecnología",
-        description: "Transformamos procesos comerciales complejos en soluciones automatizadas basadas en IA"
+        title: 'Tus desafíos, nuestra tecnología',
+        description:
+          'Transformamos procesos comerciales complejos en soluciones automatizadas basadas en IA',
       },
       {
-        title: "Interacción intuitiva con IA",
-        description: "Configuración sencilla, adaptación a tu negocio y un tiempo mínimo de implementación para que la IA trabaje para ti"
+        title: 'Interacción intuitiva con IA',
+        description:
+          'Configuración sencilla, adaptación a tu negocio y un tiempo mínimo de implementación para que la IA trabaje para ti',
       },
       {
-        title: "Resultados de calidad en minutos",
-        description: "Garantizamos alta precisión y velocidad en el trabajo de IA, reduciendo el tiempo en tareas rutinarias"
-      }
-    ]
+        title: 'Resultados de calidad en minutos',
+        description:
+          'Garantizamos alta precisión y velocidad en el trabajo de IA, reduciendo el tiempo en tareas rutinarias',
+      },
+    ],
   },
   ru: {
     cards: [
       {
-        title: "ИИ для бизнеса",
-        description: "Автоматизируем рутинные процессы и повышаем эффективность работы с клиентами с помощью передовых ИИ-решений"
+        title: 'ИИ для бизнеса',
+        description:
+          'Автоматизируем рутинные процессы и повышаем эффективность работы с клиентами с помощью передовых ИИ-решений',
       },
       {
-        title: "Ваши задачи – наши технологии",
-        description: "Превращаем сложные бизнес-процессы в удобные автоматизированные решения на базе ИИ"
+        title: 'Ваши задачи – наши технологии',
+        description:
+          'Превращаем сложные бизнес-процессы в удобные автоматизированные решения на базе ИИ',
       },
       {
-        title: "Интуитивная работа с ИИ",
-        description: "Простая настройка, адаптация под бизнес и минимальное время на внедрение – всё, чтобы ИИ работал на вас"
+        title: 'Интуитивная работа с ИИ',
+        description:
+          'Простая настройка, адаптация под бизнес и минимальное время на внедрение – всё, чтобы ИИ работал на вас',
       },
       {
-        title: "Качественные результаты за минуты",
-        description: "Гарантируем высокую точность и скорость работы ИИ, сокращая время на выполнение рутинных задач"
-      }
-    ]
+        title: 'Качественные результаты за минуты',
+        description:
+          'Гарантируем высокую точность и скорость работы ИИ, сокращая время на выполнение рутинных задач',
+      },
+    ],
   },
   ua: {
     cards: [
       {
-        title: "ШІ для бізнесу",
-        description: "Автоматизуємо рутинні процеси і підвищуємо ефективність роботи з клієнтами за допомогою передових ШІ-рішень"
+        title: 'ШІ для бізнесу',
+        description:
+          'Автоматизуємо рутинні процеси і підвищуємо ефективність роботи з клієнтами за допомогою передових ШІ-рішень',
       },
       {
-        title: "Ваші задачі – наші технології",
-        description: "Перетворюємо складні бізнес-процеси на зручні автоматизовані рішення на основі ШІ"
+        title: 'Ваші задачі – наші технології',
+        description:
+          'Перетворюємо складні бізнес-процеси на зручні автоматизовані рішення на основі ШІ',
       },
       {
-        title: "Інтуїтивна робота з ШІ",
-        description: "Просте налаштування, адаптація під бізнес і мінімальний час на впровадження – все, щоб ШІ працював на вас"
+        title: 'Інтуїтивна робота з ШІ',
+        description:
+          'Просте налаштування, адаптація під бізнес і мінімальний час на впровадження – все, щоб ШІ працював на вас',
       },
       {
-        title: "Якісні результати за хвилини",
-        description: "Гарантуємо високу точність і швидкість роботи ІІ, скорочуючи час на виконання рутинних завдань"
-      }
-    ]
-  }
+        title: 'Якісні результати за хвилини',
+        description:
+          'Гарантуємо високу точність і швидкість роботи ІІ, скорочуючи час на виконання рутинних завдань',
+      },
+    ],
+  },
 };
 
 export const howItWorksTranslations = {
   en: {
-    "sectionTitle": "HOW IT WORKS",
-    "title": "Guide AI to Your Success",
-    "description": "Follow our proven implementation process – we handle everything for you!",
-    "steps": [
-        {
-            "title": "Registration",
-            "description": "You submit your request – we set up the account, considering all the specifics of your business"
-        },
-        {
-            "title": "Knowledge Base Setup",
-            "description": "We gather and import all necessary data, tailoring the AI to your business needs"
-        },
-        {
-            "title": "Integration Setup",
-            "description": "We connect your AI Agent to the required plugins and communication channels"
-        },
-        {
-            "title": "Production Deployment",
-            "description": "We implement the ready-to-use solution and provide ongoing support – you just start using it"
-        },
-        {
-            "title": "Success & ROI",
-            "description": "We monitor performance and optimize the system to ensure you achieve the best results"
-        }
-    ],
-    buttons: {
-      getStarted: "Get Started Free",
-      watchDemo: "Watch Demo"
-    }
-  },
-  de: {
-    "sectionTitle": "WIE ES FUNKTIONIERT",
-    "title": "Steuern Sie die KI zu Ihrem Erfolg",
-    "description": "Folgen Sie unserem bewährten Implementierungsprozess – wir erledigen alles für Sie!",
-    "steps": [
-        {
-            "title": "Registrierung",
-            "description": "Sie senden einfach Ihre Anfrage – wir richten das Konto ein und berücksichtigen alle Besonderheiten Ihres Unternehmens"
-        },
-        {
-            "title": "Einrichtung der Wissensdatenbank",
-            "description": "Wir sammeln und importieren alle notwendigen Daten und passen die KI an Ihr Unternehmen an"
-        },
-        {
-            "title": "Integration einrichten",
-            "description": "Wir verbinden Ihren KI-Agenten mit den erforderlichen Plugins und Kommunikationskanälen"
-        },
-        {
-            "title": "Einführung in die Produktion",
-            "description": "Wir implementieren die fertige Lösung und bieten kontinuierlichen Support – Sie müssen sie nur noch nutzen"
-        },
-        {
-            "title": "Erfolg und ROI",
-            "description": "Wir überwachen die Leistung und optimieren das System, damit Sie die besten Ergebnisse erzielen"
-        }
-    ],
-    buttons: {
-      getStarted: "Kostenlos Starten",
-      watchDemo: "Demo Ansehen"
-    }
-  },
-  es: {
-    "sectionTitle": "CÓMO FUNCIONA",
-    "title": "Dirige la IA hacia tu éxito",
-    "description": "Sigue nuestro proceso de implementación probado: ¡nosotros hacemos todo por ti!",
-    "steps": [
-        {
-            "title": "Registro",
-            "description": "Tú solo dejas tu solicitud, nosotros configuramos la cuenta teniendo en cuenta todas las particularidades de tu negocio"
-        },
-        {
-            "title": "Configuración de la base de conocimientos",
-            "description": "Recopilamos e importamos los datos necesarios, adaptando la IA a tu negocio"
-        },
-        {
-            "title": "Configuración de la integración",
-            "description": "Conectamos tu Agente de IA con los complementos y canales necesarios"
-        },
-        {
-            "title": "Lanzamiento en producción",
-            "description": "Implementamos la solución lista y proporcionamos soporte continuo – solo necesitas empezar a usarla"
-        },
-        {
-            "title": "Éxito y ROI",
-            "description": "Supervisamos el rendimiento y optimizamos el sistema para que obtengas los mejores resultados"
-        }
-    ],
-    buttons: {
-      getStarted: "Comenzar Gratis",
-      watchDemo: "Ver Demo"
-    }
-  },
-  ru: {
-    sectionTitle: "КАК ЭТО РАБОТАЕТ",
-    title: "Направьте ИИ к вашему успеху",
-    description: "Следуйте нашему проверенному процессу внедрения – мы сделаем всё за вас!",
+    sectionTitle: 'HOW IT WORKS',
+    title: 'Guide AI to Your Success',
+    description:
+      'Follow our proven implementation process – we handle everything for you!',
     steps: [
       {
-        title: "Регистрация",
-        description: "Вы оставляете заявку – мы настраиваем аккаунт с учетом всех особенностей вашего бизнеса"
+        title: 'Registration',
+        description:
+          'You submit your request – we set up the account, considering all the specifics of your business',
       },
       {
-        title: "Настройка базы знаний",
-        description: "Мы самостоятельно собираем и импортируем нужные данные, подстраивая ИИ под ваш бизнес"
+        title: 'Knowledge Base Setup',
+        description:
+          'We gather and import all necessary data, tailoring the AI to your business needs',
       },
       {
-        title: "Настройка интеграции",
-        description: "Подключаем вашего ИИ-Агента к нужным плагинам и каналам"
+        title: 'Integration Setup',
+        description:
+          'We connect your AI Agent to the required plugins and communication channels',
       },
       {
-        title: "Запуск в производство",
-        description: "Внедряем готовое решение и обеспечиваем его поддержку – вам остается только пользоваться"
+        title: 'Production Deployment',
+        description:
+          'We implement the ready-to-use solution and provide ongoing support – you just start using it',
       },
       {
-        title: "Успех и ROI",
-        description: "Мы следим за эффективностью и оптимизируем систему, чтобы вы получали максимальный результат"
-      }
+        title: 'Success & ROI',
+        description:
+          'We monitor performance and optimize the system to ensure you achieve the best results',
+      },
     ],
     buttons: {
-      getStarted: "Начать бесплатно",
-      watchDemo: "Смотреть демо"
-    }
+      getStarted: 'Get Started Free',
+      watchDemo: 'Watch Demo',
+    },
+  },
+  de: {
+    sectionTitle: 'WIE ES FUNKTIONIERT',
+    title: 'Steuern Sie die KI zu Ihrem Erfolg',
+    description:
+      'Folgen Sie unserem bewährten Implementierungsprozess – wir erledigen alles für Sie!',
+    steps: [
+      {
+        title: 'Registrierung',
+        description:
+          'Sie senden einfach Ihre Anfrage – wir richten das Konto ein und berücksichtigen alle Besonderheiten Ihres Unternehmens',
+      },
+      {
+        title: 'Einrichtung der Wissensdatenbank',
+        description:
+          'Wir sammeln und importieren alle notwendigen Daten und passen die KI an Ihr Unternehmen an',
+      },
+      {
+        title: 'Integration einrichten',
+        description:
+          'Wir verbinden Ihren KI-Agenten mit den erforderlichen Plugins und Kommunikationskanälen',
+      },
+      {
+        title: 'Einführung in die Produktion',
+        description:
+          'Wir implementieren die fertige Lösung und bieten kontinuierlichen Support – Sie müssen sie nur noch nutzen',
+      },
+      {
+        title: 'Erfolg und ROI',
+        description:
+          'Wir überwachen die Leistung und optimieren das System, damit Sie die besten Ergebnisse erzielen',
+      },
+    ],
+    buttons: {
+      getStarted: 'Kostenlos Starten',
+      watchDemo: 'Demo Ansehen',
+    },
+  },
+  es: {
+    sectionTitle: 'CÓMO FUNCIONA',
+    title: 'Dirige la IA hacia tu éxito',
+    description:
+      'Sigue nuestro proceso de implementación probado: ¡nosotros hacemos todo por ti!',
+    steps: [
+      {
+        title: 'Registro',
+        description:
+          'Tú solo dejas tu solicitud, nosotros configuramos la cuenta teniendo en cuenta todas las particularidades de tu negocio',
+      },
+      {
+        title: 'Configuración de la base de conocimientos',
+        description:
+          'Recopilamos e importamos los datos necesarios, adaptando la IA a tu negocio',
+      },
+      {
+        title: 'Configuración de la integración',
+        description:
+          'Conectamos tu Agente de IA con los complementos y canales necesarios',
+      },
+      {
+        title: 'Lanzamiento en producción',
+        description:
+          'Implementamos la solución lista y proporcionamos soporte continuo – solo necesitas empezar a usarla',
+      },
+      {
+        title: 'Éxito y ROI',
+        description:
+          'Supervisamos el rendimiento y optimizamos el sistema para que obtengas los mejores resultados',
+      },
+    ],
+    buttons: {
+      getStarted: 'Comenzar Gratis',
+      watchDemo: 'Ver Demo',
+    },
+  },
+  ru: {
+    sectionTitle: 'КАК ЭТО РАБОТАЕТ',
+    title: 'Направьте ИИ к вашему успеху',
+    description:
+      'Следуйте нашему проверенному процессу внедрения – мы сделаем всё за вас!',
+    steps: [
+      {
+        title: 'Регистрация',
+        description:
+          'Вы оставляете заявку – мы настраиваем аккаунт с учетом всех особенностей вашего бизнеса',
+      },
+      {
+        title: 'Настройка базы знаний',
+        description:
+          'Мы самостоятельно собираем и импортируем нужные данные, подстраивая ИИ под ваш бизнес',
+      },
+      {
+        title: 'Настройка интеграции',
+        description: 'Подключаем вашего ИИ-Агента к нужным плагинам и каналам',
+      },
+      {
+        title: 'Запуск в производство',
+        description:
+          'Внедряем готовое решение и обеспечиваем его поддержку – вам остается только пользоваться',
+      },
+      {
+        title: 'Успех и ROI',
+        description:
+          'Мы следим за эффективностью и оптимизируем систему, чтобы вы получали максимальный результат',
+      },
+    ],
+    buttons: {
+      getStarted: 'Начать бесплатно',
+      watchDemo: 'Смотреть демо',
+    },
   },
   ua: {
-    "sectionTitle": "ЯК ЦЕ ПРАЦЮЄ",
-    "title": "Спрямуйте ШІ до вашого успіху",
-    "description": "Дотримуйтесь нашого перевіреного процесу впровадження – ми зробимо все за вас!",
-    "steps": [
-        {
-            "title": "Реєстрація",
-            "description": "Ви залишаєте заявку – ми налаштовуємо акаунт з урахуванням усіх особливостей вашого бізнесу"
-        },
-        {
-            "title": "Налаштування бази знань",
-            "description": "Ми самостійно збираємо та імпортуємо необхідні дані, адаптуючи ШІ під ваш бізнес"
-        },
-        {
-            "title": "Налаштування інтеграції",
-            "description": "Підключаємо вашого ШІ-Агента до необхідних плагінів і каналів"
-        },
-        {
-            "title": "Запуск у виробництво",
-            "description": "Впроваджуємо готове рішення та забезпечуємо його підтримку – вам залишається лише користуватися"
-        },
-        {
-            "title": "Успіх і ROI",
-            "description": "Ми стежимо за ефективністю та оптимізуємо систему, щоб ви отримували максимальний результат"
-        }
+    sectionTitle: 'ЯК ЦЕ ПРАЦЮЄ',
+    title: 'Спрямуйте ШІ до вашого успіху',
+    description:
+      'Дотримуйтесь нашого перевіреного процесу впровадження – ми зробимо все за вас!',
+    steps: [
+      {
+        title: 'Реєстрація',
+        description:
+          'Ви залишаєте заявку – ми налаштовуємо акаунт з урахуванням усіх особливостей вашого бізнесу',
+      },
+      {
+        title: 'Налаштування бази знань',
+        description:
+          'Ми самостійно збираємо та імпортуємо необхідні дані, адаптуючи ШІ під ваш бізнес',
+      },
+      {
+        title: 'Налаштування інтеграції',
+        description:
+          'Підключаємо вашого ШІ-Агента до необхідних плагінів і каналів',
+      },
+      {
+        title: 'Запуск у виробництво',
+        description:
+          'Впроваджуємо готове рішення та забезпечуємо його підтримку – вам залишається лише користуватися',
+      },
+      {
+        title: 'Успіх і ROI',
+        description:
+          'Ми стежимо за ефективністю та оптимізуємо систему, щоб ви отримували максимальний результат',
+      },
     ],
     buttons: {
-      getStarted: "Почати безкоштовно",
-      watchDemo: "Дивитись демо"
-    }
-  }
+      getStarted: 'Почати безкоштовно',
+      watchDemo: 'Дивитись демо',
+    },
+  },
 };
 
 export const footerTranslations = {
   en: {
-    companyDescription: "Transforming businesses with cutting-edge AI solutions and intelligent automation.",
+    companyDescription:
+      'Transforming businesses with cutting-edge AI solutions and intelligent automation.',
     navigation: {
-      title: "Navigation",
+      title: 'Navigation',
       links: {
-        pricing: "Pricing",
-        guide: "Guide",
-        faq: "FAQ",
-        aboutUs: "About US",
-        blog: "Blog"
-      }
+        pricing: 'Pricing',
+        guide: 'Guide',
+        faq: 'FAQ',
+        aboutUs: 'About US',
+        blog: 'Blog',
+      },
     },
     contactUs: {
-      title: "Contact Us",
-      phone: "+49 (0) 30 123456789",
-      email: "office@neurogenlab.de",
-      whatsApp: "WhatsApp",
-      linkedIn: "LinkedIn",
+      title: 'Contact Us',
+      phone: '+49 (0) 30 123456789',
+      email: 'office@neurogenlab.de',
+      whatsApp: 'WhatsApp',
+      linkedIn: 'LinkedIn',
       address: {
-        street: "Gartenweg 2",
-        city: "16515 Oranienburg, Germany"
-      }
+        street: 'Gartenweg 2',
+        city: '16515 Oranienburg, Germany',
+      },
     },
     newsletter: {
-      title: "Newsletter",
-      description: "Subscribe to our newsletter to get the latest updates and news.",
-      placeholder: "Your email address",
-      agreement: "I agree to receive newsletters and accept the",
-      privacyPolicy: "Privacy Policy"
+      title: 'Newsletter',
+      description:
+        'Subscribe to our newsletter to get the latest updates and news.',
+      placeholder: 'Your email address',
+      agreement: 'I agree to receive newsletters and accept the',
+      privacyPolicy: 'Privacy Policy',
     },
     legalLinks: {
-      termsOfService: "Terms of Service",
-      privacyPolicy: "Privacy Policy",
-      cookiePolicy: "Cookie Policy",
-      impressum: "Impressum",
-      responsibleAiPolicy: "Responsible AI Policy",
-      disclaimer: "Disclaimer"
+      termsOfService: 'Terms of Service',
+      privacyPolicy: 'Privacy Policy',
+      cookiePolicy: 'Cookie Policy',
+      impressum: 'Impressum',
+      responsibleAiPolicy: 'Responsible AI Policy',
+      disclaimer: 'Disclaimer',
     },
-    copyright: "© {year} NeuroGen Lab. All rights reserved."
+    copyright: '© {year} NeuroGen Lab. All rights reserved.',
   },
   de: {
-    companyDescription: "Transformation von Unternehmen durch modernste KI-Lösungen und intelligente Automatisierung.",
+    companyDescription:
+      'Transformation von Unternehmen durch modernste KI-Lösungen und intelligente Automatisierung.',
     navigation: {
-      title: "Navigation",
+      title: 'Navigation',
       links: {
-        pricing: "Preise",
-        guide: "Anleitung",
-        faq: "FAQ",
-        aboutUs: "Über uns",
-        blog: "Blog"
-      }
+        pricing: 'Preise',
+        guide: 'Anleitung',
+        faq: 'FAQ',
+        aboutUs: 'Über uns',
+        blog: 'Blog',
+      },
     },
     contactUs: {
-      title: "Kontakt",
-      phone: "+49 (0) 30 123456789",
-      email: "office@neurogenlab.de",
-      whatsApp: "WhatsApp",
-      linkedIn: "LinkedIn",
+      title: 'Kontakt',
+      phone: '+49 (0) 30 123456789',
+      email: 'office@neurogenlab.de',
+      whatsApp: 'WhatsApp',
+      linkedIn: 'LinkedIn',
       address: {
-        street: "Gartenweg 2",
-        city: "16515 Oranienburg, Deutschland"
-      }
+        street: 'Gartenweg 2',
+        city: '16515 Oranienburg, Deutschland',
+      },
     },
     newsletter: {
-      title: "Newsletter",
-      description: "Abonnieren Sie unseren Newsletter, um die neuesten Updates und Nachrichten zu erhalten.",
-      placeholder: "Ihre E-Mail-Adresse",
-      agreement: "Ich stimme dem Erhalt von Newslettern zu und akzeptiere die",
-      privacyPolicy: "Datenschutzerklärung"
+      title: 'Newsletter',
+      description:
+        'Abonnieren Sie unseren Newsletter, um die neuesten Updates und Nachrichten zu erhalten.',
+      placeholder: 'Ihre E-Mail-Adresse',
+      agreement: 'Ich stimme dem Erhalt von Newslettern zu und akzeptiere die',
+      privacyPolicy: 'Datenschutzerklärung',
     },
     legalLinks: {
-      termsOfService: "Nutzungsbedingungen",
-      privacyPolicy: "Datenschutzerklärung",
-      cookiePolicy: "Cookie-Richtlinie",
-      impressum: "Impressum",
-      responsibleAiPolicy: "KI-Verantwortungsrichtlinie",
-      disclaimer: "Haftungsausschluss"
+      termsOfService: 'Nutzungsbedingungen',
+      privacyPolicy: 'Datenschutzerklärung',
+      cookiePolicy: 'Cookie-Richtlinie',
+      impressum: 'Impressum',
+      responsibleAiPolicy: 'KI-Verantwortungsrichtlinie',
+      disclaimer: 'Haftungsausschluss',
     },
-    copyright: "© {year} NeuroGen Lab. Alle Rechte vorbehalten."
+    copyright: '© {year} NeuroGen Lab. Alle Rechte vorbehalten.',
   },
   es: {
-    companyDescription: "Transformando empresas con soluciones de IA de vanguardia y automatización inteligente.",
+    companyDescription:
+      'Transformando empresas con soluciones de IA de vanguardia y automatización inteligente.',
     navigation: {
-      title: "Navegación",
+      title: 'Navegación',
       links: {
-        pricing: "Precios",
-        guide: "Guía",
-        faq: "FAQ",
-        aboutUs: "Sobre nosotros",
-        blog: "Blog"
-      }
+        pricing: 'Precios',
+        guide: 'Guía',
+        faq: 'FAQ',
+        aboutUs: 'Sobre nosotros',
+        blog: 'Blog',
+      },
     },
     contactUs: {
-      title: "Contáctenos",
-      phone: "+49 (0) 30 123456789",
-      email: "office@neurogenlab.de",
-      whatsApp: "WhatsApp",
-      linkedIn: "LinkedIn",
+      title: 'Contáctenos',
+      phone: '+49 (0) 30 123456789',
+      email: 'office@neurogenlab.de',
+      whatsApp: 'WhatsApp',
+      linkedIn: 'LinkedIn',
       address: {
-        street: "Gartenweg 2",
-        city: "16515 Oranienburg, Alemania"
-      }
+        street: 'Gartenweg 2',
+        city: '16515 Oranienburg, Alemania',
+      },
     },
     newsletter: {
-      title: "Boletín",
-      description: "Suscríbase a nuestro boletín para recibir las últimas actualizaciones y noticias.",
-      placeholder: "Su dirección de correo electrónico",
-      agreement: "Acepto recibir boletines y acepto la",
-      privacyPolicy: "Política de Privacidad"
+      title: 'Boletín',
+      description:
+        'Suscríbase a nuestro boletín para recibir las últimas actualizaciones y noticias.',
+      placeholder: 'Su dirección de correo electrónico',
+      agreement: 'Acepto recibir boletines y acepto la',
+      privacyPolicy: 'Política de Privacidad',
     },
     legalLinks: {
-      termsOfService: "Términos de Servicio",
-      privacyPolicy: "Política de Privacidad",
-      cookiePolicy: "Política de Cookies",
-      impressum: "Aviso Legal",
-      responsibleAiPolicy: "Política de IA Responsable",
-      disclaimer: "Descargo de Responsabilidad"
+      termsOfService: 'Términos de Servicio',
+      privacyPolicy: 'Política de Privacidad',
+      cookiePolicy: 'Política de Cookies',
+      impressum: 'Aviso Legal',
+      responsibleAiPolicy: 'Política de IA Responsable',
+      disclaimer: 'Descargo de Responsabilidad',
     },
-    copyright: "© {year} NeuroGen Lab. Todos los derechos reservados."
+    copyright: '© {year} NeuroGen Lab. Todos los derechos reservados.',
   },
   ru: {
-    companyDescription: "Трансформация бизнеса с помощью передовых ИИ-решений и интеллектуальной автоматизации.",
+    companyDescription:
+      'Трансформация бизнеса с помощью передовых ИИ-решений и интеллектуальной автоматизации.',
     navigation: {
-      title: "Навигация",
+      title: 'Навигация',
       links: {
-        pricing: "Цены",
-        guide: "Руководство",
-        faq: "ЧАВО",
-        aboutUs: "О нас",
-        blog: "Блог"
-      }
+        pricing: 'Цены',
+        guide: 'Руководство',
+        faq: 'ЧАВО',
+        aboutUs: 'О нас',
+        blog: 'Блог',
+      },
     },
     contactUs: {
-      title: "Свяжитесь с нами",
-      phone: "+49 (0) 30 123456789",
-      email: "office@neurogenlab.de",
-      whatsApp: "WhatsApp",
-      linkedIn: "LinkedIn",
+      title: 'Свяжитесь с нами',
+      phone: '+49 (0) 30 123456789',
+      email: 'office@neurogenlab.de',
+      whatsApp: 'WhatsApp',
+      linkedIn: 'LinkedIn',
       address: {
-        street: "Gartenweg 2",
-        city: "16515 Oranienburg, Германия"
-      }
+        street: 'Gartenweg 2',
+        city: '16515 Oranienburg, Германия',
+      },
     },
     newsletter: {
-      title: "Рассылка",
-      description: "Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости.",
-      placeholder: "Ваш email адрес",
-      agreement: "Я согласен получать рассылку и принимаю",
-      privacyPolicy: "Политику конфиденциальности"
+      title: 'Рассылка',
+      description:
+        'Подпишитесь на нашу рассылку, чтобы получать последние обновления и новости.',
+      placeholder: 'Ваш email адрес',
+      agreement: 'Я согласен получать рассылку и принимаю',
+      privacyPolicy: 'Политику конфиденциальности',
     },
     legalLinks: {
-      termsOfService: "Условия использования",
-      privacyPolicy: "Политика конфиденциальности",
-      cookiePolicy: "Политика использования файлов cookie",
-      impressum: "Выходные данные",
-      responsibleAiPolicy: "Политика ответственного ИИ",
-      disclaimer: "Отказ от ответственности"
+      termsOfService: 'Условия использования',
+      privacyPolicy: 'Политика конфиденциальности',
+      cookiePolicy: 'Политика использования файлов cookie',
+      impressum: 'Выходные данные',
+      responsibleAiPolicy: 'Политика ответственного ИИ',
+      disclaimer: 'Отказ от ответственности',
     },
-    copyright: "© {year} NeuroGen Lab. Все права защищены."
+    copyright: '© {year} NeuroGen Lab. Все права защищены.',
   },
   ua: {
-    companyDescription: "Трансформація бізнесу за допомогою передових ШІ-рішень та інтелектуальної автоматизації.",
+    companyDescription:
+      'Трансформація бізнесу за допомогою передових ШІ-рішень та інтелектуальної автоматизації.',
     navigation: {
-      title: "Навігація",
+      title: 'Навігація',
       links: {
-        pricing: "Ціни",
-        guide: "Посібник",
-        faq: "ЧАПИ",
-        aboutUs: "Про нас",
-        blog: "Блог"
-      }
+        pricing: 'Ціни',
+        guide: 'Посібник',
+        faq: 'ЧАПИ',
+        aboutUs: 'Про нас',
+        blog: 'Блог',
+      },
     },
     contactUs: {
       title: "Зв'яжіться з нами",
-      phone: "+49 (0) 30 123456789",
-      email: "office@neurogenlab.de",
-      whatsApp: "WhatsApp",
-      linkedIn: "LinkedIn",
+      phone: '+49 (0) 30 123456789',
+      email: 'office@neurogenlab.de',
+      whatsApp: 'WhatsApp',
+      linkedIn: 'LinkedIn',
       address: {
-        street: "Gartenweg 2",
-        city: "16515 Oranienburg, Німеччина"
-      }
+        street: 'Gartenweg 2',
+        city: '16515 Oranienburg, Німеччина',
+      },
     },
     newsletter: {
-      title: "Розсилка",
-      description: "Підпишіться на нашу розсилку, щоб отримувати останні оновлення та новини.",
-      placeholder: "Ваша email адреса",
-      agreement: "Я погоджуюсь отримувати розсилку та приймаю",
-      privacyPolicy: "Політику конфіденційності"
+      title: 'Розсилка',
+      description:
+        'Підпишіться на нашу розсилку, щоб отримувати останні оновлення та новини.',
+      placeholder: 'Ваша email адреса',
+      agreement: 'Я погоджуюсь отримувати розсилку та приймаю',
+      privacyPolicy: 'Політику конфіденційності',
     },
     legalLinks: {
-      termsOfService: "Умови використання",
-      privacyPolicy: "Політика конфіденційності",
-      cookiePolicy: "Політика використання файлів cookie",
-      impressum: "Вихідні дані",
-      responsibleAiPolicy: "Політика відповідального ШІ",
-      disclaimer: "Відмова від відповідальності"
+      termsOfService: 'Умови використання',
+      privacyPolicy: 'Політика конфіденційності',
+      cookiePolicy: 'Політика використання файлів cookie',
+      impressum: 'Вихідні дані',
+      responsibleAiPolicy: 'Політика відповідального ШІ',
+      disclaimer: 'Відмова від відповідальності',
     },
-    copyright: "© {year} NeuroGen Lab. Всі права захищені."
-  }
+    copyright: '© {year} NeuroGen Lab. Всі права захищені.',
+  },
 } as const;
 
 export const newsletterFormTranslations = {
   en: {
-    placeholder: "Your email address",
-    agreement: "I agree to receive newsletters and accept",
-    privacyPolicy: "Privacy Policy",
-    successTitle: "Successfully Subscribed!",
-    successMessage: "Thank you for joining our newsletter.",
-    submit: "Submit"
+    placeholder: 'Your email address',
+    agreement: 'I agree to receive newsletters and accept',
+    privacyPolicy: 'Privacy Policy',
+    successTitle: 'Successfully Subscribed!',
+    successMessage: 'Thank you for joining our newsletter.',
+    submit: 'Submit',
   },
   de: {
-    placeholder: "Ihre E-Mail-Adresse",
-    agreement: "Ich stimme dem Erhalt von Newslettern zu und akzeptiere die",
-    privacyPolicy: "Datenschutzerklärung",
-    successTitle: "Erfolgreich abonniert!",
-    successMessage: "Danke, dass Sie unseren Newsletter abonniert haben.",
-    submit: "Absenden"
+    placeholder: 'Ihre E-Mail-Adresse',
+    agreement: 'Ich stimme dem Erhalt von Newslettern zu und akzeptiere die',
+    privacyPolicy: 'Datenschutzerklärung',
+    successTitle: 'Erfolgreich abonniert!',
+    successMessage: 'Danke, dass Sie unseren Newsletter abonniert haben.',
+    submit: 'Absenden',
   },
   es: {
-    placeholder: "Su dirección de correo electrónico",
-    agreement: "Acepto recibir boletines y acepto la",
-    privacyPolicy: "Política de Privacidad",
-    successTitle: "¡Suscripción exitosa!",
-    successMessage: "Gracias por suscribirse a nuestro boletín.",
-    submit: "Enviar"
+    placeholder: 'Su dirección de correo electrónico',
+    agreement: 'Acepto recibir boletines y acepto la',
+    privacyPolicy: 'Política de Privacidad',
+    successTitle: '¡Suscripción exitosa!',
+    successMessage: 'Gracias por suscribirse a nuestro boletín.',
+    submit: 'Enviar',
   },
   ru: {
-    placeholder: "Ваш email адрес",
-    agreement: "Я согласен получать рассылку и принимаю",
-    privacyPolicy: "Политику конфиденциальности",
-    successTitle: "Успешная подписка!",
-    successMessage: "Спасибо за подписку на нашу рассылку.",
-    submit: "Отправить"
+    placeholder: 'Ваш email адрес',
+    agreement: 'Я согласен получать рассылку и принимаю',
+    privacyPolicy: 'Политику конфиденциальности',
+    successTitle: 'Успешная подписка!',
+    successMessage: 'Спасибо за подписку на нашу рассылку.',
+    submit: 'Отправить',
   },
   ua: {
-    placeholder: "Ваша email адреса",
-    agreement: "Я погоджуюсь отримувати розсилку та приймаю",
-    privacyPolicy: "Політику конфіденційності",
-    successTitle: "Успішна підписка!",
-    successMessage: "Дякуємо за підписку на нашу розсилку.",
-    submit: "Надіслати"
-  }
+    placeholder: 'Ваша email адреса',
+    agreement: 'Я погоджуюсь отримувати розсилку та приймаю',
+    privacyPolicy: 'Політику конфіденційності',
+    successTitle: 'Успішна підписка!',
+    successMessage: 'Дякуємо за підписку на нашу розсилку.',
+    submit: 'Надіслати',
+  },
 } as const;
 
 export const consentDialogTranslations = {
   en: {
-    title: "Privacy Settings",
-    description: "We use cookies to enhance your browsing experience and analyze our traffic.",
-    acceptAll: "Accept All",
-    customize: "Customize",
-    rejectAll: "Reject All",
-    savePreferences: "Save Preferences",
-    privacyPolicy: "Privacy Policy",
-    cookiePolicy: "Cookie Policy"
+    title: 'Privacy Settings',
+    description:
+      'We use cookies to enhance your browsing experience and analyze our traffic.',
+    acceptAll: 'Accept All',
+    customize: 'Customize',
+    rejectAll: 'Reject All',
+    savePreferences: 'Save Preferences',
+    privacyPolicy: 'Privacy Policy',
+    cookiePolicy: 'Cookie Policy',
   },
   de: {
-    title: "Datenschutzeinstellungen",
-    description: "Wir verwenden Cookies, um Ihr Surferlebnis zu verbessern und unseren Verkehr zu analysieren.",
-    acceptAll: "Alle akzeptieren",
-    customize: "Anpassen",
-    rejectAll: "Alle ablehnen",
-    savePreferences: "Einstellungen speichern",
-    privacyPolicy: "Datenschutzerklärung",
-    cookiePolicy: "Cookie-Richtlinie"
+    title: 'Datenschutzeinstellungen',
+    description:
+      'Wir verwenden Cookies, um Ihr Surferlebnis zu verbessern und unseren Verkehr zu analysieren.',
+    acceptAll: 'Alle akzeptieren',
+    customize: 'Anpassen',
+    rejectAll: 'Alle ablehnen',
+    savePreferences: 'Einstellungen speichern',
+    privacyPolicy: 'Datenschutzerklärung',
+    cookiePolicy: 'Cookie-Richtlinie',
   },
   es: {
-    title: "Configuración de Privacidad",
-    description: "Utilizamos cookies para mejorar su experiencia de navegación y analizar nuestro tráfico.",
-    acceptAll: "Aceptar Todo",
-    customize: "Personalizar",
-    rejectAll: "Rechazar Todo",
-    savePreferences: "Guardar Preferencias",
-    privacyPolicy: "Política de Privacidad",
-    cookiePolicy: "Política de Cookies"
+    title: 'Configuración de Privacidad',
+    description:
+      'Utilizamos cookies para mejorar su experiencia de navegación y analizar nuestro tráfico.',
+    acceptAll: 'Aceptar Todo',
+    customize: 'Personalizar',
+    rejectAll: 'Rechazar Todo',
+    savePreferences: 'Guardar Preferencias',
+    privacyPolicy: 'Política de Privacidad',
+    cookiePolicy: 'Política de Cookies',
   },
   ru: {
-    title: "Настройки конфиденциальности",
-    description: "Мы используем файлы cookie для улучшения вашего просмотра и анализа трафика.",
-    acceptAll: "Принять все",
-    customize: "Настроить",
-    rejectAll: "Отклонить все",
-    savePreferences: "Сохранить настройки",
-    privacyPolicy: "Политику конфиденциальности",
-    cookiePolicy: "Политика использования файлов cookie"
+    title: 'Настройки конфиденциальности',
+    description:
+      'Мы используем файлы cookie для улучшения вашего просмотра и анализа трафика.',
+    acceptAll: 'Принять все',
+    customize: 'Настроить',
+    rejectAll: 'Отклонить все',
+    savePreferences: 'Сохранить настройки',
+    privacyPolicy: 'Политику конфиденциальности',
+    cookiePolicy: 'Политика использования файлов cookie',
   },
   ua: {
-    title: "Налаштування конфіденційності",
-    description: "Ми використовуємо файли cookie для покращення перегляду та аналізу трафіку.",
-    acceptAll: "Прийняти все",
-    customize: "Налаштувати",
-    rejectAll: "Відхилити все",
-    savePreferences: "Зберегти налаштування",
-    privacyPolicy: "Політику конфіденційності",
-    cookiePolicy: "Політика використання файлів cookie"
-  }
+    title: 'Налаштування конфіденційності',
+    description:
+      'Ми використовуємо файли cookie для покращення перегляду та аналізу трафіку.',
+    acceptAll: 'Прийняти все',
+    customize: 'Налаштувати',
+    rejectAll: 'Відхилити все',
+    savePreferences: 'Зберегти налаштування',
+    privacyPolicy: 'Політику конфіденційності',
+    cookiePolicy: 'Політика використання файлів cookie',
+  },
 } as const;
 
 export const guideTranslations = {
   en: {
     metadata: {
-      title: "User Guide - NeuroGen Lab | AI Implementation Guide",
-      description: "Comprehensive guide to using NeuroGen Lab's AI solutions. Learn about getting started, advanced features, and best practices for optimal AI implementation."
+      title: 'User Guide - NeuroGen Lab | AI Implementation Guide',
+      description:
+        "Comprehensive guide to using NeuroGen Lab's AI solutions. Learn about getting started, advanced features, and best practices for optimal AI implementation.",
     },
     header: {
-      title: "User Guide",
-      description: "Everything you need to know about using NeuroGen Lab effectively"
+      title: 'User Guide',
+      description:
+        'Everything you need to know about using NeuroGen Lab effectively',
     },
     sections: [
       {
-        title: "Getting Started",
-        description: "Learn the basics of NeuroGen Lab and set up your first AI project",
+        title: 'Getting Started',
+        description:
+          'Learn the basics of NeuroGen Lab and set up your first AI project',
         items: [
-          "Create your account",
-          "Configure your AI preferences",
-          "Import your data",
-          "Start generating content"
-        ]
+          'Create your account',
+          'Configure your AI preferences',
+          'Import your data',
+          'Start generating content',
+        ],
       },
       {
-        title: "Advanced Features",
-        description: "Explore advanced AI capabilities and customization options",
+        title: 'Advanced Features',
+        description:
+          'Explore advanced AI capabilities and customization options',
         items: [
-          "Custom model training",
-          "API integration",
-          "Workflow automation",
-          "Performance analytics"
-        ]
+          'Custom model training',
+          'API integration',
+          'Workflow automation',
+          'Performance analytics',
+        ],
       },
       {
-        title: "Best Practices",
-        description: "Optimize your AI implementation for best results",
+        title: 'Best Practices',
+        description: 'Optimize your AI implementation for best results',
         items: [
-          "Data preparation guidelines",
-          "Model optimization tips",
-          "Security best practices",
-          "Performance tuning"
-        ]
-      }
+          'Data preparation guidelines',
+          'Model optimization tips',
+          'Security best practices',
+          'Performance tuning',
+        ],
+      },
     ],
-    learnMore: "Learn More"
+    learnMore: 'Learn More',
   },
   de: {
     metadata: {
-      title: "Benutzerhandbuch - NeuroGen Lab | KI-Implementierungsleitfaden",
-      description: "Umfassender Leitfaden zur Nutzung der KI-Lösungen von NeuroGen Lab. Erfahren Sie mehr über den Einstieg, erweiterte Funktionen und Best Practices für eine optimale KI-Implementierung."
+      title: 'Benutzerhandbuch - NeuroGen Lab | KI-Implementierungsleitfaden',
+      description:
+        'Umfassender Leitfaden zur Nutzung der KI-Lösungen von NeuroGen Lab. Erfahren Sie mehr über den Einstieg, erweiterte Funktionen und Best Practices für eine optimale KI-Implementierung.',
     },
     header: {
-      title: "Benutzerhandbuch",
-      description: "Alles, was Sie über die effektive Nutzung von NeuroGen Lab wissen müssen"
+      title: 'Benutzerhandbuch',
+      description:
+        'Alles, was Sie über die effektive Nutzung von NeuroGen Lab wissen müssen',
     },
     sections: [
       {
-        title: "Erste Schritte",
-        description: "Lernen Sie die Grundlagen von NeuroGen Lab und richten Sie Ihr erstes KI-Projekt ein",
+        title: 'Erste Schritte',
+        description:
+          'Lernen Sie die Grundlagen von NeuroGen Lab und richten Sie Ihr erstes KI-Projekt ein',
         items: [
-          "Konto erstellen",
-          "KI-Einstellungen konfigurieren",
-          "Daten importieren",
-          "Inhalte generieren"
-        ]
+          'Konto erstellen',
+          'KI-Einstellungen konfigurieren',
+          'Daten importieren',
+          'Inhalte generieren',
+        ],
       },
       {
-        title: "Erweiterte Funktionen",
-        description: "Erkunden Sie erweiterte KI-Funktionen und Anpassungsoptionen",
+        title: 'Erweiterte Funktionen',
+        description:
+          'Erkunden Sie erweiterte KI-Funktionen und Anpassungsoptionen',
         items: [
-          "Benutzerdefiniertes Modelltraining",
-          "API-Integration",
-          "Workflow-Automatisierung",
-          "Leistungsanalyse"
-        ]
+          'Benutzerdefiniertes Modelltraining',
+          'API-Integration',
+          'Workflow-Automatisierung',
+          'Leistungsanalyse',
+        ],
       },
       {
-        title: "Best Practices",
-        description: "Optimieren Sie Ihre KI-Implementierung für beste Ergebnisse",
+        title: 'Best Practices',
+        description:
+          'Optimieren Sie Ihre KI-Implementierung für beste Ergebnisse',
         items: [
-          "Richtlinien zur Datenvorbereitung",
-          "Tipps zur Modelloptimierung",
-          "Sicherheits-Best-Practices",
-          "Leistungsoptimierung"
-        ]
-      }
+          'Richtlinien zur Datenvorbereitung',
+          'Tipps zur Modelloptimierung',
+          'Sicherheits-Best-Practices',
+          'Leistungsoptimierung',
+        ],
+      },
     ],
-    learnMore: "Mehr erfahren"
+    learnMore: 'Mehr erfahren',
   },
   es: {
     metadata: {
-      title: "Guía del Usuario - NeuroGen Lab | Guía de Implementación de IA",
-      description: "Guía completa para usar las soluciones de IA de NeuroGen Lab. Aprenda sobre cómo comenzar, funciones avanzadas y mejores prácticas para una implementación óptima de IA."
+      title: 'Guía del Usuario - NeuroGen Lab | Guía de Implementación de IA',
+      description:
+        'Guía completa para usar las soluciones de IA de NeuroGen Lab. Aprenda sobre cómo comenzar, funciones avanzadas y mejores prácticas para una implementación óptima de IA.',
     },
     header: {
-      title: "Guía del Usuario",
-      description: "Todo lo que necesita saber para usar NeuroGen Lab de manera efectiva"
+      title: 'Guía del Usuario',
+      description:
+        'Todo lo que necesita saber para usar NeuroGen Lab de manera efectiva',
     },
     sections: [
       {
-        title: "Primeros Pasos",
-        description: "Aprenda los conceptos básicos de NeuroGen Lab y configure su primer proyecto de IA",
+        title: 'Primeros Pasos',
+        description:
+          'Aprenda los conceptos básicos de NeuroGen Lab y configure su primer proyecto de IA',
         items: [
-          "Crear su cuenta",
-          "Configurar preferencias de IA",
-          "Importar datos",
-          "Comenzar a generar contenido"
-        ]
+          'Crear su cuenta',
+          'Configurar preferencias de IA',
+          'Importar datos',
+          'Comenzar a generar contenido',
+        ],
       },
       {
-        title: "Funciones Avanzadas",
-        description: "Explore capacidades avanzadas de IA y opciones de personalización",
+        title: 'Funciones Avanzadas',
+        description:
+          'Explore capacidades avanzadas de IA y opciones de personalización',
         items: [
-          "Entrenamiento de modelos personalizados",
-          "Integración de API",
-          "Automatización de flujo de trabajo",
-          "Análisis de rendimiento"
-        ]
+          'Entrenamiento de modelos personalizados',
+          'Integración de API',
+          'Automatización de flujo de trabajo',
+          'Análisis de rendimiento',
+        ],
       },
       {
-        title: "Mejores Prácticas",
-        description: "Optimice su implementación de IA para obtener mejores resultados",
+        title: 'Mejores Prácticas',
+        description:
+          'Optimice su implementación de IA para obtener mejores resultados',
         items: [
-          "Pautas de preparación de datos",
-          "Consejos de optimización de modelos",
-          "Mejores prácticas de seguridad",
-          "Ajuste de rendimiento"
-        ]
-      }
+          'Pautas de preparación de datos',
+          'Consejos de optimización de modelos',
+          'Mejores prácticas de seguridad',
+          'Ajuste de rendimiento',
+        ],
+      },
     ],
-    learnMore: "Más información"
+    learnMore: 'Más información',
   },
   ru: {
     metadata: {
-      title: "Руководство пользователя - NeuroGen Lab | Руководство по внедрению ИИ",
-      description: "Полное руководство по использованию ИИ-решений NeuroGen Lab. Узнайте о начале работы, расширенных функциях и лучших практиках для оптимального внедрения ИИ."
+      title:
+        'Руководство пользователя - NeuroGen Lab | Руководство по внедрению ИИ',
+      description:
+        'Полное руководство по использованию ИИ-решений NeuroGen Lab. Узнайте о начале работы, расширенных функциях и лучших практиках для оптимального внедрения ИИ.',
     },
     header: {
-      title: "Руководство пользователя",
-      description: "Всё, что нужно знать для эффективного использования NeuroGen Lab"
+      title: 'Руководство пользователя',
+      description:
+        'Всё, что нужно знать для эффективного использования NeuroGen Lab',
     },
     sections: [
       {
-        title: "Начало работы",
-        description: "Изучите основы NeuroGen Lab и настройте свой первый ИИ-проект",
+        title: 'Начало работы',
+        description:
+          'Изучите основы NeuroGen Lab и настройте свой первый ИИ-проект',
         items: [
-          "Создание аккаунта",
-          "Настройка параметров ИИ",
-          "Импорт данных",
-          "Начало генерации контента"
-        ]
+          'Создание аккаунта',
+          'Настройка параметров ИИ',
+          'Импорт данных',
+          'Начало генерации контента',
+        ],
       },
       {
-        title: "Расширенные функции",
-        description: "Исследуйте расширенные возможности ИИ и варианты настройки",
+        title: 'Расширенные функции',
+        description:
+          'Исследуйте расширенные возможности ИИ и варианты настройки',
         items: [
-          "Обучение пользовательских моделей",
-          "Интеграция API",
-          "Автоматизация рабочих процессов",
-          "Аналитика производительности"
-        ]
+          'Обучение пользовательских моделей',
+          'Интеграция API',
+          'Автоматизация рабочих процессов',
+          'Аналитика производительности',
+        ],
       },
       {
-        title: "Лучшие практики",
-        description: "Оптимизируйте внедрение ИИ для достижения наилучших результатов",
+        title: 'Лучшие практики',
+        description:
+          'Оптимизируйте внедрение ИИ для достижения наилучших результатов',
         items: [
-          "Рекомендации по подготовке данных",
-          "Советы по оптимизации моделей",
-          "Лучшие практики безопасности",
-          "Настройка производительности"
-        ]
-      }
+          'Рекомендации по подготовке данных',
+          'Советы по оптимизации моделей',
+          'Лучшие практики безопасности',
+          'Настройка производительности',
+        ],
+      },
     ],
-    learnMore: "Узнать больше"
+    learnMore: 'Узнать больше',
   },
   ua: {
     metadata: {
-      title: "Посібник користувача - NeuroGen Lab | Посібник з впровадження ШІ",
-      description: "Повний посібник з використання ШІ-рішень NeuroGen Lab. Дізнайтеся про початок роботи, розширені функції та найкращі практики для оптимального впровадження ШІ."
+      title: 'Посібник користувача - NeuroGen Lab | Посібник з впровадження ШІ',
+      description:
+        'Повний посібник з використання ШІ-рішень NeuroGen Lab. Дізнайтеся про початок роботи, розширені функції та найкращі практики для оптимального впровадження ШІ.',
     },
     header: {
-      title: "Посібник користувача",
-      description: "Все, що потрібно знати для ефективного використання NeuroGen Lab"
+      title: 'Посібник користувача',
+      description:
+        'Все, що потрібно знати для ефективного використання NeuroGen Lab',
     },
     sections: [
       {
-        title: "Початок роботи",
-        description: "Вивчіть основи NeuroGen Lab та налаштуйте свій перший ШІ-проект",
+        title: 'Початок роботи',
+        description:
+          'Вивчіть основи NeuroGen Lab та налаштуйте свій перший ШІ-проект',
         items: [
-          "Створення облікового запису",
-          "Налаштування параметрів ШІ",
-          "Імпорт даних",
-          "Початок генерації контенту"
-        ]
+          'Створення облікового запису',
+          'Налаштування параметрів ШІ',
+          'Імпорт даних',
+          'Початок генерації контенту',
+        ],
       },
       {
-        title: "Розширені функції",
-        description: "Дослідіть розширені можливості ШІ та варіанти налаштування",
+        title: 'Розширені функції',
+        description:
+          'Дослідіть розширені можливості ШІ та варіанти налаштування',
         items: [
-          "Навчання користувацьких моделей",
-          "Інтеграція API",
-          "Автоматизація робочих процесів",
-          "Аналітика продуктивності"
-        ]
+          'Навчання користувацьких моделей',
+          'Інтеграція API',
+          'Автоматизація робочих процесів',
+          'Аналітика продуктивності',
+        ],
       },
       {
-        title: "Найкращі практики",
-        description: "Оптимізуйте впровадження ШІ для досягнення найкращих результатів",
+        title: 'Найкращі практики',
+        description:
+          'Оптимізуйте впровадження ШІ для досягнення найкращих результатів',
         items: [
-          "Рекомендації з підготовки даних",
-          "Поради з оптимізації моделей",
-          "Найкращі практики безпеки",
-          "Налаштування продуктивності"
-        ]
-      }
+          'Рекомендації з підготовки даних',
+          'Поради з оптимізації моделей',
+          'Найкращі практики безпеки',
+          'Налаштування продуктивності',
+        ],
+      },
     ],
-    learnMore: "Дізнатися більше"
-  }
-} as const; 
+    learnMore: 'Дізнатися більше',
+  },
+} as const;
 
 export const contactTranslations = {
   en: {
-    title: "Contact Us",
+    title: 'Contact Us',
     subtitle: "We're here to help and answer any questions you might have",
-    sendMessage: "Send Us a Message",
-    getInTouch: "Get in Touch",
+    sendMessage: 'Send Us a Message',
+    getInTouch: 'Get in Touch',
     aboutUs: {
-      title: "About Us",
-      content: "NeuroGen Lab is a leading provider of AI solutions, helping businesses transform their operations through innovative technology. Our team of experts is dedicated to delivering exceptional service and support."
+      title: 'About Us',
+      content:
+        'NeuroGen Lab is a leading provider of AI solutions, helping businesses transform their operations through innovative technology. Our team of experts is dedicated to delivering exceptional service and support.',
     },
     contactInfo: {
       address: {
-        title: "Address",
-        content: "Musterstraße 123, 10115 Berlin, Germany"
+        title: 'Address',
+        content: 'Musterstraße 123, 10115 Berlin, Germany',
       },
       phone: {
-        title: "Phone",
-        content: "+49 (0) 30 123456789"
+        title: 'Phone',
+        content: '+49 (0) 30 123456789',
       },
       email: {
-        title: "Email",
-        content: "office@neurogenlab.de"
+        title: 'Email',
+        content: 'office@neurogenlab.de',
       },
       hours: {
-        title: "Business Hours",
-        content: "Monday - Friday: 9:00 AM - 6:00 PM"
-      }
-    }
+        title: 'Business Hours',
+        content: 'Monday - Friday: 9:00 AM - 6:00 PM',
+      },
+    },
   },
   de: {
-    title: "Kontakt",
-    subtitle: "Wir sind hier, um Ihnen zu helfen und Ihre Fragen zu beantworten",
-    sendMessage: "Nachricht senden",
-    getInTouch: "Kontaktieren Sie uns",
+    title: 'Kontakt',
+    subtitle:
+      'Wir sind hier, um Ihnen zu helfen und Ihre Fragen zu beantworten',
+    sendMessage: 'Nachricht senden',
+    getInTouch: 'Kontaktieren Sie uns',
     aboutUs: {
-      title: "Über uns",
-      content: "NeuroGen Lab ist ein führender Anbieter von KI-Lösungen, der Unternehmen bei der Transformation ihrer Geschäftsprozesse durch innovative Technologie unterstützt. Unser Expertenteam ist darauf spezialisiert, außergewöhnlichen Service und Support zu liefern."
+      title: 'Über uns',
+      content:
+        'NeuroGen Lab ist ein führender Anbieter von KI-Lösungen, der Unternehmen bei der Transformation ihrer Geschäftsprozesse durch innovative Technologie unterstützt. Unser Expertenteam ist darauf spezialisiert, außergewöhnlichen Service und Support zu liefern.',
     },
     contactInfo: {
       address: {
-        title: "Adresse",
-        content: "Musterstraße 123, 10115 Berlin, Deutschland"
+        title: 'Adresse',
+        content: 'Musterstraße 123, 10115 Berlin, Deutschland',
       },
       phone: {
-        title: "Telefon",
-        content: "+49 (0) 30 123456789"
+        title: 'Telefon',
+        content: '+49 (0) 30 123456789',
       },
       email: {
-        title: "E-Mail",
-        content: "office@neurogenlab.de"
+        title: 'E-Mail',
+        content: 'office@neurogenlab.de',
       },
       hours: {
-        title: "Geschäftszeiten",
-        content: "Montag - Freitag: 9:00 - 18:00 Uhr"
-      }
-    }
+        title: 'Geschäftszeiten',
+        content: 'Montag - Freitag: 9:00 - 18:00 Uhr',
+      },
+    },
   },
   es: {
-    title: "Contáctenos",
-    subtitle: "Estamos aquí para ayudar y responder cualquier pregunta que pueda tener",
-    sendMessage: "Envíenos un Mensaje",
-    getInTouch: "Póngase en Contacto",
+    title: 'Contáctenos',
+    subtitle:
+      'Estamos aquí para ayudar y responder cualquier pregunta que pueda tener',
+    sendMessage: 'Envíenos un Mensaje',
+    getInTouch: 'Póngase en Contacto',
     aboutUs: {
-      title: "Sobre Nosotros",
-      content: "NeuroGen Lab es un proveedor líder de soluciones de IA, ayudando a las empresas a transformar sus operaciones a través de tecnología innovadora. Nuestro equipo de expertos está dedicado a brindar un servicio y soporte excepcionales."
+      title: 'Sobre Nosotros',
+      content:
+        'NeuroGen Lab es un proveedor líder de soluciones de IA, ayudando a las empresas a transformar sus operaciones a través de tecnología innovadora. Nuestro equipo de expertos está dedicado a brindar un servicio y soporte excepcionales.',
     },
     contactInfo: {
       address: {
-        title: "Dirección",
-        content: "Musterstraße 123, 10115 Berlín, Alemania"
+        title: 'Dirección',
+        content: 'Musterstraße 123, 10115 Berlín, Alemania',
       },
       phone: {
-        title: "Teléfono",
-        content: "+49 (0) 30 123456789"
+        title: 'Teléfono',
+        content: '+49 (0) 30 123456789',
       },
       email: {
-        title: "Correo electrónico",
-        content: "office@neurogenlab.de"
+        title: 'Correo electrónico',
+        content: 'office@neurogenlab.de',
       },
       hours: {
-        title: "Horario Comercial",
-        content: "Lunes - Viernes: 9:00 - 18:00"
-      }
-    }
+        title: 'Horario Comercial',
+        content: 'Lunes - Viernes: 9:00 - 18:00',
+      },
+    },
   },
   ru: {
-    title: "Свяжитесь с нами",
-    subtitle: "Мы здесь, чтобы помочь и ответить на любые ваши вопросы",
-    sendMessage: "Отправить сообщение",
-    getInTouch: "Контактная информация",
+    title: 'Свяжитесь с нами',
+    subtitle: 'Мы здесь, чтобы помочь и ответить на любые ваши вопросы',
+    sendMessage: 'Отправить сообщение',
+    getInTouch: 'Контактная информация',
     aboutUs: {
-      title: "О нас",
-      content: "NeuroGen Lab - ведущий поставщик решений в области ИИ, помогающий компаниям трансформировать свою деятельность с помощью инновационных технологий. Наша команда экспертов стремится обеспечить исключительный сервис и поддержку."
+      title: 'О нас',
+      content:
+        'NeuroGen Lab - ведущий поставщик решений в области ИИ, помогающий компаниям трансформировать свою деятельность с помощью инновационных технологий. Наша команда экспертов стремится обеспечить исключительный сервис и поддержку.',
     },
     contactInfo: {
       address: {
-        title: "Адрес",
-        content: "Musterstraße 123, 10115 Берлин, Германия"
+        title: 'Адрес',
+        content: 'Musterstraße 123, 10115 Берлин, Германия',
       },
       phone: {
-        title: "Телефон",
-        content: "+49 (0) 30 123456789"
+        title: 'Телефон',
+        content: '+49 (0) 30 123456789',
       },
       email: {
-        title: "Email",
-        content: "office@neurogenlab.de"
+        title: 'Email',
+        content: 'office@neurogenlab.de',
       },
       hours: {
-        title: "Часы работы",
-        content: "Понедельник - Пятница: 9:00 - 18:00"
-      }
-    }
+        title: 'Часы работы',
+        content: 'Понедельник - Пятница: 9:00 - 18:00',
+      },
+    },
   },
   ua: {
     title: "Зв'яжіться з нами",
-    subtitle: "Ми тут, щоб допомогти та відповісти на будь-які ваші запитання",
-    sendMessage: "Надіслати повідомлення",
-    getInTouch: "Контактна інформація",
+    subtitle: 'Ми тут, щоб допомогти та відповісти на будь-які ваші запитання',
+    sendMessage: 'Надіслати повідомлення',
+    getInTouch: 'Контактна інформація',
     aboutUs: {
-      title: "Про нас",
-      content: "NeuroGen Lab - провідний постачальник рішень у сфері ШІ, що допомагає компаніям трансформувати свою діяльність за допомогою інноваційних технологій. Наша команда експертів прагне забезпечити винятковий сервіс та підтримку."
+      title: 'Про нас',
+      content:
+        'NeuroGen Lab - провідний постачальник рішень у сфері ШІ, що допомагає компаніям трансформувати свою діяльність за допомогою інноваційних технологій. Наша команда експертів прагне забезпечити винятковий сервіс та підтримку.',
     },
     contactInfo: {
       address: {
-        title: "Адреса",
-        content: "Musterstraße 123, 10115 Берлін, Німеччина"
+        title: 'Адреса',
+        content: 'Musterstraße 123, 10115 Берлін, Німеччина',
       },
       phone: {
-        title: "Телефон",
-        content: "+49 (0) 30 123456789"
+        title: 'Телефон',
+        content: '+49 (0) 30 123456789',
       },
       email: {
-        title: "Email",
-        content: "office@neurogenlab.de"
+        title: 'Email',
+        content: 'office@neurogenlab.de',
       },
       hours: {
-        title: "Години роботи",
-        content: "Понеділок - П'ятниця: 9:00 - 18:00"
-      }
-    }
-  }
-} as const; 
+        title: 'Години роботи',
+        content: "Понеділок - П'ятниця: 9:00 - 18:00",
+      },
+    },
+  },
+} as const;
 
 export const aiAssistantTranslations = {
   en: {
-    title: "AI Assistant",
-    description: "Empower your business with an intelligent AI assistant...",
+    title: 'AI Assistant',
+    description: 'Empower your business with an intelligent AI assistant...',
     sectionTitles: {
-      features: "Key Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Key Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Advanced Task Automation",
-      "Natural Language Processing",
-      "Contextual Understanding",
-      "Predictive Analytics",
-      "Multi-platform Integration",
-      "Personalized Recommendations",
-      "Adaptive Learning Capabilities"
+      'Advanced Task Automation',
+      'Natural Language Processing',
+      'Contextual Understanding',
+      'Predictive Analytics',
+      'Multi-platform Integration',
+      'Personalized Recommendations',
+      'Adaptive Learning Capabilities',
     ],
     benefits: [
-      "Increased Productivity",
-      "Streamlined Workflows",
-      "Reduced Manual Tasks",
-      "Improved Decision Making",
-      "Enhanced Team Collaboration",
-      "Time and Cost Savings",
-      "Scalable Business Operations"
+      'Increased Productivity',
+      'Streamlined Workflows',
+      'Reduced Manual Tasks',
+      'Improved Decision Making',
+      'Enhanced Team Collaboration',
+      'Time and Cost Savings',
+      'Scalable Business Operations',
     ],
     integrations: [
-      "Project Management Tools",
-      "Communication Platforms",
-      "CRM Systems",
-      "Calendar Applications",
-      "Email Clients",
-      "Document Management Systems"
-    ]
+      'Project Management Tools',
+      'Communication Platforms',
+      'CRM Systems',
+      'Calendar Applications',
+      'Email Clients',
+      'Document Management Systems',
+    ],
   },
   de: {
-    title: "KI-Assistent",
-    description: "Stärken Sie Ihr Unternehmen...",
+    title: 'KI-Assistent',
+    description: 'Stärken Sie Ihr Unternehmen...',
     sectionTitles: {
-      features: "Hauptfunktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Hauptfunktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Erweiterte Aufgabenautomatisierung",
-      "Verarbeitung natürlicher Sprache",
-      "Kontextuelles Verständnis",
-      "Prädiktive Analytik",
-      "Multi-Plattform-Integration",
-      "Personalisierte Empfehlungen",
-      "Adaptive Lernfähigkeiten"
+      'Erweiterte Aufgabenautomatisierung',
+      'Verarbeitung natürlicher Sprache',
+      'Kontextuelles Verständnis',
+      'Prädiktive Analytik',
+      'Multi-Plattform-Integration',
+      'Personalisierte Empfehlungen',
+      'Adaptive Lernfähigkeiten',
     ],
     benefits: [
-      "Gesteigerte Produktivität",
-      "Optimierte Arbeitsabläufe",
-      "Reduzierte manuelle Aufgaben",
-      "Verbesserte Entscheidungsfindung",
-      "Verbesserte Teamzusammenarbeit",
-      "Zeit- und Kostenersparnis",
-      "Skalierbare Geschäftsprozesse"
+      'Gesteigerte Produktivität',
+      'Optimierte Arbeitsabläufe',
+      'Reduzierte manuelle Aufgaben',
+      'Verbesserte Entscheidungsfindung',
+      'Verbesserte Teamzusammenarbeit',
+      'Zeit- und Kostenersparnis',
+      'Skalierbare Geschäftsprozesse',
     ],
     integrations: [
-      "Projektmanagement-Tools",
-      "Kommunikationsplattformen",
-      "CRM-Systeme",
-      "Kalenderanwendungen",
-      "E-Mail-Clients",
-      "Dokumentenmanagementsysteme"
-    ]
+      'Projektmanagement-Tools',
+      'Kommunikationsplattformen',
+      'CRM-Systeme',
+      'Kalenderanwendungen',
+      'E-Mail-Clients',
+      'Dokumentenmanagementsysteme',
+    ],
   },
   es: {
-    title: "Asistente de IA",
-    description: "Potencie su negocio...",
+    title: 'Asistente de IA',
+    description: 'Potencie su negocio...',
     sectionTitles: {
-      features: "Características principales",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características principales',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Automatización avanzada de tareas",
-      "Procesamiento del lenguaje natural",
-      "Comprensión contextual",
-      "Análisis predictivo",
-      "Integración multiplataforma",
-      "Recomendaciones personalizadas",
-      "Capacidades de aprendizaje adaptativo"
+      'Automatización avanzada de tareas',
+      'Procesamiento del lenguaje natural',
+      'Comprensión contextual',
+      'Análisis predictivo',
+      'Integración multiplataforma',
+      'Recomendaciones personalizadas',
+      'Capacidades de aprendizaje adaptativo',
     ],
     benefits: [
-      "Mayor productividad",
-      "Flujos de trabajo optimizados",
-      "Reducción de tareas manuales",
-      "Mejor toma de decisiones",
-      "Colaboración mejorada del equipo",
-      "Ahorro de tiempo y costos",
-      "Operaciones comerciales escalables"
+      'Mayor productividad',
+      'Flujos de trabajo optimizados',
+      'Reducción de tareas manuales',
+      'Mejor toma de decisiones',
+      'Colaboración mejorada del equipo',
+      'Ahorro de tiempo y costos',
+      'Operaciones comerciales escalables',
     ],
     integrations: [
-      "Herramientas de gestión de proyectos",
-      "Plataformas de comunicación",
-      "Sistemas CRM",
-      "Aplicaciones de calendario",
-      "Clientes de correo electrónico",
-      "Sistemas de gestión documental"
-    ]
+      'Herramientas de gestión de proyectos',
+      'Plataformas de comunicación',
+      'Sistemas CRM',
+      'Aplicaciones de calendario',
+      'Clientes de correo electrónico',
+      'Sistemas de gestión documental',
+    ],
   },
   ru: {
-    title: "ИИ-Ассистент",
-    description: "Усильте свой бизнес...",
+    title: 'ИИ-Ассистент',
+    description: 'Усильте свой бизнес...',
     sectionTitles: {
-      features: "Ключевые возможности",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Ключевые возможности',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Продвинутая автоматизация задач",
-      "Обработка естественного языка",
-      "Контекстное понимание",
-      "Предиктивная аналитика",
-      "Мультиплатформенная интеграция",
-      "Персонализированные рекомендации",
-      "Адаптивные возможности обучения"
+      'Продвинутая автоматизация задач',
+      'Обработка естественного языка',
+      'Контекстное понимание',
+      'Предиктивная аналитика',
+      'Мультиплатформенная интеграция',
+      'Персонализированные рекомендации',
+      'Адаптивные возможности обучения',
     ],
     benefits: [
-      "Повышенная производительность",
-      "Оптимизированные рабочие процессы",
-      "Сокращение ручных задач",
-      "Улучшенное принятие решений",
-      "Улучшенное командное взаимодействие",
-      "Экономия времени и затрат",
-      "Масштабируемые бизнес-операции"
+      'Повышенная производительность',
+      'Оптимизированные рабочие процессы',
+      'Сокращение ручных задач',
+      'Улучшенное принятие решений',
+      'Улучшенное командное взаимодействие',
+      'Экономия времени и затрат',
+      'Масштабируемые бизнес-операции',
     ],
     integrations: [
-      "Инструменты управления проектами",
-      "Платформы для коммуникации",
-      "CRM-системы",
-      "Календарные приложения",
-      "Почтовые клиенты",
-      "Системы управления документами"
-    ]
+      'Инструменты управления проектами',
+      'Платформы для коммуникации',
+      'CRM-системы',
+      'Календарные приложения',
+      'Почтовые клиенты',
+      'Системы управления документами',
+    ],
   },
   ua: {
-    title: "ШІ-Асистент",
-    description: "Посильте свій бізнес...",
+    title: 'ШІ-Асистент',
+    description: 'Посильте свій бізнес...',
     sectionTitles: {
-      features: "Ключові можливості",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Ключові можливості',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Просунута автоматизація завдань",
-      "Обробка природної мови",
-      "Контекстне розуміння",
-      "Предиктивна аналітика",
-      "Мультиплатформна інтеграція",
-      "Персоналізовані рекомендації",
-      "Адаптивні можливості навчання"
+      'Просунута автоматизація завдань',
+      'Обробка природної мови',
+      'Контекстне розуміння',
+      'Предиктивна аналітика',
+      'Мультиплатформна інтеграція',
+      'Персоналізовані рекомендації',
+      'Адаптивні можливості навчання',
     ],
     benefits: [
-      "Підвищена продуктивність",
-      "Оптимізовані робочі процеси",
-      "Скорочення ручних завдань",
-      "Покращене прийняття рішень",
-      "Покращена командна взаємодія",
-      "Економія часу та витрат",
-      "Масштабовані бізнес-операції"
+      'Підвищена продуктивність',
+      'Оптимізовані робочі процеси',
+      'Скорочення ручних завдань',
+      'Покращене прийняття рішень',
+      'Покращена командна взаємодія',
+      'Економія часу та витрат',
+      'Масштабовані бізнес-операції',
     ],
     integrations: [
-      "Інструменти управління проектами",
-      "Платформи для комунікації",
-      "CRM-системи",
-      "Календарні додатки",
-      "Поштові клієнти",
-      "Системи управління документами"
-    ]
-  }
+      'Інструменти управління проектами',
+      'Платформи для комунікації',
+      'CRM-системи',
+      'Календарні додатки',
+      'Поштові клієнти',
+      'Системи управління документами',
+    ],
+  },
 };
 
 export const aiVoiceBotTranslations = {
   en: {
-    title: "AI Voice Bot",
-    description: "Intelligent voice assistant for your business",
+    title: 'AI Voice Bot',
+    description: 'Intelligent voice assistant for your business',
     sectionTitles: {
-      features: "Key Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Key Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Natural Language Processing",
-      "Voice Recognition",
-      "Multi-language Support",
-      "Custom Voice Training"
+      'Natural Language Processing',
+      'Voice Recognition',
+      'Multi-language Support',
+      'Custom Voice Training',
     ],
     benefits: [
-      "24/7 Customer Support",
-      "Reduced Response Time",
-      "Consistent Service Quality",
-      "Cost Efficiency"
+      '24/7 Customer Support',
+      'Reduced Response Time',
+      'Consistent Service Quality',
+      'Cost Efficiency',
     ],
     integrations: [
-      "Phone Systems",
-      "CRM Platforms",
-      "Chat Applications",
-      "Analytics Tools"
-    ]
+      'Phone Systems',
+      'CRM Platforms',
+      'Chat Applications',
+      'Analytics Tools',
+    ],
   },
   de: {
-    title: "KI-Sprachbot",
-    description: "Intelligenter Sprachassistent für Ihr Unternehmen",
+    title: 'KI-Sprachbot',
+    description: 'Intelligenter Sprachassistent für Ihr Unternehmen',
     sectionTitles: {
-      features: "Hauptfunktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Hauptfunktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Verarbeitung natürlicher Sprache",
-      "Spracherkennung",
-      "Mehrsprachige Unterstützung",
-      "Angepasstes Sprachtraining"
+      'Verarbeitung natürlicher Sprache',
+      'Spracherkennung',
+      'Mehrsprachige Unterstützung',
+      'Angepasstes Sprachtraining',
     ],
     benefits: [
-      "24/7 Kundenbetreuung",
-      "Verkürzte Reaktionszeit",
-      "Konstante Servicequalität",
-      "Kosteneffizienz"
+      '24/7 Kundenbetreuung',
+      'Verkürzte Reaktionszeit',
+      'Konstante Servicequalität',
+      'Kosteneffizienz',
     ],
     integrations: [
-      "Telefonsysteme",
-      "CRM-Plattformen",
-      "Chat-Anwendungen",
-      "Analyse-Tools"
-    ]
+      'Telefonsysteme',
+      'CRM-Plattformen',
+      'Chat-Anwendungen',
+      'Analyse-Tools',
+    ],
   },
   es: {
-    title: "Bot de Voz IA",
-    description: "Asistente de voz inteligente para su negocio",
+    title: 'Bot de Voz IA',
+    description: 'Asistente de voz inteligente para su negocio',
     sectionTitles: {
-      features: "Características principales",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características principales',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Procesamiento del Lenguaje Natural",
-      "Reconocimiento de Voz",
-      "Soporte Multilingüe",
-      "Entrenamiento de Voz Personalizado"
+      'Procesamiento del Lenguaje Natural',
+      'Reconocimiento de Voz',
+      'Soporte Multilingüe',
+      'Entrenamiento de Voz Personalizado',
     ],
     benefits: [
-      "Soporte al Cliente 24/7",
-      "Tiempo de Respuesta Reducido",
-      "Calidad de Servicio Consistente",
-      "Eficiencia en Costos"
+      'Soporte al Cliente 24/7',
+      'Tiempo de Respuesta Reducido',
+      'Calidad de Servicio Consistente',
+      'Eficiencia en Costos',
     ],
     integrations: [
-      "Sistemas Telefónicos",
-      "Plataformas CRM",
-      "Aplicaciones de Chat",
-      "Herramientas de Análisis"
-    ]
+      'Sistemas Telefónicos',
+      'Plataformas CRM',
+      'Aplicaciones de Chat',
+      'Herramientas de Análisis',
+    ],
   },
   ru: {
-    title: "ИИ Голосовой Агент",
-    description: "Интеллектуальный голосовой помощник для вашего бизнеса",
+    title: 'ИИ Голосовой Агент',
+    description: 'Интеллектуальный голосовой помощник для вашего бизнеса',
     sectionTitles: {
-      features: "Ключевые возможности",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Ключевые возможности',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Обработка естественного языка",
-      "Распознавание речи",
-      "Многоязычная поддержка",
-      "Настраиваемое обучение голоса"
+      'Обработка естественного языка',
+      'Распознавание речи',
+      'Многоязычная поддержка',
+      'Настраиваемое обучение голоса',
     ],
     benefits: [
-      "Поддержка клиентов 24/7",
-      "Сокращенное время отклика",
-      "Стабильное качество обслуживания",
-      "Экономическая эффективность"
+      'Поддержка клиентов 24/7',
+      'Сокращенное время отклика',
+      'Стабильное качество обслуживания',
+      'Экономическая эффективность',
     ],
     integrations: [
-      "Телефонные системы",
-      "CRM-платформы",
-      "Чат-приложения",
-      "Аналитические инструменты"
-    ]
+      'Телефонные системы',
+      'CRM-платформы',
+      'Чат-приложения',
+      'Аналитические инструменты',
+    ],
   },
   ua: {
-    title: "ШІ Голосовий Агент",
-    description: "Інтелектуальний голосовий помічник для вашого бізнесу",
+    title: 'ШІ Голосовий Агент',
+    description: 'Інтелектуальний голосовий помічник для вашого бізнесу',
     sectionTitles: {
-      features: "Ключові можливості",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Ключові можливості',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Обробка природної мови",
-      "Розпізнавання мовлення",
-      "Багатомовна підтримка",
-      "Налаштоване навчання голосу"
+      'Обробка природної мови',
+      'Розпізнавання мовлення',
+      'Багатомовна підтримка',
+      'Налаштоване навчання голосу',
     ],
     benefits: [
-      "Підтримка клієнтів 24/7",
-      "Скорочений час відгуку",
-      "Стабільна якість обслуговування",
-      "Економічна ефективність"
+      'Підтримка клієнтів 24/7',
+      'Скорочений час відгуку',
+      'Стабільна якість обслуговування',
+      'Економічна ефективність',
     ],
     integrations: [
-      "Телефонні системи",
-      "CRM-платформи",
-      "Чат-додатки",
-      "Аналітичні інструменти"
-    ]
-  }
+      'Телефонні системи',
+      'CRM-платформи',
+      'Чат-додатки',
+      'Аналітичні інструменти',
+    ],
+  },
 };
 
 export const aiAvatarTranslations = {
   en: {
-    title: "AI Avatar",
-    description: "Empower your business with AI Avatars tailored to your needs. Let us design and implement custom AI Avatars to enhance your brand's identity and customer engagement.",
+    title: 'AI Avatar',
+    description:
+      "Empower your business with AI Avatars tailored to your needs. Let us design and implement custom AI Avatars to enhance your brand's identity and customer engagement.",
     sectionTitles: {
-      features: "Key Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Key Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Custom Avatar Design",
-      "Advanced Face Recognition",
-      "Personalized Style Implementation",
-      "Batch Processing Capabilities",
-      "Multiple Output Formats",
-      "Real-time Preview Options",
-      "Expression and Background Control"
+      'Custom Avatar Design',
+      'Advanced Face Recognition',
+      'Personalized Style Implementation',
+      'Batch Processing Capabilities',
+      'Multiple Output Formats',
+      'Real-time Preview Options',
+      'Expression and Background Control',
     ],
     benefits: [
-      "Professional and Custom Solutions",
-      "Increased Customer Engagement",
-      "Unique Brand Identity",
-      "Streamlined Implementation",
-      "Scalable for Multiple Use Cases",
-      "Regular Updates and Support",
-      "Time and Cost Efficiency"
+      'Professional and Custom Solutions',
+      'Increased Customer Engagement',
+      'Unique Brand Identity',
+      'Streamlined Implementation',
+      'Scalable for Multiple Use Cases',
+      'Regular Updates and Support',
+      'Time and Cost Efficiency',
     ],
     integrations: [
-      "Social Media Platforms",
-      "E-commerce Platforms",
-      "Marketing Tools",
-      "Video Conferencing Tools",
-      "AR/VR Platforms",
-      "Live Streaming Services"
+      'Social Media Platforms',
+      'E-commerce Platforms',
+      'Marketing Tools',
+      'Video Conferencing Tools',
+      'AR/VR Platforms',
+      'Live Streaming Services',
     ],
-    metaTitle: "AI Avatar | NeuroGen Lab - Custom AI Solutions for Businesses",
-    metaDescription: "Elevate your brand with custom AI Avatars developed by NeuroGen Lab. Designed to fit your business needs and enhance your digital presence."
+    metaTitle: 'AI Avatar | NeuroGen Lab - Custom AI Solutions for Businesses',
+    metaDescription:
+      'Elevate your brand with custom AI Avatars developed by NeuroGen Lab. Designed to fit your business needs and enhance your digital presence.',
   },
 
-de: {
-    title: "KI Avatar",
-    description: "Stärken Sie Ihr Unternehmen mit maßgeschneiderten AI Avataren. Wir entwerfen und implementieren individuelle AI Avatare, um die Identität Ihrer Marke und die Kundenbindung zu verbessern.",
+  de: {
+    title: 'KI Avatar',
+    description:
+      'Stärken Sie Ihr Unternehmen mit maßgeschneiderten AI Avataren. Wir entwerfen und implementieren individuelle AI Avatare, um die Identität Ihrer Marke und die Kundenbindung zu verbessern.',
     sectionTitles: {
-      features: "Hauptfunktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Hauptfunktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Individuelles Avatar-Design",
-      "Fortschrittliche Gesichtserkennung",
-      "Personalisierte Stilumsetzung",
-      "Batch-Verarbeitung",
-      "Mehrere Ausgabeformate",
-      "Echtzeit-Vorschau",
-      "Ausdrucks- und Hintergrundsteuerung"
+      'Individuelles Avatar-Design',
+      'Fortschrittliche Gesichtserkennung',
+      'Personalisierte Stilumsetzung',
+      'Batch-Verarbeitung',
+      'Mehrere Ausgabeformate',
+      'Echtzeit-Vorschau',
+      'Ausdrucks- und Hintergrundsteuerung',
     ],
     benefits: [
-      "Professionelle und individuelle Lösungen",
-      "Erhöhte Kundenbindung",
-      "Einzigartige Markenidentität",
-      "Effiziente Implementierung",
-      "Skalierbar für verschiedene Anwendungsfälle",
-      "Regelmäßige Updates und Support",
-      "Zeit- und Kosteneffizienz"
+      'Professionelle und individuelle Lösungen',
+      'Erhöhte Kundenbindung',
+      'Einzigartige Markenidentität',
+      'Effiziente Implementierung',
+      'Skalierbar für verschiedene Anwendungsfälle',
+      'Regelmäßige Updates und Support',
+      'Zeit- und Kosteneffizienz',
     ],
     integrations: [
-      "Social-Media-Plattformen",
-      "E-Commerce-Plattformen",
-      "Marketing-Tools",
-      "Videokonferenz-Lösungen",
-      "AR/VR-Plattformen",
-      "Live-Streaming-Dienste"
+      'Social-Media-Plattformen',
+      'E-Commerce-Plattformen',
+      'Marketing-Tools',
+      'Videokonferenz-Lösungen',
+      'AR/VR-Plattformen',
+      'Live-Streaming-Dienste',
     ],
-    metaTitle: "KI Avatar | NeuroGen Lab - Maßgeschneiderte AI-Lösungen für Unternehmen",
-    metaDescription: "Stärken Sie Ihre Marke mit individuellen AI Avataren von NeuroGen Lab. Entwickelt, um Ihren geschäftlichen Anforderungen zu entsprechen und Ihre digitale Präsenz zu verbessern."
-},
-es: {
-  title: "IA Avatar",
-  description: "Potencie su negocio con Avatares de IA adaptados a sus necesidades. Permítanos diseñar e implementar Avatares de IA personalizados para mejorar la identidad de su marca y la participación del cliente.",
-  sectionTitles: {
-    features: "Características Principales",
-    benefits: "Beneficios",
-    integrations: "Integraciones"
+    metaTitle:
+      'KI Avatar | NeuroGen Lab - Maßgeschneiderte AI-Lösungen für Unternehmen',
+    metaDescription:
+      'Stärken Sie Ihre Marke mit individuellen AI Avataren von NeuroGen Lab. Entwickelt, um Ihren geschäftlichen Anforderungen zu entsprechen und Ihre digitale Präsenz zu verbessern.',
   },
-  features: [
-    "Diseño de Avatar Personalizado",
-    "Reconocimiento Facial Avanzado",
-    "Implementación de Estilo Personalizado",
-    "Capacidades de Procesamiento por Lotes",
-    "Múltiples Formatos de Salida",
-    "Opciones de Vista Previa en Tiempo Real",
-    "Control de Expresión y Fondo"
-  ],
-  benefits: [
-    "Soluciones Profesionales y Personalizadas",
-    "Mayor Participación del Cliente",
-    "Identidad de Marca Única",
-    "Implementación Simplificada",
-    "Escalable para Múltiples Usos",
-    "Actualizaciones y Soporte Regulares",
-    "Eficiencia en Tiempo y Costos"
-  ],
-  integrations: [
-    "Plataformas de Redes Sociales",
-    "Plataformas de Comercio Electrónico",
-    "Herramientas de Marketing",
-    "Herramientas de Videoconferencia",
-    "Plataformas de AR/VR",
-    "Servicios de Transmisión en Vivo"
-  ],
-  metaTitle: "Avatar de IA | NeuroGen Lab - Soluciones de IA Personalizadas para Empresas",
-  metaDescription: "Impulse su marca con Avatares de IA personalizados desarrollados por NeuroGen Lab. Diseñados para satisfacer las necesidades de su negocio y mejorar su presencia digital."
-},
-
-ru: {
-  title: "ИИ Аватар",
-  description: "Раскройте потенциал вашего бизнеса с помощью ИИ-Аватаров, адаптированных к вашим потребностям. Мы разработаем и внедрим индивидуальные AI-аватары, чтобы усилить идентичность вашего бренда и повысить вовлеченность клиентов.",
-  sectionTitles: {
-    features: "Ключевые особенности",
-    benefits: "Преимущества",
-    integrations: "Интеграции"
+  es: {
+    title: 'IA Avatar',
+    description:
+      'Potencie su negocio con Avatares de IA adaptados a sus necesidades. Permítanos diseñar e implementar Avatares de IA personalizados para mejorar la identidad de su marca y la participación del cliente.',
+    sectionTitles: {
+      features: 'Características Principales',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
+    },
+    features: [
+      'Diseño de Avatar Personalizado',
+      'Reconocimiento Facial Avanzado',
+      'Implementación de Estilo Personalizado',
+      'Capacidades de Procesamiento por Lotes',
+      'Múltiples Formatos de Salida',
+      'Opciones de Vista Previa en Tiempo Real',
+      'Control de Expresión y Fondo',
+    ],
+    benefits: [
+      'Soluciones Profesionales y Personalizadas',
+      'Mayor Participación del Cliente',
+      'Identidad de Marca Única',
+      'Implementación Simplificada',
+      'Escalable para Múltiples Usos',
+      'Actualizaciones y Soporte Regulares',
+      'Eficiencia en Tiempo y Costos',
+    ],
+    integrations: [
+      'Plataformas de Redes Sociales',
+      'Plataformas de Comercio Electrónico',
+      'Herramientas de Marketing',
+      'Herramientas de Videoconferencia',
+      'Plataformas de AR/VR',
+      'Servicios de Transmisión en Vivo',
+    ],
+    metaTitle:
+      'Avatar de IA | NeuroGen Lab - Soluciones de IA Personalizadas para Empresas',
+    metaDescription:
+      'Impulse su marca con Avatares de IA personalizados desarrollados por NeuroGen Lab. Diseñados para satisfacer las necesidades de su negocio y mejorar su presencia digital.',
   },
-  features: [
-    "Индивидуальный дизайн аватаров",
-    "Продвинутое распознавание лиц",
-    "Персонализированная реализация стиля",
-    "Возможности пакетной обработки",
-    "Несколько форматов вывода",
-    "Предпросмотр в реальном времени",
-    "Управление выражением лица и фоном"
-  ],
-  benefits: [
-    "Профессиональные и индивидуальные решения",
-    "Повышение вовлеченности клиентов",
-    "Уникальная идентичность бренда",
-    "Упрощенная реализация",
-    "Масштабируемость для разных сценариев",
-    "Регулярные обновления и поддержка",
-    "Экономия времени и ресурсов"
-  ],
-  integrations: [
-    "Социальные платформы",
-    "Платформы электронной коммерции",
-    "Маркетинговые инструменты",
-    "Инструменты видеоконференций",
-    "Платформы AR/VR",
-    "Сервисы прямых трансляций"
-  ],
-  metaTitle: "AI Avatar | NeuroGen Lab - Индивидуальные AI-решения для бизнеса",
-  metaDescription: "Усилите ваш бренд с помощью индивидуальных AI-аватаров, разработанных NeuroGen Lab. Созданы с учетом потребностей вашего бизнеса для улучшения вашей цифровой присутствия."
-},
 
-ua: {
-  title: "ШІ Аватар",
-  description: "Розкрийте потенціал вашого бізнесу за допомогою ШІ-Аватарів, адаптованих до ваших потреб. Ми розробимо та впровадимо індивідуальні AI-аватари, щоб посилити ідентичність вашого бренду та залучення клієнтів.",
-  sectionTitles: {
-    features: "Ключові особливості",
-    benefits: "Переваги",
-    integrations: "Інтеграції"
+  ru: {
+    title: 'ИИ Аватар',
+    description:
+      'Раскройте потенциал вашего бизнеса с помощью ИИ-Аватаров, адаптированных к вашим потребностям. Мы разработаем и внедрим индивидуальные AI-аватары, чтобы усилить идентичность вашего бренда и повысить вовлеченность клиентов.',
+    sectionTitles: {
+      features: 'Ключевые особенности',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
+    },
+    features: [
+      'Индивидуальный дизайн аватаров',
+      'Продвинутое распознавание лиц',
+      'Персонализированная реализация стиля',
+      'Возможности пакетной обработки',
+      'Несколько форматов вывода',
+      'Предпросмотр в реальном времени',
+      'Управление выражением лица и фоном',
+    ],
+    benefits: [
+      'Профессиональные и индивидуальные решения',
+      'Повышение вовлеченности клиентов',
+      'Уникальная идентичность бренда',
+      'Упрощенная реализация',
+      'Масштабируемость для разных сценариев',
+      'Регулярные обновления и поддержка',
+      'Экономия времени и ресурсов',
+    ],
+    integrations: [
+      'Социальные платформы',
+      'Платформы электронной коммерции',
+      'Маркетинговые инструменты',
+      'Инструменты видеоконференций',
+      'Платформы AR/VR',
+      'Сервисы прямых трансляций',
+    ],
+    metaTitle:
+      'AI Avatar | NeuroGen Lab - Индивидуальные AI-решения для бизнеса',
+    metaDescription:
+      'Усилите ваш бренд с помощью индивидуальных AI-аватаров, разработанных NeuroGen Lab. Созданы с учетом потребностей вашего бизнеса для улучшения вашей цифровой присутствия.',
   },
-  features: [
-    "Індивідуальний дизайн аватарів",
-    "Передове розпізнавання облич",
-    "Персоналізоване впровадження стилю",
-    "Можливості пакетної обробки",
-    "Кілька форматів виводу",
-    "Попередній перегляд у реальному часі",
-    "Керування виразами та фоном"
-  ],
-  benefits: [
-    "Професійні та індивідуальні рішення",
-    "Підвищена залученість клієнтів",
-    "Унікальна ідентичність бренду",
-    "Спрощена реалізація",
-    "Масштабованість для різних сценаріїв",
-    "Регулярні оновлення та підтримка",
-    "Заощадження часу та коштів"
-  ],
-  integrations: [
-    "Платформи соціальних мереж",
-    "Платформи електронної комерції",
-    "Маркетингові інструменти",
-    "Інструменти для відеоконференцій",
-    "Платформи AR/VR",
-    "Сервіси прямих трансляцій"
-  ],
-  metaTitle: "AI Avatar | NeuroGen Lab - Індивідуальні AI-рішення для бізнесу",
-  metaDescription: "Посильте свій бренд за допомогою індивідуальних AI-аватарів, розроблених NeuroGen Lab. Створені з урахуванням потреб вашого бізнесу для покращення вашої цифрової присутності."
-},
 
+  ua: {
+    title: 'ШІ Аватар',
+    description:
+      'Розкрийте потенціал вашого бізнесу за допомогою ШІ-Аватарів, адаптованих до ваших потреб. Ми розробимо та впровадимо індивідуальні AI-аватари, щоб посилити ідентичність вашого бренду та залучення клієнтів.',
+    sectionTitles: {
+      features: 'Ключові особливості',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
+    },
+    features: [
+      'Індивідуальний дизайн аватарів',
+      'Передове розпізнавання облич',
+      'Персоналізоване впровадження стилю',
+      'Можливості пакетної обробки',
+      'Кілька форматів виводу',
+      'Попередній перегляд у реальному часі',
+      'Керування виразами та фоном',
+    ],
+    benefits: [
+      'Професійні та індивідуальні рішення',
+      'Підвищена залученість клієнтів',
+      'Унікальна ідентичність бренду',
+      'Спрощена реалізація',
+      'Масштабованість для різних сценаріїв',
+      'Регулярні оновлення та підтримка',
+      'Заощадження часу та коштів',
+    ],
+    integrations: [
+      'Платформи соціальних мереж',
+      'Платформи електронної комерції',
+      'Маркетингові інструменти',
+      'Інструменти для відеоконференцій',
+      'Платформи AR/VR',
+      'Сервіси прямих трансляцій',
+    ],
+    metaTitle:
+      'AI Avatar | NeuroGen Lab - Індивідуальні AI-рішення для бізнесу',
+    metaDescription:
+      'Посильте свій бренд за допомогою індивідуальних AI-аватарів, розроблених NeuroGen Lab. Створені з урахуванням потреб вашого бізнесу для покращення вашої цифрової присутності.',
+  },
 };
 // const aiChatBotTranslations = {
 //   en: {
@@ -2802,2598 +2926,2658 @@ ua: {
 
 const customDevelopmentTranslations = {
   en: {
-    title: "Custom Development",
-    description: "Transform your ideas into reality with our custom software development services. We create tailored solutions that perfectly match your business needs.",
+    title: 'Custom Development',
+    description:
+      'Transform your ideas into reality with our custom software development services. We create tailored solutions that perfectly match your business needs.',
     sectionTitles: {
-      features: "Key Features",
-      benefits: "Benefits",
-      integrations: "Technologies"
+      features: 'Key Features',
+      benefits: 'Benefits',
+      integrations: 'Technologies',
     },
     features: [
-      "Tailored Solutions",
-      "Agile Development",
-      "Scalable Architecture",
-      "Modern Technologies",
-      "Security First",
-      "Cloud Integration",
-      "API Development"
+      'Tailored Solutions',
+      'Agile Development',
+      'Scalable Architecture',
+      'Modern Technologies',
+      'Security First',
+      'Cloud Integration',
+      'API Development',
     ],
     benefits: [
-      "Competitive Advantage",
-      "Increased Efficiency",
-      "Cost Optimization",
-      "Future-Proof Solutions",
-      "Technical Excellence",
-      "Ongoing Support",
-      "Fast Time-to-Market"
+      'Competitive Advantage',
+      'Increased Efficiency',
+      'Cost Optimization',
+      'Future-Proof Solutions',
+      'Technical Excellence',
+      'Ongoing Support',
+      'Fast Time-to-Market',
     ],
     integrations: [
-      "Web Development",
-      "Mobile Apps",
-      "Cloud Solutions",
-      "AI Integration",
-      "DevOps",
-      "Microservices"
+      'Web Development',
+      'Mobile Apps',
+      'Cloud Solutions',
+      'AI Integration',
+      'DevOps',
+      'Microservices',
     ],
     articleContent: {
-      mainTitle: "Custom Software Development Services",
-      subtitle: "Building Your Digital Future",
-      introText: "Our custom development services help businesses:",
+      mainTitle: 'Custom Software Development Services',
+      subtitle: 'Building Your Digital Future',
+      introText: 'Our custom development services help businesses:',
       introList: [
-        "Create unique software solutions",
-        "Optimize business processes",
-        "Stay ahead of competition"
+        'Create unique software solutions',
+        'Optimize business processes',
+        'Stay ahead of competition',
       ],
-      howItWorksTitle: "Our Development Process",
-      howItWorksText: "We follow a proven development methodology:",
+      howItWorksTitle: 'Our Development Process',
+      howItWorksText: 'We follow a proven development methodology:',
       howItWorksList: [
-        "Requirements Analysis",
-        "Design & Architecture",
-        "Development & Testing",
-        "Deployment & Support"
+        'Requirements Analysis',
+        'Design & Architecture',
+        'Development & Testing',
+        'Deployment & Support',
       ],
-      keyFeaturesTitle: "Core Capabilities",
+      keyFeaturesTitle: 'Core Capabilities',
       features: {
         realTime: {
-          title: "Modern Technologies",
-          description: "Using latest tech stack for optimal performance"
+          title: 'Modern Technologies',
+          description: 'Using latest tech stack for optimal performance',
         },
         multiLanguage: {
-          title: "Global Solutions",
-          description: "Supporting multiple languages and regions"
+          title: 'Global Solutions',
+          description: 'Supporting multiple languages and regions',
         },
         scalability: {
-          title: "Scalable Architecture",
-          description: "Building for growth and high loads"
+          title: 'Scalable Architecture',
+          description: 'Building for growth and high loads',
         },
         analytics: {
-          title: "Data-Driven",
-          description: "Incorporating analytics and insights"
-        }
+          title: 'Data-Driven',
+          description: 'Incorporating analytics and insights',
+        },
       },
-      industriesTitle: "Industries We Serve",
-      industriesText: "Our expertise spans across various sectors:",
+      industriesTitle: 'Industries We Serve',
+      industriesText: 'Our expertise spans across various sectors:',
       industries: [
         {
-          icon: "🏢",
-          name: "Enterprise",
-          description: "Large-scale business solutions"
+          icon: '🏢',
+          name: 'Enterprise',
+          description: 'Large-scale business solutions',
         },
         {
-          icon: "🏪",
-          name: "Retail",
-          description: "E-commerce and POS systems"
+          icon: '🏪',
+          name: 'Retail',
+          description: 'E-commerce and POS systems',
         },
         {
-          icon: "🏥",
-          name: "Healthcare",
-          description: "Medical software solutions"
-        }
+          icon: '🏥',
+          name: 'Healthcare',
+          description: 'Medical software solutions',
+        },
       ],
-      conclusionTitle: "Why Choose Us",
-      conclusionText: "Partner with us for:",
+      conclusionTitle: 'Why Choose Us',
+      conclusionText: 'Partner with us for:',
       conclusionList: [
-        "Expert development team",
-        "Proven track record",
-        "Innovative solutions"
+        'Expert development team',
+        'Proven track record',
+        'Innovative solutions',
       ],
-      topReasonsTitle: "Benefits of Custom Development",
+      topReasonsTitle: 'Benefits of Custom Development',
       reasonList: [
         {
-          title: "Tailored Solutions",
+          title: 'Tailored Solutions',
           content: {
-            text: "Get software that perfectly matches your needs:",
+            text: 'Get software that perfectly matches your needs:',
             list: [
-              "Customized functionality",
-              "Unique business logic",
-              "Specific integrations"
-            ]
-          }
+              'Customized functionality',
+              'Unique business logic',
+              'Specific integrations',
+            ],
+          },
         },
         {
-          title: "Future-Proof Technology",
+          title: 'Future-Proof Technology',
           content: {
-            text: "Build with scalability in mind:",
+            text: 'Build with scalability in mind:',
             list: [
-              "Modern architecture",
-              "Scalable solutions",
-              "Easy maintenance"
-            ]
-          }
-        }
+              'Modern architecture',
+              'Scalable solutions',
+              'Easy maintenance',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Start Your Project",
-        text: "Transform your business with custom software solutions tailored to your needs."
-      }
+        title: 'Start Your Project',
+        text: 'Transform your business with custom software solutions tailored to your needs.',
+      },
     },
-    metaTitle: "Custom Development | NeuroGen Lab - Tailored Software Solutions",
-    metaDescription: "Transform your business with custom software development. Get tailored solutions that perfectly match your needs and drive growth."
+    metaTitle:
+      'Custom Development | NeuroGen Lab - Tailored Software Solutions',
+    metaDescription:
+      'Transform your business with custom software development. Get tailored solutions that perfectly match your needs and drive growth.',
   },
   de: {
-    title: "Individuelle Entwicklung",
-    description: "Verwandeln Sie Ihre Ideen in Realität mit unseren maßgeschneiderten Softwareentwicklungsdiensten. Wir erstellen passgenaue Lösungen für Ihre Geschäftsanforderungen.",
+    title: 'Individuelle Entwicklung',
+    description:
+      'Verwandeln Sie Ihre Ideen in Realität mit unseren maßgeschneiderten Softwareentwicklungsdiensten. Wir erstellen passgenaue Lösungen für Ihre Geschäftsanforderungen.',
     sectionTitles: {
-      features: "Hauptmerkmale",
-      benefits: "Vorteile",
-      integrations: "Technologien"
+      features: 'Hauptmerkmale',
+      benefits: 'Vorteile',
+      integrations: 'Technologien',
     },
     features: [
-      "Maßgeschneiderte Lösungen",
-      "Agile Entwicklung",
-      "Skalierbare Architektur",
-      "Moderne Technologien",
-      "Sicherheit an erster Stelle",
-      "Cloud-Integration",
-      "API-Entwicklung"
+      'Maßgeschneiderte Lösungen',
+      'Agile Entwicklung',
+      'Skalierbare Architektur',
+      'Moderne Technologien',
+      'Sicherheit an erster Stelle',
+      'Cloud-Integration',
+      'API-Entwicklung',
     ],
     benefits: [
-      "Wettbewerbsvorteil",
-      "Gesteigerte Effizienz",
-      "Kostenoptimierung",
-      "Zukunftssichere Lösungen",
-      "Technische Exzellenz",
-      "Kontinuierliche Unterstützung",
-      "Schnelle Markteinführung"
+      'Wettbewerbsvorteil',
+      'Gesteigerte Effizienz',
+      'Kostenoptimierung',
+      'Zukunftssichere Lösungen',
+      'Technische Exzellenz',
+      'Kontinuierliche Unterstützung',
+      'Schnelle Markteinführung',
     ],
     integrations: [
-      "Webentwicklung",
-      "Mobile Apps",
-      "Cloud-Lösungen",
-      "KI-Integration",
-      "DevOps",
-      "Microservices"
+      'Webentwicklung',
+      'Mobile Apps',
+      'Cloud-Lösungen',
+      'KI-Integration',
+      'DevOps',
+      'Microservices',
     ],
     articleContent: {
-      mainTitle: "Individuelle Softwareentwicklung",
-      subtitle: "Gestalten Sie Ihre digitale Zukunft",
-      introText: "Unsere individuellen Entwicklungsservices helfen Unternehmen bei:",
+      mainTitle: 'Individuelle Softwareentwicklung',
+      subtitle: 'Gestalten Sie Ihre digitale Zukunft',
+      introText:
+        'Unsere individuellen Entwicklungsservices helfen Unternehmen bei:',
       introList: [
-        "Erstellung einzigartiger Softwarelösungen",
-        "Optimierung von Geschäftsprozessen",
-        "Vorsprung vor der Konkurrenz"
+        'Erstellung einzigartiger Softwarelösungen',
+        'Optimierung von Geschäftsprozessen',
+        'Vorsprung vor der Konkurrenz',
       ],
-      howItWorksTitle: "Unser Entwicklungsprozess",
-      howItWorksText: "Wir folgen einer bewährten Entwicklungsmethodik:",
+      howItWorksTitle: 'Unser Entwicklungsprozess',
+      howItWorksText: 'Wir folgen einer bewährten Entwicklungsmethodik:',
       howItWorksList: [
-        "Anforderungsanalyse",
-        "Design & Architektur",
-        "Entwicklung & Tests",
-        "Bereitstellung & Support"
+        'Anforderungsanalyse',
+        'Design & Architektur',
+        'Entwicklung & Tests',
+        'Bereitstellung & Support',
       ],
-      keyFeaturesTitle: "Kernkompetenzen",
+      keyFeaturesTitle: 'Kernkompetenzen',
       features: {
         realTime: {
-          title: "Moderne Technologien",
-          description: "Einsatz modernster Technologien für optimale Leistung"
+          title: 'Moderne Technologien',
+          description: 'Einsatz modernster Technologien für optimale Leistung',
         },
         multiLanguage: {
-          title: "Globale Lösungen",
-          description: "Unterstützung mehrerer Sprachen und Regionen"
+          title: 'Globale Lösungen',
+          description: 'Unterstützung mehrerer Sprachen und Regionen',
         },
         scalability: {
-          title: "Skalierbare Architektur",
-          description: "Entwicklung für Wachstum und hohe Lasten"
+          title: 'Skalierbare Architektur',
+          description: 'Entwicklung für Wachstum und hohe Lasten',
         },
         analytics: {
-          title: "Datengesteuert",
-          description: "Integration von Analysen und Erkenntnissen"
-        }
+          title: 'Datengesteuert',
+          description: 'Integration von Analysen und Erkenntnissen',
+        },
       },
-      industriesTitle: "Branchen, die wir bedienen",
-      industriesText: "Unsere Expertise erstreckt sich über verschiedene Sektoren:",
+      industriesTitle: 'Branchen, die wir bedienen',
+      industriesText:
+        'Unsere Expertise erstreckt sich über verschiedene Sektoren:',
       industries: [
         {
-          icon: "🏢",
-          name: "Unternehmen",
-          description: "Großflächige Geschäftslösungen"
+          icon: '🏢',
+          name: 'Unternehmen',
+          description: 'Großflächige Geschäftslösungen',
         },
         {
-          icon: "🏪",
-          name: "Einzelhandel",
-          description: "E-Commerce und Kassensysteme"
+          icon: '🏪',
+          name: 'Einzelhandel',
+          description: 'E-Commerce und Kassensysteme',
         },
         {
-          icon: "🏥",
-          name: "Gesundheitswesen",
-          description: "Medizinische Softwarelösungen"
-        }
+          icon: '🏥',
+          name: 'Gesundheitswesen',
+          description: 'Medizinische Softwarelösungen',
+        },
       ],
-      conclusionTitle: "Warum uns wählen",
-      conclusionText: "Partnerschaft mit uns für:",
+      conclusionTitle: 'Warum uns wählen',
+      conclusionText: 'Partnerschaft mit uns für:',
       conclusionList: [
-        "Erfahrenes Entwicklungsteam",
-        "Bewährte Erfolgsbilanz",
-        "Innovative Lösungen"
+        'Erfahrenes Entwicklungsteam',
+        'Bewährte Erfolgsbilanz',
+        'Innovative Lösungen',
       ],
-      topReasonsTitle: "Vorteile individueller Entwicklung",
+      topReasonsTitle: 'Vorteile individueller Entwicklung',
       reasonList: [
         {
-          title: "Maßgeschneiderte Lösungen",
+          title: 'Maßgeschneiderte Lösungen',
           content: {
-            text: "Erhalten Sie Software, die perfekt zu Ihren Anforderungen passt:",
+            text: 'Erhalten Sie Software, die perfekt zu Ihren Anforderungen passt:',
             list: [
-              "Angepasste Funktionalität",
-              "Einzigartige Geschäftslogik",
-              "Spezifische Integrationen"
-            ]
-          }
+              'Angepasste Funktionalität',
+              'Einzigartige Geschäftslogik',
+              'Spezifische Integrationen',
+            ],
+          },
         },
         {
-          title: "Zukunftssichere Technologie",
+          title: 'Zukunftssichere Technologie',
           content: {
-            text: "Entwicklung mit Skalierbarkeit im Fokus:",
+            text: 'Entwicklung mit Skalierbarkeit im Fokus:',
             list: [
-              "Moderne Architektur",
-              "Skalierbare Lösungen",
-              "Einfache Wartung"
-            ]
-          }
-        }
+              'Moderne Architektur',
+              'Skalierbare Lösungen',
+              'Einfache Wartung',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Starten Sie Ihr Projekt",
-        text: "Transformieren Sie Ihr Unternehmen mit maßgeschneiderten Softwarelösungen."
-      }
+        title: 'Starten Sie Ihr Projekt',
+        text: 'Transformieren Sie Ihr Unternehmen mit maßgeschneiderten Softwarelösungen.',
+      },
     },
-    metaTitle: "Individuelle Entwicklung | NeuroGen Lab - Maßgeschneiderte Softwarelösungen",
-    metaDescription: "Transformieren Sie Ihr Unternehmen mit individueller Softwareentwicklung. Erhalten Sie maßgeschneiderte Lösungen, die perfekt zu Ihren Anforderungen passen und Wachstum fördern."
+    metaTitle:
+      'Individuelle Entwicklung | NeuroGen Lab - Maßgeschneiderte Softwarelösungen',
+    metaDescription:
+      'Transformieren Sie Ihr Unternehmen mit individueller Softwareentwicklung. Erhalten Sie maßgeschneiderte Lösungen, die perfekt zu Ihren Anforderungen passen und Wachstum fördern.',
   },
   es: {
-    title: "Desarrollo Personalizado",
-    description: "Transforme sus ideas en realidad con nuestros servicios de desarrollo de software personalizado. Creamos soluciones a medida que se ajustan perfectamente a las necesidades de su negocio.",
+    title: 'Desarrollo Personalizado',
+    description:
+      'Transforme sus ideas en realidad con nuestros servicios de desarrollo de software personalizado. Creamos soluciones a medida que se ajustan perfectamente a las necesidades de su negocio.',
     sectionTitles: {
-      features: "Características Principales",
-      benefits: "Beneficios",
-      integrations: "Tecnologías"
+      features: 'Características Principales',
+      benefits: 'Beneficios',
+      integrations: 'Tecnologías',
     },
     features: [
-      "Soluciones a Medida",
-      "Desarrollo Ágil",
-      "Arquitectura Escalable",
-      "Tecnologías Modernas",
-      "Seguridad Primero",
-      "Integración en la Nube",
-      "Desarrollo de API"
+      'Soluciones a Medida',
+      'Desarrollo Ágil',
+      'Arquitectura Escalable',
+      'Tecnologías Modernas',
+      'Seguridad Primero',
+      'Integración en la Nube',
+      'Desarrollo de API',
     ],
     benefits: [
-      "Ventaja Competitiva",
-      "Mayor Eficiencia",
-      "Optimización de Costos",
-      "Soluciones Preparadas para el Futuro",
-      "Excelencia Técnica",
-      "Soporte Continuo",
-      "Rápido Tiempo de Comercialización"
+      'Ventaja Competitiva',
+      'Mayor Eficiencia',
+      'Optimización de Costos',
+      'Soluciones Preparadas para el Futuro',
+      'Excelencia Técnica',
+      'Soporte Continuo',
+      'Rápido Tiempo de Comercialización',
     ],
     integrations: [
-      "Desarrollo Web",
-      "Aplicaciones Móviles",
-      "Soluciones en la Nube",
-      "Integración de IA",
-      "DevOps",
-      "Microservicios"
+      'Desarrollo Web',
+      'Aplicaciones Móviles',
+      'Soluciones en la Nube',
+      'Integración de IA',
+      'DevOps',
+      'Microservicios',
     ],
     articleContent: {
-      mainTitle: "Servicios de Desarrollo de Software Personalizado",
-      subtitle: "Construyendo Su Futuro Digital",
-      introText: "Nuestros servicios de desarrollo personalizado ayudan a las empresas a:",
+      mainTitle: 'Servicios de Desarrollo de Software Personalizado',
+      subtitle: 'Construyendo Su Futuro Digital',
+      introText:
+        'Nuestros servicios de desarrollo personalizado ayudan a las empresas a:',
       introList: [
-        "Crear soluciones de software únicas",
-        "Optimizar procesos empresariales",
-        "Mantenerse adelante de la competencia"
+        'Crear soluciones de software únicas',
+        'Optimizar procesos empresariales',
+        'Mantenerse adelante de la competencia',
       ],
-      howItWorksTitle: "Nuestro Proceso de Desarrollo",
-      howItWorksText: "Seguimos una metodología de desarrollo probada:",
+      howItWorksTitle: 'Nuestro Proceso de Desarrollo',
+      howItWorksText: 'Seguimos una metodología de desarrollo probada:',
       howItWorksList: [
-        "Análisis de Requisitos",
-        "Diseño y Arquitectura",
-        "Desarrollo y Pruebas",
-        "Implementación y Soporte"
+        'Análisis de Requisitos',
+        'Diseño y Arquitectura',
+        'Desarrollo y Pruebas',
+        'Implementación y Soporte',
       ],
-      keyFeaturesTitle: "Capacidades Principales",
+      keyFeaturesTitle: 'Capacidades Principales',
       features: {
         realTime: {
-          title: "Tecnologías Modernas",
-          description: "Uso de las últimas tecnologías para un rendimiento óptimo"
+          title: 'Tecnologías Modernas',
+          description:
+            'Uso de las últimas tecnologías para un rendimiento óptimo',
         },
         multiLanguage: {
-          title: "Soluciones Globales",
-          description: "Soporte para múltiples idiomas y regiones"
+          title: 'Soluciones Globales',
+          description: 'Soporte para múltiples idiomas y regiones',
         },
         scalability: {
-          title: "Arquitectura Escalable",
-          description: "Construcción para el crecimiento y altas cargas"
+          title: 'Arquitectura Escalable',
+          description: 'Construcción para el crecimiento y altas cargas',
         },
         analytics: {
-          title: "Basado en Datos",
-          description: "Incorporación de análisis e insights"
-        }
+          title: 'Basado en Datos',
+          description: 'Incorporación de análisis e insights',
+        },
       },
-      industriesTitle: "Industrias que Servimos",
-      industriesText: "Nuestra experiencia abarca varios sectores:",
+      industriesTitle: 'Industrias que Servimos',
+      industriesText: 'Nuestra experiencia abarca varios sectores:',
       industries: [
         {
-          icon: "🏢",
-          name: "Empresas",
-          description: "Soluciones empresariales a gran escala"
+          icon: '🏢',
+          name: 'Empresas',
+          description: 'Soluciones empresariales a gran escala',
         },
         {
-          icon: "🏪",
-          name: "Comercio",
-          description: "Sistemas de comercio electrónico y punto de venta"
+          icon: '🏪',
+          name: 'Comercio',
+          description: 'Sistemas de comercio electrónico y punto de venta',
         },
         {
-          icon: "🏥",
-          name: "Salud",
-          description: "Soluciones de software médico"
-        }
+          icon: '🏥',
+          name: 'Salud',
+          description: 'Soluciones de software médico',
+        },
       ],
-      conclusionTitle: "Por Qué Elegirnos",
-      conclusionText: "Asóciese con nosotros para:",
+      conclusionTitle: 'Por Qué Elegirnos',
+      conclusionText: 'Asóciese con nosotros para:',
       conclusionList: [
-        "Equipo de desarrollo experto",
-        "Trayectoria probada",
-        "Soluciones innovadoras"
+        'Equipo de desarrollo experto',
+        'Trayectoria probada',
+        'Soluciones innovadoras',
       ],
-      topReasonsTitle: "Beneficios del Desarrollo Personalizado",
+      topReasonsTitle: 'Beneficios del Desarrollo Personalizado',
       reasonList: [
         {
-          title: "Soluciones a Medida",
+          title: 'Soluciones a Medida',
           content: {
-            text: "Obtenga software que se ajuste perfectamente a sus necesidades:",
+            text: 'Obtenga software que se ajuste perfectamente a sus necesidades:',
             list: [
-              "Funcionalidad personalizada",
-              "Lógica empresarial única",
-              "Integraciones específicas"
-            ]
-          }
+              'Funcionalidad personalizada',
+              'Lógica empresarial única',
+              'Integraciones específicas',
+            ],
+          },
         },
         {
-          title: "Tecnología Preparada para el Futuro",
+          title: 'Tecnología Preparada para el Futuro',
           content: {
-            text: "Construcción pensando en la escalabilidad:",
+            text: 'Construcción pensando en la escalabilidad:',
             list: [
-              "Arquitectura moderna",
-              "Soluciones escalables",
-              "Mantenimiento sencillo"
-            ]
-          }
-        }
+              'Arquitectura moderna',
+              'Soluciones escalables',
+              'Mantenimiento sencillo',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Inicie Su Proyecto",
-        text: "Transforme su negocio con soluciones de software personalizadas adaptadas a sus necesidades."
-      }
+        title: 'Inicie Su Proyecto',
+        text: 'Transforme su negocio con soluciones de software personalizadas adaptadas a sus necesidades.',
+      },
     },
-    metaTitle: "Desarrollo Personalizado | NeuroGen Lab - Soluciones de Software a Medida",
-    metaDescription: "Transforme su negocio con desarrollo de software personalizado. Obtenga soluciones a medida que se ajusten perfectamente a sus necesidades e impulsan el crecimiento."
+    metaTitle:
+      'Desarrollo Personalizado | NeuroGen Lab - Soluciones de Software a Medida',
+    metaDescription:
+      'Transforme su negocio con desarrollo de software personalizado. Obtenga soluciones a medida que se ajusten perfectamente a sus necesidades e impulsan el crecimiento.',
   },
   ru: {
-    title: "Индивидуальная Разработка",
-    description: "Воплотите ваши идеи в реальность с нашими услугами индивидуальной разработки программного обеспечения. Мы создаем решения, идеально соответствующие потребностям вашего бизнеса.",
+    title: 'Индивидуальная Разработка',
+    description:
+      'Воплотите ваши идеи в реальность с нашими услугами индивидуальной разработки программного обеспечения. Мы создаем решения, идеально соответствующие потребностям вашего бизнеса.',
     sectionTitles: {
-      features: "Ключевые Возможности",
-      benefits: "Преимущества",
-      integrations: "Технологии"
+      features: 'Ключевые Возможности',
+      benefits: 'Преимущества',
+      integrations: 'Технологии',
     },
     features: [
-      "Индивидуальные Решения",
-      "Гибкая Разработка",
-      "Масштабируемая Архитектура",
-      "Современные Технологии",
-      "Безопасность Прежде Всего",
-      "Облачная Интеграция",
-      "Разработка API"
+      'Индивидуальные Решения',
+      'Гибкая Разработка',
+      'Масштабируемая Архитектура',
+      'Современные Технологии',
+      'Безопасность Прежде Всего',
+      'Облачная Интеграция',
+      'Разработка API',
     ],
     benefits: [
-      "Конкурентное Преимущество",
-      "Повышенная Эффективность",
-      "Оптимизация Затрат",
-      "Решения на Будущее",
-      "Техническое Совершенство",
-      "Постоянная Поддержка",
-      "Быстрый Выход на Рынок"
+      'Конкурентное Преимущество',
+      'Повышенная Эффективность',
+      'Оптимизация Затрат',
+      'Решения на Будущее',
+      'Техническое Совершенство',
+      'Постоянная Поддержка',
+      'Быстрый Выход на Рынок',
     ],
     integrations: [
-      "Веб-разработка",
-      "Мобильные Приложения",
-      "Облачные Решения",
-      "Интеграция ИИ",
-      "DevOps",
-      "Микросервисы"
+      'Веб-разработка',
+      'Мобильные Приложения',
+      'Облачные Решения',
+      'Интеграция ИИ',
+      'DevOps',
+      'Микросервисы',
     ],
     articleContent: {
-      mainTitle: "Услуги Индивидуальной Разработки ПО",
-      subtitle: "Создаем Ваше Цифровое Будущее",
-      introText: "Наши услуги индивидуальной разработки помогают бизнесу:",
+      mainTitle: 'Услуги Индивидуальной Разработки ПО',
+      subtitle: 'Создаем Ваше Цифровое Будущее',
+      introText: 'Наши услуги индивидуальной разработки помогают бизнесу:',
       introList: [
-        "Создавать уникальные программные решения",
-        "Оптимизировать бизнес-процессы",
-        "Опережать конкурентов"
+        'Создавать уникальные программные решения',
+        'Оптимизировать бизнес-процессы',
+        'Опережать конкурентов',
       ],
-      howItWorksTitle: "Наш Процесс Разработки",
-      howItWorksText: "Мы следуем проверенной методологии разработки:",
+      howItWorksTitle: 'Наш Процесс Разработки',
+      howItWorksText: 'Мы следуем проверенной методологии разработки:',
       howItWorksList: [
-        "Анализ Требований",
-        "Проектирование и Архитектура",
-        "Разработка и Тестирование",
-        "Внедрение и Поддержка"
+        'Анализ Требований',
+        'Проектирование и Архитектура',
+        'Разработка и Тестирование',
+        'Внедрение и Поддержка',
       ],
-      keyFeaturesTitle: "Основные Возможности",
+      keyFeaturesTitle: 'Основные Возможности',
       features: {
         realTime: {
-          title: "Современные Технологии",
-          description: "Использование новейших технологий для оптимальной производительности"
+          title: 'Современные Технологии',
+          description:
+            'Использование новейших технологий для оптимальной производительности',
         },
         multiLanguage: {
-          title: "Глобальные Решения",
-          description: "Поддержка множества языков и регионов"
+          title: 'Глобальные Решения',
+          description: 'Поддержка множества языков и регионов',
         },
         scalability: {
-          title: "Масштабируемая Архитектура",
-          description: "Разработка с учетом роста и высоких нагрузок"
+          title: 'Масштабируемая Архитектура',
+          description: 'Разработка с учетом роста и высоких нагрузок',
         },
         analytics: {
-          title: "Основано на Данных",
-          description: "Встроенная аналитика и инсайты"
-        }
+          title: 'Основано на Данных',
+          description: 'Встроенная аналитика и инсайты',
+        },
       },
-      industriesTitle: "Отрасли, с Которыми Мы Работаем",
-      industriesText: "Наш опыт охватывает различные сектора:",
+      industriesTitle: 'Отрасли, с Которыми Мы Работаем',
+      industriesText: 'Наш опыт охватывает различные сектора:',
       industries: [
         {
-          icon: "🏢",
-          name: "Предприятия",
-          description: "Масштабные бизнес-решения"
+          icon: '🏢',
+          name: 'Предприятия',
+          description: 'Масштабные бизнес-решения',
         },
         {
-          icon: "🏪",
-          name: "Розничная Торговля",
-          description: "Системы электронной коммерции и POS"
+          icon: '🏪',
+          name: 'Розничная Торговля',
+          description: 'Системы электронной коммерции и POS',
         },
         {
-          icon: "🏥",
-          name: "Здравоохранение",
-          description: "Медицинские программные решения"
-        }
+          icon: '🏥',
+          name: 'Здравоохранение',
+          description: 'Медицинские программные решения',
+        },
       ],
-      conclusionTitle: "Почему Выбирают Нас",
-      conclusionText: "Сотрудничество с нами это:",
+      conclusionTitle: 'Почему Выбирают Нас',
+      conclusionText: 'Сотрудничество с нами это:',
       conclusionList: [
-        "Команда опытных разработчиков",
-        "Проверенный опыт работы",
-        "Инновационные решения"
+        'Команда опытных разработчиков',
+        'Проверенный опыт работы',
+        'Инновационные решения',
       ],
-      topReasonsTitle: "Преимущества Индивидуальной Разработки",
+      topReasonsTitle: 'Преимущества Индивидуальной Разработки',
       reasonList: [
         {
-          title: "Индивидуальные Решения",
+          title: 'Индивидуальные Решения',
           content: {
-            text: "Получите ПО, идеально соответствующее вашим потребностям:",
+            text: 'Получите ПО, идеально соответствующее вашим потребностям:',
             list: [
-              "Настраиваемая функциональность",
-              "Уникальная бизнес-логика",
-              "Специфические интеграции"
-            ]
-          }
+              'Настраиваемая функциональность',
+              'Уникальная бизнес-логика',
+              'Специфические интеграции',
+            ],
+          },
         },
         {
-          title: "Технологии Будущего",
+          title: 'Технологии Будущего',
           content: {
-            text: "Разработка с учетом масштабируемости:",
+            text: 'Разработка с учетом масштабируемости:',
             list: [
-              "Современная архитектура",
-              "Масштабируемые решения",
-              "Простое обслуживание"
-            ]
-          }
-        }
+              'Современная архитектура',
+              'Масштабируемые решения',
+              'Простое обслуживание',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Начните Свой Проект",
-        text: "Трансформируйте свой бизнес с помощью индивидуальных программных решений."
-      }
+        title: 'Начните Свой Проект',
+        text: 'Трансформируйте свой бизнес с помощью индивидуальных программных решений.',
+      },
     },
-    metaTitle: "Индивидуальная Разработка | NeuroGen Lab - ИИ Решения на Заказ",
-    metaDescription: "Трансформируйте свой бизнес с помощью индивидуальной разработки ПО. Получите решения, идеально соответствующие вашим потребностям и способствующие росту."
+    metaTitle: 'Индивидуальная Разработка | NeuroGen Lab - ИИ Решения на Заказ',
+    metaDescription:
+      'Трансформируйте свой бизнес с помощью индивидуальной разработки ПО. Получите решения, идеально соответствующие вашим потребностям и способствующие росту.',
   },
   ua: {
-    title: "Індивідуальна Розробка",
-    description: "Втілюйте ваші ідеї в реальність з нашими послугами індивідуальної розробки програмного забезпечення. Ми створюємо рішення, що ідеально відповідають потребам вашого бізнесу.",
+    title: 'Індивідуальна Розробка',
+    description:
+      'Втілюйте ваші ідеї в реальність з нашими послугами індивідуальної розробки програмного забезпечення. Ми створюємо рішення, що ідеально відповідають потребам вашого бізнесу.',
     sectionTitles: {
-      features: "Ключові Можливості",
-      benefits: "Переваги",
-      integrations: "Технології"
+      features: 'Ключові Можливості',
+      benefits: 'Переваги',
+      integrations: 'Технології',
     },
     features: [
-      "Індивідуальні Рішення",
-      "Гнучка Розробка",
-      "Масштабована Архітектура",
-      "Сучасні Технології",
-      "Безпека Передусім",
-      "Хмарна Інтеграція",
-      "Розробка API"
+      'Індивідуальні Рішення',
+      'Гнучка Розробка',
+      'Масштабована Архітектура',
+      'Сучасні Технології',
+      'Безпека Передусім',
+      'Хмарна Інтеграція',
+      'Розробка API',
     ],
     benefits: [
-      "Конкурентна Перевага",
-      "Підвищена Ефективність",
-      "Оптимізація Витрат",
-      "Рішення на Майбутнє",
-      "Технічна Досконалість",
-      "Постійна Підтримка",
-      "Швидкий Вихід на Ринок"
+      'Конкурентна Перевага',
+      'Підвищена Ефективність',
+      'Оптимізація Витрат',
+      'Рішення на Майбутнє',
+      'Технічна Досконалість',
+      'Постійна Підтримка',
+      'Швидкий Вихід на Ринок',
     ],
     integrations: [
-      "Веб-розробка",
-      "Мобільні Додатки",
-      "Хмарні Рішення",
-      "Інтеграція ШІ",
-      "DevOps",
-      "Мікросервіси"
+      'Веб-розробка',
+      'Мобільні Додатки',
+      'Хмарні Рішення',
+      'Інтеграція ШІ',
+      'DevOps',
+      'Мікросервіси',
     ],
     articleContent: {
-      mainTitle: "Послуги Індивідуальної Розробки ПЗ",
-      subtitle: "Створюємо Ваше Цифрове Майбутнє",
-      introText: "Наші послуги індивідуальної розробки допомагають бізнесу:",
+      mainTitle: 'Послуги Індивідуальної Розробки ПЗ',
+      subtitle: 'Створюємо Ваше Цифрове Майбутнє',
+      introText: 'Наші послуги індивідуальної розробки допомагають бізнесу:',
       introList: [
-        "Створювати унікальні програмні рішення",
-        "Оптимізувати бізнес-процеси",
-        "Випереджати конкурентів"
+        'Створювати унікальні програмні рішення',
+        'Оптимізувати бізнес-процеси',
+        'Випереджати конкурентів',
       ],
-      howItWorksTitle: "Наш Процес Розробки",
-      howItWorksText: "Ми дотримуємося перевіреної методології розробки:",
+      howItWorksTitle: 'Наш Процес Розробки',
+      howItWorksText: 'Ми дотримуємося перевіреної методології розробки:',
       howItWorksList: [
-        "Аналіз Вимог",
-        "Проектування та Архітектура",
-        "Розробка та Тестування",
-        "Впровадження та Підтримка"
+        'Аналіз Вимог',
+        'Проектування та Архітектура',
+        'Розробка та Тестування',
+        'Впровадження та Підтримка',
       ],
-      keyFeaturesTitle: "Основні Можливості",
+      keyFeaturesTitle: 'Основні Можливості',
       features: {
         realTime: {
-          title: "Сучасні Технології",
-          description: "Використання новітніх технологій для оптимальної продуктивності"
+          title: 'Сучасні Технології',
+          description:
+            'Використання новітніх технологій для оптимальної продуктивності',
         },
         multiLanguage: {
-          title: "Глобальні Рішення",
-          description: "Підтримка багатьох мов та регіонів"
+          title: 'Глобальні Рішення',
+          description: 'Підтримка багатьох мов та регіонів',
         },
         scalability: {
-          title: "Масштабована Архітектура",
-          description: "Розробка з урахуванням зростання та високих навантажень"
+          title: 'Масштабована Архітектура',
+          description:
+            'Розробка з урахуванням зростання та високих навантажень',
         },
         analytics: {
-          title: "На Основі Даних",
-          description: "Вбудована аналітика та інсайти"
-        }
+          title: 'На Основі Даних',
+          description: 'Вбудована аналітика та інсайти',
+        },
       },
-      industriesTitle: "Галузі, з Якими Ми Працюємо",
-      industriesText: "Наш досвід охоплює різні сектори:",
+      industriesTitle: 'Галузі, з Якими Ми Працюємо',
+      industriesText: 'Наш досвід охоплює різні сектори:',
       industries: [
         {
-          icon: "🏢",
-          name: "Підприємства",
-          description: "Масштабні бізнес-рішення"
+          icon: '🏢',
+          name: 'Підприємства',
+          description: 'Масштабні бізнес-рішення',
         },
         {
-          icon: "🏪",
-          name: "Роздрібна Торгівля",
-          description: "Системи електронної комерції та POS"
+          icon: '🏪',
+          name: 'Роздрібна Торгівля',
+          description: 'Системи електронної комерції та POS',
         },
         {
-          icon: "🏥",
+          icon: '🏥',
           name: "Охорона Здоров'я",
-          description: "Медичні програмні рішення"
-        }
+          description: 'Медичні програмні рішення',
+        },
       ],
-      conclusionTitle: "Чому Обирають Нас",
-      conclusionText: "Співпраця з нами це:",
+      conclusionTitle: 'Чому Обирають Нас',
+      conclusionText: 'Співпраця з нами це:',
       conclusionList: [
-        "Команда досвідчених розробників",
-        "Перевірений досвід роботи",
-        "Інноваційні рішення"
+        'Команда досвідчених розробників',
+        'Перевірений досвід роботи',
+        'Інноваційні рішення',
       ],
-      topReasonsTitle: "Переваги Індивідуальної Розробки",
+      topReasonsTitle: 'Переваги Індивідуальної Розробки',
       reasonList: [
         {
-          title: "Індивідуальні Рішення",
+          title: 'Індивідуальні Рішення',
           content: {
-            text: "Отримайте ПЗ, що ідеально відповідає вашим потребам:",
+            text: 'Отримайте ПЗ, що ідеально відповідає вашим потребам:',
             list: [
-              "Налаштовувана функціональність",
-              "Унікальна бізнес-логіка",
-              "Специфічні інтеграції"
-            ]
-          }
+              'Налаштовувана функціональність',
+              'Унікальна бізнес-логіка',
+              'Специфічні інтеграції',
+            ],
+          },
         },
         {
-          title: "Технології Майбутнього",
+          title: 'Технології Майбутнього',
           content: {
-            text: "Розробка з урахуванням масштабованості:",
+            text: 'Розробка з урахуванням масштабованості:',
             list: [
-              "Сучасна архітектура",
-              "Масштабовані рішення",
-              "Просте обслуговування"
-            ]
-          }
-        }
+              'Сучасна архітектура',
+              'Масштабовані рішення',
+              'Просте обслуговування',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Розпочніть Свій Проект",
-        text: "Трансформуйте свій бізнес за допомогою індивідуальних програмних рішень."
-      }
+        title: 'Розпочніть Свій Проект',
+        text: 'Трансформуйте свій бізнес за допомогою індивідуальних програмних рішень.',
+      },
     },
-    metaTitle: "Індивідуальна Розробка | NeuroGen Lab - Програмні Рішення на Замовлення",
-    metaDescription: "Трансформуйте свій бізнес за допомогою індивідуальної розробки ПЗ. Отримайте рішення, що ідеально відповідають вашим потребам та сприяють зростанню."
-  }
+    metaTitle:
+      'Індивідуальна Розробка | NeuroGen Lab - Програмні Рішення на Замовлення',
+    metaDescription:
+      'Трансформуйте свій бізнес за допомогою індивідуальної розробки ПЗ. Отримайте рішення, що ідеально відповідають вашим потребам та сприяють зростанню.',
+  },
 };
 
 export { customDevelopmentTranslations };
 
 const discordTranslations = {
   en: {
-    title: "Discord Integration",
-    description: "Enhance your Discord server with our powerful integration tools. Automate tasks, manage communities, and create engaging experiences for your users.",
+    title: 'Discord Integration',
+    description:
+      'Enhance your Discord server with our powerful integration tools. Automate tasks, manage communities, and create engaging experiences for your users.',
     sectionTitles: {
-      features: "Key Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Key Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Custom Bot Development",
-      "Automated Moderation",
-      "Role Management",
-      "Event Scheduling",
-      "User Analytics",
-      "Custom Commands",
-      "Server Statistics"
+      'Custom Bot Development',
+      'Automated Moderation',
+      'Role Management',
+      'Event Scheduling',
+      'User Analytics',
+      'Custom Commands',
+      'Server Statistics',
     ],
     benefits: [
-      "Enhanced Community Engagement",
-      "Automated Workflows",
-      "Improved Server Management",
-      "Real-time Analytics",
-      "Customizable Solutions",
-      "24/7 Bot Operation",
-      "Seamless Integration"
+      'Enhanced Community Engagement',
+      'Automated Workflows',
+      'Improved Server Management',
+      'Real-time Analytics',
+      'Customizable Solutions',
+      '24/7 Bot Operation',
+      'Seamless Integration',
     ],
     integrations: [
-      "Discord API",
-      "Webhooks",
-      "Database Systems",
-      "Cloud Services",
-      "Analytics Tools",
-      "Custom APIs"
+      'Discord API',
+      'Webhooks',
+      'Database Systems',
+      'Cloud Services',
+      'Analytics Tools',
+      'Custom APIs',
     ],
     articleContent: {
-      mainTitle: "Discord Integration Solutions",
-      subtitle: "Power Up Your Discord Community",
-      introText: "Our Discord integration services help you:",
+      mainTitle: 'Discord Integration Solutions',
+      subtitle: 'Power Up Your Discord Community',
+      introText: 'Our Discord integration services help you:',
       introList: [
-        "Build engaging community experiences",
-        "Automate routine tasks",
-        "Manage server effectively"
+        'Build engaging community experiences',
+        'Automate routine tasks',
+        'Manage server effectively',
       ],
-      howItWorksTitle: "How It Works",
-      howItWorksText: "Our integration process includes:",
+      howItWorksTitle: 'How It Works',
+      howItWorksText: 'Our integration process includes:',
       howItWorksList: [
-        "Custom Bot Development",
-        "Server Setup & Configuration",
-        "Feature Implementation",
-        "Testing & Deployment"
+        'Custom Bot Development',
+        'Server Setup & Configuration',
+        'Feature Implementation',
+        'Testing & Deployment',
       ],
-      keyFeaturesTitle: "Core Features",
+      keyFeaturesTitle: 'Core Features',
       features: {
         realTime: {
-          title: "Real-time Monitoring",
-          description: "Track server activity and user engagement in real-time"
+          title: 'Real-time Monitoring',
+          description: 'Track server activity and user engagement in real-time',
         },
         multiLanguage: {
-          title: "Multi-language Support",
-          description: "Bot commands and responses in multiple languages"
+          title: 'Multi-language Support',
+          description: 'Bot commands and responses in multiple languages',
         },
         scalability: {
-          title: "Scalable Solutions",
-          description: "Handle growing communities with ease"
+          title: 'Scalable Solutions',
+          description: 'Handle growing communities with ease',
         },
         analytics: {
-          title: "Advanced Analytics",
-          description: "Detailed insights into server activity and user behavior"
-        }
+          title: 'Advanced Analytics',
+          description:
+            'Detailed insights into server activity and user behavior',
+        },
       },
-      industriesTitle: "Use Cases",
-      industriesText: "Perfect for various community types:",
+      industriesTitle: 'Use Cases',
+      industriesText: 'Perfect for various community types:',
       industries: [
         {
-          icon: "🎮",
-          name: "Gaming Communities",
-          description: "Enhance gaming server experience"
+          icon: '🎮',
+          name: 'Gaming Communities',
+          description: 'Enhance gaming server experience',
         },
         {
-          icon: "👥",
-          name: "Business Communities",
-          description: "Professional networking and support"
+          icon: '👥',
+          name: 'Business Communities',
+          description: 'Professional networking and support',
         },
         {
-          icon: "🎓",
-          name: "Educational Groups",
-          description: "Learning and collaboration tools"
-        }
+          icon: '🎓',
+          name: 'Educational Groups',
+          description: 'Learning and collaboration tools',
+        },
       ],
-      conclusionTitle: "Why Choose Our Integration",
-      conclusionText: "Get the best for your server with:",
+      conclusionTitle: 'Why Choose Our Integration',
+      conclusionText: 'Get the best for your server with:',
       conclusionList: [
-        "Custom development approach",
-        "Reliable performance",
-        "Ongoing support"
+        'Custom development approach',
+        'Reliable performance',
+        'Ongoing support',
       ],
-      topReasonsTitle: "Key Benefits",
+      topReasonsTitle: 'Key Benefits',
       reasonList: [
         {
-          title: "Enhanced Automation",
+          title: 'Enhanced Automation',
           content: {
-            text: "Automate routine tasks and moderation:",
-            list: [
-              "User management",
-              "Content moderation",
-              "Event scheduling"
-            ]
-          }
+            text: 'Automate routine tasks and moderation:',
+            list: ['User management', 'Content moderation', 'Event scheduling'],
+          },
         },
         {
-          title: "Community Growth",
+          title: 'Community Growth',
           content: {
-            text: "Tools for community engagement:",
+            text: 'Tools for community engagement:',
             list: [
-              "Interactive features",
-              "User retention",
-              "Analytics insights"
-            ]
-          }
-        }
+              'Interactive features',
+              'User retention',
+              'Analytics insights',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Get Started",
-        text: "Transform your Discord server with our powerful integration solutions."
-      }
+        title: 'Get Started',
+        text: 'Transform your Discord server with our powerful integration solutions.',
+      },
     },
-    metaTitle: "Discord Integration | NeuroGen Lab - Custom Bot Development",
-    metaDescription: "Enhance your Discord server with custom bots and automation tools. Build engaging communities and streamline server management."
+    metaTitle: 'Discord Integration | NeuroGen Lab - Custom Bot Development',
+    metaDescription:
+      'Enhance your Discord server with custom bots and automation tools. Build engaging communities and streamline server management.',
   },
   de: {
-    title: "Discord Integration",
-    description: "Verbessern Sie Ihren Discord-Server mit unseren leistungsstarken Integrationswerkzeugen. Automatisieren Sie Aufgaben, verwalten Sie Communities und schaffen Sie ansprechende Erlebnisse für Ihre Nutzer.",
+    title: 'Discord Integration',
+    description:
+      'Verbessern Sie Ihren Discord-Server mit unseren leistungsstarken Integrationswerkzeugen. Automatisieren Sie Aufgaben, verwalten Sie Communities und schaffen Sie ansprechende Erlebnisse für Ihre Nutzer.',
     sectionTitles: {
-      features: "Hauptfunktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Hauptfunktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Individuelle Bot-Entwicklung",
-      "Automatisierte Moderation",
-      "Rollenverwaltung",
-      "Ereignisplanung",
-      "Nutzeranalyse",
-      "Benutzerdefinierte Befehle",
-      "Server-Statistiken"
+      'Individuelle Bot-Entwicklung',
+      'Automatisierte Moderation',
+      'Rollenverwaltung',
+      'Ereignisplanung',
+      'Nutzeranalyse',
+      'Benutzerdefinierte Befehle',
+      'Server-Statistiken',
     ],
     benefits: [
-      "Verstärktes Community-Engagement",
-      "Automatisierte Arbeitsabläufe",
-      "Verbesserte Serververwaltung",
-      "Echtzeit-Analysen",
-      "Anpassbare Lösungen",
-      "24/7 Bot-Betrieb",
-      "Nahtlose Integration"
+      'Verstärktes Community-Engagement',
+      'Automatisierte Arbeitsabläufe',
+      'Verbesserte Serververwaltung',
+      'Echtzeit-Analysen',
+      'Anpassbare Lösungen',
+      '24/7 Bot-Betrieb',
+      'Nahtlose Integration',
     ],
     integrations: [
-      "Discord API",
-      "Webhooks",
-      "Datenbanksysteme",
-      "Cloud-Dienste",
-      "Analyse-Tools",
-      "Individuelle APIs"
+      'Discord API',
+      'Webhooks',
+      'Datenbanksysteme',
+      'Cloud-Dienste',
+      'Analyse-Tools',
+      'Individuelle APIs',
     ],
     articleContent: {
-      mainTitle: "Discord-Integrationslösungen",
-      subtitle: "Stärken Sie Ihre Discord-Community",
-      introText: "Unsere Discord-Integrationsdienste helfen Ihnen bei:",
+      mainTitle: 'Discord-Integrationslösungen',
+      subtitle: 'Stärken Sie Ihre Discord-Community',
+      introText: 'Unsere Discord-Integrationsdienste helfen Ihnen bei:',
       introList: [
-        "Aufbau engagierter Community-Erlebnisse",
-        "Automatisierung von Routineaufgaben",
-        "Effektiver Serververwaltung"
+        'Aufbau engagierter Community-Erlebnisse',
+        'Automatisierung von Routineaufgaben',
+        'Effektiver Serververwaltung',
       ],
-      howItWorksTitle: "Funktionsweise",
-      howItWorksText: "Unser Integrationsprozess umfasst:",
+      howItWorksTitle: 'Funktionsweise',
+      howItWorksText: 'Unser Integrationsprozess umfasst:',
       howItWorksList: [
-        "Individuelle Bot-Entwicklung",
-        "Server-Einrichtung & Konfiguration",
-        "Funktionsimplementierung",
-        "Tests & Bereitstellung"
+        'Individuelle Bot-Entwicklung',
+        'Server-Einrichtung & Konfiguration',
+        'Funktionsimplementierung',
+        'Tests & Bereitstellung',
       ],
-      keyFeaturesTitle: "Kernfunktionen",
+      keyFeaturesTitle: 'Kernfunktionen',
       features: {
         realTime: {
-          title: "Echtzeit-Überwachung",
-          description: "Verfolgen Sie Serveraktivitäten und Nutzerengagement in Echtzeit"
+          title: 'Echtzeit-Überwachung',
+          description:
+            'Verfolgen Sie Serveraktivitäten und Nutzerengagement in Echtzeit',
         },
         multiLanguage: {
-          title: "Mehrsprachenunterstützung",
-          description: "Bot-Befehle und Antworten in mehreren Sprachen"
+          title: 'Mehrsprachenunterstützung',
+          description: 'Bot-Befehle und Antworten in mehreren Sprachen',
         },
         scalability: {
-          title: "Skalierbare Lösungen",
-          description: "Bewältigen Sie wachsende Communities mit Leichtigkeit"
+          title: 'Skalierbare Lösungen',
+          description: 'Bewältigen Sie wachsende Communities mit Leichtigkeit',
         },
         analytics: {
-          title: "Erweiterte Analysen",
-          description: "Detaillierte Einblicke in Serveraktivitäten und Nutzerverhalten"
-        }
+          title: 'Erweiterte Analysen',
+          description:
+            'Detaillierte Einblicke in Serveraktivitäten und Nutzerverhalten',
+        },
       },
-      industriesTitle: "Anwendungsfälle",
-      industriesText: "Perfekt für verschiedene Community-Typen:",
+      industriesTitle: 'Anwendungsfälle',
+      industriesText: 'Perfekt für verschiedene Community-Typen:',
       industries: [
         {
-          icon: "🎮",
-          name: "Gaming-Communities",
-          description: "Verbessern Sie das Gaming-Server-Erlebnis"
+          icon: '🎮',
+          name: 'Gaming-Communities',
+          description: 'Verbessern Sie das Gaming-Server-Erlebnis',
         },
         {
-          icon: "👥",
-          name: "Business-Communities",
-          description: "Professionelles Networking und Support"
+          icon: '👥',
+          name: 'Business-Communities',
+          description: 'Professionelles Networking und Support',
         },
         {
-          icon: "🎓",
-          name: "Bildungsgruppen",
-          description: "Lern- und Kollaborationswerkzeuge"
-        }
+          icon: '🎓',
+          name: 'Bildungsgruppen',
+          description: 'Lern- und Kollaborationswerkzeuge',
+        },
       ],
-      conclusionTitle: "Warum unsere Integration wählen",
-      conclusionText: "Holen Sie das Beste für Ihren Server mit:",
+      conclusionTitle: 'Warum unsere Integration wählen',
+      conclusionText: 'Holen Sie das Beste für Ihren Server mit:',
       conclusionList: [
-        "Individueller Entwicklungsansatz",
-        "Zuverlässige Leistung",
-        "Fortlaufende Unterstützung"
+        'Individueller Entwicklungsansatz',
+        'Zuverlässige Leistung',
+        'Fortlaufende Unterstützung',
       ],
-      topReasonsTitle: "Hauptvorteile",
+      topReasonsTitle: 'Hauptvorteile',
       reasonList: [
         {
-          title: "Verbesserte Automatisierung",
+          title: 'Verbesserte Automatisierung',
           content: {
-            text: "Automatisieren Sie Routineaufgaben und Moderation:",
+            text: 'Automatisieren Sie Routineaufgaben und Moderation:',
             list: [
-              "Benutzerverwaltung",
-              "Inhaltsmoderation",
-              "Ereignisplanung"
-            ]
-          }
+              'Benutzerverwaltung',
+              'Inhaltsmoderation',
+              'Ereignisplanung',
+            ],
+          },
         },
         {
-          title: "Community-Wachstum",
+          title: 'Community-Wachstum',
           content: {
-            text: "Tools für Community-Engagement:",
+            text: 'Tools für Community-Engagement:',
             list: [
-              "Interaktive Funktionen",
-              "Nutzerbindung",
-              "Analyse-Einblicke"
-            ]
-          }
-        }
+              'Interaktive Funktionen',
+              'Nutzerbindung',
+              'Analyse-Einblicke',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Jetzt Starten",
-        text: "Transformieren Sie Ihren Discord-Server mit unseren leistungsstarken Integrationslösungen."
-      }
+        title: 'Jetzt Starten',
+        text: 'Transformieren Sie Ihren Discord-Server mit unseren leistungsstarken Integrationslösungen.',
+      },
     },
-    metaTitle: "Discord Integration | NeuroGen Lab - Individuelle Bot-Entwicklung",
-    metaDescription: "Verbessern Sie Ihren Discord-Server mit individuellen Bots und Automatisierungswerkzeugen. Bauen Sie engagierte Communities auf und optimieren Sie die Serververwaltung."
+    metaTitle:
+      'Discord Integration | NeuroGen Lab - Individuelle Bot-Entwicklung',
+    metaDescription:
+      'Verbessern Sie Ihren Discord-Server mit individuellen Bots und Automatisierungswerkzeugen. Bauen Sie engagierte Communities auf und optimieren Sie die Serververwaltung.',
   },
   es: {
-    title: "Integración de Discord",
-    description: "Mejore su servidor de Discord con nuestras potentes herramientas de integración. Automatice tareas, gestione comunidades y cree experiencias atractivas para sus usuarios.",
+    title: 'Integración de Discord',
+    description:
+      'Mejore su servidor de Discord con nuestras potentes herramientas de integración. Automatice tareas, gestione comunidades y cree experiencias atractivas para sus usuarios.',
     sectionTitles: {
-      features: "Características Principales",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características Principales',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Desarrollo de Bots Personalizados",
-      "Moderación Automatizada",
-      "Gestión de Roles",
-      "Programación de Eventos",
-      "Análisis de Usuarios",
-      "Comandos Personalizados",
-      "Estadísticas del Servidor"
+      'Desarrollo de Bots Personalizados',
+      'Moderación Automatizada',
+      'Gestión de Roles',
+      'Programación de Eventos',
+      'Análisis de Usuarios',
+      'Comandos Personalizados',
+      'Estadísticas del Servidor',
     ],
     benefits: [
-      "Mayor Participación de la Comunidad",
-      "Flujos de Trabajo Automatizados",
-      "Mejor Gestión del Servidor",
-      "Análisis en Tiempo Real",
-      "Soluciones Personalizables",
-      "Operación de Bot 24/7",
-      "Integración Perfecta"
+      'Mayor Participación de la Comunidad',
+      'Flujos de Trabajo Automatizados',
+      'Mejor Gestión del Servidor',
+      'Análisis en Tiempo Real',
+      'Soluciones Personalizables',
+      'Operación de Bot 24/7',
+      'Integración Perfecta',
     ],
     integrations: [
-      "API de Discord",
-      "Webhooks",
-      "Sistemas de Base de Datos",
-      "Servicios en la Nube",
-      "Herramientas de Análisis",
-      "APIs Personalizadas"
+      'API de Discord',
+      'Webhooks',
+      'Sistemas de Base de Datos',
+      'Servicios en la Nube',
+      'Herramientas de Análisis',
+      'APIs Personalizadas',
     ],
     articleContent: {
-      mainTitle: "Soluciones de Integración de Discord",
-      subtitle: "Potencie su Comunidad de Discord",
-      introText: "Nuestros servicios de integración de Discord le ayudan a:",
+      mainTitle: 'Soluciones de Integración de Discord',
+      subtitle: 'Potencie su Comunidad de Discord',
+      introText: 'Nuestros servicios de integración de Discord le ayudan a:',
       introList: [
-        "Construir experiencias comunitarias atractivas",
-        "Automatizar tareas rutinarias",
-        "Gestionar el servidor de manera efectiva"
+        'Construir experiencias comunitarias atractivas',
+        'Automatizar tareas rutinarias',
+        'Gestionar el servidor de manera efectiva',
       ],
-      howItWorksTitle: "Cómo Funciona",
-      howItWorksText: "Nuestro proceso de integración incluye:",
+      howItWorksTitle: 'Cómo Funciona',
+      howItWorksText: 'Nuestro proceso de integración incluye:',
       howItWorksList: [
-        "Desarrollo de Bots Personalizados",
-        "Configuración del Servidor",
-        "Implementación de Funciones",
-        "Pruebas y Despliegue"
+        'Desarrollo de Bots Personalizados',
+        'Configuración del Servidor',
+        'Implementación de Funciones',
+        'Pruebas y Despliegue',
       ],
-      keyFeaturesTitle: "Características Principales",
+      keyFeaturesTitle: 'Características Principales',
       features: {
         realTime: {
-          title: "Monitoreo en Tiempo Real",
-          description: "Seguimiento de la actividad del servidor y participación de usuarios en tiempo real"
+          title: 'Monitoreo en Tiempo Real',
+          description:
+            'Seguimiento de la actividad del servidor y participación de usuarios en tiempo real',
         },
         multiLanguage: {
-          title: "Soporte Multilingüe",
-          description: "Comandos y respuestas del bot en múltiples idiomas"
+          title: 'Soporte Multilingüe',
+          description: 'Comandos y respuestas del bot en múltiples idiomas',
         },
         scalability: {
-          title: "Soluciones Escalables",
-          description: "Gestione comunidades en crecimiento con facilidad"
+          title: 'Soluciones Escalables',
+          description: 'Gestione comunidades en crecimiento con facilidad',
         },
         analytics: {
-          title: "Análisis Avanzado",
-          description: "Información detallada sobre la actividad del servidor y comportamiento del usuario"
-        }
+          title: 'Análisis Avanzado',
+          description:
+            'Información detallada sobre la actividad del servidor y comportamiento del usuario',
+        },
       },
-      industriesTitle: "Casos de Uso",
-      industriesText: "Perfecto para varios tipos de comunidades:",
+      industriesTitle: 'Casos de Uso',
+      industriesText: 'Perfecto para varios tipos de comunidades:',
       industries: [
         {
-          icon: "🎮",
-          name: "Comunidades de Gaming",
-          description: "Mejore la experiencia del servidor de juegos"
+          icon: '🎮',
+          name: 'Comunidades de Gaming',
+          description: 'Mejore la experiencia del servidor de juegos',
         },
         {
-          icon: "👥",
-          name: "Comunidades Empresariales",
-          description: "Networking profesional y soporte"
+          icon: '👥',
+          name: 'Comunidades Empresariales',
+          description: 'Networking profesional y soporte',
         },
         {
-          icon: "🎓",
-          name: "Grupos Educativos",
-          description: "Herramientas de aprendizaje y colaboración"
-        }
+          icon: '🎓',
+          name: 'Grupos Educativos',
+          description: 'Herramientas de aprendizaje y colaboración',
+        },
       ],
-      conclusionTitle: "Por Qué Elegir Nuestra Integración",
-      conclusionText: "Obtenga lo mejor para su servidor con:",
+      conclusionTitle: 'Por Qué Elegir Nuestra Integración',
+      conclusionText: 'Obtenga lo mejor para su servidor con:',
       conclusionList: [
-        "Enfoque de desarrollo personalizado",
-        "Rendimiento confiable",
-        "Soporte continuo"
+        'Enfoque de desarrollo personalizado',
+        'Rendimiento confiable',
+        'Soporte continuo',
       ],
-      topReasonsTitle: "Beneficios Clave",
+      topReasonsTitle: 'Beneficios Clave',
       reasonList: [
         {
-          title: "Automatización Mejorada",
+          title: 'Automatización Mejorada',
           content: {
-            text: "Automatice tareas rutinarias y moderación:",
+            text: 'Automatice tareas rutinarias y moderación:',
             list: [
-              "Gestión de usuarios",
-              "Moderación de contenido",
-              "Programación de eventos"
-            ]
-          }
+              'Gestión de usuarios',
+              'Moderación de contenido',
+              'Programación de eventos',
+            ],
+          },
         },
         {
-          title: "Crecimiento de la Comunidad",
+          title: 'Crecimiento de la Comunidad',
           content: {
-            text: "Herramientas para la participación comunitaria:",
+            text: 'Herramientas para la participación comunitaria:',
             list: [
-              "Funciones interactivas",
-              "Retención de usuarios",
-              "Información analítica"
-            ]
-          }
-        }
+              'Funciones interactivas',
+              'Retención de usuarios',
+              'Información analítica',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Comience Ahora",
-        text: "Transforme su servidor de Discord con nuestras potentes soluciones de integración."
-      }
+        title: 'Comience Ahora',
+        text: 'Transforme su servidor de Discord con nuestras potentes soluciones de integración.',
+      },
     },
-    metaTitle: "Integración de Discord | NeuroGen Lab - Desarrollo de Bots Personalizados",
-    metaDescription: "Mejore su servidor de Discord con bots personalizados y herramientas de automatización. Construya comunidades atractivas y optimice la gestión del servidor."
+    metaTitle:
+      'Integración de Discord | NeuroGen Lab - Desarrollo de Bots Personalizados',
+    metaDescription:
+      'Mejore su servidor de Discord con bots personalizados y herramientas de automatización. Construya comunidades atractivas y optimice la gestión del servidor.',
   },
   ru: {
-    title: "Интеграция Discord",
-    description: "Улучшите ваш Discord-сервер с помощью наших мощных инструментов интеграции. Автоматизируйте задачи, управляйте сообществами и создавайте увлекательный опыт для ваших пользователей.",
+    title: 'Интеграция Discord',
+    description:
+      'Улучшите ваш Discord-сервер с помощью наших мощных инструментов интеграции. Автоматизируйте задачи, управляйте сообществами и создавайте увлекательный опыт для ваших пользователей.',
     sectionTitles: {
-      features: "Ключевые Возможности",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Ключевые Возможности',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Разработка Пользовательских Ботов",
-      "Автоматизированная Модерация",
-      "Управление Ролями",
-      "Планирование Событий",
-      "Аналитика Пользователей",
-      "Пользовательские Команды",
-      "Статистика Сервера"
+      'Разработка Пользовательских Ботов',
+      'Автоматизированная Модерация',
+      'Управление Ролями',
+      'Планирование Событий',
+      'Аналитика Пользователей',
+      'Пользовательские Команды',
+      'Статистика Сервера',
     ],
     benefits: [
-      "Повышенная Вовлеченность Сообщества",
-      "Автоматизированные Рабочие Процессы",
-      "Улучшенное Управление Сервером",
-      "Аналитика в Реальном Времени",
-      "Настраиваемые Решения",
-      "Круглосуточная Работа Бота",
-      "Безупречная Интеграция"
+      'Повышенная Вовлеченность Сообщества',
+      'Автоматизированные Рабочие Процессы',
+      'Улучшенное Управление Сервером',
+      'Аналитика в Реальном Времени',
+      'Настраиваемые Решения',
+      'Круглосуточная Работа Бота',
+      'Безупречная Интеграция',
     ],
     integrations: [
-      "Discord API",
-      "Вебхуки",
-      "Системы Баз Данных",
-      "Облачные Сервисы",
-      "Инструменты Аналитики",
-      "Пользовательские API"
+      'Discord API',
+      'Вебхуки',
+      'Системы Баз Данных',
+      'Облачные Сервисы',
+      'Инструменты Аналитики',
+      'Пользовательские API',
     ],
     articleContent: {
-      mainTitle: "Решения для Интеграции Discord",
-      subtitle: "Усильте Ваше Discord Сообщество",
-      introText: "Наши услуги интеграции Discord помогают вам:",
+      mainTitle: 'Решения для Интеграции Discord',
+      subtitle: 'Усильте Ваше Discord Сообщество',
+      introText: 'Наши услуги интеграции Discord помогают вам:',
       introList: [
-        "Создавать увлекательный опыт для сообщества",
-        "Автоматизировать рутинные задачи",
-        "Эффективно управлять сервером"
+        'Создавать увлекательный опыт для сообщества',
+        'Автоматизировать рутинные задачи',
+        'Эффективно управлять сервером',
       ],
-      howItWorksTitle: "Как Это Работает",
-      howItWorksText: "Наш процесс интеграции включает:",
+      howItWorksTitle: 'Как Это Работает',
+      howItWorksText: 'Наш процесс интеграции включает:',
       howItWorksList: [
-        "Разработку Пользовательских Ботов",
-        "Настройку и Конфигурацию Сервера",
-        "Внедрение Функций",
-        "Тестирование и Развертывание"
+        'Разработку Пользовательских Ботов',
+        'Настройку и Конфигурацию Сервера',
+        'Внедрение Функций',
+        'Тестирование и Развертывание',
       ],
-      keyFeaturesTitle: "Основные Функции",
+      keyFeaturesTitle: 'Основные Функции',
       features: {
         realTime: {
-          title: "Мониторинг в Реальном Времени",
-          description: "Отслеживание активности сервера и вовлеченности пользователей в реальном времени"
+          title: 'Мониторинг в Реальном Времени',
+          description:
+            'Отслеживание активности сервера и вовлеченности пользователей в реальном времени',
         },
         multiLanguage: {
-          title: "Многоязычная Поддержка",
-          description: "Команды и ответы бота на нескольких языках"
+          title: 'Многоязычная Поддержка',
+          description: 'Команды и ответы бота на нескольких языках',
         },
         scalability: {
-          title: "Масштабируемые Решения",
-          description: "Легкое управление растущими сообществами"
+          title: 'Масштабируемые Решения',
+          description: 'Легкое управление растущими сообществами',
         },
         analytics: {
-          title: "Продвинутая Аналитика",
-          description: "Детальная информация о активности сервера и поведении пользователей"
-        }
+          title: 'Продвинутая Аналитика',
+          description:
+            'Детальная информация о активности сервера и поведении пользователей',
+        },
       },
-      industriesTitle: "Варианты Использования",
-      industriesText: "Идеально подходит для различных типов сообществ:",
+      industriesTitle: 'Варианты Использования',
+      industriesText: 'Идеально подходит для различных типов сообществ:',
       industries: [
         {
-          icon: "🎮",
-          name: "Игровые Сообщества",
-          description: "Улучшение опыта игровых серверов"
+          icon: '🎮',
+          name: 'Игровые Сообщества',
+          description: 'Улучшение опыта игровых серверов',
         },
         {
-          icon: "👥",
-          name: "Бизнес-Сообщества",
-          description: "Профессиональный нетворкинг и поддержка"
+          icon: '👥',
+          name: 'Бизнес-Сообщества',
+          description: 'Профессиональный нетворкинг и поддержка',
         },
         {
-          icon: "🎓",
-          name: "Образовательные Группы",
-          description: "Инструменты для обучения и совместной работы"
-        }
+          icon: '🎓',
+          name: 'Образовательные Группы',
+          description: 'Инструменты для обучения и совместной работы',
+        },
       ],
-      conclusionTitle: "Почему Стоит Выбрать Нашу Интеграцию",
-      conclusionText: "Получите лучшее для вашего сервера с:",
+      conclusionTitle: 'Почему Стоит Выбрать Нашу Интеграцию',
+      conclusionText: 'Получите лучшее для вашего сервера с:',
       conclusionList: [
-        "Индивидуальный подход к разработке",
-        "Надежная производительность",
-        "Постоянная поддержка"
+        'Индивидуальный подход к разработке',
+        'Надежная производительность',
+        'Постоянная поддержка',
       ],
-      topReasonsTitle: "Ключевые Преимущества",
+      topReasonsTitle: 'Ключевые Преимущества',
       reasonList: [
         {
-          title: "Улучшенная Автоматизация",
+          title: 'Улучшенная Автоматизация',
           content: {
-            text: "Автоматизация рутинных задач и модерации:",
+            text: 'Автоматизация рутинных задач и модерации:',
             list: [
-              "Управление пользователями",
-              "Модерация контента",
-              "Планирование событий"
-            ]
-          }
+              'Управление пользователями',
+              'Модерация контента',
+              'Планирование событий',
+            ],
+          },
         },
         {
-          title: "Рост Сообщества",
+          title: 'Рост Сообщества',
           content: {
-            text: "Инструменты для вовлечения сообщества:",
+            text: 'Инструменты для вовлечения сообщества:',
             list: [
-              "Интерактивные функции",
-              "Удержание пользователей",
-              "Аналитические инсайты"
-            ]
-          }
-        }
+              'Интерактивные функции',
+              'Удержание пользователей',
+              'Аналитические инсайты',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Начните Сейчас",
-        text: "Трансформируйте ваш Discord-сервер с помощью наших мощных интеграционных решений."
-      }
+        title: 'Начните Сейчас',
+        text: 'Трансформируйте ваш Discord-сервер с помощью наших мощных интеграционных решений.',
+      },
     },
-    metaTitle: "Интеграция Discord | NeuroGen Lab - Разработка Пользовательских Ботов",
-    metaDescription: "Улучшите ваш Discord-сервер с помощью пользовательских ботов и инструментов автоматизации. Создавайте увлекательные сообщества и оптимизируйте управление сервером."
+    metaTitle:
+      'Интеграция Discord | NeuroGen Lab - Разработка Пользовательских Ботов',
+    metaDescription:
+      'Улучшите ваш Discord-сервер с помощью пользовательских ботов и инструментов автоматизации. Создавайте увлекательные сообщества и оптимизируйте управление сервером.',
   },
   ua: {
-    title: "Інтеграція Discord",
-    description: "Покращіть ваш Discord-сервер за допомогою наших потужних інструментів інтеграції. Автоматизуйте завдання, керуйте спільнотами та створюйте захоплюючий досвід для ваших користувачів.",
+    title: 'Інтеграція Discord',
+    description:
+      'Покращіть ваш Discord-сервер за допомогою наших потужних інструментів інтеграції. Автоматизуйте завдання, керуйте спільнотами та створюйте захоплюючий досвід для ваших користувачів.',
     sectionTitles: {
-      features: "Ключові Можливості",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Ключові Можливості',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Розробка Користувацьких Ботів",
-      "Автоматизована Модерація",
-      "Керування Ролями",
-      "Планування Подій",
-      "Аналітика Користувачів",
-      "Користувацькі Команди",
-      "Статистика Сервера"
+      'Розробка Користувацьких Ботів',
+      'Автоматизована Модерація',
+      'Керування Ролями',
+      'Планування Подій',
+      'Аналітика Користувачів',
+      'Користувацькі Команди',
+      'Статистика Сервера',
     ],
     benefits: [
-      "Підвищена Залученість Спільноти",
-      "Автоматизовані Робочі Процеси",
-      "Покращене Керування Сервером",
-      "Аналітика в Реальному Часі",
-      "Налаштовувані Рішення",
-      "Цілодобова Робота Бота",
-      "Бездоганна Інтеграція"
+      'Підвищена Залученість Спільноти',
+      'Автоматизовані Робочі Процеси',
+      'Покращене Керування Сервером',
+      'Аналітика в Реальному Часі',
+      'Налаштовувані Рішення',
+      'Цілодобова Робота Бота',
+      'Бездоганна Інтеграція',
     ],
     integrations: [
-      "Discord API",
-      "Вебхуки",
-      "Системи Баз Даних",
-      "Хмарні Сервіси",
-      "Інструменти Аналітики",
-      "Користувацькі API"
+      'Discord API',
+      'Вебхуки',
+      'Системи Баз Даних',
+      'Хмарні Сервіси',
+      'Інструменти Аналітики',
+      'Користувацькі API',
     ],
     articleContent: {
-      mainTitle: "Рішення для Інтеграції Discord",
-      subtitle: "Посильте Вашу Discord Спільноту",
-      introText: "Наші послуги інтеграції Discord допомагають вам:",
+      mainTitle: 'Рішення для Інтеграції Discord',
+      subtitle: 'Посильте Вашу Discord Спільноту',
+      introText: 'Наші послуги інтеграції Discord допомагають вам:',
       introList: [
-        "Створювати захоплюючий досвід для спільноти",
-        "Автоматизувати рутинні завдання",
-        "Ефективно керувати сервером"
+        'Створювати захоплюючий досвід для спільноти',
+        'Автоматизувати рутинні завдання',
+        'Ефективно керувати сервером',
       ],
-      howItWorksTitle: "Як Це Працює",
-      howItWorksText: "Наш процес інтеграції включає:",
+      howItWorksTitle: 'Як Це Працює',
+      howItWorksText: 'Наш процес інтеграції включає:',
       howItWorksList: [
-        "Розробку Користувацьких Ботів",
-        "Налаштування та Конфігурацію Сервера",
-        "Впровадження Функцій",
-        "Тестування та Розгортання"
+        'Розробку Користувацьких Ботів',
+        'Налаштування та Конфігурацію Сервера',
+        'Впровадження Функцій',
+        'Тестування та Розгортання',
       ],
-      keyFeaturesTitle: "Основні Функції",
+      keyFeaturesTitle: 'Основні Функції',
       features: {
         realTime: {
-          title: "Моніторинг в Реальному Часі",
-          description: "Відстеження активності сервера та залученості користувачів в реальному часі"
+          title: 'Моніторинг в Реальному Часі',
+          description:
+            'Відстеження активності сервера та залученості користувачів в реальному часі',
         },
         multiLanguage: {
-          title: "Багатомовна Підтримка",
-          description: "Команди та відповіді бота на декількох мовах"
+          title: 'Багатомовна Підтримка',
+          description: 'Команди та відповіді бота на декількох мовах',
         },
         scalability: {
-          title: "Масштабований Захист",
-          description: "Обробка зростаючих обсягів трафіку"
+          title: 'Масштабований Захист',
+          description: 'Обробка зростаючих обсягів трафіку',
         },
         analytics: {
-          title: "Розширена Аналітика",
-          description: "Детальне розуміння патернів спаму"
-        }
+          title: 'Розширена Аналітика',
+          description: 'Детальне розуміння патернів спаму',
+        },
       },
-      industriesTitle: "Області Захисту",
-      industriesText: "Комплексний захист для:",
+      industriesTitle: 'Області Захисту',
+      industriesText: 'Комплексний захист для:',
       industries: [
         {
-          icon: "📧",
-          name: "Поштові Системи",
-          description: "Передова фільтрація пошти"
+          icon: '📧',
+          name: 'Поштові Системи',
+          description: 'Передова фільтрація пошти',
         },
         {
-          icon: "💬",
-          name: "Чат-Системи",
-          description: "Захист чатів в реальному часі"
+          icon: '💬',
+          name: 'Чат-Системи',
+          description: 'Захист чатів в реальному часі',
         },
         {
-          icon: "🌐",
-          name: "Веб-Платформи",
-          description: "Захист сайтів та форм"
-        }
+          icon: '🌐',
+          name: 'Веб-Платформи',
+          description: 'Захист сайтів та форм',
+        },
       ],
-      conclusionTitle: "Чому Обирають Наш Захист",
-      conclusionText: "Отримайте комплексний захист з:",
+      conclusionTitle: 'Чому Обирають Наш Захист',
+      conclusionText: 'Отримайте комплексний захист з:',
       conclusionList: [
-        "Передові ШІ-технології",
-        "Доведена ефективність",
-        "Постійні оновлення"
+        'Передові ШІ-технології',
+        'Доведена ефективність',
+        'Постійні оновлення',
       ],
-      topReasonsTitle: "Ключові Переваги",
+      topReasonsTitle: 'Ключові Переваги',
       reasonList: [
         {
-          title: "Розумний Захист",
+          title: 'Розумний Захист',
           content: {
-            text: "Передове виявлення та запобігання спаму:",
+            text: 'Передове виявлення та запобігання спаму:',
             list: [
-              "ШІ-аналіз",
-              "Розпізнавання патернів",
-              "Автоматичне блокування"
-            ]
-          }
+              'ШІ-аналіз',
+              'Розпізнавання патернів',
+              'Автоматичне блокування',
+            ],
+          },
         },
         {
-          title: "Просте Керування",
+          title: 'Просте Керування',
           content: {
-            text: "Спрощене керування захистом:",
+            text: 'Спрощене керування захистом:',
             list: [
-              "Зручний інтерфейс",
-              "Налаштовувані правила",
-              "Детальна звітність"
-            ]
-          }
-        }
+              'Зручний інтерфейс',
+              'Налаштовувані правила',
+              'Детальна звітність',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Розпочніть Захист",
-        text: "Захистіть ваш цифровий простір за допомогою наших передових рішень проти спаму."
-      }
+        title: 'Розпочніть Захист',
+        text: 'Захистіть ваш цифровий простір за допомогою наших передових рішень проти спаму.',
+      },
     },
-    metaTitle: "Інтеграція Discord | NeuroGen Lab - Розробка Користувацьких Ботів",
-    metaDescription: "Покращіть ваш Discord-сервер за допомогою користувацьких ботів та інструментів автоматизації. Створюйте захоплюючі спільноти та оптимізуйте керування сервером."
-  }
+    metaTitle:
+      'Інтеграція Discord | NeuroGen Lab - Розробка Користувацьких Ботів',
+    metaDescription:
+      'Покращіть ваш Discord-сервер за допомогою користувацьких ботів та інструментів автоматизації. Створюйте захоплюючі спільноти та оптимізуйте керування сервером.',
+  },
 };
 
 export { discordTranslations };
 
 const antiSpamTranslations = {
   en: {
-    title: "Anti-Spam Protection",
-    description: "Protect your digital space with our advanced anti-spam solutions. Implement intelligent filters and automated protection against unwanted content.",
+    title: 'Anti-Spam Protection',
+    description:
+      'Protect your digital space with our advanced anti-spam solutions. Implement intelligent filters and automated protection against unwanted content.',
     sectionTitles: {
-      features: "Key Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Key Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "AI-Powered Detection",
-      "Real-time Protection",
-      "Content Filtering",
-      "IP Blocking",
-      "Pattern Recognition",
-      "Custom Rules",
-      "Automated Moderation"
+      'AI-Powered Detection',
+      'Real-time Protection',
+      'Content Filtering',
+      'IP Blocking',
+      'Pattern Recognition',
+      'Custom Rules',
+      'Automated Moderation',
     ],
     benefits: [
-      "Clean Communication",
-      "Reduced Manual Moderation",
-      "Enhanced Security",
-      "Time Savings",
-      "Improved User Experience",
-      "Customizable Protection",
-      "24/7 Monitoring"
+      'Clean Communication',
+      'Reduced Manual Moderation',
+      'Enhanced Security',
+      'Time Savings',
+      'Improved User Experience',
+      'Customizable Protection',
+      '24/7 Monitoring',
     ],
     integrations: [
-      "Email Systems",
-      "Web Forms",
-      "Comment Systems",
-      "Chat Applications",
-      "Social Platforms",
-      "API Integration"
+      'Email Systems',
+      'Web Forms',
+      'Comment Systems',
+      'Chat Applications',
+      'Social Platforms',
+      'API Integration',
     ],
     articleContent: {
-      mainTitle: "Advanced Anti-Spam Solutions",
-      subtitle: "Intelligent Protection for Your Digital Space",
-      introText: "Our anti-spam protection helps you:",
+      mainTitle: 'Advanced Anti-Spam Solutions',
+      subtitle: 'Intelligent Protection for Your Digital Space',
+      introText: 'Our anti-spam protection helps you:',
       introList: [
-        "Maintain clean communication channels",
-        "Protect users from unwanted content",
-        "Reduce moderation workload"
+        'Maintain clean communication channels',
+        'Protect users from unwanted content',
+        'Reduce moderation workload',
       ],
-      howItWorksTitle: "How It Works",
-      howItWorksText: "Our protection system includes:",
+      howItWorksTitle: 'How It Works',
+      howItWorksText: 'Our protection system includes:',
       howItWorksList: [
-        "AI-Based Analysis",
-        "Pattern Detection",
-        "Automated Filtering",
-        "Real-time Protection"
+        'AI-Based Analysis',
+        'Pattern Detection',
+        'Automated Filtering',
+        'Real-time Protection',
       ],
-      keyFeaturesTitle: "Core Capabilities",
+      keyFeaturesTitle: 'Core Capabilities',
       features: {
         realTime: {
-          title: "Real-time Protection",
-          description: "Instant analysis and blocking of spam content"
+          title: 'Real-time Protection',
+          description: 'Instant analysis and blocking of spam content',
         },
         multiLanguage: {
-          title: "Multi-language Support",
-          description: "Spam detection across multiple languages"
+          title: 'Multi-language Support',
+          description: 'Spam detection across multiple languages',
         },
         scalability: {
-          title: "Scalable Protection",
-          description: "Handles increasing volumes of traffic"
+          title: 'Scalable Protection',
+          description: 'Handles increasing volumes of traffic',
         },
         analytics: {
-          title: "Advanced Analytics",
-          description: "Detailed insights into spam patterns"
-        }
+          title: 'Advanced Analytics',
+          description: 'Detailed insights into spam patterns',
+        },
       },
-      industriesTitle: "Protection Areas",
-      industriesText: "Comprehensive protection for:",
+      industriesTitle: 'Protection Areas',
+      industriesText: 'Comprehensive protection for:',
       industries: [
         {
-          icon: "📧",
-          name: "Email Systems",
-          description: "Advanced email filtering"
+          icon: '📧',
+          name: 'Email Systems',
+          description: 'Advanced email filtering',
         },
         {
-          icon: "💬",
-          name: "Chat Systems",
-          description: "Real-time chat protection"
+          icon: '💬',
+          name: 'Chat Systems',
+          description: 'Real-time chat protection',
         },
         {
-          icon: "🌐",
-          name: "Web Platforms",
-          description: "Website and form protection"
-        }
+          icon: '🌐',
+          name: 'Web Platforms',
+          description: 'Website and form protection',
+        },
       ],
-      conclusionTitle: "Why Choose Our Protection",
-      conclusionText: "Get comprehensive protection with:",
+      conclusionTitle: 'Why Choose Our Protection',
+      conclusionText: 'Get comprehensive protection with:',
       conclusionList: [
-        "Advanced AI technology",
-        "Proven effectiveness",
-        "Continuous updates"
+        'Advanced AI technology',
+        'Proven effectiveness',
+        'Continuous updates',
       ],
-      topReasonsTitle: "Key Advantages",
+      topReasonsTitle: 'Key Advantages',
       reasonList: [
         {
-          title: "Smart Protection",
+          title: 'Smart Protection',
           content: {
-            text: "Advanced spam detection and prevention:",
+            text: 'Advanced spam detection and prevention:',
             list: [
-              "AI-powered analysis",
-              "Pattern recognition",
-              "Automated blocking"
-            ]
-          }
+              'AI-powered analysis',
+              'Pattern recognition',
+              'Automated blocking',
+            ],
+          },
         },
         {
-          title: "Easy Management",
+          title: 'Easy Management',
           content: {
-            text: "Simplified protection management:",
+            text: 'Simplified protection management:',
             list: [
-              "User-friendly interface",
-              "Custom rules",
-              "Detailed reporting"
-            ]
-          }
-        }
+              'User-friendly interface',
+              'Custom rules',
+              'Detailed reporting',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Start Protection",
-        text: "Secure your digital space with our advanced anti-spam solutions."
-      }
+        title: 'Start Protection',
+        text: 'Secure your digital space with our advanced anti-spam solutions.',
+      },
     },
-    metaTitle: "Anti-Spam Protection | NeuroGen Lab - Advanced Security Solutions",
-    metaDescription: "Protect your digital space with advanced anti-spam solutions. Implement intelligent filters and automated protection against unwanted content."
+    metaTitle:
+      'Anti-Spam Protection | NeuroGen Lab - Advanced Security Solutions',
+    metaDescription:
+      'Protect your digital space with advanced anti-spam solutions. Implement intelligent filters and automated protection against unwanted content.',
   },
   de: {
-    title: "Anti-Spam-Schutz",
-    description: "Schützen Sie Ihren digitalen Raum mit unseren fortschrittlichen Anti-Spam-Lösungen. Implementieren Sie intelligente Filter und automatisierten Schutz gegen unerwünschte Inhalte.",
+    title: 'Anti-Spam-Schutz',
+    description:
+      'Schützen Sie Ihren digitalen Raum mit unseren fortschrittlichen Anti-Spam-Lösungen. Implementieren Sie intelligente Filter und automatisierten Schutz gegen unerwünschte Inhalte.',
     sectionTitles: {
-      features: "Hauptfunktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Hauptfunktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "KI-gestützte Erkennung",
-      "Echtzeit-Schutz",
-      "Inhaltsfilterung",
-      "IP-Blocking",
-      "Mustererkennung",
-      "Benutzerdefinierte Regeln",
-      "Automatisierte Moderation"
+      'KI-gestützte Erkennung',
+      'Echtzeit-Schutz',
+      'Inhaltsfilterung',
+      'IP-Blocking',
+      'Mustererkennung',
+      'Benutzerdefinierte Regeln',
+      'Automatisierte Moderation',
     ],
     benefits: [
-      "Saubere Kommunikation",
-      "Reduzierte manuelle Moderation",
-      "Verbesserte Sicherheit",
-      "Zeitersparnis",
-      "Verbesserte Benutzererfahrung",
-      "Anpassbarer Schutz",
-      "24/7 Überwachung"
+      'Saubere Kommunikation',
+      'Reduzierte manuelle Moderation',
+      'Verbesserte Sicherheit',
+      'Zeitersparnis',
+      'Verbesserte Benutzererfahrung',
+      'Anpassbarer Schutz',
+      '24/7 Überwachung',
     ],
     integrations: [
-      "E-Mail-Systeme",
-      "Webformulare",
-      "Kommentarsysteme",
-      "Chat-Anwendungen",
-      "Soziale Plattformen",
-      "API-Integration"
+      'E-Mail-Systeme',
+      'Webformulare',
+      'Kommentarsysteme',
+      'Chat-Anwendungen',
+      'Soziale Plattformen',
+      'API-Integration',
     ],
     articleContent: {
-      mainTitle: "Fortschrittliche Anti-Spam-Lösungen",
-      subtitle: "Intelligenter Schutz für Ihren digitalen Raum",
-      introText: "Unser Anti-Spam-Schutz hilft Ihnen bei:",
+      mainTitle: 'Fortschrittliche Anti-Spam-Lösungen',
+      subtitle: 'Intelligenter Schutz für Ihren digitalen Raum',
+      introText: 'Unser Anti-Spam-Schutz hilft Ihnen bei:',
       introList: [
-        "Aufrechterhaltung sauberer Kommunikationskanäle",
-        "Schutz der Nutzer vor unerwünschten Inhalten",
-        "Reduzierung des Moderationsaufwands"
+        'Aufrechterhaltung sauberer Kommunikationskanäle',
+        'Schutz der Nutzer vor unerwünschten Inhalten',
+        'Reduzierung des Moderationsaufwands',
       ],
-      howItWorksTitle: "Funktionsweise",
-      howItWorksText: "Unser Schutzsystem umfasst:",
+      howItWorksTitle: 'Funktionsweise',
+      howItWorksText: 'Unser Schutzsystem umfasst:',
       howItWorksList: [
-        "KI-basierte Analyse",
-        "Mustererkennung",
-        "Automatische Filterung",
-        "Echtzeit-Schutz"
+        'KI-basierte Analyse',
+        'Mustererkennung',
+        'Automatische Filterung',
+        'Echtzeit-Schutz',
       ],
-      keyFeaturesTitle: "Kernfunktionen",
+      keyFeaturesTitle: 'Kernfunktionen',
       features: {
         realTime: {
-          title: "Echtzeit-Schutz",
-          description: "Sofortige Analyse und Blockierung von Spam-Inhalten"
+          title: 'Echtzeit-Schutz',
+          description: 'Sofortige Analyse und Blockierung von Spam-Inhalten',
         },
         multiLanguage: {
-          title: "Mehrsprachenunterstützung",
-          description: "Spam-Erkennung in mehreren Sprachen"
+          title: 'Mehrsprachenunterstützung',
+          description: 'Spam-Erkennung in mehreren Sprachen',
         },
         scalability: {
-          title: "Skalierbarer Schutz",
-          description: "Bewältigt steigende Verkehrsmengen"
+          title: 'Skalierbarer Schutz',
+          description: 'Bewältigt steigende Verkehrsmengen',
         },
         analytics: {
-          title: "Erweiterte Analytik",
-          description: "Detaillierte Einblicke in Spam-Muster"
-        }
+          title: 'Erweiterte Analytik',
+          description: 'Detaillierte Einblicke in Spam-Muster',
+        },
       },
-      industriesTitle: "Schutzbereiche",
-      industriesText: "Umfassender Schutz für:",
+      industriesTitle: 'Schutzbereiche',
+      industriesText: 'Umfassender Schutz für:',
       industries: [
         {
-          icon: "📧",
-          name: "E-Mail-Systeme",
-          description: "Fortschrittliche E-Mail-Filterung"
+          icon: '📧',
+          name: 'E-Mail-Systeme',
+          description: 'Fortschrittliche E-Mail-Filterung',
         },
         {
-          icon: "💬",
-          name: "Chat-Systeme",
-          description: "Echtzeit-Chat-Schutz"
+          icon: '💬',
+          name: 'Chat-Systeme',
+          description: 'Echtzeit-Chat-Schutz',
         },
         {
-          icon: "🌐",
-          name: "Web-Plattformen",
-          description: "Website- und Formularschutz"
-        }
+          icon: '🌐',
+          name: 'Web-Plattformen',
+          description: 'Website- und Formularschutz',
+        },
       ],
-      conclusionTitle: "Warum unseren Schutz wählen",
-      conclusionText: "Erhalten Sie umfassenden Schutz mit:",
+      conclusionTitle: 'Warum unseren Schutz wählen',
+      conclusionText: 'Erhalten Sie umfassenden Schutz mit:',
       conclusionList: [
-        "Fortschrittliche KI-Technologie",
-        "Bewährte Wirksamkeit",
-        "Kontinuierliche Updates"
+        'Fortschrittliche KI-Technologie',
+        'Bewährte Wirksamkeit',
+        'Kontinuierliche Updates',
       ],
-      topReasonsTitle: "Hauptvorteile",
+      topReasonsTitle: 'Hauptvorteile',
       reasonList: [
         {
-          title: "Intelligenter Schutz",
+          title: 'Intelligenter Schutz',
           content: {
-            text: "Fortschrittliche Spam-Erkennung und -Prävention:",
+            text: 'Fortschrittliche Spam-Erkennung und -Prävention:',
             list: [
-              "KI-gestützte Analyse",
-              "Mustererkennung",
-              "Automatische Blockierung"
-            ]
-          }
+              'KI-gestützte Analyse',
+              'Mustererkennung',
+              'Automatische Blockierung',
+            ],
+          },
         },
         {
-          title: "Einfache Verwaltung",
+          title: 'Einfache Verwaltung',
           content: {
-            text: "Vereinfachtes Schutzmanagement:",
+            text: 'Vereinfachtes Schutzmanagement:',
             list: [
-              "Benutzerfreundliche Oberfläche",
-              "Benutzerdefinierte Regeln",
-              "Detaillierte Berichterstattung"
-            ]
-          }
-        }
+              'Benutzerfreundliche Oberfläche',
+              'Benutzerdefinierte Regeln',
+              'Detaillierte Berichterstattung',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Schutz Starten",
-        text: "Sichern Sie Ihren digitalen Raum mit unseren fortschrittlichen Anti-Spam-Lösungen."
-      }
+        title: 'Schutz Starten',
+        text: 'Sichern Sie Ihren digitalen Raum mit unseren fortschrittlichen Anti-Spam-Lösungen.',
+      },
     },
-    metaTitle: "Anti-Spam-Schutz | NeuroGen Lab - Fortschrittliche Sicherheitslösungen",
-    metaDescription: "Schützen Sie Ihren digitalen Raum mit fortschrittlichen Anti-Spam-Lösungen. Implementieren Sie intelligente Filter und automatisierten Schutz gegen unerwünschte Inhalte."
+    metaTitle:
+      'Anti-Spam-Schutz | NeuroGen Lab - Fortschrittliche Sicherheitslösungen',
+    metaDescription:
+      'Schützen Sie Ihren digitalen Raum mit fortschrittlichen Anti-Spam-Lösungen. Implementieren Sie intelligente Filter und automatisierten Schutz gegen unerwünschte Inhalte.',
   },
   es: {
-    title: "Protección Anti-Spam",
-    description: "Proteja su espacio digital con nuestras soluciones anti-spam avanzadas. Implemente filtros inteligentes y protección automatizada contra contenido no deseado.",
+    title: 'Protección Anti-Spam',
+    description:
+      'Proteja su espacio digital con nuestras soluciones anti-spam avanzadas. Implemente filtros inteligentes y protección automatizada contra contenido no deseado.',
     sectionTitles: {
-      features: "Características Principales",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características Principales',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Detección Basada en IA",
-      "Protección en Tiempo Real",
-      "Filtrado de Contenido",
-      "Bloqueo de IP",
-      "Reconocimiento de Patrones",
-      "Reglas Personalizadas",
-      "Moderación Automatizada"
+      'Detección Basada en IA',
+      'Protección en Tiempo Real',
+      'Filtrado de Contenido',
+      'Bloqueo de IP',
+      'Reconocimiento de Patrones',
+      'Reglas Personalizadas',
+      'Moderación Automatizada',
     ],
     benefits: [
-      "Comunicación Limpia",
-      "Moderación Manual Reducida",
-      "Seguridad Mejorada",
-      "Ahorro de Tiempo",
-      "Mejor Experiencia de Usuario",
-      "Protección Personalizable",
-      "Monitoreo 24/7"
+      'Comunicación Limpia',
+      'Moderación Manual Reducida',
+      'Seguridad Mejorada',
+      'Ahorro de Tiempo',
+      'Mejor Experiencia de Usuario',
+      'Protección Personalizable',
+      'Monitoreo 24/7',
     ],
     integrations: [
-      "Sistemas de Correo",
-      "Formularios Web",
-      "Sistemas de Comentarios",
-      "Aplicaciones de Chat",
-      "Plataformas Sociales",
-      "Integración API"
+      'Sistemas de Correo',
+      'Formularios Web',
+      'Sistemas de Comentarios',
+      'Aplicaciones de Chat',
+      'Plataformas Sociales',
+      'Integración API',
     ],
     articleContent: {
-      mainTitle: "Soluciones Anti-Spam Avanzadas",
-      subtitle: "Protección Inteligente para su Espacio Digital",
-      introText: "Nuestra protección anti-spam le ayuda a:",
+      mainTitle: 'Soluciones Anti-Spam Avanzadas',
+      subtitle: 'Protección Inteligente para su Espacio Digital',
+      introText: 'Nuestra protección anti-spam le ayuda a:',
       introList: [
-        "Mantener canales de comunicación limpios",
-        "Proteger usuarios de contenido no deseado",
-        "Reducir la carga de moderación"
+        'Mantener canales de comunicación limpios',
+        'Proteger usuarios de contenido no deseado',
+        'Reducir la carga de moderación',
       ],
-      howItWorksTitle: "Cómo Funciona",
-      howItWorksText: "Nuestro sistema de protección incluye:",
+      howItWorksTitle: 'Cómo Funciona',
+      howItWorksText: 'Nuestro sistema de protección incluye:',
       howItWorksList: [
-        "Análisis Basado en IA",
-        "Detección de Patrones",
-        "Filtrado Automático",
-        "Protección en Tiempo Real"
+        'Análisis Basado en IA',
+        'Detección de Patrones',
+        'Filtrado Automático',
+        'Protección en Tiempo Real',
       ],
-      keyFeaturesTitle: "Capacidades Principales",
+      keyFeaturesTitle: 'Capacidades Principales',
       features: {
         realTime: {
-          title: "Protección en Tiempo Real",
-          description: "Análisis y bloqueo instantáneo de contenido spam"
+          title: 'Protección en Tiempo Real',
+          description: 'Análisis y bloqueo instantáneo de contenido spam',
         },
         multiLanguage: {
-          title: "Soporte Multilingüe",
-          description: "Detección de spam en múltiples idiomas"
+          title: 'Soporte Multilingüe',
+          description: 'Detección de spam en múltiples idiomas',
         },
         scalability: {
-          title: "Protección Escalable",
-          description: "Maneja volúmenes crecientes de tráfico"
+          title: 'Protección Escalable',
+          description: 'Maneja volúmenes crecientes de tráfico',
         },
         analytics: {
-          title: "Análisis Avanzado",
-          description: "Información detallada sobre patrones de spam"
-        }
+          title: 'Análisis Avanzado',
+          description: 'Información detallada sobre patrones de spam',
+        },
       },
-      industriesTitle: "Áreas de Protección",
-      industriesText: "Protección integral para:",
+      industriesTitle: 'Áreas de Protección',
+      industriesText: 'Protección integral para:',
       industries: [
         {
-          icon: "📧",
-          name: "Sistemas de Correo",
-          description: "Filtrado avanzado de correo"
+          icon: '📧',
+          name: 'Sistemas de Correo',
+          description: 'Filtrado avanzado de correo',
         },
         {
-          icon: "💬",
-          name: "Sistemas de Chat",
-          description: "Protección de chat en tiempo real"
+          icon: '💬',
+          name: 'Sistemas de Chat',
+          description: 'Protección de chat en tiempo real',
         },
         {
-          icon: "🌐",
-          name: "Plataformas Web",
-          description: "Protección de sitios web y formularios"
-        }
+          icon: '🌐',
+          name: 'Plataformas Web',
+          description: 'Protección de sitios web y formularios',
+        },
       ],
-      conclusionTitle: "Por Qué Elegir Nuestra Protección",
-      conclusionText: "Obtenga protección integral con:",
+      conclusionTitle: 'Por Qué Elegir Nuestra Protección',
+      conclusionText: 'Obtenga protección integral con:',
       conclusionList: [
-        "Tecnología avanzada de IA",
-        "Eficacia comprobada",
-        "Actualizaciones continuas"
+        'Tecnología avanzada de IA',
+        'Eficacia comprobada',
+        'Actualizaciones continuas',
       ],
-      topReasonsTitle: "Ventajas Principales",
+      topReasonsTitle: 'Ventajas Principales',
       reasonList: [
         {
-          title: "Protección Inteligente",
+          title: 'Protección Inteligente',
           content: {
-            text: "Detección y prevención avanzada de spam:",
+            text: 'Detección y prevención avanzada de spam:',
             list: [
-              "Análisis basado en IA",
-              "Reconocimiento de patrones",
-              "Bloqueo automático"
-            ]
-          }
+              'Análisis basado en IA',
+              'Reconocimiento de patrones',
+              'Bloqueo automático',
+            ],
+          },
         },
         {
-          title: "Gestión Sencilla",
+          title: 'Gestión Sencilla',
           content: {
-            text: "Gestión simplificada de la protección:",
+            text: 'Gestión simplificada de la protección:',
             list: [
-              "Interfaz amigable",
-              "Reglas personalizadas",
-              "Informes detallados"
-            ]
-          }
-        }
+              'Interfaz amigable',
+              'Reglas personalizadas',
+              'Informes detallados',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Comience la Protección",
-        text: "Asegure su espacio digital con nuestras soluciones anti-spam avanzadas."
-      }
+        title: 'Comience la Protección',
+        text: 'Asegure su espacio digital con nuestras soluciones anti-spam avanzadas.',
+      },
     },
-    metaTitle: "Protección Anti-Spam | NeuroGen Lab - Soluciones de Seguridad Avanzadas",
-    metaDescription: "Proteja su espacio digital con soluciones anti-spam avanzadas. Implemente filtros inteligentes y protección automatizada contra contenido no deseado."
+    metaTitle:
+      'Protección Anti-Spam | NeuroGen Lab - Soluciones de Seguridad Avanzadas',
+    metaDescription:
+      'Proteja su espacio digital con soluciones anti-spam avanzadas. Implemente filtros inteligentes y protección automatizada contra contenido no deseado.',
   },
   ru: {
-    title: "Защита от Спама",
-    description: "Защитите ваше цифровое пространство с помощью наших передовых решений для борьбы со спамом. Внедрите интеллектуальные фильтры и автоматизированную защиту от нежелательного контента.",
+    title: 'Защита от Спама',
+    description:
+      'Защитите ваше цифровое пространство с помощью наших передовых решений для борьбы со спамом. Внедрите интеллектуальные фильтры и автоматизированную защиту от нежелательного контента.',
     sectionTitles: {
-      features: "Ключевые Возможности",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Ключевые Возможности',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "ИИ-Обнаружение",
-      "Защита в Реальном Времени",
-      "Фильтрация Контента",
-      "Блокировка IP",
-      "Распознавание Паттернов",
-      "Настраиваемые Правила",
-      "Автоматическая Модерация"
+      'ИИ-Обнаружение',
+      'Защита в Реальном Времени',
+      'Фильтрация Контента',
+      'Блокировка IP',
+      'Распознавание Паттернов',
+      'Настраиваемые Правила',
+      'Автоматическая Модерация',
     ],
     benefits: [
-      "Чистая Коммуникация",
-      "Снижение Ручной Модерации",
-      "Повышенная Безопасность",
-      "Экономия Времени",
-      "Улучшенный Пользовательский Опыт",
-      "Настраиваемая Защита",
-      "Круглосуточный Мониторинг"
+      'Чистая Коммуникация',
+      'Снижение Ручной Модерации',
+      'Повышенная Безопасность',
+      'Экономия Времени',
+      'Улучшенный Пользовательский Опыт',
+      'Настраиваемая Защита',
+      'Круглосуточный Мониторинг',
     ],
     integrations: [
-      "Почтовые Системы",
-      "Веб-Формы",
-      "Системы Комментариев",
-      "Чат-Приложения",
-      "Социальные Платформы",
-      "API Интеграция"
+      'Почтовые Системы',
+      'Веб-Формы',
+      'Системы Комментариев',
+      'Чат-Приложения',
+      'Социальные Платформы',
+      'API Интеграция',
     ],
     articleContent: {
-      mainTitle: "Продвинутые Решения Защиты от Спама",
-      subtitle: "Интеллектуальная Защита Вашего Цифрового Пространства",
-      introText: "Наша защита от спама помогает вам:",
+      mainTitle: 'Продвинутые Решения Защиты от Спама',
+      subtitle: 'Интеллектуальная Защита Вашего Цифрового Пространства',
+      introText: 'Наша защита от спама помогает вам:',
       introList: [
-        "Поддерживать чистые каналы коммуникации",
-        "Защищать пользователей от нежелательного контента",
-        "Снижать нагрузку на модерацию"
+        'Поддерживать чистые каналы коммуникации',
+        'Защищать пользователей от нежелательного контента',
+        'Снижать нагрузку на модерацию',
       ],
-      howItWorksTitle: "Как Это Работает",
-      howItWorksText: "Наша система защиты включает:",
+      howItWorksTitle: 'Как Это Работает',
+      howItWorksText: 'Наша система защиты включает:',
       howItWorksList: [
-        "ИИ-Анализ",
-        "Обнаружение Паттернов",
-        "Автоматическую Фильтрацию",
-        "Защиту в Реальном Времени"
+        'ИИ-Анализ',
+        'Обнаружение Паттернов',
+        'Автоматическую Фильтрацию',
+        'Защиту в Реальном Времени',
       ],
-      keyFeaturesTitle: "Основные Возможности",
+      keyFeaturesTitle: 'Основные Возможности',
       features: {
         realTime: {
-          title: "Защита в Реальном Времени",
-          description: "Мгновенный анализ и блокировка спам-контента"
+          title: 'Защита в Реальном Времени',
+          description: 'Мгновенный анализ и блокировка спам-контента',
         },
         multiLanguage: {
-          title: "Многоязычная Поддержка",
-          description: "Обнаружение спама на разных языках"
+          title: 'Многоязычная Поддержка',
+          description: 'Обнаружение спама на разных языках',
         },
         scalability: {
-          title: "Масштабируемая Защита",
-          description: "Обработка растущих объемов трафика"
+          title: 'Масштабируемая Защита',
+          description: 'Обработка растущих объемов трафика',
         },
         analytics: {
-          title: "Продвинутая Аналитика",
-          description: "Детальное понимание паттернов спама"
-        }
+          title: 'Продвинутая Аналитика',
+          description: 'Детальное понимание паттернов спама',
+        },
       },
-      industriesTitle: "Области Защиты",
-      industriesText: "Комплексная защита для:",
+      industriesTitle: 'Области Защиты',
+      industriesText: 'Комплексная защита для:',
       industries: [
         {
-          icon: "📧",
-          name: "Почтовые Системы",
-          description: "Продвинутая фильтрация почты"
+          icon: '📧',
+          name: 'Почтовые Системы',
+          description: 'Продвинутая фильтрация почты',
         },
         {
-          icon: "💬",
-          name: "Чат-Системы",
-          description: "Защита чатов в реальном времени"
+          icon: '💬',
+          name: 'Чат-Системы',
+          description: 'Защита чатов в реальном времени',
         },
         {
-          icon: "🌐",
-          name: "Веб-Платформы",
-          description: "Защита сайтов и форм"
-        }
+          icon: '🌐',
+          name: 'Веб-Платформы',
+          description: 'Защита сайтов и форм',
+        },
       ],
-      conclusionTitle: "Почему Выбирают Нашу Защиту",
-      conclusionText: "Получите комплексную защиту с:",
+      conclusionTitle: 'Почему Выбирают Нашу Защиту',
+      conclusionText: 'Получите комплексную защиту с:',
       conclusionList: [
-        "Передовые ИИ-технологии",
-        "Доказанная эффективность",
-        "Постоянные обновления"
+        'Передовые ИИ-технологии',
+        'Доказанная эффективность',
+        'Постоянные обновления',
       ],
-      topReasonsTitle: "Ключевые Преимущества",
+      topReasonsTitle: 'Ключевые Преимущества',
       reasonList: [
         {
-          title: "Умная Защита",
+          title: 'Умная Защита',
           content: {
-            text: "Продвинутое обнаружение и предотвращение спама:",
+            text: 'Продвинутое обнаружение и предотвращение спама:',
             list: [
-              "ИИ-анализ",
-              "Распознавание паттернов",
-              "Автоматическая блокировка"
-            ]
-          }
+              'ИИ-анализ',
+              'Распознавание паттернов',
+              'Автоматическая блокировка',
+            ],
+          },
         },
         {
-          title: "Простое Управление",
+          title: 'Простое Управление',
           content: {
-            text: "Упрощенное управление защитой:",
+            text: 'Упрощенное управление защитой:',
             list: [
-              "Удобный интерфейс",
-              "Настраиваемые правила",
-              "Детальная отчетность"
-            ]
-          }
-        }
+              'Удобный интерфейс',
+              'Настраиваемые правила',
+              'Детальная отчетность',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Начните Защиту",
-        text: "Защитите ваше цифровое пространство с помощью наших продвинутых решений против спама."
-      }
+        title: 'Начните Защиту',
+        text: 'Защитите ваше цифровое пространство с помощью наших продвинутых решений против спама.',
+      },
     },
-    metaTitle: "Защита от Спама | NeuroGen Lab - Передовые Решения Безопасности",
-    metaDescription: "Защитите ваше цифровое пространство с помощью продвинутых решений против спама. Внедрите интеллектуальные фильтры и автоматизированную защиту от нежелательного контента."
+    metaTitle:
+      'Защита от Спама | NeuroGen Lab - Передовые Решения Безопасности',
+    metaDescription:
+      'Защитите ваше цифровое пространство с помощью продвинутых решений против спама. Внедрите интеллектуальные фильтры и автоматизированную защиту от нежелательного контента.',
   },
   ua: {
-    title: "Захист від Спаму",
-    description: "Захистіть ваш цифровий простір за допомогою наших передових рішень для боротьби зі спамом. Впровадьте інтелектуальні фільтри та автоматизований захист від небажаного контенту.",
+    title: 'Захист від Спаму',
+    description:
+      'Захистіть ваш цифровий простір за допомогою наших передових рішень для боротьби зі спамом. Впровадьте інтелектуальні фільтри та автоматизований захист від небажаного контенту.',
     sectionTitles: {
-      features: "Ключові Можливості",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Ключові Можливості',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "ШІ-Виявлення",
-      "Захист в Реальному Часі",
-      "Фільтрація Контенту",
-      "Блокування IP",
-      "Розпізнавання Патернів",
-      "Налаштовувані Правила",
-      "Автоматична Модерація"
+      'ШІ-Виявлення',
+      'Захист в Реальному Часі',
+      'Фільтрація Контенту',
+      'Блокування IP',
+      'Розпізнавання Патернів',
+      'Налаштовувані Правила',
+      'Автоматична Модерація',
     ],
     benefits: [
-      "Чиста Комунікація",
-      "Зменшення Ручної Модерації",
-      "Підвищена Безпека",
-      "Економія Часу",
-      "Покращений Користувацький Досвід",
-      "Налаштовуваний Захист",
-      "Цілодобовий Моніторинг"
+      'Чиста Комунікація',
+      'Зменшення Ручної Модерації',
+      'Підвищена Безпека',
+      'Економія Часу',
+      'Покращений Користувацький Досвід',
+      'Налаштовуваний Захист',
+      'Цілодобовий Моніторинг',
     ],
     integrations: [
-      "Поштові Системи",
-      "Веб-Форми",
-      "Системи Коментарів",
-      "Чат-Додатки",
-      "Соціальні Платформи",
-      "API Інтеграція"
+      'Поштові Системи',
+      'Веб-Форми',
+      'Системи Коментарів',
+      'Чат-Додатки',
+      'Соціальні Платформи',
+      'API Інтеграція',
     ],
     articleContent: {
-      mainTitle: "Передові Рішення Захисту від Спаму",
-      subtitle: "Інтелектуальний Захист Вашого Цифрового Простору",
-      introText: "Наш захист від спаму допомагає вам:",
+      mainTitle: 'Передові Рішення Захисту від Спаму',
+      subtitle: 'Інтелектуальний Захист Вашого Цифрового Простору',
+      introText: 'Наш захист від спаму допомагає вам:',
       introList: [
-        "Підтримувати чисті канали комунікації",
-        "Захищати користувачів від небажаного контенту",
-        "Знижувати навантаження на модерацію"
+        'Підтримувати чисті канали комунікації',
+        'Захищати користувачів від небажаного контенту',
+        'Знижувати навантаження на модерацію',
       ],
-      howItWorksTitle: "Як Це Працює",
-      howItWorksText: "Наша система захисту включає:",
+      howItWorksTitle: 'Як Це Працює',
+      howItWorksText: 'Наша система захисту включає:',
       howItWorksList: [
-        "ШІ-Аналіз",
-        "Виявлення Патернів",
-        "Автоматичну Фільтрацію",
-        "Захист в Реальному Часі"
+        'ШІ-Аналіз',
+        'Виявлення Патернів',
+        'Автоматичну Фільтрацію',
+        'Захист в Реальному Часі',
       ],
-      keyFeaturesTitle: "Основні Можливості",
+      keyFeaturesTitle: 'Основні Можливості',
       features: {
         realTime: {
-          title: "Захист в Реальному Часі",
-          description: "Миттєвий аналіз та блокування спам-контенту"
+          title: 'Захист в Реальному Часі',
+          description: 'Миттєвий аналіз та блокування спам-контенту',
         },
         multiLanguage: {
-          title: "Багатомовна Підтримка",
-          description: "Виявлення спаму різними мовами"
+          title: 'Багатомовна Підтримка',
+          description: 'Виявлення спаму різними мовами',
         },
         scalability: {
-          title: "Масштабований Захист",
-          description: "Обробка зростаючих обсягів трафіку"
+          title: 'Масштабований Захист',
+          description: 'Обробка зростаючих обсягів трафіку',
         },
         analytics: {
-          title: "Розширена Аналітика",
-          description: "Детальне розуміння патернів спаму"
-        }
+          title: 'Розширена Аналітика',
+          description: 'Детальне розуміння патернів спаму',
+        },
       },
-      industriesTitle: "Області Захисту",
-      industriesText: "Комплексний захист для:",
+      industriesTitle: 'Області Захисту',
+      industriesText: 'Комплексний захист для:',
       industries: [
         {
-          icon: "📧",
-          name: "Поштові Системи",
-          description: "Передова фільтрація пошти"
+          icon: '📧',
+          name: 'Поштові Системи',
+          description: 'Передова фільтрація пошти',
         },
         {
-          icon: "💬",
-          name: "Чат-Системи",
-          description: "Захист чатів в реальному часі"
+          icon: '💬',
+          name: 'Чат-Системи',
+          description: 'Захист чатів в реальному часі',
         },
         {
-          icon: "🌐",
-          name: "Веб-Платформи",
-          description: "Захист сайтів та форм"
-        }
+          icon: '🌐',
+          name: 'Веб-Платформи',
+          description: 'Захист сайтів та форм',
+        },
       ],
-      conclusionTitle: "Чому Обирають Наш Захист",
-      conclusionText: "Отримайте комплексний захист з:",
+      conclusionTitle: 'Чому Обирають Наш Захист',
+      conclusionText: 'Отримайте комплексний захист з:',
       conclusionList: [
-        "Передові ШІ-технології",
-        "Доведена ефективність",
-        "Постійні оновлення"
+        'Передові ШІ-технології',
+        'Доведена ефективність',
+        'Постійні оновлення',
       ],
-      topReasonsTitle: "Ключові Переваги",
+      topReasonsTitle: 'Ключові Переваги',
       reasonList: [
         {
-          title: "Покращена Автоматизація",
+          title: 'Покращена Автоматизація',
           content: {
-            text: "Автоматизація рутинних завдань та модерації:",
+            text: 'Автоматизація рутинних завдань та модерації:',
             list: [
-              "Керування користувачами",
-              "Модерація контенту",
-              "Планування подій"
-            ]
-          }
+              'Керування користувачами',
+              'Модерація контенту',
+              'Планування подій',
+            ],
+          },
         },
         {
-          title: "Зростання Спільноти",
+          title: 'Зростання Спільноти',
           content: {
-            text: "Інструменти для залучення спільноти:",
+            text: 'Інструменти для залучення спільноти:',
             list: [
-              "Інтерактивні функції",
-              "Утримання користувачів",
-              "Аналітичні інсайти"
-            ]
-          }
-        }
+              'Інтерактивні функції',
+              'Утримання користувачів',
+              'Аналітичні інсайти',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Почніть Захист",
-        text: "Захистіть ваш цифровий простір за допомогою наших передових рішень проти спаму."
-      }
+        title: 'Почніть Захист',
+        text: 'Захистіть ваш цифровий простір за допомогою наших передових рішень проти спаму.',
+      },
     },
-    metaTitle: "Захист від Спаму | NeuroGen Lab - Передові Рішення Безпеки",
-    metaDescription: "Захистіть ваш цифровий простір за допомогою передових рішень проти спаму. Впровадьте інтелектуальні фільтри та автоматизований захист від небажаного контенту."
-  }
+    metaTitle: 'Захист від Спаму | NeuroGen Lab - Передові Рішення Безпеки',
+    metaDescription:
+      'Захистіть ваш цифровий простір за допомогою передових рішень проти спаму. Впровадьте інтелектуальні фільтри та автоматизований захист від небажаного контенту.',
+  },
 };
 export { antiSpamTranslations };
 
 const counselingTranslations = {
   en: {
-    title: "AI Counseling",
-    description: "Consultation focused on growth, automation, and profit increase.",
+    title: 'AI Counseling',
+    description:
+      'Consultation focused on growth, automation, and profit increase.',
     sectionTitles: {
-      features: "Key Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Key Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Personalized Support",
-      "24/7 Availability",
-      "Secure Communication",
-      "AI-Powered Analysis",
-      "Progress Tracking",
-      "Resource Library",
-      "Crisis Management"
+      'Personalized Support',
+      '24/7 Availability',
+      'Secure Communication',
+      'AI-Powered Analysis',
+      'Progress Tracking',
+      'Resource Library',
+      'Crisis Management',
     ],
     benefits: [
-      "Immediate Support",
-      "Complete Privacy",
-      "Personalized Approach",
-      "Cost-Effective",
-      "Accessible Anywhere",
-      "Continuous Learning",
-      "Data-Driven Insights"
+      'Immediate Support',
+      'Complete Privacy',
+      'Personalized Approach',
+      'Cost-Effective',
+      'Accessible Anywhere',
+      'Continuous Learning',
+      'Data-Driven Insights',
     ],
     integrations: [
-      "Chat Platforms",
-      "Mobile Apps",
-      "Healthcare Systems",
-      "Wellness Platforms",
-      "Support Networks",
-      "Analytics Tools"
+      'Chat Platforms',
+      'Mobile Apps',
+      'Healthcare Systems',
+      'Wellness Platforms',
+      'Support Networks',
+      'Analytics Tools',
     ],
     articleContent: {
-      mainTitle: "AI-Powered Counseling Solutions",
-      subtitle: "Professional Support Enhanced by AI",
-      introText: "Our AI counseling service provides:",
+      mainTitle: 'AI-Powered Counseling Solutions',
+      subtitle: 'Professional Support Enhanced by AI',
+      introText: 'Our AI counseling service provides:',
       introList: [
-        "Professional guidance and support",
-        "Personalized counseling experience",
-        "24/7 availability and accessibility"
+        'Professional guidance and support',
+        'Personalized counseling experience',
+        '24/7 availability and accessibility',
       ],
-      howItWorksTitle: "How It Works",
-      howItWorksText: "Our counseling process includes:",
+      howItWorksTitle: 'How It Works',
+      howItWorksText: 'Our counseling process includes:',
       howItWorksList: [
-        "Initial Assessment",
-        "Personalized Plan Creation",
-        "Regular Sessions",
-        "Progress Monitoring"
+        'Initial Assessment',
+        'Personalized Plan Creation',
+        'Regular Sessions',
+        'Progress Monitoring',
       ],
-      keyFeaturesTitle: "Core Capabilities",
+      keyFeaturesTitle: 'Core Capabilities',
       features: {
         realTime: {
-          title: "Real-time Support",
-          description: "Immediate assistance when you need it most"
+          title: 'Real-time Support',
+          description: 'Immediate assistance when you need it most',
         },
         multiLanguage: {
-          title: "Multi-language Support",
-          description: "Counseling services in multiple languages"
+          title: 'Multi-language Support',
+          description: 'Counseling services in multiple languages',
         },
         scalability: {
-          title: "Personalized Approach",
-          description: "Tailored support for individual needs"
+          title: 'Personalized Approach',
+          description: 'Tailored support for individual needs',
         },
         analytics: {
-          title: "Progress Tracking",
-          description: "Detailed insights into your journey"
-        }
+          title: 'Progress Tracking',
+          description: 'Detailed insights into your journey',
+        },
       },
-      industriesTitle: "Support Areas",
-      industriesText: "Comprehensive support for:",
+      industriesTitle: 'Support Areas',
+      industriesText: 'Comprehensive support for:',
       industries: [
         {
-          icon: "🧠",
-          name: "Mental Wellness",
-          description: "Emotional and psychological support"
+          icon: '🧠',
+          name: 'Mental Wellness',
+          description: 'Emotional and psychological support',
         },
         {
-          icon: "💪",
-          name: "Personal Growth",
-          description: "Development and self-improvement"
+          icon: '💪',
+          name: 'Personal Growth',
+          description: 'Development and self-improvement',
         },
         {
-          icon: "🤝",
-          name: "Relationship Support",
-          description: "Guidance for better relationships"
-        }
+          icon: '🤝',
+          name: 'Relationship Support',
+          description: 'Guidance for better relationships',
+        },
       ],
-      conclusionTitle: "Why Choose AI Counseling",
-      conclusionText: "Get comprehensive support with:",
+      conclusionTitle: 'Why Choose AI Counseling',
+      conclusionText: 'Get comprehensive support with:',
       conclusionList: [
-        "Advanced AI technology",
-        "Professional expertise",
-        "Continuous availability"
+        'Advanced AI technology',
+        'Professional expertise',
+        'Continuous availability',
       ],
-      topReasonsTitle: "Key Advantages",
+      topReasonsTitle: 'Key Advantages',
       reasonList: [
         {
-          title: "Personalized Support",
+          title: 'Personalized Support',
           content: {
-            text: "Tailored guidance for your needs:",
+            text: 'Tailored guidance for your needs:',
             list: [
-              "Individual approach",
-              "Adaptive support",
-              "Progress tracking"
-            ]
-          }
+              'Individual approach',
+              'Adaptive support',
+              'Progress tracking',
+            ],
+          },
         },
         {
-          title: "Accessible Care",
+          title: 'Accessible Care',
           content: {
-            text: "Support when you need it:",
-            list: [
-              "24/7 availability",
-              "Multiple platforms",
-              "Instant access"
-            ]
-          }
-        }
+            text: 'Support when you need it:',
+            list: ['24/7 availability', 'Multiple platforms', 'Instant access'],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Start Your Journey",
-        text: "Begin your path to well-being with our AI-powered counseling solutions."
-      }
+        title: 'Start Your Journey',
+        text: 'Begin your path to well-being with our AI-powered counseling solutions.',
+      },
     },
-    metaTitle: "AI Counseling | NeuroGen Lab - Professional Support Solutions",
-    metaDescription: "Consultation focused on growth, automation, and profit increase."
+    metaTitle: 'AI Counseling | NeuroGen Lab - Professional Support Solutions',
+    metaDescription:
+      'Consultation focused on growth, automation, and profit increase.',
   },
   de: {
-    title: "KI-Beratung",
-    description: "Beratung mit Fokus auf Wachstum, Automatisierung und Gewinnsteigerung.",
+    title: 'KI-Beratung',
+    description:
+      'Beratung mit Fokus auf Wachstum, Automatisierung und Gewinnsteigerung.',
     sectionTitles: {
-      features: "Hauptfunktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Hauptfunktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Personalisierte Unterstützung",
-      "24/7 Verfügbarkeit",
-      "Sichere Kommunikation",
-      "KI-gestützte Analyse",
-      "Fortschrittsverfolgung",
-      "Ressourcenbibliothek",
-      "Krisenmanagement"
+      'Personalisierte Unterstützung',
+      '24/7 Verfügbarkeit',
+      'Sichere Kommunikation',
+      'KI-gestützte Analyse',
+      'Fortschrittsverfolgung',
+      'Ressourcenbibliothek',
+      'Krisenmanagement',
     ],
     benefits: [
-      "Sofortige Unterstützung",
-      "Vollständige Privatsphäre",
-      "Personalisierter Ansatz",
-      "Kosteneffektiv",
-      "Überall zugänglich",
-      "Kontinuierliches Lernen",
-      "Datengestützte Einblicke"
+      'Sofortige Unterstützung',
+      'Vollständige Privatsphäre',
+      'Personalisierter Ansatz',
+      'Kosteneffektiv',
+      'Überall zugänglich',
+      'Kontinuierliches Lernen',
+      'Datengestützte Einblicke',
     ],
     integrations: [
-      "Chat-Plattformen",
-      "Mobile Apps",
-      "Gesundheitssysteme",
-      "Wellness-Plattformen",
-      "Unterstützungsnetzwerke",
-      "Analyse-Tools"
+      'Chat-Plattformen',
+      'Mobile Apps',
+      'Gesundheitssysteme',
+      'Wellness-Plattformen',
+      'Unterstützungsnetzwerke',
+      'Analyse-Tools',
     ],
     articleContent: {
-      mainTitle: "KI-gestützte Beratungslösungen",
-      subtitle: "Professionelle Unterstützung durch KI verstärkt",
-      introText: "Unser KI-Beratungsservice bietet:",
+      mainTitle: 'KI-gestützte Beratungslösungen',
+      subtitle: 'Professionelle Unterstützung durch KI verstärkt',
+      introText: 'Unser KI-Beratungsservice bietet:',
       introList: [
-        "Professionelle Anleitung und Unterstützung",
-        "Personalisierte Beratungserfahrung",
-        "24/7 Verfügbarkeit und Zugänglichkeit"
+        'Professionelle Anleitung und Unterstützung',
+        'Personalisierte Beratungserfahrung',
+        '24/7 Verfügbarkeit und Zugänglichkeit',
       ],
-      howItWorksTitle: "Funktionsweise",
-      howItWorksText: "Unser Beratungsprozess umfasst:",
+      howItWorksTitle: 'Funktionsweise',
+      howItWorksText: 'Unser Beratungsprozess umfasst:',
       howItWorksList: [
-        "Ersteinschätzung",
-        "Erstellung personalisierter Pläne",
-        "Regelmäßige Sitzungen",
-        "Fortschrittsüberwachung"
+        'Ersteinschätzung',
+        'Erstellung personalisierter Pläne',
+        'Regelmäßige Sitzungen',
+        'Fortschrittsüberwachung',
       ],
-      keyFeaturesTitle: "Kernfunktionen",
+      keyFeaturesTitle: 'Kernfunktionen',
       features: {
         realTime: {
-          title: "Echtzeit-Unterstützung",
-          description: "Sofortige Hilfe, wenn Sie sie am meisten brauchen"
+          title: 'Echtzeit-Unterstützung',
+          description: 'Sofortige Hilfe, wenn Sie sie am meisten brauchen',
         },
         multiLanguage: {
-          title: "Mehrsprachenunterstützung",
-          description: "Beratungsdienste in mehreren Sprachen"
+          title: 'Mehrsprachenunterstützung',
+          description: 'Beratungsdienste in mehreren Sprachen',
         },
         scalability: {
-          title: "Personalisierter Ansatz",
-          description: "Maßgeschneiderte Unterstützung für individuelle Bedürfnisse"
+          title: 'Personalisierter Ansatz',
+          description:
+            'Maßgeschneiderte Unterstützung für individuelle Bedürfnisse',
         },
         analytics: {
-          title: "Fortschrittsverfolgung",
-          description: "Detaillierte Einblicke in Ihre Entwicklung"
-        }
+          title: 'Fortschrittsverfolgung',
+          description: 'Detaillierte Einblicke in Ihre Entwicklung',
+        },
       },
-      industriesTitle: "Unterstützungsbereiche",
-      industriesText: "Umfassende Unterstützung für:",
+      industriesTitle: 'Unterstützungsbereiche',
+      industriesText: 'Umfassende Unterstützung für:',
       industries: [
         {
-          icon: "🧠",
-          name: "Mentales Wohlbefinden",
-          description: "Emotionale und psychologische Unterstützung"
+          icon: '🧠',
+          name: 'Mentales Wohlbefinden',
+          description: 'Emotionale und psychologische Unterstützung',
         },
         {
-          icon: "💪",
-          name: "Persönliche Entwicklung",
-          description: "Entwicklung und Selbstverbesserung"
+          icon: '💪',
+          name: 'Persönliche Entwicklung',
+          description: 'Entwicklung und Selbstverbesserung',
         },
         {
-          icon: "🤝",
-          name: "Beziehungsunterstützung",
-          description: "Begleitung für bessere Beziehungen"
-        }
+          icon: '🤝',
+          name: 'Beziehungsunterstützung',
+          description: 'Begleitung für bessere Beziehungen',
+        },
       ],
-      conclusionTitle: "Warum KI-Beratung wählen",
-      conclusionText: "Erhalten Sie umfassende Unterstützung mit:",
+      conclusionTitle: 'Warum KI-Beratung wählen',
+      conclusionText: 'Erhalten Sie umfassende Unterstützung mit:',
       conclusionList: [
-        "Fortschrittliche KI-Technologie",
-        "Professionelle Expertise",
-        "Kontinuierliche Verfügbarkeit"
+        'Fortschrittliche KI-Technologie',
+        'Professionelle Expertise',
+        'Kontinuierliche Verfügbarkeit',
       ],
-      topReasonsTitle: "Hauptvorteile",
+      topReasonsTitle: 'Hauptvorteile',
       reasonList: [
         {
-          title: "Personalisierte Unterstützung",
+          title: 'Personalisierte Unterstützung',
           content: {
-            text: "Maßgeschneiderte Begleitung für Ihre Bedürfnisse:",
+            text: 'Maßgeschneiderte Begleitung für Ihre Bedürfnisse:',
             list: [
-              "Individueller Ansatz",
-              "Adaptive Unterstützung",
-              "Fortschrittsverfolgung"
-            ]
-          }
+              'Individueller Ansatz',
+              'Adaptive Unterstützung',
+              'Fortschrittsverfolgung',
+            ],
+          },
         },
         {
-          title: "Zugängliche Betreuung",
+          title: 'Zugängliche Betreuung',
           content: {
-            text: "Unterstützung, wenn Sie sie brauchen:",
+            text: 'Unterstützung, wenn Sie sie brauchen:',
             list: [
-              "24/7 Verfügbarkeit",
-              "Mehrere Plattformen",
-              "Sofortiger Zugang"
-            ]
-          }
-        }
+              '24/7 Verfügbarkeit',
+              'Mehrere Plattformen',
+              'Sofortiger Zugang',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Starten Sie Ihre Reise",
-        text: "Beginnen Sie Ihren Weg zum Wohlbefinden mit unseren KI-gestützten Beratungslösungen."
-      }
+        title: 'Starten Sie Ihre Reise',
+        text: 'Beginnen Sie Ihren Weg zum Wohlbefinden mit unseren KI-gestützten Beratungslösungen.',
+      },
     },
-    metaTitle: "KI-Beratung | NeuroGen Lab - Professionelle Unterstützungslösungen",
-    metaDescription: "Beratung mit Fokus auf Wachstum, Automatisierung und Gewinnsteigerung."
+    metaTitle:
+      'KI-Beratung | NeuroGen Lab - Professionelle Unterstützungslösungen',
+    metaDescription:
+      'Beratung mit Fokus auf Wachstum, Automatisierung und Gewinnsteigerung.',
   },
   es: {
-    title: "Asesoramiento con IA",
-    description: "Consultoría centrada en el crecimiento, la automatización y el aumento de beneficios.",
+    title: 'Asesoramiento con IA',
+    description:
+      'Consultoría centrada en el crecimiento, la automatización y el aumento de beneficios.',
     sectionTitles: {
-      features: "Características Principales",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características Principales',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Apoyo Personalizado",
-      "Disponibilidad 24/7",
-      "Comunicación Segura",
-      "Análisis Impulsado por IA",
-      "Seguimiento del Progreso",
-      "Biblioteca de Recursos",
-      "Gestión de Crisis"
+      'Apoyo Personalizado',
+      'Disponibilidad 24/7',
+      'Comunicación Segura',
+      'Análisis Impulsado por IA',
+      'Seguimiento del Progreso',
+      'Biblioteca de Recursos',
+      'Gestión de Crisis',
     ],
     benefits: [
-      "Apoyo Inmediato",
-      "Privacidad Completa",
-      "Enfoque Personalizado",
-      "Rentable",
-      "Accesible en Cualquier Lugar",
-      "Aprendizaje Continuo",
-      "Información Basada en Datos"
+      'Apoyo Inmediato',
+      'Privacidad Completa',
+      'Enfoque Personalizado',
+      'Rentable',
+      'Accesible en Cualquier Lugar',
+      'Aprendizaje Continuo',
+      'Información Basada en Datos',
     ],
     integrations: [
-      "Plataformas de Chat",
-      "Aplicaciones Móviles",
-      "Sistemas de Salud",
-      "Plataformas de Bienestar",
-      "Redes de Apoyo",
-      "Herramientas de Análisis"
+      'Plataformas de Chat',
+      'Aplicaciones Móviles',
+      'Sistemas de Salud',
+      'Plataformas de Bienestar',
+      'Redes de Apoyo',
+      'Herramientas de Análisis',
     ],
     articleContent: {
-      mainTitle: "Soluciones de Asesoramiento con IA",
-      subtitle: "Apoyo Profesional Mejorado por IA",
-      introText: "Nuestro servicio de asesoramiento con IA proporciona:",
+      mainTitle: 'Soluciones de Asesoramiento con IA',
+      subtitle: 'Apoyo Profesional Mejorado por IA',
+      introText: 'Nuestro servicio de asesoramiento con IA proporciona:',
       introList: [
-        "Orientación y apoyo profesional",
-        "Experiencia de asesoramiento personalizada",
-        "Disponibilidad y accesibilidad 24/7"
+        'Orientación y apoyo profesional',
+        'Experiencia de asesoramiento personalizada',
+        'Disponibilidad y accesibilidad 24/7',
       ],
-      howItWorksTitle: "Cómo Funciona",
-      howItWorksText: "Nuestro proceso de asesoramiento incluye:",
+      howItWorksTitle: 'Cómo Funciona',
+      howItWorksText: 'Nuestro proceso de asesoramiento incluye:',
       howItWorksList: [
-        "Evaluación Inicial",
-        "Creación de Plan Personalizado",
-        "Sesiones Regulares",
-        "Monitoreo del Progreso"
+        'Evaluación Inicial',
+        'Creación de Plan Personalizado',
+        'Sesiones Regulares',
+        'Monitoreo del Progreso',
       ],
-      keyFeaturesTitle: "Capacidades Principales",
+      keyFeaturesTitle: 'Capacidades Principales',
       features: {
         realTime: {
-          title: "Apoyo en Tiempo Real",
-          description: "Asistencia inmediata cuando más la necesita"
+          title: 'Apoyo en Tiempo Real',
+          description: 'Asistencia inmediata cuando más la necesita',
         },
         multiLanguage: {
-          title: "Soporte Multilingüe",
-          description: "Servicios de asesoramiento en varios idiomas"
+          title: 'Soporte Multilingüe',
+          description: 'Servicios de asesoramiento en varios idiomas',
         },
         scalability: {
-          title: "Enfoque Personalizado",
-          description: "Apoyo adaptado a necesidades individuales"
+          title: 'Enfoque Personalizado',
+          description: 'Apoyo adaptado a necesidades individuales',
         },
         analytics: {
-          title: "Seguimiento del Progreso",
-          description: "Información detallada sobre su viaje"
-        }
+          title: 'Seguimiento del Progreso',
+          description: 'Información detallada sobre su viaje',
+        },
       },
-      industriesTitle: "Áreas de Apoyo",
-      industriesText: "Apoyo integral para:",
+      industriesTitle: 'Áreas de Apoyo',
+      industriesText: 'Apoyo integral para:',
       industries: [
         {
-          icon: "🧠",
-          name: "Bienestar Mental",
-          description: "Apoyo emocional y psicológico"
+          icon: '🧠',
+          name: 'Bienestar Mental',
+          description: 'Apoyo emocional y psicológico',
         },
         {
-          icon: "💪",
-          name: "Crecimiento Personal",
-          description: "Desarrollo y superación personal"
+          icon: '💪',
+          name: 'Crecimiento Personal',
+          description: 'Desarrollo y superación personal',
         },
         {
-          icon: "🤝",
-          name: "Apoyo en Relaciones",
-          description: "Orientación para mejores relaciones"
-        }
+          icon: '🤝',
+          name: 'Apoyo en Relaciones',
+          description: 'Orientación para mejores relaciones',
+        },
       ],
-      conclusionTitle: "Por Qué Elegir Asesoramiento con IA",
-      conclusionText: "Obtenga apoyo integral con:",
+      conclusionTitle: 'Por Qué Elegir Asesoramiento con IA',
+      conclusionText: 'Obtenga apoyo integral con:',
       conclusionList: [
-        "Tecnología avanzada de IA",
-        "Experiencia profesional",
-        "Disponibilidad continua"
+        'Tecnología avanzada de IA',
+        'Experiencia profesional',
+        'Disponibilidad continua',
       ],
-      topReasonsTitle: "Ventajas Principales",
+      topReasonsTitle: 'Ventajas Principales',
       reasonList: [
         {
-          title: "Apoyo Personalizado",
+          title: 'Apoyo Personalizado',
           content: {
-            text: "Orientación adaptada a sus necesidades:",
+            text: 'Orientación adaptada a sus necesidades:',
             list: [
-              "Enfoque individual",
-              "Apoyo adaptativo",
-              "Seguimiento del progreso"
-            ]
-          }
+              'Enfoque individual',
+              'Apoyo adaptativo',
+              'Seguimiento del progreso',
+            ],
+          },
         },
         {
-          title: "Atención Accesible",
+          title: 'Atención Accesible',
           content: {
-            text: "Apoyo cuando lo necesite:",
+            text: 'Apoyo cuando lo necesite:',
             list: [
-              "Disponibilidad 24/7",
-              "Múltiples plataformas",
-              "Acceso instantáneo"
-            ]
-          }
-        }
+              'Disponibilidad 24/7',
+              'Múltiples plataformas',
+              'Acceso instantáneo',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Comience Su Viaje",
-        text: "Inicie su camino hacia el bienestar con nuestras soluciones de asesoramiento impulsadas por IA."
-      }
+        title: 'Comience Su Viaje',
+        text: 'Inicie su camino hacia el bienestar con nuestras soluciones de asesoramiento impulsadas por IA.',
+      },
     },
-    metaTitle: "Asesoramiento con IA | NeuroGen Lab - Soluciones de Apoyo Profesional",
-    metaDescription: "Experimente asesoramiento personalizado impulsado por IA. Obtenga orientación y apoyo profesional con nuestra avanzada tecnología de inteligencia artificial."
+    metaTitle:
+      'Asesoramiento con IA | NeuroGen Lab - Soluciones de Apoyo Profesional',
+    metaDescription:
+      'Experimente asesoramiento personalizado impulsado por IA. Obtenga orientación y apoyo profesional con nuestra avanzada tecnología de inteligencia artificial.',
   },
   ru: {
-    title: "ИИ Консультация Бизнеса",
-    description: "Консультация с фокусом на рост, автоматизацию и увеличение прибыли.",
+    title: 'ИИ Консультация Бизнеса',
+    description:
+      'Консультация с фокусом на рост, автоматизацию и увеличение прибыли.',
     sectionTitles: {
-      features: "Ключевые Возможности",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Ключевые Возможности',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Персонализированная Поддержка",
-      "Доступность 24/7",
-      "Безопасное Общение",
-      "ИИ-Анализ",
-      "Отслеживание Прогресса",
-      "Библиотека Ресурсов",
-      "Управление Кризисными Ситуациями"
+      'Персонализированная Поддержка',
+      'Доступность 24/7',
+      'Безопасное Общение',
+      'ИИ-Анализ',
+      'Отслеживание Прогресса',
+      'Библиотека Ресурсов',
+      'Управление Кризисными Ситуациями',
     ],
     benefits: [
-      "Мгновенная Поддержка",
-      "Полная Конфиденциальность",
-      "Индивидуальный Подход",
-      "Экономическая Эффективность",
-      "Доступность Везде",
-      "Непрерывное Обучение",
-      "Аналитические Инсайты"
+      'Мгновенная Поддержка',
+      'Полная Конфиденциальность',
+      'Индивидуальный Подход',
+      'Экономическая Эффективность',
+      'Доступность Везде',
+      'Непрерывное Обучение',
+      'Аналитические Инсайты',
     ],
     integrations: [
-      "Чат-Платформы",
-      "Мобильные Приложения",
-      "Системы Здравоохранения",
-      "Платформы Благополучия",
-      "Сети Поддержки",
-      "Аналитические Инструменты"
+      'Чат-Платформы',
+      'Мобильные Приложения',
+      'Системы Здравоохранения',
+      'Платформы Благополучия',
+      'Сети Поддержки',
+      'Аналитические Инструменты',
     ],
     articleContent: {
-      mainTitle: "Консультационные Решения с ИИ",
-      subtitle: "Профессиональная Поддержка с Усилением ИИ",
-      introText: "Наш сервис ИИ-консультирования предоставляет:",
+      mainTitle: 'Консультационные Решения с ИИ',
+      subtitle: 'Профессиональная Поддержка с Усилением ИИ',
+      introText: 'Наш сервис ИИ-консультирования предоставляет:',
       introList: [
-        "Профессиональное руководство и поддержку",
-        "Персонализированный опыт консультирования",
-        "Круглосуточную доступность"
+        'Профессиональное руководство и поддержку',
+        'Персонализированный опыт консультирования',
+        'Круглосуточную доступность',
       ],
-      howItWorksTitle: "Как Это Работает",
-      howItWorksText: "Наш процесс консультирования включает:",
+      howItWorksTitle: 'Как Это Работает',
+      howItWorksText: 'Наш процесс консультирования включает:',
       howItWorksList: [
-        "Начальную Оценку",
-        "Создание Персонального Плана",
-        "Регулярные Сессии",
-        "Мониторинг Прогресса"
+        'Начальную Оценку',
+        'Создание Персонального Плана',
+        'Регулярные Сессии',
+        'Мониторинг Прогресса',
       ],
-      keyFeaturesTitle: "Основные Возможности",
+      keyFeaturesTitle: 'Основные Возможности',
       features: {
         realTime: {
-          title: "Поддержка в Реальном Времени",
-          description: "Мгновенная помощь, когда она больше всего нужна"
+          title: 'Поддержка в Реальном Времени',
+          description: 'Мгновенная помощь, когда она больше всего нужна',
         },
         multiLanguage: {
-          title: "Многоязычная Поддержка",
-          description: "Консультационные услуги на разных языках"
+          title: 'Многоязычная Поддержка',
+          description: 'Консультационные услуги на разных языках',
         },
         scalability: {
-          title: "Индивидуальный Подход",
-          description: "Адаптированная поддержка под личные потребности"
+          title: 'Индивидуальный Подход',
+          description: 'Адаптированная поддержка под личные потребности',
         },
         analytics: {
-          title: "Отслеживание Прогресса",
-          description: "Детальное понимание вашего пути"
-        }
+          title: 'Отслеживание Прогресса',
+          description: 'Детальное понимание вашего пути',
+        },
       },
-      industriesTitle: "Области Поддержки",
-      industriesText: "Комплексная поддержка для:",
+      industriesTitle: 'Области Поддержки',
+      industriesText: 'Комплексная поддержка для:',
       industries: [
         {
-          icon: "🧠",
-          name: "Ментальное Благополучие",
-          description: "Эмоциональная и психологическая поддержка"
+          icon: '🧠',
+          name: 'Ментальное Благополучие',
+          description: 'Эмоциональная и психологическая поддержка',
         },
         {
-          icon: "💪",
-          name: "Личностный Рост",
-          description: "Развитие и самосовершенствование"
+          icon: '💪',
+          name: 'Личностный Рост',
+          description: 'Развитие и самосовершенствование',
         },
         {
-          icon: "🤝",
-          name: "Поддержка в Отношениях",
-          description: "Руководство для улучшения отношений"
-        }
+          icon: '🤝',
+          name: 'Поддержка в Отношениях',
+          description: 'Руководство для улучшения отношений',
+        },
       ],
-      conclusionTitle: "Почему Выбирают ИИ-Консультирование",
-      conclusionText: "Получите комплексную поддержку с:",
+      conclusionTitle: 'Почему Выбирают ИИ-Консультирование',
+      conclusionText: 'Получите комплексную поддержку с:',
       conclusionList: [
-        "Передовые ИИ-технологии",
-        "Профессиональная экспертиза",
-        "Постоянная доступность"
+        'Передовые ИИ-технологии',
+        'Профессиональная экспертиза',
+        'Постоянная доступность',
       ],
-      topReasonsTitle: "Ключевые Преимущества",
+      topReasonsTitle: 'Ключевые Преимущества',
       reasonList: [
         {
-          title: "Персонализированная Поддержка",
+          title: 'Персонализированная Поддержка',
           content: {
-            text: "Индивидуальное руководство для ваших потребностей:",
+            text: 'Индивидуальное руководство для ваших потребностей:',
             list: [
-              "Индивидуальный подход",
-              "Адаптивная поддержка",
-              "Отслеживание прогресса"
-            ]
-          }
+              'Индивидуальный подход',
+              'Адаптивная поддержка',
+              'Отслеживание прогресса',
+            ],
+          },
         },
         {
-          title: "Доступная Помощь",
+          title: 'Доступная Помощь',
           content: {
-            text: "Поддержка, когда она нужна:",
+            text: 'Поддержка, когда она нужна:',
             list: [
-              "Доступность 24/7",
-              "Множество платформ",
-              "Мгновенный доступ"
-            ]
-          }
-        }
+              'Доступность 24/7',
+              'Множество платформ',
+              'Мгновенный доступ',
+            ],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Начните Свой Путь",
-        text: "Начните путь к благополучию с нашими консультационными решениями на базе ИИ."
-      }
+        title: 'Начните Свой Путь',
+        text: 'Начните путь к благополучию с нашими консультационными решениями на базе ИИ.',
+      },
     },
-    metaTitle: "ИИ-Консультации Бизнеса | NeuroGen Lab - Профессиональные Решения Поддержки",
-    metaDescription: "Получите персонализированную консультацию по интеграции ИИ в ваш бизнес. Профессиональное руководство и поддержка с помощью нашей передовой технологии искусственного интеллекта."
+    metaTitle:
+      'ИИ-Консультации Бизнеса | NeuroGen Lab - Профессиональные Решения Поддержки',
+    metaDescription:
+      'Получите персонализированную консультацию по интеграции ИИ в ваш бизнес. Профессиональное руководство и поддержка с помощью нашей передовой технологии искусственного интеллекта.',
   },
   ua: {
-    title: "ШІ Бізнес Консультація",
-    description: "Консультація з фокусом на зростання, автоматизацію та збільшення прибутку.",
+    title: 'ШІ Бізнес Консультація',
+    description:
+      'Консультація з фокусом на зростання, автоматизацію та збільшення прибутку.',
     sectionTitles: {
-      features: "Ключові Можливості",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Ключові Можливості',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Персоналізована Підтримка",
-      "Доступність 24/7",
-      "Безпечне Спілкування",
-      "ШІ-Аналіз",
-      "Відстеження Прогресу",
-      "Бібліотека Ресурсів",
-      "Управління Кризовими Ситуаціями"
+      'Персоналізована Підтримка',
+      'Доступність 24/7',
+      'Безпечне Спілкування',
+      'ШІ-Аналіз',
+      'Відстеження Прогресу',
+      'Бібліотека Ресурсів',
+      'Управління Кризовими Ситуаціями',
     ],
     benefits: [
-      "Миттєва Підтримка",
-      "Повна Конфіденційність",
-      "Індивідуальний Підхід",
-      "Економічна Ефективність",
-      "Доступність Всюди",
-      "Безперервне Навчання",
-      "Аналітичні Інсайти"
+      'Миттєва Підтримка',
+      'Повна Конфіденційність',
+      'Індивідуальний Підхід',
+      'Економічна Ефективність',
+      'Доступність Всюди',
+      'Безперервне Навчання',
+      'Аналітичні Інсайти',
     ],
     integrations: [
-      "Чат-Платформи",
-      "Мобільні Додатки",
+      'Чат-Платформи',
+      'Мобільні Додатки',
       "Системи Охорони Здоров'я",
-      "Платформи Благополуччя",
-      "Мережі Підтримки",
-      "Аналітичні Інструменти"
+      'Платформи Благополуччя',
+      'Мережі Підтримки',
+      'Аналітичні Інструменти',
     ],
     articleContent: {
-      mainTitle: "Консультації з ШІ",
-      subtitle: "Професійна Підтримка з Посиленням ШІ",
-      introText: "Наш сервіс Консультація Бізнесу надає:",
+      mainTitle: 'Консультації з ШІ',
+      subtitle: 'Професійна Підтримка з Посиленням ШІ',
+      introText: 'Наш сервіс Консультація Бізнесу надає:',
       introList: [
-        "Професійне керівництво та підтримку",
-        "Персоналізований досвід консультування",
-        "Цілодобову доступність"
+        'Професійне керівництво та підтримку',
+        'Персоналізований досвід консультування',
+        'Цілодобову доступність',
       ],
-      howItWorksTitle: "Як Це Працює",
-      howItWorksText: "Наш процес консультування включає:",
+      howItWorksTitle: 'Як Це Працює',
+      howItWorksText: 'Наш процес консультування включає:',
       howItWorksList: [
-        "Початкову Оцінку",
-        "Створення Персонального Плану",
-        "Регулярні Сесії",
-        "Моніторинг Прогресу"
+        'Початкову Оцінку',
+        'Створення Персонального Плану',
+        'Регулярні Сесії',
+        'Моніторинг Прогресу',
       ],
-      keyFeaturesTitle: "Основні Можливості",
+      keyFeaturesTitle: 'Основні Можливості',
       features: {
         realTime: {
-          title: "Підтримка в Реальному Часі",
-          description: "Миттєва допомога, коли вона найбільше потрібна"
+          title: 'Підтримка в Реальному Часі',
+          description: 'Миттєва допомога, коли вона найбільше потрібна',
         },
         multiLanguage: {
-          title: "Багатомовна Підтримка",
-          description: "Консультаційні послуги різними мовами"
+          title: 'Багатомовна Підтримка',
+          description: 'Консультаційні послуги різними мовами',
         },
         scalability: {
-          title: "Індивідуальний Підхід",
-          description: "Адаптована підтримка під особисті потреби"
+          title: 'Індивідуальний Підхід',
+          description: 'Адаптована підтримка під особисті потреби',
         },
         analytics: {
-          title: "Відстеження Прогресу",
-          description: "Детальне розуміння вашого шляху"
-        }
+          title: 'Відстеження Прогресу',
+          description: 'Детальне розуміння вашого шляху',
+        },
       },
-      industriesTitle: "Області Підтримки",
-      industriesText: "Комплексна підтримка для:",
+      industriesTitle: 'Області Підтримки',
+      industriesText: 'Комплексна підтримка для:',
       industries: [
         {
-          icon: "🧠",
-          name: "Ментальне Благополуччя",
-          description: "Емоційна та психологічна підтримка"
+          icon: '🧠',
+          name: 'Ментальне Благополуччя',
+          description: 'Емоційна та психологічна підтримка',
         },
         {
-          icon: "💪",
-          name: "Особистісне Зростання",
-          description: "Розвиток та самовдосконалення"
+          icon: '💪',
+          name: 'Особистісне Зростання',
+          description: 'Розвиток та самовдосконалення',
         },
         {
-          icon: "🤝",
-          name: "Підтримка у Стосунках",
-          description: "Керівництво для покращення стосунків"
-        }
+          icon: '🤝',
+          name: 'Підтримка у Стосунках',
+          description: 'Керівництво для покращення стосунків',
+        },
       ],
-      conclusionTitle: "Чому Обирають NeuroGen Lab",
-      conclusionText: "Отримайте комплексну підтримку з:",
+      conclusionTitle: 'Чому Обирають NeuroGen Lab',
+      conclusionText: 'Отримайте комплексну підтримку з:',
       conclusionList: [
-        "Передові ШІ-технології",
-        "Професійна експертиза",
-        "Постійна доступність"
+        'Передові ШІ-технології',
+        'Професійна експертиза',
+        'Постійна доступність',
       ],
-      topReasonsTitle: "Ключові Переваги",
+      topReasonsTitle: 'Ключові Переваги',
       reasonList: [
         {
-          title: "Персоналізована Підтримка",
+          title: 'Персоналізована Підтримка',
           content: {
-            text: "Індивідуальне керівництво для ваших потреб:",
+            text: 'Індивідуальне керівництво для ваших потреб:',
             list: [
-              "Індивідуальний підхід",
-              "Адаптивна підтримка",
-              "Відстеження прогресу"
-            ]
-          }
+              'Індивідуальний підхід',
+              'Адаптивна підтримка',
+              'Відстеження прогресу',
+            ],
+          },
         },
         {
-          title: "Доступна Допомога",
+          title: 'Доступна Допомога',
           content: {
-            text: "Підтримка, коли вона потрібна:",
-            list: [
-              "Доступність 24/7",
-              "Безліч платформ",
-              "Миттєвий доступ"
-            ]
-          }
-        }
+            text: 'Підтримка, коли вона потрібна:',
+            list: ['Доступність 24/7', 'Безліч платформ', 'Миттєвий доступ'],
+          },
+        },
       ],
       finalConclusion: {
-        title: "Почніть Свій Шлях",
-        text: "Розпочніть шлях до оптимізації вашого бізнесу з нашими рішеннями на базі ШІ."
-      }
+        title: 'Почніть Свій Шлях',
+        text: 'Розпочніть шлях до оптимізації вашого бізнесу з нашими рішеннями на базі ШІ.',
+      },
     },
-    metaTitle: "Консультація Бізнесу | NeuroGen Lab - Професійні Рішення для Бізнесу",
-    metaDescription: "Отримайте персоналізоване консультування з підтримкою ШІ. Професійне управління проектом та підтримка за допомогою нашої передової технології штучного інтелекту."
+    metaTitle:
+      'Консультація Бізнесу | NeuroGen Lab - Професійні Рішення для Бізнесу',
+    metaDescription:
+      'Отримайте персоналізоване консультування з підтримкою ШІ. Професійне управління проектом та підтримка за допомогою нашої передової технології штучного інтелекту.',
   },
 };
 
@@ -5401,189 +5585,202 @@ export { counselingTranslations };
 
 const bestSearchTranslations = {
   en: {
-    title: "Best Search Solution",
-    description: "Enhance your data discovery with our intelligent search solution that delivers accurate and relevant results through advanced AI algorithms.",
+    title: 'Best Search Solution',
+    description:
+      'Enhance your data discovery with our intelligent search solution that delivers accurate and relevant results through advanced AI algorithms.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Natural Language Processing",
-      "Semantic Search Capability",
-      "Auto-suggestion System",
-      "Multi-language Support",
-      "Faceted Search Options",
-      "Real-time Indexing",
-      "Advanced Filtering"
+      'Natural Language Processing',
+      'Semantic Search Capability',
+      'Auto-suggestion System',
+      'Multi-language Support',
+      'Faceted Search Options',
+      'Real-time Indexing',
+      'Advanced Filtering',
     ],
     benefits: [
-      "Improved Search Accuracy",
-      "Faster Information Discovery",
-      "Enhanced User Experience",
-      "Increased Productivity",
-      "Better Decision Making",
-      "Reduced Search Time",
-      "Comprehensive Results"
+      'Improved Search Accuracy',
+      'Faster Information Discovery',
+      'Enhanced User Experience',
+      'Increased Productivity',
+      'Better Decision Making',
+      'Reduced Search Time',
+      'Comprehensive Results',
     ],
     integrations: [
-      "Content Management Systems",
-      "Document Repositories",
-      "Knowledge Bases",
-      "Enterprise Systems",
-      "Analytics Platforms",
-      "Custom Applications"
+      'Content Management Systems',
+      'Document Repositories',
+      'Knowledge Bases',
+      'Enterprise Systems',
+      'Analytics Platforms',
+      'Custom Applications',
     ],
-    metaTitle: "Best Search | NeuroGen Lab - Intelligent Search Solution",
-    metaDescription: "Boost data discovery with AI search. Accurate results, semantic search, NLP, and advanced indexing for superior user experience."
+    metaTitle: 'Best Search | NeuroGen Lab - Intelligent Search Solution',
+    metaDescription:
+      'Boost data discovery with AI search. Accurate results, semantic search, NLP, and advanced indexing for superior user experience.',
   },
   de: {
-    title: "Beste Suchlösung",
-    description: "Verbessern Sie Ihre Datensuche mit unserer intelligenten Suchlösung, die durch fortschrittliche KI-Algorithmen genaue und relevante Ergebnisse liefert.",
+    title: 'Beste Suchlösung',
+    description:
+      'Verbessern Sie Ihre Datensuche mit unserer intelligenten Suchlösung, die durch fortschrittliche KI-Algorithmen genaue und relevante Ergebnisse liefert.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Verarbeitung natürlicher Sprache",
-      "Semantische Suchfunktion",
-      "Automatisches Vorschlagssystem",
-      "Mehrsprachige Unterstützung",
-      "Facettierte Suchoptionen",
-      "Echtzeit-Indexierung",
-      "Erweiterte Filterung"
+      'Verarbeitung natürlicher Sprache',
+      'Semantische Suchfunktion',
+      'Automatisches Vorschlagssystem',
+      'Mehrsprachige Unterstützung',
+      'Facettierte Suchoptionen',
+      'Echtzeit-Indexierung',
+      'Erweiterte Filterung',
     ],
     benefits: [
-      "Verbesserte Suchgenauigkeit",
-      "Schnellere Informationsfindung",
-      "Verbesserte Benutzererfahrung",
-      "Gesteigerte Produktivität",
-      "Bessere Entscheidungsfindung",
-      "Reduzierte Suchzeit",
-      "Umfassende Ergebnisse"
+      'Verbesserte Suchgenauigkeit',
+      'Schnellere Informationsfindung',
+      'Verbesserte Benutzererfahrung',
+      'Gesteigerte Produktivität',
+      'Bessere Entscheidungsfindung',
+      'Reduzierte Suchzeit',
+      'Umfassende Ergebnisse',
     ],
     integrations: [
-      "Content-Management-Systeme",
-      "Dokumenten-Repositories",
-      "Wissensdatenbanken",
-      "Unternehmenssysteme",
-      "Analyse-Plattformen",
-      "Kundenspezifische Anwendungen"
+      'Content-Management-Systeme',
+      'Dokumenten-Repositories',
+      'Wissensdatenbanken',
+      'Unternehmenssysteme',
+      'Analyse-Plattformen',
+      'Kundenspezifische Anwendungen',
     ],
-    metaTitle: "Beste Suche | NeuroGen Lab - Intelligente Suchlösung",
-    metaDescription: "Steigern Sie die Datensuche mit KI-Suche. Genaue Ergebnisse, semantische Suche, NLP und erweiterte Indexierung für überlegene Benutzererfahrung."
+    metaTitle: 'Beste Suche | NeuroGen Lab - Intelligente Suchlösung',
+    metaDescription:
+      'Steigern Sie die Datensuche mit KI-Suche. Genaue Ergebnisse, semantische Suche, NLP und erweiterte Indexierung für überlegene Benutzererfahrung.',
   },
   es: {
-    title: "Mejor Solución de Búsqueda",
-    description: "Mejore su descubrimiento de datos con nuestra solución de búsqueda inteligente que ofrece resultados precisos y relevantes a través de algoritmos avanzados de IA.",
+    title: 'Mejor Solución de Búsqueda',
+    description:
+      'Mejore su descubrimiento de datos con nuestra solución de búsqueda inteligente que ofrece resultados precisos y relevantes a través de algoritmos avanzados de IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Procesamiento de Lenguaje Natural",
-      "Capacidad de Búsqueda Semántica",
-      "Sistema de Autosugerencias",
-      "Soporte Multilingüe",
-      "Opciones de Búsqueda Facetada",
-      "Indexación en Tiempo Real",
-      "Filtrado Avanzado"
+      'Procesamiento de Lenguaje Natural',
+      'Capacidad de Búsqueda Semántica',
+      'Sistema de Autosugerencias',
+      'Soporte Multilingüe',
+      'Opciones de Búsqueda Facetada',
+      'Indexación en Tiempo Real',
+      'Filtrado Avanzado',
     ],
     benefits: [
-      "Mayor Precisión de Búsqueda",
-      "Descubrimiento más Rápido de Información",
-      "Experiencia de Usuario Mejorada",
-      "Mayor Productividad",
-      "Mejor Toma de Decisiones",
-      "Tiempo de Búsqueda Reducido",
-      "Resultados Completos"
+      'Mayor Precisión de Búsqueda',
+      'Descubrimiento más Rápido de Información',
+      'Experiencia de Usuario Mejorada',
+      'Mayor Productividad',
+      'Mejor Toma de Decisiones',
+      'Tiempo de Búsqueda Reducido',
+      'Resultados Completos',
     ],
     integrations: [
-      "Sistemas de Gestión de Contenido",
-      "Repositorios de Documentos",
-      "Bases de Conocimiento",
-      "Sistemas Empresariales",
-      "Plataformas de Análisis",
-      "Aplicaciones Personalizadas"
+      'Sistemas de Gestión de Contenido',
+      'Repositorios de Documentos',
+      'Bases de Conocimiento',
+      'Sistemas Empresariales',
+      'Plataformas de Análisis',
+      'Aplicaciones Personalizadas',
     ],
-    metaTitle: "Mejor Búsqueda | NeuroGen Lab - Solución de Búsqueda Inteligente",
-    metaDescription: "Potencie el descubrimiento de datos con búsqueda IA. Resultados precisos, búsqueda semántica, PLN e indexación avanzada para una experiencia de usuario superior."
+    metaTitle:
+      'Mejor Búsqueda | NeuroGen Lab - Solución de Búsqueda Inteligente',
+    metaDescription:
+      'Potencie el descubrimiento de datos con búsqueda IA. Resultados precisos, búsqueda semántica, PLN e indexación avanzada para una experiencia de usuario superior.',
   },
   ru: {
-    title: "Лучшее Поисковое Решение",
-    description: "Улучшите поиск данных с помощью нашего интеллектуального поискового решения, которое предоставляет точные и релевантные результаты благодаря продвинутым алгоритмам ИИ.",
+    title: 'Лучшее Поисковое Решение',
+    description:
+      'Улучшите поиск данных с помощью нашего интеллектуального поискового решения, которое предоставляет точные и релевантные результаты благодаря продвинутым алгоритмам ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Обработка Естественного Языка",
-      "Семантический Поиск",
-      "Система Автоподсказок",
-      "Многоязычная Поддержка",
-      "Фасетный Поиск",
-      "Индексация в Реальном Времени",
-      "Расширенная Фильтрация"
+      'Обработка Естественного Языка',
+      'Семантический Поиск',
+      'Система Автоподсказок',
+      'Многоязычная Поддержка',
+      'Фасетный Поиск',
+      'Индексация в Реальном Времени',
+      'Расширенная Фильтрация',
     ],
     benefits: [
-      "Повышенная Точность Поиска",
-      "Быстрое Нахождение Информации",
-      "Улучшенный Пользовательский Опыт",
-      "Повышенная Продуктивность",
-      "Лучшее Принятие Решений",
-      "Сокращение Времени Поиска",
-      "Комплексные Результаты"
+      'Повышенная Точность Поиска',
+      'Быстрое Нахождение Информации',
+      'Улучшенный Пользовательский Опыт',
+      'Повышенная Продуктивность',
+      'Лучшее Принятие Решений',
+      'Сокращение Времени Поиска',
+      'Комплексные Результаты',
     ],
     integrations: [
-      "Системы Управления Контентом",
-      "Хранилища Документов",
-      "Базы Знаний",
-      "Корпоративные Системы",
-      "Аналитические Платформы",
-      "Пользовательские Приложения"
+      'Системы Управления Контентом',
+      'Хранилища Документов',
+      'Базы Знаний',
+      'Корпоративные Системы',
+      'Аналитические Платформы',
+      'Пользовательские Приложения',
     ],
-    metaTitle: "Лучший Поиск | NeuroGen Lab - Интеллектуальное Поисковое Решение",
-    metaDescription: "Улучшите поиск данных с помощью ИИ. Точные результаты, семантический поиск, обработка естественного языка и продвинутая индексация для превосходного пользовательского опыта."
+    metaTitle:
+      'Лучший Поиск | NeuroGen Lab - Интеллектуальное Поисковое Решение',
+    metaDescription:
+      'Улучшите поиск данных с помощью ИИ. Точные результаты, семантический поиск, обработка естественного языка и продвинутая индексация для превосходного пользовательского опыта.',
   },
   ua: {
-    title: "Найкраще Пошукове Рішення",
-    description: "Покращіть пошук даних за допомогою нашого інтелектуального пошукового рішення, яке надає точні та релевантні результати завдяки передовим алгоритмам ШІ.",
+    title: 'Найкраще Пошукове Рішення',
+    description:
+      'Покращіть пошук даних за допомогою нашого інтелектуального пошукового рішення, яке надає точні та релевантні результати завдяки передовим алгоритмам ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Обробка Природної Мови",
-      "Семантичний Пошук",
-      "Система Автопідказок",
-      "Багатомовна Підтримка",
-      "Фасетний Пошук",
-      "Індексація в Реальному Часі",
-      "Розширена Фільтрація"
+      'Обробка Природної Мови',
+      'Семантичний Пошук',
+      'Система Автопідказок',
+      'Багатомовна Підтримка',
+      'Фасетний Пошук',
+      'Індексація в Реальному Часі',
+      'Розширена Фільтрація',
     ],
     benefits: [
-      "Підвищена Точність Пошуку",
-      "Швидке Знаходження Інформації",
-      "Покращений Користувацький Досвід",
-      "Підвищена Продуктивність",
-      "Краще Прийняття Рішень",
-      "Скорочення Часу Пошуку",
-      "Комплексні Результати"
+      'Підвищена Точність Пошуку',
+      'Швидке Знаходження Інформації',
+      'Покращений Користувацький Досвід',
+      'Підвищена Продуктивність',
+      'Краще Прийняття Рішень',
+      'Скорочення Часу Пошуку',
+      'Комплексні Результати',
     ],
     integrations: [
-      "Системи Керування Контентом",
-      "Сховища Документів",
-      "Бази Знань",
-      "Корпоративні Системи",
-      "Аналітичні Платформи",
-      "Користувацькі Додатки"
+      'Системи Керування Контентом',
+      'Сховища Документів',
+      'Бази Знань',
+      'Корпоративні Системи',
+      'Аналітичні Платформи',
+      'Користувацькі Додатки',
     ],
-    metaTitle: "Найкращий Пошук | NeuroGen Lab - Інтелектуальне Пошукове Рішення",
-    metaDescription: "Покращіть пошук даних за допомогою ШІ. Точні результати, семантичний пошук, обробка природної мови та передова індексація для неперевершеного користувацького досвіду."
+    metaTitle:
+      'Найкращий Пошук | NeuroGen Lab - Інтелектуальне Пошукове Рішення',
+    metaDescription:
+      'Покращіть пошук даних за допомогою ШІ. Точні результати, семантичний пошук, обробка природної мови та передова індексація для неперевершеного користувацького досвіду.',
   },
 };
 
@@ -5591,2499 +5788,2687 @@ export { bestSearchTranslations };
 
 const emailTranslations = {
   en: {
-    title: "Email Solution",
-    description: "Enhance your email communication with our intelligent email solution that delivers advanced features and security through AI-powered technology.",
+    title: 'Email Solution',
+    description:
+      'Enhance your email communication with our intelligent email solution that delivers advanced features and security through AI-powered technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Smart Email Filtering",
-      "Automated Responses",
-      "Security Protection",
-      "Priority Inbox",
-      "Email Analytics",
-      "Template Management",
-      "Advanced Search"
+      'Smart Email Filtering',
+      'Automated Responses',
+      'Security Protection',
+      'Priority Inbox',
+      'Email Analytics',
+      'Template Management',
+      'Advanced Search',
     ],
     benefits: [
-      "Increased Productivity",
-      "Better Organization",
-      "Enhanced Security",
-      "Time Savings",
-      "Improved Communication",
-      "Reduced Errors",
-      "Better Overview"
+      'Increased Productivity',
+      'Better Organization',
+      'Enhanced Security',
+      'Time Savings',
+      'Improved Communication',
+      'Reduced Errors',
+      'Better Overview',
     ],
     integrations: [
-      "Email Clients",
-      "CRM Systems",
-      "Calendar Apps",
-      "Cloud Storage",
-      "Project Management",
-      "Communication Tools"
+      'Email Clients',
+      'CRM Systems',
+      'Calendar Apps',
+      'Cloud Storage',
+      'Project Management',
+      'Communication Tools',
     ],
-    metaTitle: "Email Solution | NeuroGen Lab - Intelligent Email Management",
-    metaDescription: "Enhance email communication with AI technology. Smart filtering, automated responses, and advanced security for better email management."
+    metaTitle: 'Email Solution | NeuroGen Lab - Intelligent Email Management',
+    metaDescription:
+      'Enhance email communication with AI technology. Smart filtering, automated responses, and advanced security for better email management.',
   },
   de: {
-    title: "E-Mail-Lösung",
-    description: "Verbessern Sie Ihre E-Mail-Kommunikation mit unserer intelligenten E-Mail-Lösung, die durch KI-gestützte Technologie erweiterte Funktionen und Sicherheit bietet.",
+    title: 'E-Mail-Lösung',
+    description:
+      'Verbessern Sie Ihre E-Mail-Kommunikation mit unserer intelligenten E-Mail-Lösung, die durch KI-gestützte Technologie erweiterte Funktionen und Sicherheit bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Intelligente E-Mail-Filterung",
-      "Automatisierte Antworten",
-      "Sicherheitsschutz",
-      "Prioritäts-Posteingang",
-      "E-Mail-Analytik",
-      "Vorlagenverwaltung",
-      "Erweiterte Suche"
+      'Intelligente E-Mail-Filterung',
+      'Automatisierte Antworten',
+      'Sicherheitsschutz',
+      'Prioritäts-Posteingang',
+      'E-Mail-Analytik',
+      'Vorlagenverwaltung',
+      'Erweiterte Suche',
     ],
     benefits: [
-      "Gesteigerte Produktivität",
-      "Bessere Organisation",
-      "Verbesserte Sicherheit",
-      "Zeitersparnis",
-      "Verbesserte Kommunikation",
-      "Reduzierte Fehler",
-      "Besserer Überblick"
+      'Gesteigerte Produktivität',
+      'Bessere Organisation',
+      'Verbesserte Sicherheit',
+      'Zeitersparnis',
+      'Verbesserte Kommunikation',
+      'Reduzierte Fehler',
+      'Besserer Überblick',
     ],
     integrations: [
-      "E-Mail-Clients",
-      "CRM-Systeme",
-      "Kalender-Apps",
-      "Cloud-Speicher",
-      "Projektmanagement",
-      "Kommunikationstools"
+      'E-Mail-Clients',
+      'CRM-Systeme',
+      'Kalender-Apps',
+      'Cloud-Speicher',
+      'Projektmanagement',
+      'Kommunikationstools',
     ],
-    metaTitle: "E-Mail-Lösung | NeuroGen Lab - Intelligentes E-Mail-Management",
-    metaDescription: "Verbessern Sie die E-Mail-Kommunikation mit KI-Technologie. Intelligente Filterung, automatisierte Antworten und erweiterte Sicherheit für besseres E-Mail-Management."
+    metaTitle: 'E-Mail-Lösung | NeuroGen Lab - Intelligentes E-Mail-Management',
+    metaDescription:
+      'Verbessern Sie die E-Mail-Kommunikation mit KI-Technologie. Intelligente Filterung, automatisierte Antworten und erweiterte Sicherheit für besseres E-Mail-Management.',
   },
   es: {
-    title: "Solución de Correo Electrónico",
-    description: "Mejore su comunicación por correo electrónico con nuestra solución inteligente que ofrece características avanzadas y seguridad a través de tecnología impulsada por IA.",
+    title: 'Solución de Correo Electrónico',
+    description:
+      'Mejore su comunicación por correo electrónico con nuestra solución inteligente que ofrece características avanzadas y seguridad a través de tecnología impulsada por IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Filtrado Inteligente de Correos",
-      "Respuestas Automatizadas",
-      "Protección de Seguridad",
-      "Bandeja de Entrada Prioritaria",
-      "Análisis de Correos",
-      "Gestión de Plantillas",
-      "Búsqueda Avanzada"
+      'Filtrado Inteligente de Correos',
+      'Respuestas Automatizadas',
+      'Protección de Seguridad',
+      'Bandeja de Entrada Prioritaria',
+      'Análisis de Correos',
+      'Gestión de Plantillas',
+      'Búsqueda Avanzada',
     ],
     benefits: [
-      "Mayor Productividad",
-      "Mejor Organización",
-      "Seguridad Mejorada",
-      "Ahorro de Tiempo",
-      "Comunicación Mejorada",
-      "Reducción de Errores",
-      "Mejor Visión General"
+      'Mayor Productividad',
+      'Mejor Organización',
+      'Seguridad Mejorada',
+      'Ahorro de Tiempo',
+      'Comunicación Mejorada',
+      'Reducción de Errores',
+      'Mejor Visión General',
     ],
     integrations: [
-      "Clientes de Correo",
-      "Sistemas CRM",
-      "Aplicaciones de Calendario",
-      "Almacenamiento en la Nube",
-      "Gestión de Proyectos",
-      "Herramientas de Comunicación"
+      'Clientes de Correo',
+      'Sistemas CRM',
+      'Aplicaciones de Calendario',
+      'Almacenamiento en la Nube',
+      'Gestión de Proyectos',
+      'Herramientas de Comunicación',
     ],
-    metaTitle: "Solución de Correo | NeuroGen Lab - Gestión Inteligente de Correo",
-    metaDescription: "Mejore la comunicación por correo con tecnología IA. Filtrado inteligente, respuestas automatizadas y seguridad avanzada para una mejor gestión del correo."
+    metaTitle:
+      'Solución de Correo | NeuroGen Lab - Gestión Inteligente de Correo',
+    metaDescription:
+      'Mejore la comunicación por correo con tecnología IA. Filtrado inteligente, respuestas automatizadas y seguridad avanzada para una mejor gestión del correo.',
   },
   ru: {
-    title: "Почтовое Решение",
-    description: "Улучшите вашу электронную переписку с помощью нашего интеллектуального почтового решения, которое обеспечивает расширенные функции и безопасность благодаря технологии ИИ.",
+    title: 'Почтовое Решение',
+    description:
+      'Улучшите вашу электронную переписку с помощью нашего интеллектуального почтового решения, которое обеспечивает расширенные функции и безопасность благодаря технологии ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Умная Фильтрация Писем",
-      "Автоматические Ответы",
-      "Защита Безопасности",
-      "Приоритетный Входящие",
-      "Почтовая Аналитика",
-      "Управление Шаблонами",
-      "Расширенный Поиск"
+      'Умная Фильтрация Писем',
+      'Автоматические Ответы',
+      'Защита Безопасности',
+      'Приоритетный Входящие',
+      'Почтовая Аналитика',
+      'Управление Шаблонами',
+      'Расширенный Поиск',
     ],
     benefits: [
-      "Повышенная Продуктивность",
-      "Лучшая Организация",
-      "Усиленная Безопасность",
-      "Экономия Времени",
-      "Улучшенная Коммуникация",
-      "Снижение Ошибок",
-      "Лучший Обзор"
+      'Повышенная Продуктивность',
+      'Лучшая Организация',
+      'Усиленная Безопасность',
+      'Экономия Времени',
+      'Улучшенная Коммуникация',
+      'Снижение Ошибок',
+      'Лучший Обзор',
     ],
     integrations: [
-      "Почтовые Клиенты",
-      "CRM Системы",
-      "Календарные Приложения",
-      "Облачное Хранилище",
-      "Управление Проектами",
-      "Инструменты Коммуникации"
+      'Почтовые Клиенты',
+      'CRM Системы',
+      'Календарные Приложения',
+      'Облачное Хранилище',
+      'Управление Проектами',
+      'Инструменты Коммуникации',
     ],
-    metaTitle: "Почтовое Решение | NeuroGen Lab - Интеллектуальное Управление Почтой",
-    metaDescription: "Улучшите электронную переписку с помощью технологии ИИ. Умная фильтрация, автоматические ответы и расширенная безопасность для лучшего управления почтой."
+    metaTitle:
+      'Почтовое Решение | NeuroGen Lab - Интеллектуальное Управление Почтой',
+    metaDescription:
+      'Улучшите электронную переписку с помощью технологии ИИ. Умная фильтрация, автоматические ответы и расширенная безопасность для лучшего управления почтой.',
   },
   ua: {
-    title: "Поштове Рішення",
-    description: "Покращіть ваше електронне листування за допомогою нашого інтелектуального поштового рішення, яке забезпечує розширені функції та безпеку завдяки технології ШІ.",
+    title: 'Поштове Рішення',
+    description:
+      'Покращіть ваше електронне листування за допомогою нашого інтелектуального поштового рішення, яке забезпечує розширені функції та безпеку завдяки технології ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Розумна Фільтрація Листів",
-      "Автоматичні Відповіді",
-      "Захист Безпеки",
-      "Пріоритетні Вхідні",
-      "Поштова Аналітика",
-      "Управління Шаблонами",
-      "Розширений Пошук"
+      'Розумна Фільтрація Листів',
+      'Автоматичні Відповіді',
+      'Захист Безпеки',
+      'Пріоритетні Вхідні',
+      'Поштова Аналітика',
+      'Управління Шаблонами',
+      'Розширений Пошук',
     ],
     benefits: [
-      "Підвищена Продуктивність",
-      "Краща Організація",
-      "Посилена Безпека",
-      "Економія Часу",
-      "Покращена Комунікація",
-      "Зменшення Помилок",
-      "Кращий Огляд"
+      'Підвищена Продуктивність',
+      'Краща Організація',
+      'Посилена Безпека',
+      'Економія Часу',
+      'Покращена Комунікація',
+      'Зменшення Помилок',
+      'Кращий Огляд',
     ],
     integrations: [
-      "Поштові Клієнти",
-      "CRM Системи",
-      "Календарні Додатки",
-      "Хмарне Сховище",
-      "Управління Проектами",
-      "Інструменти Комунікації"
+      'Поштові Клієнти',
+      'CRM Системи',
+      'Календарні Додатки',
+      'Хмарне Сховище',
+      'Управління Проектами',
+      'Інструменти Комунікації',
     ],
-    metaTitle: "Поштове Рішення | NeuroGen Lab - Інтелектуальне Управління Поштою",
-    metaDescription: "Покращіть електронне листування за допомогою технології ШІ. Розумна фільтрація, автоматичні відповіді та розширена безпека для кращого управління поштою."
-  }
+    metaTitle:
+      'Поштове Рішення | NeuroGen Lab - Інтелектуальне Управління Поштою',
+    metaDescription:
+      'Покращіть електронне листування за допомогою технології ШІ. Розумна фільтрація, автоматичні відповіді та розширена безпека для кращого управління поштою.',
+  },
 };
 
 export { emailTranslations };
 
 const messengerTranslations = {
   en: {
-    title: "Facebook Messenger Solution",
-    description: "Enhance your Facebook Messenger communication with our intelligent solution that provides advanced features and automation through AI technology.",
+    title: 'Facebook Messenger Solution',
+    description:
+      'Enhance your Facebook Messenger communication with our intelligent solution that provides advanced features and automation through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Automated Responses",
-      "Message Analytics",
-      "Chat Management",
-      "Multi-Account Support",
-      "Message Scheduling",
-      "Custom Templates",
-      "Smart Filtering"
+      'Automated Responses',
+      'Message Analytics',
+      'Chat Management',
+      'Multi-Account Support',
+      'Message Scheduling',
+      'Custom Templates',
+      'Smart Filtering',
     ],
     benefits: [
-      "Faster Response Times",
-      "Better Customer Service",
-      "Increased Engagement",
-      "Time Savings",
-      "Improved Communication",
-      "Consistent Messaging",
-      "Enhanced Analytics"
+      'Faster Response Times',
+      'Better Customer Service',
+      'Increased Engagement',
+      'Time Savings',
+      'Improved Communication',
+      'Consistent Messaging',
+      'Enhanced Analytics',
     ],
     integrations: [
-      "Facebook Business",
-      "CRM Systems",
-      "Analytics Tools",
-      "Marketing Platforms",
-      "Customer Support Tools",
-      "Automation Systems"
+      'Facebook Business',
+      'CRM Systems',
+      'Analytics Tools',
+      'Marketing Platforms',
+      'Customer Support Tools',
+      'Automation Systems',
     ],
-    metaTitle: "Facebook Messenger Solution | NeuroGen Lab - Intelligent Messaging",
-    metaDescription: "Enhance Messenger communication with AI technology. Automated responses, analytics, and advanced features for better message management."
+    metaTitle:
+      'Facebook Messenger Solution | NeuroGen Lab - Intelligent Messaging',
+    metaDescription:
+      'Enhance Messenger communication with AI technology. Automated responses, analytics, and advanced features for better message management.',
   },
   de: {
-    title: "Facebook Messenger-Lösung",
-    description: "Verbessern Sie Ihre Facebook Messenger-Kommunikation mit unserer intelligenten Lösung, die durch KI-Technologie erweiterte Funktionen und Automatisierung bietet.",
+    title: 'Facebook Messenger-Lösung',
+    description:
+      'Verbessern Sie Ihre Facebook Messenger-Kommunikation mit unserer intelligenten Lösung, die durch KI-Technologie erweiterte Funktionen und Automatisierung bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Automatisierte Antworten",
-      "Nachrichten-Analytik",
-      "Chat-Verwaltung",
-      "Multi-Account-Unterstützung",
-      "Nachrichtenplanung",
-      "Benutzerdefinierte Vorlagen",
-      "Intelligente Filterung"
+      'Automatisierte Antworten',
+      'Nachrichten-Analytik',
+      'Chat-Verwaltung',
+      'Multi-Account-Unterstützung',
+      'Nachrichtenplanung',
+      'Benutzerdefinierte Vorlagen',
+      'Intelligente Filterung',
     ],
     benefits: [
-      "Schnellere Antwortzeiten",
-      "Besserer Kundenservice",
-      "Erhöhtes Engagement",
-      "Zeitersparnis",
-      "Verbesserte Kommunikation",
-      "Konsistente Nachrichten",
-      "Erweiterte Analytik"
+      'Schnellere Antwortzeiten',
+      'Besserer Kundenservice',
+      'Erhöhtes Engagement',
+      'Zeitersparnis',
+      'Verbesserte Kommunikation',
+      'Konsistente Nachrichten',
+      'Erweiterte Analytik',
     ],
     integrations: [
-      "Facebook Business",
-      "CRM-Systeme",
-      "Analyse-Tools",
-      "Marketing-Plattformen",
-      "Kundenservice-Tools",
-      "Automatisierungssysteme"
+      'Facebook Business',
+      'CRM-Systeme',
+      'Analyse-Tools',
+      'Marketing-Plattformen',
+      'Kundenservice-Tools',
+      'Automatisierungssysteme',
     ],
-    metaTitle: "Facebook Messenger-Lösung | NeuroGen Lab - Intelligentes Messaging",
-    metaDescription: "Verbessern Sie Messenger-Kommunikation mit KI-Technologie. Automatisierte Antworten, Analytik und erweiterte Funktionen für besseres Nachrichtenmanagement."
+    metaTitle:
+      'Facebook Messenger-Lösung | NeuroGen Lab - Intelligentes Messaging',
+    metaDescription:
+      'Verbessern Sie Messenger-Kommunikation mit KI-Technologie. Automatisierte Antworten, Analytik und erweiterte Funktionen für besseres Nachrichtenmanagement.',
   },
   es: {
-    title: "Solución para Facebook Messenger",
-    description: "Mejore su comunicación en Facebook Messenger con nuestra solución inteligente que proporciona características avanzadas y automatización a través de tecnología IA.",
+    title: 'Solución para Facebook Messenger',
+    description:
+      'Mejore su comunicación en Facebook Messenger con nuestra solución inteligente que proporciona características avanzadas y automatización a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Respuestas Automatizadas",
-      "Análisis de Mensajes",
-      "Gestión de Chat",
-      "Soporte Multi-Cuenta",
-      "Programación de Mensajes",
-      "Plantillas Personalizadas",
-      "Filtrado Inteligente"
+      'Respuestas Automatizadas',
+      'Análisis de Mensajes',
+      'Gestión de Chat',
+      'Soporte Multi-Cuenta',
+      'Programación de Mensajes',
+      'Plantillas Personalizadas',
+      'Filtrado Inteligente',
     ],
     benefits: [
-      "Tiempos de Respuesta más Rápidos",
-      "Mejor Servicio al Cliente",
-      "Mayor Participación",
-      "Ahorro de Tiempo",
-      "Comunicación Mejorada",
-      "Mensajes Consistentes",
-      "Análisis Mejorado"
+      'Tiempos de Respuesta más Rápidos',
+      'Mejor Servicio al Cliente',
+      'Mayor Participación',
+      'Ahorro de Tiempo',
+      'Comunicación Mejorada',
+      'Mensajes Consistentes',
+      'Análisis Mejorado',
     ],
     integrations: [
-      "Facebook Business",
-      "Sistemas CRM",
-      "Herramientas de Análisis",
-      "Plataformas de Marketing",
-      "Herramientas de Atención al Cliente",
-      "Sistemas de Automatización"
+      'Facebook Business',
+      'Sistemas CRM',
+      'Herramientas de Análisis',
+      'Plataformas de Marketing',
+      'Herramientas de Atención al Cliente',
+      'Sistemas de Automatización',
     ],
-    metaTitle: "Solución para Facebook Messenger | NeuroGen Lab - Mensajería Inteligente",
-    metaDescription: "Mejore la comunicación en Messenger con tecnología IA. Respuestas automatizadas, análisis y características avanzadas para una mejor gestión de mensajes."
+    metaTitle:
+      'Solución para Facebook Messenger | NeuroGen Lab - Mensajería Inteligente',
+    metaDescription:
+      'Mejore la comunicación en Messenger con tecnología IA. Respuestas automatizadas, análisis y características avanzadas para una mejor gestión de mensajes.',
   },
   ru: {
-    title: "Решение для Facebook Messenger",
-    description: "Улучшите вашу коммуникацию в Facebook Messenger с помощью нашего интеллектуального решения, которое обеспечивает расширенные функции и автоматизацию через технологию ИИ.",
+    title: 'Решение для Facebook Messenger',
+    description:
+      'Улучшите вашу коммуникацию в Facebook Messenger с помощью нашего интеллектуального решения, которое обеспечивает расширенные функции и автоматизацию через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Автоматические Ответы",
-      "Аналитика Сообщений",
-      "Управление Чатом",
-      "Поддержка Нескольких Аккаунтов",
-      "Планирование Сообщений",
-      "Пользовательские Шаблоны",
-      "Умная Фильтрация"
+      'Автоматические Ответы',
+      'Аналитика Сообщений',
+      'Управление Чатом',
+      'Поддержка Нескольких Аккаунтов',
+      'Планирование Сообщений',
+      'Пользовательские Шаблоны',
+      'Умная Фильтрация',
     ],
     benefits: [
-      "Более Быстрые Ответы",
-      "Улучшенное Обслуживание Клиентов",
-      "Повышенная Вовлеченность",
-      "Экономия Времени",
-      "Улучшенная Коммуникация",
-      "Последовательные Сообщения",
-      "Расширенная Аналитика"
+      'Более Быстрые Ответы',
+      'Улучшенное Обслуживание Клиентов',
+      'Повышенная Вовлеченность',
+      'Экономия Времени',
+      'Улучшенная Коммуникация',
+      'Последовательные Сообщения',
+      'Расширенная Аналитика',
     ],
     integrations: [
-      "Facebook Business",
-      "CRM Системы",
-      "Инструменты Аналитики",
-      "Маркетинговые Платформы",
-      "Инструменты Поддержки Клиентов",
-      "Системы Автоматизации"
+      'Facebook Business',
+      'CRM Системы',
+      'Инструменты Аналитики',
+      'Маркетинговые Платформы',
+      'Инструменты Поддержки Клиентов',
+      'Системы Автоматизации',
     ],
-    metaTitle: "Решение для Facebook Messenger | NeuroGen Lab - Интеллектуальный Обмен Сообщениями",
-    metaDescription: "Улучшите коммуникацию в Messenger с помощью технологии ИИ. Автоматические ответы, аналитика и расширенные функции для лучшего управления сообщениями."
+    metaTitle:
+      'Решение для Facebook Messenger | NeuroGen Lab - Интеллектуальный Обмен Сообщениями',
+    metaDescription:
+      'Улучшите коммуникацию в Messenger с помощью технологии ИИ. Автоматические ответы, аналитика и расширенные функции для лучшего управления сообщениями.',
   },
   ua: {
-    title: "Рішення для Facebook Messenger",
-    description: "Покращіть вашу комунікацію у Facebook Messenger за допомогою нашого інтелектуального рішення, яке забезпечує розширені функції та автоматизацію через технологію ШІ.",
+    title: 'Рішення для Facebook Messenger',
+    description:
+      'Покращіть вашу комунікацію у Facebook Messenger за допомогою нашого інтелектуального рішення, яке забезпечує розширені функції та автоматизацію через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Автоматичні Відповіді",
-      "Аналітика Повідомлень",
-      "Управління Чатом",
-      "Підтримка Кількох Акаунтів",
-      "Планування Повідомлень",
-      "Користувацькі Шаблони",
-      "Розумна Фільтрація"
+      'Автоматичні Відповіді',
+      'Аналітика Повідомлень',
+      'Управління Чатом',
+      'Підтримка Кількох Акаунтів',
+      'Планування Повідомлень',
+      'Користувацькі Шаблони',
+      'Розумна Фільтрація',
     ],
     benefits: [
-      "Швидші Відповіді",
-      "Покращене Обслуговування Клієнтів",
-      "Підвищена Залученість",
-      "Економія Часу",
-      "Покращена Комунікація",
-      "Послідовні Повідомлення",
-      "Розширена Аналітика"
+      'Швидші Відповіді',
+      'Покращене Обслуговування Клієнтів',
+      'Підвищена Залученість',
+      'Економія Часу',
+      'Покращена Комунікація',
+      'Послідовні Повідомлення',
+      'Розширена Аналітика',
     ],
     integrations: [
-      "Facebook Business",
-      "CRM Системи",
-      "Інструменти Аналітики",
-      "Маркетингові Платформи",
-      "Інструменти Підтримки Клієнтів",
-      "Системи Автоматизації"
+      'Facebook Business',
+      'CRM Системи',
+      'Інструменти Аналітики',
+      'Маркетингові Платформи',
+      'Інструменти Підтримки Клієнтів',
+      'Системи Автоматизації',
     ],
-    metaTitle: "Рішення для Facebook Messenger | NeuroGen Lab - Інтелектуальний Обмін Повідомленнями",
-    metaDescription: "Покращіть комунікацію в Messenger за допомогою технології ШІ. Автоматичні відповіді, аналітика та розширені функції для кращого управління повідомленнями."
-  }
+    metaTitle:
+      'Рішення для Facebook Messenger | NeuroGen Lab - Інтелектуальний Обмін Повідомленнями',
+    metaDescription:
+      'Покращіть комунікацію в Messenger за допомогою технології ШІ. Автоматичні відповіді, аналітика та розширені функції для кращого управління повідомленнями.',
+  },
 };
 
 export { messengerTranslations };
 
 const hubspotTranslations = {
   en: {
-    title: "HubSpot Integration",
-    description: "Enhance your HubSpot experience with our intelligent integration solution that provides advanced automation and insights through AI technology.",
+    title: 'HubSpot Integration',
+    description:
+      'Enhance your HubSpot experience with our intelligent integration solution that provides advanced automation and insights through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Smart Contact Management",
-      "Automated Lead Scoring",
-      "AI-Powered Analytics",
-      "Custom Workflows",
-      "Data Synchronization",
-      "Intelligent Reporting",
-      "Advanced Segmentation"
+      'Smart Contact Management',
+      'Automated Lead Scoring',
+      'AI-Powered Analytics',
+      'Custom Workflows',
+      'Data Synchronization',
+      'Intelligent Reporting',
+      'Advanced Segmentation',
     ],
     benefits: [
-      "Improved Lead Management",
-      "Enhanced Customer Insights",
-      "Increased Productivity",
-      "Better Decision Making",
-      "Streamlined Operations",
-      "Accurate Forecasting",
-      "Personalized Marketing"
+      'Improved Lead Management',
+      'Enhanced Customer Insights',
+      'Increased Productivity',
+      'Better Decision Making',
+      'Streamlined Operations',
+      'Accurate Forecasting',
+      'Personalized Marketing',
     ],
     integrations: [
-      "CRM Systems",
-      "Marketing Tools",
-      "Sales Platforms",
-      "Analytics Solutions",
-      "Email Services",
-      "Communication Tools"
+      'CRM Systems',
+      'Marketing Tools',
+      'Sales Platforms',
+      'Analytics Solutions',
+      'Email Services',
+      'Communication Tools',
     ],
-    metaTitle: "HubSpot Integration | NeuroGen Lab - Intelligent CRM Enhancement",
-    metaDescription: "Enhance your HubSpot experience with AI technology. Smart automation, analytics, and advanced features for better customer relationship management."
+    metaTitle:
+      'HubSpot Integration | NeuroGen Lab - Intelligent CRM Enhancement',
+    metaDescription:
+      'Enhance your HubSpot experience with AI technology. Smart automation, analytics, and advanced features for better customer relationship management.',
   },
   de: {
-    title: "HubSpot-Integration",
-    description: "Verbessern Sie Ihre HubSpot-Erfahrung mit unserer intelligenten Integrationslösung, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    title: 'HubSpot-Integration',
+    description:
+      'Verbessern Sie Ihre HubSpot-Erfahrung mit unserer intelligenten Integrationslösung, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Intelligente Kontaktverwaltung",
-      "Automatisierte Lead-Bewertung",
-      "KI-gestützte Analytik",
-      "Benutzerdefinierte Workflows",
-      "Datensynchronisation",
-      "Intelligentes Reporting",
-      "Erweiterte Segmentierung"
+      'Intelligente Kontaktverwaltung',
+      'Automatisierte Lead-Bewertung',
+      'KI-gestützte Analytik',
+      'Benutzerdefinierte Workflows',
+      'Datensynchronisation',
+      'Intelligentes Reporting',
+      'Erweiterte Segmentierung',
     ],
     benefits: [
-      "Verbessertes Lead-Management",
-      "Erweiterte Kundeneinblicke",
-      "Gesteigerte Produktivität",
-      "Bessere Entscheidungsfindung",
-      "Optimierte Abläufe",
-      "Genaue Prognosen",
-      "Personalisiertes Marketing"
+      'Verbessertes Lead-Management',
+      'Erweiterte Kundeneinblicke',
+      'Gesteigerte Produktivität',
+      'Bessere Entscheidungsfindung',
+      'Optimierte Abläufe',
+      'Genaue Prognosen',
+      'Personalisiertes Marketing',
     ],
     integrations: [
-      "CRM-Systeme",
-      "Marketing-Tools",
-      "Vertriebsplattformen",
-      "Analyse-Lösungen",
-      "E-Mail-Dienste",
-      "Kommunikationstools"
+      'CRM-Systeme',
+      'Marketing-Tools',
+      'Vertriebsplattformen',
+      'Analyse-Lösungen',
+      'E-Mail-Dienste',
+      'Kommunikationstools',
     ],
-    metaTitle: "HubSpot-Integration | NeuroGen Lab - Intelligente CRM-Verbesserung",
-    metaDescription: "Verbessern Sie Ihre HubSpot-Erfahrung mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Kundenbeziehungsmanagement."
+    metaTitle:
+      'HubSpot-Integration | NeuroGen Lab - Intelligente CRM-Verbesserung',
+    metaDescription:
+      'Verbessern Sie Ihre HubSpot-Erfahrung mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Kundenbeziehungsmanagement.',
   },
   es: {
-    title: "Integración de HubSpot",
-    description: "Mejore su experiencia con HubSpot mediante nuestra solución de integración inteligente que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    title: 'Integración de HubSpot',
+    description:
+      'Mejore su experiencia con HubSpot mediante nuestra solución de integración inteligente que proporciona automatización avanzada y perspectivas a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Gestión Inteligente de Contactos",
-      "Puntuación Automatizada de Leads",
-      "Análisis Impulsado por IA",
-      "Flujos de Trabajo Personalizados",
-      "Sincronización de Datos",
-      "Informes Inteligentes",
-      "Segmentación Avanzada"
+      'Gestión Inteligente de Contactos',
+      'Puntuación Automatizada de Leads',
+      'Análisis Impulsado por IA',
+      'Flujos de Trabajo Personalizados',
+      'Sincronización de Datos',
+      'Informes Inteligentes',
+      'Segmentación Avanzada',
     ],
     benefits: [
-      "Mejor Gestión de Leads",
-      "Perspectivas Mejoradas del Cliente",
-      "Mayor Productividad",
-      "Mejor Toma de Decisiones",
-      "Operaciones Optimizadas",
-      "Pronósticos Precisos",
-      "Marketing Personalizado"
+      'Mejor Gestión de Leads',
+      'Perspectivas Mejoradas del Cliente',
+      'Mayor Productividad',
+      'Mejor Toma de Decisiones',
+      'Operaciones Optimizadas',
+      'Pronósticos Precisos',
+      'Marketing Personalizado',
     ],
     integrations: [
-      "Sistemas CRM",
-      "Herramientas de Marketing",
-      "Plataformas de Ventas",
-      "Soluciones Analíticas",
-      "Servicios de Correo",
-      "Herramientas de Comunicación"
+      'Sistemas CRM',
+      'Herramientas de Marketing',
+      'Plataformas de Ventas',
+      'Soluciones Analíticas',
+      'Servicios de Correo',
+      'Herramientas de Comunicación',
     ],
-    metaTitle: "Integración de HubSpot | NeuroGen Lab - Mejora Inteligente de CRM",
-    metaDescription: "Mejore su experiencia con HubSpot mediante tecnología IA. Automatización inteligente, análisis y características avanzadas para una mejor gestión de relaciones con clientes."
+    metaTitle:
+      'Integración de HubSpot | NeuroGen Lab - Mejora Inteligente de CRM',
+    metaDescription:
+      'Mejore su experiencia con HubSpot mediante tecnología IA. Automatización inteligente, análisis y características avanzadas para una mejor gestión de relaciones con clientes.',
   },
   ru: {
-    title: "Интеграция с HubSpot",
-    description: "Улучшите ваш опыт работы с HubSpot с помощью нашего интеллектуального решения для интеграции, которое обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    title: 'Интеграция с HubSpot',
+    description:
+      'Улучшите ваш опыт работы с HubSpot с помощью нашего интеллектуального решения для интеграции, которое обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Умное Управление Контактами",
-      "Автоматическая Оценка Лидов",
-      "ИИ-Аналитика",
-      "Настраиваемые Рабочие Процессы",
-      "Синхронизация Данных",
-      "Интеллектуальная Отчетность",
-      "Расширенная Сегментация"
+      'Умное Управление Контактами',
+      'Автоматическая Оценка Лидов',
+      'ИИ-Аналитика',
+      'Настраиваемые Рабочие Процессы',
+      'Синхронизация Данных',
+      'Интеллектуальная Отчетность',
+      'Расширенная Сегментация',
     ],
     benefits: [
-      "Улучшенное Управление Лидами",
-      "Расширенное Понимание Клиентов",
-      "Повышенная Продуктивность",
-      "Лучшее Принятие Решений",
-      "Оптимизированные Операции",
-      "Точное Прогнозирование",
-      "Персонализированный Маркетинг"
+      'Улучшенное Управление Лидами',
+      'Расширенное Понимание Клиентов',
+      'Повышенная Продуктивность',
+      'Лучшее Принятие Решений',
+      'Оптимизированные Операции',
+      'Точное Прогнозирование',
+      'Персонализированный Маркетинг',
     ],
     integrations: [
-      "CRM Системы",
-      "Маркетинговые Инструменты",
-      "Платформы Продаж",
-      "Аналитические Решения",
-      "Почтовые Сервисы",
-      "Инструменты Коммуникации"
+      'CRM Системы',
+      'Маркетинговые Инструменты',
+      'Платформы Продаж',
+      'Аналитические Решения',
+      'Почтовые Сервисы',
+      'Инструменты Коммуникации',
     ],
-    metaTitle: "Интеграция с HubSpot | NeuroGen Lab - Интеллектуальное Улучшение CRM",
-    metaDescription: "Улучшите ваш опыт работы с HubSpot с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего управления отношениями с клиентами."
+    metaTitle:
+      'Интеграция с HubSpot | NeuroGen Lab - Интеллектуальное Улучшение CRM',
+    metaDescription:
+      'Улучшите ваш опыт работы с HubSpot с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего управления отношениями с клиентами.',
   },
   ua: {
-    title: "Інтеграція з HubSpot",
-    description: "Покращіть ваш досвід роботи з HubSpot за допомогою нашого інтелектуального рішення для інтеграції, яке забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    title: 'Інтеграція з HubSpot',
+    description:
+      'Покращіть ваш досвід роботи з HubSpot за допомогою нашого інтелектуального рішення для інтеграції, яке забезпечує розширену автоматизацію та аналітику через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Розумне Управління Контактами",
-      "Автоматична Оцінка Лідів",
-      "ШІ-Аналітика",
-      "Налаштовувані Робочі Процеси",
-      "Синхронізація Даних",
-      "Інтелектуальна Звітність",
-      "Розширена Сегментація"
+      'Розумне Управління Контактами',
+      'Автоматична Оцінка Лідів',
+      'ШІ-Аналітика',
+      'Налаштовувані Робочі Процеси',
+      'Синхронізація Даних',
+      'Інтелектуальна Звітність',
+      'Розширена Сегментація',
     ],
     benefits: [
-      "Покращене Управління Лідами",
-      "Розширене Розуміння Клієнтів",
-      "Підвищена Продуктивність",
-      "Краще Прийняття Рішень",
-      "Оптимізовані Операції",
-      "Точне Прогнозування",
-      "Персоналізований Маркетинг"
+      'Покращене Управління Лідами',
+      'Розширене Розуміння Клієнтів',
+      'Підвищена Продуктивність',
+      'Краще Прийняття Рішень',
+      'Оптимізовані Операції',
+      'Точне Прогнозування',
+      'Персоналізований Маркетинг',
     ],
     integrations: [
-      "CRM Системи",
-      "Маркетингові Інструменти",
-      "Платформи Продажів",
-      "Аналітичні Рішення",
-      "Поштові Сервіси",
-      "Інструменти Комунікації"
+      'CRM Системи',
+      'Маркетингові Інструменти',
+      'Платформи Продажів',
+      'Аналітичні Рішення',
+      'Поштові Сервіси',
+      'Інструменти Комунікації',
     ],
-    metaTitle: "Інтеграція з HubSpot | NeuroGen Lab - Інтелектуальне Покращення CRM",
-    metaDescription: "Покращіть ваш досвід роботи з HubSpot за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого управління відносинами з клієнтами."
-  }
+    metaTitle:
+      'Інтеграція з HubSpot | NeuroGen Lab - Інтелектуальне Покращення CRM',
+    metaDescription:
+      'Покращіть ваш досвід роботи з HubSpot за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого управління відносинами з клієнтами.',
+  },
 };
 
 export { hubspotTranslations };
 
 const instagramTranslations = {
   en: {
-    title: "Instagram Integration",
-    description: "Enhance your Instagram presence with our intelligent integration solution that provides advanced automation and analytics through AI technology.",
+    title: 'Instagram Integration',
+    description:
+      'Enhance your Instagram presence with our intelligent integration solution that provides advanced automation and analytics through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Content Scheduling",
-      "Analytics Dashboard",
-      "Engagement Tracking",
-      "Automated Responses",
-      "Hashtag Management",
-      "Visual Content Planning",
-      "Performance Insights"
+      'Content Scheduling',
+      'Analytics Dashboard',
+      'Engagement Tracking',
+      'Automated Responses',
+      'Hashtag Management',
+      'Visual Content Planning',
+      'Performance Insights',
     ],
     benefits: [
-      "Increased Engagement",
-      "Time Savings",
-      "Better Content Strategy",
-      "Improved Reach",
-      "Consistent Posting",
-      "Data-Driven Decisions",
-      "Enhanced Brand Presence"
+      'Increased Engagement',
+      'Time Savings',
+      'Better Content Strategy',
+      'Improved Reach',
+      'Consistent Posting',
+      'Data-Driven Decisions',
+      'Enhanced Brand Presence',
     ],
     integrations: [
-      "Social Media Tools",
-      "Content Management",
-      "Analytics Platforms",
-      "Marketing Tools",
-      "CRM Systems",
-      "Media Libraries"
+      'Social Media Tools',
+      'Content Management',
+      'Analytics Platforms',
+      'Marketing Tools',
+      'CRM Systems',
+      'Media Libraries',
     ],
-    metaTitle: "Instagram Integration | NeuroGen Lab - Smart Social Media Management",
-    metaDescription: "Enhance your Instagram presence with AI technology. Smart scheduling, analytics, and advanced features for better social media management."
+    metaTitle:
+      'Instagram Integration | NeuroGen Lab - Smart Social Media Management',
+    metaDescription:
+      'Enhance your Instagram presence with AI technology. Smart scheduling, analytics, and advanced features for better social media management.',
   },
   de: {
-    title: "Instagram-Integration",
-    description: "Verbessern Sie Ihre Instagram-Präsenz mit unserer intelligenten Integrationslösung, die durch KI-Technologie erweiterte Automatisierung und Analytik bietet.",
+    title: 'Instagram-Integration',
+    description:
+      'Verbessern Sie Ihre Instagram-Präsenz mit unserer intelligenten Integrationslösung, die durch KI-Technologie erweiterte Automatisierung und Analytik bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Content-Planung",
-      "Analyse-Dashboard",
-      "Engagement-Tracking",
-      "Automatisierte Antworten",
-      "Hashtag-Verwaltung",
-      "Visuelle Contentplanung",
-      "Performance-Einblicke"
+      'Content-Planung',
+      'Analyse-Dashboard',
+      'Engagement-Tracking',
+      'Automatisierte Antworten',
+      'Hashtag-Verwaltung',
+      'Visuelle Contentplanung',
+      'Performance-Einblicke',
     ],
     benefits: [
-      "Erhöhtes Engagement",
-      "Zeitersparnis",
-      "Bessere Content-Strategie",
-      "Verbesserte Reichweite",
-      "Konsistentes Posting",
-      "Datenbasierte Entscheidungen",
-      "Verstärkte Markenpräsenz"
+      'Erhöhtes Engagement',
+      'Zeitersparnis',
+      'Bessere Content-Strategie',
+      'Verbesserte Reichweite',
+      'Konsistentes Posting',
+      'Datenbasierte Entscheidungen',
+      'Verstärkte Markenpräsenz',
     ],
     integrations: [
-      "Social-Media-Tools",
-      "Content-Management",
-      "Analyse-Plattformen",
-      "Marketing-Tools",
-      "CRM-Systeme",
-      "Medienbibliotheken"
+      'Social-Media-Tools',
+      'Content-Management',
+      'Analyse-Plattformen',
+      'Marketing-Tools',
+      'CRM-Systeme',
+      'Medienbibliotheken',
     ],
-    metaTitle: "Instagram-Integration | NeuroGen Lab - Intelligentes Social Media Management",
-    metaDescription: "Verbessern Sie Ihre Instagram-Präsenz mit KI-Technologie. Intelligente Planung, Analytik und erweiterte Funktionen für besseres Social Media Management."
+    metaTitle:
+      'Instagram-Integration | NeuroGen Lab - Intelligentes Social Media Management',
+    metaDescription:
+      'Verbessern Sie Ihre Instagram-Präsenz mit KI-Technologie. Intelligente Planung, Analytik und erweiterte Funktionen für besseres Social Media Management.',
   },
   es: {
-    title: "Integración de Instagram",
-    description: "Mejore su presencia en Instagram con nuestra solución de integración inteligente que proporciona automatización avanzada y análisis a través de tecnología IA.",
+    title: 'Integración de Instagram',
+    description:
+      'Mejore su presencia en Instagram con nuestra solución de integración inteligente que proporciona automatización avanzada y análisis a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Programación de Contenido",
-      "Panel de Análisis",
-      "Seguimiento de Interacción",
-      "Respuestas Automatizadas",
-      "Gestión de Hashtags",
-      "Planificación de Contenido Visual",
-      "Perspectivas de Rendimiento"
+      'Programación de Contenido',
+      'Panel de Análisis',
+      'Seguimiento de Interacción',
+      'Respuestas Automatizadas',
+      'Gestión de Hashtags',
+      'Planificación de Contenido Visual',
+      'Perspectivas de Rendimiento',
     ],
     benefits: [
-      "Mayor Interacción",
-      "Ahorro de Tiempo",
-      "Mejor Estrategia de Contenido",
-      "Alcance Mejorado",
-      "Publicación Consistente",
-      "Decisiones Basadas en Datos",
-      "Presencia de Marca Mejorada"
+      'Mayor Interacción',
+      'Ahorro de Tiempo',
+      'Mejor Estrategia de Contenido',
+      'Alcance Mejorado',
+      'Publicación Consistente',
+      'Decisiones Basadas en Datos',
+      'Presencia de Marca Mejorada',
     ],
     integrations: [
-      "Herramientas de Redes Sociales",
-      "Gestión de Contenido",
-      "Plataformas de Análisis",
-      "Herramientas de Marketing",
-      "Sistemas CRM",
-      "Bibliotecas Multimedia"
+      'Herramientas de Redes Sociales',
+      'Gestión de Contenido',
+      'Plataformas de Análisis',
+      'Herramientas de Marketing',
+      'Sistemas CRM',
+      'Bibliotecas Multimedia',
     ],
-    metaTitle: "Integración de Instagram | NeuroGen Lab - Gestión Inteligente de Redes Sociales",
-    metaDescription: "Mejore su presencia en Instagram con tecnología IA. Programación inteligente, análisis y características avanzadas para una mejor gestión de redes sociales."
+    metaTitle:
+      'Integración de Instagram | NeuroGen Lab - Gestión Inteligente de Redes Sociales',
+    metaDescription:
+      'Mejore su presencia en Instagram con tecnología IA. Programación inteligente, análisis y características avanzadas para una mejor gestión de redes sociales.',
   },
   ru: {
-    title: "Интеграция с Instagram",
-    description: "Улучшите ваше присутствие в Instagram с помощью нашего интеллектуального решения для интеграции, которое обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    title: 'Интеграция с Instagram',
+    description:
+      'Улучшите ваше присутствие в Instagram с помощью нашего интеллектуального решения для интеграции, которое обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Планирование Контента",
-      "Аналитическая Панель",
-      "Отслеживание Вовлеченности",
-      "Автоматические Ответы",
-      "Управление Хэштегами",
-      "Планирование Визуального Контента",
-      "Анализ Эффективности"
+      'Планирование Контента',
+      'Аналитическая Панель',
+      'Отслеживание Вовлеченности',
+      'Автоматические Ответы',
+      'Управление Хэштегами',
+      'Планирование Визуального Контента',
+      'Анализ Эффективности',
     ],
     benefits: [
-      "Повышенная Вовлеченность",
-      "Экономия Времени",
-      "Улучшенная Стратегия Контента",
-      "Увеличенный Охват",
-      "Регулярные Публикации",
-      "Решения на Основе Данных",
-      "Усиленное Присутствие Бренда"
+      'Повышенная Вовлеченность',
+      'Экономия Времени',
+      'Улучшенная Стратегия Контента',
+      'Увеличенный Охват',
+      'Регулярные Публикации',
+      'Решения на Основе Данных',
+      'Усиленное Присутствие Бренда',
     ],
     integrations: [
-      "Инструменты Социальных Сетей",
-      "Управление Контентом",
-      "Аналитические Платформы",
-      "Маркетинговые Инструменты",
-      "CRM Системы",
-      "Медиа-библиотеки"
+      'Инструменты Социальных Сетей',
+      'Управление Контентом',
+      'Аналитические Платформы',
+      'Маркетинговые Инструменты',
+      'CRM Системы',
+      'Медиа-библиотеки',
     ],
-    metaTitle: "Интеграция с Instagram | NeuroGen Lab - Умное Управление Социальными Сетями",
-    metaDescription: "Улучшите ваше присутствие в Instagram с помощью технологии ИИ. Умное планирование, аналитика и расширенные функции для лучшего управления социальными сетями."
+    metaTitle:
+      'Интеграция с Instagram | NeuroGen Lab - Умное Управление Социальными Сетями',
+    metaDescription:
+      'Улучшите ваше присутствие в Instagram с помощью технологии ИИ. Умное планирование, аналитика и расширенные функции для лучшего управления социальными сетями.',
   },
   ua: {
-    title: "Інтеграція з Instagram",
-    description: "Покращіть вашу присутність в Instagram за допомогою нашого інтелектуального рішення для інтеграції, яке забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    title: 'Інтеграція з Instagram',
+    description:
+      'Покращіть вашу присутність в Instagram за допомогою нашого інтелектуального рішення для інтеграції, яке забезпечує розширену автоматизацію та аналітику через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Планування Контенту",
-      "Аналітична Панель",
-      "Відстеження Залученості",
-      "Автоматичні Відповіді",
-      "Управління Хештегами",
-      "Планування Візуального Контенту",
-      "Аналіз Ефективності"
+      'Планування Контенту',
+      'Аналітична Панель',
+      'Відстеження Залученості',
+      'Автоматичні Відповіді',
+      'Управління Хештегами',
+      'Планування Візуального Контенту',
+      'Аналіз Ефективності',
     ],
     benefits: [
-      "Підвищена Залученість",
-      "Економія Часу",
-      "Покращена Стратегія Контенту",
-      "Збільшене Охоплення",
-      "Регулярні Публікації",
-      "Рішення на Основі Даних",
-      "Посилена Присутність Бренду"
+      'Підвищена Залученість',
+      'Економія Часу',
+      'Покращена Стратегія Контенту',
+      'Збільшене Охоплення',
+      'Регулярні Публікації',
+      'Рішення на Основі Даних',
+      'Посилена Присутність Бренду',
     ],
     integrations: [
-      "Інструменти Соціальних Мереж",
-      "Управління Контентом",
-      "Аналітичні Платформи",
-      "Маркетингові Інструменти",
-      "CRM Системи",
-      "Медіа-бібліотеки"
+      'Інструменти Соціальних Мереж',
+      'Управління Контентом',
+      'Аналітичні Платформи',
+      'Маркетингові Інструменти',
+      'CRM Системи',
+      'Медіа-бібліотеки',
     ],
-    metaTitle: "Інтеграція з Instagram | NeuroGen Lab - Розумне Управління Соціальними Мережами",
-    metaDescription: "Покращіть вашу присутність в Instagram за допомогою технології ШІ. Розумне планування, аналітика та розширені функції для кращого управління соціальними мережами."
-  }
+    metaTitle:
+      'Інтеграція з Instagram | NeuroGen Lab - Розумне Управління Соціальними Мережами',
+    metaDescription:
+      'Покращіть вашу присутність в Instagram за допомогою технології ШІ. Розумне планування, аналітика та розширені функції для кращого управління соціальними мережами.',
+  },
 };
 
 export { instagramTranslations };
 
 const intercomTranslations = {
   en: {
-    title: "Intercom Integration",
-    description: "Enhance your customer communication with our intelligent Intercom integration that provides advanced automation and insights through AI technology.",
+    title: 'Intercom Integration',
+    description:
+      'Enhance your customer communication with our intelligent Intercom integration that provides advanced automation and insights through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Smart Chat Routing",
-      "Automated Responses",
-      "Customer Analytics",
-      "Conversation Management",
-      "Team Collaboration",
-      "Custom Workflows",
-      "Performance Tracking"
+      'Smart Chat Routing',
+      'Automated Responses',
+      'Customer Analytics',
+      'Conversation Management',
+      'Team Collaboration',
+      'Custom Workflows',
+      'Performance Tracking',
     ],
     benefits: [
-      "Faster Response Times",
-      "Improved Customer Support",
-      "Better Team Efficiency",
-      "Data-Driven Insights",
-      "Streamlined Communication",
-      "Enhanced Customer Experience",
-      "Increased Productivity"
+      'Faster Response Times',
+      'Improved Customer Support',
+      'Better Team Efficiency',
+      'Data-Driven Insights',
+      'Streamlined Communication',
+      'Enhanced Customer Experience',
+      'Increased Productivity',
     ],
     integrations: [
-      "CRM Systems",
-      "Help Desk Tools",
-      "Analytics Platforms",
-      "Marketing Tools",
-      "Team Collaboration",
-      "Customer Support"
+      'CRM Systems',
+      'Help Desk Tools',
+      'Analytics Platforms',
+      'Marketing Tools',
+      'Team Collaboration',
+      'Customer Support',
     ],
-    metaTitle: "Intercom Integration | NeuroGen Lab - Smart Customer Communication",
-    metaDescription: "Enhance your customer communication with AI technology. Smart routing, automated responses, and advanced analytics for better customer support."
+    metaTitle:
+      'Intercom Integration | NeuroGen Lab - Smart Customer Communication',
+    metaDescription:
+      'Enhance your customer communication with AI technology. Smart routing, automated responses, and advanced analytics for better customer support.',
   },
   de: {
-    title: "Intercom-Integration",
-    description: "Verbessern Sie Ihre Kundenkommunikation mit unserer intelligenten Intercom-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    title: 'Intercom-Integration',
+    description:
+      'Verbessern Sie Ihre Kundenkommunikation mit unserer intelligenten Intercom-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Intelligentes Chat-Routing",
-      "Automatisierte Antworten",
-      "Kundenanalyse",
-      "Gesprächsverwaltung",
-      "Team-Zusammenarbeit",
-      "Benutzerdefinierte Workflows",
-      "Leistungsverfolgung"
+      'Intelligentes Chat-Routing',
+      'Automatisierte Antworten',
+      'Kundenanalyse',
+      'Gesprächsverwaltung',
+      'Team-Zusammenarbeit',
+      'Benutzerdefinierte Workflows',
+      'Leistungsverfolgung',
     ],
     benefits: [
-      "Schnellere Antwortzeiten",
-      "Verbesserter Kundensupport",
-      "Bessere Team-Effizienz",
-      "Datenbasierte Einblicke",
-      "Optimierte Kommunikation",
-      "Verbesserte Kundenerfahrung",
-      "Gesteigerte Produktivität"
+      'Schnellere Antwortzeiten',
+      'Verbesserter Kundensupport',
+      'Bessere Team-Effizienz',
+      'Datenbasierte Einblicke',
+      'Optimierte Kommunikation',
+      'Verbesserte Kundenerfahrung',
+      'Gesteigerte Produktivität',
     ],
     integrations: [
-      "CRM-Systeme",
-      "Helpdesk-Tools",
-      "Analyse-Plattformen",
-      "Marketing-Tools",
-      "Team-Kollaboration",
-      "Kundensupport"
+      'CRM-Systeme',
+      'Helpdesk-Tools',
+      'Analyse-Plattformen',
+      'Marketing-Tools',
+      'Team-Kollaboration',
+      'Kundensupport',
     ],
-    metaTitle: "Intercom-Integration | NeuroGen Lab - Intelligente Kundenkommunikation",
-    metaDescription: "Verbessern Sie Ihre Kundenkommunikation mit KI-Technologie. Intelligentes Routing, automatisierte Antworten und erweiterte Analytik für besseren Kundensupport."
+    metaTitle:
+      'Intercom-Integration | NeuroGen Lab - Intelligente Kundenkommunikation',
+    metaDescription:
+      'Verbessern Sie Ihre Kundenkommunikation mit KI-Technologie. Intelligentes Routing, automatisierte Antworten und erweiterte Analytik für besseren Kundensupport.',
   },
   es: {
-    title: "Integración de Intercom",
-    description: "Mejore su comunicación con clientes mediante nuestra integración inteligente de Intercom que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    title: 'Integración de Intercom',
+    description:
+      'Mejore su comunicación con clientes mediante nuestra integración inteligente de Intercom que proporciona automatización avanzada y perspectivas a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Enrutamiento Inteligente de Chat",
-      "Respuestas Automatizadas",
-      "Análisis de Clientes",
-      "Gestión de Conversaciones",
-      "Colaboración en Equipo",
-      "Flujos de Trabajo Personalizados",
-      "Seguimiento de Rendimiento"
+      'Enrutamiento Inteligente de Chat',
+      'Respuestas Automatizadas',
+      'Análisis de Clientes',
+      'Gestión de Conversaciones',
+      'Colaboración en Equipo',
+      'Flujos de Trabajo Personalizados',
+      'Seguimiento de Rendimiento',
     ],
     benefits: [
-      "Tiempos de Respuesta más Rápidos",
-      "Mejor Soporte al Cliente",
-      "Mayor Eficiencia del Equipo",
-      "Perspectivas Basadas en Datos",
-      "Comunicación Optimizada",
-      "Experiencia del Cliente Mejorada",
-      "Productividad Aumentada"
+      'Tiempos de Respuesta más Rápidos',
+      'Mejor Soporte al Cliente',
+      'Mayor Eficiencia del Equipo',
+      'Perspectivas Basadas en Datos',
+      'Comunicación Optimizada',
+      'Experiencia del Cliente Mejorada',
+      'Productividad Aumentada',
     ],
     integrations: [
-      "Sistemas CRM",
-      "Herramientas de Mesa de Ayuda",
-      "Plataformas de Análisis",
-      "Herramientas de Marketing",
-      "Colaboración en Equipo",
-      "Soporte al Cliente"
+      'Sistemas CRM',
+      'Herramientas de Mesa de Ayuda',
+      'Plataformas de Análisis',
+      'Herramientas de Marketing',
+      'Colaboración en Equipo',
+      'Soporte al Cliente',
     ],
-    metaTitle: "Integración de Intercom | NeuroGen Lab - Comunicación Inteligente con Clientes",
-    metaDescription: "Mejore su comunicación con clientes mediante tecnología IA. Enrutamiento inteligente, respuestas automatizadas y análisis avanzado para mejor soporte al cliente."
+    metaTitle:
+      'Integración de Intercom | NeuroGen Lab - Comunicación Inteligente con Clientes',
+    metaDescription:
+      'Mejore su comunicación con clientes mediante tecnología IA. Enrutamiento inteligente, respuestas automatizadas y análisis avanzado para mejor soporte al cliente.',
   },
   ru: {
-    title: "Интеграция с Intercom",
-    description: "Улучшите вашу коммуникацию с клиентами с помощью нашей интеллектуальной интеграции Intercom, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    title: 'Интеграция с Intercom',
+    description:
+      'Улучшите вашу коммуникацию с клиентами с помощью нашей интеллектуальной интеграции Intercom, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Умная Маршрутизация Чатов",
-      "Автоматические Ответы",
-      "Аналитика Клиентов",
-      "Управление Разговорами",
-      "Командное Взаимодействие",
-      "Настраиваемые Рабочие Процессы",
-      "Отслеживание Эффективности"
+      'Умная Маршрутизация Чатов',
+      'Автоматические Ответы',
+      'Аналитика Клиентов',
+      'Управление Разговорами',
+      'Командное Взаимодействие',
+      'Настраиваемые Рабочие Процессы',
+      'Отслеживание Эффективности',
     ],
     benefits: [
-      "Более Быстрые Ответы",
-      "Улучшенная Поддержка Клиентов",
-      "Повышенная Эффективность Команды",
-      "Аналитика на Основе Данных",
-      "Оптимизированная Коммуникация",
-      "Улучшенный Опыт Клиентов",
-      "Повышенная Продуктивность"
+      'Более Быстрые Ответы',
+      'Улучшенная Поддержка Клиентов',
+      'Повышенная Эффективность Команды',
+      'Аналитика на Основе Данных',
+      'Оптимизированная Коммуникация',
+      'Улучшенный Опыт Клиентов',
+      'Повышенная Продуктивность',
     ],
     integrations: [
-      "CRM Системы",
-      "Инструменты Поддержки",
-      "Аналитические Платформы",
-      "Маркетинговые Инструменты",
-      "Командное Взаимодействие",
-      "Поддержка Клиентов"
+      'CRM Системы',
+      'Инструменты Поддержки',
+      'Аналитические Платформы',
+      'Маркетинговые Инструменты',
+      'Командное Взаимодействие',
+      'Поддержка Клиентов',
     ],
-    metaTitle: "Интеграция с Intercom | NeuroGen Lab - Умная Коммуникация с Клиентами",
-    metaDescription: "Улучшите вашу коммуникацию с клиентами с помощью технологии ИИ. Умная маршрутизация, автоматические ответы и расширенная аналитика для лучшей поддержки клиентов."
+    metaTitle:
+      'Интеграция с Intercom | NeuroGen Lab - Умная Коммуникация с Клиентами',
+    metaDescription:
+      'Улучшите вашу коммуникацию с клиентами с помощью технологии ИИ. Умная маршрутизация, автоматические ответы и расширенная аналитика для лучшей поддержки клиентов.',
   },
   ua: {
-    title: "Інтеграція з Intercom",
-    description: "Покращіть вашу комунікацію з клієнтами за допомогою нашої інтелектуальної інтеграції Intercom, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    title: 'Інтеграція з Intercom',
+    description:
+      'Покращіть вашу комунікацію з клієнтами за допомогою нашої інтелектуальної інтеграції Intercom, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Розумна Маршрутизація Чатів",
-      "Автоматичні Відповіді",
-      "Аналітика Клієнтів",
-      "Управління Розмовами",
-      "Командна Взаємодія",
-      "Налаштовувані Робочі Процеси",
-      "Відстеження Ефективності"
+      'Розумна Маршрутизація Чатів',
+      'Автоматичні Відповіді',
+      'Аналітика Клієнтів',
+      'Управління Розмовами',
+      'Командна Взаємодія',
+      'Налаштовувані Робочі Процеси',
+      'Відстеження Ефективності',
     ],
     benefits: [
-      "Швидші Відповіді",
-      "Покращена Підтримка Клієнтів",
-      "Підвищена Ефективність Команди",
-      "Аналітика на Основі Даних",
-      "Оптимізована Комунікація",
-      "Покращений Досвід Клієнтів",
-      "Підвищена Продуктивність"
+      'Швидші Відповіді',
+      'Покращена Підтримка Клієнтів',
+      'Підвищена Ефективність Команди',
+      'Аналітика на Основі Даних',
+      'Оптимізована Комунікація',
+      'Покращений Досвід Клієнтів',
+      'Підвищена Продуктивність',
     ],
     integrations: [
-      "CRM Системи",
-      "Інструменти Підтримки",
-      "Аналітичні Платформи",
-      "Маркетингові Інструменти",
-      "Командна Взаємодія",
-      "Підтримка Клієнтів"
+      'CRM Системи',
+      'Інструменти Підтримки',
+      'Аналітичні Платформи',
+      'Маркетингові Інструменти',
+      'Командна Взаємодія',
+      'Підтримка Клієнтів',
     ],
-    metaTitle: "Інтеграція з Intercom | NeuroGen Lab - Розумна Комунікація з Клієнтами",
-    metaDescription: "Покращіть вашу комунікацію з клієнтами за допомогою технології ШІ. Розумна маршрутизація, автоматичні відповіді та розширена аналітика для кращої підтримки клієнтів."
-  }
+    metaTitle:
+      'Інтеграція з Intercom | NeuroGen Lab - Розумна Комунікація з Клієнтами',
+    metaDescription:
+      'Покращіть вашу комунікацію з клієнтами за допомогою технології ШІ. Розумна маршрутизація, автоматичні відповіді та розширена аналітика для кращої підтримки клієнтів.',
+  },
 };
 
 export { intercomTranslations };
 
 const jiraTranslations = {
   en: {
-    title: "Jira Integration",
-    description: "Enhance your project management with our intelligent Jira integration that provides advanced automation and insights through AI technology.",
+    title: 'Jira Integration',
+    description:
+      'Enhance your project management with our intelligent Jira integration that provides advanced automation and insights through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Smart Task Management",
-      "Automated Workflows",
-      "Project Analytics",
-      "Team Collaboration",
-      "Issue Tracking",
-      "Sprint Planning",
-      "Performance Metrics"
+      'Smart Task Management',
+      'Automated Workflows',
+      'Project Analytics',
+      'Team Collaboration',
+      'Issue Tracking',
+      'Sprint Planning',
+      'Performance Metrics',
     ],
     benefits: [
-      "Increased Productivity",
-      "Better Project Visibility",
-      "Streamlined Processes",
-      "Data-Driven Decisions",
-      "Enhanced Team Efficiency",
-      "Improved Planning",
-      "Better Resource Management"
+      'Increased Productivity',
+      'Better Project Visibility',
+      'Streamlined Processes',
+      'Data-Driven Decisions',
+      'Enhanced Team Efficiency',
+      'Improved Planning',
+      'Better Resource Management',
     ],
     integrations: [
-      "Development Tools",
-      "Version Control",
-      "CI/CD Platforms",
-      "Documentation Tools",
-      "Team Communication",
-      "Time Tracking"
+      'Development Tools',
+      'Version Control',
+      'CI/CD Platforms',
+      'Documentation Tools',
+      'Team Communication',
+      'Time Tracking',
     ],
-    metaTitle: "Jira Integration | NeuroGen Lab - Smart Project Management",
-    metaDescription: "Enhance your project management with AI technology. Smart automation, analytics, and advanced features for better project tracking and team collaboration."
+    metaTitle: 'Jira Integration | NeuroGen Lab - Smart Project Management',
+    metaDescription:
+      'Enhance your project management with AI technology. Smart automation, analytics, and advanced features for better project tracking and team collaboration.',
   },
   de: {
-    title: "Jira-Integration",
-    description: "Verbessern Sie Ihr Projektmanagement mit unserer intelligenten Jira-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    title: 'Jira-Integration',
+    description:
+      'Verbessern Sie Ihr Projektmanagement mit unserer intelligenten Jira-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Intelligente Aufgabenverwaltung",
-      "Automatisierte Workflows",
-      "Projekt-Analytik",
-      "Team-Zusammenarbeit",
-      "Problem-Tracking",
-      "Sprint-Planung",
-      "Leistungskennzahlen"
+      'Intelligente Aufgabenverwaltung',
+      'Automatisierte Workflows',
+      'Projekt-Analytik',
+      'Team-Zusammenarbeit',
+      'Problem-Tracking',
+      'Sprint-Planung',
+      'Leistungskennzahlen',
     ],
     benefits: [
-      "Gesteigerte Produktivität",
-      "Bessere Projektübersicht",
-      "Optimierte Prozesse",
-      "Datenbasierte Entscheidungen",
-      "Verbesserte Team-Effizienz",
-      "Verbesserte Planung",
-      "Besseres Ressourcenmanagement"
+      'Gesteigerte Produktivität',
+      'Bessere Projektübersicht',
+      'Optimierte Prozesse',
+      'Datenbasierte Entscheidungen',
+      'Verbesserte Team-Effizienz',
+      'Verbesserte Planung',
+      'Besseres Ressourcenmanagement',
     ],
     integrations: [
-      "Entwicklungstools",
-      "Versionskontrolle",
-      "CI/CD-Plattformen",
-      "Dokumentationstools",
-      "Team-Kommunikation",
-      "Zeiterfassung"
+      'Entwicklungstools',
+      'Versionskontrolle',
+      'CI/CD-Plattformen',
+      'Dokumentationstools',
+      'Team-Kommunikation',
+      'Zeiterfassung',
     ],
-    metaTitle: "Jira-Integration | NeuroGen Lab - Intelligentes Projektmanagement",
-    metaDescription: "Verbessern Sie Ihr Projektmanagement mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Projekt-Tracking und Team-Zusammenarbeit."
+    metaTitle:
+      'Jira-Integration | NeuroGen Lab - Intelligentes Projektmanagement',
+    metaDescription:
+      'Verbessern Sie Ihr Projektmanagement mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Projekt-Tracking und Team-Zusammenarbeit.',
   },
   es: {
-    title: "Integración de Jira",
-    description: "Mejore su gestión de proyectos con nuestra integración inteligente de Jira que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    title: 'Integración de Jira',
+    description:
+      'Mejore su gestión de proyectos con nuestra integración inteligente de Jira que proporciona automatización avanzada y perspectivas a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Gestión Inteligente de Tareas",
-      "Flujos de Trabajo Automatizados",
-      "Análisis de Proyectos",
-      "Colaboración en Equipo",
-      "Seguimiento de Problemas",
-      "Planificación de Sprints",
-      "Métricas de Rendimiento"
+      'Gestión Inteligente de Tareas',
+      'Flujos de Trabajo Automatizados',
+      'Análisis de Proyectos',
+      'Colaboración en Equipo',
+      'Seguimiento de Problemas',
+      'Planificación de Sprints',
+      'Métricas de Rendimiento',
     ],
     benefits: [
-      "Mayor Productividad",
-      "Mejor Visibilidad del Proyecto",
-      "Procesos Optimizados",
-      "Decisiones Basadas en Datos",
-      "Eficiencia Mejorada del Equipo",
-      "Mejor Planificación",
-      "Mejor Gestión de Recursos"
+      'Mayor Productividad',
+      'Mejor Visibilidad del Proyecto',
+      'Procesos Optimizados',
+      'Decisiones Basadas en Datos',
+      'Eficiencia Mejorada del Equipo',
+      'Mejor Planificación',
+      'Mejor Gestión de Recursos',
     ],
     integrations: [
-      "Herramientas de Desarrollo",
-      "Control de Versiones",
-      "Plataformas CI/CD",
-      "Herramientas de Documentación",
-      "Comunicación en Equipo",
-      "Control de Tiempo"
+      'Herramientas de Desarrollo',
+      'Control de Versiones',
+      'Plataformas CI/CD',
+      'Herramientas de Documentación',
+      'Comunicación en Equipo',
+      'Control de Tiempo',
     ],
-    metaTitle: "Integración de Jira | NeuroGen Lab - Gestión Inteligente de Proyectos",
-    metaDescription: "Mejore su gestión de proyectos con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor seguimiento de proyectos y colaboración en equipo."
+    metaTitle:
+      'Integración de Jira | NeuroGen Lab - Gestión Inteligente de Proyectos',
+    metaDescription:
+      'Mejore su gestión de proyectos con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor seguimiento de proyectos y colaboración en equipo.',
   },
   ru: {
-    title: "Интеграция с Jira",
-    description: "Улучшите ваше управление проектами с помощью нашей интеллектуальной интеграции Jira, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    title: 'Интеграция с Jira',
+    description:
+      'Улучшите ваше управление проектами с помощью нашей интеллектуальной интеграции Jira, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Умное Управление Задачами",
-      "Автоматизированные Рабочие Процессы",
-      "Аналитика Проектов",
-      "Командное Взаимодействие",
-      "Отслеживание Проблем",
-      "Планирование Спринтов",
-      "Метрики Производительности"
+      'Умное Управление Задачами',
+      'Автоматизированные Рабочие Процессы',
+      'Аналитика Проектов',
+      'Командное Взаимодействие',
+      'Отслеживание Проблем',
+      'Планирование Спринтов',
+      'Метрики Производительности',
     ],
     benefits: [
-      "Повышенная Продуктивность",
-      "Лучшая Видимость Проекта",
-      "Оптимизированные Процессы",
-      "Решения на Основе Данных",
-      "Улучшенная Эффективность Команды",
-      "Улучшенное Планирование",
-      "Лучшее Управление Ресурсами"
+      'Повышенная Продуктивность',
+      'Лучшая Видимость Проекта',
+      'Оптимизированные Процессы',
+      'Решения на Основе Данных',
+      'Улучшенная Эффективность Команды',
+      'Улучшенное Планирование',
+      'Лучшее Управление Ресурсами',
     ],
     integrations: [
-      "Инструменты Разработки",
-      "Контроль Версий",
-      "CI/CD Платформы",
-      "Инструменты Документации",
-      "Командная Коммуникация",
-      "Учет Времени"
+      'Инструменты Разработки',
+      'Контроль Версий',
+      'CI/CD Платформы',
+      'Инструменты Документации',
+      'Командная Коммуникация',
+      'Учет Времени',
     ],
-    metaTitle: "Интеграция с Jira | NeuroGen Lab - Умное Управление Проектами",
-    metaDescription: "Улучшите ваше управление проектами с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего отслеживания проектов и командного взаимодействия."
+    metaTitle: 'Интеграция с Jira | NeuroGen Lab - Умное Управление Проектами',
+    metaDescription:
+      'Улучшите ваше управление проектами с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего отслеживания проектов и командного взаимодействия.',
   },
   ua: {
-    title: "Інтеграція з Jira",
-    description: "Покращіть ваше управління проектами за допомогою нашої інтелектуальної інтеграції Jira, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    title: 'Інтеграція з Jira',
+    description:
+      'Покращіть ваше управління проектами за допомогою нашої інтелектуальної інтеграції Jira, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Розумне Управління Завданнями",
-      "Автоматизовані Робочі Процеси",
-      "Аналітика Проектів",
-      "Командна Взаємодія",
-      "Відстеження Проблем",
-      "Планування Спринтів",
-      "Метрики Продуктивності"
+      'Розумне Управління Завданнями',
+      'Автоматизовані Робочі Процеси',
+      'Аналітика Проектів',
+      'Командна Взаємодія',
+      'Відстеження Проблем',
+      'Планування Спринтів',
+      'Метрики Продуктивності',
     ],
     benefits: [
-      "Підвищена Продуктивність",
-      "Краща Видимість Проекту",
-      "Оптимізовані Процеси",
-      "Рішення на Основі Даних",
-      "Покращена Ефективність Команди",
-      "Покращене Планування",
-      "Краще Управління Ресурсами"
+      'Підвищена Продуктивність',
+      'Краща Видимість Проекту',
+      'Оптимізовані Процеси',
+      'Рішення на Основі Даних',
+      'Покращена Ефективність Команди',
+      'Покращене Планування',
+      'Краще Управління Ресурсами',
     ],
     integrations: [
-      "Інструменти Розробки",
-      "Контроль Версій",
-      "CI/CD Платформи",
-      "Інструменти Документації",
-      "Командна Комунікація",
-      "Облік Часу"
+      'Інструменти Розробки',
+      'Контроль Версій',
+      'CI/CD Платформи',
+      'Інструменти Документації',
+      'Командна Комунікація',
+      'Облік Часу',
     ],
-    metaTitle: "Інтеграція з Jira | NeuroGen Lab - Розумне Управління Проектами",
-    metaDescription: "Покращіть ваше управління проектами за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого відстеження проектів та командної взаємодії."
-  }
+    metaTitle:
+      'Інтеграція з Jira | NeuroGen Lab - Розумне Управління Проектами',
+    metaDescription:
+      'Покращіть ваше управління проектами за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого відстеження проектів та командної взаємодії.',
+  },
 };
 
 export { jiraTranslations };
 
 const livechatTranslations = {
   en: {
-    title: "LiveChat Integration",
-    description: "Enhance your customer support with our intelligent LiveChat integration that provides advanced automation and insights through AI technology.",
+    title: 'LiveChat Integration',
+    description:
+      'Enhance your customer support with our intelligent LiveChat integration that provides advanced automation and insights through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Real-time Chat Support",
-      "Automated Responses",
-      "Visitor Analytics",
-      "Chat History Management",
-      "Team Collaboration",
-      "Custom Chat Widgets",
-      "Performance Monitoring"
+      'Real-time Chat Support',
+      'Automated Responses',
+      'Visitor Analytics',
+      'Chat History Management',
+      'Team Collaboration',
+      'Custom Chat Widgets',
+      'Performance Monitoring',
     ],
     benefits: [
-      "Faster Response Times",
-      "Improved Customer Satisfaction",
-      "Better Team Efficiency",
-      "Data-Driven Insights",
-      "Enhanced Communication",
-      "Increased Conversions",
-      "24/7 Support Capability"
+      'Faster Response Times',
+      'Improved Customer Satisfaction',
+      'Better Team Efficiency',
+      'Data-Driven Insights',
+      'Enhanced Communication',
+      'Increased Conversions',
+      '24/7 Support Capability',
     ],
     integrations: [
-      "CRM Systems",
-      "Help Desk Tools",
-      "Analytics Platforms",
-      "Marketing Tools",
-      "Social Media",
-      "E-commerce Platforms"
+      'CRM Systems',
+      'Help Desk Tools',
+      'Analytics Platforms',
+      'Marketing Tools',
+      'Social Media',
+      'E-commerce Platforms',
     ],
-    metaTitle: "LiveChat Integration | NeuroGen Lab - Smart Customer Support",
-    metaDescription: "Enhance your customer support with AI technology. Real-time chat, automated responses, and advanced analytics for better customer communication."
+    metaTitle: 'LiveChat Integration | NeuroGen Lab - Smart Customer Support',
+    metaDescription:
+      'Enhance your customer support with AI technology. Real-time chat, automated responses, and advanced analytics for better customer communication.',
   },
   de: {
-    title: "LiveChat-Integration",
-    description: "Verbessern Sie Ihren Kundensupport mit unserer intelligenten LiveChat-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    title: 'LiveChat-Integration',
+    description:
+      'Verbessern Sie Ihren Kundensupport mit unserer intelligenten LiveChat-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Echtzeit-Chat-Support",
-      "Automatisierte Antworten",
-      "Besucher-Analytik",
-      "Chat-Verlaufsverwaltung",
-      "Team-Zusammenarbeit",
-      "Anpassbare Chat-Widgets",
-      "Leistungsüberwachung"
+      'Echtzeit-Chat-Support',
+      'Automatisierte Antworten',
+      'Besucher-Analytik',
+      'Chat-Verlaufsverwaltung',
+      'Team-Zusammenarbeit',
+      'Anpassbare Chat-Widgets',
+      'Leistungsüberwachung',
     ],
     benefits: [
-      "Schnellere Antwortzeiten",
-      "Verbesserte Kundenzufriedenheit",
-      "Bessere Team-Effizienz",
-      "Datenbasierte Einblicke",
-      "Verbesserte Kommunikation",
-      "Gesteigerte Konversionen",
-      "24/7 Support-Möglichkeit"
+      'Schnellere Antwortzeiten',
+      'Verbesserte Kundenzufriedenheit',
+      'Bessere Team-Effizienz',
+      'Datenbasierte Einblicke',
+      'Verbesserte Kommunikation',
+      'Gesteigerte Konversionen',
+      '24/7 Support-Möglichkeit',
     ],
     integrations: [
-      "CRM-Systeme",
-      "Helpdesk-Tools",
-      "Analyse-Plattformen",
-      "Marketing-Tools",
-      "Soziale Medien",
-      "E-Commerce-Plattformen"
+      'CRM-Systeme',
+      'Helpdesk-Tools',
+      'Analyse-Plattformen',
+      'Marketing-Tools',
+      'Soziale Medien',
+      'E-Commerce-Plattformen',
     ],
-    metaTitle: "LiveChat-Integration | NeuroGen Lab - Intelligenter Kundensupport",
-    metaDescription: "Verbessern Sie Ihren Kundensupport mit KI-Technologie. Echtzeit-Chat, automatisierte Antworten und erweiterte Analytik für bessere Kundenkommunikation."
+    metaTitle:
+      'LiveChat-Integration | NeuroGen Lab - Intelligenter Kundensupport',
+    metaDescription:
+      'Verbessern Sie Ihren Kundensupport mit KI-Technologie. Echtzeit-Chat, automatisierte Antworten und erweiterte Analytik für bessere Kundenkommunikation.',
   },
   es: {
-    title: "Integración de LiveChat",
-    description: "Mejore su soporte al cliente con nuestra integración inteligente de LiveChat que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    title: 'Integración de LiveChat',
+    description:
+      'Mejore su soporte al cliente con nuestra integración inteligente de LiveChat que proporciona automatización avanzada y perspectivas a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Soporte de Chat en Tiempo Real",
-      "Respuestas Automatizadas",
-      "Análisis de Visitantes",
-      "Gestión del Historial de Chat",
-      "Colaboración en Equipo",
-      "Widgets de Chat Personalizables",
-      "Monitoreo de Rendimiento"
+      'Soporte de Chat en Tiempo Real',
+      'Respuestas Automatizadas',
+      'Análisis de Visitantes',
+      'Gestión del Historial de Chat',
+      'Colaboración en Equipo',
+      'Widgets de Chat Personalizables',
+      'Monitoreo de Rendimiento',
     ],
     benefits: [
-      "Tiempos de Respuesta más Rápidos",
-      "Mayor Satisfacción del Cliente",
-      "Mejor Eficiencia del Equipo",
-      "Perspectivas Basadas en Datos",
-      "Comunicación Mejorada",
-      "Aumento de Conversiones",
-      "Capacidad de Soporte 24/7"
+      'Tiempos de Respuesta más Rápidos',
+      'Mayor Satisfacción del Cliente',
+      'Mejor Eficiencia del Equipo',
+      'Perspectivas Basadas en Datos',
+      'Comunicación Mejorada',
+      'Aumento de Conversiones',
+      'Capacidad de Soporte 24/7',
     ],
     integrations: [
-      "Sistemas CRM",
-      "Herramientas de Mesa de Ayuda",
-      "Plataformas de Análisis",
-      "Herramientas de Marketing",
-      "Redes Sociales",
-      "Plataformas de Comercio Electrónico"
+      'Sistemas CRM',
+      'Herramientas de Mesa de Ayuda',
+      'Plataformas de Análisis',
+      'Herramientas de Marketing',
+      'Redes Sociales',
+      'Plataformas de Comercio Electrónico',
     ],
-    metaTitle: "Integración de LiveChat | NeuroGen Lab - Soporte Inteligente al Cliente",
-    metaDescription: "Mejore su soporte al cliente con tecnología IA. Chat en tiempo real, respuestas automatizadas y análisis avanzado para una mejor comunicación con el cliente."
+    metaTitle:
+      'Integración de LiveChat | NeuroGen Lab - Soporte Inteligente al Cliente',
+    metaDescription:
+      'Mejore su soporte al cliente con tecnología IA. Chat en tiempo real, respuestas automatizadas y análisis avanzado para una mejor comunicación con el cliente.',
   },
   ru: {
-    title: "Интеграция с LiveChat",
-    description: "Улучшите вашу поддержку клиентов с помощью нашей интеллектуальной интеграции LiveChat, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    title: 'Интеграция с LiveChat',
+    description:
+      'Улучшите вашу поддержку клиентов с помощью нашей интеллектуальной интеграции LiveChat, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Поддержка в Реальном Времени",
-      "Автоматические Ответы",
-      "Аналитика Посетителей",
-      "Управление Историей Чатов",
-      "Командное Взаимодействие",
-      "Настраиваемые Чат-Виджеты",
-      "Мониторинг Производительности"
+      'Поддержка в Реальном Времени',
+      'Автоматические Ответы',
+      'Аналитика Посетителей',
+      'Управление Историей Чатов',
+      'Командное Взаимодействие',
+      'Настраиваемые Чат-Виджеты',
+      'Мониторинг Производительности',
     ],
     benefits: [
-      "Более Быстрые Ответы",
-      "Повышенная Удовлетворенность Клиентов",
-      "Улучшенная Эффективность Команды",
-      "Аналитика на Основе Данных",
-      "Улучшенная Коммуникация",
-      "Увеличенная Конверсия",
-      "Поддержка 24/7"
+      'Более Быстрые Ответы',
+      'Повышенная Удовлетворенность Клиентов',
+      'Улучшенная Эффективность Команды',
+      'Аналитика на Основе Данных',
+      'Улучшенная Коммуникация',
+      'Увеличенная Конверсия',
+      'Поддержка 24/7',
     ],
     integrations: [
-      "CRM Системы",
-      "Инструменты Поддержки",
-      "Аналитические Платформы",
-      "Маркетинговые Инструменты",
-      "Социальные Сети",
-      "Платформы Электронной Коммерции"
+      'CRM Системы',
+      'Инструменты Поддержки',
+      'Аналитические Платформы',
+      'Маркетинговые Инструменты',
+      'Социальные Сети',
+      'Платформы Электронной Коммерции',
     ],
-    metaTitle: "Интеграция с LiveChat | NeuroGen Lab - Умная Поддержка Клиентов",
-    metaDescription: "Улучшите вашу поддержку клиентов с помощью технологии ИИ. Чат в реальном времени, автоматические ответы и расширенная аналитика для лучшей коммуникации с клиентами."
+    metaTitle:
+      'Интеграция с LiveChat | NeuroGen Lab - Умная Поддержка Клиентов',
+    metaDescription:
+      'Улучшите вашу поддержку клиентов с помощью технологии ИИ. Чат в реальном времени, автоматические ответы и расширенная аналитика для лучшей коммуникации с клиентами.',
   },
   ua: {
-    title: "Інтеграція з LiveChat",
-    description: "Покращіть вашу підтримку клієнтів за допомогою нашої інтелектуальної інтеграції LiveChat, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    title: 'Інтеграція з LiveChat',
+    description:
+      'Покращіть вашу підтримку клієнтів за допомогою нашої інтелектуальної інтеграції LiveChat, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Підтримка в Реальному Часі",
-      "Автоматичні Відповіді",
-      "Аналітика Відвідувачів",
-      "Управління Історією Чатів",
-      "Командна Взаємодія",
-      "Налаштовувані Чат-Віджети",
-      "Моніторинг Продуктивності"
+      'Підтримка в Реальному Часі',
+      'Автоматичні Відповіді',
+      'Аналітика Відвідувачів',
+      'Управління Історією Чатів',
+      'Командна Взаємодія',
+      'Налаштовувані Чат-Віджети',
+      'Моніторинг Продуктивності',
     ],
     benefits: [
-      "Швидші Відповіді",
-      "Підвищена Задоволеність Клієнтів",
-      "Покращена Ефективність Команди",
-      "Аналітика на Основі Даних",
-      "Покращена Комунікація",
-      "Збільшена Конверсія",
-      "Підтримка 24/7"
+      'Швидші Відповіді',
+      'Підвищена Задоволеність Клієнтів',
+      'Покращена Ефективність Команди',
+      'Аналітика на Основі Даних',
+      'Покращена Комунікація',
+      'Збільшена Конверсія',
+      'Підтримка 24/7',
     ],
     integrations: [
-      "CRM Системи",
-      "Інструменти Підтримки",
-      "Аналітичні Платформи",
-      "Маркетингові Інструменти",
-      "Соціальні Мережі",
-      "Платформи Електронної Комерції"
+      'CRM Системи',
+      'Інструменти Підтримки',
+      'Аналітичні Платформи',
+      'Маркетингові Інструменти',
+      'Соціальні Мережі',
+      'Платформи Електронної Комерції',
     ],
-    metaTitle: "Інтеграція з LiveChat | NeuroGen Lab - Розумна Підтримка Клієнтів",
-    metaDescription: "Покращіть вашу підтримку клієнтів за допомогою технології ШІ. Чат в реальному часі, автоматичні відповіді та розширена аналітика для кращої комунікації з клієнтами."
-  }
+    metaTitle:
+      'Інтеграція з LiveChat | NeuroGen Lab - Розумна Підтримка Клієнтів',
+    metaDescription:
+      'Покращіть вашу підтримку клієнтів за допомогою технології ШІ. Чат в реальному часі, автоматичні відповіді та розширена аналітика для кращої комунікації з клієнтами.',
+  },
 };
 
-export { livechatTranslations };  
+export { livechatTranslations };
 
 const teamsTranslations = {
   en: {
-    title: "Microsoft Teams Integration",
-    description: "Enhance your team collaboration with our intelligent Microsoft Teams integration that provides advanced automation and insights through AI technology.",
+    title: 'Microsoft Teams Integration',
+    description:
+      'Enhance your team collaboration with our intelligent Microsoft Teams integration that provides advanced automation and insights through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Smart Meeting Management",
-      "Automated Workflows",
-      "Team Analytics",
-      "Document Collaboration",
-      "Channel Management",
-      "Custom Bot Integration",
-      "Activity Tracking"
+      'Smart Meeting Management',
+      'Automated Workflows',
+      'Team Analytics',
+      'Document Collaboration',
+      'Channel Management',
+      'Custom Bot Integration',
+      'Activity Tracking',
     ],
     benefits: [
-      "Enhanced Collaboration",
-      "Improved Productivity",
-      "Better Communication",
-      "Data-Driven Insights",
-      "Streamlined Processes",
-      "Efficient Meetings",
-      "Team Coordination"
+      'Enhanced Collaboration',
+      'Improved Productivity',
+      'Better Communication',
+      'Data-Driven Insights',
+      'Streamlined Processes',
+      'Efficient Meetings',
+      'Team Coordination',
     ],
     integrations: [
-      "Office 365 Suite",
-      "SharePoint",
-      "OneDrive",
-      "Power Automate",
-      "Azure Services",
-      "Third-party Apps"
+      'Office 365 Suite',
+      'SharePoint',
+      'OneDrive',
+      'Power Automate',
+      'Azure Services',
+      'Third-party Apps',
     ],
-    metaTitle: "Microsoft Teams Integration | NeuroGen Lab - Smart Team Collaboration",
-    metaDescription: "Enhance your team collaboration with AI technology. Smart automation, analytics, and advanced features for better team communication and productivity."
+    metaTitle:
+      'Microsoft Teams Integration | NeuroGen Lab - Smart Team Collaboration',
+    metaDescription:
+      'Enhance your team collaboration with AI technology. Smart automation, analytics, and advanced features for better team communication and productivity.',
   },
   de: {
-    title: "Microsoft Teams-Integration",
-    description: "Verbessern Sie Ihre Teamzusammenarbeit mit unserer intelligenten Microsoft Teams-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    title: 'Microsoft Teams-Integration',
+    description:
+      'Verbessern Sie Ihre Teamzusammenarbeit mit unserer intelligenten Microsoft Teams-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Intelligente Meeting-Verwaltung",
-      "Automatisierte Workflows",
-      "Team-Analytik",
-      "Dokumenten-Zusammenarbeit",
-      "Kanal-Management",
-      "Individuelle Bot-Integration",
-      "Aktivitätsverfolgung"
+      'Intelligente Meeting-Verwaltung',
+      'Automatisierte Workflows',
+      'Team-Analytik',
+      'Dokumenten-Zusammenarbeit',
+      'Kanal-Management',
+      'Individuelle Bot-Integration',
+      'Aktivitätsverfolgung',
     ],
     benefits: [
-      "Verbesserte Zusammenarbeit",
-      "Gesteigerte Produktivität",
-      "Bessere Kommunikation",
-      "Datenbasierte Einblicke",
-      "Optimierte Prozesse",
-      "Effiziente Meetings",
-      "Team-Koordination"
+      'Verbesserte Zusammenarbeit',
+      'Gesteigerte Produktivität',
+      'Bessere Kommunikation',
+      'Datenbasierte Einblicke',
+      'Optimierte Prozesse',
+      'Effiziente Meetings',
+      'Team-Koordination',
     ],
     integrations: [
-      "Office 365-Suite",
-      "SharePoint",
-      "OneDrive",
-      "Power Automate",
-      "Azure-Dienste",
-      "Drittanbieter-Apps"
+      'Office 365-Suite',
+      'SharePoint',
+      'OneDrive',
+      'Power Automate',
+      'Azure-Dienste',
+      'Drittanbieter-Apps',
     ],
-    metaTitle: "Microsoft Teams-Integration | NeuroGen Lab - Intelligente Teamzusammenarbeit",
-    metaDescription: "Verbessern Sie Ihre Teamzusammenarbeit mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für bessere Teamkommunikation und Produktivität."
+    metaTitle:
+      'Microsoft Teams-Integration | NeuroGen Lab - Intelligente Teamzusammenarbeit',
+    metaDescription:
+      'Verbessern Sie Ihre Teamzusammenarbeit mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für bessere Teamkommunikation und Produktivität.',
   },
   es: {
-    title: "Integración de Microsoft Teams",
-    description: "Mejore la colaboración de su equipo con nuestra integración inteligente de Microsoft Teams que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    title: 'Integración de Microsoft Teams',
+    description:
+      'Mejore la colaboración de su equipo con nuestra integración inteligente de Microsoft Teams que proporciona automatización avanzada y perspectivas a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Gestión Inteligente de Reuniones",
-      "Flujos de Trabajo Automatizados",
-      "Análisis de Equipo",
-      "Colaboración en Documentos",
-      "Gestión de Canales",
-      "Integración de Bot Personalizado",
-      "Seguimiento de Actividades"
+      'Gestión Inteligente de Reuniones',
+      'Flujos de Trabajo Automatizados',
+      'Análisis de Equipo',
+      'Colaboración en Documentos',
+      'Gestión de Canales',
+      'Integración de Bot Personalizado',
+      'Seguimiento de Actividades',
     ],
     benefits: [
-      "Colaboración Mejorada",
-      "Productividad Mejorada",
-      "Mejor Comunicación",
-      "Perspectivas Basadas en Datos",
-      "Procesos Optimizados",
-      "Reuniones Eficientes",
-      "Coordinación de Equipo"
+      'Colaboración Mejorada',
+      'Productividad Mejorada',
+      'Mejor Comunicación',
+      'Perspectivas Basadas en Datos',
+      'Procesos Optimizados',
+      'Reuniones Eficientes',
+      'Coordinación de Equipo',
     ],
     integrations: [
-      "Suite Office 365",
-      "SharePoint",
-      "OneDrive",
-      "Power Automate",
-      "Servicios Azure",
-      "Aplicaciones de Terceros"
+      'Suite Office 365',
+      'SharePoint',
+      'OneDrive',
+      'Power Automate',
+      'Servicios Azure',
+      'Aplicaciones de Terceros',
     ],
-    metaTitle: "Integración de Microsoft Teams | NeuroGen Lab - Colaboración Inteligente en Equipo",
-    metaDescription: "Mejore la colaboración de su equipo con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor comunicación y productividad del equipo."
+    metaTitle:
+      'Integración de Microsoft Teams | NeuroGen Lab - Colaboración Inteligente en Equipo',
+    metaDescription:
+      'Mejore la colaboración de su equipo con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor comunicación y productividad del equipo.',
   },
   ru: {
-    title: "Интеграция с Microsoft Teams",
-    description: "Улучшите командное взаимодействие с помощью нашей интеллектуальной интеграции Microsoft Teams, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    title: 'Интеграция с Microsoft Teams',
+    description:
+      'Улучшите командное взаимодействие с помощью нашей интеллектуальной интеграции Microsoft Teams, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Умное Управление Встречами",
-      "Автоматизированные Рабочие Процессы",
-      "Аналитика Команды",
-      "Совместная Работа с Документами",
-      "Управление Каналами",
-      "Интеграция Пользовательских Ботов",
-      "Отслеживание Активности"
+      'Умное Управление Встречами',
+      'Автоматизированные Рабочие Процессы',
+      'Аналитика Команды',
+      'Совместная Работа с Документами',
+      'Управление Каналами',
+      'Интеграция Пользовательских Ботов',
+      'Отслеживание Активности',
     ],
     benefits: [
-      "Улучшенное Взаимодействие",
-      "Повышенная Продуктивность",
-      "Улучшенная Коммуникация",
-      "Аналитика на Основе Данных",
-      "Оптимизированные Процессы",
-      "Эффективные Встречи",
-      "Координация Команды"
+      'Улучшенное Взаимодействие',
+      'Повышенная Продуктивность',
+      'Улучшенная Коммуникация',
+      'Аналитика на Основе Данных',
+      'Оптимизированные Процессы',
+      'Эффективные Встречи',
+      'Координация Команды',
     ],
     integrations: [
-      "Пакет Office 365",
-      "SharePoint",
-      "OneDrive",
-      "Power Automate",
-      "Сервисы Azure",
-      "Сторонние Приложения"
+      'Пакет Office 365',
+      'SharePoint',
+      'OneDrive',
+      'Power Automate',
+      'Сервисы Azure',
+      'Сторонние Приложения',
     ],
-    metaTitle: "Интеграция с Microsoft Teams | NeuroGen Lab - Умное Командное Взаимодействие",
-    metaDescription: "Улучшите командное взаимодействие с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшей коммуникации и продуктивности команды."
+    metaTitle:
+      'Интеграция с Microsoft Teams | NeuroGen Lab - Умное Командное Взаимодействие',
+    metaDescription:
+      'Улучшите командное взаимодействие с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшей коммуникации и продуктивности команды.',
   },
   ua: {
-    title: "Інтеграція з Microsoft Teams",
-    description: "Покращіть командну взаємодію за допомогою нашої інтелектуальної інтеграції Microsoft Teams, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    title: 'Інтеграція з Microsoft Teams',
+    description:
+      'Покращіть командну взаємодію за допомогою нашої інтелектуальної інтеграції Microsoft Teams, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Розумне Управління Зустрічами",
-      "Автоматизовані Робочі Процеси",
-      "Аналітика Команди",
-      "Спільна Робота з Документами",
-      "Управління Каналами",
-      "Інтеграція Користувацьких Ботів",
-      "Відстеження Активності"
+      'Розумне Управління Зустрічами',
+      'Автоматизовані Робочі Процеси',
+      'Аналітика Команди',
+      'Спільна Робота з Документами',
+      'Управління Каналами',
+      'Інтеграція Користувацьких Ботів',
+      'Відстеження Активності',
     ],
     benefits: [
-      "Покращена Взаємодія",
-      "Підвищена Продуктивність",
-      "Покращена Комунікація",
-      "Аналітика на Основі Даних",
-      "Оптимізовані Процеси",
-      "Ефективні Зустрічі",
-      "Координація Команди"
+      'Покращена Взаємодія',
+      'Підвищена Продуктивність',
+      'Покращена Комунікація',
+      'Аналітика на Основі Даних',
+      'Оптимізовані Процеси',
+      'Ефективні Зустрічі',
+      'Координація Команди',
     ],
     integrations: [
-      "Пакет Office 365",
-      "SharePoint",
-      "OneDrive",
-      "Power Automate",
-      "Сервіси Azure",
-      "Сторонні Додатки"
+      'Пакет Office 365',
+      'SharePoint',
+      'OneDrive',
+      'Power Automate',
+      'Сервіси Azure',
+      'Сторонні Додатки',
     ],
-    metaTitle: "Інтеграція з Microsoft Teams | NeuroGen Lab - Розумна Командна Взаємодія",
-    metaDescription: "Покращіть командну взаємодію за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращої комунікації та продуктивності команди."
-  }
+    metaTitle:
+      'Інтеграція з Microsoft Teams | NeuroGen Lab - Розумна Командна Взаємодія',
+    metaDescription:
+      'Покращіть командну взаємодію за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращої комунікації та продуктивності команди.',
+  },
 };
 
 export { teamsTranslations };
 
 const salesforceTranslations = {
   en: {
-    title: "Salesforce Integration",
-    description: "Enhance your customer relationship management with our intelligent Salesforce integration that provides advanced automation and insights through AI technology.",
+    title: 'Salesforce Integration',
+    description:
+      'Enhance your customer relationship management with our intelligent Salesforce integration that provides advanced automation and insights through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Smart Lead Management",
-      "Automated Sales Processes",
-      "Customer Analytics",
-      "Pipeline Management",
-      "Contact Management",
-      "Custom Workflows",
-      "Performance Tracking"
+      'Smart Lead Management',
+      'Automated Sales Processes',
+      'Customer Analytics',
+      'Pipeline Management',
+      'Contact Management',
+      'Custom Workflows',
+      'Performance Tracking',
     ],
     benefits: [
-      "Increased Sales Efficiency",
-      "Better Customer Insights",
-      "Improved Lead Conversion",
-      "Data-Driven Decisions",
-      "Enhanced Team Collaboration",
-      "Streamlined Operations",
-      "Accurate Forecasting"
+      'Increased Sales Efficiency',
+      'Better Customer Insights',
+      'Improved Lead Conversion',
+      'Data-Driven Decisions',
+      'Enhanced Team Collaboration',
+      'Streamlined Operations',
+      'Accurate Forecasting',
     ],
     integrations: [
-      "Sales Cloud",
-      "Service Cloud",
-      "Marketing Cloud",
-      "Analytics Tools",
-      "Communication Apps",
-      "Third-party Systems"
+      'Sales Cloud',
+      'Service Cloud',
+      'Marketing Cloud',
+      'Analytics Tools',
+      'Communication Apps',
+      'Third-party Systems',
     ],
-    metaTitle: "Salesforce Integration | NeuroGen Lab - Smart CRM Management",
-    metaDescription: "Enhance your CRM with AI technology. Smart automation, analytics, and advanced features for better customer relationship management."
+    metaTitle: 'Salesforce Integration | NeuroGen Lab - Smart CRM Management',
+    metaDescription:
+      'Enhance your CRM with AI technology. Smart automation, analytics, and advanced features for better customer relationship management.',
   },
   de: {
-    title: "Salesforce-Integration",
-    description: "Verbessern Sie Ihr Kundenbeziehungsmanagement mit unserer intelligenten Salesforce-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    title: 'Salesforce-Integration',
+    description:
+      'Verbessern Sie Ihr Kundenbeziehungsmanagement mit unserer intelligenten Salesforce-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Intelligentes Lead-Management",
-      "Automatisierte Verkaufsprozesse",
-      "Kundenanalyse",
-      "Pipeline-Management",
-      "Kontaktverwaltung",
-      "Individuelle Workflows",
-      "Leistungsverfolgung"
+      'Intelligentes Lead-Management',
+      'Automatisierte Verkaufsprozesse',
+      'Kundenanalyse',
+      'Pipeline-Management',
+      'Kontaktverwaltung',
+      'Individuelle Workflows',
+      'Leistungsverfolgung',
     ],
     benefits: [
-      "Gesteigerte Vertriebseffizienz",
-      "Bessere Kundeneinblicke",
-      "Verbesserte Lead-Konvertierung",
-      "Datenbasierte Entscheidungen",
-      "Verbesserte Team-Zusammenarbeit",
-      "Optimierte Abläufe",
-      "Genaue Prognosen"
+      'Gesteigerte Vertriebseffizienz',
+      'Bessere Kundeneinblicke',
+      'Verbesserte Lead-Konvertierung',
+      'Datenbasierte Entscheidungen',
+      'Verbesserte Team-Zusammenarbeit',
+      'Optimierte Abläufe',
+      'Genaue Prognosen',
     ],
     integrations: [
-      "Sales Cloud",
-      "Service Cloud",
-      "Marketing Cloud",
-      "Analyse-Tools",
-      "Kommunikations-Apps",
-      "Drittsysteme"
+      'Sales Cloud',
+      'Service Cloud',
+      'Marketing Cloud',
+      'Analyse-Tools',
+      'Kommunikations-Apps',
+      'Drittsysteme',
     ],
-    metaTitle: "Salesforce-Integration | NeuroGen Lab - Intelligentes CRM-Management",
-    metaDescription: "Verbessern Sie Ihr CRM mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Kundenbeziehungsmanagement."
+    metaTitle:
+      'Salesforce-Integration | NeuroGen Lab - Intelligentes CRM-Management',
+    metaDescription:
+      'Verbessern Sie Ihr CRM mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Kundenbeziehungsmanagement.',
   },
   es: {
-    title: "Integración de Salesforce",
-    description: "Mejore su gestión de relaciones con clientes con nuestra integración inteligente de Salesforce que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    title: 'Integración de Salesforce',
+    description:
+      'Mejore su gestión de relaciones con clientes con nuestra integración inteligente de Salesforce que proporciona automatización avanzada y perspectivas a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Gestión Inteligente de Leads",
-      "Procesos de Ventas Automatizados",
-      "Análisis de Clientes",
-      "Gestión de Pipeline",
-      "Gestión de Contactos",
-      "Flujos de Trabajo Personalizados",
-      "Seguimiento de Rendimiento"
+      'Gestión Inteligente de Leads',
+      'Procesos de Ventas Automatizados',
+      'Análisis de Clientes',
+      'Gestión de Pipeline',
+      'Gestión de Contactos',
+      'Flujos de Trabajo Personalizados',
+      'Seguimiento de Rendimiento',
     ],
     benefits: [
-      "Mayor Eficiencia en Ventas",
-      "Mejores Perspectivas del Cliente",
-      "Mejor Conversión de Leads",
-      "Decisiones Basadas en Datos",
-      "Colaboración Mejorada del Equipo",
-      "Operaciones Optimizadas",
-      "Pronósticos Precisos"
+      'Mayor Eficiencia en Ventas',
+      'Mejores Perspectivas del Cliente',
+      'Mejor Conversión de Leads',
+      'Decisiones Basadas en Datos',
+      'Colaboración Mejorada del Equipo',
+      'Operaciones Optimizadas',
+      'Pronósticos Precisos',
     ],
     integrations: [
-      "Sales Cloud",
-      "Service Cloud",
-      "Marketing Cloud",
-      "Herramientas de Análisis",
-      "Aplicaciones de Comunicación",
-      "Sistemas de Terceros"
+      'Sales Cloud',
+      'Service Cloud',
+      'Marketing Cloud',
+      'Herramientas de Análisis',
+      'Aplicaciones de Comunicación',
+      'Sistemas de Terceros',
     ],
-    metaTitle: "Integración de Salesforce | NeuroGen Lab - Gestión Inteligente de CRM",
-    metaDescription: "Mejore su CRM con tecnología IA. Automatización inteligente, análisis y características avanzadas para una mejor gestión de relaciones con clientes."
+    metaTitle:
+      'Integración de Salesforce | NeuroGen Lab - Gestión Inteligente de CRM',
+    metaDescription:
+      'Mejore su CRM con tecnología IA. Automatización inteligente, análisis y características avanzadas para una mejor gestión de relaciones con clientes.',
   },
   ru: {
-    title: "Интеграция с Salesforce",
-    description: "Улучшите управление взаимоотношениями с клиентами с помощью нашей интеллектуальной интеграции Salesforce, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    title: 'Интеграция с Salesforce',
+    description:
+      'Улучшите управление взаимоотношениями с клиентами с помощью нашей интеллектуальной интеграции Salesforce, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Умное Управление Лидами",
-      "Автоматизированные Процессы Продаж",
-      "Аналитика Клиентов",
-      "Управление Воронкой Продаж",
-      "Управление Контактами",
-      "Настраиваемые Рабочие Процессы",
-      "Отслеживание Эффективности"
+      'Умное Управление Лидами',
+      'Автоматизированные Процессы Продаж',
+      'Аналитика Клиентов',
+      'Управление Воронкой Продаж',
+      'Управление Контактами',
+      'Настраиваемые Рабочие Процессы',
+      'Отслеживание Эффективности',
     ],
     benefits: [
-      "Повышенная Эффективность Продаж",
-      "Лучшее Понимание Клиентов",
-      "Улучшенная Конверсия Лидов",
-      "Решения на Основе Данных",
-      "Улучшенное Командное Взаимодействие",
-      "Оптимизированные Операции",
-      "Точное Прогнозирование"
+      'Повышенная Эффективность Продаж',
+      'Лучшее Понимание Клиентов',
+      'Улучшенная Конверсия Лидов',
+      'Решения на Основе Данных',
+      'Улучшенное Командное Взаимодействие',
+      'Оптимизированные Операции',
+      'Точное Прогнозирование',
     ],
     integrations: [
-      "Sales Cloud",
-      "Service Cloud",
-      "Marketing Cloud",
-      "Аналитические Инструменты",
-      "Приложения для Коммуникации",
-      "Сторонние Системы"
+      'Sales Cloud',
+      'Service Cloud',
+      'Marketing Cloud',
+      'Аналитические Инструменты',
+      'Приложения для Коммуникации',
+      'Сторонние Системы',
     ],
-    metaTitle: "Интеграция с Salesforce | NeuroGen Lab - Умное Управление CRM",
-    metaDescription: "Улучшите вашу CRM с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего управления взаимоотношениями с клиентами."
+    metaTitle: 'Интеграция с Salesforce | NeuroGen Lab - Умное Управление CRM',
+    metaDescription:
+      'Улучшите вашу CRM с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего управления взаимоотношениями с клиентами.',
   },
   ua: {
-    title: "Інтеграція з Salesforce",
-    description: "Покращіть управління взаємовідносинами з клієнтами за допомогою нашої інтелектуальної інтеграції Salesforce, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    title: 'Інтеграція з Salesforce',
+    description:
+      'Покращіть управління взаємовідносинами з клієнтами за допомогою нашої інтелектуальної інтеграції Salesforce, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Розумне Управління Лідами",
-      "Автоматизовані Процеси Продажів",
-      "Аналітика Клієнтів",
-      "Управління Воронкою Продажів",
-      "Управління Контактами",
-      "Налаштовувані Робочі Процеси",
-      "Відстеження Ефективності"
+      'Розумне Управління Лідами',
+      'Автоматизовані Процеси Продажів',
+      'Аналітика Клієнтів',
+      'Управління Воронкою Продажів',
+      'Управління Контактами',
+      'Налаштовувані Робочі Процеси',
+      'Відстеження Ефективності',
     ],
     benefits: [
-      "Підвищена Ефективність Продажів",
-      "Краще Розуміння Клієнтів",
-      "Покращена Конверсія Лідів",
-      "Рішення на Основі Даних",
-      "Покращена Командна Взаємодія",
-      "Оптимізовані Операції",
-      "Точне Прогнозування"
+      'Підвищена Ефективність Продажів',
+      'Краще Розуміння Клієнтів',
+      'Покращена Конверсія Лідів',
+      'Рішення на Основі Даних',
+      'Покращена Командна Взаємодія',
+      'Оптимізовані Операції',
+      'Точне Прогнозування',
     ],
     integrations: [
-      "Sales Cloud",
-      "Service Cloud",
-      "Marketing Cloud",
-      "Аналітичні Інструменти",
-      "Додатки для Комунікації",
-      "Сторонні Системи"
+      'Sales Cloud',
+      'Service Cloud',
+      'Marketing Cloud',
+      'Аналітичні Інструменти',
+      'Додатки для Комунікації',
+      'Сторонні Системи',
     ],
-    metaTitle: "Інтеграція з Salesforce | NeuroGen Lab - Розумне Управління CRM",
-    metaDescription: "Покращіть вашу CRM за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого управління взаємовідносинами з клієнтами."
-  }
+    metaTitle:
+      'Інтеграція з Salesforce | NeuroGen Lab - Розумне Управління CRM',
+    metaDescription:
+      'Покращіть вашу CRM за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого управління взаємовідносинами з клієнтами.',
+  },
 };
 
 export { salesforceTranslations };
 
 const slackTranslations = {
   en: {
-    title: "Slack Integration",
-    description: "Enhance your team communication with our intelligent Slack integration that provides advanced automation and insights through AI technology.",
+    title: 'Slack Integration',
+    description:
+      'Enhance your team communication with our intelligent Slack integration that provides advanced automation and insights through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Smart Message Management",
-      "Automated Workflows",
-      "Channel Analytics",
-      "Team Collaboration",
-      "Message Organization",
-      "Custom Bot Integration",
-      "Activity Monitoring"
+      'Smart Message Management',
+      'Automated Workflows',
+      'Channel Analytics',
+      'Team Collaboration',
+      'Message Organization',
+      'Custom Bot Integration',
+      'Activity Monitoring',
     ],
     benefits: [
-      "Enhanced Communication",
-      "Improved Productivity",
-      "Better Team Coordination",
-      "Data-Driven Insights",
-      "Streamlined Workflows",
-      "Efficient Information Sharing",
-      "Team Engagement"
+      'Enhanced Communication',
+      'Improved Productivity',
+      'Better Team Coordination',
+      'Data-Driven Insights',
+      'Streamlined Workflows',
+      'Efficient Information Sharing',
+      'Team Engagement',
     ],
     integrations: [
-      "Project Management Tools",
-      "Development Tools",
-      "Cloud Storage",
-      "Calendar Apps",
-      "Communication Tools",
-      "Third-party Services"
+      'Project Management Tools',
+      'Development Tools',
+      'Cloud Storage',
+      'Calendar Apps',
+      'Communication Tools',
+      'Third-party Services',
     ],
-    metaTitle: "Slack Integration | NeuroGen Lab - Smart Team Communication",
-    metaDescription: "Enhance your team communication with AI technology. Smart automation, analytics, and advanced features for better team collaboration."
+    metaTitle: 'Slack Integration | NeuroGen Lab - Smart Team Communication',
+    metaDescription:
+      'Enhance your team communication with AI technology. Smart automation, analytics, and advanced features for better team collaboration.',
   },
   de: {
-    title: "Slack-Integration",
-    description: "Verbessern Sie Ihre Teamkommunikation mit unserer intelligenten Slack-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    title: 'Slack-Integration',
+    description:
+      'Verbessern Sie Ihre Teamkommunikation mit unserer intelligenten Slack-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Intelligente Nachrichtenverwaltung",
-      "Automatisierte Workflows",
-      "Kanal-Analytik",
-      "Team-Zusammenarbeit",
-      "Nachrichtenorganisation",
-      "Individuelle Bot-Integration",
-      "Aktivitätsüberwachung"
+      'Intelligente Nachrichtenverwaltung',
+      'Automatisierte Workflows',
+      'Kanal-Analytik',
+      'Team-Zusammenarbeit',
+      'Nachrichtenorganisation',
+      'Individuelle Bot-Integration',
+      'Aktivitätsüberwachung',
     ],
     benefits: [
-      "Verbesserte Kommunikation",
-      "Gesteigerte Produktivität",
-      "Bessere Team-Koordination",
-      "Datenbasierte Einblicke",
-      "Optimierte Arbeitsabläufe",
-      "Effiziente Informationsfreigabe",
-      "Team-Engagement"
+      'Verbesserte Kommunikation',
+      'Gesteigerte Produktivität',
+      'Bessere Team-Koordination',
+      'Datenbasierte Einblicke',
+      'Optimierte Arbeitsabläufe',
+      'Effiziente Informationsfreigabe',
+      'Team-Engagement',
     ],
     integrations: [
-      "Projektmanagement-Tools",
-      "Entwicklungstools",
-      "Cloud-Speicher",
-      "Kalender-Apps",
-      "Kommunikationstools",
-      "Drittanbieterdienste"
+      'Projektmanagement-Tools',
+      'Entwicklungstools',
+      'Cloud-Speicher',
+      'Kalender-Apps',
+      'Kommunikationstools',
+      'Drittanbieterdienste',
     ],
-    metaTitle: "Slack-Integration | NeuroGen Lab - Intelligente Teamkommunikation",
-    metaDescription: "Verbessern Sie Ihre Teamkommunikation mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für bessere Teamzusammenarbeit."
+    metaTitle:
+      'Slack-Integration | NeuroGen Lab - Intelligente Teamkommunikation',
+    metaDescription:
+      'Verbessern Sie Ihre Teamkommunikation mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für bessere Teamzusammenarbeit.',
   },
   es: {
-    title: "Integración de Slack",
-    description: "Mejore la comunicación de su equipo con nuestra integración inteligente de Slack que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    title: 'Integración de Slack',
+    description:
+      'Mejore la comunicación de su equipo con nuestra integración inteligente de Slack que proporciona automatización avanzada y perspectivas a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Gestión Inteligente de Mensajes",
-      "Flujos de Trabajo Automatizados",
-      "Análisis de Canales",
-      "Colaboración en Equipo",
-      "Organización de Mensajes",
-      "Integración de Bot Personalizado",
-      "Monitoreo de Actividad"
+      'Gestión Inteligente de Mensajes',
+      'Flujos de Trabajo Automatizados',
+      'Análisis de Canales',
+      'Colaboración en Equipo',
+      'Organización de Mensajes',
+      'Integración de Bot Personalizado',
+      'Monitoreo de Actividad',
     ],
     benefits: [
-      "Comunicación Mejorada",
-      "Productividad Mejorada",
-      "Mejor Coordinación del Equipo",
-      "Perspectivas Basadas en Datos",
-      "Flujos de Trabajo Optimizados",
-      "Compartición Eficiente de Información",
-      "Participación del Equipo"
+      'Comunicación Mejorada',
+      'Productividad Mejorada',
+      'Mejor Coordinación del Equipo',
+      'Perspectivas Basadas en Datos',
+      'Flujos de Trabajo Optimizados',
+      'Compartición Eficiente de Información',
+      'Participación del Equipo',
     ],
     integrations: [
-      "Herramientas de Gestión de Proyectos",
-      "Herramientas de Desarrollo",
-      "Almacenamiento en la Nube",
-      "Aplicaciones de Calendario",
-      "Herramientas de Comunicación",
-      "Servicios de Terceros"
+      'Herramientas de Gestión de Proyectos',
+      'Herramientas de Desarrollo',
+      'Almacenamiento en la Nube',
+      'Aplicaciones de Calendario',
+      'Herramientas de Comunicación',
+      'Servicios de Terceros',
     ],
-    metaTitle: "Integración de Slack | NeuroGen Lab - Comunicación Inteligente en Equipo",
-    metaDescription: "Mejore la comunicación de su equipo con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor colaboración en equipo."
+    metaTitle:
+      'Integración de Slack | NeuroGen Lab - Comunicación Inteligente en Equipo',
+    metaDescription:
+      'Mejore la comunicación de su equipo con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor colaboración en equipo.',
   },
   ru: {
-    title: "Интеграция с Slack",
-    description: "Улучшите командную коммуникацию с помощью нашей интеллектуальной интеграции Slack, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    title: 'Интеграция с Slack',
+    description:
+      'Улучшите командную коммуникацию с помощью нашей интеллектуальной интеграции Slack, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Умное Управление Сообщениями",
-      "Автоматизированные Рабочие Процессы",
-      "Аналитика Каналов",
-      "Командное Взаимодействие",
-      "Организация Сообщений",
-      "Интеграция Пользовательских Ботов",
-      "Мониторинг Активности"
+      'Умное Управление Сообщениями',
+      'Автоматизированные Рабочие Процессы',
+      'Аналитика Каналов',
+      'Командное Взаимодействие',
+      'Организация Сообщений',
+      'Интеграция Пользовательских Ботов',
+      'Мониторинг Активности',
     ],
     benefits: [
-      "Улучшенная Коммуникация",
-      "Повышенная Продуктивность",
-      "Лучшая Координация Команды",
-      "Аналитика на Основе Данных",
-      "Оптимизированные Рабочие Процессы",
-      "Эффективный Обмен Информацией",
-      "Вовлеченность Команды"
+      'Улучшенная Коммуникация',
+      'Повышенная Продуктивность',
+      'Лучшая Координация Команды',
+      'Аналитика на Основе Данных',
+      'Оптимизированные Рабочие Процессы',
+      'Эффективный Обмен Информацией',
+      'Вовлеченность Команды',
     ],
     integrations: [
-      "Инструменты Управления Проектами",
-      "Инструменты Разработки",
-      "Облачное Хранилище",
-      "Календарные Приложения",
-      "Инструменты Коммуникации",
-      "Сторонние Сервисы"
+      'Инструменты Управления Проектами',
+      'Инструменты Разработки',
+      'Облачное Хранилище',
+      'Календарные Приложения',
+      'Инструменты Коммуникации',
+      'Сторонние Сервисы',
     ],
-    metaTitle: "Интеграция с Slack | NeuroGen Lab - Умная Командная Коммуникация",
-    metaDescription: "Улучшите командную коммуникацию с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего командного взаимодействия."
+    metaTitle:
+      'Интеграция с Slack | NeuroGen Lab - Умная Командная Коммуникация',
+    metaDescription:
+      'Улучшите командную коммуникацию с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего командного взаимодействия.',
   },
   ua: {
-    title: "Інтеграція з Slack",
-    description: "Покращіть командну комунікацію за допомогою нашої інтелектуальної інтеграції Slack, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    title: 'Інтеграція з Slack',
+    description:
+      'Покращіть командну комунікацію за допомогою нашої інтелектуальної інтеграції Slack, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Розумне Управління Повідомленнями",
-      "Автоматизовані Робочі Процеси",
-      "Аналітика Каналів",
-      "Командна Взаємодія",
-      "Організація Повідомлень",
-      "Інтеграція Користувацьких Ботів",
-      "Моніторинг Активності"
+      'Розумне Управління Повідомленнями',
+      'Автоматизовані Робочі Процеси',
+      'Аналітика Каналів',
+      'Командна Взаємодія',
+      'Організація Повідомлень',
+      'Інтеграція Користувацьких Ботів',
+      'Моніторинг Активності',
     ],
     benefits: [
-      "Покращена Комунікація",
-      "Підвищена Продуктивність",
-      "Краща Координація Команди",
-      "Аналітика на Основі Даних",
-      "Оптимізовані Робочі Процеси",
-      "Ефективний Обмін Інформацією",
-      "Залученість Команди"
+      'Покращена Комунікація',
+      'Підвищена Продуктивність',
+      'Краща Координація Команди',
+      'Аналітика на Основі Даних',
+      'Оптимізовані Робочі Процеси',
+      'Ефективний Обмін Інформацією',
+      'Залученість Команди',
     ],
     integrations: [
-      "Інструменти Управління Проектами",
-      "Інструменти Розробки",
-      "Хмарне Сховище",
-      "Календарні Додатки",
-      "Інструменти Комунікації",
-      "Сторонні Сервіси"
+      'Інструменти Управління Проектами',
+      'Інструменти Розробки',
+      'Хмарне Сховище',
+      'Календарні Додатки',
+      'Інструменти Комунікації',
+      'Сторонні Сервіси',
     ],
-    metaTitle: "Інтеграція з Slack | NeuroGen Lab - Розумна Командна Комунікація",
-    metaDescription: "Покращіть командну комунікацію за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращої командної взаємодії."
-  }
+    metaTitle:
+      'Інтеграція з Slack | NeuroGen Lab - Розумна Командна Комунікація',
+    metaDescription:
+      'Покращіть командну комунікацію за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращої командної взаємодії.',
+  },
 };
 
 export { slackTranslations };
 
 const whatsappTranslations = {
   en: {
-    title: "WhatsApp Integration",
-    description: "Enhance your customer messaging with our intelligent WhatsApp integration that provides advanced automation and insights through AI technology.",
+    title: 'WhatsApp Integration',
+    description:
+      'Enhance your customer messaging with our intelligent WhatsApp integration that provides advanced automation and insights through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Smart Message Management",
-      "Automated Responses",
-      "Chat Analytics",
-      "Customer Engagement",
-      "Message Templates",
-      "Custom Bot Integration",
-      "Activity Monitoring"
+      'Smart Message Management',
+      'Automated Responses',
+      'Chat Analytics',
+      'Customer Engagement',
+      'Message Templates',
+      'Custom Bot Integration',
+      'Activity Monitoring',
     ],
     benefits: [
-      "Improved Customer Communication",
-      "Faster Response Times",
-      "Better Customer Service",
-      "Data-Driven Insights",
-      "Enhanced Engagement",
-      "Efficient Message Handling",
-      "24/7 Availability"
+      'Improved Customer Communication',
+      'Faster Response Times',
+      'Better Customer Service',
+      'Data-Driven Insights',
+      'Enhanced Engagement',
+      'Efficient Message Handling',
+      '24/7 Availability',
     ],
     integrations: [
-      "CRM Systems",
-      "Customer Support Tools",
-      "Analytics Platforms",
-      "Marketing Tools",
-      "Cloud Storage",
-      "Third-party Services"
+      'CRM Systems',
+      'Customer Support Tools',
+      'Analytics Platforms',
+      'Marketing Tools',
+      'Cloud Storage',
+      'Third-party Services',
     ],
-    metaTitle: "WhatsApp Integration | NeuroGen Lab - Smart Customer Messaging",
-    metaDescription: "Enhance your customer messaging with AI technology. Smart automation, analytics, and advanced features for better customer communication."
+    metaTitle: 'WhatsApp Integration | NeuroGen Lab - Smart Customer Messaging',
+    metaDescription:
+      'Enhance your customer messaging with AI technology. Smart automation, analytics, and advanced features for better customer communication.',
   },
   de: {
-    title: "WhatsApp-Integration",
-    description: "Verbessern Sie Ihre Kundenkommunikation mit unserer intelligenten WhatsApp-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    title: 'WhatsApp-Integration',
+    description:
+      'Verbessern Sie Ihre Kundenkommunikation mit unserer intelligenten WhatsApp-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Intelligente Nachrichtenverwaltung",
-      "Automatisierte Antworten",
-      "Chat-Analytik",
-      "Kundenengagement",
-      "Nachrichtenvorlagen",
-      "Individuelle Bot-Integration",
-      "Aktivitätsüberwachung"
+      'Intelligente Nachrichtenverwaltung',
+      'Automatisierte Antworten',
+      'Chat-Analytik',
+      'Kundenengagement',
+      'Nachrichtenvorlagen',
+      'Individuelle Bot-Integration',
+      'Aktivitätsüberwachung',
     ],
     benefits: [
-      "Verbesserte Kundenkommunikation",
-      "Schnellere Antwortzeiten",
-      "Besserer Kundenservice",
-      "Datenbasierte Einblicke",
-      "Gesteigertes Engagement",
-      "Effiziente Nachrichtenverarbeitung",
-      "24/7 Verfügbarkeit"
+      'Verbesserte Kundenkommunikation',
+      'Schnellere Antwortzeiten',
+      'Besserer Kundenservice',
+      'Datenbasierte Einblicke',
+      'Gesteigertes Engagement',
+      'Effiziente Nachrichtenverarbeitung',
+      '24/7 Verfügbarkeit',
     ],
     integrations: [
-      "CRM-Systeme",
-      "Kundenservice-Tools",
-      "Analyse-Plattformen",
-      "Marketing-Tools",
-      "Cloud-Speicher",
-      "Drittanbieterdienste"
+      'CRM-Systeme',
+      'Kundenservice-Tools',
+      'Analyse-Plattformen',
+      'Marketing-Tools',
+      'Cloud-Speicher',
+      'Drittanbieterdienste',
     ],
-    metaTitle: "WhatsApp-Integration | NeuroGen Lab - Intelligente Kundenkommunikation",
-    metaDescription: "Verbessern Sie Ihre Kundenkommunikation mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für bessere Kundenkommunikation."
+    metaTitle:
+      'WhatsApp-Integration | NeuroGen Lab - Intelligente Kundenkommunikation',
+    metaDescription:
+      'Verbessern Sie Ihre Kundenkommunikation mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für bessere Kundenkommunikation.',
   },
   es: {
-    title: "Integración de WhatsApp",
-    description: "Mejore su mensajería con clientes con nuestra integración inteligente de WhatsApp que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    title: 'Integración de WhatsApp',
+    description:
+      'Mejore su mensajería con clientes con nuestra integración inteligente de WhatsApp que proporciona automatización avanzada y perspectivas a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Gestión Inteligente de Mensajes",
-      "Respuestas Automatizadas",
-      "Análisis de Chat",
-      "Participación del Cliente",
-      "Plantillas de Mensajes",
-      "Integración de Bot Personalizado",
-      "Monitoreo de Actividad"
+      'Gestión Inteligente de Mensajes',
+      'Respuestas Automatizadas',
+      'Análisis de Chat',
+      'Participación del Cliente',
+      'Plantillas de Mensajes',
+      'Integración de Bot Personalizado',
+      'Monitoreo de Actividad',
     ],
     benefits: [
-      "Mejor Comunicación con Clientes",
-      "Tiempos de Respuesta más Rápidos",
-      "Mejor Servicio al Cliente",
-      "Perspectivas Basadas en Datos",
-      "Participación Mejorada",
-      "Gestión Eficiente de Mensajes",
-      "Disponibilidad 24/7"
+      'Mejor Comunicación con Clientes',
+      'Tiempos de Respuesta más Rápidos',
+      'Mejor Servicio al Cliente',
+      'Perspectivas Basadas en Datos',
+      'Participación Mejorada',
+      'Gestión Eficiente de Mensajes',
+      'Disponibilidad 24/7',
     ],
     integrations: [
-      "Sistemas CRM",
-      "Herramientas de Soporte al Cliente",
-      "Plataformas de Análisis",
-      "Herramientas de Marketing",
-      "Almacenamiento en la Nube",
-      "Servicios de Terceros"
+      'Sistemas CRM',
+      'Herramientas de Soporte al Cliente',
+      'Plataformas de Análisis',
+      'Herramientas de Marketing',
+      'Almacenamiento en la Nube',
+      'Servicios de Terceros',
     ],
-    metaTitle: "Integración de WhatsApp | NeuroGen Lab - Mensajería Inteligente con Clientes",
-    metaDescription: "Mejore su mensajería con clientes con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor comunicación con clientes."
+    metaTitle:
+      'Integración de WhatsApp | NeuroGen Lab - Mensajería Inteligente con Clientes',
+    metaDescription:
+      'Mejore su mensajería con clientes con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor comunicación con clientes.',
   },
   ru: {
-    title: "Интеграция с WhatsApp",
-    description: "Улучшите обмен сообщениями с клиентами с помощью нашей интеллектуальной интеграции WhatsApp, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    title: 'Интеграция с WhatsApp',
+    description:
+      'Улучшите обмен сообщениями с клиентами с помощью нашей интеллектуальной интеграции WhatsApp, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Умное Управление Сообщениями",
-      "Автоматические Ответы",
-      "Аналитика Чатов",
-      "Вовлечение Клиентов",
-      "Шаблоны Сообщений",
-      "Интеграция Пользовательских Ботов",
-      "Мониторинг Активности"
+      'Умное Управление Сообщениями',
+      'Автоматические Ответы',
+      'Аналитика Чатов',
+      'Вовлечение Клиентов',
+      'Шаблоны Сообщений',
+      'Интеграция Пользовательских Ботов',
+      'Мониторинг Активности',
     ],
     benefits: [
-      "Улучшенная Коммуникация с Клиентами",
-      "Более Быстрые Ответы",
-      "Улучшенное Обслуживание Клиентов",
-      "Аналитика на Основе Данных",
-      "Повышенное Вовлечение",
-      "Эффективная Обработка Сообщений",
-      "Доступность 24/7"
+      'Улучшенная Коммуникация с Клиентами',
+      'Более Быстрые Ответы',
+      'Улучшенное Обслуживание Клиентов',
+      'Аналитика на Основе Данных',
+      'Повышенное Вовлечение',
+      'Эффективная Обработка Сообщений',
+      'Доступность 24/7',
     ],
     integrations: [
-      "CRM Системы",
-      "Инструменты Поддержки Клиентов",
-      "Аналитические Платформы",
-      "Маркетинговые Инструменты",
-      "Облачное Хранилище",
-      "Сторонние Сервисы"
+      'CRM Системы',
+      'Инструменты Поддержки Клиентов',
+      'Аналитические Платформы',
+      'Маркетинговые Инструменты',
+      'Облачное Хранилище',
+      'Сторонние Сервисы',
     ],
-    metaTitle: "Интеграция с WhatsApp | NeuroGen Lab - Умный Обмен Сообщениями с Клиентами",
-    metaDescription: "Улучшите обмен сообщениями с клиентами с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшей коммуникации с клиентами."
+    metaTitle:
+      'Интеграция с WhatsApp | NeuroGen Lab - Умный Обмен Сообщениями с Клиентами',
+    metaDescription:
+      'Улучшите обмен сообщениями с клиентами с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшей коммуникации с клиентами.',
   },
   ua: {
-    title: "Інтеграція з WhatsApp",
-    description: "Покращіть обмін повідомленнями з клієнтами за допомогою нашої інтелектуальної інтеграції WhatsApp, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    title: 'Інтеграція з WhatsApp',
+    description:
+      'Покращіть обмін повідомленнями з клієнтами за допомогою нашої інтелектуальної інтеграції WhatsApp, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Розумне Управління Повідомленнями",
-      "Автоматичні Відповіді",
-      "Аналітика Чатів",
-      "Залучення Клієнтів",
-      "Шаблони Повідомлень",
-      "Інтеграція Користувацьких Ботів",
-      "Моніторинг Активності"
+      'Розумне Управління Повідомленнями',
+      'Автоматичні Відповіді',
+      'Аналітика Чатів',
+      'Залучення Клієнтів',
+      'Шаблони Повідомлень',
+      'Інтеграція Користувацьких Ботів',
+      'Моніторинг Активності',
     ],
     benefits: [
-      "Покращена Комунікація з Клієнтами",
-      "Швидші Відповіді",
-      "Покращене Обслуговування Клієнтів",
-      "Аналітика на Основі Даних",
-      "Підвищене Залучення",
-      "Ефективна Обробка Повідомлень",
-      "Доступність 24/7"
+      'Покращена Комунікація з Клієнтами',
+      'Швидші Відповіді',
+      'Покращене Обслуговування Клієнтів',
+      'Аналітика на Основі Даних',
+      'Підвищене Залучення',
+      'Ефективна Обробка Повідомлень',
+      'Доступність 24/7',
     ],
     integrations: [
-      "CRM Системи",
-      "Інструменти Підтримки Клієнтів",
-      "Аналітичні Платформи",
-      "Маркетингові Інструменти",
-      "Хмарне Сховище",
-      "Сторонні Сервіси"
+      'CRM Системи',
+      'Інструменти Підтримки Клієнтів',
+      'Аналітичні Платформи',
+      'Маркетингові Інструменти',
+      'Хмарне Сховище',
+      'Сторонні Сервіси',
     ],
-    metaTitle: "Інтеграція з WhatsApp | NeuroGen Lab - Розумний Обмін Повідомленнями з Клієнтами",
-    metaDescription: "Покращіть обмін повідомленнями з клієнтами за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращої комунікації з клієнтами."
-  }
+    metaTitle:
+      'Інтеграція з WhatsApp | NeuroGen Lab - Розумний Обмін Повідомленнями з Клієнтами',
+    metaDescription:
+      'Покращіть обмін повідомленнями з клієнтами за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращої комунікації з клієнтами.',
+  },
 };
 
 export { whatsappTranslations };
 
 const zapierTranslations = {
   en: {
-    title: "Zapier Integration",
-    description: "Enhance your workflow automation with our intelligent Zapier integration that provides advanced automation and insights through AI technology.",
+    title: 'Zapier Integration',
+    description:
+      'Enhance your workflow automation with our intelligent Zapier integration that provides advanced automation and insights through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Smart Workflow Automation",
-      "Custom Zap Creation",
-      "Process Analytics",
-      "Task Management",
-      "Data Synchronization",
-      "Trigger Management",
-      "Activity Monitoring"
+      'Smart Workflow Automation',
+      'Custom Zap Creation',
+      'Process Analytics',
+      'Task Management',
+      'Data Synchronization',
+      'Trigger Management',
+      'Activity Monitoring',
     ],
     benefits: [
-      "Improved Productivity",
-      "Time Savings",
-      "Process Optimization",
-      "Data-Driven Insights",
-      "Enhanced Efficiency",
-      "Seamless Integration",
-      "Automated Workflows"
+      'Improved Productivity',
+      'Time Savings',
+      'Process Optimization',
+      'Data-Driven Insights',
+      'Enhanced Efficiency',
+      'Seamless Integration',
+      'Automated Workflows',
     ],
     integrations: [
-      "CRM Systems",
-      "Marketing Tools",
-      "Communication Apps",
-      "Project Management",
-      "Cloud Storage",
-      "Third-party Services"
+      'CRM Systems',
+      'Marketing Tools',
+      'Communication Apps',
+      'Project Management',
+      'Cloud Storage',
+      'Third-party Services',
     ],
-    metaTitle: "Zapier Integration | NeuroGen Lab - Smart Workflow Automation",
-    metaDescription: "Enhance your workflow automation with AI technology. Smart automation, analytics, and advanced features for better process management."
+    metaTitle: 'Zapier Integration | NeuroGen Lab - Smart Workflow Automation',
+    metaDescription:
+      'Enhance your workflow automation with AI technology. Smart automation, analytics, and advanced features for better process management.',
   },
   de: {
-    title: "Zapier-Integration",
-    description: "Verbessern Sie Ihre Workflow-Automatisierung mit unserer intelligenten Zapier-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.",
+    title: 'Zapier-Integration',
+    description:
+      'Verbessern Sie Ihre Workflow-Automatisierung mit unserer intelligenten Zapier-Integration, die durch KI-Technologie erweiterte Automatisierung und Einblicke bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Intelligente Workflow-Automatisierung",
-      "Individuelle Zap-Erstellung",
-      "Prozessanalyse",
-      "Aufgabenverwaltung",
-      "Datensynchronisation",
-      "Trigger-Management",
-      "Aktivitätsüberwachung"
+      'Intelligente Workflow-Automatisierung',
+      'Individuelle Zap-Erstellung',
+      'Prozessanalyse',
+      'Aufgabenverwaltung',
+      'Datensynchronisation',
+      'Trigger-Management',
+      'Aktivitätsüberwachung',
     ],
     benefits: [
-      "Verbesserte Produktivität",
-      "Zeitersparnis",
-      "Prozessoptimierung",
-      "Datenbasierte Einblicke",
-      "Gesteigerte Effizienz",
-      "Nahtlose Integration",
-      "Automatisierte Workflows"
+      'Verbesserte Produktivität',
+      'Zeitersparnis',
+      'Prozessoptimierung',
+      'Datenbasierte Einblicke',
+      'Gesteigerte Effizienz',
+      'Nahtlose Integration',
+      'Automatisierte Workflows',
     ],
     integrations: [
-      "CRM-Systeme",
-      "Marketing-Tools",
-      "Kommunikations-Apps",
-      "Projektmanagement",
-      "Cloud-Speicher",
-      "Drittanbieterdienste"
+      'CRM-Systeme',
+      'Marketing-Tools',
+      'Kommunikations-Apps',
+      'Projektmanagement',
+      'Cloud-Speicher',
+      'Drittanbieterdienste',
     ],
-    metaTitle: "Zapier-Integration | NeuroGen Lab - Intelligente Workflow-Automatisierung",
-    metaDescription: "Verbessern Sie Ihre Workflow-Automatisierung mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Prozessmanagement."
+    metaTitle:
+      'Zapier-Integration | NeuroGen Lab - Intelligente Workflow-Automatisierung',
+    metaDescription:
+      'Verbessern Sie Ihre Workflow-Automatisierung mit KI-Technologie. Intelligente Automatisierung, Analytik und erweiterte Funktionen für besseres Prozessmanagement.',
   },
   es: {
-    title: "Integración de Zapier",
-    description: "Mejore su automatización de flujos de trabajo con nuestra integración inteligente de Zapier que proporciona automatización avanzada y perspectivas a través de tecnología IA.",
+    title: 'Integración de Zapier',
+    description:
+      'Mejore su automatización de flujos de trabajo con nuestra integración inteligente de Zapier que proporciona automatización avanzada y perspectivas a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Automatización Inteligente de Flujos de Trabajo",
-      "Creación de Zaps Personalizados",
-      "Análisis de Procesos",
-      "Gestión de Tareas",
-      "Sincronización de Datos",
-      "Gestión de Disparadores",
-      "Monitoreo de Actividad"
+      'Automatización Inteligente de Flujos de Trabajo',
+      'Creación de Zaps Personalizados',
+      'Análisis de Procesos',
+      'Gestión de Tareas',
+      'Sincronización de Datos',
+      'Gestión de Disparadores',
+      'Monitoreo de Actividad',
     ],
     benefits: [
-      "Productividad Mejorada",
-      "Ahorro de Tiempo",
-      "Optimización de Procesos",
-      "Perspectivas Basadas en Datos",
-      "Eficiencia Mejorada",
-      "Integración Perfecta",
-      "Flujos de Trabajo Automatizados"
+      'Productividad Mejorada',
+      'Ahorro de Tiempo',
+      'Optimización de Procesos',
+      'Perspectivas Basadas en Datos',
+      'Eficiencia Mejorada',
+      'Integración Perfecta',
+      'Flujos de Trabajo Automatizados',
     ],
     integrations: [
-      "Sistemas CRM",
-      "Herramientas de Marketing",
-      "Aplicaciones de Comunicación",
-      "Gestión de Proyectos",
-      "Almacenamiento en la Nube",
-      "Servicios de Terceros"
+      'Sistemas CRM',
+      'Herramientas de Marketing',
+      'Aplicaciones de Comunicación',
+      'Gestión de Proyectos',
+      'Almacenamiento en la Nube',
+      'Servicios de Terceros',
     ],
-    metaTitle: "Integración de Zapier | NeuroGen Lab - Automatización Inteligente de Flujos de Trabajo",
-    metaDescription: "Mejore su automatización de flujos de trabajo con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor gestión de procesos."
+    metaTitle:
+      'Integración de Zapier | NeuroGen Lab - Automatización Inteligente de Flujos de Trabajo',
+    metaDescription:
+      'Mejore su automatización de flujos de trabajo con tecnología IA. Automatización inteligente, análisis y características avanzadas para mejor gestión de procesos.',
   },
   ru: {
-    title: "Интеграция с Zapier",
-    description: "Улучшите автоматизацию рабочих процессов с помощью нашей интеллектуальной интеграции Zapier, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.",
+    title: 'Интеграция с Zapier',
+    description:
+      'Улучшите автоматизацию рабочих процессов с помощью нашей интеллектуальной интеграции Zapier, которая обеспечивает расширенную автоматизацию и аналитику через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Умная Автоматизация Рабочих Процессов",
-      "Создание Пользовательских Zap",
-      "Аналитика Процессов",
-      "Управление Задачами",
-      "Синхронизация Данных",
-      "Управление Триггерами",
-      "Мониторинг Активности"
+      'Умная Автоматизация Рабочих Процессов',
+      'Создание Пользовательских Zap',
+      'Аналитика Процессов',
+      'Управление Задачами',
+      'Синхронизация Данных',
+      'Управление Триггерами',
+      'Мониторинг Активности',
     ],
     benefits: [
-      "Повышенная Продуктивность",
-      "Экономия Времени",
-      "Оптимизация Процессов",
-      "Аналитика на Основе Данных",
-      "Повышенная Эффективность",
-      "Безшовная Интеграция",
-      "Автоматизированные Рабочие Процессы"
+      'Повышенная Продуктивность',
+      'Экономия Времени',
+      'Оптимизация Процессов',
+      'Аналитика на Основе Данных',
+      'Повышенная Эффективность',
+      'Безшовная Интеграция',
+      'Автоматизированные Рабочие Процессы',
     ],
     integrations: [
-      "CRM Системы",
-      "Маркетинговые Инструменты",
-      "Приложения для Коммуникации",
-      "Управление Проектами",
-      "Облачное Хранилище",
-      "Сторонние Сервисы"
+      'CRM Системы',
+      'Маркетинговые Инструменты',
+      'Приложения для Коммуникации',
+      'Управление Проектами',
+      'Облачное Хранилище',
+      'Сторонние Сервисы',
     ],
-    metaTitle: "Интеграция с Zapier | NeuroGen Lab - Умная Автоматизация Рабочих Процессов",
-    metaDescription: "Улучшите автоматизацию рабочих процессов с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего управления процессами."
+    metaTitle:
+      'Интеграция с Zapier | NeuroGen Lab - Умная Автоматизация Рабочих Процессов',
+    metaDescription:
+      'Улучшите автоматизацию рабочих процессов с помощью технологии ИИ. Умная автоматизация, аналитика и расширенные функции для лучшего управления процессами.',
   },
   ua: {
-    title: "Інтеграція з Zapier",
-    description: "Покращіть автоматизацію робочих процесів за допомогою нашої інтелектуальної інтеграції Zapier, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.",
+    title: 'Інтеграція з Zapier',
+    description:
+      'Покращіть автоматизацію робочих процесів за допомогою нашої інтелектуальної інтеграції Zapier, яка забезпечує розширену автоматизацію та аналітику через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Розумна Автоматизація Робочих Процесів",
-      "Створення Користувацьких Zap",
-      "Аналітика Процесів",
-      "Управління Завданнями",
-      "Синхронізація Даних",
-      "Управління Тригерами",
-      "Моніторинг Активності"
+      'Розумна Автоматизація Робочих Процесів',
+      'Створення Користувацьких Zap',
+      'Аналітика Процесів',
+      'Управління Завданнями',
+      'Синхронізація Даних',
+      'Управління Тригерами',
+      'Моніторинг Активності',
     ],
     benefits: [
-      "Підвищена Продуктивність",
-      "Економія Часу",
-      "Оптимізація Процесів",
-      "Аналітика на Основі Даних",
-      "Підвищена Ефективність",
-      "Безшовна Інтеграція",
-      "Автоматизовані Робочі Процеси"
+      'Підвищена Продуктивність',
+      'Економія Часу',
+      'Оптимізація Процесів',
+      'Аналітика на Основі Даних',
+      'Підвищена Ефективність',
+      'Безшовна Інтеграція',
+      'Автоматизовані Робочі Процеси',
     ],
     integrations: [
-      "CRM Системи",
-      "Маркетингові Інструменти",
-      "Додатки для Комунікації",
-      "Управління Проектами",
-      "Хмарне Сховище",
-      "Сторонні Сервіси"
+      'CRM Системи',
+      'Маркетингові Інструменти',
+      'Додатки для Комунікації',
+      'Управління Проектами',
+      'Хмарне Сховище',
+      'Сторонні Сервіси',
     ],
-    metaTitle: "Інтеграція з Zapier | NeuroGen Lab - Розумна Автоматизація Робочих Процесів",
-    metaDescription: "Покращіть автоматизацію робочих процесів за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого управління процесами."
-  }
+    metaTitle:
+      'Інтеграція з Zapier | NeuroGen Lab - Розумна Автоматизація Робочих Процесів',
+    metaDescription:
+      'Покращіть автоматизацію робочих процесів за допомогою технології ШІ. Розумна автоматизація, аналітика та розширені функції для кращого управління процесами.',
+  },
 };
 
 export { zapierTranslations };
 
 const tablesTranslations = {
   en: {
-    title: "Smart Tables",
-    description: "Transform your data management with our intelligent table system that provides advanced analytics and insights through AI technology.",
+    title: 'Smart Tables',
+    description:
+      'Transform your data management with our intelligent table system that provides advanced analytics and insights through AI technology.',
     sectionTitles: {
-      features: "Features",
-      benefits: "Benefits",
-      integrations: "Integrations"
+      features: 'Features',
+      benefits: 'Benefits',
+      integrations: 'Integrations',
     },
     features: [
-      "Smart Data Organization",
-      "Automated Analysis",
-      "Data Visualization",
-      "Column Management",
-      "Data Filtering",
-      "Custom Views",
-      "Real-time Updates"
+      'Smart Data Organization',
+      'Automated Analysis',
+      'Data Visualization',
+      'Column Management',
+      'Data Filtering',
+      'Custom Views',
+      'Real-time Updates',
     ],
     benefits: [
-      "Improved Data Management",
-      "Better Data Insights",
-      "Enhanced Organization",
-      "Data-Driven Decisions",
-      "Increased Efficiency",
-      "Seamless Collaboration",
-      "Time Savings"
+      'Improved Data Management',
+      'Better Data Insights',
+      'Enhanced Organization',
+      'Data-Driven Decisions',
+      'Increased Efficiency',
+      'Seamless Collaboration',
+      'Time Savings',
     ],
     integrations: [
-      "Spreadsheet Tools",
-      "Data Analytics",
-      "Visualization Tools",
-      "Project Management",
-      "Cloud Storage",
-      "Third-party Services"
+      'Spreadsheet Tools',
+      'Data Analytics',
+      'Visualization Tools',
+      'Project Management',
+      'Cloud Storage',
+      'Third-party Services',
     ],
-    metaTitle: "Smart Tables | NeuroGen Lab - Intelligent Data Management",
-    metaDescription: "Transform your data management with AI technology. Smart organization, analytics, and advanced features for better data handling."
+    metaTitle: 'Smart Tables | NeuroGen Lab - Intelligent Data Management',
+    metaDescription:
+      'Transform your data management with AI technology. Smart organization, analytics, and advanced features for better data handling.',
   },
   de: {
-    title: "Intelligente Tabellen",
-    description: "Transformieren Sie Ihr Datenmanagement mit unserem intelligenten Tabellensystem, das durch KI-Technologie erweiterte Analysen und Einblicke bietet.",
+    title: 'Intelligente Tabellen',
+    description:
+      'Transformieren Sie Ihr Datenmanagement mit unserem intelligenten Tabellensystem, das durch KI-Technologie erweiterte Analysen und Einblicke bietet.',
     sectionTitles: {
-      features: "Funktionen",
-      benefits: "Vorteile",
-      integrations: "Integrationen"
+      features: 'Funktionen',
+      benefits: 'Vorteile',
+      integrations: 'Integrationen',
     },
     features: [
-      "Intelligente Datenorganisation",
-      "Automatisierte Analyse",
-      "Datenvisualisierung",
-      "Spaltenverwaltung",
-      "Datenfilterung",
-      "Individuelle Ansichten",
-      "Echtzeit-Updates"
+      'Intelligente Datenorganisation',
+      'Automatisierte Analyse',
+      'Datenvisualisierung',
+      'Spaltenverwaltung',
+      'Datenfilterung',
+      'Individuelle Ansichten',
+      'Echtzeit-Updates',
     ],
     benefits: [
-      "Verbessertes Datenmanagement",
-      "Bessere Dateneinblicke",
-      "Verbesserte Organisation",
-      "Datenbasierte Entscheidungen",
-      "Gesteigerte Effizienz",
-      "Nahtlose Zusammenarbeit",
-      "Zeitersparnis"
+      'Verbessertes Datenmanagement',
+      'Bessere Dateneinblicke',
+      'Verbesserte Organisation',
+      'Datenbasierte Entscheidungen',
+      'Gesteigerte Effizienz',
+      'Nahtlose Zusammenarbeit',
+      'Zeitersparnis',
     ],
     integrations: [
-      "Tabellenkalkulationstools",
-      "Datenanalyse",
-      "Visualisierungstools",
-      "Projektmanagement",
-      "Cloud-Speicher",
-      "Drittanbieterdienste"
+      'Tabellenkalkulationstools',
+      'Datenanalyse',
+      'Visualisierungstools',
+      'Projektmanagement',
+      'Cloud-Speicher',
+      'Drittanbieterdienste',
     ],
-    metaTitle: "Intelligente Tabellen | NeuroGen Lab - Intelligentes Datenmanagement",
-    metaDescription: "Transformieren Sie Ihr Datenmanagement mit KI-Technologie. Intelligente Organisation, Analytik und erweiterte Funktionen für bessere Datenverarbeitung."
+    metaTitle:
+      'Intelligente Tabellen | NeuroGen Lab - Intelligentes Datenmanagement',
+    metaDescription:
+      'Transformieren Sie Ihr Datenmanagement mit KI-Technologie. Intelligente Organisation, Analytik und erweiterte Funktionen für bessere Datenverarbeitung.',
   },
   es: {
-    title: "Tablas Inteligentes",
-    description: "Transforme su gestión de datos con nuestro sistema de tablas inteligentes que proporciona análisis avanzados y perspectivas a través de tecnología IA.",
+    title: 'Tablas Inteligentes',
+    description:
+      'Transforme su gestión de datos con nuestro sistema de tablas inteligentes que proporciona análisis avanzados y perspectivas a través de tecnología IA.',
     sectionTitles: {
-      features: "Características",
-      benefits: "Beneficios",
-      integrations: "Integraciones"
+      features: 'Características',
+      benefits: 'Beneficios',
+      integrations: 'Integraciones',
     },
     features: [
-      "Organización Inteligente de Datos",
-      "Análisis Automatizado",
-      "Visualización de Datos",
-      "Gestión de Columnas",
-      "Filtrado de Datos",
-      "Vistas Personalizadas",
-      "Actualizaciones en Tiempo Real"
+      'Organización Inteligente de Datos',
+      'Análisis Automatizado',
+      'Visualización de Datos',
+      'Gestión de Columnas',
+      'Filtrado de Datos',
+      'Vistas Personalizadas',
+      'Actualizaciones en Tiempo Real',
     ],
     benefits: [
-      "Mejor Gestión de Datos",
-      "Mejores Perspectivas de Datos",
-      "Organización Mejorada",
-      "Decisiones Basadas en Datos",
-      "Mayor Eficiencia",
-      "Colaboración Perfecta",
-      "Ahorro de Tiempo"
+      'Mejor Gestión de Datos',
+      'Mejores Perspectivas de Datos',
+      'Organización Mejorada',
+      'Decisiones Basadas en Datos',
+      'Mayor Eficiencia',
+      'Colaboración Perfecta',
+      'Ahorro de Tiempo',
     ],
     integrations: [
-      "Herramientas de Hojas de Cálculo",
-      "Análisis de Datos",
-      "Herramientas de Visualización",
-      "Gestión de Proyectos",
-      "Almacenamiento en la Nube",
-      "Servicios de Terceros"
+      'Herramientas de Hojas de Cálculo',
+      'Análisis de Datos',
+      'Herramientas de Visualización',
+      'Gestión de Proyectos',
+      'Almacenamiento en la Nube',
+      'Servicios de Terceros',
     ],
-    metaTitle: "Tablas Inteligentes | NeuroGen Lab - Gestión Inteligente de Datos",
-    metaDescription: "Transforme su gestión de datos con tecnología IA. Organización inteligente, análisis y características avanzadas para mejor manejo de datos."
+    metaTitle:
+      'Tablas Inteligentes | NeuroGen Lab - Gestión Inteligente de Datos',
+    metaDescription:
+      'Transforme su gestión de datos con tecnología IA. Organización inteligente, análisis y características avanzadas para mejor manejo de datos.',
   },
   ru: {
-    title: "Умные Таблицы",
-    description: "Трансформируйте управление данными с помощью нашей интеллектуальной системы таблиц, которая обеспечивает расширенную аналитику и понимание через технологию ИИ.",
+    title: 'Умные Таблицы',
+    description:
+      'Трансформируйте управление данными с помощью нашей интеллектуальной системы таблиц, которая обеспечивает расширенную аналитику и понимание через технологию ИИ.',
     sectionTitles: {
-      features: "Функции",
-      benefits: "Преимущества",
-      integrations: "Интеграции"
+      features: 'Функции',
+      benefits: 'Преимущества',
+      integrations: 'Интеграции',
     },
     features: [
-      "Умная Организация Данных",
-      "Автоматизированный Анализ",
-      "Визуализация Данных",
-      "Управление Столбцами",
-      "Фильтрация Данных",
-      "Пользовательские Представления",
-      "Обновления в Реальном Времени"
+      'Умная Организация Данных',
+      'Автоматизированный Анализ',
+      'Визуализация Данных',
+      'Управление Столбцами',
+      'Фильтрация Данных',
+      'Пользовательские Представления',
+      'Обновления в Реальном Времени',
     ],
     benefits: [
-      "Улучшенное Управление Данными",
-      "Лучшее Понимание Данных",
-      "Улучшенная Организация",
-      "Решения на Основе Данных",
-      "Повышенная Эффективность",
-      "Безшовное Сотрудничество",
-      "Экономия Времени"
+      'Улучшенное Управление Данными',
+      'Лучшее Понимание Данных',
+      'Улучшенная Организация',
+      'Решения на Основе Данных',
+      'Повышенная Эффективность',
+      'Безшовное Сотрудничество',
+      'Экономия Времени',
     ],
     integrations: [
-      "Инструменты Электронных Таблиц",
-      "Анализ Данных",
-      "Инструменты Визуализации",
-      "Управление Проектами",
-      "Облачное Хранилище",
-      "Сторонние Сервисы"
+      'Инструменты Электронных Таблиц',
+      'Анализ Данных',
+      'Инструменты Визуализации',
+      'Управление Проектами',
+      'Облачное Хранилище',
+      'Сторонние Сервисы',
     ],
-    metaTitle: "Умные Таблицы | NeuroGen Lab - Интеллектуальное Управление Данными",
-    metaDescription: "Трансформируйте управление данными с помощью технологии ИИ. Умная организация, аналитика и расширенные функции для лучшей работы с данными."
+    metaTitle:
+      'Умные Таблицы | NeuroGen Lab - Интеллектуальное Управление Данными',
+    metaDescription:
+      'Трансформируйте управление данными с помощью технологии ИИ. Умная организация, аналитика и расширенные функции для лучшей работы с данными.',
   },
   ua: {
-    title: "Розумні Таблиці",
-    description: "Трансформуйте управління даними за допомогою нашої інтелектуальної системи таблиць, яка забезпечує розширену аналітику та розуміння через технологію ШІ.",
+    title: 'Розумні Таблиці',
+    description:
+      'Трансформуйте управління даними за допомогою нашої інтелектуальної системи таблиць, яка забезпечує розширену аналітику та розуміння через технологію ШІ.',
     sectionTitles: {
-      features: "Функції",
-      benefits: "Переваги",
-      integrations: "Інтеграції"
+      features: 'Функції',
+      benefits: 'Переваги',
+      integrations: 'Інтеграції',
     },
     features: [
-      "Розумна Організація Даних",
-      "Автоматизований Аналіз",
-      "Візуалізація Даних",
-      "Управління Стовпцями",
-      "Фільтрація Даних",
-      "Користувацькі Представлення",
-      "Оновлення в Реальному Часі"
+      'Розумна Організація Даних',
+      'Автоматизований Аналіз',
+      'Візуалізація Даних',
+      'Управління Стовпцями',
+      'Фільтрація Даних',
+      'Користувацькі Представлення',
+      'Оновлення в Реальному Часі',
     ],
     benefits: [
-      "Покращене Управління Даними",
-      "Краще Розуміння Даних",
-      "Покращена Організація",
-      "Рішення на Основі Даних",
-      "Підвищена Ефективність",
-      "Безшовна Співпраця",
-      "Економія Часу"
+      'Покращене Управління Даними',
+      'Краще Розуміння Даних',
+      'Покращена Організація',
+      'Рішення на Основі Даних',
+      'Підвищена Ефективність',
+      'Безшовна Співпраця',
+      'Економія Часу',
     ],
     integrations: [
-      "Інструменти Електронних Таблиць",
-      "Аналіз Даних",
-      "Інструменти Візуалізації",
-      "Управління Проектами",
-      "Хмарне Сховище",
-      "Сторонні Сервіси"
+      'Інструменти Електронних Таблиць',
+      'Аналіз Даних',
+      'Інструменти Візуалізації',
+      'Управління Проектами',
+      'Хмарне Сховище',
+      'Сторонні Сервіси',
     ],
-    metaTitle: "Розумні Таблиці | NeuroGen Lab - Інтелектуальне Управління Даними",
-    metaDescription: "Трансформуйте управління даними за допомогою технології ШІ. Розумна організація, аналітика та розширені функції для кращої роботи з даними."
-  }
+    metaTitle:
+      'Розумні Таблиці | NeuroGen Lab - Інтелектуальне Управління Даними',
+    metaDescription:
+      'Трансформуйте управління даними за допомогою технології ШІ. Розумна організація, аналітика та розширені функції для кращої роботи з даними.',
+  },
 };
 
 export { tablesTranslations };
 
 export const notFoundTranslations = {
   en: {
-    title: "404 - Page Not Found",
-    description: "Sorry, we couldn't find the page you're looking for. The page might have been removed, had its name changed, or is temporarily unavailable.",
-    backToHome: "Back to Home"
+    title: '404 - Page Not Found',
+    description:
+      "Sorry, we couldn't find the page you're looking for. The page might have been removed, had its name changed, or is temporarily unavailable.",
+    backToHome: 'Back to Home',
   },
   de: {
-    title: "404 - Seite nicht gefunden",
-    description: "Entschuldigung, wir konnten die gesuchte Seite nicht finden. Die Seite wurde möglicherweise entfernt, umbenannt oder ist vorübergehend nicht verfügbar.",
-    backToHome: "Zurück zur Startseite"
+    title: '404 - Seite nicht gefunden',
+    description:
+      'Entschuldigung, wir konnten die gesuchte Seite nicht finden. Die Seite wurde möglicherweise entfernt, umbenannt oder ist vorübergehend nicht verfügbar.',
+    backToHome: 'Zurück zur Startseite',
   },
   es: {
-    title: "404 - Página no encontrada",
-    description: "Lo sentimos, no pudimos encontrar la página que estás buscando. Es posible que la página haya sido eliminada, que se haya cambiado su nombre o que no esté disponible temporalmente.",
-    backToHome: "Volver al inicio"
+    title: '404 - Página no encontrada',
+    description:
+      'Lo sentimos, no pudimos encontrar la página que estás buscando. Es posible que la página haya sido eliminada, que se haya cambiado su nombre o que no esté disponible temporalmente.',
+    backToHome: 'Volver al inicio',
   },
   ru: {
-    title: "404 - Страница не найдена",
-    description: "Извините, мы не смогли найти страницу, которую вы ищете. Возможно, страница была удалена, переименована или временно недоступна.",
-    backToHome: "Вернуться на главную"
+    title: '404 - Страница не найдена',
+    description:
+      'Извините, мы не смогли найти страницу, которую вы ищете. Возможно, страница была удалена, переименована или временно недоступна.',
+    backToHome: 'Вернуться на главную',
   },
   uk: {
-    title: "404 - Сторінку не знайдено",
-    description: "Вибачте, ми не змогли знайти сторінку, яку ви шукаєте. Можливо, сторінку було видалено, перейменовано або вона тимчасово недоступна.",
-    backToHome: "Повернутися на головну"
-  }
+    title: '404 - Сторінку не знайдено',
+    description:
+      'Вибачте, ми не змогли знайти сторінку, яку ви шукаєте. Можливо, сторінку було видалено, перейменовано або вона тимчасово недоступна.',
+    backToHome: 'Повернутися на головну',
+  },
 } as const;
-

@@ -231,7 +231,7 @@ export const aiChatBotTranslations = {
       topReasonsTitle: "5 главных причин, почему вашему бизнесу нужен ИИ-чатбот",
       reasonList: [
         {
-          title: "1. Как ИИ-чатботы меняют клиентский сервис",
+          title: "Как ИИ-чатботы меняют клиентский сервис",
           content: {
             text: "В современном бизнесе быстрая и круглосуточная поддержка клиентов стала не просто конкурентным преимуществом, а стандартом качества. Компании, которые хотят удерживать клиентов и увеличивать продажи, переходят на автоматизированную поддержку 24/7 с помощью ИИ-чатботов.",
             list: [
@@ -243,18 +243,17 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "2. Снижение операционных расходов",
+          title: "Снижение операционных расходов",
           content: {
-            text: "Внедрение ИИ-чатбота значительно снижает расходы на ручную поддержку:",
             list: [
-              "Автоматизирует рутинные задачи, освобождая время сотрудников",
-              "Снижает нагрузку на колл-центры и команды поддержки",
-              "Скорочует затраты на найм, обучение и содержание персонала поддержки"
+              "",
+              "",
+              ""
             ]
           }
         },
         {
-          title: "3. Увеличение продаж и конверсий",
+          title: "Увеличение продаж и конверсий",
           content: {
             text: "ИИ-чатботы не только отвечают на вопросы — они активно способствуют продажам:",
             list: [
@@ -265,7 +264,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "4. Мгновенная масштабируемость для высоких нагрузок",
+          title: "Мгновенная масштабируемость для высоких нагрузок",
           content: {
             text: "ИИ-чатбот может обрабатывать тысячи запросов одновременно:",
             list: [
@@ -276,7 +275,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "5. Улучшенный клиентский опыт",
+          title: "Улучшенный клиентский опыт",
           content: {
             text: "Повышение общей удовлетворенности клиентов с персонализированным взаимодействием:",
             list: [
@@ -385,7 +384,7 @@ export const aiChatBotTranslations = {
       topReasonsTitle: "5 головних причин, чому вашому бізнесу потрібен ШІ-чатбот",
       reasonList: [
         {
-          title: "1. Как ИИ-чатботы меняют клиентский сервис",
+          title: "Как ИИ-чатботы меняют клиентский сервис",
           content: {
             text: "В современном бизнесе быстрая и круглосуточная поддержка клиентов стала не просто конкурентным преимуществом, а стандартом качества. Компании, которые хотят удерживать клиентов и увеличивать продажи, переходят на автоматизированную поддержку 24/7 с помощью ИИ-чатботов.",
             list: [
@@ -397,7 +396,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "2. Зниження операційних витрат",
+          title: "Зниження операційних витрат",
           content: {
             text: "Впровадження ШІ-чатбота значно знижує витрати на ручну підтримку:",
             list: [
@@ -408,7 +407,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "3. Збільшення продажів та конверсій",
+          title: "Збільшення продажів та конверсій",
           content: {
             text: "ШІ-чатботи не тільки відповідають на питання — вони активно сприяють продажам:",
             list: [
@@ -419,7 +418,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "4. Миттєва масштабованість для високих навантажень",
+          title: "Миттєва масштабованість для високих навантажень",
           content: {
             text: "ШІ-чатбот може обробляти тисячі запитів одночасно:",
             list: [
@@ -430,7 +429,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "5. Покращений клієнтський досвід",
+          title: "Покращений клієнтський досвід",
           content: {
             text: "Підвищення загальної задоволеності клієнтів з персоналізованою взаємодією:",
             list: [
@@ -539,7 +538,7 @@ export const aiChatBotTranslations = {
       topReasonsTitle: "5 Top-Gründe, warum Ihr Unternehmen einen KI-Chatbot benötigt",
       reasonList: [
         {
-          title: "1. How AI Chat Bots Change Customer Service",
+          title: "How AI Chat Bots Change Customer Service",
           content: {
             text: "In today's business world, fast and 24/7 customer support has become not just a competitive advantage but a standard of quality. Companies that want to retain customers and increase sales are moving to automated 24/7 support using AI Chat Bots.",
             list: [
@@ -551,7 +550,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "2. Reduzierung der Betriebskosten",
+          title: "Reduzierung der Betriebskosten",
           content: {
             text: "Die Implementierung eines KI-Chatbots senkt die Kosten für manuelle Unterstützung erheblich:",
             list: [
@@ -562,7 +561,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "3. Steigerung von Verkäufen und Konversionen",
+          title: "Steigerung von Verkäufen und Konversionen",
           content: {
             text: "KI-Chatbots tun mehr als nur Fragen beantworten — sie treiben aktiv Verkäufe an:",
             list: [
@@ -573,7 +572,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "4. Sofortige Skalierbarkeit für hohe Volumen",
+          title: "Sofortige Skalierbarkeit für hohe Volumen",
           content: {
             text: "Ein KI-Chatbot kann tausende Anfragen gleichzeitig verarbeiten:",
             list: [
@@ -584,7 +583,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "5. Verbessertes Kundenerlebnis",
+          title: "Verbessertes Kundenerlebnis",
           content: {
             text: "Verbesserung der Gesamtzufriedenheit der Kunden durch personalisierte Interaktionen:",
             list: [
@@ -693,7 +692,7 @@ export const aiChatBotTranslations = {
       topReasonsTitle: "5 razones principales por las que su negocio necesita un Chatbot de IA",
       reasonList: [
         {
-          title: "1. How AI Chat Bots Change Customer Service",
+          title: "How AI Chat Bots Change Customer Service",
           content: {
             text: "In today's business world, fast and 24/7 customer support has become not just a competitive advantage but a standard of quality. Companies that want to retain customers and increase sales are moving to automated 24/7 support using AI Chat Bots.",
             list: [
@@ -705,7 +704,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "2. Reducción de costos operativos",
+          title: "Reducción de costos operativos",
           content: {
             text: "La implementación de un Chatbot de IA reduce significativamente los gastos relacionados con el soporte manual:",
             list: [
@@ -716,7 +715,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "3. Aumento de ventas y conversiones",
+          title: "Aumento de ventas y conversiones",
           content: {
             text: "Los Chatbots de IA hacen más que responder preguntas — impulsan activamente las ventas:",
             list: [
@@ -727,7 +726,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "4. Escalabilidad instantánea para altos volúmenes",
+          title: "Escalabilidad instantánea para altos volúmenes",
           content: {
             text: "Un Chatbot de IA puede manejar miles de consultas simultáneamente:",
             list: [
@@ -738,7 +737,7 @@ export const aiChatBotTranslations = {
           }
         },
         {
-          title: "5. Experiencia mejorada del cliente",
+          title: "Experiencia mejorada del cliente",
           content: {
             text: "Mejora la satisfacción general del cliente con interacciones personalizadas:",
             list: [
