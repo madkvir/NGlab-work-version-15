@@ -586,6 +586,21 @@ const Navbar = () => {
                 >
                   <span>{t.links.aboutUs}</span>
                 </Link>
+                <Link
+                  href="#pricing"
+                  onClick={(e) => handleNavClick(e, "pricing")}
+                  className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
+                             rounded-lg transition-all duration-300 flex items-center justify-between"
+                >
+                  {t.links.pricing}
+                </Link>
+                <Link
+                  href="/contacts"
+                  className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
+                             rounded-lg transition-all duration-300 flex items-center justify-between"
+                >
+                  {t.links.contacts}
+                </Link>
               </div>
             </div>
 
