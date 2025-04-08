@@ -21,6 +21,17 @@ import {
   Timer,
   BanknoteIcon,
   CheckCircle2,
+  Target,
+  TrendingUp,
+  ShoppingBag,
+  Phone,
+  LineChart,
+  Users,
+  Repeat,
+  Bell,
+  MessageCircle,
+  BarChart,
+  Smartphone
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -72,10 +83,24 @@ const getIndustryIcon = (iconName: string, name: string) => {
 // Функция для получения иконки по ключевым словам в заголовке
 const getIconByTitle = (title: string) => {
   switch (true) {
-    case /автоматизирован|поддержк|support|automated/i.test(title):
-      return (
-        <MessageSquare className='w-5 h-5 text-emerald-400 mr-2 inline-block' />
-      );
+    case /как ии помогает|консультаци|support|automated/i.test(title):
+      return <MessageSquare className='w-5 h-5 text-emerald-400 mr-2 inline-block' />;
+    case /персонализац|benefits/i.test(title):
+      return <TrendingUp className='w-5 h-5 text-emerald-400 mr-2 inline-block' />;
+    case /сбор|квалификац|лид/i.test(title):
+      return <Target className='w-5 h-5 text-emerald-400 mr-2 inline-block' />;
+    case /сопровожд|покупк/i.test(title):
+      return <ShoppingBag className='w-5 h-5 text-emerald-400 mr-2 inline-block' />;
+    case /автоматизац|коммуникац/i.test(title):
+      return <Phone className='w-5 h-5 text-emerald-400 mr-2 inline-block' />;
+    case /выгод|benefits|результат/i.test(title):
+      return <LineChart className='w-5 h-5 text-emerald-400 mr-2 inline-block' />;
+    case /клиент|customer|users/i.test(title):
+      return <Users className='w-5 h-5 text-emerald-400 mr-2 inline-block' />;
+    case /повтор|retention/i.test(title):
+      return <Repeat className='w-5 h-5 text-emerald-400 mr-2 inline-block' />;
+    case /уведомлен|notification/i.test(title):
+      return <Bell className='w-5 h-5 text-emerald-400 mr-2 inline-block' />;
     case /преимуществ|benefits/i.test(title):
       return (
         <BadgeCheck className='w-5 h-5 text-emerald-400 mr-2 inline-block' />
@@ -99,10 +124,50 @@ const getIconByTitle = (title: string) => {
         <Briefcase className='w-5 h-5 text-emerald-400 mr-2 inline-block' />
       );
     default:
-      return (
-        <BookOpen className='w-5 h-5 text-emerald-400 mr-2 inline-block' />
-      );
+      return <BookOpen className='w-5 h-5 text-emerald-400 mr-2 inline-block' />;
   }
+};
+
+// Функция для распознавания lucide иконок в тексте
+const processLucideIcons = (text: string) => {
+  if (!text.includes("<i class='lucide-")) return text;
+  
+  // Извлекаем имя иконки
+  const match = text.match(/<i class='lucide-([^']+)/);
+  if (!match) return text;
+  
+  const iconName = match[1].replace(/\s+text-emerald-400\s+mr-2'><\/i>\s*/, '');
+  let icon;
+  
+  // Сопоставляем имя иконки с компонентом
+  switch (iconName) {
+    case 'message-circle':
+      icon = <MessageCircle className="text-emerald-400 mr-2" />;
+      break;
+    case 'bar-chart':
+      icon = <BarChart className="text-emerald-400 mr-2" />;
+      break;
+    case 'target':
+      icon = <Target className="text-emerald-400 mr-2" />;
+      break;
+    case 'shopping-cart':
+      icon = <ShoppingCart className="text-emerald-400 mr-2" />;
+      break;
+    case 'smartphone':
+      icon = <Smartphone className="text-emerald-400 mr-2" />;
+      break;
+    case 'zap':
+      icon = <Zap className="text-emerald-400 mr-2" />;
+      break;
+    default:
+      return text;
+  }
+  
+  // Заменяем тег иконки текстом без тега
+  return {
+    icon,
+    text: text.replace(/<i class='lucide-[^>]+><\/i>\s*/, '')
+  };
 };
 
 export const AIChatBotContent: React.FC<ContentProps> = ({ content }) => {
@@ -327,7 +392,7 @@ export const AIChatBotContent: React.FC<ContentProps> = ({ content }) => {
     );
   };
 
-  // Функция для рендеринга содержимого элемента списка
+  // Обновляем функцию renderListItem для обработки иконок Lucide
   const renderListItem = (
     item: string,
     reasonTitle: string,
@@ -343,7 +408,139 @@ export const AIChatBotContent: React.FC<ContentProps> = ({ content }) => {
     if (operationalCostsContent) {
       return operationalCostsContent;
     }
+    
+    // Проверяем, относится ли элемент к разделу "Увеличение продаж и конверсий"
+    const isSalesConversionSection = /Увеличение продаж и конверсий|Збільшення продажів та конверсій/i.test(reasonTitle);
+    
+    // Специальная обработка для раздела "Увеличение продаж и конверсий"
+    if (isSalesConversionSection) {
+      // Проверяем, является ли это элементом "2. Персонализация предложений" или "3. Сбор и квалификация лидов" или "4. Сопровождение до покупки" или "5. Автоматизация до- и постпродажной коммуникации"
+      if (item.match(/^2\.\s+Персонализация предложений/) || item.match(/^📊\s+Персонализация предложений/) || item.match(/^📊\s+2\.\s+Персонализация предложений/) || 
+          item.match(/^3\.\s+Сбор и квалификация лидов/) || 
+          item.match(/^4\.\s+Сопровождение до покупки/) ||
+          item.match(/^5\.\s+Автоматизация до- и постпродажной коммуникации/)) {
+        // Разделяем на заголовок и содержимое
+        const textWithoutPrefix = item.replace(/^(📊\s+)?(2\.|3\.|4\.|5\.)\s+/, '');
+        const parts = textWithoutPrefix.split('\n\n');
+        
+        // Определяем заголовок в зависимости от номера
+        let title;
+        if (item.startsWith("2.")) {
+          title = "2. " + parts[0];
+        } else if (item.startsWith("3.")) {
+          title = "3. " + parts[0];
+        } else if (item.startsWith("4.")) {
+          title = "4. " + parts[0];
+        } else if (item.startsWith("5.")) {
+          title = "5. " + parts[0];
+        } else {
+          title = "2. " + parts[0]; // Для случая с эмодзи перед "2."
+        }
+        
+        const description = parts.length > 1 ? parts[1] : "";
+        const listContent = parts.slice(2).join('\n\n');
+        
+        // Отображаем как подзаголовок с маркированным списком
+        return (
+          <div className="mb-4">
+            <h6 className="text-white font-medium mb-2">{title}</h6>
+            {description && <p className="text-gray-300 mb-3">{description}</p>}
+            <div className="space-y-3">
+              {listContent.split('\n\n').map((part, idx) => {
+                if (part.includes('• ')) {
+                  const bullets = part.split('• ').filter(b => b.trim());
+                  return (
+                    <ul key={idx} className="list-none space-y-2">
+                      {bullets.map((bullet, bidx) => (
+                        <li key={bidx} className="text-gray-300 flex items-start">
+                          <span className="text-emerald-400 mr-2">•</span>
+                          <span>{bullet.trim()}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  );
+                }
+                return <p key={idx} className="text-gray-300">{part}</p>;
+              })}
+            </div>
+          </div>
+        );
+      }
+      
+      // Остальной код для обработки элементов с эмодзи может остаться как есть
+      if (item.match(/^(💬|📊|🎯|⚡️)/) && !item.match(/^🛒\s*Сопровождение до покупки/) && !item.match(/^📱\s*Автоматизация до- и постпродажной коммуникации/)) {
+        const emojiMatch = item.match(/^(💬|📊|🎯|⚡️)/);
+        const emoji = emojiMatch ? emojiMatch[0] : '';
+        
+        // Удаляем эмодзи из начала строки
+        const textWithoutEmoji = item.replace(/^(💬|📊|🎯|⚡️)\s*/, '');
+        
+        // Разбиваем на заголовок и содержимое
+        const parts = textWithoutEmoji.split('\n\n');
+        const title = parts[0];
+        const content = parts.slice(1).join('\n\n');
+        
+        // Определяем соответствующую иконку Lucide на основе эмодзи
+        let icon;
+        switch (emoji) {
+          case '💬':
+            icon = <MessageCircle className="w-5 h-5 text-emerald-400 mr-2" />;
+            break;
+          case '📊':
+            icon = <BarChart className="w-5 h-5 text-emerald-400 mr-2" />;
+            break;
+          case '🎯':
+            icon = <Target className="w-5 h-5 text-emerald-400 mr-2" />;
+            break;
+          case '⚡️':
+            icon = <Zap className="w-5 h-5 text-emerald-400 mr-2" />;
+            break;
+          default:
+            icon = <BookOpen className="w-5 h-5 text-emerald-400 mr-2" />;
+        }
+        
+        return (
+          <div className='mb-4'>
+            <h5 className='text-xl font-bold text-emerald-400 mb-3 flex items-center'>
+              {icon}
+              {title}
+            </h5>
+            <div className='space-y-3'>
+              {content.split('\n\n').map((part, idx) => {
+                // Проверяем, содержит ли часть номерной формат (например, "1. Консультации в режиме реального времени")
+                if (part.match(/^\d+\.\s/)) {
+                  const subparts = part.split('\n');
+                  const subtitle = subparts[0]; // Подзаголовок (например, "1. Консультации в режиме реального времени")
+                  const subcontent = subparts.slice(1).join('\n'); // Остальное содержимое
+                  
+                  return (
+                    <div key={idx} className="mb-3">
+                      <h6 className="text-white font-medium mb-2">{subtitle}</h6>
+                      <p className="text-gray-300">{subcontent}</p>
+                    </div>
+                  );
+                } else if (part.includes('• ')) {
+                  const listItems = part.split('• ').filter(i => i.trim());
+                  return (
+                    <ul key={idx} className='list-none space-y-2'>
+                      {listItems.map((li, liIdx) => (
+                        <li key={liIdx} className='text-gray-300 flex items-start'>
+                          <span className='text-emerald-400 mr-2'>•</span>
+                          <span>{li.trim()}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  );
+                }
+                return <p key={idx} className='text-gray-300'>{part}</p>;
+              })}
+            </div>
+          </div>
+        );
+      }
+    }
 
+    // Для всех других разделов используем обычную обработку
     // Обработка маркированных списков
     if (item.includes(' • ')) {
       const lines = item.split(' • ');
