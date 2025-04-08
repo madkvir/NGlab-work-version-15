@@ -1,4 +1,6 @@
 "use client";
+export const dynamic = "force-dynamic";
+
 import React, { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import FormStatus from "./FormStatus";

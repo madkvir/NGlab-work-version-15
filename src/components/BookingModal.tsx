@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React, { useState, useMemo, useEffect, useCallback } from "react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";

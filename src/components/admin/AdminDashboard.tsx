@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React, { useCallback, useEffect, useState } from "react";
 import { Plus, Pencil, Trash2 } from "lucide-react";
 import BlogPostEditor from "./BlogPostEditor";
@@ -11,9 +13,10 @@ const AdminDashboard: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[] | []>([]);
   const [fetchingBlog, setFetchingBlog] = useState(true);
 
-  const apiUrl = typeof window !== 'undefined' 
-    ? window.location.origin 
-    : process.env.NEXT_PUBLIC_API_URL || 'https://neurogenlab.de';
+  const apiUrl =
+    typeof window !== "undefined"
+      ? window.location.origin
+      : process.env.NEXT_PUBLIC_API_URL || "https://neurogenlab.de";
 
   const fetchPosts = useCallback(async () => {
     try {

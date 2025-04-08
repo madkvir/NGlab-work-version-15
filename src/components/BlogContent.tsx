@@ -1,4 +1,6 @@
 "use client";
+export const dynamic = "force-dynamic";
+
 import React, { useCallback, useEffect } from "react";
 import { useState } from "react";
 import { Search, Calendar, User } from "lucide-react";

@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React, { useState, useRef } from "react";
 import { Save, X, Upload } from "lucide-react";
 import { Editor } from "@tinymce/tinymce-react";
@@ -33,9 +35,10 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
   const fileInputRef = useRef<HTMLInputElement>(null);
   const editorRef = useRef<any>(null);
 
-  const apiUrl = typeof window !== 'undefined' 
-    ? window.location.origin 
-    : process.env.NEXT_PUBLIC_API_URL || 'https://neurogenlab.de';
+  const apiUrl =
+    typeof window !== "undefined"
+      ? window.location.origin
+      : process.env.NEXT_PUBLIC_API_URL || "https://neurogenlab.de";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;

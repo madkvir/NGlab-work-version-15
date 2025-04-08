@@ -1,4 +1,6 @@
 "use client";
+export const dynamic = "force-dynamic";
+
 import React, { useState } from "react";
 import { CheckCircle } from "lucide-react";
 import FormField from "./FormField";
