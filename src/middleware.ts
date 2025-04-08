@@ -11,12 +11,28 @@ const middleware = createMiddleware({
 
 export function middlewareWithRedirect(req: NextRequest) {
   const url = req.nextUrl;
+
+  if (url.pathname.startsWith("/api")) {
+    return NextResponse.next();
+  }
+
   let hostname = url.hostname;
   let path = url.pathname;
 
+  const cookieLocale = req.cookies.get("NEXT_LOCALE")?.value;
+  const urlLocale = locales.find((locale) => path.startsWith(`/${locale}`));
+
+  if (urlLocale && urlLocale !== cookieLocale) {
+    const res = middleware(req);
+    res.cookies.set("NEXT_LOCALE", urlLocale, {
+      path: "/",
+      maxAge: 60 * 60 * 24 * 365,
+    });
+    return res;
+  }
+
   if (hostname === "localhost") {
-    if (!locales.some((locale) => path.startsWith(`/${locale}`))) {
-      const cookieLocale = req.cookies.get("NEXT_LOCALE")?.value;
+    if (!urlLocale) {
       const effectiveLocale = locales.includes(cookieLocale || "") ? cookieLocale : fallbackLocale;
       url.pathname = `/${effectiveLocale}${path}`;
       return NextResponse.redirect(url, 301);
@@ -37,8 +53,7 @@ export function middlewareWithRedirect(req: NextRequest) {
     needsRedirect = true;
   }
 
-  if (!locales.some((l) => path.startsWith(`/${l}`))) {
-    const cookieLocale = req.cookies.get("NEXT_LOCALE")?.value;
+  if (!urlLocale) {
     const effectiveLocale = locales.includes(cookieLocale || "") ? cookieLocale : fallbackLocale;
     url.pathname = `/${effectiveLocale}${path === "/" ? "" : path}`;
     needsRedirect = true;
@@ -54,5 +69,5 @@ export function middlewareWithRedirect(req: NextRequest) {
 export default middlewareWithRedirect;
 
 export const config = {
-  matcher: ["/((?!api|static|.*\\..*|_next|favicon.ico).*)", "/"],
+  matcher: ["/((?!api|static|_next|.*\\..*|favicon.ico).*)"],
 };
