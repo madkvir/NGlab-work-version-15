@@ -170,6 +170,52 @@ const processLucideIcons = (text: string) => {
   };
 };
 
+// Функция для рендеринга основного текста с поддержкой разметки Markdown (жирного текста)
+const renderMarkdownText = (text: string) => {
+  if (!text.includes('**')) return text;
+  
+  // Разбиваем текст на части и преобразуем **текст** в JSX элементы с жирным шрифтом
+  const parts: string[] = [];
+  let currentIndex = 0;
+  
+  // Находим все вхождения ** в тексте
+  const matches = text.match(/\*\*/g);
+  if (!matches) return text;
+  
+  const positions: number[] = [];
+  let pos = -1;
+  
+  while ((pos = text.indexOf('**', pos + 1)) !== -1) {
+    positions.push(pos);
+  }
+  
+  // Обрабатываем каждую пару **
+  for (let i = 0; i < positions.length; i++) {
+    const pos = positions[i];
+    
+    // Добавляем текст до **
+    if (pos > currentIndex) {
+      parts.push(text.substring(currentIndex, pos));
+    }
+    
+    // Обновляем текущую позицию
+    currentIndex = pos + 2;
+  }
+  
+  // Добавляем оставшийся текст
+  if (currentIndex < text.length) {
+    parts.push(text.substring(currentIndex));
+  }
+  
+  // Создаем JSX элементы
+  return parts.map((part, index) => {
+    if (index % 2 === 1) {
+      return <strong key={index} className="text-emerald-300">{part}</strong>;
+    }
+    return <React.Fragment key={index}>{part}</React.Fragment>;
+  });
+};
+
 export const AIChatBotContent: React.FC<ContentProps> = ({ content }) => {
   // Сбрасываем флаг при каждом рендере компонента
   React.useEffect(() => {
@@ -540,10 +586,130 @@ export const AIChatBotContent: React.FC<ContentProps> = ({ content }) => {
       }
     }
 
-    // Для всех других разделов используем обычную обработку
+    // Проверяем, относится ли элемент к разделу "Мгновенная масштабируемость для высоких нагрузок"
+    const isScalabilitySection = /масштабируемость|scalability|масштабованість/i.test(reasonTitle);
+    
+    // Проверяем, относится ли элемент к разделу "Улучшение клиентского опыта"
+    const isCustomerExperience = /Улучшение клиентского опыта|Покращений клієнтський досвід/i.test(reasonTitle);
+    
+    // Специальная обработка для раздела "Улучшение клиентского опыта"
+    if (isCustomerExperience && 
+        (item.startsWith("Что даёт ИИ в клиентском сервисе?") || 
+         item.startsWith("Как ИИ повышает удовлетворённость клиентов?") || 
+         item.startsWith("Реальные примеры:") || 
+         item.startsWith("Преимущества ИИ в улучшении клиентского опыта") ||
+         item.startsWith("Що дає ШІ в клієнтському сервісі?") ||
+         item.startsWith("Як ШІ підвищує задоволеність клієнтів?") ||
+         item.startsWith("Реальні приклади:") ||
+         item.startsWith("Переваги ШІ у покращенні клієнтського досвіду"))) {
+      
+      // Разделяем на заголовок и содержимое
+      const parts = item.split('\n\n');
+      const title = parts[0];
+      const content = parts.slice(1).join('\n\n');
+      
+      // Находим подходящую иконку для заголовка
+      let icon;
+      if (title.includes("даёт") || title.includes("дає")) {
+        icon = <Info className='w-5 h-5 text-emerald-400 mr-2' />;
+      } else if (title.includes("повышает") || title.includes("підвищує")) {
+        icon = <TrendingUp className='w-5 h-5 text-emerald-400 mr-2' />;
+      } else if (title.includes("примеры") || title.includes("приклади")) {
+        icon = <Briefcase className='w-5 h-5 text-emerald-400 mr-2' />;
+      } else if (title.includes("Преимущества") || title.includes("Переваги")) {
+        icon = <BadgeCheck className='w-5 h-5 text-emerald-400 mr-2' />;
+      } else {
+        icon = getIconByTitle(title);
+      }
+      
+      return (
+        <div className='mb-4'>
+          <h5 className='text-xl font-bold text-emerald-400 mb-3 flex items-center'>
+            {icon}
+            {title}
+          </h5>
+          <div className='space-y-3'>
+            {content.split('\n\n').map((part, partIdx) => {
+              if (part.includes('- ')) {
+                const listItems = part.split('- ').filter((i) => i.trim());
+                return (
+                  <ul key={partIdx} className='list-none space-y-2'>
+                    {listItems.map((li, liIdx) => (
+                      <li key={liIdx} className='text-gray-300 flex items-start'>
+                        <span className='text-emerald-400 mr-2'>•</span>
+                        <span>{li.trim()}</span>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
+              return (
+                <p key={partIdx} className='text-gray-300'>
+                  {renderMarkdownText(part)}
+                </p>
+              );
+            })}
+          </div>
+        </div>
+      );
+    }
+
+    // Специальная обработка для раздела "Мгновенная масштабируемость для высоких нагрузок"
+    if (isScalabilitySection && 
+        (item.startsWith("Почему масштабируемость важна?") || 
+         item.startsWith("Как ИИ-чатботы обеспечивают стабильность при высоких нагрузках?") || 
+         item.startsWith("Примеры масштабируемости в действии") || 
+         item.startsWith("Преимущества масштабируемого ИИ-решения") ||
+         item.startsWith("Чому масштабованість важлива?") ||
+         item.startsWith("Як ШІ-чатботи забезпечують стабільність при високих навантаженнях?") ||
+         item.startsWith("Приклади масштабованості в дії") ||
+         item.startsWith("Переваги масштабованого ШІ-рішення"))) {
+      
+      // Разделяем на заголовок и содержимое
+      const parts = item.split('\n\n');
+      const title = parts[0];
+      const content = parts.slice(1).join('\n\n');
+      
+      // Находим подходящую иконку для заголовка
+      const icon = getIconByTitle(title);
+      
+      return (
+        <div className='mb-4'>
+          <h5 className='text-xl font-bold text-emerald-400 mb-3 flex items-center'>
+            {icon}
+            {title}
+          </h5>
+          <div className='space-y-3'>
+            {content.split('\n\n').map((part, partIdx) => {
+              if (part.includes('• ') || part.includes('•')) {
+                const listItems = part.includes('• ') 
+                  ? part.split('• ').filter((i) => i.trim())
+                  : part.split('•').filter((i) => i.trim());
+                return (
+                  <ul key={partIdx} className='list-none space-y-2'>
+                    {listItems.map((li, liIdx) => (
+                      <li key={liIdx} className='text-gray-300 flex items-start'>
+                        <span className='text-emerald-400 mr-2'>•</span>
+                        <span>{li.trim()}</span>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
+              return (
+                <p key={partIdx} className='text-gray-300'>
+                  {part}
+                </p>
+              );
+            })}
+          </div>
+        </div>
+      );
+    }
+
     // Обработка маркированных списков
-    if (item.includes(' • ')) {
-      const lines = item.split(' • ');
+    if (item.includes(' • ') || item.includes('•')) {
+      const lines = item.includes(' • ') ? item.split(' • ') : item.split('•');
       let intro = '';
       let listItems = lines;
 
@@ -591,14 +757,16 @@ export const AIChatBotContent: React.FC<ContentProps> = ({ content }) => {
           </h5>
           <div className='space-y-3'>
             {contentParts.map((part, partIdx) => {
-              if (part.includes('• ')) {
-                const listItems = part.split('• ').filter((i) => i.trim());
+              if (part.includes('• ') || part.includes('•')) {
+                const listItems = part.includes('• ') 
+                  ? part.split('• ').filter((i) => i.trim())
+                  : part.split('•').filter((i) => i.trim());
                 return (
                   <ul key={partIdx} className='list-none space-y-2'>
                     {listItems.map((li, liIdx) => (
                       <li key={liIdx} className='text-gray-300 flex items-start'>
                         <span className='text-emerald-400 mr-2'>•</span>
-                        <span>{li}</span>
+                        <span>{li.trim()}</span>
                       </li>
                     ))}
                   </ul>
@@ -683,7 +851,7 @@ export const AIChatBotContent: React.FC<ContentProps> = ({ content }) => {
               </summary>
 
               <div className='p-6 pt-2'>
-                <p className='mb-4 text-gray-300'>{reason.content.text}</p>
+                <p className='mb-4 text-gray-300'>{renderMarkdownText(reason.content.text)}</p>
 
                 {/* Отображаем карточки преимуществ для подходящих заголовков */}
                 {shouldRenderAdvantageCards(reason.title) &&
