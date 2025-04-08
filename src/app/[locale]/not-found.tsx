@@ -6,11 +6,13 @@ import Footer from "../../components/Footer";
 import { notFoundTranslations } from "../../locales/translations";
 import { useParams } from "next/navigation";
 import { Link } from "../../i18n/routing";
+import { useLocale } from "next-intl";
 
 export default function Custom404() {
   const params = useParams();
-  const locale = (params?.locale as string) || "en";
-  const t = notFoundTranslations[locale];
+  const lang = (params?.locale as string) || "en";
+  const t = notFoundTranslations[lang];
+  const locale = useLocale();
 
   return (
     <div className="min-h-screen bg-[#0B0F19] text-white">
@@ -28,6 +30,7 @@ export default function Custom404() {
             <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
             <Link
               href="/"
+              locale={locale}
               className="relative flex items-center justify-center gap-2 px-6 py-3 bg-gray-900/90 rounded-lg text-white group-hover:text-emerald-400 transition-colors"
             >
               <Home className="w-5 h-5" />

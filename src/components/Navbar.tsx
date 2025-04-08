@@ -12,6 +12,7 @@ import getPageLangUnit from "../utils/getPageLangUnit";
 import Cookies from "js-cookie";
 import { Link, usePathname, useRouter } from "../i18n/routing";
 import { useParams } from "next/navigation";
+import { useLocale } from "next-intl";
 
 // type LanguageType = 'en' | 'de' | 'es' | 'ru' | 'ua';
 
@@ -101,7 +102,7 @@ const Navbar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const router = useRouter();
-  const { locale } = useParams();
+  const locale = useLocale();
   const location = usePathname();
 
   const language = getPageLangUnit(translations);
@@ -279,6 +280,7 @@ const Navbar = () => {
 
                 <div className="absolute top-full left-0 mt-2 w-48 bg-[#0B0F19]/95 backdrop-blur-sm rounded-lg border border-gray-900/50 py-2 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   <Link
+                    locale={locale}
                     href="/guide"
                     className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105"
                   >
@@ -292,12 +294,14 @@ const Navbar = () => {
                     {t.links.faq}
                   </a>
                   <Link
+                    locale={locale}
                     href="/blog"
                     className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105"
                   >
                     {t.links.blog}
                   </Link>
                   <Link
+                    locale={locale}
                     href="/about-us"
                     className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105"
                   >
@@ -307,6 +311,7 @@ const Navbar = () => {
               </div>
 
               <Link
+                locale={locale}
                 href="#pricing"
                 onClick={(e) => handleNavClick(e, "pricing")}
                 className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-105 mx-6"
@@ -315,6 +320,7 @@ const Navbar = () => {
               </Link>
 
               <Link
+                locale={locale}
                 href="/contacts"
                 className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-105 mx-6"
               >
@@ -558,6 +564,7 @@ const Navbar = () => {
               <h3 className="text-gray-400 text-sm font-medium px-4 mb-2">{t.pages}</h3>
               <div className="space-y-2">
                 <Link
+                  locale={locale}
                   href="/guide"
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
@@ -573,6 +580,7 @@ const Navbar = () => {
                   <span>{t.links.faq}</span>
                 </a>
                 <Link
+                  locale={locale}
                   href="/blog"
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
@@ -580,6 +588,7 @@ const Navbar = () => {
                   <span>{t.links.blog}</span>
                 </Link>
                 <Link
+                  locale={locale}
                   href="/about-us"
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
@@ -595,6 +604,7 @@ const Navbar = () => {
                   {t.links.pricing}
                 </Link>
                 <Link
+                  locale={locale}
                   href="/contacts"
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
