@@ -7,7 +7,7 @@ import Divider from "./Divider";
 import { heroTranslations } from "../locales/translations";
 import DemoModal from "./DemoModal";
 import getPageLangUnit from "../utils/getPageLangUnit";
-import Link from "next/link";
+import { Link } from "../i18n/routing";
 
 interface HeroProps {
   language: "en" | "de" | "es" | "ru" | "ua";

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "../../i18n/routing";
 
 interface GlowingButtonProps {
   to?: string;

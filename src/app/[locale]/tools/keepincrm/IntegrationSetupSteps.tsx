@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import ImageWithFallback from "./ImageWithFallback";
 import GlowingButton from "../../../../components/common/GlowingButton";
 import { integrationSetupTranslations } from "../../../../locales/integrationSetupTranslations";
-import Link from "next/link";
+import { Link } from "../../../../i18n/routing";
 
 interface IntegrationSetupStepsProps {
   language: string;

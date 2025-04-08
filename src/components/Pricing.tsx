@@ -3,7 +3,7 @@ import { Check, Sparkles, Wrench, Database, Code, Zap } from "lucide-react";
 import GlowingButton from "./common/GlowingButton";
 import { pricingTranslations } from "../locales/pricingTranslations";
 import getPageLangUnit from "../utils/getPageLangUnit";
-import { useRouter } from "next/navigation";
+import { useRouter } from "../i18n/routing";
 
 const Pricing = () => {
   const language = getPageLangUnit(pricingTranslations);

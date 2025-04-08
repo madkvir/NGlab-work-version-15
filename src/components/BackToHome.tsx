@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { useMemo } from "react";
 import getPageLangUnit from "../utils/getPageLangUnit";
 import React from "react";
-import Link from "next/link";
+import { Link } from "../i18n/routing";
 
 const backToHomeTranslations = {
   en: {

@@ -2,11 +2,10 @@
 import React, { useState } from "react";
 import { Phone, Mail, Linkedin, MapPin, MessageCircle, ChevronDown } from "lucide-react";
 import NewsletterForm from "./form/NewsletterForm";
-// import { Link, useRouter, usePathname } from "../i18n/routing";
+import { Link, useRouter, usePathname } from "../i18n/routing";
 import { footerTranslations } from "../locales/translations";
 import getPageLangUnit from "../utils/getPageLangUnit";
-import { usePathname, useRouter } from "next/navigation";
-import Link from "next/link";
+
 
 const Footer: React.FC = () => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);

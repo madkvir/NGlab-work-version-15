@@ -1,8 +1,8 @@
 "use client";
 import { Minus, Plus } from "lucide-react";
 import { useState } from "react";
-import Link from "next/link";
 import { FAQItem, TextFragment } from "./FAQData"; // Импорт типов из нового файла
+import { Link } from "../i18n/routing";
 
 interface FAQAccordeonProps {
   faqs: FAQItem[];
@@ -11,60 +11,50 @@ interface FAQAccordeonProps {
 
 const FAQAccordeon = ({ faqs, locale }: FAQAccordeonProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  
+
   const renderAnswer = (answer: string | TextFragment[]) => {
-    if (typeof answer === 'string') {
+    if (typeof answer === "string") {
       return <div className="mt-4 text-gray-400 text-base leading-relaxed">{answer}</div>;
     }
-    
+
     return (
       <div className="mt-4 text-gray-400 text-base leading-relaxed">
         {answer.map((fragment, index) => renderFragment(fragment, index, locale))}
       </div>
     );
   };
-  
+
   const renderFragment = (fragment: TextFragment, index: number, locale: string) => {
     if (!fragment) return null;
 
     switch (fragment.type) {
-      case 'bold':
+      case "bold":
         return (
-          <strong 
-            key={index} 
-            className={fragment.isGreen ? 'text-emerald-400 font-bold' : 'font-bold'}
+          <strong
+            key={index}
+            className={fragment.isGreen ? "text-emerald-400 font-bold" : "font-bold"}
           >
             {fragment.content}
           </strong>
         );
-      case 'link':
-        const localeCode = locale === 'ua' ? 'uk' : locale;
-        const url = fragment.url?.startsWith('/') 
-          ? `/${localeCode}${fragment.url}` 
-          : fragment.url;
+      case "link":
+        const localeCode = locale === "ua" ? "uk" : locale;
+        const url = fragment.url?.startsWith("/") ? `/${localeCode}${fragment.url}` : fragment.url;
         return (
-          <Link 
-            key={index} 
-            href={url || '#'} 
-            className="text-emerald-400 font-bold underline"
-          >
+          <Link key={index} href={url || "#"} className="text-emerald-400 font-bold underline">
             {fragment.content}
           </Link>
         );
-      case 'text':
-        return (
-          <span 
-            key={index} 
-            dangerouslySetInnerHTML={{ __html: fragment.content || '' }}
-          />
-        );
-      case 'list':
-      case 'numbered-list':
-        const ListComponent = fragment.type === 'list' ? 'ul' : 'ol';
-        const listClasses = fragment.type === 'list' 
-          ? 'list-disc pl-5 my-2 space-y-1' 
-          : 'list-decimal pl-5 my-2 space-y-2';
-        
+      case "text":
+        return <span key={index} dangerouslySetInnerHTML={{ __html: fragment.content || "" }} />;
+      case "list":
+      case "numbered-list":
+        const ListComponent = fragment.type === "list" ? "ul" : "ol";
+        const listClasses =
+          fragment.type === "list"
+            ? "list-disc pl-5 my-2 space-y-1"
+            : "list-decimal pl-5 my-2 space-y-2";
+
         return (
           <ListComponent key={index} className={listClasses}>
             {fragment.listItems?.map((item, i) => (
@@ -72,7 +62,7 @@ const FAQAccordeon = ({ faqs, locale }: FAQAccordeonProps) => {
             ))}
           </ListComponent>
         );
-      case 'list-item':
+      case "list-item":
         return (
           <div key={index}>
             {fragment.content && <span className="font-semibold">{fragment.content}</span>}

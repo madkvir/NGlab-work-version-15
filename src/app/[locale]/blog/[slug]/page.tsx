@@ -5,11 +5,11 @@ import { Calendar, User, ArrowLeft } from "lucide-react";
 import Navbar from "../../../../components/Navbar";
 import Footer from "../../../../components/Footer";
 import ScrollToTop from "../../../../components/ScrollToTop";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import axios from "axios";
 import dbConnect from "../../../../lib/mongodb";
 import Post from "../../../../server/models/Post";
+import { Link } from "../../../../i18n/routing";
 
 export async function generateStaticParams() {
   try {

@@ -3,13 +3,13 @@ import React from "react";
 import { Home, AlertTriangle } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import Link from "next/link";
 import { notFoundTranslations } from "../../locales/translations";
 import { useParams } from "next/navigation";
+import { Link } from "../../i18n/routing";
 
 export default function Custom404() {
   const params = useParams();
-  const locale = (params?.locale as string) || 'en';
+  const locale = (params?.locale as string) || "en";
   const t = notFoundTranslations[locale];
 
   return (
@@ -22,9 +22,7 @@ export default function Custom404() {
 
           <h1 className="text-4xl font-bold mb-4">{t.title}</h1>
 
-          <p className="text-gray-400 text-lg mb-8">
-            {t.description}
-          </p>
+          <p className="text-gray-400 text-lg mb-8">{t.description}</p>
 
           <div className="relative group inline-block">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>

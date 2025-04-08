@@ -2,11 +2,10 @@
 import React, { useCallback, useEffect } from "react";
 import { useState } from "react";
 import { Search, Calendar, User } from "lucide-react";
-import Link from "next/link";
 import axios from "axios";
 import { BlogPost } from "../types/blog";
 import LoadingSpinner from "./chat/LoadingSpinner";
-// import { useBlog } from "../context/BlogContext";
+import { Link } from "../i18n/routing";
 
 const BlogContent = () => {
   const [posts, setPosts] = useState([]);
@@ -15,9 +14,10 @@ const BlogContent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
 
-  const apiUrl = typeof window !== 'undefined' 
-    ? window.location.origin 
-    : process.env.NEXT_PUBLIC_API_URL || 'https://neurogenlab.de';
+  const apiUrl =
+    typeof window !== "undefined"
+      ? window.location.origin
+      : process.env.NEXT_PUBLIC_API_URL || "https://neurogenlab.de";
 
   const categories = Array.from(new Set(posts.map((post: BlogPost) => post.category)))
     .filter(Boolean)

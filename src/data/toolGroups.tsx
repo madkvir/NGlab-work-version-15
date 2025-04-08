@@ -23,7 +23,7 @@ import {
   MessageSquareMore,
   Search,
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "../i18n/routing";
 
 export const toolGroups = {
   "AI Tools for Business": [

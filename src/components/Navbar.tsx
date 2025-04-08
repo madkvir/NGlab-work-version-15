@@ -7,11 +7,11 @@ import Logo from "./Logo";
 import SolutionsMenu from "./SolutionsMenu";
 import { useClickOutside } from "./hooks/useClickOutside";
 import { useScrollLock } from "./hooks/useScrollLock";
-import { useRouter, usePathname, useParams } from "next/navigation";
 import { translations } from "../locales/translations";
 import getPageLangUnit from "../utils/getPageLangUnit";
 import Cookies from "js-cookie";
-import Link from "next/link";
+import { Link, usePathname, useRouter } from "../i18n/routing";
+import { useParams } from "next/navigation";
 
 // type LanguageType = 'en' | 'de' | 'es' | 'ru' | 'ua';
 

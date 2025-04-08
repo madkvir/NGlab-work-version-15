@@ -1,4 +1,5 @@
-import { useRouter } from 'next/router';
+
+import { useRouter } from '../i18n/routing';
 import { guideTranslations } from '../locales/guideTranslations';
 
 export const useTranslations = () => {
