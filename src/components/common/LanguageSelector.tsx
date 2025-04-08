@@ -85,19 +85,13 @@ const LanguageSelector = () => {
   }, []);
 
   const handleLanguageChange = (newLang: string) => {
-    if (newLang === "ua") {
-      Cookies.set("NEXT_LOCALE", "uk", { path: "/" });
-      const newPath = `/uk${pathname.substring(3)}`; // Убираем старую локаль из пути
-      router.replace(newPath);
-      router.refresh();
-      // setIsOpen(false);
-      return;
-    }
-    Cookies.set("NEXT_LOCALE", newLang, { path: "/" });
-    const newPath = `/${newLang}${pathname.substring(3)}`; // Убираем старую локаль из пути
-    router.replace(newPath);
-    router.refresh();
-    // setIsOpen(false);
+    const targetLocale = newLang === "ua" ? "uk" : newLang;
+
+    Cookies.set("NEXT_LOCALE", targetLocale, { path: "/" });
+
+    const pathWithoutLocale = pathname.replace(/^\/(en|de|uk|ru|es)/, "");
+
+    router.replace(pathWithoutLocale || "/", { locale: targetLocale });
   };
 
   return (
