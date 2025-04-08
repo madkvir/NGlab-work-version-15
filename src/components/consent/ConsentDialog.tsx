@@ -13,7 +13,7 @@ import GlowingButton from "../common/GlowingButton";
 import { consentDialogTranslations } from "../../locales/translations";
 import LanguageSelector from "../common/LanguageSelector";
 import getPageLangUnit from "../../utils/getPageLangUnit";
-import { useRouter } from "../../i18n/routing";
+import { Link, useRouter } from "../../i18n/routing";
 
 const ConsentDialog: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
