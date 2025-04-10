@@ -4,26 +4,24 @@ import { NextRequest, NextResponse } from "next/server";
 const locales = ["en", "de", "uk", "ru", "es"];
 const fallbackLocale = "en";
 
-const middleware = createMiddleware({
+const intlMiddleware = createMiddleware({
   locales,
   defaultLocale: fallbackLocale,
 });
 
 export function middlewareWithRedirect(req: NextRequest) {
   const url = req.nextUrl;
+  const { pathname, hostname } = url;
 
-  if (url.pathname.startsWith("/api")) {
+  if (pathname.startsWith("/api") || pathname.includes("_next")) {
     return NextResponse.next();
   }
 
-  let hostname = url.hostname;
-  let path = url.pathname;
-
   const cookieLocale = req.cookies.get("NEXT_LOCALE")?.value;
-  const urlLocale = locales.find((locale) => path.startsWith(`/${locale}`));
+  const urlLocale = locales.find((locale) => pathname.startsWith(`/${locale}`));
 
-  if (urlLocale && urlLocale !== cookieLocale) {
-    const res = middleware(req);
+  if (urlLocale) {
+    const res = intlMiddleware(req);
     res.cookies.set("NEXT_LOCALE", urlLocale, {
       path: "/",
       maxAge: 60 * 60 * 24 * 365,
@@ -31,13 +29,10 @@ export function middlewareWithRedirect(req: NextRequest) {
     return res;
   }
 
-  if (hostname === "localhost") {
-    if (!urlLocale) {
-      const effectiveLocale = locales.includes(cookieLocale || "") ? cookieLocale : fallbackLocale;
-      url.pathname = `/${effectiveLocale}${path}`;
-      return NextResponse.redirect(url, 301);
-    }
-    return middleware(req);
+  if (!urlLocale) {
+    const effectiveLocale = locales.includes(cookieLocale || "") ? cookieLocale : fallbackLocale;
+    url.pathname = `/${effectiveLocale}${pathname}`;
+    return NextResponse.redirect(url, 307);
   }
 
   let needsRedirect = false;
@@ -48,26 +43,19 @@ export function middlewareWithRedirect(req: NextRequest) {
   }
 
   if (hostname.startsWith("www.")) {
-    hostname = hostname.replace(/^www\./, "");
-    url.hostname = hostname;
-    needsRedirect = true;
-  }
-
-  if (!urlLocale) {
-    const effectiveLocale = locales.includes(cookieLocale || "") ? cookieLocale : fallbackLocale;
-    url.pathname = `/${effectiveLocale}${path === "/" ? "" : path}`;
+    url.hostname = hostname.replace(/^www\./, "");
     needsRedirect = true;
   }
 
   if (needsRedirect) {
-    return NextResponse.redirect(url, 301);
+    return NextResponse.redirect(url, 308);
   }
 
-  return middleware(req);
+  return intlMiddleware(req);
 }
 
 export default middlewareWithRedirect;
 
 export const config = {
-  matcher: ["/((?!api|static|_next|.*\\..*|favicon.ico).*)"],
+  matcher: ["/((?!api|_next|static|.*\\..*).*)"],
 };
