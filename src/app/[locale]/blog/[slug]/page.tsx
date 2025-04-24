@@ -97,10 +97,12 @@ const BlogPost = async ({ params }) => {
 
               {/* Featured Image */}
               <div className="rounded-xl overflow-hidden mb-8">
-                {post.images.length > 0 &&
-                  post.images.map((image) => (
-                    <img key={image} src={image} alt={post.title} className="w-full h-auto" />
-                  ))}
+                {post.images.length > 0 && (
+                  // post.images.map((image) => (
+                  //   <img key={image} src={image} alt={post.title} className="w-full h-auto" />
+                  // ))
+                  <img src={post.images[0]} alt={post.title} className="w-full h-auto" />
+                )}
               </div>
 
               {/* Article Content */}
