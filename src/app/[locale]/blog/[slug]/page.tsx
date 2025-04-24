@@ -36,9 +36,6 @@ const BlogPost = async ({ params }) => {
       : process.env.NEXT_PUBLIC_API_URL || "https://neurogenlab.de";
 
   try {
-    // console.log(`Fetching blog post with slug: ${slug}, locale: ${locale}`);
-
-    // Получаем данные поста
     const response = await axios.get(`${apiUrl}/api/blog/${slug}`, {
       headers: {
         Accept: "application/json",
@@ -46,11 +43,8 @@ const BlogPost = async ({ params }) => {
       },
     });
 
-    // console.log("Post data received successfully");
     const post = response.data;
 
-    // Получаем все посты для related posts
-    // console.log("Fetching all posts for related content");
     const { data: allPosts } = await axios.get(`${apiUrl}/api/blog`, {
       headers: {
         Accept: "application/json",
@@ -58,13 +52,9 @@ const BlogPost = async ({ params }) => {
       },
     });
 
-    // console.log(`Found ${allPosts.length} total posts`);
-
     const relatedPosts = allPosts
       .filter((p) => p.category === post.category && p._id !== post._id)
       .slice(0, 2);
-
-    // console.log(`Found ${relatedPosts.length} related posts`);
 
     return (
       <div className="min-h-screen bg-[#0B0F19] text-white">
