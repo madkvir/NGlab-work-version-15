@@ -7,6 +7,8 @@ import type { BlogPost } from "../../types/blog";
 import axios from "axios";
 import LoadingSpinner from "../chat/LoadingSpinner";
 
+const languages = ["de", "uk", "ru", "es"];
+
 const AdminDashboard: React.FC = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [currentPost, setCurrentPost] = useState<BlogPost | Partial<BlogPost> | null>(null);
@@ -23,6 +25,7 @@ const AdminDashboard: React.FC = () => {
       setFetchingBlog(true);
       const response = await axios.get(`${apiUrl}/api/blog`);
       setPosts(response.data);
+      console.log("fetched posts", response.data);
     } catch (error) {
       console.error("Failed to fetch posts:", error);
     } finally {
@@ -44,6 +47,45 @@ const AdminDashboard: React.FC = () => {
       category: "",
       author: "",
       date: new Date().toISOString().split("T")[0],
+      translations: [
+        {
+          locale: "de",
+          title: "",
+          excerpt: "",
+          content: "",
+          category: "",
+        },
+        {
+          locale: "uk",
+          title: "",
+          excerpt: "",
+          content: "",
+          category: "",
+        },
+        {
+          locale: "ru",
+          title: "",
+          excerpt: "",
+          content: "",
+          category: "",
+        },
+        {
+          locale: "es",
+          title: "",
+          excerpt: "",
+          content: "",
+          category: "",
+        },
+      ],
+      // translations: languages.map((lang) => {
+      //   return {
+      //     locale: lang,
+      //     title: "",
+      //     excerpt: "",
+      //     content: "",
+      //     category: "",
+      //   };
+      // }),
     });
     setIsEditing(true);
   };

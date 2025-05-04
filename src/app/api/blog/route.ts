@@ -11,9 +11,9 @@ cloudinary.config({
 
 // Конфигурация CORS
 const corsHeaders = {
-  'Access-Control-Allow-Origin': 'https://neurogenlab.de',
-  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  "Access-Control-Allow-Origin": "https://neurogenlab.de",
+  "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization",
 };
 
 // Обработка OPTIONS запроса для CORS preflight
@@ -30,7 +30,7 @@ export async function GET() {
   } catch (error) {
     console.error("❌ Error fetching posts:", error);
     return NextResponse.json(
-      { success: false, error: "Internal Server Error" }, 
+      { success: false, error: "Internal Server Error" },
       { status: 500, headers: corsHeaders }
     );
   }
@@ -66,17 +66,18 @@ export async function POST(req: NextRequest) {
       category: form.get("category"),
       author: form.get("author"),
       date: form.get("date"),
+      translations: form.get("translations"),
       images: uploadedImages,
     });
 
     return NextResponse.json(
-      { success: true, data: newPost }, 
+      { success: true, data: newPost },
       { status: 201, headers: corsHeaders }
     );
   } catch (error) {
     console.error("❌ Error creating post:", error);
     return NextResponse.json(
-      { success: false, error: "Bad Request" }, 
+      { success: false, error: "Bad Request" },
       { status: 400, headers: corsHeaders }
     );
   }
@@ -122,13 +123,13 @@ export async function PUT(req: Request) {
     console.log("result update", result);
 
     return NextResponse.json(
-      { success: true, data: result }, 
+      { success: true, data: result },
       { status: 201, headers: corsHeaders }
     );
   } catch (error) {
     console.error("❌ Error updating post:", error);
     return NextResponse.json(
-      { success: false, error: "Bad Request" }, 
+      { success: false, error: "Bad Request" },
       { status: 400, headers: corsHeaders }
     );
   }
@@ -140,7 +141,7 @@ export async function DELETE(req: Request) {
 
     if (!id) {
       return NextResponse.json(
-        { success: false, error: "Missing ID" }, 
+        { success: false, error: "Missing ID" },
         { status: 400, headers: corsHeaders }
       );
     }
@@ -157,20 +158,17 @@ export async function DELETE(req: Request) {
 
     if (!result) {
       return NextResponse.json(
-        { success: false, error: "Post not found" }, 
+        { success: false, error: "Post not found" },
         { status: 404, headers: corsHeaders }
       );
     }
 
     console.log("delete result", result);
-    return NextResponse.json(
-      { success: true, data: result },
-      { headers: corsHeaders }
-    );
+    return NextResponse.json({ success: true, data: result }, { headers: corsHeaders });
   } catch (error) {
     console.error("❌ Error deleting post:", error);
     return NextResponse.json(
-      { success: false, error: "Internal Server Error" }, 
+      { success: false, error: "Internal Server Error" },
       { status: 500, headers: corsHeaders }
     );
   }

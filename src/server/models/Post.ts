@@ -1,6 +1,6 @@
 import mongoose, { model, models } from "mongoose";
 
-const postTranlateSchema = new mongoose.Schema({
+const postTranlationSchema = new mongoose.Schema({
   locale: {
     type: String,
     required: true,
@@ -59,7 +59,7 @@ const postSchema = new mongoose.Schema(
       type: String,
     },
 
-    translations: [postTranlateSchema],
+    translations: [postTranlationSchema],
   },
   {
     versionKey: false,
