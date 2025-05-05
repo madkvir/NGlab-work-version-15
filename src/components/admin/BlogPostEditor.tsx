@@ -330,87 +330,97 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
         <p className="mb-2 text-center text-xl">Translations</p>
         {languages &&
           languages.map((lang, idx) => {
-            const translation = formData.translations?.find((t) => t.locale === lang) || {};
-            return (
-              <div key={idx} className="mb-5">
-                <p className="mb-3">Locale: {lang.toUpperCase()}</p>
-                <div className="mb-2">
-                  <label className="block text-sm font-medium text-gray-400 mb-2">Title *</label>
-                  <input
-                    type="text"
-                    name="title"
-                    value={translation.title}
-                    onChange={(e) => handleTranslationChange(lang, "title", e.target.value)}
-                    className="w-full bg-gray-800/50 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
-                    required
-                  />
+            const translation = formData.translations?.find((t) => t.locale === lang);
+            if (translation) {
+              return (
+                <div key={idx} className="mb-5">
+                  <p className="mb-3">Locale: {lang.toUpperCase()}</p>
+                  <div className="mb-2">
+                    <label className="block text-sm font-medium text-gray-400 mb-2">Title *</label>
+                    <input
+                      type="text"
+                      name="title"
+                      value={translation.title}
+                      onChange={(e) => handleTranslationChange(lang, "title", e.target.value)}
+                      className="w-full bg-gray-800/50 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
+                      required
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <label className="block text-sm font-medium text-gray-400 mb-2">
+                      Excerpt *
+                    </label>
+                    <textarea
+                      name="excerpt"
+                      value={translation.excerpt}
+                      onChange={(e) => handleTranslationChange(lang, "excerpt", e.target.value)}
+                      rows={2}
+                      className="w-full bg-gray-800/50 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/50 resize-none"
+                      required
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <label className="block text-sm font-medium text-gray-400 mb-2">
+                      Category *
+                    </label>
+                    <input
+                      type="text"
+                      name="category"
+                      value={translation.category}
+                      onChange={(e) => handleTranslationChange(lang, "category", e.target.value)}
+                      className="w-full bg-gray-800/50 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
+                      required
+                    />
+                  </div>
+                  <div className="mb-2">
+                    <label className="block text-sm font-medium text-gray-400 mb-2">
+                      Content *
+                    </label>
+                    <Editor
+                      onInit={(evt, editor) => (editorRef.current = editor)}
+                      apiKey="deft1xkbwh9g1bnviiz9smu90citep0mpsipf8hhleq78wx6"
+                      init={{
+                        height: 500,
+                        menubar: true,
+                        plugins: [
+                          "advlist",
+                          "autolink",
+                          "lists",
+                          "link",
+                          "image",
+                          "charmap",
+                          "preview",
+                          "anchor",
+                          "searchreplace",
+                          "visualblocks",
+                          "code",
+                          "fullscreen",
+                          "insertdatetime",
+                          "media",
+                          "table",
+                          "code",
+                          "help",
+                          "wordcount",
+                        ],
+                        toolbar:
+                          "undo redo | blocks | " +
+                          "bold italic forecolor | alignleft aligncenter " +
+                          "alignright alignjustify | bullist numlist outdent indent | " +
+                          "removeformat | help",
+                        content_style:
+                          "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+                        skin: "oxide-dark",
+                        content_css: "dark",
+                      }}
+                      value={translation.content}
+                      onEditorChange={(content) =>
+                        handleTranslationChange(lang, "content", content)
+                      }
+                    />
+                  </div>
                 </div>
-                <div className="mb-2">
-                  <label className="block text-sm font-medium text-gray-400 mb-2">Excerpt *</label>
-                  <textarea
-                    name="excerpt"
-                    value={translation.excerpt}
-                    onChange={(e) => handleTranslationChange(lang, "excerpt", e.target.value)}
-                    rows={2}
-                    className="w-full bg-gray-800/50 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/50 resize-none"
-                    required
-                  />
-                </div>
-                <div className="mb-2">
-                  <label className="block text-sm font-medium text-gray-400 mb-2">Category *</label>
-                  <input
-                    type="text"
-                    name="category"
-                    value={translation.category}
-                    onChange={(e) => handleTranslationChange(lang, "category", e.target.value)}
-                    className="w-full bg-gray-800/50 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
-                    required
-                  />
-                </div>
-                <div className="mb-2">
-                  <label className="block text-sm font-medium text-gray-400 mb-2">Content *</label>
-                  <Editor
-                    onInit={(evt, editor) => (editorRef.current = editor)}
-                    apiKey="deft1xkbwh9g1bnviiz9smu90citep0mpsipf8hhleq78wx6"
-                    init={{
-                      height: 500,
-                      menubar: true,
-                      plugins: [
-                        "advlist",
-                        "autolink",
-                        "lists",
-                        "link",
-                        "image",
-                        "charmap",
-                        "preview",
-                        "anchor",
-                        "searchreplace",
-                        "visualblocks",
-                        "code",
-                        "fullscreen",
-                        "insertdatetime",
-                        "media",
-                        "table",
-                        "code",
-                        "help",
-                        "wordcount",
-                      ],
-                      toolbar:
-                        "undo redo | blocks | " +
-                        "bold italic forecolor | alignleft aligncenter " +
-                        "alignright alignjustify | bullist numlist outdent indent | " +
-                        "removeformat | help",
-                      content_style:
-                        "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
-                      skin: "oxide-dark",
-                      content_css: "dark",
-                    }}
-                    value={translation.content}
-                    onEditorChange={(content) => handleTranslationChange(lang, "content", content)}
-                  />
-                </div>
-              </div>
-            );
+              );
+            }
           })}
       </div>
       <div className="flex justify-end gap-4">

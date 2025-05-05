@@ -44,6 +44,7 @@ const BlogPost = async ({ params }) => {
     });
 
     const post = response.data;
+    const translation = post.translations?.find((t) => t.locale === locale);
 
     const { data: allPosts } = await axios.get(`${apiUrl}/api/blog`, {
       headers: {
@@ -76,12 +77,12 @@ const BlogPost = async ({ params }) => {
               <div className="mb-8">
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                   <span className="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full">
-                    {post.category}
+                    {translation?.category || post.category}
                   </span>
                   <span>{post.readTime}</span>
                 </div>
 
-                <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+                <h1 className="text-4xl font-bold mb-4">{translation?.title || post.title}</h1>
 
                 <div className="flex items-center gap-6 text-sm text-gray-400">
                   <div className="flex items-center">
@@ -108,7 +109,7 @@ const BlogPost = async ({ params }) => {
               {/* Article Content */}
               <div
                 className="prose prose-invert prose-emerald max-w-none"
-                dangerouslySetInnerHTML={{ __html: post.content }}
+                dangerouslySetInnerHTML={{ __html: translation?.content || post.content }}
               />
             </article>
 
