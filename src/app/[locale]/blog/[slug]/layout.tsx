@@ -1,26 +1,18 @@
-import React from "react";
 import type { Metadata, ResolvingMetadata } from "next";
 import axios from "axios";
-import {
-  generateHrefLangs,
-  generateOpenGraphAlternateLocales,
-} from "../../../../utils/generateHrefLangs";
+import { generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
-type generateMetadataProps = {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+type Props = {
+  params: Promise<{ slug: string; locale: string }>;
 };
 
 export async function generateMetadata(
-  { params, searchParams }: generateMetadataProps,
+  { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
 
-  const apiUrl =
-    typeof window !== "undefined"
-      ? window.location.origin
-      : process.env.NEXT_PUBLIC_API_URL || "https://neurogenlab.de";
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://neurogenlab.de";
 
   const { data: post } = await axios.get(`${apiUrl}/api/blog/${slug}`, {
     headers: {
@@ -39,7 +31,7 @@ export async function generateMetadata(
       url: `${apiUrl}/blog/${slug}`,
       siteName: "NeuroGen Lab",
       images: post.images,
-      locale: "en",
+      locale: locale,
       alternateLocale: generateOpenGraphAlternateLocales(),
     },
     twitter: {
@@ -50,7 +42,6 @@ export async function generateMetadata(
       creator: "@neurogenlab",
       site: "@neurogenlab",
     },
-    // alternates: generateHrefLangs(path),
     robots: {
       index: true,
       follow: true,
