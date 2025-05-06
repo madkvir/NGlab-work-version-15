@@ -8,13 +8,16 @@ import axios from "axios";
 import { BlogPost } from "../types/blog";
 import LoadingSpinner from "./chat/LoadingSpinner";
 import { Link } from "../i18n/routing";
+import { useLocale } from "next-intl";
 
 const BlogContent = () => {
   const [posts, setPosts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
+  const [fetchingBlog, setFetchingBlog] = useState(true);
   const postsPerPage = 6;
+  const locale = useLocale();
 
   const apiUrl =
     typeof window !== "undefined"
@@ -42,13 +45,30 @@ const BlogContent = () => {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
-  const [fetchingBlog, setFetchingBlog] = useState(true);
+
+  const getTranslPosts = (posts) => {
+    return posts.map((post: BlogPost) => {
+      const translation = post.translations?.find((t) => t.locale === locale);
+      return {
+        ...post,
+        locale: translation?.locale || "en",
+        title: translation?.title || post.title,
+        excerpt: translation?.excerpt || post.excerpt,
+        content: translation?.content || post.content,
+        category: translation?.category || post.category,
+      };
+    });
+  };
 
   const fetchPosts = useCallback(async () => {
     try {
       setFetchingBlog(true);
       const response = await axios.get(`${apiUrl}/api/blog`);
-      setPosts(response.data);
+      const { data } = response;
+
+      const translPosts = getTranslPosts(data);
+
+      setPosts(translPosts);
     } catch (error) {
       console.error("Failed to fetch posts:", error);
     } finally {
