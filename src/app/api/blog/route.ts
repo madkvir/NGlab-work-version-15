@@ -1,13 +1,7 @@
-import dbConnect from "../../../lib/mongodb";
-import Post from "../../../server/models/Post";
-import { v2 as cloudinary } from "cloudinary";
+import dbConnect from "@/lib/mongodb";
+import Post from "@/server/models/Post";
 import { NextRequest, NextResponse } from "next/server";
-
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-});
+import { uploadImages } from "@/services/cloudinary/unloadImages";
 
 // Конфигурация CORS
 const corsHeaders = {
@@ -43,20 +37,23 @@ export async function POST(req: NextRequest) {
 
     const form = await req.formData();
     const images = form.getAll("images") as File[];
+    const rawTranslations = form.get("translations");
 
-    const uploadedImages = await Promise.all(
-      images.map(async (file) => {
-        const buffer = await file.arrayBuffer();
-        const base64String = Buffer.from(buffer).toString("base64");
-        const dataUri = `data:${file.type};base64,${base64String}`;
+    const uploadedImages = await uploadImages(images);
 
-        const uploadResponse = await cloudinary.uploader.upload(dataUri, {
-          folder: "blog_images",
-        });
+    let translations = null;
 
-        return uploadResponse.secure_url;
-      })
-    );
+    if (typeof rawTranslations === "string") {
+      try {
+        translations = JSON.parse(rawTranslations);
+      } catch (err) {
+        console.error("Invalid JSON in translations:", rawTranslations);
+        return NextResponse.json(
+          { success: false, error: "Invalid translations format" },
+          { status: 400, headers: corsHeaders }
+        );
+      }
+    }
 
     const newPost = await Post.create({
       title: form.get("title"),
@@ -66,7 +63,7 @@ export async function POST(req: NextRequest) {
       category: form.get("category"),
       author: form.get("author"),
       date: form.get("date"),
-      translations: form.get("translations"),
+      translations,
       images: uploadedImages,
     });
 
@@ -91,23 +88,26 @@ export async function PUT(req: Request) {
     const form = await req.formData();
     const images = form.getAll("images") as File[];
     const id = form.get("_id");
+    const rawTranslations = form.get("translations");
 
     const postInfo = await Post.findOne({ _id: id });
     const exstImages = postInfo.images;
 
-    const uploadedImages = await Promise.all(
-      images.map(async (file) => {
-        const buffer = await file.arrayBuffer();
-        const base64String = Buffer.from(buffer).toString("base64");
-        const dataUri = `data:${file.type};base64,${base64String}`;
+    const uploadedImages = await uploadImages(images);
 
-        const uploadResponse = await cloudinary.uploader.upload(dataUri, {
-          folder: "blog_images",
-        });
+    let translations = null;
 
-        return uploadResponse.secure_url;
-      })
-    );
+    if (typeof rawTranslations === "string") {
+      try {
+        translations = JSON.parse(rawTranslations);
+      } catch (err) {
+        console.error("Invalid JSON in translations:", rawTranslations);
+        return NextResponse.json(
+          { success: false, error: "Invalid translations format" },
+          { status: 400, headers: corsHeaders }
+        );
+      }
+    }
 
     const updPost = {
       title: form.get("title"),
@@ -117,6 +117,7 @@ export async function PUT(req: Request) {
       category: form.get("category"),
       author: form.get("author"),
       date: form.get("date"),
+      translations,
       images: [...exstImages, ...uploadedImages],
     };
     const result = await Post.findByIdAndUpdate(id, updPost);
