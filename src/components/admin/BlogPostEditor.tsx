@@ -57,15 +57,6 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
           category: "",
         },
       ],
-      // translations: languages.map((lang) => {
-      //   return {
-      //     locale: lang,
-      //     title: "",
-      //     excerpt: "",
-      //     content: "",
-      //     category: "",
-      //   };
-      // }),
     }
   );
 
@@ -125,40 +116,38 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
     setError(null);
 
     try {
-      if (!formData.title || !formData.content || !formData.excerpt) {
+      const { title, content, excerpt, translations } = formData;
+
+      if (!title || !content || !excerpt) {
         throw new Error("Please fill in all required fields");
       }
 
-      const slug = generateSlug(formData.title, locale);
-      const postData = {
+      const slug = generateSlug(title, locale);
+      const postData: Record<string, any> = {
         ...formData,
-        content: formData.content,
-        slug: slug,
+        slug,
+        content,
       };
+
       delete postData.images;
 
       const formDataToSend = new FormData();
 
-      Object.keys(postData).forEach((key) => {
-        formDataToSend.append(key, (postData as any)[key]);
+      Object.entries(postData).forEach(([key, value]) => {
+        if (key === "translations") {
+          formDataToSend.append("translations", JSON.stringify(value));
+        } else if (typeof value !== "undefined") {
+          formDataToSend.append(key, value as string);
+        }
       });
 
-      if (uploadedImages) {
-        uploadedImages.forEach((file: File) => {
-          formDataToSend.append("images", file);
-        });
-      }
+      uploadedImages?.forEach((file) => {
+        formDataToSend.append("images", file);
+      });
 
-      let savedPost;
-      if (post && post._id) {
-        savedPost = await axios.put(`${apiUrl}/api/blog`, formDataToSend, {
-          headers: {},
-        });
-      } else {
-        savedPost = await axios.post(`${apiUrl}/api/blog`, formDataToSend, {
-          headers: {},
-        });
-      }
+      const url = `${apiUrl}/api/blog`;
+      const method = post && post._id ? axios.put : axios.post;
+      const savedPost = await method(url, formDataToSend);
 
       onSave(savedPost);
     } catch (error) {
