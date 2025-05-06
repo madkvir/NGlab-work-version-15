@@ -21,13 +21,15 @@ export async function generateMetadata(
     },
   });
 
+  const translation = post.translations?.find((t) => t.locale === locale);
+
   return {
-    title: post.title,
-    description: "page description",
+    title: translation?.title || post.title,
+    description: translation?.excerpt || post.excerpt,
     openGraph: {
       type: "website",
-      title: post.title,
-      description: post.excerpt,
+      title: translation?.title || post.title,
+      description: translation?.excerpt || post.excerpt,
       url: `${apiUrl}/blog/${slug}`,
       siteName: "NeuroGen Lab",
       images: post.images,
@@ -36,8 +38,8 @@ export async function generateMetadata(
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
+      title: translation?.title || post.title,
+      description: translation?.excerpt || post.excerpt,
       images: post.images,
       creator: "@neurogenlab",
       site: "@neurogenlab",
