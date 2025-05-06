@@ -1,22 +1,22 @@
-import type { ConsentSettings } from './types';
+import type { ConsentSettings } from "./types";
 
-declare global {
-  interface Window {
-    UC_UI: {
-      isInitialized(): boolean;
-      acceptAllConsents(): void;
-      rejectAllConsents(): void;
-      showFirstLayer(): void;
-      hideFirstLayer(): void;
-      getServicesBaseInfo(): Array<{
-        id: string;
-        consent: {
-          status: boolean;
-        };
-      }>;
-    };
-  }
-}
+// declare global {
+//   interface Window {
+//     UC_UI: {
+//       isInitialized(): boolean;
+//       acceptAllConsents(): void;
+//       rejectAllConsents(): void;
+//       showFirstLayer(): void;
+//       hideFirstLayer(): void;
+//       getServicesBaseInfo(): Array<{
+//         id: string;
+//         consent: {
+//           status: boolean;
+//         };
+//       }>;
+//     };
+//   }
+// }
 
 export const initUsercentrics = (): void => {
   // Usercentrics is loaded via script tag in index.html
@@ -31,21 +31,21 @@ export const getUsercentricsConsent = (): Partial<ConsentSettings> => {
   const services = window.UC_UI.getServicesBaseInfo();
   const settings: Partial<ConsentSettings> = {};
 
-  services.forEach(service => {
-    const consentValue = service.consent.status ? 'granted' : 'denied';
-    
+  services.forEach((service) => {
+    const consentValue = service.consent.status ? "granted" : "denied";
+
     // Map Usercentrics service IDs to consent settings
     switch (service.id) {
-      case 'analytics':
+      case "analytics":
         settings.analytics_storage = consentValue;
         break;
-      case 'advertising':
+      case "advertising":
         settings.ad_storage = consentValue;
         break;
-      case 'functionality':
+      case "functionality":
         settings.functionality_storage = consentValue;
         break;
-      case 'personalization':
+      case "personalization":
         settings.personalization_storage = consentValue;
         break;
     }

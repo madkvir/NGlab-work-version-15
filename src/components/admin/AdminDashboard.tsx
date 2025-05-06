@@ -77,15 +77,6 @@ const AdminDashboard: React.FC = () => {
           category: "",
         },
       ],
-      // translations: languages.map((lang) => {
-      //   return {
-      //     locale: lang,
-      //     title: "",
-      //     excerpt: "",
-      //     content: "",
-      //     category: "",
-      //   };
-      // }),
     });
     setIsEditing(true);
   };
@@ -103,8 +94,7 @@ const AdminDashboard: React.FC = () => {
     }
   };
 
-  const handleSavePost = (post: BlogPost) => {
-    console.log("Post saved:", post);
+  const handleSavePost = () => {
     setIsEditing(false);
     setCurrentPost(null);
     fetchPosts();

@@ -10,7 +10,7 @@ import { useParams } from "next/navigation";
 
 interface BlogPostEditorProps {
   post: Partial<BlogPost> | null;
-  onSave: (post: BlogPost) => void;
+  onSave: () => void;
   onCancel: () => void;
 }
 
@@ -149,7 +149,7 @@ const BlogPostEditor: React.FC<BlogPostEditorProps> = ({ post, onSave, onCancel 
       const method = post && post._id ? axios.put : axios.post;
       const savedPost = await method(url, formDataToSend);
 
-      onSave(savedPost);
+      onSave();
     } catch (error) {
       console.error("Error saving post:", error);
       setError(error instanceof Error ? error.message : "Failed to save post. Please try again.");
