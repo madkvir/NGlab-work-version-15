@@ -24,6 +24,6 @@
     "isolatedModules": true,
     "strictNullChecks": true
   },
-  "include": ["src", "./dist/types/**/*.ts", "./next-env.d.ts", ".next/types/**/*.ts"],
+  "include": ["./dist/types/**/*.ts", "./next-env.d.ts", ".next/types/**/*.ts", "src/types"],
   "exclude": ["node_modules"]
 }
