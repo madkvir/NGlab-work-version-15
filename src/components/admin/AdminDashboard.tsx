@@ -25,7 +25,6 @@ const AdminDashboard: React.FC = () => {
       setFetchingBlog(true);
       const response = await axios.get(`${apiUrl}/api/blog`);
       setPosts(response.data);
-      console.log("fetched posts", response.data);
     } catch (error) {
       console.error("Failed to fetch posts:", error);
     } finally {
