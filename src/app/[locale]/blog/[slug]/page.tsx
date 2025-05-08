@@ -169,7 +169,6 @@ const BlogPost = async ({ params }) => {
       notFound();
     }
 
-    // Для остальных ошибок выбрасываем их для обработки глобальным error boundary
     throw new Error(`Failed to load blog post: ${error.message}`);
   }
 };
