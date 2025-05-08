@@ -1,3 +1,11 @@
+export type blogTranslation = {
+  locale: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  category: string;
+};
+
 export interface BlogPost {
   // id: string;
   _id?: string;
@@ -10,4 +18,5 @@ export interface BlogPost {
   category: string;
   readTime?: string;
   slug: string;
+  translations: blogTranslation[];
 }

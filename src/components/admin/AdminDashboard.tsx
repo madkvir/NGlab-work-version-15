@@ -7,6 +7,8 @@ import type { BlogPost } from "../../types/blog";
 import axios from "axios";
 import LoadingSpinner from "../chat/LoadingSpinner";
 
+const languages = ["de", "uk", "ru", "es"];
+
 const AdminDashboard: React.FC = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [currentPost, setCurrentPost] = useState<BlogPost | Partial<BlogPost> | null>(null);
@@ -44,6 +46,36 @@ const AdminDashboard: React.FC = () => {
       category: "",
       author: "",
       date: new Date().toISOString().split("T")[0],
+      translations: [
+        {
+          locale: "de",
+          title: "",
+          excerpt: "",
+          content: "",
+          category: "",
+        },
+        {
+          locale: "uk",
+          title: "",
+          excerpt: "",
+          content: "",
+          category: "",
+        },
+        {
+          locale: "ru",
+          title: "",
+          excerpt: "",
+          content: "",
+          category: "",
+        },
+        {
+          locale: "es",
+          title: "",
+          excerpt: "",
+          content: "",
+          category: "",
+        },
+      ],
     });
     setIsEditing(true);
   };
@@ -61,8 +93,7 @@ const AdminDashboard: React.FC = () => {
     }
   };
 
-  const handleSavePost = (post: BlogPost) => {
-    console.log("Post saved:", post);
+  const handleSavePost = () => {
     setIsEditing(false);
     setCurrentPost(null);
     fetchPosts();

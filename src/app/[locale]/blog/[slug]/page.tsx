@@ -36,9 +36,6 @@ const BlogPost = async ({ params }) => {
       : process.env.NEXT_PUBLIC_API_URL || "https://neurogenlab.de";
 
   try {
-    // console.log(`Fetching blog post with slug: ${slug}, locale: ${locale}`);
-
-    // Получаем данные поста
     const response = await axios.get(`${apiUrl}/api/blog/${slug}`, {
       headers: {
         Accept: "application/json",
@@ -46,11 +43,9 @@ const BlogPost = async ({ params }) => {
       },
     });
 
-    // console.log("Post data received successfully");
     const post = response.data;
+    const translation = post.translations?.find((t) => t.locale === locale);
 
-    // Получаем все посты для related posts
-    // console.log("Fetching all posts for related content");
     const { data: allPosts } = await axios.get(`${apiUrl}/api/blog`, {
       headers: {
         Accept: "application/json",
@@ -58,13 +53,9 @@ const BlogPost = async ({ params }) => {
       },
     });
 
-    // console.log(`Found ${allPosts.length} total posts`);
-
     const relatedPosts = allPosts
       .filter((p) => p.category === post.category && p._id !== post._id)
       .slice(0, 2);
-
-    // console.log(`Found ${relatedPosts.length} related posts`);
 
     return (
       <div className="min-h-screen bg-[#0B0F19] text-white">
@@ -86,12 +77,12 @@ const BlogPost = async ({ params }) => {
               <div className="mb-8">
                 <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                   <span className="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full">
-                    {post.category}
+                    {translation?.category || post.category}
                   </span>
                   <span>{post.readTime}</span>
                 </div>
 
-                <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+                <h1 className="text-4xl font-bold mb-4">{translation?.title || post.title}</h1>
 
                 <div className="flex items-center gap-6 text-sm text-gray-400">
                   <div className="flex items-center">
@@ -107,16 +98,18 @@ const BlogPost = async ({ params }) => {
 
               {/* Featured Image */}
               <div className="rounded-xl overflow-hidden mb-8">
-                {post.images.length > 0 &&
-                  post.images.map((image) => (
-                    <img key={image} src={image} alt={post.title} className="w-full h-auto" />
-                  ))}
+                {post.images.length > 0 && (
+                  // post.images.map((image) => (
+                  //   <img key={image} src={image} alt={post.title} className="w-full h-auto" />
+                  // ))
+                  <img src={post.images[0]} alt={post.title} className="w-full h-auto" />
+                )}
               </div>
 
               {/* Article Content */}
               <div
                 className="prose prose-invert prose-emerald max-w-none"
-                dangerouslySetInnerHTML={{ __html: post.content }}
+                dangerouslySetInnerHTML={{ __html: translation?.content || post.content }}
               />
             </article>
 
@@ -176,7 +169,6 @@ const BlogPost = async ({ params }) => {
       notFound();
     }
 
-    // Для остальных ошибок выбрасываем их для обработки глобальным error boundary
     throw new Error(`Failed to load blog post: ${error.message}`);
   }
 };

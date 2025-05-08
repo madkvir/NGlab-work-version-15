@@ -1,5 +1,28 @@
 import mongoose, { model, models } from "mongoose";
 
+const postTranlationSchema = new mongoose.Schema({
+  locale: {
+    type: String,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  excerpt: {
+    type: String,
+    required: true,
+  },
+  content: {
+    type: String,
+    required: true,
+  },
+  category: {
+    type: String,
+    required: true,
+  },
+});
+
 const postSchema = new mongoose.Schema(
   {
     title: {
@@ -9,6 +32,7 @@ const postSchema = new mongoose.Schema(
     slug: {
       type: String,
       required: true,
+      unique: true,
     },
     excerpt: {
       type: String,
@@ -18,9 +42,7 @@ const postSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    images: {
-      type: [String],
-    },
+    images: [String],
     category: {
       type: String,
       required: true,
@@ -36,8 +58,13 @@ const postSchema = new mongoose.Schema(
     readTime: {
       type: String,
     },
+
+    translations: [postTranlationSchema],
   },
-  { versionKey: false, timestamps: true }
+  {
+    versionKey: false,
+    timestamps: true,
+  }
 );
 
 const Post = models.Post || model("Post", postSchema);

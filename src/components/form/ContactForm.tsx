@@ -13,11 +13,11 @@ import getPageLangUnit from "../../utils/getPageLangUnit";
 import { Link } from "../../i18n/routing";
 import axios from "axios";
 
-declare global {
-  interface Window {
-    dataLayer?: Object[];
-  }
-}
+// declare global {
+//   interface Window {
+//     dataLayer?: Record<string, any>[];
+//   }
+// }
 
 const formTranslations = {
   en: {
@@ -45,7 +45,8 @@ const formTranslations = {
     privacyPolicy: "Datenschutzerklärung",
     success: {
       title: "Nachricht erfolgreich gesendet!",
-      description: "Vielen Dank für Ihre Kontaktaufnahme. Wir melden uns schnellstmöglich bei Ihnen.",
+      description:
+        "Vielen Dank für Ihre Kontaktaufnahme. Wir melden uns schnellstmöglich bei Ihnen.",
     },
   },
   es: {
@@ -59,7 +60,8 @@ const formTranslations = {
     privacyPolicy: "Política de Privacidad",
     success: {
       title: "¡Mensaje Enviado con Éxito!",
-      description: "Gracias por contactarnos. Nos pondremos en contacto con usted lo antes posible.",
+      description:
+        "Gracias por contactarnos. Nos pondremos en contacto con usted lo antes posible.",
     },
   },
   ru: {

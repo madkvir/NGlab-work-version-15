@@ -1,24 +1,25 @@
-import { useState } from 'react';
-import { submitForm } from '../services/form.service';
+import { useState } from "react";
+import { submitForm } from "../services/form.service";
+import { FormData } from "@/types/form";
 
 interface FormState {
   isSubmitting: boolean;
-  submitStatus: 'idle' | 'success' | 'error';
+  submitStatus: "idle" | "success" | "error";
   error: string | null;
 }
 
 export const useFormSubmission = () => {
   const [formState, setFormState] = useState<FormState>({
     isSubmitting: false,
-    submitStatus: 'idle',
-    error: null
+    submitStatus: "idle",
+    error: null,
   });
 
-  const handleSubmit = async (formData: Record<string, any>) => {
+  const handleSubmit = async (formData: FormData) => {
     setFormState({
       isSubmitting: true,
-      submitStatus: 'idle',
-      error: null
+      submitStatus: "idle",
+      error: null,
     });
 
     try {
@@ -26,16 +27,16 @@ export const useFormSubmission = () => {
 
       setFormState({
         isSubmitting: false,
-        submitStatus: 'success',
-        error: null
+        submitStatus: "success",
+        error: null,
       });
 
       return true;
     } catch (error) {
       setFormState({
         isSubmitting: false,
-        submitStatus: 'error',
-        error: error instanceof Error ? error.message : 'Failed to submit form'
+        submitStatus: "error",
+        error: error instanceof Error ? error.message : "Failed to submit form",
       });
 
       return false;
@@ -44,6 +45,6 @@ export const useFormSubmission = () => {
 
   return {
     ...formState,
-    submitForm: handleSubmit
+    submitForm: handleSubmit,
   };
 };

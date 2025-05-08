@@ -1,33 +1,33 @@
-import { useState } from 'react';
-import { submitForm } from '../services/form.service';
+import { useState } from "react";
+import { submitForm } from "../services/form.service";
 
 const initialState = {
-  name: '',
-  email: '',
-  phone: '',
-  message: '',
-  consent: false
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+  consent: false,
 };
 
 export const useContactForm = () => {
   const [formData, setFormData] = useState(initialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!formData.consent) {
-      setError('Please agree to the data processing terms');
+      setError("Please agree to the data processing terms");
       return;
     }
 
@@ -40,7 +40,7 @@ export const useContactForm = () => {
       setSuccess(true);
       setFormData(initialState);
     } catch (error) {
-      setError(error instanceof Error ? error.message : 'Failed to submit form');
+      setError(error instanceof Error ? error.message : "Failed to submit form");
     } finally {
       setIsSubmitting(false);
     }
@@ -52,6 +52,6 @@ export const useContactForm = () => {
     error,
     success,
     handleChange,
-    handleSubmit
+    handleSubmit,
   };
 };

@@ -1,44 +1,9 @@
-import { Metadata } from "next";
 import React from "react";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
 import BackToHome from "../../../components/BackToHome";
 import BlogContent from "../../../components/BlogContent";
-
-export const metadata: Metadata = {
-  title: "Blog - Latest Insights on AI Technology",
-  description:
-    "Stay updated with the latest insights about AI technology and implementation. Explore our blog for articles, tips, and trends.",
-  keywords: ["AI", "technology", "blog", "insights", "articles"],
-  openGraph: {
-    title: "Blog - Latest Insights on AI Technology",
-    description:
-      "Stay updated with the latest insights about AI technology and implementation. Explore our blog for articles, tips, and trends.",
-    url: "https://neurogenlab.de/blog",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
-  },
-  twitter: {
-    title: "Blog - Latest Insights on AI Technology",
-    description:
-      "Stay updated with the latest insights about AI technology and implementation. Explore our blog for articles, tips, and trends.",
-    images: [
-      {
-        url: "", // TODO: add url and alt
-        alt: "",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/blog",
-  },
-};
 
 const Blog = () => {
   return (
