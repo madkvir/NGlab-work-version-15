@@ -9,6 +9,7 @@ import { BlogPost } from "../types/blog";
 import LoadingSpinner from "./chat/LoadingSpinner";
 import { Link } from "../i18n/routing";
 import { useLocale } from "next-intl";
+import Post from "@/server/models/Post";
 
 const BlogContent = () => {
   const [posts, setPosts] = useState([]);

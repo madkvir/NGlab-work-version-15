@@ -102,7 +102,7 @@ const BlogPost = async ({ params }) => {
                   // post.images.map((image) => (
                   //   <img key={image} src={image} alt={post.title} className="w-full h-auto" />
                   // ))
-                  <img src={post.images[0]} alt={post.title} className="w-full h-auto" />
+                  <img src={post.images[0]} alt={post.title} className="w-3/5 h-auto" />
                 )}
               </div>
 
