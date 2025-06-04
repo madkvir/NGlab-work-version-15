@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     url: "https://neurogenlab.de/privacy",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Privacy Policy",
       },
     ],
   },
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
       "Discover how we protect your privacy and handle your personal information. Complete overview of our data protection practices and your rights.",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Privacy Policy",
       },
     ],
   },
