@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     url: "https://neurogenlab.de/tools/ai-assistant",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-ai-assistant.jpg",
+        alt: "NeuroGen Lab AI Assistant",
       },
     ],
   },
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     description: "Enhance your business efficiency with our AI Assistant",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-ai-assistant.jpg",
+        alt: "NeuroGen Lab AI Assistant",
       },
     ],
   },

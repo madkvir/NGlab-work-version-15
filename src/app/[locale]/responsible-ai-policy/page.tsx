@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     url: "https://neurogenlab.de/responsible-ai-policy",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Responsible AI Policy",
       },
     ],
   },
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
       "Our commitment to ethical AI development and implementation. Comprehensive guidelines ensuring responsible AI usage and user protection.",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Responsible AI Policy",
       },
     ],
   },

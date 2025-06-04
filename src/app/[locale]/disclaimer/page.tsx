@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     url: "https://neurogenlab.de/disclaimer",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Legal Disclaimer",
       },
     ],
   },
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
       "Essential legal information about using NeuroGen Lab's website and services. Read our full disclaimer and terms of use.",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Legal Disclaimer",
       },
     ],
   },

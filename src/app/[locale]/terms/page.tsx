@@ -58,8 +58,8 @@ export const metadata: Metadata = {
     url: "https://neurogenlab.de/terms",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Terms of Service",
       },
     ],
   },
@@ -69,8 +69,8 @@ export const metadata: Metadata = {
       "Essential information about your rights and obligations when using NeuroGen Lab's AI services. Read our complete terms of service.",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Terms of Service",
       },
     ],
   },

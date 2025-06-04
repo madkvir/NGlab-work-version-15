@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     url: "https://neurogenlab.de/cookie-policy",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Cookie Policy",
       },
     ],
   },
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
       "Everything you need to know about cookies and tracking technologies used on NeuroGen Lab website.",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Cookie Policy",
       },
     ],
   },

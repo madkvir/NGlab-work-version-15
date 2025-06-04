@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     url: "https://neurogenlab.de/impressum",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Legal Notice",
       },
     ],
   },
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
       "Official company information and legal details for NeuroGen Lab GmbH. Registration number, VAT ID, and contact information.",
     images: [
       {
-        url: "", // TODO: add url and alt
-        alt: "",
+        url: "/assets/images/og-guide.jpg",
+        alt: "NeuroGen Lab Legal Notice",
       },
     ],
   },
