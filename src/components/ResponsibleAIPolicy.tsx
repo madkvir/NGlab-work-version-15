@@ -101,10 +101,10 @@ For questions about these terms, please contact:
 
 NeuroGen Lab
 Legal Department
-Musterstraße 123
-10115 Berlin, Germany
+Gartenweg 2
+16515 Oraniebburg, Germany
 Email: office@neurogenlab.de
-Phone: +49 (0) 30 123456789`,
+Phone: +49 151 22582232`,
     },
   ];
 

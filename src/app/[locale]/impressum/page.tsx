@@ -81,7 +81,7 @@ const Impressum = () => {
             href="tel:+4930123456789"
             className="text-emerald-400 hover:text-emerald-300 transition-colors"
           >
-            +49 (0) 30 123456789
+            +49 151 22582232
           </a>
         </span>,
         <span className="flex items-center gap-2">
@@ -100,7 +100,7 @@ const Impressum = () => {
     {
       title: "Address",
       icon: <MapPin className="w-6 h-6" />,
-      content: ["Musterstraße 123", "10115 Berlin", "Germany"],
+      content: ["Gartenweg 2", "16515 Oraniebburg", "Germany"],
     },
     {
       title: "Responsible for Content",

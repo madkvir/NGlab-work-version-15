@@ -847,7 +847,7 @@ export const footerTranslations = {
     },
     contactUs: {
       title: 'Contact Us',
-      phone: '+49 (0) 30 123456789',
+      phone: '+49 151 22582232',
       email: 'office@neurogenlab.de',
       whatsApp: 'WhatsApp',
       linkedIn: 'LinkedIn',
@@ -889,7 +889,7 @@ export const footerTranslations = {
     },
     contactUs: {
       title: 'Kontakt',
-      phone: '+49 (0) 30 123456789',
+      phone: '+49 151 22582232',
       email: 'office@neurogenlab.de',
       whatsApp: 'WhatsApp',
       linkedIn: 'LinkedIn',
@@ -931,7 +931,7 @@ export const footerTranslations = {
     },
     contactUs: {
       title: 'Contáctenos',
-      phone: '+49 (0) 30 123456789',
+      phone: '++49 151 22582232',
       email: 'office@neurogenlab.de',
       whatsApp: 'WhatsApp',
       linkedIn: 'LinkedIn',
@@ -973,7 +973,7 @@ export const footerTranslations = {
     },
     contactUs: {
       title: 'Свяжитесь с нами',
-      phone: '+49 (0) 30 123456789',
+      phone: '+49 151 22582232',
       email: 'office@neurogenlab.de',
       whatsApp: 'WhatsApp',
       linkedIn: 'LinkedIn',
@@ -1015,7 +1015,7 @@ export const footerTranslations = {
     },
     contactUs: {
       title: "Зв'яжіться з нами",
-      phone: '+49 (0) 30 123456789',
+      phone: '+49 151 22582232',
       email: 'office@neurogenlab.de',
       whatsApp: 'WhatsApp',
       linkedIn: 'LinkedIn',
@@ -1402,11 +1402,11 @@ export const contactTranslations = {
     contactInfo: {
       address: {
         title: 'Address',
-        content: 'Musterstraße 123, 10115 Berlin, Germany',
+        content: 'Gartenweg 2, 16515 Oranienburg, Germany',
       },
       phone: {
         title: 'Phone',
-        content: '+49 (0) 30 123456789',
+        content: '+49 151 22582232',
       },
       email: {
         title: 'Email',
@@ -1432,11 +1432,11 @@ export const contactTranslations = {
     contactInfo: {
       address: {
         title: 'Adresse',
-        content: 'Musterstraße 123, 10115 Berlin, Deutschland',
+        content: 'Gartenweg 2, 16515 Oranienburg, Deutschland',
       },
       phone: {
         title: 'Telefon',
-        content: '+49 (0) 30 123456789',
+        content: '+49 151 22582232',
       },
       email: {
         title: 'E-Mail',
@@ -1462,11 +1462,11 @@ export const contactTranslations = {
     contactInfo: {
       address: {
         title: 'Dirección',
-        content: 'Musterstraße 123, 10115 Berlín, Alemania',
+        content: 'Gartenweg 2, 16515 Oranienburg, Alemania',
       },
       phone: {
         title: 'Teléfono',
-        content: '+49 (0) 30 123456789',
+        content: '+49 151 22582232',
       },
       email: {
         title: 'Correo electrónico',
@@ -1491,11 +1491,11 @@ export const contactTranslations = {
     contactInfo: {
       address: {
         title: 'Адрес',
-        content: 'Musterstraße 123, 10115 Берлин, Германия',
+        content: 'Gartenweg 2, 16515 Oranienburg, Германия',
       },
       phone: {
         title: 'Телефон',
-        content: '+49 (0) 30 123456789',
+        content: '+49 151 22582232',
       },
       email: {
         title: 'Email',
@@ -1520,11 +1520,11 @@ export const contactTranslations = {
     contactInfo: {
       address: {
         title: 'Адреса',
-        content: 'Musterstraße 123, 10115 Берлін, Німеччина',
+        content: 'Gartenweg 2, 16515 Oranienburg, Germany',
       },
       phone: {
         title: 'Телефон',
-        content: '+49 (0) 30 123456789',
+        content: '+49 151 22582232',
       },
       email: {
         title: 'Email',
