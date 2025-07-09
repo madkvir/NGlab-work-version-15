@@ -1,3 +1,4 @@
+import React from "react";
 import { Scale, FileText, Book, Shield, CreditCard, Users, Brain, Gavel } from "lucide-react";
 import BackToHome from "../components/BackToHome";
 import Footer from "./Footer";
