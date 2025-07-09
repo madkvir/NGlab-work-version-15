@@ -55,11 +55,9 @@ const Impressum = () => {
       title: "Company Information",
       icon: <Building className="w-6 h-6" />,
       content: [
-        "NeuroGen Lab",
-        "Registered in the Commercial Register",
-        "Registration Court: Amtsgericht Berlin-Charlottenburg",
-        "Registration Number: HRB XXXXXX",
-        "VAT ID: DE XXXXXXXXX",
+        "Leistungserbringer: NeuroGen Lab Softwareentwicklung und KI-Beratung – Maksym Bezverkhyi",
+        "Rechtsform: Einzelunternehmen (nicht eingetragen)",
+        "Steuernummer: 053/206/02884",
       ],
     },
     {
@@ -78,7 +76,7 @@ const Impressum = () => {
         <span className="flex items-center gap-2">
           <span>Phone: </span>
           <a
-            href="tel:+4930123456789"
+            href="tel:+4915122582232"
             className="text-emerald-400 hover:text-emerald-300 transition-colors"
           >
             +49 151 22582232
@@ -105,7 +103,7 @@ const Impressum = () => {
     {
       title: "Responsible for Content",
       icon: <FileText className="w-6 h-6" />,
-      content: ["According to § 55 Abs. 2 RStV:", "Sarah Johnson", "Address same as above"],
+      content: ["According to § 55 Abs. 2 RStV:", "Maksym Bezverkhyi", "Address same as above"],
     },
     {
       title: "Legal Notices",
