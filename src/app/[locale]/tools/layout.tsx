@@ -1,7 +1,7 @@
 import React from "react";
 import HreflangTags from '../../../components/HreflangTags';
 
-export default function AboutUsLayout({
+export default function ToolsLayout({
   children,
   params,
 }: {
@@ -10,8 +10,8 @@ export default function AboutUsLayout({
 }) {
   return (
     <>
-      <HreflangTags path="about-us" currentLocale={params.locale} />
+      <HreflangTags path="tools" currentLocale={params.locale} />
       {children}
     </>
   );
-} 
+}

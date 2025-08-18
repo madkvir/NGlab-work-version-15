@@ -1,5 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
+import { generateHrefLangs } from '../../../utils/generateHrefLangs';
+import HreflangTags from '../../../components/HreflangTags';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -98,16 +100,7 @@ export const metadata: Metadata = {
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  alternates: {
-    canonical: `${baseUrl}/en/guide`,
-    languages: {
-      'en': `${baseUrl}/en/guide`,
-      'de': `${baseUrl}/de/guide`,
-      'es': `${baseUrl}/es/guide`,
-      'ru': `${baseUrl}/ru/guide`,
-      'uk': `${baseUrl}/uk/guide`,
-    }
-  },
+  alternates: generateHrefLangs('guide'),
   robots: {
     index: true,
     follow: true,
@@ -124,11 +117,14 @@ export const metadata: Metadata = {
 
 export default function GuideLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
   return (
     <>
+      <HreflangTags path="guide" currentLocale={params.locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

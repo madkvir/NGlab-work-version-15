@@ -10,10 +10,13 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "next preview",
     "update-layouts": "ts-node --esm src/scripts/updateLayouts.ts",
+    "create-tool-layouts": "ts-node --esm src/scripts/createToolLayouts.ts",
     "update-sitemap": "node src/scripts/updateSitemap.mjs",
     "watch-sitemap": "node src/scripts/watchSitemap.mjs",
     "check-urls": "node src/scripts/checkDuplicateUrls.ts",
-    "seo-monitor": "node src/scripts/seoMonitor.ts"
+    "seo-monitor": "node src/scripts/seoMonitor.ts",
+    "check-hreflang": "node src/scripts/checkHreflang.ts",
+    "check-bidirectional-hreflang": "node src/scripts/checkBidirectionalHreflang.ts"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.8",

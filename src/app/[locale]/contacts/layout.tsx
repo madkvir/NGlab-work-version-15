@@ -1,20 +1,17 @@
-import React from 'react';
-import { generatePageMetadata } from '../../../utils/metadata';
-
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
-
-export const metadata = generatePageMetadata(
-  'contacts',
-  'Contact Us | NeuroGen Lab',
-  'Get in touch with NeuroGen Lab. Contact our team for AI solutions, support, and business inquiries.',
-  `${baseUrl}/assets/images/og-contacts.jpg`,
-  'NeuroGen Lab Contact Information'
-);
+import React from "react";
+import HreflangTags from '../../../components/HreflangTags';
 
 export default function ContactsLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      <HreflangTags path="contacts" currentLocale={params.locale} />
+      {children}
+    </>
+  );
 } 

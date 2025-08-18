@@ -194,10 +194,12 @@ export default async function RootLayout({
         {/* Основной hreflang тег для английской версии как x-default */}
         <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/en`} />
 
-        {/* Теги hreflang для всех поддерживаемых языков */}
-        {SUPPORTED_LANGUAGES.map((lang) => (
-          <link key={lang} rel="alternate" hrefLang={lang} href={`${baseUrl}/${lang}`} />
-        ))}
+        {/* Hreflang теги для всех языковых версий главной страницы */}
+        <link rel="alternate" hrefLang="en" href={`${baseUrl}/en`} />
+        <link rel="alternate" hrefLang="de" href={`${baseUrl}/de`} />
+        <link rel="alternate" hrefLang="es" href={`${baseUrl}/es`} />
+        <link rel="alternate" hrefLang="ru" href={`${baseUrl}/ru`} />
+        <link rel="alternate" hrefLang="uk" href={`${baseUrl}/uk`} />
 
         <script
           type="application/ld+json"
