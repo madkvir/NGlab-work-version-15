@@ -1,16 +1,18 @@
 import React from "react";
 import HreflangTags from '../../../../components/HreflangTags';
 
-export default function CounselingLayout({
+export default async function CounselingLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  
   return (
     <>
-      <HreflangTags path="tools/counseling" currentLocale={params.locale} />
+      <HreflangTags path="tools/counseling" currentLocale={locale} />
       {children}
     </>
   );

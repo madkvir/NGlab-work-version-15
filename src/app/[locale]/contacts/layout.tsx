@@ -1,16 +1,18 @@
 import React from "react";
 import HreflangTags from '../../../components/HreflangTags';
 
-export default function ContactsLayout({
+export default async function ContactsLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  
   return (
     <>
-      <HreflangTags path="contacts" currentLocale={params.locale} />
+      <HreflangTags path="contacts" currentLocale={locale} />
       {children}
     </>
   );

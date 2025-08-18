@@ -1,16 +1,18 @@
 import React from "react";
 import HreflangTags from '../../../components/HreflangTags';
 
-export default function BlogLayout({
+export default async function BlogLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  
   return (
     <>
-      <HreflangTags path="blog" currentLocale={params.locale} />
+      <HreflangTags path="blog" currentLocale={locale} />
       {children}
     </>
   );

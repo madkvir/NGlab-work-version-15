@@ -33,16 +33,18 @@ const TOOLS = [
 const LAYOUT_TEMPLATE = `import React from "react";
 import HreflangTags from '../../../../components/HreflangTags';
 
-export default function {ToolName}Layout({
+export default async function {ToolName}Layout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  
   return (
     <>
-      <HreflangTags path="tools/{toolPath}" currentLocale={params.locale} />
+      <HreflangTags path="tools/{toolPath}" currentLocale={locale} />
       {children}
     </>
   );

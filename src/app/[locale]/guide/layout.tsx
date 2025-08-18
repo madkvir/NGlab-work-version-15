@@ -115,16 +115,18 @@ export const metadata: Metadata = {
   authors: [{ name: "NeuroGen Lab Team" }],
 };
 
-export default function GuideLayout({
+export default async function GuideLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+  
   return (
     <>
-      <HreflangTags path="guide" currentLocale={params.locale} />
+      <HreflangTags path="guide" currentLocale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

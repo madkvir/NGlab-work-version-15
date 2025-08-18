@@ -167,11 +167,11 @@ export default async function RootLayout({
   params,
 }: {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   const cookieStore = await cookies();
   const initialLanguage = cookieStore.get("NEXT_LOCALE")?.value || "en";
-  const { locale } = await params;
 
   if (!SUPPORTED_LANGUAGES.includes(locale as any)) {
     notFound();
