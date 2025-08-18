@@ -1,7 +1,5 @@
 import React from "react";
 import { Metadata } from "next";
-import { generateHrefLangs } from '../../../utils/generateHrefLangs';
-import HreflangTags from '../../../components/HreflangTags';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
@@ -9,53 +7,25 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "AI Implementation Guide",
-  "name": "AI Implementation Guide",
-  "articleSection": "Business Guide",
-  "description": "Comprehensive guide for implementing AI solutions in your business",
-  "url": `${baseUrl}/guide`,
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": `${baseUrl}/guide`
-  },
+  "headline": "Complete Guide to AI Integration",
+  "description": "Learn how to integrate AI solutions into your business workflow",
   "author": {
     "@type": "Organization",
-    "name": "NeuroGen Lab",
-    "url": baseUrl,
-    "logo": {
-      "@type": "ImageObject",
-      "url": `${baseUrl}/logo.png`
-    }
+    "name": "NeuroGen Lab"
   },
   "publisher": {
     "@type": "Organization",
     "name": "NeuroGen Lab",
-    "url": baseUrl,
     "logo": {
       "@type": "ImageObject",
-      "url": `${baseUrl}/logo.png`
+      "url": "https://neurogenlab.de/logo.png"
     }
   },
   "datePublished": "2024-01-01",
-  "dateModified": new Date().toISOString().split('T')[0],
-  "image": {
-    "@type": "ImageObject",
-    "url": `${baseUrl}/assets/images/og-guide.jpg`,
-    "width": 1200,
-    "height": 630
-  },
-  "keywords": [
-    "AI implementation guide",
-    "business automation guide",
-    "AI solutions guide",
-    "digital transformation guide"
-  ],
-  "inLanguage": "en",
-  "isAccessibleForFree": true,
-  "provider": {
-    "@type": "Organization",
-    "name": "NeuroGen Lab",
-    "url": baseUrl
+  "dateModified": "2024-01-01",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://neurogenlab.de/en/guide"
   }
 };
 
@@ -100,7 +70,6 @@ export const metadata: Metadata = {
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  alternates: generateHrefLangs('guide'),
   robots: {
     index: true,
     follow: true,
@@ -122,11 +91,8 @@ export default async function GuideLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-  
   return (
     <>
-      <HreflangTags path="guide" currentLocale={locale} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

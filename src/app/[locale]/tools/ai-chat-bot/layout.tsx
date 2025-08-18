@@ -1,7 +1,5 @@
 import React from "react";
 import { Metadata } from "next";
-import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
-
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 // Добавляем JSON-LD разметку для лучшего SEO
@@ -64,7 +62,7 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: generateOpenGraphAlternateLocales(),
+    alternateLocale: ['de', 'es', 'ru', 'uk'],
   },
   twitter: {
     card: 'summary_large_image',
@@ -75,7 +73,6 @@ export const metadata: Metadata = {
     site: "@neurogenlab",
   },
   authors: [{ name: "NeuroGen Lab Team" }], // Добавлены авторы
-  alternates: generateHrefLangs('tools/ai-chat-bot'),
   robots: {
     index: true,
     follow: true,

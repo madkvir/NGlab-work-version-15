@@ -51,14 +51,19 @@ const Counseling = () => {
     [language]
   );
 
+  // Убеждаемся что передаем массивы
+  const features = Array.isArray(t.features) ? t.features : [];
+  const benefits = Array.isArray(t.benefits) ? t.benefits : [];
+  const integrations = Array.isArray(t.integrations) ? t.integrations : [];
+
   return (
     <ToolPageTemplate
-      title={t.title}
-      description={t.description}
+      title={typeof t.title === 'string' ? t.title : 'AI Counseling'}
+      description={typeof t.description === 'string' ? t.description : 'Consultation focused on growth, automation, and profit increase.'}
       icon={<HeartHandshake className="w-8 h-8 text-purple-400" />}
-      features={t.features}
-      benefits={t.benefits}
-      integrations={t.integrations}
+      features={features}
+      benefits={benefits}
+      integrations={integrations}
       sectionTitles={t.sectionTitles}
       metaTitle={t.metaTitle}
       metaDescription={t.metaDescription}

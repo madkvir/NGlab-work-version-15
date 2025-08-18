@@ -1,7 +1,5 @@
 import React from "react";
 import { Metadata } from "next";
-import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
-
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 const jsonLd = {
@@ -69,7 +67,7 @@ export const metadata: Metadata = {
       },
     ],
     locale: 'en',
-    alternateLocale: generateOpenGraphAlternateLocales(),
+    alternateLocale: ['de', 'es', 'ru', 'uk'],
   },
   twitter: {
     card: 'summary_large_image',
@@ -79,7 +77,6 @@ export const metadata: Metadata = {
     creator: "@neurogenlab",
     site: "@neurogenlab",
   },
-  alternates: generateHrefLangs('tools/jira'),
   robots: {
     index: true,
     follow: true,

@@ -33,23 +33,9 @@ const pages = [
   '/en/'
 ];
 
-interface HreflangTag {
-  href: string;
-  hreflang: string;
-}
-
-interface PageReport {
-  url: string;
-  hreflangTags: HreflangTag[];
-  duplicates: string[];
-  missingXDefault: boolean;
-  missingLanguages: string[];
-  errors: string[];
-}
-
-async function checkHreflangTags(url: string): Promise<PageReport> {
+async function checkHreflangTags(url) {
   const fullUrl = `${baseUrl}${url}`;
-  const report: PageReport = {
+  const report = {
     url,
     hreflangTags: [],
     duplicates: [],
@@ -71,8 +57,8 @@ async function checkHreflangTags(url: string): Promise<PageReport> {
     const hreflangRegex = /<link[^>]*rel=["']alternate["'][^>]*hreflang=["']([^"']+)["'][^>]*href=["']([^"']+)["'][^>]*>/gi;
     const matches = html.matchAll(hreflangRegex);
     
-    const hreflangMap = new Map<string, string[]>();
-    const foundLanguages = new Set<string>();
+    const hreflangMap = new Map();
+    const foundLanguages = new Set();
     
     for (const match of matches) {
       const hreflang = match[1];
@@ -84,7 +70,7 @@ async function checkHreflangTags(url: string): Promise<PageReport> {
       if (!hreflangMap.has(hreflang)) {
         hreflangMap.set(hreflang, []);
       }
-      hreflangMap.get(hreflang)!.push(href);
+      hreflangMap.get(hreflang).push(href);
     }
     
     // Проверяем дубликаты
@@ -112,10 +98,10 @@ async function checkHreflangTags(url: string): Promise<PageReport> {
   return report;
 }
 
-async function generateReport(): Promise<void> {
+async function generateReport() {
   console.log('🔍 Проверка hreflang тегов...\n');
   
-  const reports: PageReport[] = [];
+  const reports = [];
   
   for (const page of pages) {
     console.log(`Проверяю: ${page}`);
@@ -163,7 +149,7 @@ async function generateReport(): Promise<void> {
   console.log('- hreflang-report.html');
 }
 
-function generateHtmlReport(data: any): string {
+function generateHtmlReport(data) {
   return `
 <!DOCTYPE html>
 <html lang="ru">
@@ -191,7 +177,7 @@ function generateHtmlReport(data: any): string {
         <p><strong>Страниц с ошибками:</strong> ${data.summary.pagesWithErrors}</p>
     </div>
     
-    ${data.reports.map((report: any) => `
+    ${data.reports.map((report) => `
         <div class="page">
             <h3>${report.url}</h3>
             ${report.duplicates.length > 0 ? `<p class="error"><strong>Дубликаты:</strong> ${report.duplicates.join('; ')}</p>` : ''}
@@ -201,7 +187,7 @@ function generateHtmlReport(data: any): string {
             ${report.hreflangTags.length > 0 ? `
                 <p><strong>Hreflang теги:</strong></p>
                 <div>
-                    ${report.hreflangTags.map((tag: any) => `<span class="hreflang-tag">${tag.hreflang}: ${tag.href}</span>`).join('')}
+                    ${report.hreflangTags.map((tag) => `<span class="hreflang-tag">${tag.hreflang}: ${tag.href}</span>`).join('')}
                 </div>
             ` : ''}
         </div>
