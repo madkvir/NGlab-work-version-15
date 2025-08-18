@@ -9,25 +9,16 @@ import BackToHome from "../../../components/BackToHome";
 import Accordion from "../../../components/Accordion";
 
 export const metadata: Metadata = {
-  title: "Responsible AI Policy - NeuroGen Lab | Ethical AI Guidelines",
+  title: "Responsible AI Policy | NeuroGen Lab",
   description:
-    "Learn about NeuroGen Lab's commitment to responsible AI development and usage. Our comprehensive policy on ethical AI implementation, user rights, and AI governance standards.",
-  keywords: [
-    "responsible AI",
-    "ethical AI",
-    "AI policy",
-    "artificial intelligence guidelines",
-    "AI governance",
-    "AI ethics",
-    "machine learning ethics",
-    "AI compliance",
-    "AI safety",
-  ],
+    "Learn about NeuroGen Lab's commitment to responsible AI development and ethical use of artificial intelligence technology.",
+  keywords: ["responsible AI", "AI ethics", "artificial intelligence", "neurogenlab"],
   openGraph: {
-    title: "Responsible AI Policy | NeuroGen Lab - Ethical AI Development Guidelines",
+    title: "Responsible AI Policy | NeuroGen Lab",
     description:
-      "Discover our comprehensive approach to responsible AI development and implementation. Learn about our ethical guidelines, user protections, and commitment to AI safety.",
-    url: "https://neurogenlab.de/responsible-ai-policy",
+      "Learn about NeuroGen Lab's commitment to responsible AI development and ethical use of artificial intelligence technology.",
+    url: "https://neurogenlab.de/en/responsible-ai-policy",
+    siteName: "NeuroGen Lab",
     images: [
       {
         url: "/assets/images/og-guide.jpg",
@@ -35,21 +26,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    title: "NeuroGen Lab's Responsible AI Policy - Ethical AI Development",
-    description:
-      "Our commitment to ethical AI development and implementation. Comprehensive guidelines ensuring responsible AI usage and user protection.",
-    images: [
-      {
-        url: "/assets/images/og-guide.jpg",
-        alt: "NeuroGen Lab Responsible AI Policy",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab AI Ethics Committee" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/responsible-ai-policy",
-  },
+  authors: [{ name: "NeuroGen Lab Legal Department" }],
 };
 
 const ResponsibleAIPolicy = () => {
@@ -225,7 +202,7 @@ const ResponsibleAIPolicy = () => {
             </li>
             <li>
               Not compile facial recognition databases through targeted scraping of facial images
-              from the internet, social media, or CCTV footage, unless it is part of a legally
+              from the internet, unless it is part of a legally
               compliant and narrowly defined purpose.
             </li>
             <li>

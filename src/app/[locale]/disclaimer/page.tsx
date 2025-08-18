@@ -8,44 +8,24 @@ import ScrollToTop from "../../../components/ScrollToTop";
 import BackToHome from "../../../components/BackToHome";
 
 export const metadata: Metadata = {
-  title: "Disclaimer - NeuroGen Lab",
+  title: "Disclaimer | NeuroGen Lab",
   description:
-    "Read our disclaimer to understand the terms of use, limitations of liability, and important legal information regarding the use of NeuroGen Lab's website and services.",
-  keywords: [
-    "disclaimer",
-    "legal notice",
-    "liability",
-    "website disclaimer",
-    "external links",
-    "legal information",
-  ],
+    "Important legal disclaimers and terms of use for NeuroGen Lab website. Read about our liability limitations and user responsibilities.",
+  keywords: ["disclaimer", "legal terms", "liability", "neurogenlab"],
   openGraph: {
-    title: "Legal Disclaimer | NeuroGen Lab - Important Notice",
+    title: "Disclaimer | NeuroGen Lab",
     description:
-      "Important legal information and disclaimers regarding the use of NeuroGen Lab's website, content, and external links. Understand your rights and our limitations of liability.",
-    url: "https://neurogenlab.de/disclaimer",
+      "Important legal disclaimers and terms of use for NeuroGen Lab website. Read about our liability limitations and user responsibilities.",
+    url: "https://neurogenlab.de/en/disclaimer",
+    siteName: "NeuroGen Lab",
     images: [
       {
         url: "/assets/images/og-guide.jpg",
-        alt: "NeuroGen Lab Legal Disclaimer",
+        alt: "NeuroGen Lab Disclaimer",
       },
     ],
   },
-  twitter: {
-    title: "NeuroGen Lab Legal Disclaimer",
-    description:
-      "Essential legal information about using NeuroGen Lab's website and services. Read our full disclaimer and terms of use.",
-    images: [
-      {
-        url: "/assets/images/og-guide.jpg",
-        alt: "NeuroGen Lab Legal Disclaimer",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab Legal Team" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/disclaimer",
-  },
+  authors: [{ name: "NeuroGen Lab Legal Department" }],
 };
 
 const Disclaimer = () => {

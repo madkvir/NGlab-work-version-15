@@ -37,25 +37,16 @@ import ScrollToTop from "../../../components/ScrollToTop";
 import BackToHome from "../../../components/BackToHome";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - NeuroGen Lab | Legal Agreement",
+  title: "Terms of Service | NeuroGen Lab",
   description:
-    "Read our Terms of Service to understand the rules, guidelines, and legal agreement between you and NeuroGen Lab regarding the use of our AI services and platform.",
-  keywords: [
-    "terms of service",
-    "legal terms",
-    "user agreement",
-    "service conditions",
-    "legal requirements",
-    "terms and conditions",
-    "service policy",
-    "user rights",
-    "obligations",
-  ],
+    "Read our terms of service to understand the conditions for using NeuroGen Lab's website and services.",
+  keywords: ["terms of service", "terms and conditions", "user agreement", "neurogenlab"],
   openGraph: {
-    title: "Terms of Service | NeuroGen Lab - Legal Terms & Conditions",
+    title: "Terms of Service | NeuroGen Lab",
     description:
-      "Comprehensive terms of service outlining the legal agreement between users and NeuroGen Lab. Understanding your rights and obligations when using our AI platform.",
-    url: "https://neurogenlab.de/terms",
+      "Read our terms of service to understand the conditions for using NeuroGen Lab's website and services.",
+    url: "https://neurogenlab.de/en/terms",
+    siteName: "NeuroGen Lab",
     images: [
       {
         url: "/assets/images/og-guide.jpg",
@@ -63,21 +54,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    title: "NeuroGen Lab Terms of Service - Legal Agreement",
-    description:
-      "Essential information about your rights and obligations when using NeuroGen Lab's AI services. Read our complete terms of service.",
-    images: [
-      {
-        url: "/assets/images/og-guide.jpg",
-        alt: "NeuroGen Lab Terms of Service",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab Legal Team" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/terms",
-  },
+  authors: [{ name: "NeuroGen Lab Legal Department" }],
 };
 
 const Terms = () => {

@@ -8,34 +8,16 @@ import ScrollToTop from "../../../components/ScrollToTop";
 import BackToHome from "../../../components/BackToHome";
 
 export const metadata: Metadata = {
-  title: "Legal Notice (Impressum) - NeuroGen Lab",
+  title: "Impressum | NeuroGen Lab - Legal Notice",
   description:
-    "Official legal information and company details for NeuroGen Lab. Find our contact information, registration details, and regulatory compliance information.",
-  keywords: [
-    "impressum",
-    "legal notice",
-    "company information",
-    "contact details",
-    "business registration",
-    "VAT ID",
-    "regulatory compliance",
-  ],
+    "Legal notice and company information for NeuroGen Lab. Contact details, address, and responsible person information.",
+  keywords: ["impressum", "legal notice", "company information", "neurogenlab"],
   openGraph: {
-    title: "Legal Notice | NeuroGen Lab GmbH - Official Company Information",
+    title: "Impressum | NeuroGen Lab - Legal Notice",
     description:
-      "Access NeuroGen Lab's official company information, registration details, and contact information. Find all legally required business details here.",
-    url: "https://neurogenlab.de/impressum",
-    images: [
-      {
-        url: "/assets/images/og-guide.jpg",
-        alt: "NeuroGen Lab Legal Notice",
-      },
-    ],
-  },
-  twitter: {
-    title: "NeuroGen Lab - Legal Notice (Impressum)",
-    description:
-      "Official company information and legal details for NeuroGen Lab GmbH. Registration number, VAT ID, and contact information.",
+      "Legal notice and company information for NeuroGen Lab. Contact details, address, and responsible person information.",
+    url: "https://neurogenlab.de/en/impressum",
+    siteName: "NeuroGen Lab",
     images: [
       {
         url: "/assets/images/og-guide.jpg",
@@ -44,9 +26,6 @@ export const metadata: Metadata = {
     ],
   },
   authors: [{ name: "NeuroGen Lab Legal Department" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/impressum",
-  },
 };
 
 const Impressum = () => {

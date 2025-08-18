@@ -9,23 +9,16 @@ import BackToHome from "../../../components/BackToHome";
 import CookiePolicyList from "../../../components/CookiePolicyList";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy - NeuroGen Lab",
+  title: "Cookie Policy | NeuroGen Lab",
   description:
-    "Learn about how NeuroGen Lab uses cookies and similar technologies on our website. Understand your rights and how to control your cookie preferences.",
-  keywords: [
-    "cookie policy",
-    "privacy",
-    "GDPR",
-    "cookies",
-    "tracking technologies",
-    "targeted advertising",
-    "browser settings",
-  ],
+    "Learn about how NeuroGen Lab uses cookies and similar technologies on our website. Understand your privacy rights and cookie preferences.",
+  keywords: ["cookie policy", "privacy", "data protection", "neurogenlab"],
   openGraph: {
-    title: "Cookie Policy | NeuroGen Lab - Understanding Our Cookie Usage",
+    title: "Cookie Policy | NeuroGen Lab",
     description:
-      "Detailed information about cookies and tracking technologies used on NeuroGen Lab website, including how to manage your preferences and opt-out options.",
-    url: "https://neurogenlab.de/cookie-policy",
+      "Learn about how NeuroGen Lab uses cookies and similar technologies on our website. Understand your privacy rights and cookie preferences.",
+    url: "https://neurogenlab.de/en/cookie-policy",
+    siteName: "NeuroGen Lab",
     images: [
       {
         url: "/assets/images/og-guide.jpg",
@@ -44,10 +37,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  authors: [{ name: "NeuroGen Lab Legal Team" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/cookie-policy",
-  },
+  authors: [{ name: "NeuroGen Lab Legal Department" }],
 };
 
 const CookiePolicy = () => {

@@ -8,25 +8,16 @@ import React from "react";
 import Accordion from "../../../components/Accordion";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - NeuroGen Lab | Data Protection Notice",
+  title: "Privacy Policy | NeuroGen Lab",
   description:
-    "Learn how NeuroGen Lab protects and handles your personal data. Detailed information about our privacy practices, data collection, processing, and your rights under GDPR.",
-  keywords: [
-    "privacy policy",
-    "data protection",
-    "GDPR",
-    "personal data",
-    "data processing",
-    "privacy rights",
-    "data security",
-    "cookies",
-    "user privacy",
-  ],
+    "Learn about how NeuroGen Lab collects, uses, and protects your personal information. Read our comprehensive privacy policy.",
+  keywords: ["privacy policy", "data protection", "GDPR", "neurogenlab"],
   openGraph: {
-    title: "Privacy Policy | NeuroGen Lab - Your Data Protection Rights",
+    title: "Privacy Policy | NeuroGen Lab",
     description:
-      "Comprehensive information about how we collect, process, and protect your personal data. Understanding your privacy rights and our commitment to data protection.",
-    url: "https://neurogenlab.de/privacy",
+      "Learn about how NeuroGen Lab collects, uses, and protects your personal information. Read our comprehensive privacy policy.",
+    url: "https://neurogenlab.de/en/privacy",
+    siteName: "NeuroGen Lab",
     images: [
       {
         url: "/assets/images/og-guide.jpg",
@@ -34,21 +25,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    title: "NeuroGen Lab Privacy Policy - Data Protection Commitment",
-    description:
-      "Discover how we protect your privacy and handle your personal information. Complete overview of our data protection practices and your rights.",
-    images: [
-      {
-        url: "/assets/images/og-guide.jpg",
-        alt: "NeuroGen Lab Privacy Policy",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab Data Protection Officer" }],
-  alternates: {
-    canonical: "https://neurogenlab.de/privacy",
-  },
+  authors: [{ name: "NeuroGen Lab Legal Department" }],
 };
 
 const Privacy = () => {
