@@ -11,7 +11,9 @@
     "preview": "next preview",
     "update-layouts": "ts-node --esm src/scripts/updateLayouts.ts",
     "update-sitemap": "node src/scripts/updateSitemap.mjs",
-    "watch-sitemap": "node src/scripts/watchSitemap.mjs"
+    "watch-sitemap": "node src/scripts/watchSitemap.mjs",
+    "check-urls": "node src/scripts/checkDuplicateUrls.ts",
+    "seo-monitor": "node src/scripts/seoMonitor.ts"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.8",

@@ -28,7 +28,14 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: [
+          '/',
+          '/guide',
+          '/blog',
+          '/tools',
+          '/about-us',
+          '/contacts'
+        ],
         // Запрещаем индексацию административных и служебных разделов
         disallow: [
           '/api/',
@@ -67,6 +74,9 @@ export default function robots(): MetadataRoute.Robots {
         allow: [
           '/',
           '/sitemap.xml',
+          '/guide',
+          '/blog',
+          '/tools',
           '/*.js',
           '/*.css',
           '/*.png',
@@ -80,7 +90,10 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'Yandexbot',
         allow: [
           '/',
-          '/sitemap.xml'
+          '/sitemap.xml',
+          '/guide',
+          '/blog',
+          '/tools'
         ],
         disallow: [
           '/yandex-specific-path',
@@ -93,7 +106,10 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'Bingbot',
         allow: [
           '/',
-          '/sitemap.xml'
+          '/sitemap.xml',
+          '/guide',
+          '/blog',
+          '/tools'
         ],
         crawlDelay: 3
       },
@@ -103,6 +119,9 @@ export default function robots(): MetadataRoute.Robots {
         allow: [
           '/',
           '/sitemap.xml',
+          '/guide',
+          '/blog',
+          '/tools',
           '/*.js',
           '/*.css',
           '/*.png',
@@ -117,6 +136,9 @@ export default function robots(): MetadataRoute.Robots {
         allow: [
           '/',
           '/sitemap.xml',
+          '/guide',
+          '/blog',
+          '/tools',
           '/*.js',
           '/*.css',
           '/images/*'
@@ -128,7 +150,10 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'Baiduspider',
         allow: [
           '/',
-          '/sitemap.xml'
+          '/sitemap.xml',
+          '/guide',
+          '/blog',
+          '/tools'
         ],
         crawlDelay: 4
       },
@@ -137,6 +162,9 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'facebookexternalhit',
         allow: [
           '/',
+          '/guide',
+          '/blog',
+          '/tools',
           '/*.jpg',
           '/*.gif',
           '/*.png',
@@ -154,6 +182,9 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'Twitterbot',
         allow: [
           '/',
+          '/guide',
+          '/blog',
+          '/tools',
           '/*.jpg',
           '/*.gif',
           '/*.png',
@@ -171,6 +202,9 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: 'LinkedInBot',
         allow: [
           '/',
+          '/guide',
+          '/blog',
+          '/tools',
           '/*.jpg',
           '/*.gif',
           '/*.png',

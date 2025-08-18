@@ -99,6 +99,28 @@ export async function middlewareWithRedirect(req: NextRequest) {
     return NextResponse.next();
   }
 
+  // Проверяем на дублирование локали (например, /en/en/guide)
+  const pathSegments = pathname.split('/').filter(Boolean);
+  if (pathSegments.length >= 2 && pathSegments[0] === pathSegments[1] && locales.includes(pathSegments[0] as any)) {
+    // Удаляем дублированную локаль
+    const correctedPath = `/${pathSegments[0]}/${pathSegments.slice(2).join('/')}`;
+    url.pathname = correctedPath;
+    return NextResponse.redirect(url, 301);
+  }
+
+  // Проверяем на множественное дублирование (например, /en/en/en/guide)
+  if (pathSegments.length >= 3) {
+    const firstSegment = pathSegments[0];
+    const duplicateCount = pathSegments.filter(segment => segment === firstSegment).length;
+    if (duplicateCount > 1 && locales.includes(firstSegment as any)) {
+      // Удаляем все дублированные сегменты, оставляя только один
+      const remainingSegments = pathSegments.filter(segment => segment !== firstSegment);
+      const correctedPath = `/${firstSegment}/${remainingSegments.join('/')}`;
+      url.pathname = correctedPath;
+      return NextResponse.redirect(url, 301);
+    }
+  }
+
   const cookieLocale = req.cookies.get("NEXT_LOCALE")?.value;
   const urlLocale = locales.find((locale) => pathname.startsWith(`/${locale}`));
 

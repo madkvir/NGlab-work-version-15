@@ -10,7 +10,7 @@ import BackToHome from "../../../components/BackToHome";
 export const metadata: Metadata = {
   title: "Legal Notice (Impressum) - NeuroGen Lab",
   description:
-    "Official legal information and company details for NeuroGen Lab GmbH. Find our contact information, registration details, and regulatory compliance information.",
+    "Official legal information and company details for NeuroGen Lab. Find our contact information, registration details, and regulatory compliance information.",
   keywords: [
     "impressum",
     "legal notice",
