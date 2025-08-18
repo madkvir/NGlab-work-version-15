@@ -10,9 +10,9 @@ import { Suspense } from "react";
 import CookieConsent from "../../components/CookieConsent";
 import ChatWidget from "../../components/ChatWidget";
 import "./globals.css";
-import "../../styles/index.css";
-import "../../styles/animations.css";
-import "../../styles/calendar.css";
+import "@/styles/index.css";
+import "@/styles/animations.css";
+import "@/styles/calendar.css";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 

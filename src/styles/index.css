@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @keyframes hot-pulse {
   0% {
     opacity: 1;
@@ -43,20 +39,18 @@
   }
 }
 
-@layer utilities {
-  .animate-hot-pulse {
-    animation: hot-pulse 2s ease-in-out infinite;
-  }
+.animate-hot-pulse {
+  animation: hot-pulse 2s ease-in-out infinite;
+}
 
-  .menu-text-hover {
-    transition: transform 0.2s ease-out;
-  }
+.menu-text-hover {
+  transition: transform 0.2s ease-out;
+}
 
-  .menu-text-hover:hover {
-    animation: menu-text-hover 0.3s ease-out;
-  }
+.menu-text-hover:hover {
+  animation: menu-text-hover 0.3s ease-out;
+}
 
-  .menu-item-appear {
-    animation: menu-item-appear 0.2s ease-out forwards;
-  }
+.menu-item-appear {
+  animation: menu-item-appear 0.2s ease-out forwards;
 }
