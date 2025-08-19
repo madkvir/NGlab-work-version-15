@@ -7,32 +7,32 @@ import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
 import React from "react";
 import getServerPageLang from "../../utils/getServerPageLang";
+import { generatePageMetadata } from "../../utils/metadata";
+import { Metadata } from "next";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
+
+export const metadata: Metadata = generatePageMetadata(
+  '',
+  'NeuroGen Lab - AI-Powered Business Solutions',
+  'Transform your business with cutting-edge AI solutions and intelligent automation. NeuroGen Lab provides innovative tools and integrations for enhanced productivity.',
+  `${baseUrl}/assets/images/og-hero.jpg`,
+  'NeuroGen Lab - AI Solutions'
+);
 
 const Home = async ({ params }) => {
   const language = await getServerPageLang(params);
   
   return (
-    <>
-      {/* Hreflang теги для главной страницы */}
-      <link rel="alternate" hrefLang="x-default" href={`${baseUrl}/en`} />
-      <link rel="alternate" hrefLang="en" href={`${baseUrl}/en`} />
-      <link rel="alternate" hrefLang="de" href={`${baseUrl}/de`} />
-      <link rel="alternate" hrefLang="es" href={`${baseUrl}/es`} />
-      <link rel="alternate" hrefLang="ru" href={`${baseUrl}/ru`} />
-      <link rel="alternate" hrefLang="uk" href={`${baseUrl}/uk`} />
-      
-      <div className="min-h-screen bg-[#0B0F19] text-white">
-        <Navbar />
-        <Hero />
-        <HowItWorks language={language} />
-        <Pricing />
-        <FAQ language={language} />
-        <ScrollToTop />
-        <Footer />
-      </div>
-    </>
+    <div className="min-h-screen bg-[#0B0F19] text-white">
+      <Navbar />
+      <Hero />
+      <HowItWorks language={language} />
+      <Pricing />
+      <FAQ language={language} />
+      <ScrollToTop />
+      <Footer />
+    </div>
   );
 };
 

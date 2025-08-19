@@ -1,5 +1,6 @@
 import type { Metadata, ResolvingMetadata } from "next";
 import axios from "axios";
+import { generateHrefLangs } from "../../../../utils/generateHrefLangs";
 
 type Props = {
   params: Promise<{ slug: string; locale: string }>;
@@ -25,6 +26,7 @@ export async function generateMetadata(
   return {
     title: translation?.title || post.title,
     description: translation?.excerpt || post.excerpt,
+    alternates: generateHrefLangs(`blog/${slug}`),
     openGraph: {
       type: "website",
       title: translation?.title || post.title,

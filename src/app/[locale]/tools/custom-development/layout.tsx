@@ -1,5 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
+import { generatePageMetadata } from '../../../../utils/metadata';
+
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 // JSON-LD разметка для Custom Development
@@ -28,63 +30,13 @@ const jsonLd = {
   }
 };
 
-export const metadata: Metadata = {
-  title: "Custom Development | NeuroGen Lab - Tailored Software Solutions",
-  description: "Transform your business with custom AI-powered software solutions. Tailored development services for unique requirements and digital innovation.",
-  other: {
-    'ai-optimized': 'true',
-  },
-  keywords: [
-    "Custom development",
-    "software solutions",
-    "tailored applications",
-    "AI development",
-    "digital transformation",
-    "custom software",
-    "business solutions",
-    "technology innovation",
-    "NeuroGen Lab development",
-    "enterprise solutions"
-  ],
-  openGraph: {
-    type: 'website',
-    title: "Custom Development - Tailored Software Solutions | NeuroGen Lab",
-    description: "Transform your business with custom AI-powered software development. Innovative solutions for unique requirements.",
-    url: `${baseUrl}/tools/custom-development`,
-    siteName: "NeuroGen Lab",
-    images: [
-      {
-        url: `${baseUrl}/assets/images/og-custom-development.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "NeuroGen Lab Custom Development",
-        type: 'image/jpeg',
-      },
-    ],
-    locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Custom Development - Smart Software Solutions",
-    description: "Transform your business with custom AI-powered software development and innovation.",
-    images: [`${baseUrl}/assets/images/og-custom-development.jpg`],
-    creator: "@neurogenlab",
-    site: "@neurogenlab",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  authors: [{ name: "NeuroGen Lab Team" }],
-};
+export const metadata = generatePageMetadata(
+  'tools/custom-development',
+  'Custom Development | NeuroGen Lab - Tailored Software Solutions',
+  'Transform your business with custom AI-powered software solutions. Tailored development services for unique requirements and digital innovation.',
+  `${baseUrl}/assets/images/og-custom-development.jpg`,
+  'NeuroGen Lab Custom Development'
+);
 
 export default function Layout({
   children,

@@ -281,7 +281,7 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 mt-2 w-48 bg-[#0B0F19]/95 backdrop-blur-sm rounded-lg border border-gray-900/50 py-2 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   <Link
                     locale={locale}
-                    href="/en/guide"
+                    href="/guide"
                     className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105"
                   >
                     {t.links.guide}
@@ -295,14 +295,14 @@ const Navbar = () => {
                   </a>
                   <Link
                     locale={locale}
-                    href="/en/blog"
+                    href="/blog"
                     className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105"
                   >
                     {t.links.blog}
                   </Link>
                   <Link
                     locale={locale}
-                    href="/en/about-us"
+                    href="/about-us"
                     className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-all duration-300 transform hover:scale-105"
                   >
                     {t.links.aboutUs}
@@ -321,7 +321,7 @@ const Navbar = () => {
 
               <Link
                 locale={locale}
-                href="/en/contacts"
+                href="/contacts"
                 className="text-gray-300 hover:text-white transition-all duration-300 transform hover:scale-105 mx-6"
               >
                 {t.links.contacts}
@@ -565,7 +565,7 @@ const Navbar = () => {
               <div className="space-y-2">
                 <Link
                   locale={locale}
-                  href="/en/guide"
+                  href="/guide"
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
                 >
@@ -581,7 +581,7 @@ const Navbar = () => {
                 </a>
                 <Link
                   locale={locale}
-                  href="/en/blog"
+                  href="/blog"
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
                 >
@@ -589,7 +589,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   locale={locale}
-                  href="/en/about-us"
+                  href="/about-us"
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
                 >
@@ -606,7 +606,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   locale={locale}
-                  href="/en/contacts"
+                  href="/contacts"
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 
                              rounded-lg transition-all duration-300 flex items-center justify-between"
                 >

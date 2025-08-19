@@ -6,27 +6,17 @@ import Footer from "../../../components/Footer";
 import Divider from "../../../components/Divider";
 import ScrollToTop from "../../../components/ScrollToTop";
 import BackToHome from "../../../components/BackToHome";
+import { generatePageMetadata } from "../../../utils/metadata";
 
-export const metadata: Metadata = {
-  title: "Impressum | NeuroGen Lab - Legal Notice",
-  description:
-    "Legal notice and company information for NeuroGen Lab. Contact details, address, and responsible person information.",
-  keywords: ["impressum", "legal notice", "company information", "neurogenlab"],
-  openGraph: {
-    title: "Impressum | NeuroGen Lab - Legal Notice",
-    description:
-      "Legal notice and company information for NeuroGen Lab. Contact details, address, and responsible person information.",
-    url: "https://neurogenlab.de/en/impressum",
-    siteName: "NeuroGen Lab",
-    images: [
-      {
-        url: "/assets/images/og-guide.jpg",
-        alt: "NeuroGen Lab Legal Notice",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab Legal Department" }],
-};
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
+
+export const metadata = generatePageMetadata(
+  'impressum',
+  'Impressum | NeuroGen Lab - Legal Notice',
+  'Legal notice and company information for NeuroGen Lab. Contact details, address, and responsible person information.',
+  `${baseUrl}/assets/images/og-guide.jpg`,
+  'NeuroGen Lab Legal Notice'
+);
 
 const Impressum = () => {
   const sections = [

@@ -35,27 +35,17 @@ import Footer from "../../../components/Footer";
 import Divider from "../../../components/Divider";
 import ScrollToTop from "../../../components/ScrollToTop";
 import BackToHome from "../../../components/BackToHome";
+import { generatePageMetadata } from "../../../utils/metadata";
 
-export const metadata: Metadata = {
-  title: "Terms of Service | NeuroGen Lab",
-  description:
-    "Read our terms of service to understand the conditions for using NeuroGen Lab's website and services.",
-  keywords: ["terms of service", "terms and conditions", "user agreement", "neurogenlab"],
-  openGraph: {
-    title: "Terms of Service | NeuroGen Lab",
-    description:
-      "Read our terms of service to understand the conditions for using NeuroGen Lab's website and services.",
-    url: "https://neurogenlab.de/en/terms",
-    siteName: "NeuroGen Lab",
-    images: [
-      {
-        url: "/assets/images/og-guide.jpg",
-        alt: "NeuroGen Lab Terms of Service",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab Legal Department" }],
-};
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
+
+export const metadata = generatePageMetadata(
+  'terms',
+  'Terms of Service | NeuroGen Lab',
+  'Read our terms of service to understand the conditions for using NeuroGen Lab\'s website and services.',
+  `${baseUrl}/assets/images/og-guide.jpg`,
+  'NeuroGen Lab Terms of Service'
+);
 
 const Terms = () => {
   const sections = [

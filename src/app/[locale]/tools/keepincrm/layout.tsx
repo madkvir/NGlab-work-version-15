@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generatePageMetadata } from '../../../../utils/metadata';
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 const jsonLd = {
@@ -33,63 +34,13 @@ export const viewport = {
   maximumScale: 1,
 };
 
-export const metadata: Metadata = {
-  title: "KeepinCRM Integration | NeuroGen Lab - Customer Relationship Management",
-  description: "Enhance your customer relationship management with AI-powered KeepinCRM integration. Automate sales processes, improve customer tracking, and boost team productivity.",
-  other: {
-    'ai-optimized': 'true',
-  },
-  keywords: [
-    "KeepinCRM integration",
-    "customer relationship management",
-    "sales automation",
-    "lead tracking",
-    "CRM tools",
-    "team collaboration",
-    "AI automation",
-    "customer management",
-    "NeuroGen Lab CRM",
-    "sales solution"
-  ],
-  openGraph: {
-    type: 'website',
-    title: "KeepinCRM Integration - Customer Relationship Management | NeuroGen Lab",
-    description: "Transform your customer relationship management with AI-powered KeepinCRM integration. Enhanced tracking and automated sales workflows.",
-    url: `${baseUrl}/tools/keepincrm`,
-    siteName: "NeuroGen Lab",
-    images: [
-      {
-        url: `${baseUrl}/assets/images/og-keepincrm.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "NeuroGen Lab KeepinCRM Integration",
-        type: 'image/jpeg',
-      },
-    ],
-    locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "KeepinCRM Integration - Smart Customer Relationship Management",
-    description: "Transform your customer relationship management with AI-powered KeepinCRM integration and automation.",
-    images: [`${baseUrl}/assets/images/og-keepincrm.jpg`],
-    creator: "@neurogenlab",
-    site: "@neurogenlab",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  authors: [{ name: "NeuroGen Lab Team" }],
-};
+export const metadata = generatePageMetadata(
+  'tools/keepincrm',
+  'KeepinCRM Integration | NeuroGen Lab - CRM Automation',
+  'Optimize your CRM with AI-powered KeepinCRM integration. Automated customer management, intelligent insights, and enhanced sales processes.',
+  `${baseUrl}/assets/images/og-keepincrm.jpg`,
+  'NeuroGen Lab KeepinCRM Integration'
+);
 
 export default function KeepinCRMLayout({
   children,

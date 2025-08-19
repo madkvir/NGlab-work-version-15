@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generatePageMetadata } from '../../../../utils/metadata';
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 // JSON-LD разметка для Slack интеграции
@@ -29,63 +30,13 @@ const jsonLd = {
   }
 };
 
-export const metadata: Metadata = {
-  title: "Slack Integration | NeuroGen Lab - Team Communication",
-  description: "Enhance your team communication with AI-powered Slack integration. Automate workflows, improve collaboration, and boost productivity.",
-  other: {
-    'ai-optimized': 'true',
-  },
-  keywords: [
-    "Slack integration",
-    "team communication",
-    "collaboration tools",
-    "workplace chat",
-    "business messaging",
-    "workflow automation",
-    "AI communication",
-    "team productivity",
-    "NeuroGen Lab Slack",
-    "messaging solution"
-  ],
-  openGraph: {
-    type: 'website',
-    title: "Slack Integration - Team Communication | NeuroGen Lab",
-    description: "Transform your team communication with AI-powered Slack integration. Enhanced collaboration and automated workflows.",
-    url: `${baseUrl}/tools/slack`,
-    siteName: "NeuroGen Lab",
-    images: [
-      {
-        url: `${baseUrl}/assets/images/og-slack.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "NeuroGen Lab Slack Integration",
-        type: 'image/jpeg',
-      },
-    ],
-    locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Slack Integration - Smart Team Communication",
-    description: "Transform your team collaboration with AI-powered Slack integration and automation.",
-    images: [`${baseUrl}/assets/images/og-slack.jpg`],
-    creator: "@neurogenlab",
-    site: "@neurogenlab",
-  },
-  authors: [{ name: "NeuroGen Lab Team" }],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+export const metadata = generatePageMetadata(
+  'tools/slack',
+  'Slack Integration | NeuroGen Lab - Team Communication',
+  'Enhance your team communication with AI-powered Slack integration. Automated workflows, intelligent notifications, and improved collaboration.',
+  `${baseUrl}/assets/images/og-slack.jpg`,
+  'NeuroGen Lab Slack Integration'
+);
 
 export default function Layout({
   children,

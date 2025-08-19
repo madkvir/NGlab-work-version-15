@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <Link href="/en/guide" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/guide" className="text-gray-400 hover:text-white transition-colors">
                     {t.navigation.links.guide}
                   </Link>
                 </li>
@@ -98,14 +98,14 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <Link
-                    href="/en/about-us"
+                    href="/about-us"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {t.navigation.links.aboutUs}
                   </Link>
                 </li>
                 <li>
-                  <Link href="/en/blog" className="text-gray-400 hover:text-white transition-colors">
+                  <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
                     {t.navigation.links.blog}
                   </Link>
                 </li>
@@ -201,37 +201,37 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-900/50 pt-8">
           <div className="flex flex-wrap justify-center gap-6 mb-4">
             <Link
-              href="/en/terms"
+              href="/terms"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               {t.legalLinks.termsOfService}
             </Link>
             <Link
-              href="/en/privacy"
+              href="/privacy"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               {t.legalLinks.privacyPolicy}
             </Link>
             <Link
-              href="/en/cookie-policy"
+              href="/cookie-policy"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               {t.legalLinks.cookiePolicy}
             </Link>
             <Link
-              href="/en/impressum"
+              href="/impressum"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               {t.legalLinks.impressum}
             </Link>
             <Link
-              href="/en/responsible-ai-policy"
+              href="/responsible-ai-policy"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               {t.legalLinks.responsibleAiPolicy}
             </Link>
             <Link
-              href="/en/disclaimer"
+              href="/disclaimer"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               {t.legalLinks.disclaimer}

@@ -6,27 +6,17 @@ import Footer from "../../../components/Footer";
 import Divider from "../../../components/Divider";
 import ScrollToTop from "../../../components/ScrollToTop";
 import BackToHome from "../../../components/BackToHome";
+import { generatePageMetadata } from "../../../utils/metadata";
 
-export const metadata: Metadata = {
-  title: "Disclaimer | NeuroGen Lab",
-  description:
-    "Important legal disclaimers and terms of use for NeuroGen Lab website. Read about our liability limitations and user responsibilities.",
-  keywords: ["disclaimer", "legal terms", "liability", "neurogenlab"],
-  openGraph: {
-    title: "Disclaimer | NeuroGen Lab",
-    description:
-      "Important legal disclaimers and terms of use for NeuroGen Lab website. Read about our liability limitations and user responsibilities.",
-    url: "https://neurogenlab.de/en/disclaimer",
-    siteName: "NeuroGen Lab",
-    images: [
-      {
-        url: "/assets/images/og-guide.jpg",
-        alt: "NeuroGen Lab Disclaimer",
-      },
-    ],
-  },
-  authors: [{ name: "NeuroGen Lab Legal Department" }],
-};
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
+
+export const metadata = generatePageMetadata(
+  'disclaimer',
+  'Disclaimer | NeuroGen Lab',
+  'Important legal disclaimers and terms of use for NeuroGen Lab website. Read about our liability limitations and user responsibilities.',
+  `${baseUrl}/assets/images/og-guide.jpg`,
+  'NeuroGen Lab Disclaimer'
+);
 
 const Disclaimer = () => {
   return (

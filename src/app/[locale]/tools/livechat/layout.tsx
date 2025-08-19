@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generatePageMetadata } from '../../../../utils/metadata';
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 // JSON-LD разметка для LiveChat интеграции
@@ -28,63 +29,13 @@ const jsonLd = {
   }
 };
 
-export const metadata: Metadata = {
-  title: "LiveChat Integration | NeuroGen Lab - Real-time Support",
-  description: "Transform your customer support with AI-powered LiveChat integration. Provide instant assistance, automate responses, and improve customer satisfaction.",
-  other: {
-    'ai-optimized': 'true',
-  },
-  keywords: [
-    "LiveChat integration",
-    "customer support",
-    "real-time chat",
-    "live assistance",
-    "chat automation",
-    "customer service",
-    "AI support",
-    "instant messaging",
-    "NeuroGen Lab LiveChat",
-    "support solution"
-  ],
-  openGraph: {
-    type: 'website',
-    title: "LiveChat Integration - Real-time Support | NeuroGen Lab",
-    description: "Transform your customer support with AI-powered LiveChat. Instant assistance and automated responses.",
-    url: `${baseUrl}/tools/livechat`,
-    siteName: "NeuroGen Lab",
-    images: [
-      {
-        url: `${baseUrl}/assets/images/og-livechat.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "NeuroGen Lab LiveChat Integration",
-        type: 'image/jpeg',
-      },
-    ],
-    locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "LiveChat Integration - Smart Customer Support",
-    description: "Transform your customer support with AI-powered LiveChat integration and automation.",
-    images: [`${baseUrl}/assets/images/og-livechat.jpg`],
-    creator: "@neurogenlab",
-    site: "@neurogenlab",
-  },
-  authors: [{ name: "NeuroGen Lab Team" }],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+export const metadata = generatePageMetadata(
+  'tools/livechat',
+  'LiveChat Integration | NeuroGen Lab - Real-time Support',
+  'Enhance your customer support with AI-powered LiveChat integration. Real-time communication, automated responses, and improved customer satisfaction.',
+  `${baseUrl}/assets/images/og-livechat.jpg`,
+  'NeuroGen Lab LiveChat Integration'
+);
 
 export default function Layout({
   children,

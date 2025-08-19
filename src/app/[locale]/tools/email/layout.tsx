@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generatePageMetadata } from '../../../../utils/metadata';
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 const jsonLd = {
@@ -27,63 +28,13 @@ const jsonLd = {
   }
 };
 
-export const metadata: Metadata = {
-  title: "Email Integration | NeuroGen Lab - Smart Email Management",
-  description: "Transform your email communication with AI-powered automation. Smart filtering, automated responses, and intelligent email management for enhanced productivity.",
-  other: {
-    'ai-optimized': 'true',
-  },
-  keywords: [
-    "Email integration",
-    "email automation",
-    "smart inbox",
-    "email management",
-    "automated responses",
-    "email filtering",
-    "AI email",
-    "productivity tools",
-    "NeuroGen Lab email",
-    "communication solution"
-  ],
-  openGraph: {
-    type: 'website',
-    title: "Email Integration - Smart Email Management | NeuroGen Lab",
-    description: "Transform your email workflow with AI-powered automation. Enhanced productivity and intelligent management.",
-    url: `${baseUrl}/tools/email`,
-    siteName: "NeuroGen Lab",
-    images: [
-      {
-        url: `${baseUrl}/assets/images/og-email.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "NeuroGen Lab Email Integration",
-        type: 'image/jpeg',
-      },
-    ],
-    locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Email Integration - Smart Communication Management",
-    description: "Transform your email workflow with AI-powered automation and intelligent management.",
-    images: [`${baseUrl}/assets/images/og-email.jpg`],
-    creator: "@neurogenlab",
-    site: "@neurogenlab",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  authors: [{ name: "NeuroGen Lab Team" }],
-};
+export const metadata = generatePageMetadata(
+  'tools/email',
+  'Email Integration | NeuroGen Lab - Communication Automation',
+  'Automate your email communication with AI-powered integration. Smart responses, intelligent filtering, and enhanced email management.',
+  `${baseUrl}/assets/images/og-email.jpg`,
+  'NeuroGen Lab Email Integration'
+);
 
 export default function Layout({
   children,

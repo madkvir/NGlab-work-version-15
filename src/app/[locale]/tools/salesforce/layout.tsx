@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { generatePageMetadata } from '../../../../utils/metadata';
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 // JSON-LD разметка для Salesforce интеграции
@@ -28,63 +29,13 @@ const jsonLd = {
   }
 };
 
-export const metadata: Metadata = {
-  title: "Salesforce Integration | NeuroGen Lab - Smart CRM Management",
-  description: "Enhance your CRM with AI technology. Smart automation, analytics, and advanced features for better customer relationship management.",
-  other: {
-    'ai-optimized': 'true',
-  },
-  keywords: [
-    "salesforce integration",
-    "crm management",
-    "sales automation",
-    "customer analytics",
-    "lead management",
-    "pipeline management",
-    "sales forecasting",
-    "AI CRM",
-    "smart sales",
-    "NeuroGen Lab salesforce"
-  ],
-  openGraph: {
-    type: 'website',
-    title: "Salesforce Integration - Smart CRM Management | NeuroGen Lab",
-    description: "Transform your CRM with AI-powered Salesforce integration. Automate sales processes and enhance customer relationships.",
-    url: `${baseUrl}/tools/salesforce`,
-    siteName: "NeuroGen Lab",
-    images: [
-      {
-        url: `${baseUrl}/assets/images/og-salesforce.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "NeuroGen Lab Salesforce Integration",
-        type: 'image/jpeg',
-      },
-    ],
-    locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "Salesforce Integration - Smart CRM Management",
-    description: "Enhance CRM management with AI-powered features",
-    images: [`${baseUrl}/assets/images/og-salesforce.jpg`],
-    creator: "@neurogenlab",
-    site: "@neurogenlab",
-  },
-  authors: [{ name: "NeuroGen Lab Team" }],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
+export const metadata = generatePageMetadata(
+  'tools/salesforce',
+  'Salesforce Integration | NeuroGen Lab - CRM Enhancement',
+  'Enhance your Salesforce with AI-powered integration. Automated workflows, intelligent insights, and improved customer relationship management.',
+  `${baseUrl}/assets/images/og-salesforce.jpg`,
+  'NeuroGen Lab Salesforce Integration'
+);
 
 export default function Layout({
   children,
