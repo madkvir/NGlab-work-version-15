@@ -1,0 +1,610 @@
+{
+  "timestamp": "2025-08-19T12:04:35.459Z",
+  "summary": {
+    "totalPages": 23,
+    "pagesWithDuplicates": 0,
+    "pagesWithErrors": 0
+  },
+  "reports": [
+    {
+      "url": "/en/tools/intercom",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/intercom",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/intercom",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/intercom",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/intercom",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/intercom",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/counseling",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/counseling",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/counseling",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/counseling",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/counseling",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/counseling",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/hubspot",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/hubspot",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/hubspot",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/hubspot",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/hubspot",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/hubspot",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/discord",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/discord",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/discord",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/discord",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/discord",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/discord",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/guide",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/guide",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/guide",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/guide",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/guide",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/guide",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/custom-development",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/custom-development",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/custom-development",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/custom-development",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/custom-development",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/custom-development",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/jira",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/jira",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/jira",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/jira",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/jira",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/jira",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/ai-assistant",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/ai-assistant",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/ai-assistant",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/ai-assistant",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/ai-assistant",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/ai-assistant",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/livechat",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/livechat",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/livechat",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/livechat",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/livechat",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/livechat",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/instagram",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/instagram",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/instagram",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/instagram",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/instagram",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/instagram",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/anti-spam",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/anti-spam",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/anti-spam",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/anti-spam",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/anti-spam",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/anti-spam",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/zapier",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/zapier",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/zapier",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/zapier",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/zapier",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/zapier",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/about-us",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/about-us",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/about-us",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/about-us",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/about-us",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/about-us",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/tables",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/tables",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/tables",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/tables",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/tables",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/tables",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/ai-avatar",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/ai-avatar",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/ai-avatar",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/ai-avatar",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/ai-avatar",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/ai-avatar",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/whatsapp",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/whatsapp",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/whatsapp",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/whatsapp",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/whatsapp",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/whatsapp",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/microsoft-teams",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/microsoft-teams",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/microsoft-teams",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/microsoft-teams",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/microsoft-teams",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/microsoft-teams",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/ai-chat-bot",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/ai-chat-bot",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/ai-chat-bot",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/ai-chat-bot",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/ai-chat-bot",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/ai-chat-bot",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/slack",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/slack",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/slack",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/slack",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/slack",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/slack",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/keepincrm",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/keepincrm",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/keepincrm",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/keepincrm",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/keepincrm",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/keepincrm",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/contacts",
+      "hreflangTags": [],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/ai-voice-bot",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/ai-voice-bot",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/ai-voice-bot",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/ai-voice-bot",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/ai-voice-bot",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/ai-voice-bot",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    },
+    {
+      "url": "/en/tools/best-search",
+      "hreflangTags": [
+        {
+          "href": "https://neurogenlab.de/en/tools/best-search",
+          "hreflang": "en"
+        },
+        {
+          "href": "https://neurogenlab.de/de/tools/best-search",
+          "hreflang": "de"
+        },
+        {
+          "href": "https://neurogenlab.de/es/tools/best-search",
+          "hreflang": "es"
+        },
+        {
+          "href": "https://neurogenlab.de/ru/tools/best-search",
+          "hreflang": "ru"
+        },
+        {
+          "href": "https://neurogenlab.de/uk/tools/best-search",
+          "hreflang": "uk"
+        }
+      ],
+      "duplicates": [],
+      "errors": []
+    }
+  ]
+}

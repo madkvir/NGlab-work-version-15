@@ -1,6 +1,6 @@
 import type { Metadata, ResolvingMetadata } from "next";
 import axios from "axios";
-import { generateHrefLangs } from "../../../../utils/generateHrefLangs";
+import { generateHrefLangs, generateOpenGraphAlternateLocales } from "../../../../utils/generateHrefLangs";
 
 type Props = {
   params: Promise<{ slug: string; locale: string }>;
@@ -35,7 +35,7 @@ export async function generateMetadata(
       siteName: "NeuroGen Lab",
       images: post.images,
       locale: locale,
-      alternateLocale: ['de', 'es', 'ru', 'uk'],
+      alternateLocale: generateOpenGraphAlternateLocales(),
     },
     twitter: {
       card: "summary_large_image",
