@@ -1,4 +1,5 @@
 import React from 'react';
+import { Metadata } from 'next';
 import { generatePageMetadata } from '../../../utils/metadata';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';

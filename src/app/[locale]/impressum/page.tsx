@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
-import { Building, Mail, MapPin, Scale, FileText } from "lucide-react";
+import { Building2 } from "lucide-react";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import Divider from "../../../components/Divider";
@@ -10,19 +10,24 @@ import { generatePageMetadata } from "../../../utils/metadata";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
-export const metadata = generatePageMetadata(
-  'impressum',
-  'Impressum | NeuroGen Lab - Legal Notice',
-  'Legal notice and company information for NeuroGen Lab. Contact details, address, and responsible person information.',
-  `${baseUrl}/assets/images/og-guide.jpg`,
-  'NeuroGen Lab Legal Notice'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata(
+    'impressum',
+    'Impressum | NeuroGen Lab',
+    'Legal information and company details for NeuroGen Lab. Contact information, registration details, and legal notices.',
+    `${baseUrl}/assets/images/og-guide.jpg`,
+    'NeuroGen Lab Impressum',
+    locale
+  );
+}
 
 const Impressum = () => {
   const sections = [
     {
       title: "Company Information",
-      icon: <Building className="w-6 h-6" />,
+      icon: <Building2 className="w-6 h-6" />,
       content: [
         "Leistungserbringer: NeuroGen Lab Softwareentwicklung und KI-Beratung – Maksym Bezverkhyi",
         "Rechtsform: Einzelunternehmen (nicht eingetragen)",
@@ -31,7 +36,7 @@ const Impressum = () => {
     },
     {
       title: "Contact Details",
-      icon: <Mail className="w-6 h-6" />,
+      icon: <Building2 className="w-6 h-6" />,
       content: [
         <span className="flex items-center gap-2">
           <span>Email: </span>
@@ -66,17 +71,17 @@ const Impressum = () => {
     },
     {
       title: "Address",
-      icon: <MapPin className="w-6 h-6" />,
+      icon: <Building2 className="w-6 h-6" />,
       content: ["Gartenweg 2", "16515 Oraniebburg", "Germany"],
     },
     {
       title: "Responsible for Content",
-      icon: <FileText className="w-6 h-6" />,
+      icon: <Building2 className="w-6 h-6" />,
       content: ["According to § 55 Abs. 2 RStV:", "Maksym Bezverkhyi", "Address same as above"],
     },
     {
       title: "Legal Notices",
-      icon: <Scale className="w-6 h-6" />,
+      icon: <Building2 className="w-6 h-6" />,
       content: [
         "All content on this website is protected by copyright law.",
         "Unauthorized use or reproduction is prohibited.",
@@ -85,7 +90,7 @@ const Impressum = () => {
     },
     {
       title: "Online Dispute Resolution",
-      icon: <Scale className="w-6 h-6" />,
+      icon: <Building2 className="w-6 h-6" />,
       content: [
         <span>
           The European Commission provides a platform for online dispute resolution (OS) which is
@@ -112,7 +117,7 @@ const Impressum = () => {
           <BackToHome />
 
           <div className="text-center mb-12">
-            <Building className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
+            <Building2 className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
             <h1 className="text-4xl font-bold mb-4">Impressum</h1>
             <p className="text-gray-400">Legal Information</p>
           </div>

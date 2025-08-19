@@ -12,13 +12,18 @@ import { Metadata } from "next";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
-export const metadata: Metadata = generatePageMetadata(
-  '',
-  'NeuroGen Lab - AI-Powered Business Solutions',
-  'Transform your business with cutting-edge AI solutions and intelligent automation. NeuroGen Lab provides innovative tools and integrations for enhanced productivity.',
-  `${baseUrl}/assets/images/og-hero.jpg`,
-  'NeuroGen Lab - AI Solutions'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata(
+    '',
+    'NeuroGen Lab - AI-Powered Business Solutions',
+    'Transform your business with cutting-edge AI solutions and intelligent automation. NeuroGen Lab provides innovative tools and integrations for enhanced productivity.',
+    `${baseUrl}/assets/images/og-hero.jpg`,
+    'NeuroGen Lab - AI Solutions',
+    locale
+  );
+}
 
 const Home = async ({ params }) => {
   const language = await getServerPageLang(params);

@@ -10,13 +10,18 @@ import { generatePageMetadata } from "../../../utils/metadata";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
-export const metadata = generatePageMetadata(
-  'disclaimer',
-  'Disclaimer | NeuroGen Lab',
-  'Important legal disclaimers and terms of use for NeuroGen Lab website. Read about our liability limitations and user responsibilities.',
-  `${baseUrl}/assets/images/og-guide.jpg`,
-  'NeuroGen Lab Disclaimer'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata(
+    'disclaimer',
+    'Disclaimer | NeuroGen Lab',
+    'Important legal disclaimers and terms of use for NeuroGen Lab website. Read about our liability limitations and user responsibilities.',
+    `${baseUrl}/assets/images/og-guide.jpg`,
+    'NeuroGen Lab Disclaimer',
+    locale
+  );
+}
 
 const Disclaimer = () => {
   return (

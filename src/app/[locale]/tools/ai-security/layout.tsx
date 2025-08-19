@@ -1,5 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
+import { generatePageMetadata } from '../../../../utils/metadata';
+
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
 const jsonLd = {
@@ -27,63 +29,18 @@ const jsonLd = {
   }
 };
 
-export const metadata: Metadata = {
-  title: "AI Security | NeuroGen Lab - Intelligent Protection",
-  description: "Transform your security infrastructure with AI-powered protection. Advanced threat detection, real-time monitoring, and intelligent system security for comprehensive defense.",
-  other: {
-    'ai-optimized': 'true',
-  },
-  keywords: [
-    "AI security",
-    "threat detection",
-    "system protection",
-    "security monitoring",
-    "intelligent defense",
-    "cybersecurity",
-    "AI protection",
-    "security solutions",
-    "NeuroGen Lab security",
-    "enterprise security"
-  ],
-  openGraph: {
-    type: 'website',
-    title: "AI Security - Intelligent Protection | NeuroGen Lab",
-    description: "Transform your security infrastructure with AI-powered protection. Advanced threat detection and intelligent defense.",
-    url: `${baseUrl}/tools/ai-security`,
-    siteName: "NeuroGen Lab",
-    images: [
-      {
-        url: `${baseUrl}/assets/images/og-ai-security.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "NeuroGen Lab AI Security",
-        type: 'image/jpeg',
-      },
-    ],
-    locale: 'en',
-    alternateLocale: ['de', 'es', 'ru', 'uk'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: "AI Security - Smart System Protection",
-    description: "Transform your security infrastructure with AI-powered protection and intelligent defense.",
-    images: [`${baseUrl}/assets/images/og-ai-security.jpg`],
-    creator: "@neurogenlab",
-    site: "@neurogenlab",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  authors: [{ name: "NeuroGen Lab Team" }],
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata(
+    'tools/ai-security',
+    'AI Security | NeuroGen Lab - Intelligent Protection',
+    'Transform your security infrastructure with AI-powered protection. Advanced threat detection, real-time monitoring, and intelligent system security for comprehensive defense.',
+    `${baseUrl}/assets/images/og-ai-security.jpg`,
+    'NeuroGen Lab AI Security',
+    locale
+  );
+}
 
 export default function Layout({
   children,

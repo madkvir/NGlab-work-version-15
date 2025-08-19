@@ -39,13 +39,18 @@ import { generatePageMetadata } from "../../../utils/metadata";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
 
-export const metadata = generatePageMetadata(
-  'terms',
-  'Terms of Service | NeuroGen Lab',
-  'Read our terms of service to understand the conditions for using NeuroGen Lab\'s website and services.',
-  `${baseUrl}/assets/images/og-guide.jpg`,
-  'NeuroGen Lab Terms of Service'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata(
+    'terms',
+    'Terms of Service | NeuroGen Lab',
+    'Terms of service and conditions for using NeuroGen Lab services. Read about user rights, responsibilities, and service terms.',
+    `${baseUrl}/assets/images/og-guide.jpg`,
+    'NeuroGen Lab Terms of Service',
+    locale
+  );
+}
 
 const Terms = () => {
   const sections = [
