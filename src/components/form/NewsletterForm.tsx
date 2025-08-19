@@ -144,8 +144,8 @@ const NewsletterForm = () => {
         />
         <label htmlFor="newsletter-consent" className="text-xs sm:text-sm text-gray-400">
           {t.agreement}{" "}
-          <a href="/privacy" className="text-emerald-400 hover:text-emerald-300 transition-colors">
-            {t.privacyPolicy}
+          <a href="/en/privacy" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+            Privacy Policy
           </a>
         </label>
       </div>

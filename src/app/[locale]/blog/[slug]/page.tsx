@@ -65,8 +65,8 @@ const BlogPost = async ({ params }) => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Back Button */}
             <Link
-              href="/blog"
-              className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors"
+              href="/en/blog"
+              className="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition-colors"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
@@ -121,8 +121,8 @@ const BlogPost = async ({ params }) => {
                   {relatedPosts.map((relatedPost) => (
                     <Link
                       key={relatedPost.id}
-                      href={`/blog/${relatedPost.id}`}
-                      className="group bg-gray-900/50 rounded-xl overflow-hidden hover:bg-gray-900/70 transition-all duration-300"
+                      href={`/en/blog/${relatedPost.id}`}
+                      className="block p-4 bg-gray-800/50 rounded-lg hover:bg-gray-800/70 transition-colors"
                     >
                       <div className="aspect-video overflow-hidden">
                         <img

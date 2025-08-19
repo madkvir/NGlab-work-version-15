@@ -74,7 +74,7 @@ export const faqTranslations: Record<string, FAQTranslation> = {
                   { type: 'text', content: 'Implementation of chatbots and voice assistants.' },
                   { 
                     type: 'text', 
-                    content: 'Integration of AI with CRM (for example: <a href="/tools/keepincrm" class="text-emerald-400 font-bold underline">KeepinCRM</a>, <a href="/tools/hubspot" class="text-emerald-400 font-bold underline">Hubspot</a>).' 
+                    content: 'Integration of AI with CRM (for example: <a href="/en/tools/keepincrm" class="text-emerald-400 font-bold underline">KeepinCRM</a>, <a href="/en/tools/hubspot" class="text-emerald-400 font-bold underline">Hubspot</a>).' 
                   },
                   { type: 'text', content: 'Setting up AI for sales automation and support.' }
                 ]
@@ -209,7 +209,7 @@ export const faqTranslations: Record<string, FAQTranslation> = {
                   { type: 'text', content: 'Implementation of chatbots and voice assistants.' },
                   { 
                     type: 'text', 
-                    content: 'Integration of AI with CRM (for example: <a href="/tools/keepincrm" class="text-emerald-400 font-bold underline">KeepinCRM</a>, <a href="/tools/hubspot" class="text-emerald-400 font-bold underline">Hubspot</a>).' 
+                    content: 'Integration of AI with CRM (for example: <a href="/en/tools/keepincrm" class="text-emerald-400 font-bold underline">KeepinCRM</a>, <a href="/en/tools/hubspot" class="text-emerald-400 font-bold underline">Hubspot</a>).' 
                   },
                   { type: 'text', content: 'Setting up AI for sales automation and support.' }
                 ]
@@ -344,7 +344,7 @@ export const faqTranslations: Record<string, FAQTranslation> = {
                   { type: 'text', content: 'Implementierung von Chatbots und Sprachassistenten.' },
                   { 
                     type: 'text', 
-                    content: 'Integration von KI mit CRM (zum Beispiel: <a href="/tools/keepincrm" class="text-emerald-400 font-bold underline">KeepinCRM</a>, <a href="/tools/hubspot" class="text-emerald-400 font-bold underline">Hubspot</a>).' 
+                    content: 'Integration von KI mit CRM (zum Beispiel: <a href="/en/tools/keepincrm" class="text-emerald-400 font-bold underline">KeepinCRM</a>, <a href="/en/tools/hubspot" class="text-emerald-400 font-bold underline">Hubspot</a>).' 
                   },
                   { type: 'text', content: 'Einrichtung von KI für Vertriebsautomatisierung und Unterstützung.' }
                 ]
@@ -479,7 +479,7 @@ export const faqTranslations: Record<string, FAQTranslation> = {
                   { type: 'text', content: 'Implementación de chatbots y asistentes de voz.' },
                   { 
                     type: 'text', 
-                    content: 'Integración de IA con CRM (por ejemplo: <a href="/tools/keepincrm" class="text-emerald-400 font-bold underline">KeepinCRM</a>, <a href="/tools/hubspot" class="text-emerald-400 font-bold underline">Hubspot</a>).' 
+                    content: 'Integración de IA con CRM (por ejemplo: <a href="/en/tools/keepincrm" class="text-emerald-400 font-bold underline">KeepinCRM</a>, <a href="/en/tools/hubspot" class="text-emerald-400 font-bold underline">Hubspot</a>).' 
                   },
                   { type: 'text', content: 'Configuración de IA para automatización de ventas y soporte.' }
                 ]
@@ -614,7 +614,7 @@ export const faqTranslations: Record<string, FAQTranslation> = {
                   { type: 'text', content: 'Впровадження чат-ботів та голосових асистентів.' },
                   { 
                     type: 'text', 
-                    content: 'Інтеграція ШІ з CRM (наприклад: <a href="/tools/keepincrm" class="text-emerald-400 font-bold underline">KeepinCRM</a>, <a href="/tools/hubspot" class="text-emerald-400 font-bold underline">Hubspot</a>).' 
+                    content: 'Інтеграція ШІ з CRM (наприклад: <a href="/en/tools/keepincrm" class="text-emerald-400 font-bold underline">KeepinCRM</a>, <a href="/en/tools/hubspot" class="text-emerald-400 font-bold underline">Hubspot</a>).' 
                   },
                   { type: 'text', content: 'Налаштування ШІ для автоматизації продажів та підтримки.' }
                 ]

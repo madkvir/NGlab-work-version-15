@@ -44,8 +44,8 @@ const IntegrationSetupSteps: React.FC<IntegrationSetupStepsProps> = ({ language 
                         {point.includes("Контакти") || point.includes("Contacts") ? (
                           <>
                             {point.split(/Контакти|Contacts/)[0]}
-                            <Link href="/contacts" className="text-emerald-400 hover:text-emerald-300 transition-colors">
-                              {language === 'ua' ? 'Контакти' : language === 'ru' ? 'Контакты' : 'Contacts'}
+                            <Link href="/en/contacts" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                              {t.contactUs}
                             </Link>
                             {point.split(/Контакти|Contacts/)[1]}
                           </>

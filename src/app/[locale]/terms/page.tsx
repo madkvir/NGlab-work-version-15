@@ -674,8 +674,8 @@ const Terms = () => {
         <div>
           <p className="mb-4">
             We care about data privacy and security. Please review our Privacy Policy:{" "}
-            <a href="https://neurogenlab.de/privacy" className="text-emerald-400 hover:underline">
-              https://neurogenlab.de/privacy
+            <a href="https://neurogenlab.de/en/privacy" className="text-emerald-400 hover:underline">
+              https://neurogenlab.de/en/privacy
             </a>
             . By using the Services, you agree to be bound by our Privacy Policy, which is
             incorporated into these Legal Terms. Please be advised the Services are hosted in the

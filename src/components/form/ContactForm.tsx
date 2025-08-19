@@ -314,7 +314,7 @@ const ContactForm = () => {
         <label htmlFor="consent" className="text-xs sm:text-sm text-gray-400">
           {t.consent}{" "}
           <Link
-            href="/privacy"
+            href="/en/privacy"
             className="text-emerald-400 hover:text-emerald-300 transition-colors"
           >
             {t.privacyPolicy}

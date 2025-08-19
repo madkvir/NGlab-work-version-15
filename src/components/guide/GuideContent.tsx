@@ -73,58 +73,37 @@ const stageContent: StageContentMap = {
         </h3>
         <p className="text-gray-400 mb-6">
           Выясняем, какие источники необходимо подключить:{" "}
-          <Link
-            href="/tools/facebook-messenger"
-            className="text-white hover:text-emerald-400 transition-colors"
-          >
+          <a href="/en/tools/facebook-messenger" className="text-emerald-400 hover:text-emerald-300 transition-colors">
             Facebook
-          </Link>
+          </a>
           ,{" "}
-          <Link
-            href="/tools/ai-chat-bot"
-            className="text-white hover:text-emerald-400 transition-colors"
-          >
+          <a href="/en/tools/ai-chat-bot" className="text-emerald-400 hover:text-emerald-300 transition-colors">
             Виджет на сайт
-          </Link>
+          </a>
           ,{" "}
-          <Link
-            href="/tools/whatsapp"
-            className="text-white hover:text-emerald-400 transition-colors"
-          >
+          <a href="/en/tools/whatsapp" className="text-emerald-400 hover:text-emerald-300 transition-colors">
             WhatsApp
-          </Link>
+          </a>
           ,{" "}
-          <Link
-            href="/tools/instagram"
-            className="text-white hover:text-emerald-400 transition-colors"
-          >
+          <a href="/en/tools/instagram" className="text-emerald-400 hover:text-emerald-300 transition-colors">
             Instagram
-          </Link>{" "}
+          </a>{" "}
           и другие платформы. Анализируем используемые системы управления, такие как{" "}
-          <Link
-            href="/tools/hubspot"
-            className="text-white hover:text-emerald-400 transition-colors"
-          >
+          <a href="/en/tools/hubspot" className="text-emerald-400 hover:text-emerald-300 transition-colors">
             HubSpot
-          </Link>
+          </a>
           ,{" "}
-          <Link
-            href="/tools/salesforce"
-            className="text-white hover:text-emerald-400 transition-colors"
-          >
+          <a href="/en/tools/salesforce" className="text-emerald-400 hover:text-emerald-300 transition-colors">
             Salesforce
-          </Link>
+          </a>
           ,{" "}
-          <Link href="/tools/email" className="text-white hover:text-emerald-400 transition-colors">
+          <Link href="/en/tools/email" className="text-white hover:text-emerald-400 transition-colors">
             Email
           </Link>
           , базы данных{" "}
-          <Link
-            href="/tools/custom-development"
-            className="text-white hover:text-emerald-400 transition-colors"
-          >
+          <a href="/en/tools/custom-development" className="text-emerald-400 hover:text-emerald-300 transition-colors">
             SQL или NoSQL
-          </Link>{" "}
+          </a>{" "}
           . Оцениваем необходимость интеграции с API, автоматизированного сбора данных и
           синхронизации между различными платформами для бесперебойной работы.
         </p>
@@ -141,7 +120,7 @@ const stageContent: StageContentMap = {
         <h3 className="text-emerald-400 text-xl font-semibold mb-4">Итоги первого этапа</h3>
         <p className="text-gray-400 mb-6">
           На базе полученной информации и проведённой встречи специалисты компании{" "}
-          <Link href="/contacts" className="text-white hover:text-emerald-400 transition-colors">
+          <Link href="/en/contacts" className="text-white hover:text-emerald-400 transition-colors">
             NeuroGen Lab
           </Link>{" "}
           смогут детально оценить масштаб проекта, определить возможные точки интеграции и
@@ -217,67 +196,67 @@ const stageContent: StageContentMap = {
         <p className="text-gray-400 mb-6">
           Выбор решения: Мы подбираем модули, которые действительно необходимы вашему бизнесу:{" "}
           <Link
-            href="/tools/ai-chat-bot"
+            href="/en/tools/ai-chat-bot"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             ИИ Чат Агент
           </Link>
           ,{" "}
           <Link
-            href="/tools/ai-voice-bot"
+            href="/en/tools/ai-voice-bot"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             ИИ Голосовой Агент
           </Link>
           ,{" "}
           <Link
-            href="/tools/best-search"
+            href="/en/tools/best-search"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             Поиск по Таблицам
           </Link>
           ,{" "}
           <Link
-            href="/tools/custom-development"
+            href="/en/tools/custom-development"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             Индивидуальное решение
           </Link>
           . Подбираем Интеграцию в каналы:{" "}
-          <Link href="/tools/email" className="text-white hover:text-emerald-400 transition-colors">
+          <Link href="/en/tools/email" className="text-white hover:text-emerald-400 transition-colors">
             Email
           </Link>
           ,{" "}
           <Link
-            href="/tools/whatsapp"
+            href="/en/tools/whatsapp"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             WhatsApp
           </Link>
           ,{" "}
           <Link
-            href="/tools/instagram"
+            href="/en/tools/instagram"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             Instagram
           </Link>
           ,{" "}
           <Link
-            href="/tools/hubspot"
+            href="/en/tools/hubspot"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             HubSpot
           </Link>
           ,{" "}
           <Link
-            href="/tools/salesforce"
+            href="/en/tools/salesforce"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             Salesforce
           </Link>
           . Если требуется защита от спама, устанавливаем{" "}
           <Link
-            href="/tools/anti-spam"
+            href="/en/tools/anti-spam"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             Антиспам Систему
@@ -320,14 +299,14 @@ const stageContent: StageContentMap = {
           этого у нас есть собственная система тонкого до обучения вашего ИИ Агента. При
           необходимости подключение новых модулей: Например,{" "}
           <Link
-            href="/tools/ai-avatar"
+            href="/en/tools/ai-avatar"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             ИИ Аватар
           </Link>{" "}
           для видеообращений или{" "}
           <Link
-            href="/tools/custom-development"
+            href="/en/tools/custom-development"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             Индивидуальное Решение
@@ -385,7 +364,7 @@ const stageContent: StageContentMap = {
         <h3 className="text-emerald-400 text-xl font-semibold mb-4">Защита и стабильность</h3>
         <p className="text-gray-400 mb-8">
           <Link
-            href="/tools/anti-spam"
+            href="/en/tools/anti-spam"
             className="text-white hover:text-emerald-400 transition-colors"
           >
             Антиспам Система
@@ -566,7 +545,7 @@ const GuideContent = () => {
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row justify-center items-stretch gap-4 mt-12">
         <Link
-          href="/contacts"
+          href="/en/contacts"
           className="w-full sm:w-[180px] h-10 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors text-center flex items-center justify-center"
         >
           {t.buttons.contactSales}

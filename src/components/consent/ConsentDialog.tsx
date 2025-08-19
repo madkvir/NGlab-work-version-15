@@ -105,22 +105,18 @@ const ConsentDialog: React.FC = () => {
                 <GlowingButton onClick={handleRejectAll} variant="outline" fullWidth size="sm">
                   {t.rejectAll}
                 </GlowingButton>
-                <div className="text-xs text-gray-400 text-center pt-2">
-                  <Link
-                    href="/privacy"
-                    onClick={(e) => handleLinkClick(e, "/privacy")}
-                    className="text-emerald-400 hover:underline"
-                  >
-                    {t.privacyPolicy}
-                  </Link>
-                  {" • "}
-                  <Link
-                    href="/cookie-policy"
-                    onClick={(e) => handleLinkClick(e, "/cookie-policy")}
-                    className="text-emerald-400 hover:underline"
-                  >
-                    {t.cookiePolicy}
-                  </Link>
+                <div className="text-sm text-gray-400 mt-4">
+                  <p>
+                    By clicking "Accept", you agree to our{" "}
+                    <a href="/en/privacy" className="text-emerald-400 hover:underline">
+                      Privacy Policy
+                    </a>{" "}
+                    and{" "}
+                    <a href="/en/cookie-policy" className="text-emerald-400 hover:underline">
+                      Cookie Policy
+                    </a>
+                    .
+                  </p>
                 </div>
               </div>
             </>

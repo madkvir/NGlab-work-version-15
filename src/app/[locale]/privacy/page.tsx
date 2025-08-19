@@ -39,8 +39,8 @@ const Privacy = () => {
       <ul className="list-disc list-inside text-gray-300 leading-relaxed mt-4">
         <li>
           Visit our website at{" "}
-          <a href="https://neurogenlab.de/privacy" className="text-emerald-400 hover:underline">
-            https://neurogenlab.de/privacy
+          <a href="https://neurogenlab.de/en/privacy" className="text-emerald-400 hover:underline">
+            https://neurogenlab.de/en/privacy
           </a>
           , or any website of ours that links to this Privacy Notice
         </li>
@@ -218,10 +218,10 @@ const Privacy = () => {
             Like many businesses, we also collect information through cookies and similar
             technologies. You can find out more about this in our Cookie Notice:{" "}
             <a
-              href="https://neurogenlab.de/cookie-policy"
+              href="https://neurogenlab.de/en/cookie-policy"
               className="text-emerald-400 hover:underline"
             >
-              https://neurogenlab.de/cookie-policy
+              https://neurogenlab.de/en/cookie-policy
             </a>
             .
           </p>
@@ -473,10 +473,10 @@ const Privacy = () => {
             Specific information about how we use such technologies and how you can refuse certain
             cookies is set out in our Cookie Notice:{" "}
             <a
-              href="https://neurogenlab.de/cookie-policy"
+              href="https://neurogenlab.de/en/cookie-policy"
               className="text-emerald-400 hover:underline"
             >
-              https://neurogenlab.de/cookie-policy
+              https://neurogenlab.de/en/cookie-policy
             </a>
           </p>
           <h3 className="text-lg font-semibold mb-2">Google Analytics</h3>
@@ -807,10 +807,10 @@ const Privacy = () => {
             remove cookies or reject cookies, this could affect certain features or services of our
             Services. For further information, please see our Cookie Notice:{" "}
             <a
-              href="https://neurogenlab.de/cookie-policy"
+              href="https://neurogenlab.de/en/cookie-policy"
               className="text-emerald-400 hover:underline"
             >
-              https://neurogenlab.de/cookie-policy
+              https://neurogenlab.de/en/cookie-policy
             </a>
             .
           </p>
