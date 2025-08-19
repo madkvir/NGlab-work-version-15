@@ -28,13 +28,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/best-search',
-  'Best Search | NeuroGen Lab - Intelligent Search',
-  'Enhance your search capabilities with AI-powered technology. Intelligent results, smart filtering, and improved user experience.',
-  `${baseUrl}/assets/images/og-best-search.jpg`,
-  'NeuroGen Lab Best Search'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/best-search', 'Best Search | NeuroGen Lab - Intelligent Search', 'Enhance your search capabilities with AI-powered technology. Intelligent results, smart filtering, and improved user experience.', `${baseUrl}/assets/images/og-best-search.jpg`, 'NeuroGen Lab Best Search', locale);
+}
 
 export default function Layout({
   children,

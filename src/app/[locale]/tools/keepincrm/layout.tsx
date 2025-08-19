@@ -34,13 +34,11 @@ export const viewport = {
   maximumScale: 1,
 };
 
-export const metadata = generatePageMetadata(
-  'tools/keepincrm',
-  'KeepinCRM Integration | NeuroGen Lab - CRM Automation',
-  'Optimize your CRM with AI-powered KeepinCRM integration. Automated customer management, intelligent insights, and enhanced sales processes.',
-  `${baseUrl}/assets/images/og-keepincrm.jpg`,
-  'NeuroGen Lab KeepinCRM Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/keepincrm', 'KeepinCRM Integration | NeuroGen Lab - CRM Automation', 'Optimize your CRM with AI-powered KeepinCRM integration. Automated customer management, intelligent insights, and enhanced sales processes.', `${baseUrl}/assets/images/og-keepincrm.jpg`, 'NeuroGen Lab KeepinCRM Integration', locale);
+}
 
 export default function KeepinCRMLayout({
   children,

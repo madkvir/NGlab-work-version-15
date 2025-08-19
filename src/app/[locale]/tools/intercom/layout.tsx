@@ -29,13 +29,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/intercom',
-  'Intercom Integration | NeuroGen Lab - Customer Engagement',
-  'Transform your customer engagement with AI-powered Intercom integration. Automate support, improve communication, and enhance customer satisfaction.',
-  `${baseUrl}/assets/images/og-intercom.jpg`,
-  'NeuroGen Lab Intercom Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/intercom', 'Intercom Integration | NeuroGen Lab - Customer Engagement', 'Transform your customer engagement with AI-powered Intercom integration. Automate support, improve communication, and enhance customer satisfaction.', `${baseUrl}/assets/images/og-intercom.jpg`, 'NeuroGen Lab Intercom Integration', locale);
+}
 
 export default function Layout({
   children,

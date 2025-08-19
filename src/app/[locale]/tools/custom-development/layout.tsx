@@ -30,13 +30,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/custom-development',
-  'Custom Development | NeuroGen Lab - Tailored Software Solutions',
-  'Transform your business with custom AI-powered software solutions. Tailored development services for unique requirements and digital innovation.',
-  `${baseUrl}/assets/images/og-custom-development.jpg`,
-  'NeuroGen Lab Custom Development'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/custom-development', 'Custom Development | NeuroGen Lab - Tailored Software Solutions', 'Transform your business with custom AI-powered software solutions. Tailored development services for unique requirements and digital innovation.', `${baseUrl}/assets/images/og-custom-development.jpg`, 'NeuroGen Lab Custom Development', locale);
+}
 
 export default function Layout({
   children,

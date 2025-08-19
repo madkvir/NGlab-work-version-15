@@ -29,13 +29,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/hubspot',
-  'HubSpot Integration | NeuroGen Lab - Marketing Automation',
-  'Transform your marketing and CRM with AI-powered HubSpot integration. Automate campaigns, enhance customer relationships, and boost conversion rates.',
-  `${baseUrl}/assets/images/og-hubspot.jpg`,
-  'NeuroGen Lab HubSpot Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/hubspot', 'HubSpot Integration | NeuroGen Lab - Marketing Automation', 'Transform your marketing and CRM with AI-powered HubSpot integration. Automate campaigns, enhance customer relationships, and boost conversion rates.', `${baseUrl}/assets/images/og-hubspot.jpg`, 'NeuroGen Lab HubSpot Integration', locale);
+}
 
 export default function Layout({
   children,

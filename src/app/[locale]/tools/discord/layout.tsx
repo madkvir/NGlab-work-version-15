@@ -28,13 +28,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/discord',
-  'Discord Integration | NeuroGen Lab - Community Management',
-  'Enhance your Discord community with AI-powered integration. Automated moderation, intelligent responses, and improved community engagement.',
-  `${baseUrl}/assets/images/og-discord.jpg`,
-  'NeuroGen Lab Discord Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/discord', 'Discord Integration | NeuroGen Lab - Community Management', 'Enhance your Discord community with AI-powered integration. Automated moderation, intelligent responses, and improved community engagement.', `${baseUrl}/assets/images/og-discord.jpg`, 'NeuroGen Lab Discord Integration', locale);
+}
 
 export default function Layout({
   children,

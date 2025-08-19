@@ -8,8 +8,12 @@ export function generatePageMetadata(
   title: string,
   description: string,
   imageUrl?: string,
-  imageAlt?: string
+  imageAlt?: string,
+  locale?: string
 ): Metadata {
+  // Определяем канонический URL на основе локали
+  const canonicalUrl = locale ? `${baseUrl}/${locale}/${path}` : `${baseUrl}/en/${path}`;
+  
   return {
     title,
     description,
@@ -17,7 +21,7 @@ export function generatePageMetadata(
       type: 'website',
       title,
       description,
-      url: `${baseUrl}/${path}`,
+      url: canonicalUrl,
       siteName: 'NeuroGen Lab',
       images: imageUrl ? [
         {
@@ -28,7 +32,7 @@ export function generatePageMetadata(
           type: 'image/jpeg',
         },
       ] : undefined,
-      locale: 'en',
+      locale: locale || 'en',
       alternateLocale: generateOpenGraphAlternateLocales(),
     },
     twitter: {
@@ -39,7 +43,16 @@ export function generatePageMetadata(
       creator: '@neurogenlab',
       site: '@neurogenlab',
     },
-    alternates: generateHrefLangs(path),
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        en: `${baseUrl}/en/${path}`,
+        de: `${baseUrl}/de/${path}`,
+        es: `${baseUrl}/es/${path}`,
+        ru: `${baseUrl}/ru/${path}`,
+        uk: `${baseUrl}/uk/${path}`,
+      },
+    },
     robots: {
       index: true,
       follow: true,

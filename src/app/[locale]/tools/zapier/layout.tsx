@@ -30,13 +30,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/zapier',
-  'Zapier Integration | NeuroGen Lab - Workflow Automation',
-  'Automate your workflows with AI-powered Zapier integration. Intelligent automation, smart connections, and enhanced productivity.',
-  `${baseUrl}/assets/images/og-zapier.jpg`,
-  'NeuroGen Lab Zapier Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/zapier', 'Zapier Integration | NeuroGen Lab - Workflow Automation', 'Automate your workflows with AI-powered Zapier integration. Intelligent automation, smart connections, and enhanced productivity.', `${baseUrl}/assets/images/og-zapier.jpg`, 'NeuroGen Lab Zapier Integration', locale);
+}
 
 export default function Layout({
   children,

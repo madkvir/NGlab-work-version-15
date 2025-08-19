@@ -29,13 +29,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/facebook-messenger',
-  'Facebook Messenger Integration | NeuroGen Lab - Smart Communication',
-  'Transform your customer communication with AI-powered Facebook Messenger integration. Automate responses, enhance engagement, and improve customer support.',
-  `${baseUrl}/assets/images/og-facebook-messenger.jpg`,
-  'NeuroGen Lab Facebook Messenger Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/facebook-messenger', 'Facebook Messenger Integration | NeuroGen Lab - Smart Communication', 'Transform your customer communication with AI-powered Facebook Messenger integration. Automate responses, enhance engagement, and improve customer support.', `${baseUrl}/assets/images/og-facebook-messenger.jpg`, 'NeuroGen Lab Facebook Messenger Integration', locale);
+}
 
 export default function Layout({
   children,

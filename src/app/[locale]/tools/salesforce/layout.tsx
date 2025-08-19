@@ -29,13 +29,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/salesforce',
-  'Salesforce Integration | NeuroGen Lab - CRM Enhancement',
-  'Enhance your Salesforce with AI-powered integration. Automated workflows, intelligent insights, and improved customer relationship management.',
-  `${baseUrl}/assets/images/og-salesforce.jpg`,
-  'NeuroGen Lab Salesforce Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/salesforce', 'Salesforce Integration | NeuroGen Lab - CRM Enhancement', 'Enhance your Salesforce with AI-powered integration. Automated workflows, intelligent insights, and improved customer relationship management.', `${baseUrl}/assets/images/og-salesforce.jpg`, 'NeuroGen Lab Salesforce Integration', locale);
+}
 
 export default function Layout({
   children,

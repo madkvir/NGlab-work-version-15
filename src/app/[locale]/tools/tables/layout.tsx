@@ -29,13 +29,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/tables',
-  'Smart Tables | NeuroGen Lab - AI-Powered Data Management',
-  'Transform your data management with AI-powered smart tables. Efficiently organize, analyze, and visualize your business data.',
-  `${baseUrl}/assets/images/og-tables.jpg`,
-  'NeuroGen Lab Smart Tables'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/tables', 'Smart Tables | NeuroGen Lab - AI-Powered Data Management', 'Transform your data management with AI-powered smart tables. Efficiently organize, analyze, and visualize your business data.', `${baseUrl}/assets/images/og-tables.jpg`, 'NeuroGen Lab Smart Tables', locale);
+}
 
 export default function TablesLayout({
   children,

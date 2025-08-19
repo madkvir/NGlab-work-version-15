@@ -29,13 +29,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/ai-voice-bot',
-  'AI Voice Bot | NeuroGen Lab - Intelligent Voice Automation',
-  'Transform your customer communication with AI-powered voice bots. Automate interactions while maintaining natural conversation flow.',
-  `${baseUrl}/assets/images/og-ai-voice-bot.jpg`,
-  'NeuroGen Lab AI Voice Bot'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/ai-voice-bot', 'AI Voice Bot | NeuroGen Lab - Intelligent Voice Automation', 'Transform your customer communication with AI-powered voice bots. Automate interactions while maintaining natural conversation flow.', `${baseUrl}/assets/images/og-ai-voice-bot.jpg`, 'NeuroGen Lab AI Voice Bot', locale);
+}
 
 export default function AiVoiceBotLayout({
   children,

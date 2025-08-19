@@ -29,13 +29,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/microsoft-teams',
-  'Microsoft Teams Integration | NeuroGen Lab - Team Collaboration',
-  'Transform your team collaboration with AI-powered Microsoft Teams integration. Automated workflows, intelligent communication, and enhanced productivity.',
-  `${baseUrl}/assets/images/og-microsoft-teams.jpg`,
-  'NeuroGen Lab Microsoft Teams Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/microsoft-teams', 'Microsoft Teams Integration | NeuroGen Lab - Team Collaboration', 'Transform your team collaboration with AI-powered Microsoft Teams integration. Automated workflows, intelligent communication, and enhanced productivity.', `${baseUrl}/assets/images/og-microsoft-teams.jpg`, 'NeuroGen Lab Microsoft Teams Integration', locale);
+}
 
 export default function Layout({
   children,

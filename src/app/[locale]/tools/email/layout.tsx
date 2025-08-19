@@ -28,13 +28,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/email',
-  'Email Integration | NeuroGen Lab - Communication Automation',
-  'Automate your email communication with AI-powered integration. Smart responses, intelligent filtering, and enhanced email management.',
-  `${baseUrl}/assets/images/og-email.jpg`,
-  'NeuroGen Lab Email Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/email', 'Email Integration | NeuroGen Lab - Communication Automation', 'Automate your email communication with AI-powered integration. Smart responses, intelligent filtering, and enhanced email management.', `${baseUrl}/assets/images/og-email.jpg`, 'NeuroGen Lab Email Integration', locale);
+}
 
 export default function Layout({
   children,

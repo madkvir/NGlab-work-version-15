@@ -30,13 +30,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/slack',
-  'Slack Integration | NeuroGen Lab - Team Communication',
-  'Enhance your team communication with AI-powered Slack integration. Automated workflows, intelligent notifications, and improved collaboration.',
-  `${baseUrl}/assets/images/og-slack.jpg`,
-  'NeuroGen Lab Slack Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/slack', 'Slack Integration | NeuroGen Lab - Team Communication', 'Enhance your team communication with AI-powered Slack integration. Automated workflows, intelligent notifications, and improved collaboration.', `${baseUrl}/assets/images/og-slack.jpg`, 'NeuroGen Lab Slack Integration', locale);
+}
 
 export default function Layout({
   children,

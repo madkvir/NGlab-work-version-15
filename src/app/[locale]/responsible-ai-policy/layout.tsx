@@ -17,13 +17,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'responsible-ai-policy',
-  'Responsible AI Policy | NeuroGen Lab - Ethical AI Guidelines',
-  'Learn about NeuroGen Lab\'s commitment to ethical AI development and implementation. Our guidelines for responsible AI usage and development.',
-  `${baseUrl}/assets/images/og-responsible-ai.jpg`,
-  'NeuroGen Lab Responsible AI Policy'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('responsible-ai-policy', 'Responsible AI Policy | NeuroGen Lab - Ethical AI Guidelines', 'Learn about NeuroGen Lab\'s commitment to ethical AI development and implementation. Our guidelines for responsible AI usage and development.', `${baseUrl}/assets/images/og-responsible-ai.jpg`, 'NeuroGen Lab Responsible AI Policy', locale);
+}
 
 export default function ResponsibleAiPolicyLayout({
   children,

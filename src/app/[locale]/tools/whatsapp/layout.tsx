@@ -28,13 +28,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/whatsapp',
-  'WhatsApp Integration | NeuroGen Lab - Business Messaging',
-  'Transform your business communication with AI-powered WhatsApp integration. Automated messaging, customer engagement, and streamlined support.',
-  `${baseUrl}/assets/images/og-whatsapp.jpg`,
-  'NeuroGen Lab WhatsApp Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/whatsapp', 'WhatsApp Integration | NeuroGen Lab - Business Messaging', 'Transform your business communication with AI-powered WhatsApp integration. Automated messaging, customer engagement, and streamlined support.', `${baseUrl}/assets/images/og-whatsapp.jpg`, 'NeuroGen Lab WhatsApp Integration', locale);
+}
 
 export default function Layout({
   children,

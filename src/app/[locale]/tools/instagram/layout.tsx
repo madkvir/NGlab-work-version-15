@@ -28,13 +28,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/instagram',
-  'Instagram Integration | NeuroGen Lab - Social Media Automation',
-  'Automate your Instagram presence with AI-powered integration. Enhanced engagement, automated responses, and social media optimization.',
-  `${baseUrl}/assets/images/og-instagram.jpg`,
-  'NeuroGen Lab Instagram Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/instagram', 'Instagram Integration | NeuroGen Lab - Social Media Automation', 'Automate your Instagram presence with AI-powered integration. Enhanced engagement, automated responses, and social media optimization.', `${baseUrl}/assets/images/og-instagram.jpg`, 'NeuroGen Lab Instagram Integration', locale);
+}
 
 export default function Layout({
   children,

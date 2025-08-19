@@ -29,13 +29,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/anti-spam',
-  'Anti-Spam | NeuroGen Lab - Email Protection',
-  'Protect your communication with AI-powered anti-spam technology. Advanced filtering, real-time protection, and intelligent threat detection for secure email environments.',
-  `${baseUrl}/assets/images/og-anti-spam.jpg`,
-  'NeuroGen Lab Anti-Spam'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/anti-spam', 'Anti-Spam | NeuroGen Lab - Email Protection', 'Protect your communication with AI-powered anti-spam technology. Advanced filtering, real-time protection, and intelligent threat detection for secure email environments.', `${baseUrl}/assets/images/og-anti-spam.jpg`, 'NeuroGen Lab Anti-Spam', locale);
+}
 
 export default function Layout({
   children,

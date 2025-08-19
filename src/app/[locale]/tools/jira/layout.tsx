@@ -35,13 +35,11 @@ export const viewport = {
   maximumScale: 1,
 };
 
-export const metadata = generatePageMetadata(
-  'tools/jira',
-  'Jira Integration | NeuroGen Lab - Project Management',
-  'Enhance your project management with AI-powered Jira integration. Automate workflows, improve tracking, and boost team productivity.',
-  `${baseUrl}/assets/images/og-jira.jpg`,
-  'NeuroGen Lab Jira Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/jira', 'Jira Integration | NeuroGen Lab - Project Management', 'Enhance your project management with AI-powered Jira integration. Automate workflows, improve tracking, and boost team productivity.', `${baseUrl}/assets/images/og-jira.jpg`, 'NeuroGen Lab Jira Integration', locale);
+}
 
 export default function Layout({
   children,

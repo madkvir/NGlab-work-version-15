@@ -29,13 +29,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/ai-avatar',
-  'AI Avatar Generator | NeuroGen Lab - Create Professional Digital Identities',
-  'Generate professional AI-powered avatars for your business and personal brand. Create unique, high-quality digital representations instantly.',
-  `${baseUrl}/assets/images/og-ai-avatar.jpg`,
-  'NeuroGen Lab AI Avatar Generator'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/ai-avatar', 'AI Avatar Generator | NeuroGen Lab - Create Professional Digital Identities', 'Generate professional AI-powered avatars for your business and personal brand. Create unique, high-quality digital representations instantly.', `${baseUrl}/assets/images/og-ai-avatar.jpg`, 'NeuroGen Lab AI Avatar Generator', locale);
+}
 
 export default function AiAvatarLayout({
   children,

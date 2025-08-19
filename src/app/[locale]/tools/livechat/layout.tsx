@@ -29,13 +29,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/livechat',
-  'LiveChat Integration | NeuroGen Lab - Real-time Support',
-  'Enhance your customer support with AI-powered LiveChat integration. Real-time communication, automated responses, and improved customer satisfaction.',
-  `${baseUrl}/assets/images/og-livechat.jpg`,
-  'NeuroGen Lab LiveChat Integration'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/livechat', 'LiveChat Integration | NeuroGen Lab - Real-time Support', 'Enhance your customer support with AI-powered LiveChat integration. Real-time communication, automated responses, and improved customer satisfaction.', `${baseUrl}/assets/images/og-livechat.jpg`, 'NeuroGen Lab LiveChat Integration', locale);
+}
 
 export default function Layout({
   children,

@@ -30,13 +30,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'guide',
-  'AI Implementation Guide | NeuroGen Lab',
-  'Comprehensive guide for implementing AI solutions in your business. Learn how to transform your operations with NeuroGen Lab.',
-  `${baseUrl}/assets/images/og-guide.jpg`,
-  'NeuroGen Lab Implementation Guide'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('guide', 'AI Implementation Guide | NeuroGen Lab', 'Comprehensive guide for implementing AI solutions in your business. Learn how to transform your operations with NeuroGen Lab.', `${baseUrl}/assets/images/og-guide.jpg`, 'NeuroGen Lab Implementation Guide', locale);
+}
 
 export default async function GuideLayout({
   children,

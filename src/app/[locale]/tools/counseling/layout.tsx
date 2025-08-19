@@ -1,4 +1,5 @@
 import React from "react";
+import { Metadata } from 'next';
 import { generatePageMetadata } from '../../../../utils/metadata';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://neurogenlab.de';
@@ -28,13 +29,11 @@ const jsonLd = {
   }
 };
 
-export const metadata = generatePageMetadata(
-  'tools/counseling',
-  'AI Counseling | NeuroGen Lab - Intelligent Support',
-  'Provide intelligent counseling support with AI-powered technology. Automated guidance, smart responses, and enhanced user assistance.',
-  `${baseUrl}/assets/images/og-counseling.jpg`,
-  'NeuroGen Lab AI Counseling'
-);
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  return generatePageMetadata('tools/counseling', 'AI Counseling | NeuroGen Lab - Intelligent Support', 'Provide intelligent counseling support with AI-powered technology. Automated guidance, smart responses, and enhanced user assistance.', `${baseUrl}/assets/images/og-counseling.jpg`, 'NeuroGen Lab AI Counseling', locale);
+}
 
 export default async function CounselingLayout({
   children,
