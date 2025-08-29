@@ -2,15 +2,18 @@ import dbConnect from "@/lib/mongodb";
 import Post from "@/server/models/Post";
 import { NextRequest, NextResponse } from "next/server";
 import { uploadImages } from "@/services/cloudinary/unloadImages";
-
-// Конфигурация CORS
+import {
+  validateContentSize,
+  validateFormDataSize,
+  MAX_CONTENT_SIZE,
+  MAX_REQUEST_SIZE,
+} from "@/utils/contentValidation";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "https://neurogenlab.de",
   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type, Authorization",
 };
 
-// Обработка OPTIONS запроса для CORS preflight
 export async function OPTIONS() {
   return NextResponse.json({}, { headers: corsHeaders });
 }
@@ -32,14 +35,72 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   try {
+    const contentLength = req.headers.get("content-length");
+    if (contentLength && parseInt(contentLength) > MAX_REQUEST_SIZE) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Request too large",
+          message: "Request size exceeds 6MB limit",
+        },
+        { status: 413, headers: corsHeaders }
+      );
+    }
+
     await dbConnect();
-    console.log("db connect succesful!");
+    console.log("db connect successful!");
 
     const form = await req.formData();
+
+    if (!validateFormDataSize(form)) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Request too large",
+          message: "Request size exceeds 6MB limit",
+        },
+        { status: 413, headers: corsHeaders }
+      );
+    }
+
     const images = form.getAll("images") as File[];
     const rawTranslations = form.get("translations");
+    const content = form.get("content") as string;
 
-    const uploadedImages = await uploadImages(images);
+
+    if (content && !validateContentSize(content)) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Content too large",
+          message: "Content size exceeds 5MB limit",
+        },
+        { status: 413, headers: corsHeaders }
+      );
+    }
+
+
+    let uploadedImages: string[] = [];
+    if (images.length > 0) {
+      try {
+        const uploadPromise = uploadImages(images);
+        const timeoutPromise = new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error("Image upload timeout")), 25000)
+        );
+
+        uploadedImages = await Promise.race([uploadPromise, timeoutPromise]);
+      } catch (uploadError) {
+        console.error("❌ Error uploading images:", uploadError);
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Image upload failed",
+            message: uploadError instanceof Error ? uploadError.message : "Upload timeout",
+          },
+          { status: 500, headers: corsHeaders }
+        );
+      }
+    }
 
     let translations = null;
 
@@ -55,7 +116,7 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    const newPost = await Post.create({
+    const createPostPromise = Post.create({
       title: form.get("title"),
       slug: form.get("slug"),
       excerpt: form.get("excerpt"),
@@ -67,12 +128,32 @@ export async function POST(req: NextRequest) {
       images: uploadedImages,
     });
 
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(() => reject(new Error("Database operation timeout")), 30000)
+    );
+
+    const newPost = await Promise.race([createPostPromise, timeoutPromise]);
+
     return NextResponse.json(
       { success: true, data: newPost },
       { status: 201, headers: corsHeaders }
     );
   } catch (error) {
     console.error("❌ Error creating post:", error);
+
+    if (error instanceof Error) {
+      if (error.message.includes("timeout")) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Request timeout",
+            message: "Operation took too long to complete",
+          },
+          { status: 504, headers: corsHeaders }
+        );
+      }
+    }
+
     return NextResponse.json(
       { success: false, error: "Bad Request" },
       { status: 400, headers: corsHeaders }
@@ -83,17 +164,64 @@ export async function POST(req: NextRequest) {
 export async function PUT(req: Request) {
   try {
     await dbConnect();
-    console.log("db connect succesful!");
+    console.log("db connect successful!");
 
     const form = await req.formData();
+
+
+    if (!validateFormDataSize(form)) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Request too large",
+          message: "Request size exceeds 6MB limit",
+        },
+        { status: 413, headers: corsHeaders }
+      );
+    }
+
     const images = form.getAll("images") as File[];
     const id = form.get("_id");
     const rawTranslations = form.get("translations");
+    const content = form.get("content") as string;
+
+
+    if (content && !validateContentSize(content)) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Content too large",
+          message: "Content size exceeds 5MB limit",
+        },
+        { status: 413, headers: corsHeaders }
+      );
+    }
 
     const postInfo = await Post.findOne({ _id: id });
     const exstImages = postInfo.images;
 
-    const uploadedImages = await uploadImages(images);
+
+    let uploadedImages: string[] = [];
+    if (images.length > 0) {
+      try {
+        const uploadPromise = uploadImages(images);
+        const timeoutPromise = new Promise<never>((_, reject) =>
+          setTimeout(() => reject(new Error("Image upload timeout")), 25000)
+        );
+
+        uploadedImages = await Promise.race([uploadPromise, timeoutPromise]);
+      } catch (uploadError) {
+        console.error("❌ Error uploading images:", uploadError);
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Image upload failed",
+            message: uploadError instanceof Error ? uploadError.message : "Upload timeout",
+          },
+          { status: 500, headers: corsHeaders }
+        );
+      }
+    }
 
     let translations = null;
 
@@ -120,7 +248,14 @@ export async function PUT(req: Request) {
       translations,
       images: [...exstImages, ...uploadedImages],
     };
-    const result = await Post.findByIdAndUpdate(id, updPost);
+
+
+    const updatePromise = Post.findByIdAndUpdate(id, updPost);
+    const timeoutPromise = new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error("Database operation timeout")), 30000)
+    );
+
+    const result = await Promise.race([updatePromise, timeoutPromise]);
     console.log("result update", result);
 
     return NextResponse.json(
@@ -129,6 +264,20 @@ export async function PUT(req: Request) {
     );
   } catch (error) {
     console.error("❌ Error updating post:", error);
+
+    if (error instanceof Error) {
+      if (error.message.includes("timeout")) {
+        return NextResponse.json(
+          {
+            success: false,
+            error: "Request timeout",
+            message: "Operation took too long to complete",
+          },
+          { status: 504, headers: corsHeaders }
+        );
+      }
+    }
+
     return NextResponse.json(
       { success: false, error: "Bad Request" },
       { status: 400, headers: corsHeaders }
