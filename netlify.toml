@@ -6,25 +6,36 @@
 [functions]
   node_bundler = "esbuild"
   external_node_modules = ["mongodb"]
+  included_files = ["src/**/*"]
+  timeout = 30
 
-# API-редиректы
+# API-redirects
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
   force = true
 
-# Основной редирект для Next.js
+# Main redirect Next.js
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   conditions = {Role = ["admin"]}
 
-# Добавляем заголовки CORS
+# CORS
 [[headers]]
   for = "/api/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
     Access-Control-Allow-Headers = "Content-Type, Authorization"
+
+# Large request settings
+[[headers]]
+  for = "/api/blog"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+    X-Requested-With = "XMLHttpRequest"
