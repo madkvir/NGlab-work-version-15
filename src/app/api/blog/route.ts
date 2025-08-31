@@ -33,7 +33,7 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     await dbConnect();
-    console.log("db connect succesful!");
+    console.log("db connect successful!");
 
     const form = await req.formData();
     const images = form.getAll("images") as File[];
@@ -83,7 +83,7 @@ export async function POST(req: NextRequest) {
 export async function PUT(req: Request) {
   try {
     await dbConnect();
-    console.log("db connect succesful!");
+    console.log("db connect successful!");
 
     const form = await req.formData();
     const images = form.getAll("images") as File[];
