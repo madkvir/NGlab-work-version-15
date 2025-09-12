@@ -41,7 +41,9 @@ export async function POST(req: NextRequest) {
         {
           success: false,
           error: "Request too large",
-          message: "Request size exceeds 6MB limit",
+          message: `Request size exceeds ${
+            MAX_REQUEST_SIZE / 1024 / 1024
+          }MB limit. Consider using /api/blog/chunk for large content.`,
         },
         { status: 413, headers: corsHeaders }
       );
@@ -67,7 +69,6 @@ export async function POST(req: NextRequest) {
     const rawTranslations = form.get("translations");
     const content = form.get("content") as string;
 
-
     if (content && !validateContentSize(content)) {
       return NextResponse.json(
         {
@@ -79,23 +80,44 @@ export async function POST(req: NextRequest) {
       );
     }
 
-
     let uploadedImages: string[] = [];
     if (images.length > 0) {
       try {
+        if (totalImageSize > 50 * 1024 * 1024) {
+            {
+              success: false,
+              error: "Images too large",
+              message: "Total image size exceeds 50MB limit",
+            },
+            { status: 413, headers: corsHeaders }
+          );
+        }
+
         const uploadPromise = uploadImages(images);
         const timeoutPromise = new Promise<never>((_, reject) =>
           setTimeout(() => reject(new Error("Image upload timeout")), 25000)
         );
 
         uploadedImages = await Promise.race([uploadPromise, timeoutPromise]);
+        console.log(`✅ Successfully uploaded ${uploadedImages.length} images`);
       } catch (uploadError) {
         console.error("❌ Error uploading images:", uploadError);
+
+        if (uploadError instanceof Error) {
+          if (uploadError.message.includes("Cloudinary is not properly configured")) {
+            errorMessage = "Image service is not configured";
+          } else if (uploadError.message.includes("timeout")) {
+            errorMessage = "Image upload timeout - try reducing image sizes";
+          } else {
+            errorMessage = uploadError.message;
+          }
+        }
+
         return NextResponse.json(
           {
             success: false,
             error: "Image upload failed",
-            message: uploadError instanceof Error ? uploadError.message : "Upload timeout",
+            message: errorMessage,
           },
           { status: 500, headers: corsHeaders }
         );
@@ -168,7 +190,6 @@ export async function PUT(req: Request) {
 
     const form = await req.formData();
 
-
     if (!validateFormDataSize(form)) {
       return NextResponse.json(
         {
@@ -185,7 +206,6 @@ export async function PUT(req: Request) {
     const rawTranslations = form.get("translations");
     const content = form.get("content") as string;
 
-
     if (content && !validateContentSize(content)) {
       return NextResponse.json(
         {
@@ -200,23 +220,44 @@ export async function PUT(req: Request) {
     const postInfo = await Post.findOne({ _id: id });
     const exstImages = postInfo.images;
 
-
     let uploadedImages: string[] = [];
     if (images.length > 0) {
       try {
+        if (totalImageSize > 50 * 1024 * 1024) {
+            {
+              success: false,
+              error: "Images too large",
+              message: "Total image size exceeds 50MB limit",
+            },
+            { status: 413, headers: corsHeaders }
+          );
+        }
+
         const uploadPromise = uploadImages(images);
         const timeoutPromise = new Promise<never>((_, reject) =>
           setTimeout(() => reject(new Error("Image upload timeout")), 25000)
         );
 
         uploadedImages = await Promise.race([uploadPromise, timeoutPromise]);
+        console.log(`✅ Successfully uploaded ${uploadedImages.length} images for update`);
       } catch (uploadError) {
         console.error("❌ Error uploading images:", uploadError);
+
+        if (uploadError instanceof Error) {
+          if (uploadError.message.includes("Cloudinary is not properly configured")) {
+            errorMessage = "Image service is not configured";
+          } else if (uploadError.message.includes("timeout")) {
+            errorMessage = "Image upload timeout - try reducing image sizes";
+          } else {
+            errorMessage = uploadError.message;
+          }
+        }
+
         return NextResponse.json(
           {
             success: false,
             error: "Image upload failed",
-            message: uploadError instanceof Error ? uploadError.message : "Upload timeout",
+            message: errorMessage,
           },
           { status: 500, headers: corsHeaders }
         );
@@ -248,7 +289,6 @@ export async function PUT(req: Request) {
       translations,
       images: [...exstImages, ...uploadedImages],
     };
-
 
     const updatePromise = Post.findByIdAndUpdate(id, updPost);
     const timeoutPromise = new Promise<never>((_, reject) =>

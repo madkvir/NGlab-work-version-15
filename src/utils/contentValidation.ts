@@ -1,6 +1,6 @@
 // Константы для валидации размера контента
-export const MAX_CONTENT_SIZE = 5 * 1024 * 1024; // 5MB
-export const MAX_REQUEST_SIZE = 6 * 1024 * 1024; // 6MB (Netlify limit)
+export const MAX_CONTENT_SIZE = 50 * 1024 * 1024; // 50MB
+export const MAX_REQUEST_SIZE = 100 * 1024 * 1024; // 100MB (увеличенный лимит)
 
 /**
  * Check content size

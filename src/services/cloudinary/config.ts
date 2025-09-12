@@ -1,7 +1,16 @@
-import { v2 } from "cloudinary";
+import { v2 as cloudinary } from "cloudinary";
+import { checkCloudinaryConfig, getCloudinaryErrorMessage } from "@/utils/cloudinaryCheck";
 
-export const cloudinary = v2.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+
+if (!configCheck.isConfigured) {
+  console.warn(`⚠️  ${getCloudinaryErrorMessage()}`);
+} else {
+  console.log("✅ Cloudinary configuration is valid");
+}
+
+  cloud_name: configCheck.config.cloud_name,
+  api_key: configCheck.config.api_key,
+  api_secret: configCheck.config.api_secret,
 });
+
+export { cloudinary };
