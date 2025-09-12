@@ -15,6 +15,7 @@ export async function OPTIONS() {
   return NextResponse.json({}, { headers: corsHeaders });
 }
 
+export async function POST(req: NextRequest) {
   try {
     const { chunkId, totalChunks, chunkIndex, chunkData, metadata } = await req.json();
 
@@ -40,6 +41,7 @@ export async function OPTIONS() {
       const fullBuffer = Buffer.concat(storage.chunks);
       const fullContent = fullBuffer.toString("utf-8");
 
+      await dbConnect();
 
       const newPost = await Post.create({
         title: metadata.title,
@@ -53,6 +55,7 @@ export async function OPTIONS() {
         images: [], // Изображения обрабатываются отдельно
       });
 
+      chunkStorage.delete(chunkId);
 
       return NextResponse.json(
         {
@@ -82,6 +85,7 @@ export async function OPTIONS() {
   }
 }
 
+export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
     const chunkId = searchParams.get("chunkId");

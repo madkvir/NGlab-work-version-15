@@ -43,5 +43,6 @@ export const uploadImages = async (images: File[]) => {
     console.error("Error in uploadImages:", error);
     console.warn("⚠️  Falling back to base64 upload for all images");
 
+    return await uploadImagesFallback(images);
   }
 };

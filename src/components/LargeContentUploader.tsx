@@ -20,6 +20,7 @@ export default function LargeContentUploader({
   const handleContentChange = (newContent: string) => {
     setContent(newContent);
 
+    const contentCheck = checkContentLimit(newContent);
     if (contentCheck.size.bytes > 5 * 1024 * 1024) {
       // > 5MB
       setShowProgress(true);
@@ -69,6 +70,7 @@ export default function LargeContentUploader({
         )}
       </div>
 
+      {uploadProgress.isUploading && (
         <div className="upload-progress mb-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-blue-800">
@@ -94,6 +96,7 @@ export default function LargeContentUploader({
         </div>
       )}
 
+      {uploadProgress.error && (
         <div className="upload-error mb-4 p-4 bg-red-50 rounded-lg border border-red-200">
           <div className="flex items-center">
             <i className="fas fa-exclamation-triangle text-red-500 mr-2"></i>
@@ -109,6 +112,7 @@ export default function LargeContentUploader({
         </div>
       )}
 
+      {uploadProgress.success && (
         <div className="upload-success mb-4 p-4 bg-green-50 rounded-lg border border-green-200">
           <div className="flex items-center">
             <i className="fas fa-check-circle text-green-500 mr-2"></i>
@@ -117,6 +121,7 @@ export default function LargeContentUploader({
         </div>
       )}
 
+      {children &&
         React.cloneElement(children as React.ReactElement, {
           onContentChange: handleContentChange,
           onSubmit: handleSubmit,

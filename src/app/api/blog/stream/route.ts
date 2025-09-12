@@ -12,10 +12,12 @@ export async function OPTIONS() {
   return NextResponse.json({}, { headers: corsHeaders });
 }
 
+export async function POST(req: NextRequest) {
   try {
     await dbConnect();
     console.log("db connect successful!");
 
+    const reader = req.body?.getReader();
     if (!reader) {
       return NextResponse.json(
         { success: false, error: "No request body" },
@@ -27,10 +29,12 @@ export async function OPTIONS() {
     let totalSize = 0;
     const maxSize = 100 * 1024 * 1024; // 100MB лимит
 
+    while (true) {
       const { done, value } = await reader.read();
 
       if (done) break;
 
+      totalSize += value.length;
       if (totalSize > maxSize) {
         return NextResponse.json(
           { success: false, error: "Request too large" },
@@ -38,13 +42,16 @@ export async function OPTIONS() {
         );
       }
 
+      const newBuffer = new Uint8Array(buffer.length + value.length);
       newBuffer.set(buffer);
       newBuffer.set(value, buffer.length);
       buffer = newBuffer;
     }
 
+    const formData = new FormData();
     const text = new TextDecoder().decode(buffer);
 
+    const boundary = text.split("\r\n")[0];
     const parts = text.split(boundary).slice(1, -1);
 
     const postData: any = {};
@@ -68,6 +75,7 @@ export async function OPTIONS() {
       );
     }
 
+    let translations = null;
     if (postData.translations) {
       try {
         translations = JSON.parse(postData.translations);
@@ -80,6 +88,7 @@ export async function OPTIONS() {
       }
     }
 
+    const newPost = await Post.create({
       title: postData.title,
       slug: postData.slug,
       excerpt: postData.excerpt,

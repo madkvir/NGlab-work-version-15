@@ -83,7 +83,9 @@ export async function POST(req: NextRequest) {
     let uploadedImages: string[] = [];
     if (images.length > 0) {
       try {
+        const totalImageSize = images.reduce((sum, img) => sum + img.size, 0);
         if (totalImageSize > 50 * 1024 * 1024) {
+          return NextResponse.json(
             {
               success: false,
               error: "Images too large",
@@ -103,6 +105,7 @@ export async function POST(req: NextRequest) {
       } catch (uploadError) {
         console.error("❌ Error uploading images:", uploadError);
 
+        let errorMessage = "Image upload failed";
         if (uploadError instanceof Error) {
           if (uploadError.message.includes("Cloudinary is not properly configured")) {
             errorMessage = "Image service is not configured";
@@ -223,7 +226,9 @@ export async function PUT(req: Request) {
     let uploadedImages: string[] = [];
     if (images.length > 0) {
       try {
+        const totalImageSize = images.reduce((sum, img) => sum + img.size, 0);
         if (totalImageSize > 50 * 1024 * 1024) {
+          return NextResponse.json(
             {
               success: false,
               error: "Images too large",
@@ -243,6 +248,7 @@ export async function PUT(req: Request) {
       } catch (uploadError) {
         console.error("❌ Error uploading images:", uploadError);
 
+        let errorMessage = "Image upload failed";
         if (uploadError instanceof Error) {
           if (uploadError.message.includes("Cloudinary is not properly configured")) {
             errorMessage = "Image service is not configured";

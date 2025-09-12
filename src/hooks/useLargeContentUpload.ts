@@ -49,12 +49,15 @@ export function useLargeContentUpload() {
         throw new Error("No content provided");
       }
 
+      const contentCheck = checkContentLimit(content);
       const contentSize = contentCheck.size.bytes;
 
+      const shouldChunk = forceChunked || shouldUseChunkedUpload(contentSize);
 
       if (shouldChunk) {
         console.log(`Using chunked upload for content size: ${contentCheck.size.readable}`);
 
+        const metadata = {
           title: formData.get("title"),
           slug: formData.get("slug"),
           excerpt: formData.get("excerpt"),
@@ -64,6 +67,7 @@ export function useLargeContentUpload() {
           translations: formData.get("translations"),
         };
 
+        const recommendedChunkSize = chunkSize || getRecommendedChunkSize(contentSize);
 
         const result = await uploadContentInChunks(content, metadata, {
           chunkSize: recommendedChunkSize,

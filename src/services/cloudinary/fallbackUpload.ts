@@ -24,6 +24,9 @@ export async function uploadImageFallback(file: File): Promise<FallbackUploadRes
   }
 }
 
+export async function uploadImagesFallback(images: File[]): Promise<string[]> {
+  if (!images || images.length === 0) {
+    return [];
   }
 
   const results = await Promise.all(
