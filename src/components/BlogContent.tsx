@@ -1,22 +1,25 @@
 "use client";
-export const dynamic = "force-dynamic";
 
-import React, { useCallback, useEffect } from "react";
-import { useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Search, Calendar, User } from "lucide-react";
 import axios from "axios";
-import { BlogPost } from "../types/blog";
+import type { BlogPost } from "../types/blog";
 import LoadingSpinner from "./chat/LoadingSpinner";
 import { Link } from "../i18n/routing";
 import { useLocale } from "next-intl";
-import Post from "@/server/models/Post";
+import { getTranslPosts } from "./blog/translatePosts";
 
-const BlogContent = () => {
-  const [posts, setPosts] = useState([]);
+type BlogContentProps = {
+  /** Server-fetched posts; when set, skips the client /api/blog round-trip. */
+  initialPosts?: BlogPost[];
+};
+
+const BlogContent = ({ initialPosts }: BlogContentProps) => {
+  const [rawPosts, setRawPosts] = useState<BlogPost[]>(() => initialPosts ?? []);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
-  const [fetchingBlog, setFetchingBlog] = useState(true);
+  const [fetchingBlog, setFetchingBlog] = useState(initialPosts === undefined);
   const postsPerPage = 6;
   const locale = useLocale();
 
@@ -24,6 +27,8 @@ const BlogContent = () => {
     typeof window !== "undefined"
       ? window.location.origin
       : process.env.NEXT_PUBLIC_API_URL || "https://neurogenlab.de";
+
+  const posts = useMemo(() => getTranslPosts(rawPosts, locale), [rawPosts, locale]);
 
   const categories = Array.from(new Set(posts.map((post: BlogPost) => post.category)))
     .filter(Boolean)
@@ -42,48 +47,29 @@ const BlogContent = () => {
     return matchesSearch && matchesCategory;
   });
 
-  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
 
-  const getTranslPosts = (posts) => {
-    return posts.map((post: BlogPost) => {
-      const translation = post.translations?.find((t) => t.locale === locale);
-      return {
-        ...post,
-        locale: translation?.locale || "en",
-        title: translation?.title || post.title,
-        excerpt: translation?.excerpt || post.excerpt,
-        content: translation?.content || post.content,
-        category: translation?.category || post.category,
-      };
-    });
-  };
-
   const fetchPosts = useCallback(async () => {
     try {
       setFetchingBlog(true);
-      const response = await axios.get(`${apiUrl}/api/blog`);
-      const { data } = response;
-
-      const translPosts = getTranslPosts(data);
-
-      setPosts(translPosts);
+      const { data } = await axios.get<BlogPost[]>(`${apiUrl}/api/blog`);
+      setRawPosts(data);
     } catch (error) {
       console.error("Failed to fetch posts:", error);
     } finally {
       setFetchingBlog(false);
     }
-  }, []);
+  }, [apiUrl]);
 
   useEffect(() => {
+    if (initialPosts !== undefined) return;
     fetchPosts();
-  }, []);
+  }, [initialPosts, fetchPosts]);
 
   return (
     <>
-      {/* Search Bar */}
       <div className="max-w-2xl mx-auto mb-8">
         <div className="relative">
           <input
@@ -97,12 +83,11 @@ const BlogContent = () => {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="mt-12 flex flex-col lg:flex-row gap-8">
-        {/* Sidebar */}
         <div className="lg:w-1/4">
           <div className="space-y-2">
             <button
+              type="button"
               onClick={() => {
                 setSelectedCategory("all");
                 setCurrentPage(1);
@@ -117,6 +102,7 @@ const BlogContent = () => {
             </button>
             {categories.map((category) => (
               <button
+                type="button"
                 key={category.id}
                 onClick={() => {
                   setSelectedCategory(category.id);
@@ -137,61 +123,58 @@ const BlogContent = () => {
           </div>
         </div>
 
-        {/* Blog Posts Grid */}
         {fetchingBlog ? (
           <LoadingSpinner />
         ) : (
           <div className="lg:w-3/4">
             <div className="grid md:grid-cols-2 gap-8">
-              {currentPosts &&
-                currentPosts.map((post: BlogPost) => (
-                  <Link
-                    key={post._id}
-                    href={`/blog/${post.slug}`}
-                    className="group bg-gray-900/50 rounded-xl overflow-hidden hover:bg-gray-900/70 transition-all duration-300"
-                  >
-                    <div className="aspect-video overflow-hidden">
-                      {post.images.length > 0 &&
-                        post.images.map((image) => (
-                          <img
-                            key={image}
-                            src={image}
-                            alt={post.title}
-                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        ))}
+              {currentPosts.map((post: BlogPost) => (
+                <Link
+                  key={post._id}
+                  href={`/blog/${post.slug}`}
+                  className="group bg-gray-900/50 rounded-xl overflow-hidden hover:bg-gray-900/70 transition-all duration-300"
+                >
+                  <div className="aspect-video overflow-hidden">
+                    {(post.images?.length ?? 0) > 0 &&
+                      post.images!.map((image) => (
+                        <img
+                          key={image}
+                          src={image}
+                          alt={post.title}
+                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                        />
+                      ))}
+                  </div>
+
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                      <span className="bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full text-xs">
+                        {post.category}
+                      </span>
+                      <span>{post.readTime}</span>
                     </div>
 
-                    <div className="p-6">
-                      <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
-                        <span className="bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded-full text-xs">
-                          {post.category}
-                        </span>
-                        <span>{post.readTime}</span>
+                    <h2 className="text-xl font-semibold mb-3 text-white group-hover:text-emerald-400 transition-colors">
+                      {post.title}
+                    </h2>
+
+                    <p className="text-gray-400 mb-4 line-clamp-3">{post.excerpt}</p>
+
+                    <div className="flex items-center justify-between text-sm text-gray-400">
+                      <div className="flex items-center">
+                        <User className="w-4 h-4 mr-2" />
+                        {post.author}
                       </div>
-
-                      <h2 className="text-xl font-semibold mb-3 text-white group-hover:text-emerald-400 transition-colors">
-                        {post.title}
-                      </h2>
-
-                      <p className="text-gray-400 mb-4 line-clamp-3">{post.excerpt}</p>
-
-                      <div className="flex items-center justify-between text-sm text-gray-400">
-                        <div className="flex items-center">
-                          <User className="w-4 h-4 mr-2" />
-                          {post.author}
-                        </div>
-                        <div className="flex items-center">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          {post.date}
-                        </div>
+                      <div className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        {post.date}
                       </div>
                     </div>
-                  </Link>
-                ))}
+                  </div>
+                </Link>
+              ))}
             </div>
 
-            {/* No Results Message */}
             {!fetchingBlog && filteredPosts.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-400">No articles found matching your criteria.</p>

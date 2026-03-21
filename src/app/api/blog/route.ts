@@ -21,13 +21,19 @@ export async function OPTIONS() {
 export async function GET() {
   try {
     await dbConnect();
-    const posts = await Post.find({});
+    const posts = await Post.find({}).lean();
 
     return NextResponse.json(posts, { headers: corsHeaders });
   } catch (error) {
     console.error("❌ Error fetching posts:", error);
     return NextResponse.json(
-      { success: false, error: "Internal Server Error" },
+      {
+        success: false,
+        error: "Internal Server Error",
+        ...(process.env.NODE_ENV === "development" && error instanceof Error
+          ? { message: error.message }
+          : {}),
+      },
       { status: 500, headers: corsHeaders }
     );
   }

@@ -4,8 +4,18 @@ import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
 import BackToHome from "../../../components/BackToHome";
 import BlogContent from "../../../components/BlogContent";
+import { getAllPostsSerialized } from "@/lib/blog/posts";
+import type { BlogPost } from "@/types/blog";
 
-const Blog = () => {
+const Blog = async () => {
+  let initialPosts: BlogPost[] | undefined;
+  try {
+    initialPosts = await getAllPostsSerialized();
+  } catch (e) {
+    console.error("Blog index: failed to load posts on server", e);
+    initialPosts = undefined;
+  }
+
   return (
     <div className="min-h-screen bg-[#0B0F19] text-white">
       <Navbar />
@@ -16,14 +26,13 @@ const Blog = () => {
             <BackToHome />
           </div>
 
-          {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Blog</h1>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Stay updated with the latest insights about AI technology and implementation
             </p>
           </div>
-          <BlogContent />
+          <BlogContent initialPosts={initialPosts} />
         </div>
       </main>
 
